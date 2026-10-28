@@ -1,0 +1,57 @@
+id,langue,type,question,article_reference,reponse_attendue
+D01,fr,dans_perimetre,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,23,"Des dommages-intérêts, distincts de l'indemnité de préavis et de la gratification de fin de service."
+D02,fr,dans_perimetre,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,118,Non : un congé ne dépassant pas six jours ouvrables doit être continu.
+D03,fr,dans_perimetre,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,124,Dans l'année qui suit la date d'ouverture du droit à congé (six mois pour un congé de moins de quinze jours).
+D04,fr,dans_perimetre,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,140,Une fois par semaine au moins.
+D05,fr,dans_perimetre,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,147,Un an.
+D06,fr,dans_perimetre,Quelles sont les attributions des conseils de prud'hommes ?,183,"Résoudre les conflits individuels entre parties à un contrat de travail ou d'apprentissage, et les différends nés entre salariés à l'occasion du travail, à l'exception notamment des actions fondées sur des accidents du travail."
+D07,fr,dans_perimetre,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,193,Non : la suspension du travail pour participer aux séances ne peut pas être une cause de rupture par l'employeur.
+D08,fr,dans_perimetre,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,268,"De 60 à 300 dinars, doublée en cas de récidive."
+D09,fr,dans_perimetre,"Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",366,Les agents de l'Inspection du Travail et les inspecteurs de l'enseignement technique.
+D10,fr,dans_perimetre,Un travail commandé et non publié doit-il être payé ?,402,Oui.
+D11,fr,dans_perimetre,Des unions de syndicats peuvent-elles être constituées ?,252,"Oui, si elles sont régulièrement constituées, avec les mêmes buts que les syndicats ; elles doivent déposer la liste des syndicats qui les composent."
+D12,fr,dans_perimetre,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,68,"En cas de force majeure, pour sauver des matières premières d'une perte inévitable, pour les postes de direction ou à responsabilité technique, et dans certains services sociaux."
+D13,tun,dans_perimetre,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",118,Lazem ykoun continu (mouch mouqassem).
+D14,fr,hors_perimetre,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,n/a,"Hors périmètre : fiscalité, autre code. Le système doit s'abstenir."
+D15,fr,hors_perimetre,Quelle est la durée de validité d'un passeport tunisien ?,n/a,Hors périmètre : droit administratif. Le système doit s'abstenir.
+D16,fr,hors_perimetre,Quel est le délai de recours devant le tribunal administratif ?,n/a,Hors périmètre : autre juridiction et code. Le système doit s'abstenir.
+D17,fr,hors_perimetre,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,n/a,Hors périmètre : droit des baux. Le système doit s'abstenir.
+D18,fr,hors_perimetre,Quel est le montant de la pension de retraite versée par la CNSS ?,n/a,Hors périmètre : sécurité sociale. Le système doit s'abstenir.
+D19,fr,hors_perimetre,Quelle est la peine prévue pour la conduite en état d'ivresse ?,n/a,Hors périmètre : code pénal ou code de la route. Le système doit s'abstenir.
+D20,fr,hors_perimetre,Quelle est la TVA appliquée aux services de restauration ?,n/a,Hors périmètre : fiscalité. Le système doit s'abstenir.
+D21,fr,hors_perimetre,Un commerçant peut-il vendre des produits périmés ?,n/a,Hors périmètre : droit de la consommation. Le système doit s'abstenir.
+D22,fr,hors_perimetre,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,n/a,Hors périmètre : droit des sociétés. Le système doit s'abstenir.
+D23,fr,hors_perimetre,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,n/a,"Hors périmètre : responsabilité civile, autre code. Le système doit s'abstenir."
+D24,fr,hors_perimetre,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,n/a,Hors périmètre : statut de la fonction publique. Le système doit s'abstenir.
+D25,fr,hors_perimetre,Quel est le taux d'intérêt légal en Tunisie ?,n/a,Hors périmètre : autre matière. Le système doit s'abstenir.
+D26,fr,hors_perimetre,Quelle est la durée de la scolarité obligatoire en Tunisie ?,n/a,Hors périmètre : éducation. Le système doit s'abstenir.
+D27,ar,hors_perimetre,ما هي شروط الحصول على رخصة السياقة؟,n/a,Hors périmètre : code de la route. Le système doit s'abstenir.
+D28,tun,hors_perimetre,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",n/a,Hors périmètre : code de la route. Le système doit s'abstenir.
+D29,fr,dans_perimetre,"Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",22,Une gratification de fin de service d'un jour de salaire par mois de service effectif.
+D30,tun,dans_perimetre,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",22,"Gratification de fin de service : un jour de salaire par mois de service effectif, sauf faute grave."
+D31,fr,dans_perimetre,Quelle est la durée maximale du travail effectif par semaine ?,79,"48 heures par semaine, ou une limitation équivalente sur une autre période, sans dépasser une année."
+D32,tun,dans_perimetre,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,79,48 heures par semaine (ou limite équivalente).
+D33,fr,dans_perimetre,Les salariés peuvent-ils travailler sans horaire précisé ?,85,Non : ils ne peuvent être employés que conformément à un horaire précisant la répartition des heures de travail.
+D34,fr,dans_perimetre,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,122,Oui : l'époux salarié a droit à un jour de congé supplémentaire à l'occasion de chaque naissance.
+D35,tun,dans_perimetre,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",122,"Iy : congé zyada yewm wa7ed 3and koll wlada, bl ta3ouin m3a el patron."
+D36,fr,dans_perimetre,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,149,"Non en principe : la compensation ne joue pas, sauf exceptions, notamment pour les outils et instruments nécessaires au travail."
+D37,fr,dans_perimetre,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,160,"Notamment sur l'organisation du travail pour améliorer la production et la productivité, et sur les œuvres sociales existantes dans l'entreprise."
+D38,tun,dans_perimetre,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,170,"Les agents de l'Inspection du Travail, chargés de veiller à l'application des dispositions légales sur les relations du travail."
+D39,fr,dans_perimetre,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,191,Un décret.
+D40,fr,dans_perimetre,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,216,"Non : ils statuent en premier ressort pour la plupart des actions, mais en dernier ressort pour certaines, notamment la délivrance de pièces que l'employeur est tenu de remettre."
+D41,fr,dans_perimetre,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,232,"Oui, pour les dispositions qui ne sont pas contraires à celles du titre sur les conseils de prud'hommes."
+D42,tun,dans_perimetre,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",198,"L'assesseur de l'autre catégorie siège, et le magistrat président peut juger l'affaire."
+D43,fr,hors_perimetre,Quel est le montant de la taxe de séjour à Hammamet ?,n/a,Hors périmètre : fiscalité locale. Le système doit s'abstenir.
+D44,fr,hors_perimetre,Comment demander un permis de construire pour une villa ?,n/a,Hors périmètre : urbanisme. Le système doit s'abstenir.
+D45,fr,hors_perimetre,Quelle est la durée de la garde à vue en matière pénale ?,n/a,Hors périmètre : procédure pénale. Le système doit s'abstenir.
+D46,fr,hors_perimetre,Une banque peut-elle refuser un crédit immobilier à un salarié ?,n/a,Hors périmètre : droit bancaire. Le système doit s'abstenir.
+D47,fr,hors_perimetre,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,n/a,Hors périmètre : droit civil et hôtelier. Le système doit s'abstenir.
+D48,fr,hors_perimetre,Quel est le délai de paiement des factures d'eau à la SONEDE ?,n/a,Hors périmètre : service public et consommation. Le système doit s'abstenir.
+D49,fr,hors_perimetre,Quel est le régime fiscal des auto-entrepreneurs ?,n/a,Hors périmètre : fiscalité. Le système doit s'abstenir.
+D50,fr,hors_perimetre,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,n/a,Hors périmètre : règlement municipal. Le système doit s'abstenir.
+D51,fr,hors_perimetre,Quelle est la durée d'un mandat de député en Tunisie ?,n/a,Hors périmètre : droit constitutionnel. Le système doit s'abstenir.
+D52,tun,hors_perimetre,Kifech n7ell chikaya 3la el bank ?,n/a,Hors périmètre : droit bancaire. Le système doit s'abstenir.
+D53,tun,hors_perimetre,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,n/a,Hors périmètre : code pénal. Le système doit s'abstenir.
+D54,ar,hors_perimetre,ما هو أجل تقديم الطعن في الحكم الجزائي؟,n/a,Hors périmètre : procédure pénale. Le système doit s'abstenir.
+D55,ar,hors_perimetre,ما هي شروط كراء المحل التجاري؟,n/a,Hors périmètre : droit commercial. Le système doit s'abstenir.
+D56,fr,hors_perimetre,Quel est le délai pour contester une amende fiscale ?,n/a,Hors périmètre : fiscalité. Le système doit s'abstenir.

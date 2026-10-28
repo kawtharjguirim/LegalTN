@@ -1,0 +1,7 @@
+﻿jeu,usage,langue,variante,questions,dans_perimetre,hors_perimetre,article_top1_correct,article_dans_top5,rappel_article_1,rappel_article_5,abstentions_a_tort,abstentions_correctes_hors_perimetre,reponses_fournies
+questions_dev_v2,developpement_non_independant,ar,sans_seuil_score,3,0,3,0,0,,,0,0,3
+questions_dev_v2,developpement_non_independant,ar,seuil_historique,3,0,3,0,0,,,0,3,0
+questions_dev_v2,developpement_non_independant,fr,sans_seuil_score,44,21,23,20,20,0.9523809523809523,0.9523809523809523,0,0,44
+questions_dev_v2,developpement_non_independant,fr,seuil_historique,44,21,23,20,20,0.9523809523809523,0.9523809523809523,0,22,22
+questions_dev_v2,developpement_non_independant,tun,sans_seuil_score,9,6,3,1,3,0.16666666666666666,0.5,0,0,9
+questions_dev_v2,developpement_non_independant,tun,seuil_historique,9,6,3,1,1,0.16666666666666666,0.16666666666666666,4,2,3

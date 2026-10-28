@@ -1,0 +1,61 @@
+dev_id,cle,article_ar,page_ar,article_fr,page_fr,fr_ligne,verdict_image,categorie_erreur,commentaire,validation_auteure
+A001,1,AR-1,9,FR-1,285,4,correct,,"AR-1 vu p.9 (Article premier), FR-1 vu p.285 (Article premier)",validé
+A002,4,AR-4,10,FR-4,284,7,correct,,"AR-4 vu p.10 (الفصل 4.-), FR-4 vu p.284 (Article 4.-)",validé
+A003,17,AR-17,16,FR-17,277,28,correct,,"AR-17 vu p.16 (الفصل 17.-), FR-17 vu p.277 (Article 17.-)",validé
+A004,22,AR-22,21,FR-22,271,45,correct,,"AR-22 vu p.21 (الفصل 22), FR-22 vu p.271 (Article 22)",validé
+A005,27,AR-27,22,FR-27,269,52,correct,,"AR-27 vu p.22 (الفصل 27.-), FR-27 vu p.269 (Article 27.-)",validé
+A006,32,AR-32,25,FR-32,267,57,correct,,"AR-32 vu p.25 (الفصل 32.-), FR-32 vu p.267 (Article 32.-)",validé
+A007,50,AR-50,28,FR-50,263,75,correct_mais_statut_incomplet,statut abrogé non signalé,"AR-50 vu p.28 (الفصل 50 ألغي), FR-50 vu p.263 (Article 50 Abrogé par loi 96-62). Même article abrogé des deux côtés ; statut ""apparié"" au lieu de ""abrogé""",validé
+A008,55,AR-55,30,FR-55,261,81,correct,,"AR-55 vu p.30 (الفصل 55), FR-55 vu p.261 (Article 55)",validé
+A009,67,AR-67,34,FR-67,257,94,correct,,"AR-67 vu p.34 (الفصل 67), FR-67 vu p.257 (Article 67)",validé
+A010,90,AR-90,42,FR-90,248,122,correct,,"AR-90 vu p.42 (الفصل 90), FR-90 vu p.248 (Article 90)",validé
+A011,98,AR-98,47,FR-98,243,143,correct,,"AR-98 vu p.47 (الفصل 98.-), FR-98 vu p.243 (Article 98.-)",validé
+A012,104,AR-104,48,FR-104,242,149,correct,,"AR-104 vu p.48 (الفصل 104.-), FR-104 vu p.242 (Article 104.-)",validé
+A013,111,AR-111,50,FR-111,240,156,correct,,"AR-111 vu p.50 (الفصل 111.-), FR-111 vu p.240 (Article 111.-)",validé
+A014,114,AR-114,51,FR-114,239,159,correct,,"AR-114 vu p.51 (الفصل 114), FR-114 vu p.239 (Article 114)",validé
+A015,128,AR-128,55,FR-128,233,173,correct,,"AR-128 vu p.55 (الفصل 128.-), FR-128 vu p.233 (Article 128.-)",validé
+A016,135,AR-135,58,FR-135,231,182,correct_mais_statut_incomplet,statut abrogé non signalé,"AR-135 vu p.58 (الفصل 135 ألغي), FR-135 vu p.231 (Article 135 Abrogé). Même article abrogé des deux côtés ; statut ""apparié"" au lieu de ""abrogé""",validé
+A017,138,AR-138,58,FR-138,231,185,correct,,"AR-138 vu p.58 (الفصل 138 نقّح), FR-138 vu p.231 (Article 138 Modifié)",validé
+A018,140,AR-140,58,FR-140,230,187,correct,,"AR-140 vu p.58 (الفصل 140 نقّح), FR-140 vu p.230 (Article 140 Modifié)",validé
+A019,141,AR-141,59,FR-141,230,188,correct,,"AR-141 vu p.59 (الفصل 141 نقّح), FR-141 vu p.230 (Article 141 Modifié)",validé
+A020,142,AR-142,59,FR-142,230,189,correct,,"AR-142 vu p.59 (الفصل 142.-), FR-142 vu p.230 (Article 142.-)",validé
+A021,151-2,AR-151-2,61,FR-151,227,199,correct,étiquette sans suffixe (appariement correct),"AR-151-2 vu p.61 (الفصل 151-2), FR 151-2 vu p.227 (Article 151-2). Appariement juste ; étiquette article_fr sans suffixe",validé
+A022,151,AR-151,61,FR-151,228,198,correct,,"AR-151 vu p.61 (الفصل 151 نقّح), FR-151 vu p.228 (Article 151 Modifié)",validé
+A023,152-2,AR-152-2,61,FR-152,227,201,correct,étiquette sans suffixe (appariement correct),"AR-152-2 vu p.61 (الفصل 152-2), FR 152-2 vu p.227 (Article 152-2). Appariement juste ; étiquette article_fr sans suffixe",validé
+A024,154-2,AR-154-2,63,FR-154,225,206,correct,étiquette sans suffixe (appariement correct),"AR-154-2 vu p.63 (الفصل 154-2), FR ligne 206 = Article 154 -2 (p.225) ; appariement juste, étiquette article_fr sans suffixe",validé
+A025,159,AR-159,65,FR-159,223,214,correct,,"AR-159 vu p.65 (الفصل 159.-), FR-159 vu p.223 (Article 159 .-)",validé
+A026,174,AR-174,71,FR-174,216,233,correct,,"AR-174 vu p.71 (الفصل 174 نقّح), FR-174 vu p.216 (Article 174 Modifié)",validé
+A027,183,AR-183,74,FR-183,212,242,correct,,"AR-183 vu p.74 (الفصل 183 نقّح), FR-183 vu p.212 (Article 183 Modifié)",validé
+A028,198,AR-198,77,FR-198,210,257,correct,,"AR-198 vu p.77 (الفصل 198.-), FR-198 vu p.210 (Article 198.-)",validé
+A029,199,AR-199,77,FR-199,209,258,correct,,"AR-199 vu p.77 (الفصل 199.-), FR-199 vu p.209 (Article 199.-)",validé
+A030,207,AR-207,79,FR-207,207,266,correct,,"AR-207 vu p.79 (الفصل 207 نقّح), FR-207 vu p.207 (Article 207 Modifié)",validé
+A031,211,AR-211,79,FR-211,206,270,correct,,"AR-211 vu p.79 (الفصل 211.-), FR-211 vu p.206 (Article 211.-)",validé
+A032,224,AR-224,82,FR-224,204,283,correct,,"AR-224 vu p.82 (الفصل 224 نقّح), FR-224 vu p.204 (Article 224 Modifié)",validé
+A033,234,AR-234,84,FR-234,202,294,correct,,"AR-234 vu p.84 (الفصل 234 نقّح), FR-234 vu p.202 (Article 234 Modifié)",validé
+A034,238,AR-238,85,FR-238,201,299,correct,,"AR-238 vu p.85 (الفصل 238.-), FR-238 vu p.201 (Article 238.-)",validé
+A035,245,AR-245,86,FR-245,199,306,correct,,"AR-245 vu p.86 (الفصل 245.-), FR-245 vu p.199 (Article 245.-)",validé
+A036,249,AR-249,87,FR-249,199,310,correct,,"AR-249 vu p.87 (الفصل 249.-), FR-249 vu p.199 (Article 249.-)",validé
+A037,250,AR-250,87,FR-250,198,311,correct,,"AR-250 vu p.87 (الفصل 250.-), FR-250 vu p.198 (Article 250.-)",validé
+A038,283,AR-283,94,FR-283,191,340,correct,,"AR-283 vu p.94 (الفصل 283 نقّح), FR-283 vu p.191 (Article 283 Modifié)",validé
+A039,285,AR-285,94,FR-285,190,342,correct_mais_statut_incomplet,statut abrogé non signalé,"AR-285 vu p.94 (الفصل 285 ألغيت مكاتب التشغيل الخاصة), FR-285 vu p.190 (Article 285 Les bureaux... sont supprimés). Même contenu : suppression des bureaux privés. Corrigé après revue : AR-285 a abroge=True mais statut apparié (même défaut que A007/A016)",validé
+A040,297,AR-297,97,FR-297,188,354,correct,,"AR-297 vu p.97 (الفصل 297.-), FR-297 vu p.188 (Article 297.-)",validé
+A041,298,AR-298,97,FR-298,187,355,correct,,"AR-298 vu p.97, FR-298 vu p.187 (Article 298.-)",validé
+A042,301,AR-301,97,FR-301,187,358,correct,,"AR-301 vu p.97, FR-301 vu p.187 (Article 301.-)",validé
+A043,305,AR-305,98,FR-305,186,362,correct,,"AR-305 vu p.98 (الفصل 305 نقّح), FR-305 vu p.186 (Article 305 Modifié)",validé
+A044,341,AR-341,105,FR-341,179,388,correct,,"AR-341 vu p.105 (الفصل 341.-), FR-341 vu p.179 (Article 341.-)",validé
+A045,342,AR-342,105,FR-342,178,389,correct,,"AR-342 vu p.105 (الفصل 342.-), FR-342 vu p.178 (Article 342.-)",validé
+A046,356,AR-356,109,FR-356,174,403,correct,,"AR-356 vu p.109 (الفصل 356.-), FR-356 vu p.174 (Article 356(1).-)",validé
+A047,369,AR-369,113,FR-369,170,416,correct,,"AR-369 vu p.113 (الفصل 369.-), FR-369 vu p.170 (Article 369.-)",validé
+A048,371,AR-371,113,FR-371,169,418,correct,,"AR-371 vu p.113 (الفصل 371.-), FR-371 vu p.169 (Article 371 .-)",validé
+A049,372,AR-372,114,FR-372,169,419,correct,,"AR-372 vu p.114 (الفصل 372.-), FR-372 vu p.169 (Article 372.-)",validé
+A050,376 ter,AR-376-ثالثا,115,FR-376,167,425,correct,étiquette sans suffixe (appariement correct),"AR-376-ثالثا vu p.115 (الفصل 376 ثالثا), ligne 425 = Article 376 - ter vu p.167 ; étiquette article_fr sans suffixe",validé
+A051,384 bis,AR-384-مكرر,119,FR-384,164,437,correct,étiquette sans suffixe (appariement correct),"AR-384-مكرر vu p.119 (الفصل 384 مكرر), ligne 437 = Article 384 bis vu p.164 ; étiquette article_fr sans suffixe",validé
+A052,388,AR-388,120,FR-388,162,444,correct,,"AR-388 vu p.120 (الفصل 388 نقّح), FR-388 vu p.162 (Article 388 Modifié)",validé
+A053,402,AR-402,123,FR-402,160,453,correct,,"AR-402 vu p.123 (الفصل 402.-), FR-402 vu p.160 (Article 402.-)",validé
+A054,415,AR-415,127,FR-415,154,466,correct,,"AR-415 vu p.127 (الفصل 415.-), FR-415 vu p.154 (Article 415.-)",validé
+A055,416,AR-416,128,FR-416,153,467,correct,,"AR-416 vu p.128 (الفصل 416.-), FR-416 vu p.153 (Article 416.-)",validé
+A056,420,AR-420,129,FR-420,152,471,correct,,"AR-420 vu p.129 (الفصل 420.-), FR-420 vu p.152 (Article 420.-)",validé
+A057,433,AR-433,132,FR-433,149,484,correct,,"AR-433 vu p.132 (الفصل 433.-), FR-433 vu p.149 (Article 433.-)",validé
+A058,436,AR-436,132,FR-436,148,487,correct,,"AR-436 vu p.132 (الفصل 436.-), FR-436 vu p.148 (Article 436.-)",validé
+A059,438,AR-438,133,FR-438,148,489,correct,,"AR-438 vu p.133 (الفصل 438.-), FR-438 vu p.148 (Article 438.-)",validé
+A060,439,AR-439,133,FR-439,148,490,correct,,"AR-439 vu p.133 (الفصل 439.-), FR-439 vu p.148 (Article 439.-)",validé

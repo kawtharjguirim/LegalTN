@@ -1,0 +1,5 @@
+composant,metrique,FR,AR,Tunisien_arabe,Tunisien_arabizi,EN,nature
+retrieval BM25 sans seuil,rappel@1,0.952,,0.167,,,developpement_non_independant_dev_v2
+retrieval BM25 sans seuil,rappel@5,0.952,,0.500,,,developpement_non_independant_dev_v2
+retrieval BM25 seuil historique,refus hors périmètre,22/23,3/3,2/3,,,developpement_non_independant_dev_v2
+retrieval BM25 seuil historique,fausses abstentions,0,0,4,,,developpement_non_independant_dev_v2

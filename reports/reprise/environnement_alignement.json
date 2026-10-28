@@ -1,0 +1,8 @@
+{
+  "python": "3.12.2",
+  "systeme": "Windows-11-10.0.26200-SP0",
+  "pandas": "2.2.2",
+  "numpy": "2.4.1",
+  "commande": "python src/executer_alignement.py",
+  "commande_reproduction": "python src/executer_alignement.py --sortie reports/reprise/reproduction_v6"
+}

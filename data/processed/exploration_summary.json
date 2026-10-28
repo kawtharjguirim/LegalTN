@@ -1,0 +1,39 @@
+{
+  "pdf": "majallat_al_shughl_2019.pdf",
+  "pages": 291,
+  "pages_par_langue": {
+    "fr": 151,
+    "ar": 137,
+    "?": 3
+  },
+  "pages_ecart_langue_attendue": 1,
+  "pages_vides_ou_quasi_vides": [
+    1,
+    8,
+    136,
+    291
+  ],
+  "code_pages": [
+    9,
+    136
+  ],
+  "tetes_article_detectees": 490,
+  "tetes_doubles": 1,
+  "tetes_numero_zero_ecartees": 1,
+  "numeros_non_reconnus": 1,
+  "numeros_distincts": 421,
+  "etiquettes_en_double": 0,
+  "ruptures_d_ordre": 0,
+  "numeros_absents": 25,
+  "numeros_absents_abroges_en_plage": 20,
+  "numeros_absents_a_verifier": 5,
+  "articles_abroges_individuellement": 18,
+  "tetes_francaises_detectees": 496,
+  "ruptures_francaises_ordre_lecture_inverse": 1,
+  "titres_structure": {
+    "الكتاب": 4,
+    "الباب": 35,
+    "القسم": 15,
+    "الفرع": 2
+  }
+}

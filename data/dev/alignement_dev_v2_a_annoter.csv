@@ -1,0 +1,101 @@
+dev_id,cle,article_ar,page_ar,article_fr,page_fr,fr_ligne,verdict_auteure,categorie_erreur,commentaire
+B001,6-4,AR-6-4,12,FR-6,282,13,correct,étiquette sans suffixe (appariement correct),correcte
+B002,6-2,AR-6-2,12,FR-6,282,11,correct,étiquette sans suffixe (appariement correct),correcte
+B003,18,AR-18,16,FR-18,277,29,correct,,correcte
+B004,31,AR-31,24,FR-31,267,56,correct,,correcte
+B005,33,AR-33,25,FR-33,267,58,correct,,correcte
+B006,36,AR-36,25,FR-36,266,61,correct,,correcte
+B007,40,AR-40,26,FR-40,265,65,correct,,correcte
+B008,41,AR-41,26,FR-41,265,66,correct,,correcte
+B009,42,AR-42,26,FR-42,265,67,correct,,correcte
+B010,53,AR-53,29,FR-53,262,78,correct,,correcte
+B011,54,AR-54,29,FR-54,262,80,correct,,correcte
+B012,57,AR-57,30,FR-57,261,83,correct,,correcte
+B013,60,AR-60,31,FR-60,260,86,correct,,correcte
+B014,61,AR-61,32,FR-61,259,87,correct,,correcte
+B015,66,AR-66,34,FR-66,257,93,correct,,correcte
+B016,75,AR-75,37,FR-75,253,105,correct,,correcte
+B017,80,AR-80,39,FR-80,251,112,correct,statut abrogé non signalé,correcte
+B018,83,AR-83,39,FR-83,251,115,correct,,correcte
+B019,89,AR-89,41,FR-89,249,121,correct,,correcte
+B020,91,AR-91,42,FR-91,248,123,correct,,correcte
+B021,93,AR-93,43,FR-93,247,125,correct,,correcte
+B022,94-12,AR-94-12,45,FR-94,245,137,correct,étiquette sans suffixe (appariement correct),correcte
+B023,94-6,AR-94-6,44,FR-94,246,131,correct,étiquette sans suffixe (appariement correct),correcte
+B024,94-10,AR-94-10,45,FR-94,245,135,correct,étiquette sans suffixe (appariement correct),correcte
+B025,95,AR-95,45,FR-95,245,140,correct,,correcte
+B026,105,AR-105,48,FR-105,242,150,correct,,correcte
+B027,113,AR-113,50,FR-113,240,158,correct,,correcte
+B028,117,AR-117,51,FR-117,238,162,correct,,correcte
+B029,118,AR-118,52,FR-118,238,163,correct,,correcte
+B030,121,AR-121,53,FR-121,236,166,correct,,correcte
+B031,124,AR-124,55,FR-124,234,169,correct,,correcte
+B032,131,AR-131,56,FR-131,233,176,correct,,correcte
+B033,134,AR-134,57,FR-134,232,179,correct,,correcte
+B034,134-2,AR-134-2,57,FR-134,232,180,correct,étiquette sans suffixe (appariement correct),correcte
+B035,137,AR-137,58,FR-137,231,184,correct,,correcte
+B036,143,AR-143,59,FR-143,230,190,correct,,correcte
+B037,150,AR-150,61,FR-150,228,197,correct,,correcte
+B038,153,AR-153,62,FR-153,226,203,correct,,correcte
+B039,154-3,AR-154-3,63,FR-154,225,207,correct,étiquette sans suffixe (appariement correct),correcte
+B040,157,AR-157,65,FR-157,223,212,correct,,correcte
+B041,166 bis,AR-166-مكرر,69,FR-166,219,223,correct,étiquette sans suffixe (appariement correct),correcte
+B042,171,AR-171,70,FR-171,217,230,correct,,correcte
+B043,177,AR-177,73,FR-177,214,236,correct,,correcte
+B044,179,AR-179,73,FR-179,213,238,correct,,correcte
+B045,191,AR-191,75,FR-191,211,250,correct,,correcte
+B046,195,AR-195,76,FR-195,210,254,correct,,correcte
+B047,204,AR-204,78,FR-204,208,263,correct,,correcte
+B048,209,AR-209,79,FR-209,207,268,correct,,correcte
+B049,210,AR-210,79,FR-210,207,269,correct,,correcte
+B050,214,AR-214,80,FR-214,206,273,correct,,correcte
+B051,216,AR-216,81,FR-216,205,275,correct,,correcte
+B052,218,AR-218,81,FR-218,205,277,correct,,correcte
+B053,219,AR-219,81,FR-219,204,278,correct,,correcte
+B054,220,AR-220,81,FR-220,204,279,correct,,correcte
+B055,223,AR-223,82,FR-223,204,282,correct,,correcte
+B056,225,AR-225,82,FR-225,203,284,correct,,correcte
+B057,226,AR-226,82,FR-226,203,285,correct,,correcte
+B058,232,AR-232,83,FR-232,202,291,correct,,correcte
+B059,233,AR-233,84,FR-233,202,292,correct,,correcte
+B060,237,AR-237,85,FR-237,201,298,correct,,correcte
+B061,240,AR-240,85,FR-240,201,301,correct,,correcte
+B062,241,AR-241,85,FR-241,200,302,correct,,correcte
+B063,251,AR-251,87,FR-251,198,312,correct,,correcte
+B064,252,AR-252,88,FR-252,197,313,correct,,correcte
+B065,258,AR-258,90,FR-258,195,319,correct,,correcte
+B066,261,AR-261,91,FR-261,194,323,correct,,correcte
+B067,262,AR-262,91,FR-262,194,324,correct,,correcte
+B068,267,AR-267,92,FR-267,193,329,correct,,correcte
+B069,270,AR-270,92,FR-270,193,333,correct,statut abrogé non signalé,correcte
+B070,282,AR-282,94,FR-282,191,339,correct,,correcte
+B071,286,AR-286,94,FR-286,190,343,correct,,correcte
+B072,287,AR-287,95,FR-287,190,344,correct,,correcte
+B073,315,AR-315,100,FR-315,184,372,correct,,correcte
+B074,316,AR-316,100,FR-316,183,373,correct,,correcte
+B075,320,AR-320,101,FR-320,182,377,correct,,correcte
+B076,321,AR-321,102,FR-321,182,378,correct,,correcte
+B077,324,AR-324,102,FR-324,181,381,correct,,correcte
+B078,339,AR-339,104,FR-339,180,386,correct,,correcte
+B079,345,AR-345,106,FR-345,177,392,correct,,correcte
+B080,347,AR-347,107,FR-347,176,394,correct,,correcte
+B081,351,AR-351,108,FR-351,175,398,correct,,correcte
+B082,353,AR-353,109,FR-353,174,400,correct,,correcte
+B083,354,AR-354,109,FR-354,174,401,correct,,correcte
+B084,355,AR-355,109,FR-355,174,402,correct,,correcte
+B085,357,AR-357,110,FR-357,173,404,correct,,correcte
+B086,358,AR-358,110,FR-358,173,405,correct,,correcte
+B087,364,AR-364,112,FR-364,171,411,correct,,correcte
+B088,367,AR-367,112,FR-367,170,414,correct,,correcte
+B089,368,AR-368,113,FR-368,170,415,correct,,correcte
+B090,377,AR-377,116,FR-377,167,426,correct,,correcte
+B091,381 bis,AR-381-مكرر,117,FR-381,165,431,correct,étiquette sans suffixe (appariement correct),correcte
+B092,383,AR-383,118,FR-383,165,435,correct,,correcte
+B093,385,AR-385,119,FR-385,163,438,correct,,correcte
+B094,385 bis,AR-385-مكرر,119,FR-385,163,439,correct,étiquette sans suffixe (appariement correct),correcte
+B095,387,AR-387,120,FR-387,162,443,correct,,correcte
+B096,401,AR-401,123,FR-401,160,452,correct,,correcte
+B097,403,AR-403,123,FR-403,159,454,correct,,correcte
+B098,423,AR-423,130,FR-423,151,474,correct,,correcte
+B099,430,AR-430,131,FR-430,149,481,correct,,correcte
+B100,443,AR-443,134,FR-443,147,494,correct,,correcte

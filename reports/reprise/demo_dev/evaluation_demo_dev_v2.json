@@ -1,0 +1,1683 @@
+{
+  "nature": "Contrôle sur développement déjà consulté ; aucune performance indépendante.",
+  "reglage_effectue": false,
+  "references": "Questions et réponses attendues héritées ; aucune nouvelle annotation humaine.",
+  "definition_erreur": "Hors périmètre accepté, abstention à tort ou premier article incorrect.",
+  "configuration": {
+    "seuil_historique": 9.085,
+    "stop_tun_actif": false,
+    "sans_seuil": "Même classement et abstention si aucun terme connu ; seul le seuil de score est omis."
+  },
+  "empreintes": {
+    "src/evaluation/baseline_bm25.py": "97adc260105f42f47b6ee7fb6cdba0d18bc27926a18df58219f2cb9face25588",
+    "src/demo/repondre.py": "ce84affd5943b92eb8cc0c19199a5d020dc849efae8a06715b396c3e3ab25b9c",
+    "src/evaluation/evaluer_dev_reprise.py": "f037668c6802945392790f6a64a98312f1a5936aa5244ce22512e3bdba34fc25",
+    "data/dev/questions_dev_v2.csv": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+    "data/processed/articles_ar.csv": "77fe24b3d3ffc5923fd42fe4298521ebdbcec5f7af001ccd576a90fa69846022",
+    "data/processed/articles_fr_corrige.csv": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071"
+  },
+  "global": {
+    "sans_seuil_score": {
+      "questions": 56,
+      "dans_perimetre": 27,
+      "hors_perimetre": 29,
+      "article_top1_correct": 21,
+      "article_dans_top5": 23,
+      "rappel_article_1": 0.7777777777777778,
+      "rappel_article_5": 0.8518518518518519,
+      "abstentions_a_tort": 0,
+      "abstentions_correctes_hors_perimetre": 0,
+      "reponses_fournies": 56,
+      "erreurs_par_categorie": {
+        "reference_absente_top5": 4,
+        "hors_perimetre_accepte": 29,
+        "article_voisin_classe_devant": 2
+      }
+    },
+    "seuil_historique": {
+      "questions": 56,
+      "dans_perimetre": 27,
+      "hors_perimetre": 29,
+      "article_top1_correct": 21,
+      "article_dans_top5": 21,
+      "rappel_article_1": 0.7777777777777778,
+      "rappel_article_5": 0.7777777777777778,
+      "abstentions_a_tort": 4,
+      "abstentions_correctes_hors_perimetre": 27,
+      "reponses_fournies": 25,
+      "erreurs_par_categorie": {
+        "reference_absente_top5": 2,
+        "hors_perimetre_accepte": 2,
+        "abstention_a_tort": 4
+      }
+    }
+  },
+  "par_langue": {
+    "ar": {
+      "sans_seuil_score": {
+        "questions": 3,
+        "dans_perimetre": 0,
+        "hors_perimetre": 3,
+        "article_top1_correct": 0,
+        "article_dans_top5": 0,
+        "rappel_article_1": null,
+        "rappel_article_5": null,
+        "abstentions_a_tort": 0,
+        "abstentions_correctes_hors_perimetre": 0,
+        "reponses_fournies": 3,
+        "erreurs_par_categorie": {
+          "hors_perimetre_accepte": 3
+        }
+      },
+      "seuil_historique": {
+        "questions": 3,
+        "dans_perimetre": 0,
+        "hors_perimetre": 3,
+        "article_top1_correct": 0,
+        "article_dans_top5": 0,
+        "rappel_article_1": null,
+        "rappel_article_5": null,
+        "abstentions_a_tort": 0,
+        "abstentions_correctes_hors_perimetre": 3,
+        "reponses_fournies": 0,
+        "erreurs_par_categorie": {}
+      }
+    },
+    "fr": {
+      "sans_seuil_score": {
+        "questions": 44,
+        "dans_perimetre": 21,
+        "hors_perimetre": 23,
+        "article_top1_correct": 20,
+        "article_dans_top5": 20,
+        "rappel_article_1": 0.9523809523809523,
+        "rappel_article_5": 0.9523809523809523,
+        "abstentions_a_tort": 0,
+        "abstentions_correctes_hors_perimetre": 0,
+        "reponses_fournies": 44,
+        "erreurs_par_categorie": {
+          "reference_absente_top5": 1,
+          "hors_perimetre_accepte": 23
+        }
+      },
+      "seuil_historique": {
+        "questions": 44,
+        "dans_perimetre": 21,
+        "hors_perimetre": 23,
+        "article_top1_correct": 20,
+        "article_dans_top5": 20,
+        "rappel_article_1": 0.9523809523809523,
+        "rappel_article_5": 0.9523809523809523,
+        "abstentions_a_tort": 0,
+        "abstentions_correctes_hors_perimetre": 22,
+        "reponses_fournies": 22,
+        "erreurs_par_categorie": {
+          "reference_absente_top5": 1,
+          "hors_perimetre_accepte": 1
+        }
+      }
+    },
+    "tun": {
+      "sans_seuil_score": {
+        "questions": 9,
+        "dans_perimetre": 6,
+        "hors_perimetre": 3,
+        "article_top1_correct": 1,
+        "article_dans_top5": 3,
+        "rappel_article_1": 0.16666666666666666,
+        "rappel_article_5": 0.5,
+        "abstentions_a_tort": 0,
+        "abstentions_correctes_hors_perimetre": 0,
+        "reponses_fournies": 9,
+        "erreurs_par_categorie": {
+          "hors_perimetre_accepte": 3,
+          "article_voisin_classe_devant": 2,
+          "reference_absente_top5": 3
+        }
+      },
+      "seuil_historique": {
+        "questions": 9,
+        "dans_perimetre": 6,
+        "hors_perimetre": 3,
+        "article_top1_correct": 1,
+        "article_dans_top5": 1,
+        "rappel_article_1": 0.16666666666666666,
+        "rappel_article_5": 0.16666666666666666,
+        "abstentions_a_tort": 4,
+        "abstentions_correctes_hors_perimetre": 2,
+        "reponses_fournies": 3,
+        "erreurs_par_categorie": {
+          "abstention_a_tort": 4,
+          "reference_absente_top5": 1,
+          "hors_perimetre_accepte": 1
+        }
+      }
+    }
+  },
+  "erreurs_evitees": [
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D23",
+    "D24",
+    "D25",
+    "D26",
+    "D27",
+    "D28",
+    "D43",
+    "D44",
+    "D45",
+    "D46",
+    "D47",
+    "D48",
+    "D49",
+    "D50",
+    "D51",
+    "D52",
+    "D54",
+    "D55",
+    "D56"
+  ],
+  "erreurs_introduites": [],
+  "details": [
+    {
+      "id": "D01",
+      "question": "Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "23",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "23",
+          "24",
+          "411",
+          "20",
+          "193"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "23",
+          "24",
+          "411",
+          "20",
+          "193"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D02",
+      "question": "Un congé payé de cinq jours ouvrables peut-il être fractionné ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "118",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "118",
+          "125",
+          "113",
+          "123",
+          "119"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "118",
+          "125",
+          "113",
+          "123",
+          "119"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D03",
+      "question": "Dans quel délai un salarié doit-il prendre un congé de quinze jours ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "124",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "124",
+          "118",
+          "21",
+          "104",
+          "123"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "124",
+          "118",
+          "21",
+          "104",
+          "123"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D04",
+      "question": "À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "140",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "140",
+          "108",
+          "89",
+          "151",
+          "139"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "140",
+          "108",
+          "89",
+          "151",
+          "139"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D05",
+      "question": "Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "147",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "147",
+          "148",
+          "183",
+          "42",
+          "216"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "147",
+          "148",
+          "183",
+          "42",
+          "216"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D06",
+      "question": "Quelles sont les attributions des conseils de prud'hommes ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "183",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "182",
+          "185",
+          "191",
+          "211",
+          "195"
+        ],
+        "erreur": "reference_absente_top5"
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "182",
+          "185",
+          "191",
+          "211",
+          "195"
+        ],
+        "erreur": "reference_absente_top5"
+      }
+    },
+    {
+      "id": "D07",
+      "question": "Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "193",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "193",
+          "214",
+          "186",
+          "204",
+          "355"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "193",
+          "214",
+          "186",
+          "204",
+          "355"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D08",
+      "question": "Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "268",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "268",
+          "316",
+          "94",
+          "261",
+          "73"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "268",
+          "316",
+          "94",
+          "261",
+          "73"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D09",
+      "question": "Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "366",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "366",
+          "320",
+          "324",
+          "389",
+          "417"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "366",
+          "320",
+          "324",
+          "389",
+          "417"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D10",
+      "question": "Un travail commandé et non publié doit-il être payé ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "402",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "402",
+          "118",
+          "181",
+          "89",
+          "125"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "402",
+          "118",
+          "181",
+          "89",
+          "125"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D11",
+      "question": "Des unions de syndicats peuvent-elles être constituées ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "252",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "252",
+          "248",
+          "246",
+          "247",
+          "242"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "252",
+          "248",
+          "246",
+          "247",
+          "242"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D12",
+      "question": "Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "68",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "68",
+          "71",
+          "69",
+          "70",
+          "29"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "68",
+          "71",
+          "69",
+          "70",
+          "29"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D13",
+      "question": "Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "118",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "118",
+          "123",
+          "113",
+          "445",
+          "125"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "118",
+          "123",
+          "113",
+          "445",
+          "125"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D14",
+      "question": "Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "365",
+          "435",
+          "151",
+          "139",
+          "30"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "365",
+          "435",
+          "151",
+          "139",
+          "30"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      }
+    },
+    {
+      "id": "D15",
+      "question": "Quelle est la durée de validité d'un passeport tunisien ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "313",
+          "433",
+          "22",
+          "263",
+          "432"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D16",
+      "question": "Quel est le délai de recours devant le tribunal administratif ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "315",
+          "230",
+          "334",
+          "211",
+          "360"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D17",
+      "question": "Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "304",
+          "4",
+          "386",
+          "345",
+          "117"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D18",
+      "question": "Quel est le montant de la pension de retraite versée par la CNSS ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "130",
+          "216",
+          "127",
+          "411",
+          "143"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D19",
+      "question": "Quelle est la peine prévue pour la conduite en état d'ivresse ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "99",
+          "237",
+          "193",
+          "438",
+          "364"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D20",
+      "question": "Quelle est la TVA appliquée aux services de restauration ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "68",
+          "236",
+          "287",
+          "233 bis",
+          "300"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D21",
+      "question": "Un commerçant peut-il vendre des produits périmés ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "409",
+          "138",
+          "242",
+          "152",
+          "292"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D22",
+      "question": "Quelles sont les conditions pour créer une société anonyme en Tunisie ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "153",
+          "258",
+          "15",
+          "245",
+          "7"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D23",
+      "question": "Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "148",
+          "319",
+          "415",
+          "436",
+          "416"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D24",
+      "question": "Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "371",
+          "21",
+          "22",
+          "240",
+          "233 bis"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D25",
+      "question": "Quel est le taux d'intérêt légal en Tunisie ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "139",
+          "7",
+          "133",
+          "134",
+          "258"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D26",
+      "question": "Quelle est la durée de la scolarité obligatoire en Tunisie ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "410",
+          "258",
+          "313",
+          "18",
+          "22"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D27",
+      "question": "ما هي شروط الحصول على رخصة السياقة؟",
+      "langue_reference": "ar",
+      "langue_routee": "ar",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "281",
+          "300",
+          "308",
+          "21",
+          "307"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D28",
+      "question": "Ken na3mel test el code el route, chniya el mawed el lazmin ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "2",
+          "233",
+          "268",
+          "53"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D29",
+      "question": "Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "22",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "22",
+          "371",
+          "370",
+          "120",
+          "128"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "22",
+          "371",
+          "370",
+          "120",
+          "128"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D30",
+      "question": "Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "22",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "6",
+          "370",
+          "18",
+          "22"
+        ],
+        "erreur": "article_voisin_classe_devant"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": "abstention_a_tort"
+      }
+    },
+    {
+      "id": "D31",
+      "question": "Quelle est la durée maximale du travail effectif par semaine ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "79",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "79",
+          "22",
+          "90",
+          "114",
+          "94"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "79",
+          "22",
+          "90",
+          "114",
+          "94"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D32",
+      "question": "Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "79",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "79",
+          "140",
+          "90",
+          "132"
+        ],
+        "erreur": "article_voisin_classe_devant"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": "abstention_a_tort"
+      }
+    },
+    {
+      "id": "D33",
+      "question": "Les salariés peuvent-ils travailler sans horaire précisé ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "85",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "85",
+          "108",
+          "18",
+          "86",
+          "433"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "85",
+          "108",
+          "18",
+          "86",
+          "433"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D34",
+      "question": "Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "122",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "122",
+          "120",
+          "64",
+          "112",
+          "128"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "122",
+          "120",
+          "64",
+          "112",
+          "128"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D35",
+      "question": "El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "122",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "124",
+          "119",
+          "130",
+          "118"
+        ],
+        "erreur": "reference_absente_top5"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": "abstention_a_tort"
+      }
+    },
+    {
+      "id": "D36",
+      "question": "Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "149",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "149",
+          "3",
+          "118",
+          "145",
+          "150"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "149",
+          "3",
+          "118",
+          "145",
+          "150"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D37",
+      "question": "Sur quelles questions la commission consultative d'entreprise est-elle consultée ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "160",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "160",
+          "164",
+          "162",
+          "161",
+          "168"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "160",
+          "164",
+          "162",
+          "161",
+          "168"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D38",
+      "question": "Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "170",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "erreur": "reference_absente_top5"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": "abstention_a_tort"
+      }
+    },
+    {
+      "id": "D39",
+      "question": "Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "191",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "191",
+          "194",
+          "195",
+          "187",
+          "196"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "191",
+          "194",
+          "195",
+          "187",
+          "196"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D40",
+      "question": "Les conseils de prud'hommes statuent-ils toujours en premier ressort ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "216",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "216",
+          "221",
+          "185",
+          "227",
+          "184"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "216",
+          "221",
+          "185",
+          "227",
+          "184"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D41",
+      "question": "Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "232",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "232",
+          "218",
+          "228",
+          "151",
+          "185"
+        ],
+        "erreur": null
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "232",
+          "218",
+          "228",
+          "151",
+          "185"
+        ],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D42",
+      "question": "Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": true,
+      "reference": "198",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "191",
+          "194",
+          "195",
+          "187",
+          "196"
+        ],
+        "erreur": "reference_absente_top5"
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "191",
+          "194",
+          "195",
+          "187",
+          "196"
+        ],
+        "erreur": "reference_absente_top5"
+      }
+    },
+    {
+      "id": "D43",
+      "question": "Quel est le montant de la taxe de séjour à Hammamet ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "318",
+          "316",
+          "7",
+          "216",
+          "313"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D44",
+      "question": "Comment demander un permis de construire pour une villa ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "23",
+          "21",
+          "154",
+          "86",
+          "27"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D45",
+      "question": "Quelle est la durée de la garde à vue en matière pénale ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "178",
+          "91",
+          "177",
+          "313",
+          "22"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D46",
+      "question": "Une banque peut-elle refuser un crédit immobilier à un salarié ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "407",
+          "27",
+          "258",
+          "370",
+          "193"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D47",
+      "question": "Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "207",
+          "68",
+          "421",
+          "13",
+          "422"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D48",
+      "question": "Quel est le délai de paiement des factures d'eau à la SONEDE ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "134",
+          "77",
+          "2",
+          "317",
+          "144"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D49",
+      "question": "Quel est le régime fiscal des auto-entrepreneurs ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "30",
+          "94",
+          "134",
+          "278",
+          "77"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D50",
+      "question": "Quelles sont les règles de stationnement sur le trottoir à Sousse ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "385",
+          "255",
+          "146",
+          "412",
+          "215"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D51",
+      "question": "Quelle est la durée d'un mandat de député en Tunisie ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "410",
+          "187",
+          "258",
+          "313",
+          "22"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D52",
+      "question": "Kifech n7ell chikaya 3la el bank ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "445",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D53",
+      "question": "Chnowa el 3a9ouba 3la el sar9a fel code pénal ?",
+      "langue_reference": "tun",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "196",
+          "445",
+          "323",
+          "269",
+          "324"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": false,
+        "articles": [
+          "196",
+          "445",
+          "323",
+          "269",
+          "324"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      }
+    },
+    {
+      "id": "D54",
+      "question": "ما هو أجل تقديم الطعن في الحكم الجزائي؟",
+      "langue_reference": "ar",
+      "langue_routee": "ar",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "17",
+          "47",
+          "269",
+          "224",
+          "315"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D55",
+      "question": "ما هي شروط كراء المحل التجاري؟",
+      "langue_reference": "ar",
+      "langue_routee": "ar",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "15",
+          "238",
+          "154",
+          "413",
+          "191"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    },
+    {
+      "id": "D56",
+      "question": "Quel est le délai pour contester une amende fiscale ?",
+      "langue_reference": "fr",
+      "langue_routee": "fr",
+      "dans_perimetre": false,
+      "reference": "n/a",
+      "sans_seuil_score": {
+        "abstention": false,
+        "articles": [
+          "316",
+          "134",
+          "77",
+          "257",
+          "321"
+        ],
+        "erreur": "hors_perimetre_accepte"
+      },
+      "seuil_historique": {
+        "abstention": true,
+        "articles": [],
+        "erreur": null
+      }
+    }
+  ]
+}

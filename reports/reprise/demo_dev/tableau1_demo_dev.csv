@@ -1,0 +1,3 @@
+﻿jeu,usage,variante,questions,dans_perimetre,hors_perimetre,article_top1_correct,article_dans_top5,rappel_article_1,rappel_article_5,abstentions_a_tort,abstentions_correctes_hors_perimetre,reponses_fournies,erreurs
+questions_dev_v2,developpement_non_independant,sans_seuil_score,56,27,29,21,23,0.7777777777777778,0.8518518518518519,0,0,56,35
+questions_dev_v2,developpement_non_independant,seuil_historique,56,27,29,21,21,0.7777777777777778,0.7777777777777778,4,27,25,8

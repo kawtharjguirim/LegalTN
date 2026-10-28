@@ -1,0 +1,7 @@
+composant,lot,methode_bronze,baseline_triviale,metrique,score_baseline,score_bronze,n_test,nature
+alignement AR/FR,dev A+B (160 paires déjà consultées),appariement par numérotation + suffixes,appariement aléatoire,concordance avec références dev,non calculée,160/160 identifiants et pages attendus,160,controle_developpement_pas_un_test
+retrieval BM25,questions_dev_v2,BM25 k1=1.5 b=0.75,article aléatoire,rappel@5,non mesurée,0.852,27,developpement_non_independant
+retrieval BM25 + seuil,questions_dev_v2,seuil 9.085 historique,article aléatoire,refus hors périmètre,non mesurée,27/29 correctement refusés,29,developpement_non_independant
+obligations par règles,candidats dev v1,marqueurs modaux + rôles + conditions,tout obligatoire,F1 par modal,non calculée,non mesurable sans gold humain,200,predictions_seules
+NER par CRF,CoNLL-2002 esp.testb,CRF traits ortho+contexte,baseline phrases entité unique,F1 span exact,publié 35.86 (62.49 sans erreurs train),voir conll2002_reproduction.json,53049 lignes,reproduction_resultat_publie
+NER par CRF,corpus légal,CRF même pipeline,baseline triviale,F1 span,non calculée,en attente annotation ner_a_annoter_v1.csv,0,non_evalue

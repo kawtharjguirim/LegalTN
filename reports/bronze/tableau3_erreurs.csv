@@ -1,0 +1,8 @@
+composant,categorie_erreur,nombre,exemple_court,piste_correction,nature
+retrieval BM25,hors périmètre accepté,29 (sans seuil) / 2 (seuil),capitale de la Tunisie -> article cité,seuil de score lexical,dev_v2_35_err_sans_seuil
+retrieval BM25,référence absente du top5,4 (sans seuil) / 2 (seuil),question tunisienne mal couverte,enrichir normalisation tunisien,dev_v2
+retrieval BM25,abstention à tort,4 (seuil),sigle CDI inconnu du corpus,alias/sigles hors vocabulaire,dev_v2_xfail_documente
+retrieval BM25,article voisin classé devant,2 (sans seuil),article du même chapitre préféré,reranking par section,dev_v2
+obligations,modal absent des listes,à mesurer sur gold,obligation sans marqueur lexical,élargir patrons après annotation,non_mesure
+alignement,étiquette FR sans suffixe,69 contrôlées,article bis étiqueté sans suffixe,relire échantillon image,controle_technique
+alignement,contrôle d'année divergent,6,année amendement différente AR/FR,vérification sur image,controle_technique

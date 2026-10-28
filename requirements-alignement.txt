@@ -1,0 +1,4 @@
+# Environnement de l'alignement vérifié sous Python 3.12.2.
+# Ce fichier ne couvre pas les composants applicatifs encore manquants.
+numpy==2.4.1
+pandas==2.2.2

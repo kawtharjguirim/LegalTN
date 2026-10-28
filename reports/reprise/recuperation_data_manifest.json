@@ -1,0 +1,4376 @@
+{
+  "source": "C:\\Users\\Moham\\Downloads\\data-20261027T220600Z-1-001\\data",
+  "fichiers": 728,
+  "copies_nouvelles": 725,
+  "fichiers_deja_identiques": 3,
+  "entrees": [
+    {
+      "fichier": "data/processed/absents_a_verifier.csv",
+      "octets": 854,
+      "sha256": "3ff6a6b1976b79d9ad0ddcb28314ae8948297975dde9dc6cb480ac18f13d0b4d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/alignement_echantillon_image.csv",
+      "octets": 695,
+      "sha256": "e1fd22f50c10cbf75253681b9bdf14ee0f89d0863b1448032fa7a8245e78056a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/alignement_fr_ar.csv",
+      "octets": 106613,
+      "sha256": "807271cba8ff9a66a7e6a4027f5eb50568313ca9c03859939bd8e92e4a70893a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/alignement_resume.json",
+      "octets": 275,
+      "sha256": "ca4b3935e472cdecc87acdb79297de4afa1e0ed50ff530467ccf619291cbef7d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/articles_ar.csv",
+      "octets": 490719,
+      "sha256": "77fe24b3d3ffc5923fd42fe4298521ebdbcec5f7af001ccd576a90fa69846022",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/articles_fr.csv",
+      "octets": 314471,
+      "sha256": "a75e4c21c679796a1e9ff04dc071fdc08c698004ddc3cd198d8c54fb0dca122b",
+      "deja_identique": true
+    },
+    {
+      "fichier": "data/processed/articles_fr_corrige.csv",
+      "octets": 308200,
+      "sha256": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "deja_identique": true
+    },
+    {
+      "fichier": "data/processed/articles_index_draft.csv",
+      "octets": 11232,
+      "sha256": "477d8c009d6d275292024a0f5ba0d2a5c842d33db541b58e2ecc8567338d2252",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/corrections_fr.csv",
+      "octets": 1656,
+      "sha256": "74866e6c7fb21daf359f7d0f0a046f2ba9692751d2a1a7a8051829a5bb3044c0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/exploration_summary.json",
+      "octets": 822,
+      "sha256": "83f3c30fd268b91b0dc4c953355b303e10098af3c88fd1df99f17c1e3b8d96d1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/notes_bas_pages.csv",
+      "octets": 7894,
+      "sha256": "fbbddd7393041bdfd928f8e2b4748eb6c885c93d1297ca9db0b137cd73d5fb5f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p009.json",
+      "octets": 3267,
+      "sha256": "fed244ddeb0526da7b03f676ea6b16cf0fc1b7c08d0747f2ee1d6bd75adfdbad",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p010.json",
+      "octets": 3995,
+      "sha256": "8f5e360750bc0a387b2b5d3a7d58274941f8bccb2ecad58d33c3ce9225bd58f8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p011.json",
+      "octets": 2725,
+      "sha256": "48e0d5bcc69a1e51e20e292fb0a6597a4da8be1deaa2ba87def9a498057e87ec",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p012.json",
+      "octets": 4014,
+      "sha256": "d857e2808d010c1de4c66f20ce77964fa1c6bebca5f3cf0f05c52d9c10916e07",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p013.json",
+      "octets": 3568,
+      "sha256": "823b58bc0fa2b382e47c16969f4e9cad170b71e9da5d1f7db3f315d8e9b5ae95",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p014.json",
+      "octets": 3439,
+      "sha256": "eb91bc5fc0b3727759c672d393bc17d3426a717b91eb7460b183a065b9611764",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p015.json",
+      "octets": 3276,
+      "sha256": "abd37ecc2c105a53d4ec127651c063bc64905c06ec3d1bd3db7481c87e65ba62",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p016.json",
+      "octets": 3896,
+      "sha256": "ee45458571e8006645543507a67dcea5e0623330af3909e99f100a1242b90683",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p017.json",
+      "octets": 4070,
+      "sha256": "cca3a0b1b3ca26ad0e36866307684be19dfe4a6219ac27e07d38a53dac927318",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p018.json",
+      "octets": 4066,
+      "sha256": "997b6eeb577c28798e0703c41ee0e4c131cf52943c338edf5f36fe4e2162fdb3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p019.json",
+      "octets": 3923,
+      "sha256": "7e8a1f29ec4ea15ba74f126916dc68d5442ae42053722b25d0c8013de477de33",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p020.json",
+      "octets": 3827,
+      "sha256": "298c37876ce567402ab75fe9a89d964fb3eac85bbcec5fdce67644f8b225d0c8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p021.json",
+      "octets": 4471,
+      "sha256": "d755cf17200de355be414294e0311a188aa8599cbdf4a87c71431635a51d1336",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p022.json",
+      "octets": 4375,
+      "sha256": "fe07b4291099782ef0b34bc1f07d7a0e3422b52ec20ea6537983994296aacfea",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p023.json",
+      "octets": 4124,
+      "sha256": "5f94149beae638651f2cf670780fa10f45a470906728e73095cd8505585ea96e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p024.json",
+      "octets": 3959,
+      "sha256": "036211087c2c6ad950b7a915eef14a81af5d09bc7293942c910a69bde75f2523",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p025.json",
+      "octets": 3735,
+      "sha256": "30c1f1d5b7734bc0da3df44bc2321719d9fff1a3a1939ed3da2e8fa2b4de51cf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p026.json",
+      "octets": 4312,
+      "sha256": "7014a9800cc5ac238dda51cfc5efbcc92f556656411995b94100a4978397dc30",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p027.json",
+      "octets": 3544,
+      "sha256": "71cfc3202989c6d547e0ab7caf4a936409e7add70fa8fe3efde44b640944c892",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p028.json",
+      "octets": 3676,
+      "sha256": "ab6907c379739c048dd2d34304ff6ce8ba884ceada1308965eeb75c47a659a51",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p029.json",
+      "octets": 1781,
+      "sha256": "d81996740679de0d7a508930461cbb9fce881b317242b25c57b2d3e30efba8e1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p030.json",
+      "octets": 3260,
+      "sha256": "29f8e0a08b9f42b5ddae0119deb6f53a128ac43d32dbf7391b49e9c9cf117d8c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p031.json",
+      "octets": 4275,
+      "sha256": "1b68a54b51ef5769b630ede2803d726ce7a0e9e4fad8d4198e819e013d37f94a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p032.json",
+      "octets": 3529,
+      "sha256": "2b61f0889f2fe3303ca0e4ed8273438e25ec6989ab96f36235c20bcb8f9216a0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p033.json",
+      "octets": 3441,
+      "sha256": "f51888fbfacc828aa250df1cae018f8139ec7ac7f33541e2399f69b8c5beb712",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p034.json",
+      "octets": 3795,
+      "sha256": "235452bdc7dac2e45e64e45a5374ce4700fa4d172c1e5ee7874e1eae27cd772c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p035.json",
+      "octets": 3881,
+      "sha256": "7f135d179faf431fd27e76d3127a63f9335b654b69c4df89553bc06c3dc02de6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p036.json",
+      "octets": 4200,
+      "sha256": "38b73bfce45175e798798c1cc30ba64f931aa8f637d17c5e78fe7be305b92b71",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p037.json",
+      "octets": 3404,
+      "sha256": "c8bc88eb42fec7aad80d43392e9d6db507a3b41a22280c890a3036bc9a85673c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p038.json",
+      "octets": 3128,
+      "sha256": "aa3a912a61936b291f5b63924d6ef6576d8158d9cd89fa64bd79c8c1ad40a7a9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p039.json",
+      "octets": 3181,
+      "sha256": "8e5627f3411c84c46ff8f7c130521a721613e6d7d00df12b5312a5a0d3ee2f29",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p040.json",
+      "octets": 4457,
+      "sha256": "f7f850661bbc55f19a6065879b48086fb5d06a59e5f99d20a26bd9cc14639ef7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p041.json",
+      "octets": 4666,
+      "sha256": "681fdb9d0fa3eaa2a8f445bc4b6f0cbd17d00c86d8ab50481d92963c80497eeb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p042.json",
+      "octets": 3227,
+      "sha256": "853d5cacaa94d63a33c79fdbf28197cdbe01445e3c5488dfeeb3ca980bae4e7b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p043.json",
+      "octets": 3654,
+      "sha256": "a849de22f3f7b95d717a65a66b9b8d94cf60382fef9e40c3698656206f0b257b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p044.json",
+      "octets": 4081,
+      "sha256": "4d53a9c7914266de3809528954753b3cb20837f91ee2d925dc20e3559b9c3093",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p045.json",
+      "octets": 3423,
+      "sha256": "1d060a4fc05b27393c2062cb545881a825165452966990786a3d039df563fad8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p046.json",
+      "octets": 3185,
+      "sha256": "2e6c54e1c923d95ccc888119c3daaf9dd9bffd4a7b4e1d3459488eb2017c8914",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p047.json",
+      "octets": 4245,
+      "sha256": "66124f7ded6841a70db601999ec9e50ae4bb2106ed76021f9abfe43d9ae9b639",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p048.json",
+      "octets": 4221,
+      "sha256": "dce7bd64360d0e3ba963bf755b9f0a2bc2807f29f354ee599761f462847b3960",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p049.json",
+      "octets": 2854,
+      "sha256": "1ae4055055227dc84599eac54da8e13b2e51ab0cc862c16f0034a817eeca2079",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p050.json",
+      "octets": 3190,
+      "sha256": "cbb47a58e6d2f67367b430a24e21dda78cefd3d815c7fae2877795bb77f559c5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p051.json",
+      "octets": 4398,
+      "sha256": "6a6e6a27c25d3cd9753042f55cc5e3290a761ea0e83ddd4e2aaed657367bf61b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p052.json",
+      "octets": 3795,
+      "sha256": "e805b6f50f72cddc1b4608aa0b73d152b16924533747cee0f86e9552d9d53cad",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p053.json",
+      "octets": 4561,
+      "sha256": "d378fcff9194df231710f07ad3622371067cc7b8ea9a527b0c3f087edcb6ea15",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p054.json",
+      "octets": 3829,
+      "sha256": "0b16eed7461b386990de5c6a4b17556bd5a3e9d128b6ae05790df8fbbf211d41",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p055.json",
+      "octets": 4604,
+      "sha256": "ad6d517f699b59692c6963dfaf67b6b8ba4555858077fcf50faf6665acccbdc0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p056.json",
+      "octets": 3470,
+      "sha256": "603eee416f9ba853f81e54d16a0dbd6cb9959307d14d00f7beef52283c42fc49",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p057.json",
+      "octets": 3484,
+      "sha256": "a2467093c6a59e1bbe6d33e07fde5065aabf405ff22cff1c88bd33b5d7a586a5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p058.json",
+      "octets": 3261,
+      "sha256": "854dfd7b7d9d9dffcfccb1f15edb07ebea419e411014f087a85146ecb641b29b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p059.json",
+      "octets": 3572,
+      "sha256": "e9e7aa7dffd01964a1c1a97bd3d60ed3c1fa5e93f484f92419dbd7f2b327297c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p060.json",
+      "octets": 3777,
+      "sha256": "47085ad85ae5f421acd9333df416561b2b4c257400e842dab33631c372257abd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p061.json",
+      "octets": 3123,
+      "sha256": "329d3e4d0be9be75684d5d8abc367d22c3d1351528ef19c707fc4c624ad96f63",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p062.json",
+      "octets": 4045,
+      "sha256": "72a69eb97a4c8566346c990635538b019e9ed7dd4950e636fb61e0a876e7516e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p063.json",
+      "octets": 3941,
+      "sha256": "41caf61672adfafe2fa93e153dbbab8b7724b224e71dbf485fd72cac9734f719",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p064.json",
+      "octets": 3184,
+      "sha256": "b6531a3676c1871a8be2efe368d295e446739a6df39c2718f685194c811ab17a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p065.json",
+      "octets": 3666,
+      "sha256": "32aa46494eb1e592ac3ef85f274e717be13463f5c7f3322cd0feacef8dbbf40b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p066.json",
+      "octets": 3665,
+      "sha256": "25074e4efe9a0a5de0f25ded3566c46b9fbfaddb0514be2a98fd9948ce19269f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p067.json",
+      "octets": 4079,
+      "sha256": "731d161c1da6bdb0204198b92ea4f475eb5747439ebf11d0d1e458bff78b2bfa",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p068.json",
+      "octets": 4223,
+      "sha256": "1fe2411a17290d514d75800e666ad88a64d1274c95c5d06d9570104a37f4fa46",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p069.json",
+      "octets": 3562,
+      "sha256": "9ccda54c4fc41316e4fbdd14414ef9f2dbd39d6114a19aba3729861d7f6ccde5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p070.json",
+      "octets": 3793,
+      "sha256": "7a56d2966fa493bd7ec20056dcc936462f394ddc5cfb884b8e46a61a8c1b0e6f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p071.json",
+      "octets": 4246,
+      "sha256": "1abd75f75e8c560c145bca45a0dcfee50fcd56ce28ec31fafa91fc0ec3578406",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p072.json",
+      "octets": 4229,
+      "sha256": "d5080f567ef1b5cedd9f887e030ba21a98e649ecf89fcf614ada1155093740e5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p073.json",
+      "octets": 4101,
+      "sha256": "0fa0589f76c375e1f21f1f9f142d315516b061c4bd68803e6b766f0c38808702",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p074.json",
+      "octets": 3107,
+      "sha256": "242805623e323196d309d41f39143cc278771277a4c68dd12c3782ff56ec0601",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p075.json",
+      "octets": 3246,
+      "sha256": "78b040e699a1ec6c21339c119e0ce03bd1bdaf40a5c965ea718246b82c98acd1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p076.json",
+      "octets": 3668,
+      "sha256": "873d09b1934516a5e957af8f260796006aeffdacfe914b4e8a98fc5db3d83521",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p077.json",
+      "octets": 3625,
+      "sha256": "77f85b9ab9e46993b74462e40233e0fb0100827e8be8f79647dd56609660f455",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p078.json",
+      "octets": 3655,
+      "sha256": "a963ac4b26b7440c35f8a3fc848b7623940eb0555ecfbe619d72fb12190f274e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p079.json",
+      "octets": 4323,
+      "sha256": "2850aec29fca2164d5df99e5aced6e2ba7f86177efac3e913205651cb3bf69cf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p080.json",
+      "octets": 3398,
+      "sha256": "3637466b089515fd4cbe227ea1b13cdf315ecec860bde4dcdce69c57c8061d1a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p081.json",
+      "octets": 4279,
+      "sha256": "1a38824afbe62b803ab9fac6bf4c68912bc059573fd44d6074a8ca59d51168d9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p082.json",
+      "octets": 4159,
+      "sha256": "f84ac0e906a0aa0abb1b964bb9ba9663651e9737b4e41b82a10f7f6788606ec9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p083.json",
+      "octets": 3173,
+      "sha256": "e447a070466a960a210c4655030ce622801164fc028d3d4368fa9d6222cf6d16",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p084.json",
+      "octets": 3913,
+      "sha256": "6b48822b3e88dc3e0666cce1271eb68e058448117d219017b100f65e38ddb429",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p085.json",
+      "octets": 2994,
+      "sha256": "6b8dc438572389a6ceda3094c28d8ed5a75a7ca11ec44fadcf3412199bf5dcc2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p086.json",
+      "octets": 4063,
+      "sha256": "5a726fe15c05d0205bbd36f3db4f760532d2381cfea4f43aab31fe246f17e8b3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p087.json",
+      "octets": 4374,
+      "sha256": "6dd0107bc1a292611ed5aac7eec28369d64335f1bde5712fcb258b317a6932bb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p088.json",
+      "octets": 3517,
+      "sha256": "79dff7fd4cb2edd8e3abf089156bdd951a25f57714bdca4b1e660a1a3a713727",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p089.json",
+      "octets": 4242,
+      "sha256": "ef5cf1dd956c59a9ed32533f57e1bbdadd4f155468fc44913a974d6a18296ae4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p090.json",
+      "octets": 3325,
+      "sha256": "af0b208b408a18bf54df7c1c72e0d867f74c82b4a50a8f1d98a92362ee96ebcd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p091.json",
+      "octets": 3871,
+      "sha256": "da7419b49fa8a618187f6550984dc855264a85d14abfe8fa43f8eef2eb3a6697",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p092.json",
+      "octets": 3873,
+      "sha256": "f559ff03e5c546136e0d5239531a8e7692dcf11c342630bc694d07b2051529f9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p093.json",
+      "octets": 2995,
+      "sha256": "d34a4cd7f738c5f5633654df22dff3711ab4fa435c669ebb9911901455278155",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p094.json",
+      "octets": 3833,
+      "sha256": "94ee7c0acc0f00fa04e8278b169faaff7761a72a426174e1a3164681e906c75e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p095.json",
+      "octets": 3257,
+      "sha256": "f7172f551ee6ec188ae35cc6c8985ac4f26e943301f9d59c5e974bf719eb7fce",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p096.json",
+      "octets": 3697,
+      "sha256": "a51edf4e29522349b4ba585b7e8f53aa374d4543398a2c733b7d7d8787012bfb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p097.json",
+      "octets": 3912,
+      "sha256": "b0147fe5c76c358ddc205110ab29f6e14f0f043448c15fb04e2d8286694cca03",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p098.json",
+      "octets": 4362,
+      "sha256": "5233c0fa1933ff6f1109b991c403a69144269d1d1020d6d06355b89a4c33349a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p099.json",
+      "octets": 3907,
+      "sha256": "445b88d7b1b25b60cfccfd192219b9945b6c62409f1b496d448fc8d26ad2f482",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p100.json",
+      "octets": 4206,
+      "sha256": "3e07a71e73d80f57473ca5ad3c8a246c0ade7536b696476db420eb81c64d70f1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p101.json",
+      "octets": 3738,
+      "sha256": "da3407767ce59ee84f70a28e6783bdb377b8f443d341bf1a6930faaec3c5dc4e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p102.json",
+      "octets": 3255,
+      "sha256": "ed42119a9775659527a8a372a27138844488fb68124b8c943d101a4c594bd9a8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p103.json",
+      "octets": 2909,
+      "sha256": "c6ffcc6169bb71a150c120eb2f392f6a69ca537d31ccc3d748bae226808ddd06",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p104.json",
+      "octets": 2668,
+      "sha256": "4342f9cf4e716e9aec0f3bd86ec14f01fb55928a6e099ade4df2f8ea3ae74187",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p105.json",
+      "octets": 3578,
+      "sha256": "fb43e3525b21c048b44068faafa29035fb388e8fd7d49dc6239a4b3858500378",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p106.json",
+      "octets": 3534,
+      "sha256": "9dc29c7a09bae9e63508b0f0702666a823cc24bbe73caa7e8bc3c96f21fceea3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p107.json",
+      "octets": 3981,
+      "sha256": "411c2d37b9a5f67cecdc1d1404d5e32e84fa95a4b1138da66ee093982c4e9a77",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p108.json",
+      "octets": 3178,
+      "sha256": "9936584190becb222ef3bb0dc2a46affbdc60dfd8de63751291b8b413a341de6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p109.json",
+      "octets": 4396,
+      "sha256": "882f412d15fb658f3a35467066ee651f9544411e94b1b66bdcb812d726065074",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p110.json",
+      "octets": 3865,
+      "sha256": "5db21ab3a763309f3a315b136c3fddf5c56c6a1ea669f0130d11588dfe95536d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p111.json",
+      "octets": 3902,
+      "sha256": "6152cbbfe81be5f18ee826dd65a1c71f9ddf022ee1628e57858211e32dafb823",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p112.json",
+      "octets": 3355,
+      "sha256": "f4c6bb3184b42d18bf397951641f49372a289f0b8587918e701d59a2ca210132",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p113.json",
+      "octets": 4139,
+      "sha256": "b9da80c9ca779cd002fe09ee06c826992f56997717455de599f4963c44d7cfa5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p114.json",
+      "octets": 3690,
+      "sha256": "37319fca0197bd24882466d68632c499016f454c12b65573890ad488feba30a8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p115.json",
+      "octets": 3256,
+      "sha256": "2454ece66bf31541cb6af0112a60c654fa158b867db1349f7a0b0cc08f48faad",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p116.json",
+      "octets": 3661,
+      "sha256": "e5fda51fa92d2c6476b9fd9b7b0a33cae5220d35208092d1f5f69c54fc717797",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p117.json",
+      "octets": 3525,
+      "sha256": "b3bb97e80fa72c44a429e10aa2eef10b0fb8d51aef294040f8cd9d10001749a9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p118.json",
+      "octets": 3584,
+      "sha256": "6fad13fc5aa223e8330adee0915ee82a983be1d071b055c9c2788d638ed8b391",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p119.json",
+      "octets": 4060,
+      "sha256": "7482819e177231604eeb2009e3a530913e366ca7c73728f7be6a981b507aa860",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p120.json",
+      "octets": 4190,
+      "sha256": "f7c983de3b81145148dd45e86c49a99fc6951befaadee6a8bb4655b2f2c8595b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p121.json",
+      "octets": 3559,
+      "sha256": "c3d83968b58f7e7b2db863d65f75ab9cb9a41a701251fb275bafa817dca88ebb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p122.json",
+      "octets": 2806,
+      "sha256": "145a904bcbe155ccd223739a023fad4308a79ea6d61adb3baa0e2947b5c3beb1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p123.json",
+      "octets": 3405,
+      "sha256": "eac6a4cc1c467eae2f2fd40764faf07d5e59ef58ad26336af2044c70035b8d9a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p124.json",
+      "octets": 4372,
+      "sha256": "6ac87bdb4e376386eb79b3645cd4f6314744fb5a57e3763df866e0e7b7caa34c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p125.json",
+      "octets": 4148,
+      "sha256": "6595e48b3b50f8b5ff8745b28ee95de48cc946fc20a415931fc3bcc7e8ae5447",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p126.json",
+      "octets": 4012,
+      "sha256": "e5fa1ece9ebfc304bd73351afd7a778996f6c2937af8f33bee67fc8d147a01ea",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p127.json",
+      "octets": 4643,
+      "sha256": "9c2e5a6fc08833af501b09de1aea026fb64fef4e3fe084ec98b4a3708eadf62f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p128.json",
+      "octets": 3585,
+      "sha256": "7f1dfe2f18fb9cbabff61e72627c4f9fa192ffaaa0d28ef94bd29501af36a23a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p129.json",
+      "octets": 4128,
+      "sha256": "653a92a2d5531b09fa999646d924a71e70bacfcd39708ec5f3f4a4c4ee981814",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p130.json",
+      "octets": 3901,
+      "sha256": "d7777919859093ff6d878f3a6e37b200745a8061bec75ba6aa905781307dc26b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p131.json",
+      "octets": 3398,
+      "sha256": "8febda7f5e417d348e9fe5dec7b2a407cd72b82494ab954cd9cf275e8c33507c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p132.json",
+      "octets": 3713,
+      "sha256": "50aa14319cf066193feff05ba42f1b23787d75bbd75e7fc807b6193e15de1efd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p133.json",
+      "octets": 4002,
+      "sha256": "db7dccfb0ac9b796883752a5d895cf2d59168aff7700fb06c883aaa6de33b48d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p134.json",
+      "octets": 3678,
+      "sha256": "42c419ee7141ea7209be887960799a5710b0309a83e8483d9099d800659c06e3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p135.json",
+      "octets": 2281,
+      "sha256": "81d2f2cfff1539653d47c6932aa2d92e3053b09bc7cd18fd3d8dae1341e2c634",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_bandes/p136.json",
+      "octets": 31,
+      "sha256": "2e4f652b2ecbd3566df758fc4c5f73757a8597d212ca3b7eba84f4526cbf1d9b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p001.txt",
+      "octets": 139,
+      "sha256": "38738d5712ce27aa76f91cc94a9f370f4046a6821df17ded1ab424bb5c0daac4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p002.txt",
+      "octets": 785,
+      "sha256": "bd373979801dd6b82324baf943c98b63841c68ec737a141698c912bcda2f85a8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p003.txt",
+      "octets": 2069,
+      "sha256": "0542b7000091ccf576b73954c4715d0405dfa04b55d20b5714f6676f106cedee",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p004.txt",
+      "octets": 2482,
+      "sha256": "abd7c8ea2e52a3225f17dc06b3fe97624b3524b2466620a4ed951956bd6b6c95",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p005.txt",
+      "octets": 2487,
+      "sha256": "838b076a507cabae85f2162b99e57fc263c5bef28b932bc207aad5f74d2e9666",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p006.txt",
+      "octets": 2464,
+      "sha256": "85173f2fdfe92c6772de6ca9a4042c3de1da338b0011f20c32dece4eb1c16a5b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p007.txt",
+      "octets": 411,
+      "sha256": "5b3bea18efabb2c8060928d85205be003c199c11aaba103ca9aad82dc4167311",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p008.txt",
+      "octets": 253,
+      "sha256": "39ab59195f9959910696e3aeb0dd75a2f761d8695f06140915579d2fd883e68d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p009.txt",
+      "octets": 2304,
+      "sha256": "c301a786fffeb4cf9ce1b4e556d34cf23d563ae7c7b94e7469e205bd85c0394f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p010.txt",
+      "octets": 2702,
+      "sha256": "84e1ecd3ab3f2b6db6f1467f98ab2bb585e7532fc65d0e4d1bd20aceceb7d40b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p011.txt",
+      "octets": 2223,
+      "sha256": "5e3038b3cc38775cda0caf4649d72de62d6ffcf6d646db7e3f2a9abf5fec09fb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p012.txt",
+      "octets": 3137,
+      "sha256": "0f6346016f1745a1fe94d726f4fd96632bc35233886c1b4564b953370436d76d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p013.txt",
+      "octets": 2467,
+      "sha256": "27fd29352eb96bb05e33701d335cf7ab97c573d1ad43b0a937ac948b8a9ce237",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p014.txt",
+      "octets": 2392,
+      "sha256": "14a25a3fb4cec12c9ab774b800bd132027f9787598f4e8ef0cfdfe859b1a992c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p015.txt",
+      "octets": 2609,
+      "sha256": "05974b4ca458b8d590c9b2c6e4cf2ae04b1225cb5fecc579b987af492183147a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p016.txt",
+      "octets": 2648,
+      "sha256": "eced21aae695b27e213782302f68570f9b45add5333fd91415d571934f8f36fb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p017.txt",
+      "octets": 3063,
+      "sha256": "256f278e8b0ebb838de7d771e8b1ccaae8541cacb65ef0a663619428af7580a7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p018.txt",
+      "octets": 2844,
+      "sha256": "accd3a153f78e2df4b16767c86a71910648aa36c836db5bd0c2094544481ee26",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p019.txt",
+      "octets": 2576,
+      "sha256": "c640095e0589e934b7ce6d098c660041a371ef459c02ef632cb164ee3fd1fa9f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p020.txt",
+      "octets": 2627,
+      "sha256": "66a74577f542ed59b7f9c9c76bb3b7b3a1f2a8118db413f72f0916a89e1dea18",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p021.txt",
+      "octets": 3208,
+      "sha256": "9dbf92973feaab79e34cc3062da3f5f26294f0c2df34f5608eeeaf8cc14316ae",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p022.txt",
+      "octets": 3186,
+      "sha256": "41397696cd9b0627f661fdfebf00d7e5c2dc927bd0dbd39095f3df07218d56a8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p023.txt",
+      "octets": 2759,
+      "sha256": "c9e538e777f92a75bea75dda58a7980445ba10758ee6e7fa8d93ea3219df5f3b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p024.txt",
+      "octets": 2660,
+      "sha256": "0c896015a57a9e9056260ca79788cf8748f41c0d0f2c8602f86cc89fc5303608",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p025.txt",
+      "octets": 2614,
+      "sha256": "684d30349e9899e79fae3349e9d60e9bd854d372d7ee1e6a744c6f4d653a6062",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p026.txt",
+      "octets": 2781,
+      "sha256": "38c727fd582c5491acdfbfa3d36d45eb8a4e98f18f98f5f8c081ba2e7da0fd0f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p027.txt",
+      "octets": 2295,
+      "sha256": "6b2a51ff6289a6bb70848c4b74eae5f8ccbfaabfbdcf82bdfa467bb11a8ada3b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p028.txt",
+      "octets": 2746,
+      "sha256": "6f7b4e53628bda02845d03d718e7e12e00c56eae332bc989f571414184c769c6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p029.txt",
+      "octets": 1851,
+      "sha256": "ebc5d7099304f3473df42f60b1dd855f0072e83d0cd32ac68c34f8f7b92e405e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p030.txt",
+      "octets": 3095,
+      "sha256": "f5b0fac109880155e0b2a3db254555eeb9357c6754ee1525d4ff5de8fa9a0b2a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p031.txt",
+      "octets": 3092,
+      "sha256": "fedff53c620571456968c33e8b744f55c6e8b07ac42c6dc2163206efeaa20100",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p032.txt",
+      "octets": 3052,
+      "sha256": "fa32ec3d16e0e601ff544cb2bcd60aae82c08e09b246efee15d5949df3ee3e02",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p033.txt",
+      "octets": 2265,
+      "sha256": "00053a4f6f00927623f7a24a7c93e65f8855438b0d8ef8173878612118d9b937",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p034.txt",
+      "octets": 3525,
+      "sha256": "bba205ed5bebe4610a3686c4b6f099051bd98e75e0e18c2e4320c62ab2f6f960",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p035.txt",
+      "octets": 2607,
+      "sha256": "4e2feb61ea6d7c2c001e6133d6e338ef487b0d621ad0d2be92563d9e781cf448",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p036.txt",
+      "octets": 2995,
+      "sha256": "e61aa3b5c59b3a43bbe8b330a5dc4a4db9e8e2f8120f2c65b43416975ce64624",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p037.txt",
+      "octets": 2223,
+      "sha256": "84321c5b820b92ace795a84017680ae47abb4ac0d1514ea56f116fea163e0bae",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p038.txt",
+      "octets": 2241,
+      "sha256": "d128ec5efd6b288926cdf20e0cd94a361f25a174af475ec160371213bd80bce8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p039.txt",
+      "octets": 2464,
+      "sha256": "7813e02b7d603a036a8f6aa8a0179ca0bb7e30a2623cd2967d6484d1dbdfee17",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p040.txt",
+      "octets": 2997,
+      "sha256": "4f139ebaa766dd04bd0075f907f200e8ecd6b45fcc888e51f006e2fe14273a01",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p041.txt",
+      "octets": 3077,
+      "sha256": "1e354a35d24903db708739122bc125d3494362f0cab2ad7f74f9395b98b483f0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p042.txt",
+      "octets": 2278,
+      "sha256": "590ec48229db04fb1dcdc557ab731aae324a1ddd65703d29a3f18e08334b99bf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p043.txt",
+      "octets": 2555,
+      "sha256": "75c585d676928df4f9950224bb4de431798808fc6a3f01493bc9a3acb1fad1e5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p044.txt",
+      "octets": 3142,
+      "sha256": "f1dde988a89529d58b7ac409bf2824f33941d7d77dc3fa51d552d7c412406618",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p045.txt",
+      "octets": 2309,
+      "sha256": "49395eed6433a60b9fb9e1e0da7c718e253f154e2fdfe9ba2e4113d38ed6bafe",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p046.txt",
+      "octets": 2686,
+      "sha256": "2517fe518fc93ef372a4b14e3891b858cc037d9b04478a151cbfd90493059513",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p047.txt",
+      "octets": 2931,
+      "sha256": "6673f0a5399e1f77ecf561d43afd02a1b7e125fdb1f243172b1af3474e13fbd7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p048.txt",
+      "octets": 2784,
+      "sha256": "00a08095c4a7efd7db1ebe9cf101e0617e51b33b6eca6bc8bf2a88f15bd7af2f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p049.txt",
+      "octets": 2714,
+      "sha256": "bc4e6c565cf61ff56b4c77ce1c06f3b0c0bb3c57dfff7e43f56ee1cf9b72d983",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p050.txt",
+      "octets": 2660,
+      "sha256": "b8b4618c29808f6356f34206622b35556a2382e9bcb9dd3f52fb5ae194bc0a38",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p051.txt",
+      "octets": 2955,
+      "sha256": "d3c25c300fbce10a21d89946b8b072410a71ff14960e2862cdbe7d7934279a79",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p052.txt",
+      "octets": 3011,
+      "sha256": "31011570bea03103b9eab752ecb36157077340f4a3f4de35798cd9f56d14921a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p053.txt",
+      "octets": 3376,
+      "sha256": "6fd65070c6acc2c35f5728184c274b8cbf17ec1d937d6cfe83bb02fad7798ebd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p054.txt",
+      "octets": 2918,
+      "sha256": "a3702f8e2c9c03f94aefe26ebd16a025d470639bf54b5067fc26977b42fc397a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p055.txt",
+      "octets": 3299,
+      "sha256": "d12787b12fcdaaa1a1af593375896714c35c5694b9dcb2da27ff5f8d47d2ec3c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p056.txt",
+      "octets": 2442,
+      "sha256": "a609bee597ea2ea76e416406187c70a716f4f8b42e29107ffee824c43ca0b007",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p057.txt",
+      "octets": 2357,
+      "sha256": "62c1d770ea36289b95218b697ac6e0a2e70369353b6bf03408845f4952f3615a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p058.txt",
+      "octets": 2831,
+      "sha256": "f0b3ad3d8c1ec3e7c4ac0ffa053f9195f55aac9fbddbccf8bbf3b219475c74e1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p059.txt",
+      "octets": 3062,
+      "sha256": "dd86791ad8d34a16834a9da7ebb66263bf749d1a56a2e7402a81f0de5f039769",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p060.txt",
+      "octets": 2952,
+      "sha256": "6eb7417f0139fde71c08d9731affec10d109f73bfa8ae066e373c5e98f3a0031",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p061.txt",
+      "octets": 2380,
+      "sha256": "de9afecff5a1bd0aa8f0a2e6ebda84516658475c3efe5326e6c82bb600ba720f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p062.txt",
+      "octets": 2973,
+      "sha256": "e82a204671bb8fa873b6f9d0862fd6ce339731da37ea2b7be534874609989562",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p063.txt",
+      "octets": 2987,
+      "sha256": "0c116049b179855d49ca1e52df7525cce5189cb22c1349bad4efb7dd5f2cfc9b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p064.txt",
+      "octets": 2463,
+      "sha256": "bc1ba33a55af64f6a982cfe8b94696877b24e0f442d1cbe1305bd8c1d224f05b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p065.txt",
+      "octets": 2773,
+      "sha256": "6ae515f77dd0667b828659e4bad828228014994e8f984de1a9141100267295a3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p066.txt",
+      "octets": 2735,
+      "sha256": "44b0b6820a42581bb2b683af9991ceacaf938b1a0793e2ca0731a2173a33ba99",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p067.txt",
+      "octets": 3145,
+      "sha256": "50dbce3f8d25c25d0ba3e16d9718912b63e3f660021a01d6c0cc70625259ca96",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p068.txt",
+      "octets": 3127,
+      "sha256": "bb061a1afa82a15adc0b88108dcd4c7ef5ae584c0b405c44a7f02e8be347b3bb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p069.txt",
+      "octets": 3208,
+      "sha256": "5b019655fcc6b227aa0da8cadf439363586c93ef1f66e507b9d7e778f18ff208",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p070.txt",
+      "octets": 2776,
+      "sha256": "482ff1f227d45cf7d2c9816946daada8ec863c566186dd714210b8b1e9e02aca",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p071.txt",
+      "octets": 2701,
+      "sha256": "08bcb8cae2331668d8fa3b1b3d8b10e12ef1468f2aadac58241fcf133dc0a1dd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p072.txt",
+      "octets": 3289,
+      "sha256": "7e5bfc2dbc9758c27e0252d2e785276e0335dd2d0e32e52d150eddd1c9a2bca5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p073.txt",
+      "octets": 3117,
+      "sha256": "5ce56a0179668680ecfc9cebc703e99eda390e3e91025a3e383ac527b11e2741",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p074.txt",
+      "octets": 2143,
+      "sha256": "9eb45b7537e5c1dd19711a99721fe1e7c3c21ec8b6c5a6d29c1d19c3268a2313",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p075.txt",
+      "octets": 2108,
+      "sha256": "8a4823ec881981127b17bb61a7379f5caf8a4428169062a91d495a3ba06ace5c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p076.txt",
+      "octets": 2385,
+      "sha256": "78295832760f4a35506e61c0efc35239fb9886faa305f68cf08a9062ba0056a0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p077.txt",
+      "octets": 2345,
+      "sha256": "904e1636052a8d2defb05a240087b72210aa727331ff502b85d9fea8b2d7a4d6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p078.txt",
+      "octets": 2602,
+      "sha256": "732ce0a05309ea7a73a62389f03212c6c27a58ff747e3487a71f1e87c0c89e3e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p079.txt",
+      "octets": 2967,
+      "sha256": "3da6f488925886fa0e8c92d6d747777bf5a3dd1c5f791df5bf9ee0f321c56f90",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p080.txt",
+      "octets": 2318,
+      "sha256": "64bbdab17eec04dbdc64985fad08a86d48a1b252c327272a52026f7341f1324c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p081.txt",
+      "octets": 3132,
+      "sha256": "a232046d50d5cf3864908330633fb2259ea99a6dbe43c7ff2e70877f7de67d20",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p082.txt",
+      "octets": 3063,
+      "sha256": "de922f96dfcb4e2ffcdb56988dd4641d66dd7e4c48df5ee3822066df0baa4e0a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p083.txt",
+      "octets": 2168,
+      "sha256": "7b183c678c7dfba1c3dbd2c47c1862d925813d07de3a63396f2b3444aa05dcbb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p084.txt",
+      "octets": 2595,
+      "sha256": "77e39562c1634574ba2846ccadf87285dfed83fb7e8da860d722f547da81c1dd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p085.txt",
+      "octets": 2555,
+      "sha256": "b8fd753937c8bc922ef573c0a498dc2bcf0c155b4419db098dea1a5d44c68db1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p086.txt",
+      "octets": 2848,
+      "sha256": "a31905d3f9ee15a7a653f7748752b4c39de2a908c2360834057912c3e51dc22e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p087.txt",
+      "octets": 3223,
+      "sha256": "5e4a42624481d460a6e2d04b855c5bf5707fa366a424186b66c8df7873a82072",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p088.txt",
+      "octets": 2744,
+      "sha256": "28cad4022c5df02ef3b4d366ab85bb23a834e2b33925e71ce816cd0a336905e0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p089.txt",
+      "octets": 3119,
+      "sha256": "5f6f5d2f3d79e39e30616b141e996e1a7c8195ff49db0af471f35c43dd3903fa",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p090.txt",
+      "octets": 2812,
+      "sha256": "67f662b2a7d4829fbf0bb35a853927c4bb17efdd17b5b2c311c1ad7215590499",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p091.txt",
+      "octets": 2791,
+      "sha256": "40edceb453835162a7401ff6c9a0a0df563aaf7dca330bb5c0c7282dd0d559b3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p092.txt",
+      "octets": 2545,
+      "sha256": "cab5f6e14f1a17a2415171f9b6535df69b0ec4e257efe00e5c2ba2b686a299c4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p093.txt",
+      "octets": 2195,
+      "sha256": "aed8e336d520593eb1c6ca522e7cd47e1521a0264744c7a656c0a9bd61004ca7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p094.txt",
+      "octets": 2603,
+      "sha256": "91bbb6e4b041edc5aecb2e359e4a961249208d991513ef8d9970c9cdba2daab5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p095.txt",
+      "octets": 2622,
+      "sha256": "feeacf56eb4f8816a970d314782fbdc43422a4531c288dfe85fc111b2bb38495",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p096.txt",
+      "octets": 2332,
+      "sha256": "b855835849c1eaae075bfa0cfd2a079adb462a2711065ad221c0db3f477961bc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p097.txt",
+      "octets": 2685,
+      "sha256": "6ab5245853d573ced783584e116ca88bd0b2599639b0082d807130b10322bf75",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p098.txt",
+      "octets": 3680,
+      "sha256": "b1183e1fe0d4dadf23f020bb1b6c1aa92f96d9cd556817abde999f811716a153",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p099.txt",
+      "octets": 2717,
+      "sha256": "1c98b508473038bfa9701b999096af21d153cae79c54b0366ebfc1abba80f200",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p100.txt",
+      "octets": 3099,
+      "sha256": "96fdc2cd76b07a7622b600450ba7d548e1f38b48ec27169c4d13a5a6a000d4f2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p101.txt",
+      "octets": 2874,
+      "sha256": "f39cd27a95a0a794683eb29dbcea0df2d8e8b7f43892677533d2b4b328f5cc8a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p102.txt",
+      "octets": 2316,
+      "sha256": "e6f5d67882f2b1485047168e243e9939bc153f0f0c0549eb680da2b61939b154",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p103.txt",
+      "octets": 2145,
+      "sha256": "ddb4510719292f1d77818a922b4e24e85a930ffb0ba9661440e368b00adfd091",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p104.txt",
+      "octets": 1764,
+      "sha256": "bb769620acf39d5c9e1b3786974c3dd0e3d71abfb7940bf4582e7a4dd537304d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p105.txt",
+      "octets": 2342,
+      "sha256": "3bbdfb1d463e3e921d0aedea8ccf2c07b0a5853085c38f9c78f1115b8c7f4ead",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p106.txt",
+      "octets": 2009,
+      "sha256": "29c564cc9135bc2507d35e051b12faa80ac9e3ec5f0430a96958efce519cf209",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p107.txt",
+      "octets": 2451,
+      "sha256": "3dac2f0d36b86ce3d149ba680f2091b1f4ef46371c595586414d54e3d4d70d48",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p108.txt",
+      "octets": 2439,
+      "sha256": "d2910778f019b6a8547ab046610faf47e9690eb22381476d5dab43efed1382fc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p109.txt",
+      "octets": 3112,
+      "sha256": "c3e1d8026b0dcdd10ce377f0347821826ee9d264719f345ea62761d92d95e76e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p110.txt",
+      "octets": 2695,
+      "sha256": "47d2c11740276720236ed4fe92a9d44d53b62fe52c1ce30795090bce1dfb9097",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p111.txt",
+      "octets": 2783,
+      "sha256": "6193a88caad40adbe6e3f7474c30b2ba448decc07b1a1dd3786e5a8e55147cc7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p112.txt",
+      "octets": 2454,
+      "sha256": "391fe860a03bc603b2e4929b2c40fc5ce924b314ff13399b5cf6c7c8c2e3ed5d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p113.txt",
+      "octets": 2825,
+      "sha256": "98331e1b37f4ea51c8af7d0c1907b7e34bee5e8725eecccd3455d3798443b709",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p114.txt",
+      "octets": 2455,
+      "sha256": "468d353413910831e9f10f434830087adbc85e98cbf52f0cc516720d6c568fc2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p115.txt",
+      "octets": 2626,
+      "sha256": "0befea2a922666c4ba9d749689640279b60fd9d81d79e443f9f94ff8dfe8472d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p116.txt",
+      "octets": 2628,
+      "sha256": "72279071605e7ef50d1e488727f32b8b16d5e66c3c7e540dafedf7132fa9aa9b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p117.txt",
+      "octets": 3106,
+      "sha256": "723f2e1f5d35d0aea1a1b7129adbf9a503c7944ae98b6398bb73a6e58cc65b59",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p118.txt",
+      "octets": 2474,
+      "sha256": "944d15227d95030f8560921100bb3d9b04f6c334448a13473e903fbb47b582a3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p119.txt",
+      "octets": 2891,
+      "sha256": "25417b3074b6616dc0c7beda38af0fd96adb8a5fbfd61e6e16d26ee371f85a19",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p120.txt",
+      "octets": 2827,
+      "sha256": "388a2c408589cd8b623547b9ff92563df22676cd59238dbb19a4bb91f1af6659",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p121.txt",
+      "octets": 2753,
+      "sha256": "286b39de7a2d123f2fe99cfac1984a02b8da813290da39ccd86c1419cbe9264b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p122.txt",
+      "octets": 2168,
+      "sha256": "aea47e68cced7f7aecab79b3f2b24ba6d75af31e19733af05497feb26b7f4790",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p123.txt",
+      "octets": 2592,
+      "sha256": "1f278f01e4dbbed8113f7cfca1d932cea5ff5bd3895364f8ee1e2880dcedfb67",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p124.txt",
+      "octets": 2984,
+      "sha256": "49225ec2786b8882cb0e979d098efbd8c15efe8a56eb0493ef2d9bddd688276a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p125.txt",
+      "octets": 2921,
+      "sha256": "bb3390a1db644c5c50f56abbe49ed6ac1839112e07d2661b9a09d4132a4fd21e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p126.txt",
+      "octets": 3085,
+      "sha256": "b60f261f07049ba5d4e2af4de5ffb0e58d12682d23eafaaaf041a83fa803b04a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p127.txt",
+      "octets": 3466,
+      "sha256": "f1988589010a902495fb593fdc4dc2ced55c93349498d320966d59ad88f843dd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p128.txt",
+      "octets": 2718,
+      "sha256": "ab10d62fa9f8a052ae20c57c61e9cc0f24df0b598a2c9484d079584bec41aa6a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p129.txt",
+      "octets": 2847,
+      "sha256": "8d73c95d75df5818277328aaa16b8462bf8c6aa53a14e02d83d961db78584276",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p130.txt",
+      "octets": 2580,
+      "sha256": "9b722fbca0a4802fb44288c6c86484ebb39e1bea45e045430ae11a0ae564d11c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p131.txt",
+      "octets": 2100,
+      "sha256": "b7bb25ab41f5150ae82fd67a3378d07c7334b544cb8ea11b05bbee88804af8c1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p132.txt",
+      "octets": 2758,
+      "sha256": "cf0cfebeacc3215915c0d9e5ce5565963933204e28bcc4565185b9e327782471",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p133.txt",
+      "octets": 2979,
+      "sha256": "d7c39f92aa618fbce78aa450bc0a3ed5922f7f10c9e66f66ed88ac17e75d5128",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p134.txt",
+      "octets": 2425,
+      "sha256": "1fd81e409b5388ff9e724f21dc7dcef43e9f2be879be19b361688e23f9885b0a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p135.txt",
+      "octets": 1091,
+      "sha256": "da383845151d53a9279d54be4745548c74b3a35b568ae930b8d17a7e7445cd37",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages/p136.txt",
+      "octets": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p137.txt",
+      "octets": 1460,
+      "sha256": "c98a2af512517321fc3ac324513e0dbdc50970147164130dd2024e00073c8d04",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p138.txt",
+      "octets": 2143,
+      "sha256": "976b158ede130c2ac02fda1c79780639114d770b2613b43f03581ee623c86a02",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p139.txt",
+      "octets": 2080,
+      "sha256": "c2c53ee44308b3f2698257ec07b4dbbcbf2acc57b6632050c06d1532cf06a4c7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p140.txt",
+      "octets": 1839,
+      "sha256": "3b0c00b99458ad87e17fa81a979077039ae6e8344305889d045292d9a3eb19f1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p141.txt",
+      "octets": 690,
+      "sha256": "152bf73b915844a3f92ed1465b250034c7e5949ae117911b06edb1eed8a245c6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p142.txt",
+      "octets": 1790,
+      "sha256": "a40a7f8182bfbe7a6f00f54524c24e80efc170d927b474780dd8a4b1ac032086",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p143.txt",
+      "octets": 1690,
+      "sha256": "aebbdd9c2fec7dc381ccde72d6be4ccc0e07bcd3715ec25e6f84130b64dcc643",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p144.txt",
+      "octets": 1924,
+      "sha256": "98f51fd4265eb0acd19e7a1d99c95d0e241198e110dbed316c6f00812a0a6a04",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p145.txt",
+      "octets": 1605,
+      "sha256": "2e99dc61e5e2cc7e1937c0996122b17b0a04ea69e9471efb3aed9f90d9469736",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p146.txt",
+      "octets": 1958,
+      "sha256": "1d0c6c71a2ff843eb43bd11a3a43a803732f5d99995783956d74879cc8511c1a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p147.txt",
+      "octets": 2288,
+      "sha256": "b30e385917fc3c8399754c4a6e6b8769391982e3de00284f7d1ce05ae7cbffb8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p148.txt",
+      "octets": 1962,
+      "sha256": "a59f18fa5556ce40f668402e263aa53018110680b9470fa9e7520870483bd170",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p149.txt",
+      "octets": 2072,
+      "sha256": "870b606e84e641127ea3e50014b0ce2b6137e3a07a9fa2228a1ac97e3c8926cd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p150.txt",
+      "octets": 1858,
+      "sha256": "40aba2cfbe9570b3cfc2f1bd5754c8b79db8e39887cb99193059d6b1673ec963",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p151.txt",
+      "octets": 2143,
+      "sha256": "03361fc7bf5ca4a4df2e1489212acdcc5108993ae8a866249b27f29c0e37c7b0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p152.txt",
+      "octets": 2176,
+      "sha256": "ce4e17e177f988c690e7122ef1660841422f1524ff56ddc7722ec35fe239a8da",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p153.txt",
+      "octets": 2241,
+      "sha256": "5b87bee9889596c32e20120eae54a34fe91bd268f4cc056ae609eeafee70978d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p154.txt",
+      "octets": 2241,
+      "sha256": "78b56dcc146faa3ce7326458c45c6ac6eae442669acdca56adb974694221bb3f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p155.txt",
+      "octets": 2184,
+      "sha256": "1d81c355b2dd0fd33f9330b58b2dbb09349219a3511b302ebc30dba2b2d490e4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p156.txt",
+      "octets": 2182,
+      "sha256": "dbb3a4f7181d11613e298cc16c6897312b6cfc1ea38af2dfbba18af3b1586e4c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p157.txt",
+      "octets": 2475,
+      "sha256": "81511954200b4aebeca85a908bf7eee05f0f1a07199ede997f285f340b74ef1e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p158.txt",
+      "octets": 2092,
+      "sha256": "1f003d0c8acb44555387f34c8228df2ceca653ca04c94f6f0ebc886d2d6013d2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p159.txt",
+      "octets": 2013,
+      "sha256": "23b4bc887a9f314f05472d55c225d82af668df6bd3972b3ddc6c30097a29d55f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p160.txt",
+      "octets": 1922,
+      "sha256": "4fa68fc972c8de15e7b2c076a76e29f265fd4b8b9b1626e59a43da582aef1c87",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p161.txt",
+      "octets": 1893,
+      "sha256": "7e7fe1927ba4ca6c7cdbbd3b06d5ba68d5a949d0ece3288e62403d016b18564b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p162.txt",
+      "octets": 2185,
+      "sha256": "ff41c4740832523be1c275c1162071b9af47d97ebfb273f4f5ed2cde1c30c544",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p163.txt",
+      "octets": 2147,
+      "sha256": "1b6c85c50e8b91d4cd781e222bce0e85dd9e232e2a5f343680ffb3861cca30cc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p164.txt",
+      "octets": 1947,
+      "sha256": "85520171faff0ef43445d084bf133e5194a128572335b55166bc1175be064cc6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p165.txt",
+      "octets": 2218,
+      "sha256": "26c5b3f9d1a2eea5247a6c1d06e3e3235210394e4da4216039e4833c8d441109",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p166.txt",
+      "octets": 2266,
+      "sha256": "bbd0c5d9a86c8a27ce82a8732b3de067d9f57a2bf61eed005303fc15115dfc9e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p167.txt",
+      "octets": 2134,
+      "sha256": "c915aa40fdabf3db1a2281e0ab34cd6ae3931801a246fe6167b3f9c34428ecb4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p168.txt",
+      "octets": 2042,
+      "sha256": "f654cd2ba79cd99aad8b5ad5b792f057c4fbe42d5ab86f5f66d369eed985406f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p169.txt",
+      "octets": 2129,
+      "sha256": "54f23013842a4c22fb2863a06c1c5bda137b92919e8fa221ff55d7c8d1bccf12",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p170.txt",
+      "octets": 2046,
+      "sha256": "fc299ed4fc39e6b81f9a4319c0ecea1e8fdf9a53aade14ef8f7d03e785a4d685",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p171.txt",
+      "octets": 2247,
+      "sha256": "9b36c005befc1939f864421cb708738a7912f1ebaa4660c2ca637b1dd4283396",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p172.txt",
+      "octets": 2169,
+      "sha256": "2a7053f115fa3966faee81c6097011b7768405f3bba9c3a902e23c5b611d61c9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p173.txt",
+      "octets": 2212,
+      "sha256": "390034b815c12fd76240cd3e68c59e7d94115207df25cb1b8a923bfae5157205",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p174.txt",
+      "octets": 2051,
+      "sha256": "afec7a34e5df63fd029ee1f187c964e0d0f8a9cad56db3baadcdb262af627ab4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p175.txt",
+      "octets": 1886,
+      "sha256": "fe1484df4459786daa0b3c78abd9c89662231db7250bfecc83cda07b31a6a37d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p176.txt",
+      "octets": 1871,
+      "sha256": "8bc544e870baf86202921e04932100190fa2b23c6550b45b93f1fb3cac0e253c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p177.txt",
+      "octets": 1890,
+      "sha256": "885e884562c36c9697f62be51838069d6083070c57755f28d94acfc06f45b49d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p178.txt",
+      "octets": 2179,
+      "sha256": "43f81a3a73aec6a5fdd5bf7e89b4bb60ffd9a99bd77e790970a2c951e1dcd57e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p179.txt",
+      "octets": 1835,
+      "sha256": "e961fd295a418b1290666bf4ad71af2b7c75443f3c18208af05ca6fd0f9c6e22",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p180.txt",
+      "octets": 1532,
+      "sha256": "19d78cd4b2da6684dc480b170ab0135fc284184f34936d251fae06376eaf3027",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p181.txt",
+      "octets": 1859,
+      "sha256": "664942364b2e55b160986989f2829bc66c39d08936e11fb42d0f9c77599bde76",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p182.txt",
+      "octets": 2120,
+      "sha256": "9dee8c1db78135959dda5927814f7c1858aec77e28ed9151974fcee78a6a42a1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p183.txt",
+      "octets": 2320,
+      "sha256": "4810cc9e2a1fb7c37ad11a87d3dcbcceb1eb8b2aa78ced50320f3f6bab30d780",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p184.txt",
+      "octets": 2031,
+      "sha256": "de4d3c6a15b5fcd95987d9c0b4d96fc66123a1f5d4af3a1c7d06e910c6100fe2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p185.txt",
+      "octets": 2016,
+      "sha256": "9c379b2fcdb8b3cb148f1d40f698c2d8889264ba16212d69c9d5cfeeb00c1023",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p186.txt",
+      "octets": 2328,
+      "sha256": "79dbd5c2068e0b11737956998da4adda47145eb08d984125eb389ff27ed91597",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p187.txt",
+      "octets": 2301,
+      "sha256": "c2026dfb2ea178fc1e047794698007945784a6f3fa3cd3f59fcbc4151348140a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p188.txt",
+      "octets": 1981,
+      "sha256": "65b3d038421247f14ea4241c48b9fd3037221e63cfed7d51876284d76113c1bc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p189.txt",
+      "octets": 1851,
+      "sha256": "dbf94ea6e6448e03d5c580390f56d5b534d436bf1914b8541f97d917a96a2fb5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p190.txt",
+      "octets": 1951,
+      "sha256": "9ba8251f95ea450545ec5bd65e2b66a5850bb941ed79a36954c50b4f3610fccd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p191.txt",
+      "octets": 2076,
+      "sha256": "f5a201a0ec300f4b0aa0ea2f9ccb84e5be602c92631624e44f62ad3579d025a2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p192.txt",
+      "octets": 1627,
+      "sha256": "034ba5901f2fe594871a33925c03a29899acde44ee7c3d8d84fafdda22111990",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p193.txt",
+      "octets": 2122,
+      "sha256": "b8c0e6ec5478928ef6c1d78a3aece7ee3f56a7577d6319370c14000d707f48c7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p194.txt",
+      "octets": 2180,
+      "sha256": "e4b64dc93256736d29250fed4844b3744c7c66f5ba2fa2ea55e0c7a941d087b1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p195.txt",
+      "octets": 2143,
+      "sha256": "741e4b09f3d7e1a464a633b1ed353e1d8a05ebd80eec80c4596f70f481a114a6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p196.txt",
+      "octets": 2276,
+      "sha256": "395af442ab33ccd49467c4d0c6b03148cb6374cb6756cbcfd010e9620d25c1f9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p197.txt",
+      "octets": 1893,
+      "sha256": "87be223a3e741cc64cb8b705613acf52a36f739c520a2246049813a68faa38d6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p198.txt",
+      "octets": 2233,
+      "sha256": "aa6c3c7ae036d50b86cdc49c84e2062260dc21c337c0764f863b0669f782a5e1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p199.txt",
+      "octets": 2112,
+      "sha256": "97ea21fae908b747ee53b3e5ac2275aff9f52eef2b5d0cfd4c383b1714996a25",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p200.txt",
+      "octets": 1866,
+      "sha256": "731f376605d9c1ac9fa8339a7ffc1719ceb8014762173238dc8626f8ad28eb25",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p201.txt",
+      "octets": 2277,
+      "sha256": "de8bd1c76fa58dabb822740842a1ba2224503d8a7c4af1bdbd9698fa532c9725",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p202.txt",
+      "octets": 1653,
+      "sha256": "9e6d99e5ab5b9d63e7490aa97ccaceda93fb0ba514cfc1b26f5144e36af416b3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p203.txt",
+      "octets": 1919,
+      "sha256": "c046f329c6831f3cd3187ca406106b61b5cc4b57c4abd07a32a2652d9d3d5298",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p204.txt",
+      "octets": 2228,
+      "sha256": "2ef06dd0d17ccbcc69237012d4b960f12e9bf4693c81746291f6ab863530b093",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p205.txt",
+      "octets": 1910,
+      "sha256": "dae534d077ca3cbe5630f944f861abc22e882781bc602145c0839f61d9c545f6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p206.txt",
+      "octets": 1911,
+      "sha256": "9a7ccb88b9135660fd8aee1e4b6e9f19026507de713f3d6def477a1ab13c92b5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p207.txt",
+      "octets": 2088,
+      "sha256": "8c7e712ba6ff30f673a1bbd8888ec0fd1dd1f59b62c60dbb71d61569609079fc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p208.txt",
+      "octets": 2127,
+      "sha256": "ccbc27493d505c3daebcb93b1c075144f73e3eb28690ba7ba257d197ab853bd5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p209.txt",
+      "octets": 2131,
+      "sha256": "8c0efeb0311e24a9cab0c02145b7e158c47e642b1eae653d3ffa7bb0e12ee334",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p210.txt",
+      "octets": 2127,
+      "sha256": "8a95e6a686651fa31876d34b11ae57ee3ee1b08207a67b30a357b4e95920eee3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p211.txt",
+      "octets": 1862,
+      "sha256": "5c3430e4e017f282a1fdd0014d5c7cee2636fd181250294b0cb050f7a14f96c2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p212.txt",
+      "octets": 1562,
+      "sha256": "2adab1cd311cb5f0713e9a77d17e2faee817412704a7230b9c761ede7af3104f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p213.txt",
+      "octets": 2176,
+      "sha256": "6bf149afd628c21e70a6b1bddf4c5da79a02ef1c43c9a989c80f2fbc089f514d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p214.txt",
+      "octets": 2206,
+      "sha256": "c95d21e67b71c1627dfb28c376f5dee92d0bf0bd19ce2bdb0636cf70242a57d4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p215.txt",
+      "octets": 2137,
+      "sha256": "cc7d50fa29aa4a4c7cf83ceff1be95cf2f70658f704c3da85dddc04512ec2ece",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p216.txt",
+      "octets": 2175,
+      "sha256": "c3ac3f23549337adb8da2b43c75919252eb35a2fb4f337be0090683bfb1449c8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p217.txt",
+      "octets": 2021,
+      "sha256": "66d6ad79870141a9add2ef3a41aacc51a1a6f19fd3f21c24b2f0f5d671d3edfc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p218.txt",
+      "octets": 2335,
+      "sha256": "685503841a99dc911526d4d0f72b998e8a70e2d0faa6ca60cd65c5a2fe33acd4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p219.txt",
+      "octets": 2380,
+      "sha256": "e3d04c58d51f8cf5da080c447540496d9682153112eddae2e000ad775a9b2d41",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p220.txt",
+      "octets": 2453,
+      "sha256": "f88fcce9893561a1e6a127cbe3b6d120e1a9366c6090b3bdd900b78678332ef9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p221.txt",
+      "octets": 2048,
+      "sha256": "9239c801c3060bfc84f3c160a20bdeddc3c4879a4fe77d85e1151d36ec8717fb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p222.txt",
+      "octets": 2092,
+      "sha256": "f87f0ae03379d3e1c332750a4764b0b0ce57a5e162485154a8ad6b7044c34505",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p223.txt",
+      "octets": 1884,
+      "sha256": "5144ec98c2613381a7c68ce23c49cd9bc5c02185b8e4fe7f949d088878b1fafc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p224.txt",
+      "octets": 2208,
+      "sha256": "8f33d1f05377815df16e2c159c505323ae5a5cf5e57d8e815c102cfc077faf2e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p225.txt",
+      "octets": 2191,
+      "sha256": "9220e0847a20363e30ebafef545d7c682b122912998178fd9c2108a17565900e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p226.txt",
+      "octets": 2190,
+      "sha256": "43512574d7298f9f4ba7cb3f6986218ef8130786812da42e55ed01e0237bffd6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p227.txt",
+      "octets": 1929,
+      "sha256": "e8fa664656cdf8f3f17bd0dd95bf4c777a8f62d78dea8bc6560c03635db0a62e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p228.txt",
+      "octets": 2103,
+      "sha256": "b4ac9431ce29706b9bf2944ef319e9af362f616cc9386bc684cd608d75ab0d2d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p229.txt",
+      "octets": 2068,
+      "sha256": "b84ee0a70e4ba9a7ab268c732c848f84c1fd90adc92cf4ef8c8d3bb63189e566",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p230.txt",
+      "octets": 2238,
+      "sha256": "c31a2ee1b8a9b2d6bd309e8ef3807b3c37c44e0845d1740daefbc490d3f98da9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p231.txt",
+      "octets": 1919,
+      "sha256": "b96b6b8aa99d73940407fdfc8a7bf45370aba495e75c81c0ce334debae400fc2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p232.txt",
+      "octets": 1931,
+      "sha256": "a6dc5838267b77c89eca987a84e7087171bb70c0aacedc41955bb3fa01af0c02",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p233.txt",
+      "octets": 2212,
+      "sha256": "760fdefcf6f61a7a00de3f331ab2673809da4967bea21caeca116bef2db3ac94",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p234.txt",
+      "octets": 2377,
+      "sha256": "09999f9c08c7528b042dadd5f3ef6f873b7a796437124703b93508b631e1a4ef",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p235.txt",
+      "octets": 2152,
+      "sha256": "30efe278166f4177859e4c1f53d1c4d10a46d6ecd6c91839e34cc6256dc2a9a0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p236.txt",
+      "octets": 2388,
+      "sha256": "93727b5e1e7111374d2bf03038692742f6b333335323ab274c2f0d3406a99e17",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p237.txt",
+      "octets": 2254,
+      "sha256": "3e5df176684b09584aeb05697eb6620f1cf8f2d3c736f64496d3beecc0ce42ee",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p238.txt",
+      "octets": 2316,
+      "sha256": "8dc22c5d4e8fbda78f27eea42415b786432904dbf53c68fe11ab32df73e2bc0a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p239.txt",
+      "octets": 2321,
+      "sha256": "fb663cd205ccab9d007a40f3aed3e20764c49101e80b961e94ae5abcab5a8130",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p240.txt",
+      "octets": 2073,
+      "sha256": "a786452e190510348be699d12a1dfd18a1b619b93372d34a6d27e4e1bc9ae5a6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p241.txt",
+      "octets": 1886,
+      "sha256": "b73c03573e9a1956a6f68360a68584197d186002a9539a39a6032c994280a602",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p242.txt",
+      "octets": 2306,
+      "sha256": "09b24474344898892cd4817bcf5da7c51bc736ef84992c203bcfb200d2dc3c4f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p243.txt",
+      "octets": 2053,
+      "sha256": "de56f96b05ef6e1b27ae1c467fbc43e90d960177895c09608893c909bbf41e8e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p244.txt",
+      "octets": 1851,
+      "sha256": "4bd804ccf45c0f176a5414318c018da7eb7ce99f2b0b3b5e83dd061dcd80a565",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p245.txt",
+      "octets": 2108,
+      "sha256": "51fdee0d4384476bb3a07ad4c07ad3e4a332608c7e06ff132238165102703ec5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p246.txt",
+      "octets": 2406,
+      "sha256": "b88e1d5144033d6af02db2158784ed049fdc92c0998a07b9e324ce6eb60b93f7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p247.txt",
+      "octets": 2232,
+      "sha256": "ce24a4c48d8681da1a808c48c1296ff4e3d692cb0deb24e77ba80afc4419efff",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p248.txt",
+      "octets": 2021,
+      "sha256": "d22c31b92527a7e2c0de4b8ca8581f4ccede3fae6f6acb8b0423a43596e4a9e2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p249.txt",
+      "octets": 2275,
+      "sha256": "e76e2289e11d98a9dacbf9e4359c254e4ed898c8ed7394c16f7613decb5e2f7c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p250.txt",
+      "octets": 2257,
+      "sha256": "5210470d27b4b66632800445303c61132bbd3516b71b8092aa5b4016aa7008b4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p251.txt",
+      "octets": 2247,
+      "sha256": "bbfcc6a3581bfce01724fe54c3cd81131ac2573f94e8661136173f30e5d6e5f2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p252.txt",
+      "octets": 1673,
+      "sha256": "c2ec0af587d489798f2a401ab55e4be5411b714cdc9105c0f12ea9861604ca9f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p253.txt",
+      "octets": 1691,
+      "sha256": "e37e0580c40d1f2a77e4bd658afb8d7c1ead0fa918bc48c21a8bc428737d6ab3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p254.txt",
+      "octets": 2352,
+      "sha256": "537d2348747c69b414eaca55e30598f5f77505f2c72031386059f63fbb2315e4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p255.txt",
+      "octets": 2209,
+      "sha256": "a13a444838d351f9573cec31bc8d24db46b486b94ca0d7086ca839966a856d37",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p256.txt",
+      "octets": 2258,
+      "sha256": "d2acf3eb2950b76d8f5b1ccdc1b12f14ea0c0878e2f44a7e91791ece8e3caabe",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p257.txt",
+      "octets": 2048,
+      "sha256": "8f4e0aa5f3dfdc5110ff2877ed9c353dbd52c2ced98d72da6a5769ca15e31669",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p258.txt",
+      "octets": 1998,
+      "sha256": "4107cab144d0b66646a326187458731459adb372fe755d4ee582539e8fb624ce",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p259.txt",
+      "octets": 2293,
+      "sha256": "0fb0908063aa7528602be6fb76e00d3c3ea30a8999e08b6650be0cd858e004cf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p260.txt",
+      "octets": 2374,
+      "sha256": "492b480065490bbb408f1174b993cb5bd81365920e0e9e64207fffd334adf62f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p261.txt",
+      "octets": 2312,
+      "sha256": "cc76a1816a808ef4c289213d1071a7dad3571ab17d0ba8f804a59a06b923ae50",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p262.txt",
+      "octets": 1670,
+      "sha256": "683817d24b76905f190f11eced19d738ab331f76d61d1f25ea6c3b4c74d5e1b7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p263.txt",
+      "octets": 2193,
+      "sha256": "e79d95a681e9042264c4a5f75e14c243398751f035ebb81656d81800c14b5270",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p264.txt",
+      "octets": 2209,
+      "sha256": "0078aa478cfa11730308b88824cc36ea4879ac47dd7fd528e504570ae67e8a27",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p265.txt",
+      "octets": 2117,
+      "sha256": "2e6c7d0f2874608408384c97f8e10c108d00dbc1601014246f773c5c837e51c6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p266.txt",
+      "octets": 2187,
+      "sha256": "a4b08503097f16dd02236d28474bfbf49a54c8774f46cec60f12fc62a33e9fda",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p267.txt",
+      "octets": 2106,
+      "sha256": "96a2a6f606ba1c369fd1f5ed8c6c1527459821daecacf2048bde89d1cf318adc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p268.txt",
+      "octets": 2330,
+      "sha256": "756cf6b3ff65e59bf89f8ee201dd27a40c428d39d3b3f7443c34485f906e90d1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p269.txt",
+      "octets": 2135,
+      "sha256": "e2508073d4ec2fa232d367ea748076581ab7fb484990b33164fdeaa2f4767a54",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p270.txt",
+      "octets": 2256,
+      "sha256": "ef334fea5d1fdc3f7b9d88c5badd5c424631f25dbce254410e0cb648d550cf2d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p271.txt",
+      "octets": 2471,
+      "sha256": "41ecd188ea7a80ca130b1332d64b3e60551403e98aa09151bca975dfbefb1140",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p272.txt",
+      "octets": 2189,
+      "sha256": "9bc4df78ac50ed7a0145b9ac4dc90d2c0a229c29af63273f39522526161a7b33",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p273.txt",
+      "octets": 1934,
+      "sha256": "0d4278c87580ac3fe2e27b69fafe8f2d8d9e0982ddede867bf7f192d090e73ba",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p274.txt",
+      "octets": 2181,
+      "sha256": "064434ae90902f3dc9971d52cec75712919b92cc2202096502fcf53063941bfe",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p275.txt",
+      "octets": 2366,
+      "sha256": "4df3bc88293380600da8e0d37d5b2b673147df7a5f209cad21a76ddf689d3081",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p276.txt",
+      "octets": 2196,
+      "sha256": "54f7bcd0a71741411cc4170994d23ed8c5d9019dd4b31c78152634914ef2521b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p277.txt",
+      "octets": 2357,
+      "sha256": "71b790f1775598b6f251b5e88eea2a7198759785370f493c70f8843700d5071d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p278.txt",
+      "octets": 2102,
+      "sha256": "7ce30a685cdd8379f336c788f3bec5fc2b8860cda41ffc1b0005259a2e355fec",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p279.txt",
+      "octets": 1675,
+      "sha256": "7e19ec1d8581d0610d1a75b10e0a9207b40785a1691072f44e8557803db24963",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p280.txt",
+      "octets": 2031,
+      "sha256": "481312fb9379aa9c3e3bb095b4c1ded97bd9efa0e915b9780e011ab7525f5b96",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p281.txt",
+      "octets": 2138,
+      "sha256": "6c2b4be3f64396855c687bc5f77fecb90658152799fb7abce9a4743bfa705365",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p282.txt",
+      "octets": 1625,
+      "sha256": "ca488f2a190b2c871d50b56085ddc8a9e8cfa1a8b6df92ea22cdb01f6f6653af",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p283.txt",
+      "octets": 2269,
+      "sha256": "ba6f403e0926f2f5ba4f7e11839c23c184c59a842d71fb2c9987bf39fa6478e1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p284.txt",
+      "octets": 1922,
+      "sha256": "66793385656d83cd738ad064f072e8fdf94cefb4ed0eed286c22565af47eb133",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p285.txt",
+      "octets": 1733,
+      "sha256": "3eacd2145d37b97d25ea423f4b57459df1e2e951c1ae2f6f758b7d8c99214acc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p286.txt",
+      "octets": 1731,
+      "sha256": "686e93741f9db944823668559bcab78eb6751d66ccbbfea66bb4c96511b892ff",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p287.txt",
+      "octets": 1876,
+      "sha256": "c7785d987133849e1e4dd9316b939663cd82fecb22510659305ae688d15a0e8b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p288.txt",
+      "octets": 1904,
+      "sha256": "ef726d41a4d2dbff39618b7c1d1bccdebe7bf9cd2bef0b2e603ccfdc3f3711bb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p289.txt",
+      "octets": 1790,
+      "sha256": "c59cb6ec9d3b1413354b8d79550a7d456dbd7998939624ac9e84409218dfa356",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p290.txt",
+      "octets": 607,
+      "sha256": "285d11e0a4c1149a8db7e195daf5a017af93e56166370de07f5ed09a5e3aa76b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/ocr_pages_fr/p291.txt",
+      "octets": 112,
+      "sha256": "70561a4c12caa7f373a01e911d26c694ed9018832dfe6f261f53973a705b1cef",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p001.png",
+      "octets": 22639,
+      "sha256": "367506eac1e4a79af42164494fe2535cdf7355e60b6f65c5d73e210d619ab29d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p002.png",
+      "octets": 57286,
+      "sha256": "03aa2d00c5b8424c6de289f1be5068d8bbd7eeffa4b023298dcdbe03b0214561",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p003.png",
+      "octets": 159325,
+      "sha256": "3f54069930c07f9c5b43d6735109dbaead033be7dd992312dba4aa1d6e189ae9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p004.png",
+      "octets": 179581,
+      "sha256": "f402a8cd7f76af405482cfeb8deaf9aae2d2064c72ebde3a45effee8f0960500",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p005.png",
+      "octets": 187728,
+      "sha256": "f16fe90f1ed50bfa1b3f1ba2a43618d353ed844de121e30668998dedf45659fc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p006.png",
+      "octets": 191916,
+      "sha256": "4d28cdbc05eae5fd78560c1d0ba0d4f527d150be007abaa1dd156e7804eaf39e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p007.png",
+      "octets": 38775,
+      "sha256": "5c1cf1789147a98a4f6959513de5f578c17397e5b4fd26ba1ee16b10fa9e904a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p008.png",
+      "octets": 30454,
+      "sha256": "8604ccd818dbd4c34f28a07e9fcebcddb58aed6b2e9dbc5b60e6b74884370d17",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p009.png",
+      "octets": 163914,
+      "sha256": "4976b8aafc18f268d9612ffb3486bf23d753fe6ac2530ce0684e6360e80a49c4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p010.png",
+      "octets": 192995,
+      "sha256": "9b78e5fd0f34268dae921f077f5e5ea89bc4c6931caf2b9fce640814fcfa6e8e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p011.png",
+      "octets": 164588,
+      "sha256": "8b55b637221ca1b87197da93cafce5d3bb3c084d54206943d91385b9aba4ac11",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p012.png",
+      "octets": 217448,
+      "sha256": "61caf210eedeabfe48fd939d061df1ed5d7bcfc5b216feca75ba9fdb3389e71f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p013.png",
+      "octets": 174713,
+      "sha256": "84e764d708bb729c2884eda235b3bd19837168f62f9d7d45e0a2d061e8966704",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p014.png",
+      "octets": 178773,
+      "sha256": "24dcb7bdeb02a2c873cb49195cd2310d8244d3cd3cd63bce42b87e09e4f2d1f6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p015.png",
+      "octets": 188802,
+      "sha256": "3b437bc65789ac26fb07113214056f4656b854f77687b31637b32ea310370721",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p016.png",
+      "octets": 198039,
+      "sha256": "3fe32de1be696ac099823b8857ab6e5d1066e8a17b372b7110d6bda29f46936f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p017.png",
+      "octets": 220708,
+      "sha256": "826aeb79cdd2734e0e53234c7c0a5fe383b937dfdeb299fe0642f58243ae3fcc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p018.png",
+      "octets": 192383,
+      "sha256": "ba0fadb66be0bfd9d1a87cd148b4b76aadf1eaa817ad5caa9a6b6fe09c381a12",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p019.png",
+      "octets": 193292,
+      "sha256": "0ef36a8cde9a2ba26fc6e9b6caa8b43cd325d9139f9b51cdab618997c0b4a787",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p020.png",
+      "octets": 194502,
+      "sha256": "b97e0f05812bcea6e6ae171b540d21293e3d0ab12139c4421a8b002a6ac78640",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p021.png",
+      "octets": 220732,
+      "sha256": "cd8f9b5e39c6150e8cf9f87f46322c0a55c8595347905bc42b9167993bc4d522",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p022.png",
+      "octets": 217223,
+      "sha256": "1827c9b80ebfe77cb89f3d2fc392755482c0b44fb470e5bde7258e0386bc9daf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p023.png",
+      "octets": 204450,
+      "sha256": "e28d72dbe87cadae72ad46dcbb1636c84b57f184f11deefab7e6b00d0d324058",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p024.png",
+      "octets": 184876,
+      "sha256": "3aadcf608219f399cc311a6bec433e74da4b1bbfa66b9c954eb57ad1c90a3cbd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p025.png",
+      "octets": 192925,
+      "sha256": "9cfac83d7169cc4936cf25a0f965274026272573af4444eb1a34aa4d3ad9f3b3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p026.png",
+      "octets": 215569,
+      "sha256": "e3439d24c014ac284a84aface83032e2dd122eb94aa5c97461062bd906ba5b71",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p027.png",
+      "octets": 174130,
+      "sha256": "1b86b376b02bd3c8e6ba15223de96086d3fe214ae37fd53103d2576ed59d5c4b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p028.png",
+      "octets": 211948,
+      "sha256": "a94362e65618e5afb309cf6f4623092829e6ae6582f76bb6d28539269a675c29",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p029.png",
+      "octets": 147904,
+      "sha256": "c8f4ba9e75276b51260786297002086276c8658c6c1ddb85b015fec2181217e7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p030.png",
+      "octets": 215655,
+      "sha256": "2335d374e8ec0663a776dcc0f7fb3df321862b3a8c0822eaf049c7bc8251cada",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p031.png",
+      "octets": 216683,
+      "sha256": "07ec620af843cb8f04b8050413c7cb9c2b42397a245972c607ede654537cbd05",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p032.png",
+      "octets": 215900,
+      "sha256": "790be4e64421891503f9d18f93e85c9696867c8b50c2d9dd7a07b73a63a89e7f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p033.png",
+      "octets": 159961,
+      "sha256": "1a6dad05d743167c0b2a6dfe5aa059d05bc74309ffe339d55768d100d963db42",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p034.png",
+      "octets": 226156,
+      "sha256": "1cd9d3907b5b513a5f8abde2d0fbb7883cb99358345d47fe21a0761917239461",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p035.png",
+      "octets": 188705,
+      "sha256": "1a2ace076aaccce81afea97146a810ae9262211e2aefb9fbfe23fb8f8e1ab777",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p036.png",
+      "octets": 211696,
+      "sha256": "eeb234119b70d83b4fcfddf4f15575542088947ac1d64b1f09daa8db119b4530",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p037.png",
+      "octets": 166073,
+      "sha256": "ab4d3b06419afd5d9184019a192ca9e1a270e53827db491dde33e030b43a665b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p038.png",
+      "octets": 168393,
+      "sha256": "d156480436a2dd52eb2b563e0c07a480258ed16abd8bf4b0c3e422c3e1b467d0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p039.png",
+      "octets": 189492,
+      "sha256": "e7299fa7739b7fa0e07dcd44498932db807bbd7842e584e11cf772e211aa786c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p040.png",
+      "octets": 219731,
+      "sha256": "f4e6e94151494c543e4ebe568abe96480b13d9ebf0d2c629d68f866c133f504a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p041.png",
+      "octets": 224370,
+      "sha256": "75084201500034a6f23d154ecb2664ca243e25120f9935e8bacff88f924cb7ac",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p042.png",
+      "octets": 163584,
+      "sha256": "07526ade15f5f69801c7a87f3076dc94062fa3afa8e3b92656dc81eba9c2be3b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p043.png",
+      "octets": 183946,
+      "sha256": "51c2b327fc32484f94b309e4581af62b4803ec47b3385e70ccd99b777f4479c8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p044.png",
+      "octets": 223731,
+      "sha256": "4f4919691549daf210152a5f8066f4be9cde5f198e8f86ad2996d50844421a57",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p045.png",
+      "octets": 189985,
+      "sha256": "412ef14395e713093f2e016a4dc674b66cf975e4fc290dbf5bcf2b58230b0651",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p046.png",
+      "octets": 182128,
+      "sha256": "3345901b6373f379b779a011b4c7d5139d9985b0e8625aa48c8d9bb0aa6a2d2b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p047.png",
+      "octets": 204790,
+      "sha256": "b5d5c467674ca08712ba50eca330048837c5d546a39c6406149f37a3da89ce48",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p048.png",
+      "octets": 201452,
+      "sha256": "6f73aa8ac3c8b853423f6a91c2cb60513776322ad23bedbbbad4553f7e20cc9b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p049.png",
+      "octets": 193908,
+      "sha256": "256f32ca4a53eca4138b154fed5a7128546bcfa08b4ce40670e67f3672a90ce7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p050.png",
+      "octets": 195122,
+      "sha256": "daa6939d6ffd7fc240d801d13f2badd7ba0ff6306df74f660929f194514d1d61",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p051.png",
+      "octets": 222423,
+      "sha256": "0cc91450032fe526be1a590a1694b44b86a445b7913192ac82d23602aaa3a8d2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p052.png",
+      "octets": 201192,
+      "sha256": "9337b559aa1866a1f0e8f86b66f0be5632a7ebd325775784542b626e14ed9842",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p053.png",
+      "octets": 219792,
+      "sha256": "32f3fc42792c3b09805ace5678bc40d9a6dc6d7a3ee6f94ec017629e29651e49",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p054.png",
+      "octets": 198215,
+      "sha256": "34fe08b34e2c988715f8f7eee2b100c9e9a28e1885d082de37bf2724988c44aa",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p055.png",
+      "octets": 217021,
+      "sha256": "24704509b4f9b919c1344b78aeb73d7e45da310b83ccd5c8141a9161ae449d48",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p056.png",
+      "octets": 178232,
+      "sha256": "86ba01a2de075b361a6aace11bfc2f853cf80721a22ce52f07109e0bb1011e85",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p057.png",
+      "octets": 170378,
+      "sha256": "2c3caa7851a00ede36de07c572b853a87422dd7bca857ecdf2368d532384ad1a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p058.png",
+      "octets": 212173,
+      "sha256": "7430e7edef2f46d89161dbc1c5ac6a210a616899940d78dc35c8c2b38782906d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p059.png",
+      "octets": 212857,
+      "sha256": "f77dc1148a9dc29c17537611c3b57e7b0a86268636731179804b378a9702ba61",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p060.png",
+      "octets": 212717,
+      "sha256": "107a778ee0172f9af41524282496c91519212c6b1bfd2b5719d96c4097a276b2",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p061.png",
+      "octets": 180519,
+      "sha256": "4c69fc53d8b3606f24d0e95be938edffa55cd3682f427c8b4159a9702efe80f5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p062.png",
+      "octets": 204674,
+      "sha256": "7e5221ac9b377832fd5976551c11713125152bc23bc74dfd4186b3464590a484",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p063.png",
+      "octets": 218449,
+      "sha256": "57511003b001adf382cec8790e6052d07a59e1d28fbdca3d956167fafe9cc8ea",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p064.png",
+      "octets": 179283,
+      "sha256": "9dac6cac0bb7b6b81b4d69eaba4fa24e173ed4887961849dca3d1e55e6c73b1e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p065.png",
+      "octets": 190365,
+      "sha256": "229109d86dc325732f3623f51d1c516775270d4113ee2c47b57394229150f659",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p066.png",
+      "octets": 185309,
+      "sha256": "5e0077e9c3de79b33e90c708feb1b1f948e30df7f9ea39b26b6d3a21b2b44533",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p067.png",
+      "octets": 216001,
+      "sha256": "8790b79fabdcca53019590a5d6e64a82811b89b0afb0699ac330583b115e4666",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p068.png",
+      "octets": 219112,
+      "sha256": "1a74332482e2cfc7c944e5834de6f1cf01c714cd181b32304870bf6f45fd6aaf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p069.png",
+      "octets": 230571,
+      "sha256": "88713f8ea83c889ff0e6e8f60d4078cd0a3dd234f96a6f5990bc46a395cea659",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p070.png",
+      "octets": 203228,
+      "sha256": "0b36501b547ed5a8b6e6cf13f314606fc63cfdd6f60a803758d36b0036dfc7c3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p071.png",
+      "octets": 198640,
+      "sha256": "3b0c3e87aba188176cb8d8882988cbefc812c467a9768b19c3584947cc6265e0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p072.png",
+      "octets": 215424,
+      "sha256": "a3f4692fa128c21780a9541d15ece81dbba134c12dfa59333ec225aa67f0f2e3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p073.png",
+      "octets": 225796,
+      "sha256": "70237b5c32292dd20cf2b5a2d91554837da738b88608318bc562fd1de02f240b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p074.png",
+      "octets": 161135,
+      "sha256": "f62088e9bfb29e91ac89486371890e7ca1f92bb37c02e16aae84023aa776cd29",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p075.png",
+      "octets": 168214,
+      "sha256": "e808728c16a8fb0291c1ec83db73c5c58e7d191b640b11b2599eae36fcba1129",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p076.png",
+      "octets": 182803,
+      "sha256": "de74eb88853f38fcbadf0abe9505b3f8e62e03f2d0749cf1920381d8307ecc61",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p077.png",
+      "octets": 180068,
+      "sha256": "f73c0f338ff8541206f20cd8c73b6246dfe5a34f1619a963c41995ee4b99ef5a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p078.png",
+      "octets": 203338,
+      "sha256": "4c9b65632d7f741f2ffa60d7ee6acaa75da49f5daeb49fa4163d9ce81e6bd682",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p079.png",
+      "octets": 222317,
+      "sha256": "3c3490e523a4419fe69ff3fce059ea0c5eb7861a01506e7a59548196d6424f07",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p080.png",
+      "octets": 171834,
+      "sha256": "1284e99132e0bdd6b9981fdf2f165b6b128cdf0bf61802104735aca00161e8b5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p081.png",
+      "octets": 220711,
+      "sha256": "30201a523f246ff546ff0edde44cd20c5c8d36e9cd430c45b16ca86df0883bcf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p082.png",
+      "octets": 215002,
+      "sha256": "c63a93349c7988c23f6bc84c861e8ef64f01295d73c3c117b4ed5dca66a7c9b1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p083.png",
+      "octets": 164966,
+      "sha256": "8c8b431468b42f19f159752f85a113f5ab3b262347bcfb5058af025e0c6bdd7e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p084.png",
+      "octets": 220644,
+      "sha256": "85068587271933f11501095a92a9debed859e138dc20d6eb550a4449be52b4f0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p085.png",
+      "octets": 191070,
+      "sha256": "4e876015d70e31f1cd6dd3a7f698bb7673978301c754a8448d41ddeb028900cd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p086.png",
+      "octets": 200858,
+      "sha256": "db450fb6f4406cd4793508f4d60b8f16ea339debb902044c00799dbf6956fdc7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p087.png",
+      "octets": 215023,
+      "sha256": "493375c65504d308b34b486683ef6ec23aa07e8832ca722f71124407a23cbaac",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p088.png",
+      "octets": 185458,
+      "sha256": "4ee01288a9e3eefe4d39388c11f394eea75f3d21b13ffed0a615cb9464d45e3c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p089.png",
+      "octets": 213749,
+      "sha256": "50c5200eac225e7b90b6f94daea4e37a55a0d2682f183ec4e20d82e07958a565",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p090.png",
+      "octets": 200988,
+      "sha256": "7fc2ae4ae6d60e8d2cc296c80ce502e1ba5e9b79f5bfdca6f90008c246c88a21",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p091.png",
+      "octets": 203993,
+      "sha256": "519d374fdc5ad01bde95c5a81b07b33b7d8b1e2cd4e2a46d5ea34db1ebec0c23",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p092.png",
+      "octets": 210085,
+      "sha256": "d5a86174d0d74abae72353d1781c54251186f0e334ce57dddee6575c1e56d613",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p093.png",
+      "octets": 163085,
+      "sha256": "3747d93b99ad8108c5a2472fbae4f29d5e5c1d21eda2d591465156911e6b00d4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p094.png",
+      "octets": 204483,
+      "sha256": "e440a0f187345f4e89b047ccef5699f6e7816cfbc4f24a41b1a6c0d17fe72f42",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p095.png",
+      "octets": 200270,
+      "sha256": "ccff22630e935808ac1c4e31b6cab4f7c255e264c58eee462b917d1a0a34a33d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p096.png",
+      "octets": 182492,
+      "sha256": "8fc864f92a7b9c702e89299aff4834288a0827404ecaa8d81612d05bf60360f6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p097.png",
+      "octets": 197855,
+      "sha256": "0dd3c1c0b497509e24476adbc46b70ba68437740cde1040efd7d86333d3492bc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p098.png",
+      "octets": 244278,
+      "sha256": "4c5b5be0efd28ae55102b7eb5fc5ea253560d6fe23b998bf55d830a3e11f7267",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p099.png",
+      "octets": 191834,
+      "sha256": "8270da165c32bdf939468b1f3fff7ebceca7e114cb5bd843a6887fec60ff608b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p100.png",
+      "octets": 211100,
+      "sha256": "1cd2c8bec0bce0b745d49c28e0bd77cf464dcc908d984b5a249376b243fc8caf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p101.png",
+      "octets": 197137,
+      "sha256": "c602fa49416a5c2eaf7d391addb308de632abe5deaabbdd79cc6ec8991af8072",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p102.png",
+      "octets": 184470,
+      "sha256": "f70b17961218f26f3b213732213899569af14d6346ee591a9a844942191d6473",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p103.png",
+      "octets": 154760,
+      "sha256": "3757dd36032cf076b2a72fcdb2d08c8869d9e17cb3feb89f8053457924ac3e04",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p104.png",
+      "octets": 129941,
+      "sha256": "6237c6e824c67ea29715c955a85d7fa7d7594bd2069a36d1e9b5e39ad9c134d9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p105.png",
+      "octets": 171875,
+      "sha256": "bfd5550f273365e0315ac65de47a754c22ce77013fcce34bbdcc79d057386b8a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p106.png",
+      "octets": 178000,
+      "sha256": "b906489c4d34ee2758623dc9fdabc17d424d034819aad1ee3afbd5e268ddea90",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p107.png",
+      "octets": 190859,
+      "sha256": "4bc962b9dc7ace9f1ca404feac402d129dddedfbe60ba9196554316efe32d1b0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p108.png",
+      "octets": 177381,
+      "sha256": "ddb7f377986b992fb67956e57b1f3ac553d5769cbe42db395a2956dac037db17",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p109.png",
+      "octets": 214092,
+      "sha256": "8f0e8997ebb42e726953cf0e2aeb93d0cab132537c327b4794a038969ce19a60",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p110.png",
+      "octets": 184871,
+      "sha256": "183550c59177a8cc97e0a73d47bd7d4519e0c983b46d1cb8cd627a265c7e2858",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p111.png",
+      "octets": 189644,
+      "sha256": "d94516994d358d262dd9097caee25812390b82e1746c82402d0617df42885e1c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p112.png",
+      "octets": 177473,
+      "sha256": "7ca66aabc22fa1f035f8f5876615a0968b3d9d5e5f74624136cde55f82ad81b0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p113.png",
+      "octets": 196880,
+      "sha256": "2ae23c6d271eeaa8d3363dec7b6d8488e133628a5670adaca65be6362f690773",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p114.png",
+      "octets": 181410,
+      "sha256": "8b1222973fcfa7f6582ef26c238fd7530cd0d37a8002a9c3f72d1118a78a5319",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p115.png",
+      "octets": 193486,
+      "sha256": "d0ac3e45eabdc28532dfec93820d81e2b87d6d46ae31d7a55630885faf18043a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p116.png",
+      "octets": 189848,
+      "sha256": "df291a4b17bc41cf2bf234abb9592b9c23a71370c3ac70a65ea403fa2ba09a6f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p117.png",
+      "octets": 230860,
+      "sha256": "3954c3018fac4809080d0a2e59e66e93dc1442bb4b655e36b0d8274d70208bf4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p118.png",
+      "octets": 179193,
+      "sha256": "99046b0f30195ae6c43126a229e1cc58bebb57aebb79a52705116e1de67f39f6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p119.png",
+      "octets": 203569,
+      "sha256": "b03a990beff798687985892d9611a7ad634fcfcb199935b3e9c9346f0d804c73",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p120.png",
+      "octets": 222162,
+      "sha256": "1428aa9583c3baca024e5e574f4ecf11cc05c16e49ab3cff50c0781cf4f84fce",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p121.png",
+      "octets": 193245,
+      "sha256": "dc72b9098306723e54cbbbd600fc483e497b8a7d18dee65b035c19cef0321a63",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p122.png",
+      "octets": 157428,
+      "sha256": "72e75563d795f1950d91139225e5854ce6a2e5cf4ef3270aa1fd9af860b2aa90",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p123.png",
+      "octets": 188520,
+      "sha256": "155dbd574b2167eb7002dfbff142dc5933236a2c0fcf5c253a90a514c47f7917",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p124.png",
+      "octets": 208214,
+      "sha256": "46459b7d0aec38f4ac5f796ae52c451e0faa22f71c0df3a595e38e8f4c28a002",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p125.png",
+      "octets": 201222,
+      "sha256": "774e66d4f04f5559e7c48f411277d9cccdd5adae4f2b5e5ca7c75725009b8536",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p126.png",
+      "octets": 207832,
+      "sha256": "58955c73a58eeac85d31c17690523e3cd103353e1865fa9758cc2db369615117",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p127.png",
+      "octets": 227142,
+      "sha256": "08232fba9a5c42c81fa742db3b0aceb74fa7903015a336d09ff8d1c0e7d7c354",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p128.png",
+      "octets": 202222,
+      "sha256": "61b5f817365462b30fa647103d538211640947c12e31ab2701978182336a8e14",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p129.png",
+      "octets": 195522,
+      "sha256": "d5925baed7e5be4659040ac3854b3329e082f3c0751f96a26eeffd74d8d7fa39",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p130.png",
+      "octets": 188382,
+      "sha256": "ec3348a37b9ac870e080bddb01e5ba5d5c6d531b9e2f3c22473899b504cb14ea",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p131.png",
+      "octets": 176030,
+      "sha256": "cc151d43d25502dc343a6df110ac94ebdade9421f84cfd2f5ac494cfe8499b16",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p132.png",
+      "octets": 198081,
+      "sha256": "ad2e7db07f72583b500b02e75b5fb7467d0029e06320b4193794aa2f0f11fddf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p133.png",
+      "octets": 204074,
+      "sha256": "b36fa0b4d137708d34b8b37941169da4d54fecfd2a7914ff68677ebd5d13c84f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p134.png",
+      "octets": 188542,
+      "sha256": "5e81b6c69bcc3d6da80da2e8f50448d96ca92895c63c88d6681e9ee6bb919ca8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p135.png",
+      "octets": 119333,
+      "sha256": "a534fb13da9721c8e95c5b6681c616b4f98f89113c8b8e016757d5d191fec027",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p136.png",
+      "octets": 8374,
+      "sha256": "7bfe5692902aebdd2c6c7feb495984076db8195fed530ef9e370467a4c31418a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p137.png",
+      "octets": 130979,
+      "sha256": "6d7cadef4b64513c432ce97fe49ed94eb37e0e2dec5fea24fce9ee14096e0d60",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p138.png",
+      "octets": 171712,
+      "sha256": "731e16fe9a6fdc99ecbe5f39ec45dd98ab751d3143742f61d6b49f7f4762b13d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p139.png",
+      "octets": 167052,
+      "sha256": "0f1d9275d3578be331879679c302e597649dffdd14b9b571bb942adc2edeadbb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p140.png",
+      "octets": 150004,
+      "sha256": "49951e8406e883e404afc8617d883975b846ec0e0e5b4340904cc3a38bf51f66",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p141.png",
+      "octets": 61278,
+      "sha256": "89b63382b8275e82b181663027b53c834c8b26413d2c8440db024668f5c23c0f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p142.png",
+      "octets": 194749,
+      "sha256": "594cc25d1fd4d6f8fb66f549adc9b079c443d78c9b77677d250883a18c980987",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p143.png",
+      "octets": 178655,
+      "sha256": "f68c0fc3865e4c4fb626f75e98e9b88591d53297c49f1dbecbe4ba95573eb663",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p144.png",
+      "octets": 184359,
+      "sha256": "544d1c004f78089462570b93de640236785752356848e433cf6d2e36fd46b94e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p145.png",
+      "octets": 158330,
+      "sha256": "031898b6a174af08b8ca024d51f5683640aaa67bd80068bc2348442765e38342",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p146.png",
+      "octets": 191298,
+      "sha256": "907cc70704879144d71c59ab4010b8323226dbe732a0317ba172a8c4e502e152",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p147.png",
+      "octets": 222547,
+      "sha256": "8d65c18e6269a9af259afc323cae6d56da0d754dd92c23770c954c80240ee985",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p148.png",
+      "octets": 197348,
+      "sha256": "15598862c8c72f45b1d42c83598c976879482b4897a5f2e57da7acf05c855a3d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p149.png",
+      "octets": 208616,
+      "sha256": "5087fdb1c3693ba4fa246081ad9447a86d7f2b95463656c85a52f2dc0116a9e4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p150.png",
+      "octets": 199679,
+      "sha256": "d04f3333ad24f1ae00a2580c0540b3880d94f89b13e2157304bf3b0bcb0ad76d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p151.png",
+      "octets": 210981,
+      "sha256": "40fae8ec65297f3dbce43d14b0361b09fbb79e38d6b4a1a03881d6770bca6b53",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p152.png",
+      "octets": 212268,
+      "sha256": "eeed653dc1c36290891ad24f69126bdcb7330098afdfb32b96b4cdd147130142",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p153.png",
+      "octets": 215941,
+      "sha256": "b187a4e1696b9291d2fd4e679c0f2e2375920640a83ff0d817a79dd95f5ff5b7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p154.png",
+      "octets": 213327,
+      "sha256": "5f97abd4b4fffde465c1dfd48caef01181f95ca847f390f8272d410787476e5b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p155.png",
+      "octets": 208569,
+      "sha256": "d0f38b26efbf9e62cb25a577339ae72fb14894fa59c62651c13e559c528b9674",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p156.png",
+      "octets": 208778,
+      "sha256": "bb8cc24de8a1294a19237b404b3f647769b845f6408d9b43313e8bc2d87b5ee7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p157.png",
+      "octets": 230497,
+      "sha256": "53093f0b24e0d75f0f22c705273bc1f88d81e46525287e27c116ba11ae447094",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p158.png",
+      "octets": 205580,
+      "sha256": "ca61cfe77c60cad9396edd5608d7accc7a965d509dc580e7330f92aa6d072aed",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p159.png",
+      "octets": 203849,
+      "sha256": "815b03a942f6038cb22ac67c50a59193232ea18649994718615f8a4d281ee3f7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p160.png",
+      "octets": 195628,
+      "sha256": "bc82af685484e73bf9029b5871fa68565bdd8f956883d4bee78a696157338877",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p161.png",
+      "octets": 192884,
+      "sha256": "fdad3cfba55f145574964c2f791c1a742eb8e6bf457cbdd1ddac56d8c8c63223",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p162.png",
+      "octets": 218866,
+      "sha256": "7724bfb3df2c0c96d3a971fcf0e2ec4f7211788118ade2b74497ab7ba9702ca5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p163.png",
+      "octets": 213299,
+      "sha256": "f8750915083c82fea1eac83b569b8cc2783233a38714fc1ef2fde4abca2e87f1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p164.png",
+      "octets": 204858,
+      "sha256": "0181775f23a3374351a55596fef9b91cb5a88aaba61779f550a7c73861e3e40a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p165.png",
+      "octets": 223935,
+      "sha256": "680a005b2ea5c47ca374da8f569f3be316a199912a76e1404fdada3ffeaec61c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p166.png",
+      "octets": 228494,
+      "sha256": "82bbfb73c131faa339e661849a776ad3a76fd33b33f1ed4456d253006c687cef",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p167.png",
+      "octets": 210739,
+      "sha256": "22b40718867098f74e9c1373dac67b98ed91f1d63b94964aeeba51fcda1d905b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p168.png",
+      "octets": 206489,
+      "sha256": "6d791c04cfb5a65a882ff955623b54139459bca0fe2bed9d6c4b51ebc7f4c2ba",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p169.png",
+      "octets": 207486,
+      "sha256": "391d40298690a08f6363370bc7ca592e6910d7112e304d1735c933c96bc5ecc0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p170.png",
+      "octets": 208096,
+      "sha256": "3a3a4562ec96a51e290bf02e8f781aadbb66faaccbd8b1bae65ce7717839a88b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p171.png",
+      "octets": 221510,
+      "sha256": "f8572a6cae0d06c5fc0c27a266473f776644bb3aac6199b0e9c90585a52670ff",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p172.png",
+      "octets": 218668,
+      "sha256": "989ec8cb95dbfc4eaa4e9cfde94707dfb53f702a51cfb65c55dffc1cb09a2f24",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p173.png",
+      "octets": 219038,
+      "sha256": "e730cc593664cb56ff04ce2c45cd5050516a6e63f3f4704fb707b694956151ed",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p174.png",
+      "octets": 203861,
+      "sha256": "3e72eda4e3f939a1faae58e4c99a0b27accd015d67f5e573882795237d41d6dc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p175.png",
+      "octets": 189379,
+      "sha256": "142e7ba161d3920c77901da71f45327e5a87ff13ce533cb1e5982865ea37ba69",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p176.png",
+      "octets": 190494,
+      "sha256": "847aad24f125638aedc6189c14bee1d879133464757b5fc89dcb370f9f9f02c6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p177.png",
+      "octets": 187683,
+      "sha256": "09b517b9ba07ed09bb7ff7bb9c4ff4f96cdcc68b4d8aa05571b8518d0176ed9d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p178.png",
+      "octets": 217014,
+      "sha256": "daf66fd73295d33fca7da6e2f5e6e229cdc53e866756ce4b4ea6c06392f0344a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p179.png",
+      "octets": 187557,
+      "sha256": "95134b59a7b22c6b2d0b42362dccca9502929efdd19388ae347702feac7e93f0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p180.png",
+      "octets": 165215,
+      "sha256": "f78dae9b04b18d43952025685640a4f4c643d61032af608f691c245476024960",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p181.png",
+      "octets": 194364,
+      "sha256": "ec354fd45fb8e44e1aed6ab1a8d0d95f2dfdcc4dd46d054038d8f20f04ea6788",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p182.png",
+      "octets": 216492,
+      "sha256": "627aa35d9150330f194aae6c88093201a2b1911a16330e2034871369aa635d46",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p183.png",
+      "octets": 226084,
+      "sha256": "b7346b620ed49bdf85781f3397241daba045de3ed17becf78427ee7618b4dca9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p184.png",
+      "octets": 201482,
+      "sha256": "cef8f803bd951c2d1acd2c7b8a4f21c20dabbf9ad9014d1d5c579a8d98e7d9da",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p185.png",
+      "octets": 205775,
+      "sha256": "448cd3521a7decba90f91739f211e96ad3083ff31d6baf41e3046fb2d2acd2eb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p186.png",
+      "octets": 228301,
+      "sha256": "694a5f87c5adaebbca23039bce17311a0a1a13c97d784a062cad6c1828e1b3d0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p187.png",
+      "octets": 227184,
+      "sha256": "c6df5ac552e7e911582d66e70d367540bb6b972e3d75cd19c096d9fa40ed1af6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p188.png",
+      "octets": 206278,
+      "sha256": "b44465e2ff9f56161d07d130a28f8569d2c03b5f7b8e1fa0e1b1384b08452576",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p189.png",
+      "octets": 195667,
+      "sha256": "666bce2bbc00d26d5502d5ea9a1b1b614e1ec75734bef0fd034a5cf7f4303fdd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p190.png",
+      "octets": 211462,
+      "sha256": "2afe9021e2ab7679f524704a7d7448aad4d2a6f4e23ef706eed3c33e3cac6c71",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p191.png",
+      "octets": 218903,
+      "sha256": "a90dc6d3946167b49c74b8e605890f05afe4bdead484297407ccd7acc27ede55",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p192.png",
+      "octets": 170735,
+      "sha256": "133c66d3b018516d4a8aeb43df1ea904e2178550f459c8c2b365ef05e175ce20",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p193.png",
+      "octets": 220416,
+      "sha256": "24c27107ffa7a1ebc1bae452be29a19c777e5e32455ec6f8c563bcc770ce2801",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p194.png",
+      "octets": 221973,
+      "sha256": "f3cef66da56ae52033cf6838daadc97e73feba1cc34aeaa3a37b1b46ab65e756",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p195.png",
+      "octets": 214342,
+      "sha256": "a4f8334936d8eb68d6449ff13ec1508584d132fcd54926c0a4fcafb62a96a987",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p196.png",
+      "octets": 222816,
+      "sha256": "cf8d4e07476728b6c5114bded03642765b8548febfb7827c12e53de16974cf55",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p197.png",
+      "octets": 194964,
+      "sha256": "22b1c19d23a0e6ee55d0b97074e6fecbcd20aa395511ffece85bfd30932d36d0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p198.png",
+      "octets": 219810,
+      "sha256": "e138ae9a23ca467336b49d142a4ea53d93e05f898b665a1e8120444676eb0f21",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p199.png",
+      "octets": 206797,
+      "sha256": "e9e7584463e384d5ba38bb3519c8d0b7f661328490311e9e04da90ac932dd60d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p200.png",
+      "octets": 192912,
+      "sha256": "a849f53045aed05b2dc894f5f50c65796bf151b9815dd909b11427a14fd48a42",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p201.png",
+      "octets": 237585,
+      "sha256": "c5680be3cc57567f74bd05a3c4a559c6d4ebd799d7c028e6d834269eabe0414c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p202.png",
+      "octets": 179237,
+      "sha256": "feaf4fcf208906ad07530bf76407531438929e0ad62bc94e8b0db547fc54c6ba",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p203.png",
+      "octets": 199534,
+      "sha256": "ea52a88cd6827805b35b52ff9cbb94bf100292f582ce117b90c8c67d2ba361d5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p204.png",
+      "octets": 227013,
+      "sha256": "d368bfb3d1be85cc17057ce0f8684bf1456d443a2253863cbe734236436afad4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p205.png",
+      "octets": 198037,
+      "sha256": "34e38b302e5c1d9dc8a5b3b06f6b7c05b4c37216bac39ea3e8802be26d2099c9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p206.png",
+      "octets": 197077,
+      "sha256": "342a3c3bf340f5d04a48469f9fd859ea811d1b02552ad1ea0a1b9a23d2034982",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p207.png",
+      "octets": 212702,
+      "sha256": "28f117720179de5d5b361cb19429716331ddeda999fc18a573bb78d8cb72e441",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p208.png",
+      "octets": 220063,
+      "sha256": "697ce77c3a4f96476d927afc89e4e8d93d5ef2c7c60dc1cdb511fef6688778c7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p209.png",
+      "octets": 208818,
+      "sha256": "f9855cf3bdbfeb5fcf0fc6e6f9f806d1f7338ba95f65ac6a9feecee95a1b6994",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p210.png",
+      "octets": 213232,
+      "sha256": "c54c0075968c76e9f79aaaa01d0c68b0fbfbe618979497fca5b62188dce6cb18",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p211.png",
+      "octets": 200387,
+      "sha256": "3cb2b100a028984216400e7a9b085c709a2724e9aa74c7030772a808eec881a9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p212.png",
+      "octets": 167941,
+      "sha256": "ec9e16b09b20e0e6357612dff0f4dce3618a5886f1638fbb196f9856faf1852f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p213.png",
+      "octets": 219057,
+      "sha256": "72ed83a72483ae016c5f78fc888b2b366131a59549d07f1df8dc5de614190b20",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p214.png",
+      "octets": 219551,
+      "sha256": "48525b28df90868e2f44d6619bbe360f3006c7a02f97a8e5d7868153cf2222d4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p215.png",
+      "octets": 208174,
+      "sha256": "c8c45e249806c8d4661110f4b640310eed64db79c896680c043f98a254d9d994",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p216.png",
+      "octets": 214015,
+      "sha256": "0b40e60beaec4d025170d031f57e876355538538d9e66564ac9a99a205eaad01",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p217.png",
+      "octets": 211376,
+      "sha256": "9beaa45220607bfe0bc4ce87a9f5a8753eec7b2397725cb65d669730545d0499",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p218.png",
+      "octets": 234259,
+      "sha256": "b8a82fd9415d39b2ee9ecaabe796980e3b30ec1e57ef88e155dc2d40e73c20bc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p219.png",
+      "octets": 227367,
+      "sha256": "8acbb673db327014cc16366dab3b300227eb3d91fc0619ac6205e52a363786d5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p220.png",
+      "octets": 235271,
+      "sha256": "0505de42c3cc3003921b3b79f0d5ba0f097a86be69dbfe42a50abee7bdb4fba6",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p221.png",
+      "octets": 202798,
+      "sha256": "814bad9be077f03e15dc9515481a57111208e2b1d9f496fadac3fc71757a2505",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p222.png",
+      "octets": 208471,
+      "sha256": "7243490314afe60a638519c9d135d65ca6fa0e2fdc1f749e827efaaf054db031",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p223.png",
+      "octets": 192089,
+      "sha256": "c8969f811d208c3c5ac26fcbdea9df3a5e111a6c93953b88290ca1e570771e06",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p224.png",
+      "octets": 215670,
+      "sha256": "1530ee4a799e16258d0414d58ed3f28dd3b5b974f500be39acc5a47d7c24718b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p225.png",
+      "octets": 221763,
+      "sha256": "16e66b951117c99c81eedb40e1ad87cee143ba124d6c8b1ca229788778023fc8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p226.png",
+      "octets": 212049,
+      "sha256": "1157f94b3c686fa4983030c9c6aed3bfbb2acb5dffbfe8d39152fc279f804145",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p227.png",
+      "octets": 195029,
+      "sha256": "c06e3467f4cdacd6632d0eb86b2c2d34c62113beb1d5681490ab904491c55d06",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p228.png",
+      "octets": 210086,
+      "sha256": "d8b9c7ef2acbe33ae1bfa8b6be227d7195edc28cdec96e2bd9852c4114ddea99",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p229.png",
+      "octets": 203686,
+      "sha256": "a291c2f95997edc6fa025b18b6b43e817d1505714368b2cd275865fe5c2bf526",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p230.png",
+      "octets": 221410,
+      "sha256": "fd8642e331ab5edb68a8e6589da43c628b06b0d86f2f8dae6391ab9af09918dd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p231.png",
+      "octets": 199361,
+      "sha256": "2962f125bd819b7f911d8c620bd7566ed428719686a82a579c6a0973a0daa84c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p232.png",
+      "octets": 197336,
+      "sha256": "ea6a0cc32dc4ffaab4cabcb124949d66898e3be51f2a19ba1d82518e96e9acc7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p233.png",
+      "octets": 219646,
+      "sha256": "21bfb88a321c4ec6e5bc5c30b74fb82a5131117cf0ea1bdc068d9d1fc0c6b75c",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p234.png",
+      "octets": 230138,
+      "sha256": "dfcfd334f8fd8677eda8916da4b77b60bf986cd1c280cb88772d76c4ea315d30",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p235.png",
+      "octets": 213554,
+      "sha256": "652f3054f9b9076919cc693af8b5cbebb88c039fbc57a12b1e12dc14bf93e564",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p236.png",
+      "octets": 223582,
+      "sha256": "a10909057850ec90fe41962e451d2c4e361aec39bfbb4b41cafae685d2110e2f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p237.png",
+      "octets": 216745,
+      "sha256": "d020a272391a07f9f586b8527aadb5c4917d8a6268998390f199608186d16c3b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p238.png",
+      "octets": 225028,
+      "sha256": "b70c9964c63821b27d7833b1e08e0fdace3bf125e002de4ecf2be0ed22d7df4b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p239.png",
+      "octets": 228617,
+      "sha256": "ce7e19368ff5e1b4606e626bb496d390ea292c658fc27374e171d5cd4c6bb9f5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p240.png",
+      "octets": 209017,
+      "sha256": "a7c2cbb2fe04c601dcff3944b0e6564c3e590ff8c850c451125e08373174754f",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p241.png",
+      "octets": 198643,
+      "sha256": "c23b5028c4108d3c5edbbc668a60c21dcc3b5a1cf3cf26c19f778a46e06bf145",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p242.png",
+      "octets": 234872,
+      "sha256": "7f85e67c0523a949c71f6a940f9916f9c920efe853427b2d327c2419e451eb28",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p243.png",
+      "octets": 205097,
+      "sha256": "8a988a87d68e1ad2682892ad60cca0b79301b7b4fd00933541920600703eca96",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p244.png",
+      "octets": 196055,
+      "sha256": "0659aa942aa0907664750ea4c5996a44059ab64c7ed8ccc595045167fc2cd7ed",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p245.png",
+      "octets": 216857,
+      "sha256": "3c4156d5ae81cab6e731fd74573fe99f8c9d3cc6039085baf060790b269ebdb4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p246.png",
+      "octets": 233621,
+      "sha256": "28e9ca2f9500847cfbdb29b0dec7e439dc97f340c8e276a3d999bc211f8f1d71",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p247.png",
+      "octets": 222551,
+      "sha256": "776494edd01541987ae19c19b83a292ccd341bd1c85c9dbf0d60d9d9405fa4eb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p248.png",
+      "octets": 205824,
+      "sha256": "eb656a21b884aa95240599e63e6921f50b7ae07630ff8f811aea7ccfd346c1c1",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p249.png",
+      "octets": 219124,
+      "sha256": "7788ffdf1b315ba94e0798fae3ab5e35fb64993ed7e9cd23cacf00471e0efccb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p250.png",
+      "octets": 218618,
+      "sha256": "0b6b3cc7a1aac023e8516f7c0aa7d076f35179000ccd07fadad02843f69a5867",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p251.png",
+      "octets": 220572,
+      "sha256": "13900e600fa6b4d10925c3f2e9e5943abb7124e78a7311631dcd8db39a277159",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p252.png",
+      "octets": 184719,
+      "sha256": "1ce6dfac5701fdf3efd7bf6a7c1843550bf1f5ffb7b229e826c8cbf354b737d5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p253.png",
+      "octets": 178142,
+      "sha256": "04640e095d2ee8e40908f49c10622717d47774663d9af329ee7262a47eee067b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p254.png",
+      "octets": 230106,
+      "sha256": "678d8085cb80cbfc46da3d100907cfe52bb71fee409a08a7da9d612399323f6d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p255.png",
+      "octets": 212038,
+      "sha256": "5fc0b9cb4b29d774e8404bedfcd55343982b68501c7000ea1f835887061c9250",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p256.png",
+      "octets": 221090,
+      "sha256": "6f576d0abfe0db5a1886abd0fd68b717630eefff7b4578c5e31b5b5424d5e9f8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p257.png",
+      "octets": 207000,
+      "sha256": "73f75f1cfa08cbf2702432a39c69b52530882ade9dafca2fb663d5965160c94e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p258.png",
+      "octets": 200268,
+      "sha256": "f84cae7a8f6bd253dfd38507981fabf438bbf9f8099050169f53fe6eba8842f7",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p259.png",
+      "octets": 228885,
+      "sha256": "c763091ce6fd3d8c4d3cd16b6b97f329088559c1d04d2624861d0931d8c93330",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p260.png",
+      "octets": 231602,
+      "sha256": "c5ed5cb7fbce72e1d9bc72250cf9b967fe8260d540c6bb86a83cb15d618cea98",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p261.png",
+      "octets": 228123,
+      "sha256": "7da6e574322aa1274a0e596c7254c60be273f8fdc0c7b6f0807c39e413743b62",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p262.png",
+      "octets": 180688,
+      "sha256": "8a7c45b0bfe0c456c5940c97dfd82225ba960c6a0ade14ea58d56d6149d99e79",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p263.png",
+      "octets": 212688,
+      "sha256": "41cccd77544769f9c0d95882f85788dc89b7b82b9b9dccd24bb12cace2d57224",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p264.png",
+      "octets": 212720,
+      "sha256": "46b0ab01303c71054fc323b7fe34473ae32535ae23848ca169964582428bcb01",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p265.png",
+      "octets": 211343,
+      "sha256": "6b65466be33e7c016625cb610d3936ad7665e21bfb6dc699f7bda854683d1bdc",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p266.png",
+      "octets": 215211,
+      "sha256": "6385602da20f7ab880380e19ac5356647ef72895e3bc669cc405d9f5662a678a",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p267.png",
+      "octets": 204183,
+      "sha256": "cb3106d0d0c1c184c1265f033877d4088048eb38166054ce6ba2540ca1c134a9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p268.png",
+      "octets": 216352,
+      "sha256": "4e01563db19c3f0aad26920eb75b254939bc301e869a5fae8dee9d9985054467",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p269.png",
+      "octets": 205287,
+      "sha256": "84a806f4c5d81b8a48813c2c4e2b1386ff8e94665fbc1c02904509e1bb7a1da0",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p270.png",
+      "octets": 221019,
+      "sha256": "b35fd1f203c388e6a0e08e6c697936d292e1d75afe3e302174b5f62c60ff9618",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p271.png",
+      "octets": 234273,
+      "sha256": "2d0ce9ea6e67cff9992a03a8f247872c6ecd0152c3cede7125b481fca941f720",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p272.png",
+      "octets": 211486,
+      "sha256": "e057ac3e5c994394249789a37d6d64ab61b03190c07f7a57cc133449ce475d08",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p273.png",
+      "octets": 194061,
+      "sha256": "641240a456ce162b8baecc8e4a1a886c991f6ea8747bedb88d26d58a5c666cd9",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p274.png",
+      "octets": 215283,
+      "sha256": "3ecdbd247674c93413a4b1eede880722e5a2f4f2f9e4687d5976ff00b0bb1014",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p275.png",
+      "octets": 227153,
+      "sha256": "59c6c8fc62ee75a1da174bb819adab13185cc9d24ca9eacce3499de8b0136740",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p276.png",
+      "octets": 212450,
+      "sha256": "91ddb89c31f7c0cb81b464ccc434f3e428f7f2cdd94619e2feaa22d591de8c25",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p277.png",
+      "octets": 217432,
+      "sha256": "823882bcb29ef6799ea277bc14066052c9ab8c554c5bf43f7245b44c2d3f02e8",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p278.png",
+      "octets": 204589,
+      "sha256": "e15851f175999c131acb3faeba4a94d8d1de42ac257ff9865d9c1768c9b8543e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p279.png",
+      "octets": 168688,
+      "sha256": "8399489b0a41a6492337a9fbb8696dea90e3f9a68c92cb99b65a93e5edce656b",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p280.png",
+      "octets": 199416,
+      "sha256": "bc6df0a654ab22cb43ae8183f6948f75dfda44cd9fd269d6285c239f52ccd213",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p281.png",
+      "octets": 205419,
+      "sha256": "a33252a2a8149d84170a6b435c1e2c14acec0141278d79eeff6f2239ca8f6ccf",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p282.png",
+      "octets": 174873,
+      "sha256": "6368a37f0cf5b3d51f5d46f0894660de1961ad44fc99bc63226bb83c2b0f19d4",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p283.png",
+      "octets": 214295,
+      "sha256": "e0b664818a8c80de5a8bd69da7b4bd839e9496937c84f56872abd9b0fcb59212",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p284.png",
+      "octets": 195000,
+      "sha256": "d12070ef0bee25d05256456cc49c6450cd58e3ac3f51438c66e647f5c34b985d",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p285.png",
+      "octets": 178265,
+      "sha256": "be4838942fa3d401b457d6efe89a174deb34d48df0516e0b7a3b0068af2a1390",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p286.png",
+      "octets": 194303,
+      "sha256": "c38e0af1481c4cad72d807708a374f6ee61a9ba78b0a89e2a4cfdff16b0242bd",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p287.png",
+      "octets": 195106,
+      "sha256": "79e3ee5190b69ed01529bae7214adbcbee8b4d0ececd15e753b4767ae4c2a8ad",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p288.png",
+      "octets": 201375,
+      "sha256": "b7f85f8607894368526fc7ea50127d15acbec867d3f4cd730ae2731f73e1f35e",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p289.png",
+      "octets": 179499,
+      "sha256": "2a2a8deebb67127e778ad48229085edf7e2877729cd6157411398a7994e3b0e5",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p290.png",
+      "octets": 57394,
+      "sha256": "bec3a3e2da1d08d342d4e698d1305f3f70005a062f8c58701f535fddfb6b6e68",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/page_images/p291.png",
+      "octets": 28740,
+      "sha256": "40bd330ef5cf8aa6253f217f42beab388a244f03ed1966239646b7ef1df47801",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/segmentation_resume.json",
+      "octets": 490,
+      "sha256": "06941aa1b5631ad18ddd3af0801de4e192099c88a6501d270871f4a91d7bc7f3",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/texte_travail.json",
+      "octets": 688786,
+      "sha256": "e17a630477073bda2e5e4970b5637a78de8f839c67cf2a27b70842bfb1e441f1",
+      "deja_identique": true
+    },
+    {
+      "fichier": "data/processed/verification_articles.csv",
+      "octets": 8049,
+      "sha256": "7c02424da84300e36a370d5f4659efcc91b43548b51f4d93233453525b619862",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/verification_articles_rempli.csv",
+      "octets": 12637,
+      "sha256": "1bcb54fc68028ed29e8053fbd53c35a9b8697e04026729b47fc721ed51f75b41",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/verification_sample.csv",
+      "octets": 5156,
+      "sha256": "c60c0eb168d6e7ad70cc2a82659d47b7cf64635197e201cc177b799c6af62cdb",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/processed/verification_sample_verifie .csv",
+      "octets": 6061,
+      "sha256": "96264ab7a45c15cd833f581ea9e14094c73666723c8043008d66f34d02f1c663",
+      "deja_identique": false
+    },
+    {
+      "fichier": "data/raw/arabic/majallat_al_shughl_2019.pdf",
+      "octets": 1170023,
+      "sha256": "de17529ea734212b6efcec0d796762f39fefbf97455a573ca402bf83c74bc467",
+      "deja_identique": false
+    }
+  ]
+}

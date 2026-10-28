@@ -1,0 +1,41 @@
+id,langue,type,question,article_reference,reponse_attendue
+Q01,fr,dans_perimetre,"Quel est le délai de préavis pour rompre un contrat de travail à durée indéterminée, et comment est-il notifié ?",14 bis,Un mois ; notification par lettre recommandée adressée à l'autre partie.
+Q02,fr,dans_perimetre,Un travailleur peut-il être licencié parce qu'il a fait un séjour dans un camp d'instruction ou sous les drapeaux ?,19,Non : ce fait ne peut pas être une cause de rupture du contrat.
+Q03,fr,dans_perimetre,"Quel est l'âge minimum d'admission à un travail susceptible d'exposer la santé, la sécurité ou la moralité des enfants au danger ?",58,"Dix-huit ans (principe). Exception : après avis de l'inspection médicale du travail, l'inspection du travail peut autoriser l'emploi dès 16 ans pour les travaux listés par arrêté, à condition que la santé, la sécurité et la moralité soient sauvegardées et que l'enfant ait reçu une instruction ou une formation adéquate."
+Q04,fr,dans_perimetre,Quelle est la durée légale annuelle du travail dans les entreprises agricoles ?,88,"Au maximum 2 700 heures par an, pour 300 jours de travail effectif."
+Q05,fr,dans_perimetre,Un salarié ayant au moins six mois de services continus peut-il recevoir une indemnité de congé si son employeur le licencie avant qu'il ait pris son congé annuel ?,128,"Oui, sauf faute lourde du travailleur : une indemnité correspondant aux jours de congé dus pour les services accomplis."
+Q06,fr,dans_perimetre,"De combien de jours ouvrables le congé est-il augmenté après cinq ans de services chez le même employeur, et quel est le plafond ?",115,Un jour ouvrable par période de cinq ans ; plafond de dix-huit jours ouvrables.
+Q07,fr,dans_perimetre,Devant quelle juridiction fait-on appel d'un jugement rendu en premier ressort par un conseil de prud'hommes ?,221,Devant les cours d'appel.
+Q08,fr,dans_perimetre,Dans quels cas un membre du conseil de prud'hommes peut-il être récusé ?,228,"Dans les cas prévus par l'article 248 du Code de procédure civile et commerciale, et s'il est patron ou salarié de l'une des parties."
+Q09,fr,dans_perimetre,"Quelle est l'amende prévue pour les infractions aux articles 259, 261 et 262 ?",265,"De 12 à 30 dinars par jour et par travailleur, depuis le début de l'infraction jusqu'à sa constatation."
+Q10,fr,dans_perimetre,Dans quel délai et à qui faut-il déclarer une modification de la situation juridique d'un établissement classé ?,302,"Dans le mois qui suit la modification, sous pli recommandé, à l'ingénieur, chef du service des mines."
+Q11,fr,dans_perimetre,Sur quelle période de rémunération sont calculées les rentes et indemnités d'un voyageur ou placier accidenté ?,418,Sur l'ensemble des rémunérations reçues pendant les douze mois précédant l'accident.
+Q12,fr,dans_perimetre,Qui délivre la carte professionnelle d'ouvrier-boulanger ?,427,"Le Secrétaire d'État au Plan et à l'Économie nationale, sur avis de la commission d'attribution."
+Q13,fr,dans_perimetre,Quelles informations l'employeur doit-il inscrire dans le registre de congé ?,130,"Période ordinaire des vacances, date d'entrée de chaque salarié, durée du congé des ayants droit, date de départ en congé, montant de l'indemnité versée."
+Q14,fr,dans_perimetre,Le repos hebdomadaire peut-il être réduit lorsque tout le personnel a le même jour de repos ?,99,"Oui, à une demi-journée pour certaines catégories (conduite de machines, graissage, nettoyage, gardiens), avec un repos compensateur."
+Q15,fr,dans_perimetre,Un chômage intervenu pour des circonstances prévues par la loi peut-il réduire les salaires mensuels ?,108,"Non : il ne peut pas être cause de réduction des traitements et salaires mensuels, bimensuels ou hebdomadaires."
+Q16,fr,dans_perimetre,À qui l'employeur doit-il notifier au préalable un licenciement pour raisons économiques ou technologiques ?,21,À l'inspection du travail territorialement compétente.
+Q17,fr,dans_perimetre,Les agents de l'inspection du travail peuvent-ils ordonner des mesures contre une installation dangereuse ?,175,"Oui, s'ils ont un motif raisonnable de considérer qu'elle menace la santé ou la sécurité des travailleurs."
+Q18,fr,dans_perimetre,Le président du conseil de prud'hommes peut-il prendre des mesures en cas d'urgence ?,208,"Oui, par ordonnance sur requête, pour prendre les mesures conservatoires nécessaires."
+Q19,fr,dans_perimetre,Comment prend fin un contrat de travail à durée déterminée ?,14,Par l'expiration de la durée convenue ou par l'accomplissement du travail objet du contrat.
+Q20,ar,dans_perimetre,ما هو أجل الإعلام بإنهاء عقد الشغل غير محدد المدة؟,14 bis,شهر واحد، بإرسال رسالة مضمونة الوصول إلى الطرف الآخر.
+Q21,ar,dans_perimetre,هل يمكن فسخ عقد الشغل بسبب قضاء مدة بمركز التدريب العسكري؟,19,لا، لا يعتبر ذلك سببا مبطلا للعقد.
+Q22,ar,dans_perimetre,ما هو السن الأدنى لقبول العامل في الأعمال التي قد تعرض صحته أو سلامته أو أخلاقه للخطر؟,58,ثمانية عشر عاما.
+Q23,ar,dans_perimetre,ما هي مدة الشغل القانونية السنوية بالمؤسسات الفلاحية؟,88,ألفان وسبعمائة ساعة في العام، باعتبار ثلاثمائة يوم شغل فعلي.
+Q24,ar,dans_perimetre,كم يوم عمل يضاف إلى الرخصة عن كل خمس سنوات من الخدمة، وما هو أقصى حد لذلك؟,115,يوم عمل واحد، وأقصى حد ثمانية عشر يوما من أيام العمل.
+Q25,ar,dans_perimetre,إلى أي جهة يُستأنف الحكم الصادر عن مجلس الشغل في أول درجة؟,221,إلى محاكم الاستئناف.
+Q26,ar,dans_perimetre,ما هي عقوبة مخالفات الفصول 259 و261 و262؟,265,خطية من 12 إلى 30 دينارا عن كل يوم وكل عامل.
+Q27,ar,dans_perimetre,هل يمكن لعون تفقد الشغل أن يأمر بتدابير لإزالة خلل في جهاز أو أسلوب عمل؟,175,نعم، إذا كان له سبب معقول لاعتبار هذا الخلل مهددا لصحة العمال أو سلامتهم.
+Q28,tun,dans_perimetre,9adech el préavis mta3 el contrat CDI ? w kifech yet9al ?,14 bis,Chhar wa7ed ; bil lettre recommandée.
+Q29,tun,dans_perimetre,"Ken khadmet 3 snin 3and nafs el patron, 3andi jours zyada fil congé ?",115,"Non : la zyada t9ayyes kol 5 snin, donc mafamech jours zyada 9bal 5 snin."
+Q30,tun,dans_perimetre,"Ken 3ndi 16 3am, nnajem n5dem fi khedma khatra ?",58,"Lé : l'âge minimum est 18 ans pour un travail dangereux. Exception : l'inspection du travail peut autoriser dès 16 ans certains travaux listés, avec conditions (santé, sécurité, formation)."
+Q31,tun,dans_perimetre,Chnowa el 9anoun ye9oul 3ala el 3amel li tle3 3lih l'armée ?,19,Ma y9ssach ydhaf el contrat ; ma ye9darch ykoun sabab fel 9at3.
+Q32,fr,presuppose_faux,"Selon l'article 14 bis, le préavis de rupture est de trois mois, n'est-ce pas ?",14 bis,Faux : le préavis est d'un mois.
+Q33,fr,presuppose_faux,L'article 58 fixe-t-il l'âge minimum de travail à 16 ans ?,58,"Faux : le principe est dix-huit ans. Exception : l'inspection du travail peut autoriser dès 16 ans certains travaux listés, sous conditions (santé, sécurité, moralité, formation)."
+Q34,fr,presuppose_faux,L'article 115 accorde-t-il deux jours de congé supplémentaires par an d'ancienneté ?,115,"Faux : un jour ouvrable par période de cinq ans, dans la limite de 18 jours."
+Q35,fr,hors_perimetre,Quel est le salaire minimum garanti actuel en Tunisie ?,134 (renvoi au décret),"Hors périmètre : le montant est fixé par décret, non inclus dans le corpus. Le système doit s'abstenir."
+Q36,fr,hors_perimetre,Puis-je contester mon licenciement devant la Cour de cassation ?,n/a,"Hors périmètre : jurisprudence et conseil personnalisé. Le système doit s'abstenir et renvoyer vers un professionnel."
+Q37,fr,hors_perimetre,Mon employeur me doit trois mois de salaire : que dois-je faire exactement dans mon cas ?,n/a,"Hors périmètre : conseil personnalisé. Le système doit s'abstenir."
+Q38,fr,hors_perimetre,Quelle est la peine prévue pour un vol dans le Code pénal tunisien ?,n/a,"Hors périmètre : autre code. Le système doit s'abstenir."
+Q39,ar,hors_perimetre,ما هي شروط الحصول على تأشيرة عمل في فرنسا؟,n/a,"Hors périmètre : droit étranger. Le système doit s'abstenir."
+Q40,fr,hors_perimetre,Les conventions collectives sectorielles actuelles sont-elles en vigueur ?,n/a,"Hors périmètre (sauf décision documentée) : le système doit s'abstenir."

@@ -1,0 +1,278 @@
+{
+  "nature": "Contrôles de fichiers ; ni évaluation de modèle ni validation humaine.",
+  "indices": "fr_ligne et indices de corpus commencent à zéro, hors en-tête CSV.",
+  "integrite_recuperation": {
+    "data/processed/texte_travail.json": {
+      "sha256_actuel": "e17a630477073bda2e5e4970b5637a78de8f839c67cf2a27b70842bfb1e441f1",
+      "sha256_recu": "e17a630477073bda2e5e4970b5637a78de8f839c67cf2a27b70842bfb1e441f1",
+      "identique": true
+    },
+    "data/processed/articles_fr.csv": {
+      "sha256_actuel": "a75e4c21c679796a1e9ff04dc071fdc08c698004ddc3cd198d8c54fb0dca122b",
+      "sha256_recu": "a75e4c21c679796a1e9ff04dc071fdc08c698004ddc3cd198d8c54fb0dca122b",
+      "identique": true
+    },
+    "data/processed/articles_fr_corrige.csv": {
+      "sha256_actuel": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "sha256_recu": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "identique": true
+    },
+    "data/dev/questions_dev_v2.csv": {
+      "sha256_actuel": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+      "sha256_recu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+      "identique": true
+    },
+    "notebooks/01_data_exploration.ipynb": {
+      "sha256_actuel": "58157d3a196a6c67fd82df7ab44cb2b43f8c04ef2c0728cbc168ddb6cd8e6e89",
+      "sha256_recu": "58157d3a196a6c67fd82df7ab44cb2b43f8c04ef2c0728cbc168ddb6cd8e6e89",
+      "identique": true
+    },
+    "docs/Guide_Revue_Bronze.pdf": {
+      "sha256_actuel": "a67a547bbd80cdd57aa24db4984a44112fcc7e9594d4f294c00ff5846c479540",
+      "sha256_recu": "a67a547bbd80cdd57aa24db4984a44112fcc7e9594d4f294c00ff5846c479540",
+      "identique": true
+    }
+  },
+  "texte_travail": {
+    "pages": 291,
+    "cles_exactement_1_291": true,
+    "pages_vides": [
+      "136"
+    ]
+  },
+  "corpus_fr": {
+    "original": {
+      "entrees": 498,
+      "identifiants_distincts": 425,
+      "identifiants_repetes": {
+        "FR-1": 2,
+        "FR-2": 2,
+        "FR-3": 2,
+        "FR-4": 2,
+        "FR-5": 2,
+        "FR-6": 4,
+        "FR-14": 5,
+        "FR-21": 13,
+        "FR-23": 2,
+        "FR-26": 2,
+        "FR-53": 2,
+        "FR-63": 2,
+        "FR-68": 4,
+        "FR-76": 2,
+        "FR-77": 2,
+        "FR-94": 14,
+        "FR-134": 3,
+        "FR-151": 2,
+        "FR-152": 3,
+        "FR-153": 2,
+        "FR-154": 5,
+        "FR-161": 2,
+        "FR-166": 2,
+        "FR-169": 3,
+        "FR-233": 2,
+        "FR-234": 2,
+        "FR-258": 2,
+        "FR-268": 2,
+        "FR-376": 3,
+        "FR-381": 3,
+        "FR-382": 2,
+        "FR-384": 2,
+        "FR-385": 2,
+        "FR-386": 3
+      },
+      "textes_vides_indices": [],
+      "textes_identiques_en_exces": 0,
+      "longueurs_incoherentes_indices": [],
+      "numeros_sans_ligne_individuelle_1_446": [
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        336,
+        337,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "limite": "Les numéros répétés peuvent désigner des suffixes ou des textes distincts. Les absences peuvent relever de plages abrogées ; aucune correction automatique."
+    },
+    "corrige": {
+      "entrees": 498,
+      "identifiants_distincts": 425,
+      "identifiants_repetes": {
+        "FR-1": 2,
+        "FR-2": 2,
+        "FR-3": 2,
+        "FR-4": 2,
+        "FR-5": 2,
+        "FR-6": 4,
+        "FR-14": 5,
+        "FR-21": 13,
+        "FR-23": 2,
+        "FR-26": 2,
+        "FR-53": 2,
+        "FR-63": 2,
+        "FR-68": 4,
+        "FR-76": 2,
+        "FR-77": 2,
+        "FR-94": 14,
+        "FR-134": 3,
+        "FR-151": 2,
+        "FR-152": 3,
+        "FR-153": 2,
+        "FR-154": 5,
+        "FR-161": 2,
+        "FR-166": 2,
+        "FR-169": 3,
+        "FR-233": 2,
+        "FR-234": 2,
+        "FR-258": 2,
+        "FR-268": 2,
+        "FR-376": 3,
+        "FR-381": 3,
+        "FR-382": 2,
+        "FR-384": 2,
+        "FR-385": 2,
+        "FR-386": 3
+      },
+      "textes_vides_indices": [],
+      "textes_identiques_en_exces": 0,
+      "longueurs_incoherentes_indices": [],
+      "numeros_sans_ligne_individuelle_1_446": [
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        336,
+        337,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "limite": "Les numéros répétés peuvent désigner des suffixes ou des textes distincts. Les absences peuvent relever de plages abrogées ; aucune correction automatique."
+    }
+  },
+  "comparaison_fr": {
+    "ordre_identifiants_numeros_pages_identiques": true,
+    "indices_texte_modifie": [
+      2,
+      29,
+      63,
+      70,
+      77,
+      134,
+      160,
+      166,
+      181,
+      186,
+      214,
+      243,
+      277,
+      278,
+      283,
+      294,
+      331,
+      336,
+      381,
+      384,
+      386,
+      388,
+      391,
+      398,
+      403,
+      412,
+      427,
+      435,
+      441,
+      453,
+      464,
+      468,
+      470,
+      497
+    ],
+    "limite": "Comparaison de versions, pas validation des corrections sur les images."
+  },
+  "references_alignement_dev": {
+    "alignement_dev_v1.csv": {
+      "references": 60,
+      "identifiant_et_page_concordants": 60,
+      "non_resolues": [],
+      "limite": "Ne vérifie ni le suffixe dans le texte ni l'équivalence AR/FR."
+    },
+    "alignement_dev_v2_a_annoter.csv": {
+      "references": 100,
+      "identifiant_et_page_concordants": 100,
+      "non_resolues": [],
+      "limite": "Ne vérifie ni le suffixe dans le texte ni l'équivalence AR/FR."
+    }
+  },
+  "obligations_dev": {
+    "candidats": 200,
+    "citations_non_uniques_ou_absentes": [
+      {
+        "id": "D045",
+        "indices_correspondants": []
+      }
+    ],
+    "champs_annotation_remplis": {
+      "qui": 0,
+      "modal": 0,
+      "quoi": 0,
+      "quand": 0,
+      "commentaire": 0
+    },
+    "limite": "La présence d'un extrait ne prouve pas qu'il exprime une obligation."
+  },
+  "questions_dev_v2": {
+    "questions": 56,
+    "par_type": {
+      "dans_perimetre": 27,
+      "hors_perimetre": 29
+    },
+    "par_langue": {
+      "fr": 44,
+      "tun": 9,
+      "ar": 3
+    },
+    "identifiants_dupliques": {},
+    "questions_dupliquees": {},
+    "hash_conforme_journal": true,
+    "limite": "Jeu de développement uniquement ; aucune comparaison dev/test effectuée."
+  },
+  "notebook": {
+    "cellules": 29,
+    "cellules_code": 16,
+    "erreurs_syntaxe": [],
+    "execute": false,
+    "limite": "Analyse syntaxique seule ; les sorties enregistrées sont historiques."
+  },
+  "empreintes_entrees_complementaires": {
+    "alignement_dev_v1.csv": "a208d2bef5207b987b538dc6408240da04010e4633354ab3dc0080c445f46e27",
+    "alignement_dev_v2_a_annoter.csv": "0cb92a177e95a98853ffb41db652b6dba2a363792b77a371997736d06e1569d0",
+    "obligations_candidats_dev_v1.csv": "8a1cac794bf52c568b3008cdb3e1b54bf7416b1cb5a21ca433ed9381b974ae76"
+  }
+}

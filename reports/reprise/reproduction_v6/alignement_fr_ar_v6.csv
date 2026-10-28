@@ -1,0 +1,520 @@
+﻿cle,article_ar,page_ar,abroge,article_fr,page_fr,statut,lot,fr_ligne,controle,texte_fr_debut
+1,AR-1,9,False,FR-1,285,apparié,A,4,,"Article premier.- Le présent code s’applique aux établissements de l’industrie, du commerce, de l’agriculture et à leurs dépendances, de quelque nature qu’ils s"
+2,AR-2,9,False,FR-2,285,apparié,A,5,,"Article 2.- Sont considérés comme établissements industriels, notamment : 1- les mines, carrières et industries extractives de toute nature; 2- les entreprises "
+3,AR-3,9,False,FR-3,285,apparié,A,6,,"Article 3.- Sont considérées comme agricoles, les entreprises publiques ou privées, les coopératives et les associations se livrant notamment aux activités suiv"
+4,AR-4,10,False,FR-4,284,apparié,A,7,,"Article 4.- Est réputé salarié, tout conducteur de véhicule automobile affecté au transport public de personnes ou de marchandises qui n’est pas propriétaire du"
+5,AR-5,10,False,FR-5,283,apparié,A,8,,"Article 5.- Les dispositions du présent code sont étendues aux catégories de travailleurs ci-après : 1- les personnes qui, dans une entreprise industrielle ou c"
+5 bis,AR-5-مكرر,11,False,FR-5,282,apparié,A,9,,Article 5 bis ( Ajouté par la loi n° 93-66 du 5 juillet 1993).- Il ne peut être fait de discrimination entre l’homme et la femme dans l’application des disposit
+6,AR-6,11,False,FR-6,282,apparié,A,10,,Article 6 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le contrat de travail est une convention par laquelle l’une des parties appelée travailleur ou sala
+6-2,AR-6-2,12,False,FR-6,282,apparié,A,11,,Article 6-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Le contrat de travail est conclu pour une durée indéterminée ou pour une durée déterminée. Le cont
+6-3,AR-6-3,12,False,FR-6,282,apparié,A,12,,Article 6-3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs recrutés par contrats de travail à durée indéterminée sont soumis en ce qui conce
+6-4,AR-6-4,12,False,FR-6,282,apparié,A,13,,Article 6-4 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- 1- Le contrat de travail à durée déterminée peut être conclu dans les cas suivants : - l’accomplis
+7,AR-7,12,False,FR-7,281,apparié,A,14,,"Article 7.- L'emploi de travailleurs étrangers est régi par les dispositions réglementant l’entrée, le séjour et le travail des étrangers en Tunisie."
+8,AR-8,13,False,FR-8,281,apparié,A,15,,Article 8.- Le travailleur qui a dû quitter son travail parce qu’il a été appelé sous les drapeaux à un titre quelconque a droit à reprendre son emploi ou un em
+9,AR-9,13,True,FR-9,280,apparié,A,16,,Article 9.- (Abrogé par la loi n° 96-62 du 15 juillet 1996). Chapitre II Les obligations du salarié
+10,AR-10,13,False,FR-10,280,apparié,A,17,,"Article 10.- Le salarié est responsable des conséquences de l’inexécution des instructions qu’il a reçues, lorsqu'elles sont formelles et qui n’a aucun motif gr"
+11,AR-11,13,False,FR-11,280,apparié,A,18,,Article 11.- Le salarié est tenu de veiller à la conservation des choses qui lui ont été remises pour l’accomplissement des services dont il est chargé. Il doit
+12,AR-12,14,False,FR-12,279,apparié,A,19,,"Article 12.- Il ne répond pas de la détérioration et de la perte provenant d’un cas fortuit ou de force majeure, sauf le cas où il serait en demeure de restitue"
+13,AR-13,14,False,FR-13,279,apparié,A,20,,"Article 13.- Le salarié est responsable du vol ou de la disparition des choses qu’il doit restituer à son employeur, sauf s’il prouve qu’il n’a commis aucune né"
+14,AR-14,14,False,FR-14,279,apparié,A,21,,Article 14.- (Modifié par la loi n° 94-29 du 21 février 1994). .- Le contrat de travail à durée déterminée prend fin par l’expiration de la durée convenue ou pa
+14 bis,AR-14-مكرر,14,False,FR-14,279,apparié,A,22,,Article 14 bis. (Ajouté par la loi n° 94-29 du 21 février 1994).- Le préavis de rupture du contrat de travail à durée indéterminée est notifié par lettre recomm
+14 ter,AR-14-ثالثا,15,False,FR-14,278,apparié,A,23,,Article 14 ter. (Ajouté par la loi n° 94-29 du 21 février 1994).- L'employeur qui a l’intention de licencier un travailleur est tenu d’indiquer les causes du li
+14 quater,AR-14-رابعا,15,False,FR-14,278,apparié,A,24,,Article 14 quater. (Ajouté par la loi n° 94-29 du 21 février 1994).- La faute grave est considérée comme l’une des causes réelles et sérieuses justifiant le lic
+14 quinquies,AR-14-خامسا,16,False,FR-14,277,apparié,A,25,,Article 14 quinter (Ajouté par la loi n° 94-29 du 21 février 1994).- Il appartient au juge d’apprécier l’existence du caractère réel et sérieux des causes du li
+15,AR-15,16,False,FR-15,277,apparié,A,26,,"Article 15.- Le contrat de travail subsiste entre le travailleur et lemployeur en cas de modification de la situation juridique de ce dernier, notamment par suc"
+16,AR-16,16,False,FR-16,277,apparié,A,27,,"Article 16 (Modifié par la loi n° 2016-36 du 29 avril 2016).- !!"" La faillite du l’employeur n’est pas une cause de résiliation du contrat et le syndic est subr"
+17,AR-17,16,False,FR-17,277,apparié,A,28,,"Article 17.- Lorsqu’à l’expiration du terme établi, le salarié continue à rendre ses services sans opposition de l’autre partie, le contrat se transforme en un "
+18,AR-18,16,False,FR-18,277,apparié,A,29,années différentes : AR [] / FR ['2016'],"Article 18.- Dans tout contrat de travail, la durée de la période d’essai résulte des conventions collectives ou particulières, de l’usage ou de la loi. (1) Tra"
+19,AR-19,16,False,FR-19,276,apparié,A,30,,Article 19.- Le fait de séjourner dans un camp d’instruction ou d’être sous les drapeaux à un titre quelconque ne peut être une cause de rupture du contrat de t
+20,AR-20,17,False,FR-20,276,apparié,A,31,,Article 20.- La maladie suspend le contrat de travail. Elle ne constitue un motif de rupture que si elle est suffisamment grave ou prolongée et si les nécessité
+21,AR-21,17,False,FR-21,276,apparié,A,32,,Article 21. (Modifié par la loi n° 96-62 du 15 juillet 1996).- Tout employeur qui a l’intention de licencier ou de mettre en chômage pour des raisons économique
+21-2,AR-21-2,17,False,FR-21,275,apparié,A,33,,Article 21-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996) .- Lorsque la notification concerne des travailleurs appartenant à des filiales d’une entreprise si
+21-3,AR-21-3,17,False,FR-21,275,apparié,A,34,,Article 21-3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- L’inspection du travail territorialement compétente ou la Direction Générale de l’Inspection du T
+21-4,AR-21-4,18,False,FR-21,275,apparié,A,35,,Article 21-4 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La commission régionale de contrôle du licenciement est présidée par le chef de l’inspection du t
+21-5,AR-21-5,18,False,FR-21,274,apparié,A,36,,Article 21-5 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La commission centrale de contrôle du licenciement est présidée par le Directeur Général de l’ In
+21-6,AR-21-6,19,False,FR-21,274,apparié,A,37,,Article 21-6 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La commission régionale ou la commission centrale de contrôle du licenciement se réunit en présen
+21-7,AR-21-7,19,False,FR-21,274,apparié,A,38,,Article 21-7 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La commission régionale ou la commission centrale de contrôle du licenciement peut demander à l’e
+21-8,AR-21-8,19,False,FR-21,273,apparié,A,39,,Article 21-8 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Toute déclaration sciemment inexacte ou fausse faite par l’employeur est passible des sanctions p
+21-9,AR-21-9,19,False,FR-21,273,apparié,A,40,,Article 21-9 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La commission régionale ou la commission centrale de contrôle du licenciement examine le dossier 
+21-10,AR-21-10,20,False,FR-21,273,apparié,A,41,,"Article 21-10 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Au cas où la demande de licenciement est acceptée, la commission émet son avis sur la gratificat"
+21-11,AR-21-11,20,False,FR-21,272,apparié,A,42,,Article 21-11 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Le procès-verbal d’accord intervenu entre les deux parties concernées par le biais de l’inspecti
+21-12,AR-21-12,20,False,FR-21,272,apparié,A,43,,"Article 21-12 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Sont abusifs, le licenciement ou la mise en chômage intervenus sans l’avis préalable de la commi"
+21-13,AR-21-13,20,False,FR-21,272,apparié,A,44,,Article 21-13 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs dont les contrats de travail auront été résiliés du fait de la suppression de l
+22,AR-22,21,False,FR-22,271,apparié,A,45,,"Article 22 (Modifié par la loi n° 94-29 du 21 février 1994).- Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la périod"
+23,AR-23,21,False,FR-23,271,apparié,A,46,,Article 23 (Modifié par la loi n° 94-29 du 21 février 1994).- La rupture abusive du contrat du travail par l’une des parties ouvre droit à des dommages-intérêts
+23 bis,AR-23-مكرر,21,False,FR-23,271,apparié,A,47,,"Article 23 bis (Ajouté par la loi n° 94-29 du 21 février 1994).- En cas de licenciement abusif, le préjudice donne lieu à des dommages-intérêts dont le montant "
+24,AR-24,22,False,FR-24,270,apparié,A,48,,Article 24 (Modifié par la loi n° 94-29 du 21 février 1994).- Les dommages-intérêts dus pour rupture abusive du contrat de travail à durée déterminée du fait de
+25,AR-25,22,False,FR-25,270,apparié,A,49,,"Article 25.- En cas de suspension ou de rupture du contrat de travail, lorsque intervient une décision administrative ou judiciaire prononçant à titre de sancti"
+26,AR-26,22,False,FR-26,270,apparié,A,50,,"Article 26.- Lorsqu'un salarié, ayant rompu abusivement un contrat de travail, engage à nouveau ses services, le nouvel employeur, quand il a embauché ce salari"
+26-2,AR-26-2,22,False,FR-26,270,apparié,A,51,,Article 26-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Un accord peut être conclu entre l’employeur et le travailleur en vertu duquel ce dernier s’engag
+27,AR-27,22,False,FR-27,269,apparié,A,52,,"Article 27.- Tout salarié peut, à l’expiration du contrat de travail, exiger de son employeur un certificat contenant exclusivement la date de son entrée, celle"
+28,AR-28,23,False,FR-28,269,apparié,A,53,,Article 28.- Lorsqu'un chef d’entreprise industrielle ou commerciale passe un contrat pour l’exécution d’un certain travail ou la fourniture de certains service
+29,AR-29,23,False,FR-29,268,apparié,A,54,,Article 29.- Le chef d’entreprise est responsable avec le sous- entrepreneur de main-d'œuvre de l’observation de toutes les prescriptions de la législation conc
+30,AR-30,24,False,FR-30,268,apparié,A,55,,"Article 30.- Dans le cas où un sous-entrepreneur fait exécuter des travaux dans les ateliers, magasins ou chantiers autres que ceux de l'entrepreneur principal "
+31,AR-31,24,False,FR-31,267,apparié,A,56,,"Article 31.- La convention collective de travail est un accord relatif aux conditions de travail conclu entre, d’une part, des employeurs organisés en groupemen"
+32,AR-32,25,False,FR-32,267,apparié,A,57,,"Article 32.- La convention collective de travail peut être conclue, soit pour une durée indéterminée, soit pour une durée déterminée ne pouvant excéder cinq ans"
+33,AR-33,25,False,FR-33,267,apparié,A,58,,"Article 33.- La convention collective de travail à durée indéterminée peut toujours cesser au gré de l’une des parties, et à son égard seulement, à charge pour "
+34,AR-34,25,False,FR-34,266,apparié,A,59,,Article 34.- Les groupements de travailleurs ou d’employeurs liés par une convention collective de travail sont tenus de ne rien faire qui soit de nature à en c
+35,AR-35,25,False,FR-35,266,apparié,A,60,,"Article 35.- Les groupements régulièrement constitués, liés par une convention collective de travail, peuvent en leur nom propre, intenter une action en dommage"
+36,AR-36,25,False,FR-36,266,apparié,A,61,,Article 36.- Les personnes liées par une convention collective de travail peuvent intenter une action en dommages-intérêts aux autres personnes ou aux groupemen
+37,AR-37,25,False,FR-37,266,apparié,A,62,,Article 37 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Lorsqu'une convention collective a pour objet de régler les rapports entre employeurs et travaille
+38,AR-38,26,False,FR-38,266,apparié,A,63,,"Article 38.- La convention collective, définie à l’article précédent, doit être conclue entre les organisations syndicales, patronales et ouvrières, les plus re"
+39,AR-39,26,False,FR-39,265,apparié,A,64,,Article 39 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Au cas où un différend s’élèverait au sujet du caractère de la plus grande représentativité d’une 
+40,AR-40,26,False,FR-40,265,apparié,A,65,,"Article 40.- La décision d’agrément est rendue publique par l'insertion au « Journal Officiel de la République Tunisienne » de l'arrêté d’agrément, portant en a"
+41,AR-41,26,False,FR-41,265,apparié,A,66,,"Article 41 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le secrétaire d’Etat à la Jeunesse, aux Sports et aux Affaires Sociales peut, soit de sa propre in"
+42,AR-42,26,False,FR-42,265,apparié,A,67,,Article 42.- Les conventions collectives visées à l’article précédent doivent au moins contenir des dispositions concernant : a) la liberté syndicale et la libe
+43,AR-43,27,False,FR-43,264,apparié,A,68,,"Article 43.- Les organisations syndicales qui sont parties à une convention collective de travail agréée, conclue pour une durée indéterminée et qui usent de le"
+44,AR-44,27,False,FR-44,264,apparié,A,69,,"Article 44.- Sauf dérogation prévue par arrêté du Secrétaire d’Etat à la Jeunesse, aux Sports et aux Affaires Sociales, il ne peut être conclu de conventions co"
+45,AR-45,27,False,FR-45,264,apparié,A,70,,Article 45 .- Les conventions collectives d’établissement ne sont applicables qu’à partir du jour qui suit celui de leur dépôt en triple exemplaire au greffe de
+46,AR-46,28,False,FR-46,263,apparié,A,71,,"Article 46.- Toute organisation syndicale de travailleurs ou d'employeurs ou tout autre groupement d’employeurs, ou tout employeur qui n’est pas partie à la con"
+47,AR-47,28,False,FR-47,263,apparié,A,72,,"Article 47.- Sont liés par la convention collective d’établissement, outre les employeurs qui sont engagés directement, les employeurs et les travailleurs membr"
+48,AR-48,28,False,FR-48,263,apparié,A,73,,"Article 48.- Toute partie à une convention collective d’établissement conclue pour une durée indéterminée, qui désire user du droit de dénonciation prévu à l’ar"
+49,AR-49,28,False,FR-49,263,apparié,A,74,,Article 49 (Abrogé par l’article 5 de la loi n° 96-62 du 15 juillet 1996).-
+50,AR-50,28,True,FR-50,263,apparié,A,75,,Article 50 (Abrogé par l’article 5 de la loi n° 96-62 du 15 juillet 1996).-
+51,AR-51,28,False,FR-51,263,apparié,A,76,,"Article 51 .- A titre transitoire et jusqu’à une date qui sera fixée par décret, les conventions collectives ne pourront contenir aucune disposition relative au"
+52,AR-52,28,False,FR-52,263,apparié,A,77,années différentes : AR [] / FR ['1973'],"Article 52 .- Pendant la période prévue à l’article précédent, les règlements de salaires, rendus obligatoires en vertu des textes antérieurs, resteront en vigu"
+53,AR-53,29,False,FR-53,262,apparié,A,78,,Article 53 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les enfants de moins de 16 ans ne peuvent être employés dans toutes les activités régies par le pr
+53-2,AR-53-2,29,False,FR-53,262,apparié,A,79,,Article 53-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les dispositions de l’article 53 du présent code ne s’appliquent pas au travail des enfants dans 
+54,AR-54,29,False,FR-54,262,apparié,A,80,,Article 54 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'emploi des enfants âgés de moins de 16 ans est autorisé dans les établissements où sont seuls oc
+55,AR-55,30,False,FR-55,261,apparié,A,81,,Article 55 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'âge d'admission des enfants au travail est abaissé à 13 ans dans les travaux agricoles légers no
+56,AR-56,30,False,FR-56,261,apparié,A,82,,Article 56 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Dans les activités non industrielles et non agricoles : 1- Les enfants âgés de 13 ans peuvent être
+57,AR-57,30,False,FR-57,261,apparié,A,83,,"Article 57 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Dans l'intérêt de l’art, de la science ou de l’enseignement et nonobstant les dispositions des art"
+58,AR-58,31,False,FR-58,260,apparié,A,84,,Article 58 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Ne peut être inférieur à dix huit ans l’âge minimum d’admission dans n'importe quel type de travai
+59,AR-59,31,False,FR-59,260,apparié,A,85,,Article 59 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Chaque employeur doit tenir un registre indiquant les noms et dates de naissance de toutes les per
+60,AR-60,31,False,FR-60,260,apparié,A,86,,"Article 60 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L’inspection médicale du travail peut, sur sa propre initiative ou à la demande de l’inspection du"
+61,AR-61,32,False,FR-61,259,apparié,A,87,,Article 61 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les enfants de moins de 18 ans ne peuvent être employés dans toutes les activités qu'après un exam
+62,AR-62,32,False,FR-62,259,apparié,A,88,,Article 62 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L’aptitude des enfants à l’emploi qu’ils occupent doit faire l’objet d’un contrôle médical poursui
+63,AR-63,32,False,FR-63,259,apparié,A,89,,"Article 63 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Pour les travaux qui représentent des risques pour la santé, l’examen médical d’aptitude à l’emplo"
+63-2,AR-63-2,32,False,FR-63,258,apparié,A,90,,Article 63-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les enfants de moins de 18 ans ne peuvent être chargés d’effectuer des heures supplémentaires au 
+64,AR-64,33,False,FR-64,258,apparié,A,91,,"Article 64.- Dans les entreprises de toute nature, à l’exception des établissements où sont exclusivement employés les membres d’une même famille, la femme : a)"
+65,AR-65,33,False,FR-65,257,apparié,A,92,,Article 65 .- Les enfants de moins de quatorze ans ne doivent pas être employés la nuit pendant une période d’au moins quatorze heures consécutives qui doit com
+66,AR-66,34,False,FR-66,257,apparié,A,93,,Article 66 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les enfants de plus de 14 ans et de moins de 18 ans et les femmes ne doivent pas être employés la 
+67,AR-67,34,False,FR-67,257,apparié,A,94,,"Article 67 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Nonobstant les dispositions précédentes, les enfants de seize ans révolus et de moins de dix-huit "
+68,AR-68,35,False,FR-68,256,apparié,A,95,,"Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des "
+68-2,AR-68-2,35,False,FR-68,256,apparié,A,96,,Article 68-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- L’intervalle de nuit pendant lequel les femmes ne peuvent être employées prévu par l’article 66 d
+68-3,AR-68-3,36,False,FR-68,255,apparié,A,97,,Article 68-3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Il est interdit d’appliquer les dispositions de l’article 68-2 à la femme travailleuse pendant un
+68-4,AR-68-4,36,False,FR-68,254,apparié,A,98,,Article 68-4 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- L'application des dispositions de l’article 68-3 du présent code ne peut constituer une raison de
+69,AR-69,36,False,FR-69,254,apparié,A,99,,Article 69 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L’inspection du travail territorialement compétente doit être avisée immédiatement de la levée de 
+70,AR-70,36,False,FR-70,254,apparié,A,100,,"Article 70.- Un arrêté du Secrétaire d’Etat à la Jeunesse, aux Sports et aux Affaires Sociales, pris après avis des organisations syndicales intéressées, peut f"
+71,AR-71,36,False,FR-71,254,apparié,A,101,,"Article 71.- Lorsqu’en raison de circonstances particulièrement graves, l’intérêt national l’exige, l’interdiction du travail de nuit pour les enfants de seize "
+72,AR-72,37,False,FR-72,254,apparié,A,102,,"Article 72.- Les attributions, dévolues par le présent chapitre au Secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales et concernant les branch"
+73,AR-73,37,False,FR-73,254,apparié,A,103,,"Article 73.- Dans toutes les activités non agricoles, les employeurs doivent tenir un registre indiquant les nom et date de naissance de toutes les personnes de"
+74,AR-74,37,False,FR-74,253,apparié,A,104,,Article 74.- Les enfants de moins de dix-huit ans doivent bénéficier d’une période de repos de nuit ne comprenant pas moins de : a) douze heures consécutives po
+75,AR-75,37,False,FR-75,253,apparié,A,105,,Article 75.- Les locaux des entreprises de toute nature dans lesquels les marchandises et objets divers sont manutentionnés ou offerts au public par un personne
+76,AR-76,38,False,FR-76,253,apparié,A,106,,"Article 76.- Les chefs des entreprises dans lesquelles sont employés des enfants de moins de dix-huit ans ou des femmes, doivent veiller au maintien des bonnes "
+76-2,AR-76-2,38,False,FR-76,253,apparié,A,107,,"Article 76-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Pour nécessité de service, le travailleur peut être chargé d’effectuer des travaux d’une catégori"
+77,AR-77,38,False,FR-77,252,apparié,A,108,,Article 77 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les femmes quel que soit leur âge et les enfants de moins de 18 ans ne peuvent être employés à des
+77-2,AR-77-2,38,False,FR-77,252,apparié,A,109,,Article 77-2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les dispositions des articles 59 à 62 du présent Code sont applicables aux enfants âgés de 18 à 2
+78,AR-78,38,False,FR-78,252,apparié,A,110,,"Article 78 .- Il est interdit d’employer ou de laisser employer les enfants de moins de dix-huit ans et les femmes dans les établissements, parties d’établissem"
+79,AR-79,39,False,FR-79,252,apparié,A,111,,Article 79 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La durée du travail effectif ne peut excéder 48 heures par semaine ou une limitation équivalente é
+80,AR-80,39,True,FR-80,251,apparié,A,112,,Article 80 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+81,AR-81,39,True,FR-81,251,apparié,A,113,,Article 81 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+82,AR-82,39,False,FR-82,251,apparié,A,114,,Article 82 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La durée hebdomadaire de présence fixée conformément aux dispositions de l’article 79 du présent c
+83,AR-83,39,False,FR-83,251,apparié,A,115,,"Article 83 (Modifié par la loi n° 96-62 du 15 juillet 1996).- A titre exceptionnel, l’inspection du travail territorialement compétente peut : 1- autoriser l’em"
+84,AR-84,40,False,FR-84,250,apparié,A,116,,"Article 84.- En application d’arrêtés des Secrétaires d’Etat compétents, constatant la nécessité de cette dérogation et sans qu’il y ait lieu de procéder aux co"
+85,AR-85,40,False,FR-85,250,apparié,A,117,,"Article 85 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salariés ne peuvent être employés que conformément aux indications d’un horaire précisant, pou"
+86,AR-86,40,False,FR-86,250,apparié,A,118,,"Article 86.- En cas d’organisation du travail par équipes, la liste nominative de chaque équipe est affichée dans les conditions prévues à l’article précédent. "
+87,AR-87,41,False,FR-87,249,apparié,A,119,,"Article 87.- Tout chef d’entreprise qui veut, conformément à l'arrêté concernant sa profession, user des facultés prévues à l’article 83,1°), est tenu d’adresse"
+88,AR-88,41,False,FR-88,249,apparié,A,120,,"Article 88.- Dans les entreprises agricoles, la durée légale du travail est fixée à deux mille sept cents heures par an au maximum pour trois cents jours de tra"
+89,AR-89,41,False,FR-89,249,apparié,A,121,,"Article 89.- Dans les entreprises de toutes natures, la journée de travail doit être coupée par un ou plusieurs repos pendant lesquels le travail est interdit. "
+90,AR-90,42,False,FR-90,248,apparié,A,122,,Article 90 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Sont considérées comme heures supplémentaires les heures de travail effectuées au-delà de la durée
+91,AR-91,42,False,FR-91,248,apparié,A,123,,"Article 91.- En vue d’accroître la production, l’inspection du travail peut, après avis des organisations syndicales ouvrières intéressées, autoriser les chefs "
+92,AR-92,42,False,FR-92,248,apparié,A,124,,"Article 92.- Les heures perdues par suite d’interruption collective de travail dans un établissement ou dans une partie d’établissement, peuvent être récupérées"
+93,AR-93,43,False,FR-93,247,apparié,A,125,,"Article 93.- L’exécution d’heures supplémentaires ou la récupération d’heures perdues ne peuvent avoir pour effet de porter à plus de soixante heures, non compr"
+94,AR-94,43,False,FR-94,247,apparié,A,126,,"Article 94.- Les heures de travail effectuées à la demande de l’employeur et pour les besoins de l’exploitation, au delà de la durée journalière définie en appl"
+94-2,AR-94-2,43,False,FR-94,247,apparié,A,127,,Article 94-2 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Le contrat de travail à durée déterminée ou indéterminée peut être conclu pour un travail à temps 
+94-3,AR-94-3,43,False,FR-94,247,apparié,A,128,,Article 94-3 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Le contrat de travail à temps partiel doit être écrit et indiquer notamment la qualification profe
+94-4,AR-94-4,43,False,FR-94,246,apparié,A,129,,Article 94-4 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les travailleurs à temps partiel ont les mêmes droits et obligations prévus par les textes législa
+94-5,AR-94-5,44,False,FR-94,246,apparié,A,130,,Article 94-5 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Le salaire du travailleur à temps partiel et les indemnités auxquelles a droit au titre du congé a
+94-6,AR-94-6,44,False,FR-94,246,apparié,A,131,,Article 94-6 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Sont considérées heures supplémentaires les heures effectuées par le travailleur à temps partiel a
+94-7,AR-94-7,44,False,FR-94,246,apparié,A,132,,Article 94-7 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les travailleurs à temps partiel sont soumis au régime de sécurité sociale et au régime de réparat
+94-8,AR-94-8,44,False,FR-94,246,apparié,A,133,,Article 94-8 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les travailleurs à temps partiel sont pris en compte dans le calcul de l'effectif de l'entreprise 
+94-9,AR-94-9,44,False,FR-94,246,apparié,A,134,,"Article 94-9 (Ajouté par la loi 96-62 du 15 juillet 1996).- En cas de recrutement pour pourvoir des postes de travail à plein temps vacants ou créés, la priorit"
+94-10,AR-94-10,45,False,FR-94,245,apparié,A,135,,Article 94-10 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les travailleurs à plein temps qui sont passés au régime de travail à temps partiel pour des rais
+94-11,AR-94-11,45,False,FR-94,245,apparié,A,136,,"Article 94-11 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les employeurs doivent, en temps opportun, informer les travailleurs des postes de travail à plei"
+94-12,AR-94-12,45,False,FR-94,245,apparié,A,137,,Article 94-12 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Le cumul du travail à plein temps et du travail à temps partiel est interdit.
+94-13,AR-94-13,45,False,FR-94,245,apparié,A,138,,Article 94-13 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Chaque employeur occupant des travailleurs à temps partiel doit tenir un registre dans lequel son
+94-14,AR-94-14,45,False,FR-94,245,apparié,A,139,,"Article 94-14 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Les infractions aux dispositions des articles 94-4, 94-5, 94-6, 94-7, 94-8, 94-9, 94-10, 94-11, 9"
+95,AR-95,45,False,FR-95,245,apparié,A,140,,"Article 95 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les entreprises non agricoles ou leurs dépendances, de quelque nature qu'elles soient, sont tenues"
+96,AR-96,46,False,FR-96,244,apparié,A,141,,"Article 96.- Sont admis de droit à donner le repos hebdomadaire par roulement, les établissements appartenant aux catégories suivantes : 1) Fabriques de produit"
+97,AR-97-,46,False,FR-97,244,apparié,A,142,,"Article 97 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le gouverneur peut, à la demande de l'une des organisations syndicales des employeurs ou des trava"
+98,AR-98,47,False,FR-98,243,apparié,A,143,,"Article 98.- En cas de travaux urgents dont l'exécution immédiate est nécessaire pour organiser des mesures de sauvetage, pour prévenir des accidents imminents "
+99,AR-99,47,False,FR-99,242,apparié,A,144,,"Article 99.- Dans tout établissement qui a le repos hebdomadaire au même jour pour tout le personnel, ce repos peut être réduit à une demi-journée pour les pers"
+100,AR-100,47,False,FR-100,242,apparié,A,145,,"Article 100 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les établissements de vente de denrées alimentaires au détail, ont le droit de ne donner le repos"
+101,AR-101,48,False,FR-101,242,apparié,A,146,,"Article 101.- Dans les entreprises minières ou dans les chantiers éloignés des centres urbains, les jours de repos hebdomadaire peuvent être groupés pour être d"
+102,AR-102,48,False,FR-102,242,apparié,A,147,,"Article 102.- Dans toutes les catégories d'entreprises où les intempéries déterminent des chômages, les repos forcés qui surviennent au cours du mois sont dédui"
+103,AR-103,48,False,FR-103,242,apparié,A,148,,"Article 103.- Les industries de plein air, celles qui ne travaillent qu'à certaines époques de l'année, peuvent suspendre le repos hebdomadaire quinze fois par "
+104,AR-104,48,False,FR-104,242,apparié,A,149,,"Article 104.- Les industries qui emploient des matières périssables, celles qui ont à répondre à certains moments à un surcroît exceptionnel de travail et qui o"
+105,AR-105,48,False,FR-105,242,apparié,A,150,,"Article 105.- Le secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales et les Secrétaires d'Etat chargés d'une Administration technique où la loi"
+106,AR-106,49,False,FR-106,241,apparié,A,151,,"Article 106 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les employeurs sont tenus de donner à leur personnel permanent ou occasionnel, un repos hebdomada"
+107,AR-107,49,False,FR-107,241,apparié,A,152,,"Article 107 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les jours fériés, chômés et payés sont fixés par décret ou par les conventions collectives. Il ne"
+108,AR-108,49,False,FR-108,240,apparié,A,153,,Article 108.- Le chômage intervenu dans les circonstances prévues à l'article précédent ne peut être une cause de réduction des traitements et salaires mensuels
+109,AR-109,49,False,FR-109,240,apparié,A,154,,"Article 109.- Dans les activités où le travail ne peut être interrompu, les salariés occupés pendant les journées fériées, chômées et payées ont droit, à la cha"
+110,AR-110,50,False,FR-110,240,apparié,A,155,,"Article 110.- Les heures de travail perdues en raison du congé des journées fériées, chômées et payées peuvent être récupérées dans les conditions prévues aux a"
+111,AR-111,50,False,FR-111,240,apparié,A,156,,Article 111.- Les enfants de moins de dix-huit ans et les femmes ne peuvent être employés dans les établissements où sont exercées les activités prévues à l'art
+112,AR-112,50,False,FR-112,240,apparié,A,157,,"Article 112.- Tout salarié a droit, chaque année, à un congé payé à la charge de l'employeur dans les conditions fixées ci-après."
+113,AR-113,50,False,FR-113,240,apparié,A,158,,"Article 113 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Tout travailleur qui, au cours de l'année de référence, justifie avoir été occupé chez le même em"
+114,AR-114,51,False,FR-114,239,apparié,A,159,,"Article 114 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Sont considérées comme un mois de travail effectif, pour la détermination de la durée du congé an"
+115,AR-115,51,False,FR-115,239,apparié,A,160,,"Article 115.- La durée du congé ainsi fixée est augmentée à raison d'un jour ouvrable par période entière, continue ou non, de cinq ans de services chez le même"
+116,AR-116,51,False,FR-116,238,apparié,A,161,,Article 116 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La date de départ de la période prise en considération pour l'appréciation du droit au congé est 
+117,AR-117,51,False,FR-117,238,apparié,A,162,,Article 117 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le congé annuel est octroyé au cours de la période du 1° juin au 31 octobre de chaque année. Il p
+118,AR-118,52,False,FR-118,238,apparié,A,163,,Article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné p
+119,AR-119,52,False,FR-119,237,apparié,A,164,,Article 119 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le travailleur perçoit pendant son congé une indemnité calculée sur la base de la durée du congé 
+120,AR-120,52,False,FR-120,237,apparié,A,165,,"Article 120.- Le salarié dont le contrat de travail est résilié avant qu'il ait pu bénéficier de la totalité du congé auquel il avait droit, doit recevoir, pour"
+121,AR-121,53,False,FR-121,236,apparié,A,166,,Article 121.- Dans les activités où les salariés ne sont pas habituellement occupés d'une façon continue chez un même employeur au cours de la période retenue p
+122,AR-122,54,False,FR-122,235,apparié,A,167,,Article 122.- L’époux salarié a droit à un congé supplémentaire d’un jour à l’occasion de chaque naissance. Ce congé doit être pris après entente entre l’employ
+123,AR-123,54,False,FR-123,235,apparié,A,168,,"Article 123 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs ont droit, à condition de compter au moins six mois de services continus chez le"
+124,AR-124,55,False,FR-124,234,apparié,A,169,,"Article 124.- Les bénéficiaires d’un congé doivent en jouir, s’il s’agit d’un congé de quinze jours, dans l’année qui suit la date d'ouverture du droit à congé "
+125,AR-125,55,False,FR-125,234,apparié,A,170,,Article 125.- Le congé annuel payé peut être fractionné en périodes d’un ou plusieurs jours jusqu’à concurrence de la moitié de sa durée totale. Sont réputés jo
+126,AR-126,55,False,FR-126,234,apparié,A,171,,"Article 126.- L’ordre du départ en congé doit être communiqué à chaque bénéficiaire une semaine avant son départ. Il est déterminé par l’employeur, et s’il y a "
+127,AR-127,55,False,FR-127,234,apparié,A,172,,"Article 127.- L’indemnité journalière versée au salarié au titre de congé payé est égale au salaire moyen journalier qu’il a ou aurait perçu pendant l’année, da"
+128,AR-128,55,False,FR-128,233,apparié,A,173,,"Article 128.- Lorsque le contrat de travail d’un salarié, ayant au moins six mois de services continus dans la même entreprise, est résilié par le fait de l'emp"
+129,AR-129,56,False,FR-129,233,apparié,A,174,,"Article 129.- Dans les établissements qui assurent des congés payés de durée plus longue que les minima fixés par la présente section, les conditions d'attribut"
+130,AR-130,56,False,FR-130,233,apparié,A,175,,"Article 130.- Les employeurs doivent, en vue du contrôle de l'application du présent chapitre, tenir un registre portant leur nom et leur adresse où sont indiqu"
+131,AR-131,56,False,FR-131,233,apparié,A,176,,"Article 131.- Est nul, tout accord comportant la renonciation par le salarié au congé prévu par les dispositions du présent chapitre, même contre l'octroi d'une"
+132,AR-132,56,False,FR-132,232,apparié,A,177,,"Article 132.- Lorsqu'un contrat de travail est conclu pour une durée déterminée, l'employeur doit, sou peine de dommages-intérêts, faire bénéficier le salarié d"
+133,AR-133,56,False,FR-133,232,apparié,A,178,,"Article 133.- Est considéré comme ne donnant pas le congé légal, l'employeur qui fait travailler un salarié, même en dehors de l'établissement où il travaille h"
+134,AR-134,57,False,FR-134,232,apparié,A,179,,"Article 134 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La rémunération des travailleurs de toutes catégories est déterminée, soit par accord direct entr"
+134-2,AR-134-2,57,False,FR-134,232,apparié,A,180,,"Article 134 - 2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Il est entendu par rémunération, ce qui est dû au travailleur en contrepartie du travail réali"
+134-3,AR-134-3,57,False,FR-134,231,apparié,A,181,,Article 134 - 3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Une partie de la rémunération peut être fixée sur la base de la productivité en vertu d'accord
+135,AR-135,58,True,FR-135,231,apparié,A,182,,Article 135 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+136,AR-136,58,True,FR-136,231,apparié,A,183,,Article 136 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+137,AR-137,58,False,FR-137,231,apparié,A,184,,"Article 137 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Il est institué pour les activités agricoles et au siège de chaque gouvernorat, une commission ré"
+138,AR-138,58,False,FR-138,231,apparié,A,185,,"Article 138 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les produits de la ferme sont vendus aux travailleurs pour leur consommation personnelle, au prix"
+139,AR-139,58,False,FR-139,231,apparié,A,186,,Article 139 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La rémunération des travailleurs de toutes catégories doit être payée en monnaie ayant cours léga
+140,AR-140,58,False,FR-140,230,apparié,A,187,,Article 140 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au 
+141,AR-141,59,False,FR-141,230,apparié,A,188,,"Article 141 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs rémunérés au mois ne peuvent subir, au cas de chômage à l'occasion des jours de "
+142,AR-142,59,False,FR-142,230,apparié,A,189,,"Article 142.- Le paiement ne peut être effectué le jour où l'ouvrier ou l'employé a droit au repos, soit en vertu de la loi, soit en vertu de la convention. 11 "
+143,AR-143,59,False,FR-143,230,apparié,A,190,,"Article 143 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'employeur doit délivrer aux travailleurs à l'occasion du paiement de leur rémunération, une piè"
+144,AR-144,60,False,FR-144,229,apparié,A,191,,"Article 144 .- Les mentions portées sur le bulletin visé à l'article précédent, sont obligatoirement reproduites sur un livre dit de paie dont les inspecteurs d"
+145,AR-145,60,False,FR-145,229,apparié,A,192,,"Article 145 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'acceptation d'un bulletin de paie sans protestation ni réserve par le travailleur, ne peut valo"
+146,AR-146,60,False,FR-146,228,apparié,A,193,,"Article 146 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les formes légales, selon lesquelles doit s'effectuer le paiement aux travailleurs de leurs droit"
+147,AR-147,60,False,FR-147,228,apparié,A,194,,"Article 147.- Toutes les actions de quelque nature qu’elles soient entre employeurs, salariés, organismes gérant les prestations sociales, découlant des relatio"
+148,AR-148,60,False,FR-148,228,apparié,A,195,,"Article 148.- Lorsqu'il s'agit d'actions entre employeurs et salariés, la prescription court à compter de la fin des relations de travail. En ce qui concerne le"
+149,AR-149,60,False,FR-149,228,apparié,A,196,,Article 149.- La compensation ne joue pas au profit des employeurs entre le montant des salaires dus par eux à leurs ouvriers et employés et les sommes qui leur
+150,AR-150,61,False,FR-150,228,apparié,A,197,,"Article 150 (modifié par la loi n° 96-62 du 15 juillet 1996).- Tout employeur qui fait une avance en espèces en dehors du troisième cas de l'article précédent, "
+151,AR-151,61,False,FR-151,228,apparié,A,198,,Article 151 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La saisie-arrêt sur les salaires des travailleurs et la cession de ces salaires sont effectuées c
+151-2,AR-151-2,61,False,FR-151,227,apparié,A,199,,Article 151 - 2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- La partie insaisissable des salaires fixée à l'article 354 du code de procédure civile et comm
+152,AR-152,61,False,FR-152,227,apparié,A,200,,Article 152 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les prestations de santé et de sécurité au travail couvrent toutes les entreprises et activités r
+152-2,AR-152-2,61,False,FR-152,227,apparié,A,201,,Article 152 - 2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Tout employeur est tenu de prendre les mesures nécessaires et appropriées pour la protection d
+152-3,AR-152-3,62,False,FR-152,227,apparié,A,202,,Article 152 - 3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Le travailleur est tenu de respecter les prescriptions relatives à la santé et à la sécurité a
+153,AR-153,62,False,FR-153,226,apparié,A,203,,"Article 153 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Dans toute entreprise employant 500 travailleurs au moins, l'employeur est tenu de créer et d'équ"
+153-2,AR-153-2,62,False,FR-153,226,apparié,A,204,,"Article 153 - 2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les services de médecine du travail, qu'ils soient autonomes ou sous forme de groupements, ass"
+154,AR-154,63,False,FR-154,225,apparié,A,205,,Article 154 (Modifié par la loi n° 96-62 du 15 juillet 1996(.- Les groupements de médecine du travail sont des personnes morales d'intérêt public dotées de la p
+154-2,AR-154-2,63,False,FR-154,225,apparié,A,206,,"Article 154 -2 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Chaque groupement de médecine du travail procède, lors de sa création, à l'élaboration de son s"
+154-3,AR-154-3,63,False,FR-154,225,apparié,A,207,,Article 154 -3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les groupements de médecine du travail sont créés à l'initiative des entreprises ou des organis
+154-4,AR-154-4,63,False,FR-154,225,apparié,A,208,,Article 154 - 4 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Les ressources du groupement de médecine du travail sont constituées des contributions des ent
+154-5,AR-154-5,63,False,FR-154,224,apparié,A,209,,Article 154 - 5 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Le chef d'entreprise est tenu de désigner un responsable de la sécurité au travail au sein de 
+155,AR-155,64,False,FR-155,224,apparié,A,210,,"Article 155 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les médecins des services de médecine du travail sont recrutés, sauf empêchement, parmi les médec"
+156,AR-156,64,True,FR-156,223,apparié,A,211,,"Article 156 (Abrogé par la loi n° 96-62 du 15 juillet 1996).- LIVRE III TITRE UNIQUE REPRESENTATION DU PERSONNEL DANS LES ENTREPRISES!"""
+157,AR-157,65,False,FR-157,223,apparié,A,212,,Article 157 (Modifié par la loi n° 94-29 du 21 février 1994).- Il est institué dans chaque entreprise régie par les dispositions du présent code et employant au
+158,AR-158,65,False,FR-158,223,apparié,A,213,,Article 158 (Modifié par la loi n° 94-29 du 21 février 1994).- La commission consultative d'entreprise est composée d'une façon paritaire de représentants de la
+159,AR-159,65,False,FR-159,223,apparié,A,214,,"Article 159 .- Sont considérés comme salariés, pour l'application des dispositions du présent chapitre, les travailleurs à domicile sans qu'il ait lieu de reche"
+160,AR-160,66,False,FR-160,222,apparié,A,215,,Article 160 (Modifié par la loi n° 94-29 du 21 février 1994).- La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisa
+161,AR-161,66,False,FR-161,221,apparié,A,216,,Article 161 (Modifié par la loi n° 94-29 du 21 février 1994).- La commission consultative d'entreprise examine les questions relatives à la santé et à la sécuri
+161 bis,AR-161-مكرر,67,False,FR-161,221,apparié,A,217,,"Article 161 bis (Ajouté par la loi n° 94-29 du 21 février 1994).- La commission consultative d'entreprise tient compte, dans l'accomplissement de ses missions, "
+162,AR-162,67,False,FR-162,221,apparié,A,218,,Article 162 (Modifié par la loi n° 94-29 du 21 février 1994).- Dans les entreprises ayant plusieurs filiales employant chacune un nombre de travailleurs permane
+163,AR-163,67,False,FR-163,220,apparié,A,219,,Article 163 (Modifié par la loi n° 94-29 du 21 février 1994).- I] est élu un délégué titulaire du personnel et un délégué suppléant dans les entreprises employa
+164,AR-164,67,False,FR-164,220,apparié,A,220,,Article 164 (Modifié par la loi n° 94-29 du 21 février 1994).- Le délégué du personnel exerce les mêmes attributions que celles confiées aux représentants du pe
+165,AR-165,68,False,FR-165,220,apparié,A,221,,Article 165 (Modifié par la loi n° 94-29 du 21 février 1994).- L'employeur est tenu d’accorder aux membres de la commission consultative d’entreprise et au délé
+166,AR-166,68,False,FR-166,219,apparié,A,222,,Article 166 (Modifié par la loi n° 94-29 du 21 février 1994 et par la loi n° 2007-19 du 2 avril 2007).- Tout licenciement d’un membre titulaire ou suppléant rep
+166 bis,AR-166-مكرر,69,False,FR-166,219,apparié,A,223,,"Article 166 bis (Ajouté par la loi n° 2007-19 du 2 avril 2007).- La priorité au maintien en emploi est accordée aux représentants du personnel, qu’ils soient me"
+167,AR-167,69,False,FR-167,218,apparié,A,224,,Article 167 (Modifié par la loi n° 94-29 du 21 février 1994).- En cas de faute grave commise par un membre représentant le personnel au sein de la commission co
+168,AR-168,69,False,FR-168,218,apparié,A,225,,"Article 168 (Modifié par la loi n° 94-29 du 21 février 1994).- Les membres de la commission consultative d'entreprise et les délégués du personnel, titulaires o"
+169,AR-169,69,False,FR-169,218,apparié,A,226,,Article 169 (Modifié par la loi n° 94-29 du 21 février 1994).- La composition et le fonctionnement de la commission consultative d'entreprise ainsi que les moda
+169 bis,AR-169-مكرر,69,False,FR-169,218,apparié,A,227,,Article 169 bis (Ajouté par la loi n° 2007-19 du 2 avril 2007).- Les dispositions de l’alinéa premier de l’article 165 et les dispositions des articles 166 et 1
+169 ter,AR-169-ثالثا,69,False,FR-169,218,apparié,A,228,,Article 169 ter (Ajouté par la loi n° 2007-19 du 2 avril 2007).- Les facilités accordées aux représentants syndicaux sont fixées dans les conventions collective
+170,AR-170,70,False,FR-170,217,apparié,A,229,,Article 170 (Modifié par la loi n° 94-29 du 21 février 1994).- Les agents de l'Inspection du Travail sont chargés de veiller à l'application des dispositions lé
+171,AR-171,70,False,FR-171,217,apparié,A,230,,Article 171 (Modifié par la loi n° 94-29 du 21 février 1994).- L'Inspection du Travail est exercée par des fonctionnaires relevant du Ministère des Affaires Soc
+172,AR-172,70,False,FR-172,217,apparié,A,231,,Article 172.- Les agents chargés de l'Inspection du Travail assistent les gouverneurs dans la mission de conciliation qui leur est dévolue. Ils peuvent effectue
+173,AR-173,70,False,FR-173,217,apparié,A,232,,Article 173.- Les agents chargés de l'Inspection du Travail prêtent le serment prévu par le décret du 6 août 1884 tel qu'il a été modifié par la loi n° 58-103 d
+174,AR-174,71,False,FR-174,216,apparié,A,233,,"Article 174 (Modifié par la loi n° 94-29 du 21 février 1994).- Les agents chargés de l'Inspection du Travail, munis d'une pièce justificative de leurs fonctions"
+175,AR-175,72,False,FR-175,215,apparié,A,234,,Article 175 (Modifié par la loi n° 94-29 du 21 février 1994).- Les agents chargés de l'Inspection du Travail peuvent prescrire des mesures destinées à éliminer 
+176,AR-176,73,False,FR-176,214,apparié,A,235,,Article 176 (Modifié par la loi n° 94-29 du 21 février 1994).- Le Ministre des Affaires Sociales ou le ministre compétent en application de l'article 171 du pré
+177,AR-177,73,False,FR-177,214,apparié,A,236,,Article 177 (Modifié par la loi n° 94-29 du 21 février 1994).- Les agents chargés de l'Inspection du Travail constatent les infractions par procès-verbaux qui f
+178,AR-178,73,False,FR-178,213,apparié,A,237,,Article 178.- Les autorités de Police et de la Garde Nationale conservent leurs attributions d'une manière concurrente pour la recherche et la répression des in
+179,AR-179,73,False,FR-179,213,apparié,A,238,,"Article 179.- Les agents chargés de l'Inspection du Travail ont pour mission, en dehors de la surveillance dont ils sont chargés, d'établir des statistiques de "
+180,AR-180,73,False,FR-180,213,apparié,A,239,,Article 180.- Ces mêmes agents vérifient en outre les clauses insérées dans les marchés de l'Etat et des collectivités publiques relativement aux relations de t
+181,AR-181,73,False,FR-181,213,apparié,A,240,,Article 181 (Modifié par la loi n°94-29 du 21 février 1994).- La Direction Générale de l'Inspection du Travail assure à la fin de chaque année l'élaboration d'u
+182,AR-182,74,False,FR-182,213,apparié,A,241,,Article 182 (Modifié par la loi n°94-29 du 21 février 1994).- Le statut particulier des agents de l'Inspection du Travail est fixé par décret. LIVRE V LES CONFL
+183,AR-183,74,False,FR-183,212,apparié,A,242,,Article 183 (Modifié par la loi n° 94-29 du 21 février 1994).- Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuven
+184,AR-184,74,False,FR-184,212,apparié,A,243,,Article 184 (Alinéa 3 modifié par la loi n° 2006-18 du 2 mai 2006).- Les Conseils de Prud'hommes sont établis par décret pris sur proposition du secrétaire d'Et
+185,AR-185,75,False,FR-185,211,apparié,A,244,,"Article 185.- En l'absence du conseil de prud'hommes compétents, les tribunaux de droit commun statuent en matière prud’homale selon la procédure prévue au prés"
+186,AR-186,75,False,FR-186,211,apparié,A,245,,"Article 186 (Modifié par le par la loi n° 2006-18 du 2 mai 2006).- Le Conseil de Prud'hommes, ou sa section est présidé par un magistrat de deuxième grade ayant"
+187,AR-187,75,False,FR-187,211,apparié,A,246,,"Article 187 (Modifié par la loi n°77-55 du 3 août 1977).- Les conseillers, employeurs et travailleurs sont désignés pour deux ans. Néanmoins si le mandat des co"
+188,AR-188,75,True,FR-188,211,apparié,A,247,,Article 188 (Abrogé par la loi n° 2006-18 du 2 mai 2006).-
+189,AR-189,75,False,FR-189,211,apparié,A,248,,"Article 189.- Il est attaché à chaque conseil un secrétaire, et s'il y a lieu, un ou plusieurs secrétaires adjoints. Les fonctions de secrétaire et de secrétair"
+190,AR-190,75,False,FR-190,211,apparié,A,249,,"Article 190 .- Le secrétaire ou le secrétaire adjoint assiste et tient la plume aux audiences. En cas d'empêchement, ils peuvent être suppléés par un greffier o"
+191,AR-191,75,False,FR-191,211,apparié,A,250,,Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud
+192,AR-192,76,False,FR-192,211,apparié,A,251,,Article 192.- Chaque Conseil de Prud'hommes prépare en assemblée générale un règlement pour son régime intérieur. Ce règlement n'est exécutoire qu'après approba
+193,AR-193,76,False,FR-193,210,apparié,A,252,,"Article 193.- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux"
+194,AR-194,76,False,FR-194,210,apparié,A,253,,"Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formali"
+195,AR-195,76,False,FR-195,210,apparié,A,254,,Article 195.- Le montant des indemnités et droits alloués aux conseillers et témoins des conseils de prud'hommes ainsi que l'imputation et le mode de règlement 
+196,AR-196,76,False,FR-196,210,apparié,A,255,,"Article 196.- Pour l'application des dispositions du code pénal, les conseillers prud'hommes sont assimilés aux fonctionnaires publics. Ils sont, notamment, pas"
+197,AR-197,76,False,FR-197,210,apparié,A,256,,"Article 197.- L'assesseur qui, régulièrement convoqué, s'est abstenu sans motif valable, peut être condamné par le président à une amende équivalente au montant"
+198,AR-198,77,False,FR-198,210,apparié,A,257,,"Article 198.- En cas de défaillance d'un conseiller prud'homal, l'assesseur de l'autre catégorie siège et le magistrat président peut juger l'affaire."
+199,AR-199,77,False,FR-199,209,apparié,A,258,,Article 199.- Les jugements du conseil et de la section sont rendus par le magistrat président. Les conseillers ont voix consultative au sein du conseil ou de l
+200,AR-200,77,False,FR-200,209,apparié,A,259,,"Article 200.- Les séances du conseil ou de la section sont publiques. Si les débats sont de nature à porter atteinte à l'ordre public ou aux bonnes mœurs, le pr"
+201,AR-201,77,False,FR-201,209,apparié,A,260,,Article 201 (Modifié par la loi n°94-29 du 21 février 1994).- L'instance est introduite par une requête écrite présentée au greffier du conseil de prud'hommes. 
+202,AR-202,77,False,FR-202,209,apparié,A,261,,Article 202 (Modifié par la loi n°94-29 du 21 février 1994).- Le défendeur est convoqué devant le Conseil de prud'hommes par lettre recommandée avec accusé de r
+203,AR-203,78,False,FR-203,208,apparié,A,262,,"Article 203.- Les parties peuvent toujours se présenter volontairement devant le Conseil de Prud'hommes et, dans ce cas, il est procédé à leur égard comme si l'"
+204,AR-204,78,False,FR-204,208,apparié,A,263,,"Article 204 (Modifié par la loi n°94-29 du 21 février 1994).- Les parties peuvent se faire assister ou se faire représenter devant le Conseil de Prud'hommes, so"
+205,AR-205,78,False,FR-205,208,apparié,A,264,,Article 205 (Modifié par la loi n°94-29 du 21 février 1994).- Si le demandeur ou son mandataire reçoit la convocation directement du greffe du Conseil de Prud'h
+206,AR-206,79,False,FR-206,207,apparié,A,265,,"Article 206.- Si, bien que régulièrement cité, le défendeur ne comparaît pas ni personne ayant qualité pour lui, il sera passé outre aux débats."
+207,AR-207,79,False,FR-207,207,apparié,A,266,,Article 207 (Modifié par la loi n°94-29 du 21 février 1994).- Le Conseil de Prud'hommes doit avant de statuer tenter la conciliation entre les parties en chambr
+208,AR-208,79,False,FR-208,207,apparié,A,267,,"Article 208 (Modifié par la loi n°94-29 du 21 février 1994).- Dans les cas urgents, le Président du Conseil de Prud'hommes peut émettre des ordonnances sur les "
+209,AR-209,79,False,FR-209,207,apparié,A,268,,"Article 209.- S'il y a lieu à enquête, elle se poursuivra devant le Conseil de Prud'hommes, à l'audience ordinaire ou à une audience spécialement fixée. Les tém"
+210,AR-210,79,False,FR-210,207,apparié,A,269,,"Article 210 (Modifié par la loi n°94-29 du 21 février 1994).- Les parties peuvent déposer toutes conclusions par écrit. En vue d'échange des conclusions, l'affa"
+211,AR-211,79,False,FR-211,206,apparié,A,270,,Article 211.- L'assistance judiciaire peut être accordée devant les conseils de prud'hommes dans les mêmes formes et conditions que devant les tribunaux de droi
+212,AR-212,80,False,FR-212,206,apparié,A,271,,"Article 212.- Les actes de procédure, les exploits, les jugements, et tous les actes nécessaires à leur exécution sont dispensés d'enregistrement et de timbre. "
+213,AR-213,80,False,FR-213,206,apparié,A,272,,Article 213.- La partie qui succombe est condamnée envers le Trésor aux frais avancés par lui ainsi qu'aux autres dépenses. Chapitre V De la compétence des cons
+214,AR-214,80,False,FR-214,206,apparié,A,273,,Article 214 (Modifié par la loi n°94-29 du 21 février 1994).- Les conflits sont portés devant le conseil de prud'hommes dans le ressort duquel est située l'entr
+215,AR-215,81,False,FR-215,205,apparié,A,274,,Article 215 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes sont seuls compétents pour connaître des différends visés à l'article 
+216,AR-216,81,False,FR-216,205,apparié,A,275,,Article 216 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes statuent en premier ressort dans toutes les actions relevant de leur c
+217,AR-217,81,False,FR-217,205,apparié,A,276,,"Article 217.- Les conseils de prud'hommes connaissent de toutes les demandes reconventionnelles ou en compensation qui, par leur nature, rentrent dans leur comp"
+218,AR-218,81,False,FR-218,205,apparié,A,277,,Article 218.- L'exécution provisoire des jugements des conseils de prud'hommes est de droit dans les cas prévus à l'article 125 du code de procédure civile et c
+219,AR-219,81,False,FR-219,204,apparié,A,278,,"Article 219.- Le défendeur condamné à l'exécution provisoire peut saisir, par la voie du référé, le Président du Tribunal d'Appel, à l'effet de faire ordonner l"
+220,AR-220,81,False,FR-220,204,apparié,A,279,,"Article 220.- Le Président du Conseil de Prud'hommes du lieu d'exécution, ou lorsqu'il n'en existe pas, le juge cantonal de ce lieu, est compétent pour statuer "
+221,AR-221,81,False,FR-221,204,apparié,A,280,,Article 221 (Modifié par la loi n° 2006-18 du 2 mai 2006).- L'appel des jugements des conseils de prud'hommes rendus en premier ressort est porté devant les cou
+222,AR-222,82,False,FR-222,204,apparié,A,281,,Article 222 (Modifié par la loi n°94-29 du 21 février 1994).- L'appel est formulé par requête écrite signée par l'auteur du pourvoi ou par son avocat et présent
+223,AR-223,82,False,FR-223,204,apparié,A,282,,"Article 223 (Modifié par la loi n°94-29 du 21 février 1994).- Le greffier de la juridiction d'appel inscrit l'appel sur un registre ad hoc, en délivre récépissé"
+224,AR-224,82,False,FR-224,204,apparié,A,283,,Article 224 (Modifié par la loi n°94-29 du 21 février 1994).- Le greffier de la juridiction d'appel doit aviser immédiatement le greffier du conseil de prud'hom
+225,AR-225,82,False,FR-225,203,apparié,A,284,,"Article 225.- Les parties peuvent comparaître en personne, ou se faire assister ou représenter conformément aux dispositions de l'article 204. Leur comparution "
+226,AR-226,82,False,FR-226,203,apparié,A,285,,"Article 226.- Le président ouvre et dirige les débats. Jusqu'à la clôture des débats, les parties ou leurs avocats peuvent présenter toutes conclusions écrites "
+227,AR-227,82,False,FR-227,203,apparié,A,286,,"Article 227 (Alinéa premier modifié par la loi n° 2006-18 du 2 mai 2006).- Les jugements rendus en dernier ressort par les conseils de prud'hommes, en applicati"
+228,AR-228,83,False,FR-228,203,apparié,A,287,,"Article 228.- Les membres du Conseil de Prud'hommes, y compris le magistrat président, peuvent être récusés dans les cas prévus par l'article 248 du Code de Pro"
+229,AR-229,83,False,FR-229,203,apparié,A,288,,"Article 229.- La partie qui veut récuser un conseiller prud'homme, est tenue de former la récusation avant tout débat et d'en exposer les motifs dans une déclar"
+230,AR-230,83,False,FR-230,202,apparié,A,289,,"Article 230.- Le prud'homme récusé est tenue de donner au bas de la déclaration, dans le délai de deux jours, sa réponse par écrit, portant ou son acquiescement"
+231,AR-231,83,False,FR-231,202,apparié,A,290,,"Article 231.- Sous réserve des dispositions des deux articles précédents, les demandes de récusation sont introduites et jugées par le tribunal de première inst"
+232,AR-232,83,False,FR-232,202,apparié,A,291,,Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du
+233,AR-233,84,False,FR-233,202,apparié,A,292,,"Article 233 (Modifié par la loi n°94-29 du 21 février 1994).- Les sanctions prévues au présent code s'appliquent aux chefs d'établissements, directeurs ou géran"
+233 bis,AR-233-مكرر,84,False,FR-233,202,apparié,A,293,,Article 233 bis (Ajouté par la loi n°94-29 du 21 février 1994).- Les justices cantonales sont compétentes pour connaître de toutes les infractions prévues par l
+234,AR-234,84,False,FR-234,202,apparié,A,294,,"Article 234 (Modifié par la loi n° 69-16 du 27 mars 1969, puis par la loi n° 93-66 du 5 juillet 1993 puis par la loi n° 94-29 du 21 (1) Modifié par l’article 3 "
+234 bis,AR-234-مكرر,84,False,FR-234,201,apparié,A,295,,"Article 234 bis (Ajouté par la loi n° 94-29 du 21 février 1994).- Est puni d'une amende de 12 à 30 dinars, quiconque a contrevenu aux dispositions des articles "
+235,AR-235,84,False,FR-235,201,apparié,A,296,,"Article 235 (Modifié par la loi n° 94-29 du 21 février 1994).- Sont punies des mêmes peines prévues à l'article 234 du présent code, les infractions aux décrets"
+236,AR-236,84,False,FR-236,201,apparié,A,297,,Article 236 (Modifié par la loi n° 69-16 du 27 mars 1969 et par la loi n° 94-29 du 21 février 1994).- La même amende prévue aux articles 234 et 234 bis du prése
+237,AR-237,85,False,FR-237,201,apparié,A,298,,"Article 237 (Modifié par la loi n°94-29 du 21 février 1994).- En cas de récidive, la peine prévue est portée au double. Est considérée récidive, au sens du prés"
+238,AR-238,85,False,FR-238,201,apparié,A,299,,"Article 238.- S'il s'agit d'une contravention aux dispositions relatives à l'hygiène et à la sécurité des travailleurs, le juge, en prononçant la condamnation, "
+239,AR-239,85,False,FR-239,201,apparié,A,300,,"Article 239.- Les employeurs sont civilement responsables des amendes et des dommages-intérêts prononcés contre leurs représentants auteurs de l'infraction, ain"
+240,AR-240,85,False,FR-240,201,apparié,A,301,,Article 240 (Modifié par la loi n° 69-16 du 27 mars 1969 et par la loi n° 94-29 du 21 février 1994).- Quiconque met obstacle à l'accomplissement de la mission d
+241,AR-241,85,False,FR-241,200,apparié,A,302,,Article 241 (Modifié par la loi n°94-29 du 21 février 1994).- Est puni d'une amende de 30 à 300 dinars et d'un emprisonnement de six jours à un an ou de l'une d
+242,AR-242,85,False,FR-242,200,apparié,A,303,,"Article 242.- Des syndicats ou associations professionnels de personnes exerçant la même profession, des métiers similaires ou des professions connexes concoura"
+243,AR-243,86,False,FR-243,200,apparié,A,304,,Article 243.- Les syndicats professionnels ont exclusivement pour objet l'étude et la défense des intérêts économiques et sociaux de leurs adhérents.
+244,AR-244,86,False,FR-244,200,apparié,A,305,,Article 244.- Les syndicats professionnels jouissent de la personnalité civile. Ils ont le droit d'ester en justice et d'acquérir dans les termes du droit commu
+245,AR-245,86,False,FR-245,199,apparié,A,306,,Article 245.- Les syndicats professionnels peuvent affecter une partie de leurs ressources à la création d'habitations à bon marché et à l'acquisition de terrai
+246,AR-246,86,False,FR-246,199,apparié,A,307,,"Article 246.- Les syndicats peuvent subventionner des sociétés coopératives de production, de consommation et de services."
+247,AR-247,86,False,FR-247,199,apparié,A,308,,"Article 247.- Les syndicats peuvent passer des contrats ou conventions avec tous autres syndicats, sociétés ou entreprises. Tout contrat ou convention visant le"
+248,AR-248,87,False,FR-248,199,apparié,A,309,,Article 248.- Les syndicats peuvent être consultés sur tous les différends et toutes les questions se rattachant à leur spécialité. Dans les affaires contentieu
+249,AR-249,87,False,FR-249,199,apparié,A,310,,Article 249.- Il n'est dérogé en aucune façon aux dispositions spéciales qui auraient accordé aux syndicats des droits non visés dans le présent chapitre.
+250,AR-250,87,False,FR-250,198,apparié,A,311,,"Article 250.- Les fondateurs de tout syndicat professionnel doivent, dès sa constitution, déposer ou adresser, par pli recommandé avec accusé de réception, en c"
+251,AR-251,87,False,FR-251,198,apparié,A,312,,"Article 251.- Les membres de tout syndicat professionnel, chargés de l'administration ou de la direction de ce syndicat, doivent être de nationalité tunisienne,"
+252,AR-252,88,False,FR-252,197,apparié,A,313,,"Article 252.- Des unions de syndicats, régulièrement constituées d'après les prescriptions du présent chapitre peuvent être formées comme ces syndicats eux-même"
+253,AR-253,88,False,FR-253,197,apparié,A,314,,"Article 253.- Aucun syndicat ne peut se constituer comme une section d'une organisation syndicale étrangère, dépendant administrativement de celle-ci. Est réput"
+254,AR-254,89,False,FR-254,197,apparié,A,315,,"Article 254.- Tout membre d'un syndicat professionnel peut se retirer à tout instant de l'association, nonobstant toute clause contraire, sans préjudice du droi"
+255,AR-255,89,False,FR-255,196,apparié,A,316,,"Article 255.- Au cas de dissolution, les biens du syndicat sont dévolus conformément aux statuts ou, à défaut de dispositions statutaires, suivant les règles dé"
+256,AR-256,89,False,FR-256,196,apparié,A,317,,"Article 256.- Les syndicats, qui ne sont pas constitués conformément aux dispositions du présent chapitre ou qui s'écartent de leur rôle corporatif et professio"
+257,AR-257,89,False,FR-257,196,apparié,A,318,,"Article 257 (Modifié par la loi n°94-29 du 21 février 1994).- Les infractions aux dispositions du présent chapitre sont poursuivies contre les fondateurs, direc"
+258,AR-258,90,False,FR-258,195,apparié,A,319,,Article 258 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les dispositions du présent chapitre fixent les conditions d'emploi des étrangers en Tunisie comp
+258-2,AR-258-2,90,False,FR-258,195,apparié,A,320,,"Article 258-2 (Ajouté par la loi n°96-62 du 15 juillet 1996).- Tout étranger, qui veut exercer en Tunisie un travail salarié de quelque nature qu'il soit, doit "
+259,AR-259,90,False,FR-259,195,apparié,A,321,,Article 259 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Aucun employeur ne peut recruter ou conserver à son service un travailleur étranger non muni des 
+260,AR-260,90,False,FR-260,195,apparié,A,322,,"Article 260.- Des décrets d'application, pris sur proposition du secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales, après avis du Secrétaire "
+261,AR-261,91,False,FR-261,194,apparié,A,323,,Article 261 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Tout employeur ayant recruté un travailleur étranger est tenu de l'inscrire dans un délai de 48 h
+262,AR-262,91,False,FR-262,194,apparié,A,324,,Article 262 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Aucun employeur ne peut recruter un travailleur étranger avant l'expiration du contrat de travail
+263,AR-263,91,False,FR-263,194,apparié,A,325,,Article 263 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le travailleur étranger bénéficie des mêmes droits et est soumis aux mêmes obligations résultant 
+264,AR-264,91,True,FR-264,194,apparié,A,326,,Article 264 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+265,AR-265,91,False,FR-265,194,apparié,A,327,,"Article 265 (Modifié par la loi n°94-29 du 21 février 1994).- Les infractions aux dispositions des articles 259, 261 et 262 du présent chapitre sont punies d'un"
+266,AR-266,92,False,FR-266,193,apparié,A,328,,Article 266 (Modifié par la loi n°94-29 du 21 février 1994).- Les travailleurs étrangers indûment employés doivent être mis à pied dès la constatation de l'infr
+267,AR-267,92,False,FR-267,193,apparié,A,329,,Article 267 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs étrangers qui contreviennent aux dispositions des articles 258-2 et 266 du prése
+268,AR-268,92,False,FR-268,193,apparié,A,330,,"Article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou l"
+268-2,AR-268-2,92,False,FR-268,193,apparié,A,331,,Article 268-2 (Ajouté par la loi 96-62 du 15 juillet 1996).- Les infractions aux dispositions de l'article 262 du présent code sont punies conformément aux disp
+269,AR-269,92,False,FR-269,193,apparié,A,332,,Article 269 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les dispositions de l'article 53 du code pénal ne sont pas applicables à toutes les sanctions pré
+270,AR-270,92,True,FR-270,193,apparié,A,333,,Article 270 (Abrogé par la loi n° 96-62 du 15 juillet 1996).-
+271,AR-271,92,True,FR-271,193,apparié,A,334,,Article 271 (Abrogé par la loi n° 96-62 du 15 juillet 1996).- Chapitre 111 )9 Immigration des travailleurs Articles 272 à 277 (Abrogés par la loi n° 96-62 du 15
+272,AR-272,93,True,,,abrogé (plage),,,,
+273,AR-273,93,True,,,abrogé (plage),,,,
+274,AR-274,93,True,,,abrogé (plage),,,,
+275,AR-275,93,True,,,abrogé (plage),,,,
+276,AR-276,93,True,,,abrogé (plage),,,,
+277,AR-277,93,True,,,abrogé (plage),,,,
+278,AR-278,93,False,FR-278,192,apparié,A,335,,"Article 278 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Tout employeur, dans toutes les activités autres que les professions domestiques, qui occupe ou e"
+279,AR-279,93,False,FR-279,192,apparié,A,336,,Article 279 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La déclaration doit être faite dans un délai d'un mois : (1) Abrogé par l’article 5 de la loi n°9
+280,AR-280,94,False,FR-280,191,apparié,A,337,,"Article 280 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les travailleurs, qu'ils soient permanents ou non permanents, sont recrutés soit par l'intermédia"
+281,AR-281,94,False,FR-281,191,apparié,A,338,,Article 281 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Toute personne recherchant un emploi peut requérir son inscription au bureau public de placement.
+282,AR-282,94,False,FR-282,191,apparié,A,339,,Article 282 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les annonces des offres et des demandes d'emploi par la voie des moyens d'information sont autori
+283,AR-283,94,False,FR-283,191,apparié,A,340,,Article 283 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'employeur n'est pas obligé de recruter le travailleur qui lui est présenté par le bureau de pla
+284,AR-284,94,False,FR-284,191,apparié,A,341,,Article 284.- Dans le cas où un chef d'établissement ou son gérant responsable charge un préposé de la mission d'embaucher le personnel considéré dudit établiss
+285,AR-285,94,True,FR-285,190,apparié,A,342,,"Article 285.- Les bureaux de placement, privés, gratuits ou payants, sont supprimés."
+286,AR-286,94,False,FR-286,190,apparié,A,343,,"Article 286 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'employeur est tenu de justifier, à tout moment aux agents chargés de l'application des disposit"
+287,AR-287,95,False,FR-287,190,apparié,A,344,,"Article 287 (Modifié par la loi n° 94-29 du 21 février 1994 puis par la loi n° 96-62 du 15 juillet 1996).- Les infractions aux dispositions des articles 278, 27"
+288,AR-288,95,True,FR-288,190,apparié,A,345,,Article 288 (Abrogé par la loi n° 96-62 du 15 juillet 1996). Chapitre V La médecine du travail
+289,AR-289,95,False,FR-289,190,apparié,A,346,,Article 289 (Modifié par la loi n° 96-62 du 15 juillet 1996).- L'inspection médicale du travail est assurée par des médecins fonctionnaires relevant du Ministèr
+290,AR-290,95,False,FR-290,190,apparié,A,347,,Article 290 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Le statut particulier du corps de l'inspection médicale du travail est fixé par décret.
+291,AR-291,95,False,FR-291,190,apparié,A,348,,Article 291 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les médecins inspecteurs du travail sont chargés notamment de : 1) veiller à l'application de la 
+292,AR-292,96,False,FR-292,189,apparié,A,349,,"Article 292 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les dispositions des articles 173, 174, 175, 177 et 240 du présent code relatives à l'Inspection "
+293,AR-293,96,False,FR-293,189,apparié,A,350,,"Article 293.- Les manufactures, ateliers, usines, magasins, chantiers et d'une manière générale, tous les établissements qui présentent des causes de danger ou "
+294,AR-294,96,False,FR-294,188,apparié,A,351,,"Article 294.- Ces établissements sont classés en trois catégories, suivant les dangers ou la gravité des inconvénients inhérents à leur exploitation. La premièr"
+295,AR-295,97,False,FR-295,188,apparié,A,352,,"Article 295.- La nomenclature des établissements dangereux, insalubres ou incommodes détermine les activités auxquelles s'applique le présent chapitre et le cla"
+296,AR-296,97,False,FR-296,188,apparié,A,353,,"Article 296.- Les établissements classés, à quelque catégorie qu'ils appartiennent ne peuvent être ouverts que sur autorisation accordée par arrêté du Secrétair"
+297,AR-297,97,False,FR-297,188,apparié,A,354,,"Article 297.- Des arrêtés ultérieurs peuvent toujours intervenir, soit pour atténuer certaines prescriptions des autorisations, soit pour en imposer de nouvelle"
+298,AR-298,97,False,FR-298,187,apparié,A,355,,"Article 298.- Dans le cas où il s’agit d’une industrie nouvelle ou de procédés nouveaux, ou d’un établissement à ouvrir sur un terrain dans le voisinage duquel "
+299,AR-299,97,False,FR-299,187,apparié,A,356,,"Article 299.- Tout transfert d'un établissement classé sur un autre emplacement, toute transformation dans l'état des lieux, dans la nature de l'outillage ou du"
+300,AR-300,97,False,FR-300,187,apparié,A,357,,"Article 300.- Lorsqu'un chef d'établissement veut ajouter à son exploitation première, quelle que soit la classe dans laquelle elle rentre, une autre activité c"
+301,AR-301,97,False,FR-301,187,apparié,A,358,,Article 301.- L'arrêté autorisant l'ouverture ou la transformation d'un établissement classé cessera de produire effet quand l'établissement n'aura pas été ouve
+302,AR-302,98,False,FR-302,187,apparié,A,359,,"Article 302.- Toute modification dans la situation juridique d'un établissement classé doit faire l'objet d'une déclaration sur timbre, revêtue de la signature "
+303,AR-303,98,False,FR-303,187,apparié,A,360,,"Article 303 (Modifié par la loi n° 96-62 du 15 juillet 1996).- La surveillance des établissements dangereux, insalubres ou incommodes classés ou non est exercée"
+304,AR-304,98,False,FR-304,186,apparié,A,361,,"Article 304.- A défaut par le propriétaire d'un établissement classé de se conformer, après mise en demeure, aux mesures à lui prescrites en conformité des disp"
+305,AR-305,98,False,FR-305,186,apparié,A,362,,Article 305 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Lorsque l'exploitation d'un établissement non compris dans la nomenclature des établissements cla
+306,AR-306,98,False,FR-306,186,apparié,A,363,,"Article 306.- En cas de danger imminent, les agents chargés de la surveillance des établissements dangereux, insalubres ou incommodes prennent immédiatement les"
+307,AR-307,98,False,FR-307,186,apparié,A,364,,"Article 307.- Tout établissement classé maintenu en chômage pendant quatre semestres consécutifs, sans justifications suffisantes, est considéré comme abandonné"
+308,AR-308,99,False,FR-308,185,apparié,A,365,,"Article 308.- Lorsque par suite d'un incendie, d'une explosion ou de tout autre accident résultant des travaux techniques d'exploitation d'un établissement clas"
+309,AR-309,99,False,FR-309,185,apparié,A,366,,Article 309.- Aucune indemnité n'est due aux propriétaires des établissements faisant l'objet du présent chapitre pour tout préjudice résultant de l'exécution d
+310,AR-310,99,False,FR-310,185,apparié,A,367,,"Article 310 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Dans le cas où le fonctionnement d'établissements industriels dûment autorisés, d'établissements "
+311,AR-311,99,False,FR-311,185,apparié,A,368,,Article 311.- Les formalités relatives aux demandes d'ouverture des établissements classés sont fixées par décret.
+312,AR-312,99,False,FR-312,185,apparié,A,369,,"Article 312.- Toute demande d'ouverture d'un établissement dangereux, insalubre ou incommode, donne lieu au versement dans les caisses du trésor d'un droit fixe"
+313,AR-313,99,False,FR-313,184,apparié,A,370,,"Article 313.- Tout établissement actif ou en service, classé dans l'une des catégories, est assujetti au paiement d'une taxe annuelle de contrôle et de surveill"
+314,AR-314,100,False,FR-314,184,apparié,A,371,,"Article 314.- La taxe est à la charge des propriétaires ou chefs d'établissements ou, à défaut de propriétaires connus, à celle des possesseurs ou exploitants o"
+315,AR-315,100,False,FR-315,184,apparié,A,372,,"Article 315.- Les demandes en décharge ou réduction sont formulées par lettre recommandée à l'ingénieur, chef de service des mines, qui en délivre récépissé. Un"
+316,AR-316,100,False,FR-316,183,apparié,A,373,,"Article 316.- Les propriétaires d'établissements imposables, qui ont été omis au rôle, sont tenus d'en faire la déclaration par lettre recommandée à l'ingénieur"
+317,AR-317,101,False,FR-317,183,apparié,A,374,,Article 317.- Les poursuites en vue du paiement de la taxe sont exercées suivant la procédure instituée pour le recouvrement des autres impôts directs par le dé
+318,AR-318,101,False,FR-318,183,apparié,A,375,,Article 318.- Le privilège général du Trésor sur les immeubles et les meubles des débiteurs de la taxe s’exerce conformément aux dispositions des articles 5 et 
+319,AR-319,101,False,FR-319,182,apparié,A,376,,Article 319.- 11 y a prescription pour la demande de la taxe de contrôle et de surveillance trois ans après l'expiration de l'année à laquelle s'applique la côt
+320,AR-320,101,False,FR-320,182,apparié,A,377,,"Article 320.- Les infractions aux dispositions du présent chapitre ou des textes pris pour son exécution sont constatées par les officiers de police judiciaire,"
+321,AR-321,102,False,FR-321,182,apparié,A,378,,Article 321 (Modifié par la loi 94-29 du 21 février 1994).- Toute infraction aux dispositions du présent chapitre ou des textes pris pour son application est pu
+322,AR-322,102,False,FR-322,182,apparié,A,379,,"Article 322 (Modifié par la loi n°94-29 du 21 février 1994).- Est puni d'une amende de 144 à 720 dinars et d'un emprisonnement de seize jours à deux mois, ou de"
+323,AR-323,102,False,FR-323,181,apparié,A,380,,Article 323.- Le bris des scellés apposés en application de l'article 322 est puni des peines prévues à l'article 153 du code pénal.
+324,AR-324,102,False,FR-324,181,apparié,A,381,,Article 324.- L'article 53 du code pénal est applicable aux condamnations prononcées en vertu des dispositions du présent chapitre et des textes pris pour son e
+325,AR-325,102,True,,,abrogé (plage),,,,
+326,AR-326,102,True,,,abrogé (plage),,,,
+327,AR-327,102,True,,,abrogé (plage),,,,
+328,AR-328,102,True,,,abrogé (plage),,,,
+329,AR-329,102,True,,,abrogé (plage),,,,
+330,AR-330,102,True,,,abrogé (plage),,,,
+331,AR-331,102,True,,,abrogé (plage),,,,
+332,AR-332,102,True,,,abrogé (plage),,,,
+333,AR-333,103,False,FR-333,181,apparié,A,382,,"Article 333.- Dans toutes les activités où les salariés sont soumis à la législation du travail, les employeurs doivent fournir à chaque membre de leur personne"
+334,AR-334,103,False,FR-334,181,apparié,A,383,,"Article 334 (Modifié par la loi n°94-29 du 21 février 1994).- Toute infraction aux dispositions de l'article 333 est punie conformément aux articles 234, 236 et"
+335,AR-335,103,False,FR-335,180,apparié,A,384,"années différentes : AR ['1996'] / FR ['1996', '2017']",Article 335 (Modifié par la loi 96-62 du 15 juillet 1996 et abrogé par la loi n° 2017-54 du 24 juillet 2017). Articles 336 et 337 (Abrogés par la loi n°96-62 du
+336,AR-336,104,True,,,abrogé (plage),,,,
+337,AR-337,104,True,,,abrogé (plage),,,,
+338,AR-338,104,False,FR-338,180,apparié,A,385,,Article 338.- Les dispositions du présent chapitre ont pour objet l'organisation et la réglementation de la formation professionnelle dans les différents secteu
+339,AR-339,104,False,FR-339,180,apparié,A,386,,"Article 339.- La formation professionnelle comprend : 1) pour les jeunes gens, les jeunes filles et exceptionnellement pour les adultes, l'apprentissage; 2) pou"
+340,AR-340,105,False,FR-340,179,apparié,A,387,,Article 340.- Il est créé un Conseil de la Formation Professionnelle chargé de formuler des avis dans le cadre des directives données par le Comité Supérieur de
+341,AR-341,105,False,FR-341,179,apparié,A,388,,"Article 341.- Le conseil de la formation professionnelle comprend, outre le Secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales, président : - "
+342,AR-342,105,False,FR-342,178,apparié,A,389,,Article 342.- Le conseil de la formation professionnelle se réunit sur convocation de son président et le secrétariat permanent en est assuré par le service com
+343,AR-343,106,False,FR-343,178,apparié,A,390,,"Article 343.- Le contrat d'apprentissage est celui par lequel un chef d'entreprise, pris en qualité de maître, s'oblige à donner ou à faire donner une formation"
+344,AR-344,106,False,FR-344,178,apparié,A,391,,"Article 344.- Le contrat d'apprentissage doit être constaté par écrit, à peine de nullité. Il doit être rédigé au plus tard dans la quinzaine de sa mise à exécu"
+345,AR-345,106,False,FR-345,177,apparié,A,392,,"Article 345.- Le contrat d'apprentissage est établi en tenant compte des usages et des coutumes de la profession. Il doit contenir : 1) les nom, prénom, nationa"
+346,AR-346,107,False,FR-346,176,apparié,A,393,,Article 346.- Nul ne peut recevoir des apprentis mineurs s'il n'est âgé de moins de 20 ans. Aucun apprenti âgé de moins de 14 ans ou de plus de 18 ans ne peut e
+347,AR-347,107,False,FR-347,176,apparié,A,394,,"Article 347.- Aucun maître, s'il est célibataire ou en état de veuvage ou divorcé ou séparé de corps, ne peut loger, comme apprenties, des jeunes mineures."
+348,AR-348,107,False,FR-348,176,apparié,A,395,,Article 348.- Sont incapables de recevoir les apprentis : - les individus qui ont subi une condamnation pour crime; - ceux qui ont été condamnés pour attentat a
+349,AR-349,108,False,FR-349,175,apparié,A,396,,"Article 349.- Les deux premiers mois de l'apprentissage sont considérés comme un temps d'essai, pendant lequel le contrat peut être annulé par la volonté de l'u"
+350,AR-350,108,False,FR-350,175,apparié,A,397,,Article 350.- Le contrat d'apprentissage est résolu de plein droit : 1) par la mort de l'apprenti ou la disparition de l'entreprise; 2) si le maître ou l'appren
+351,AR-351,108,False,FR-351,175,apparié,A,398,,"Article 351.- Le contrat peut être résilié sur accord des parties ou à la demande de l'une d'elles : 1) en cas de mort ou de changement de profession du maître,"
+352,AR-352,109,False,FR-352,174,apparié,A,399,,"Article 352.- Le maître est tenu de délivrer à l'apprenti ou à son représentant à la fin de l'apprentissage, un certificat constatant l'exécution du contrat."
+353,AR-353,109,False,FR-353,174,apparié,A,400,,"Article 353.- Toute personne convaincue d'avoir employé sciemment en qualité d'apprentis, d'ouvriers ou d'employés, des jeunes gens de moins de 18 ans n'ayant p"
+354,AR-354,109,False,FR-354,174,apparié,A,401,,"Article 354.- Les réclamations qui peuvent être dirigées contre les tiers en vertu de l'article 353 ci-dessus, sont portées devant le conseil de prud'hommes de "
+355,AR-355,109,False,FR-355,174,apparié,A,402,,"Article 355.- Les différends qui peuvent s'élever à l'occasion du contrat d'apprentissage tel qu'il est défini ci-dessus, entre les patrons et leurs représentan"
+356,AR-356,109,False,FR-356,174,apparié,A,403,,"Article 356(°.- Le maître ou toute personne à qui il aura confié la formation professionnelle, doit se conduire envers l'apprenti mineur, en bon père de famille"
+357,AR-357,110,False,FR-357,173,apparié,A,404,,Article 357.- Le maître doit donner à l'apprenti un enseignement progressif et complet de l'art du métier ou de la profession spéciale qui fait l'objet du contr
+358,AR-358,110,False,FR-358,173,apparié,A,405,,"Article 358.- L’apprenti doit à son maître et, le cas échant, à la personne que celui-ci a chargée de sa formation professionnelle, fidélité, obéissance et resp"
+359,AR-359,110,False,FR-359,173,apparié,A,406,,"Article 359.- Des décrets pris après avis des secrétaires d'Etat intéressés, consultation de la commission des salaires compétente et avis du conseil de la form"
+360,AR-360,111,False,FR-360,172,apparié,A,407,,Article 360.- Il est interdit : 1) d'employer un apprenti non muni d'un contrat d'apprentissage visé par le service compétent du Secrétariat d'Etat à la Jeuness
+361,AR-361,111,False,FR-361,172,apparié,A,408,,"Article 361.- Dans les entreprises visées à l'article 338 du présent chapitre, l'enseignement méthodique et complet de certains métiers ou de certaines professi"
+362,AR-362,111,False,FR-362,171,apparié,A,409,,"Article 362.- Des centres de formation professionnelle, organisés conformément aux dispositions de l'article 361, peuvent être créés soit par une entreprise, so"
+363,AR-363,111,False,FR-363,171,apparié,A,410,,"Article 363.- A défaut de contrat d'apprentissage, les dispositions des articles 346 à 358 sont applicables au contrat né de l'inscription des jeunes gens aux c"
+364,AR-364,112,False,FR-364,171,apparié,A,411,"années différentes : AR ['1923', '1989'] / FR ['1923']","Article 364.- Toute personne physique ou morale, exerçant une activité prévue dans le cadre du champ d’application défini à l’article 338 et soumise à l’impôt d"
+365,AR-365,112,False,FR-365,171,apparié,A,412,,"Article 365.- Un décret fixe le taux, les modalités d'établissement, de recouvrement et de contrôle de la taxe de formation professionnelle ainsi que l'affectat"
+366,AR-366,112,False,FR-366,170,apparié,A,413,,"Article 366.- Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers"
+367,AR-367,112,False,FR-367,170,apparié,A,414,,"Article 367.- Toute infraction aux dispositions des articles 346, 347, 348 et 360 ci-dessus et à celles des textes prévus aux articles 359, 361 et 362 pris pour"
+368,AR-368,113,False,FR-368,170,apparié,A,415,,"Article 368.- L'infraction n'est pas punissable si elle est le résultat d'une erreur provenant de la production d'actes de naissance, livrets, certificats ou do"
+369,AR-369,113,False,FR-369,170,apparié,A,416,,Article 369.- Sont maintenus les arrêtés pris antérieurement et concernant l'organisation de l'apprentissage ainsi que les dispositions non contraires aux dispo
+370,AR-370,113,False,FR-370,170,apparié,A,417,,"Article 370.- Tout salarié, lors de son embauchage, doit être avisé s'il est engagé à titre permanent ou saisonnier ou occasionnel. Le salarié permanent est cel"
+371,AR-371,113,False,FR-371,169,apparié,A,418,,"Article 371 .- Au cas de licenciement d'un ouvrier permanent, intervenu une fois la période d'essai expirée, pour quelque motif que ce soit, sauf celui de faute"
+372,AR-372,114,False,FR-372,169,apparié,A,419,,Article 372.- Le présent chapitre s'applique aux établissements agricoles et à leurs dépendances de quelque nature qu'ils soient.
+373,AR-373,114,False,FR-373,169,apparié,A,420,,"Article 373.- Les chefs des établissements visés à l'article 372 ci- dessus, sont tenus de veiller au maintien des bonnes mœurs et de la décence publique dans t"
+374,AR-374,114,False,FR-374,168,apparié,A,421,,"Article 374.- Les enfants ne peuvent être employés dans les établissements visés à l'article 372, s'ils n'ont pas l'aptitude physique nécessaire pour l'exécutio"
+375,AR-375,114,False,FR-375,168,apparié,A,422,,"Article 375.- Des arrêtés conjoints du Secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales et du Secrétaire d'Etat au Plan et à l'Economie Nati"
+376,AR-376,115,False,FR-376,168,apparié,A,423,,Article 376 (Modifié par la loi n° 76-84 du 11 août 1976 puis par la loi n° 94-29 du 21 février 1994).- Toute difficulté surgie entre l'employeur et les travail
+376 bis,AR-376-مكرر,115,False,FR-376,168,apparié,A,424,,"Article 376 bis (Ajouté par la loi n°76-84 du 11 août 1976).- Toute décision de grève ou de lock-out doit être précédée d'un préavis de 10 jours, adressé par la"
+376 ter,AR-376-ثالثا,115,False,FR-376,167,apparié,A,425,,Article 376 - ter (Ajouté par la loi n°94-29 du 21 février 1994).- Le préavis est adressé en même temps aux parties concernées par lettre recommandée avec accus
+377,AR-377,116,False,FR-377,167,apparié,A,426,,"Article 377 (Modifié par la loi n° 76-84 du 11 août 1976, puis par la loi n° 94-29 du 21 février 1994).- Le bureau régional de conciliation ou à défaut l'Inspec"
+378,AR-378,116,False,FR-378,166,apparié,A,427,,Article 378 (Modifié par la loi 76-84 du 11 août 1976 puis la loi n° 94-29 du 21 février 1994).- Au cas où la grève ou le lock-out s'étend sur deux ou plusieurs
+379,AR-379,117,False,FR-379,166,apparié,A,428,,Article 379 (Modifié par la loi n° 76-84 du 11 août 1976).- La commission régionale ou la commission centrale de conciliation peut faire procéder à toutes les e
+380,AR-380,117,False,FR-380,166,apparié,A,429,,Article 380 (Modifié par la loi n°94-29 du 21 février 1994).- La Commission Régionale ou la Commission Centrale de Conciliation doit proposer une solution au co
+381,AR-381,117,False,FR-381,166,apparié,A,430,,Article 381 (Modifié par la loi n°76-84 du 11 août 1976 puis la loi n° 94-29 du 21 février 1994).- Si la solution proposée par la commission régionale ou la com
+381 bis,AR-381-مكرر,117,False,FR-381,165,apparié,A,431,,Article 381 bis (Ajouté par la loi n° 94-29 du 21 février 1994).- Les conventions collectives ou les accords collectifs peuvent contenir une clause compromissoi
+381 ter,AR-381-ثالثا,117,False,FR-381,165,apparié,A,432,,"Article 381 ter (Ajouté par la loi n°94-29 du 21 février 1994).- Au cas où le conflit concerne un service essentiel, sa soumission à l'arbitrage peut être décid"
+382,AR-382,117,False,FR-382,165,apparié,A,433,,"Article 382 (Modifié par la loi n°76-84 du 11 août 1976 puis par la loi n° 94-29 du 21 février 1994).- Le dossier du conflit est soumis à l'arbitrage, selon le "
+382 bis,AR-382-مكرر,118,False,FR-382,165,apparié,A,434,,Article 382 - bis (Ajouté par la loi n°94-29 du 21 février 1994).- la soumission du conflit à l'arbitrage suspend toute grève ou lock-out. Est considéré illégal
+383,AR-383,118,False,FR-383,165,apparié,A,435,,Article 383 (Modifié par la loi n°76-84 du 11 août 1976 puis la loi n° 94-29 du 21 février 1994).- L'arbitrage est assuré par des Conseils Régionaux et un Conse
+384,AR-384,118,False,FR-384,164,apparié,A,436,,"Article 384 (Modifié par la loi n°94-29 du 21 février 1994).- Le Conseil Régional d'Arbitrage comprend : - un président désigné par décret, - un arbitre désigné"
+384 bis,AR-384-مكرر,119,False,FR-384,164,apparié,A,437,,Article 384 bis (Ajouté par la loi n°94-29 du 21 février 1994).- Les Présidents des Conseils Régionaux et du Conseil Central d’Arbitrage sont nommés parmi les m
+385,AR-385,119,False,FR-385,163,apparié,A,438,,Article 385 (Modifié par la loi n°94-29 du 21 février 1994).- Les Conseils Régionaux et le Conseil Central d’Arbitrage ne peuvent statuer que sur les points lit
+385 bis,AR-385-مكرر,119,False,FR-385,163,apparié,A,439,,Article 385 — bis (Ajouté par la loi n° 94-29 du 21 février 1994).- Les sentences arbitrales sont rendues dans un délai ne dépassant pas 10 jours à partir de la
+386,AR-386,120,False,FR-386,163,apparié,A,440,,Article 386 (Modifié par la loi n°94-29 du 21 février 1994).- La sentence arbitrale est exécutoire pour les parties et ne peut faire l'objet de recours. L'inobs
+386 bis,AR-386-مكرر,120,False,FR-386,162,apparié,A,441,,Article 386 - bis (Ajouté par la loi 94-29 du 21 février 1994).- Le Conseil d'Arbitrage peut sur sa propre initiative ou à la demande de l'une des parties au co
+386 ter,AR-386-ثالثا,120,False,FR-386,162,apparié,A,442,,Article 386 - ter (Ajouté par la loi n°94-29 du 21 février 1994).- Sont exonérées des droits de timbre et d'enregistrement toutes les formalités accomplies et e
+387,AR-387,120,False,FR-387,162,apparié,A,443,,Article 387 (Modifié par la loi n°76-84 du 11 août 1976 puis par la loi n°94-29 du 21 février 1994).- En cas d'inobservation des dispositions du présent chapitr
+388,AR-388,120,False,FR-388,162,apparié,A,444,,"Article 388 (Modifié par la loi n°73-77 du 8 décembre 1973).- I - Lorsque la grève ou le lock-out sont illégaux, quiconque aura incité à la poursuite de la grèv"
+389,AR-389,121,False,FR-389,161,apparié,A,445,,Article 389 (Modifié par la loi n°73-77 du 8 décembre 1973 puis par la loi n° 94-29 du 21 février 1994).- La réquisition de l'entreprise ou de son personnel peu
+390,AR-390,121,False,FR-390,161,apparié,A,446,,Article 390 (Modifié par la loi n° 73-77 du 8 décembre 1973).- Quiconque n'aura pas déféré aux mesures de réquisition sera passible d'un emprisonnement d'un moi
+391,AR-391,122,True,FR-391,161,apparié,A,447,,Article 391 à 396 (Abrogés par la loi n° 96-62 du 15 juillet 1996).- Chapitre XV Statut des journalistes professionnels
+392,AR-392,122,True,,,abrogé (plage),,,,
+393,AR-393,122,True,,,abrogé (plage),,,,
+394,AR-394,122,True,,,abrogé (plage),,,,
+395,AR-395,122,True,,,abrogé (plage),,,,
+396,AR-396,122,True,,,abrogé (plage),,,,
+397,AR-397,122,True,FR-397,160,apparié,A,448,,Article 397 (Abrogé par l'article 79 du décret- loi n°2011-115 du 2 novembre 2011).-
+398,AR-398,122,False,FR-398,160,apparié,A,449,,"Article 398.- En cas de résiliation d'un contrat de louage de services fait sans détermination de durée, le préavis est, pour l'une et l'autre partie et sous ré"
+399,AR-399,122,False,FR-399,160,apparié,A,450,,"Article 399.- Si le congédiement provient du fait de l’employeur, une gratification est due. Elle ne peut être inférieure à la somme représentant un mois par an"
+400,AR-400,122,False,FR-400,160,apparié,A,451,,Article 400.- Les dispositions de l’article 399 sont applicables dans les cas où la résiliation du contrat survient par le fait de l'employé lorsque cette résil
+401,AR-401,123,False,FR-401,160,apparié,A,452,,"Article 401.- Tout travail non prévu dans les accords constituant le contrat de louage de services, comporte une rémunération spéciale."
+402,AR-402,123,False,FR-402,160,apparié,A,453,,Article 402.- Tout travail commandé ou accepté et non publié doit être payé. (1) Alinéa manquant dans la version originale parue au JORT. Le présent alinéa est 
+403,AR-403,123,False,FR-403,159,apparié,A,454,,Article 403.- Les journalistes professionnels et assimilés ont droit au repos hebdomadaire.
+404,AR-404,123,True,FR-404,159,apparié,A,455,,Article 404 (Abrogé par l'article 79 du décret- loi n°2011-115 du 2 novembre 2011).-
+405,AR-405,123,True,FR-405,159,apparié,A,456,,Article 405 (Abrogé par l'article 79 du décret- loi n°2011-115 du 2 novembre 2011).-
+406,AR-406,123,False,FR-406,159,apparié,A,457,,"Article 406.- Dans le courant du mois de janvier de chaque année, le secrétaire d’Etat à l’information et à l’orientation établit une liste des entreprises de p"
+407,AR-407,124,False,FR-407,158,apparié,A,458,,"Article 407.- Peuvent seules bénéficier de la répartition des sommes affectées aux dépenses de publicité faites par l’Etat, les collectivités et établissements "
+408,AR-408,124,False,FR-408,158,apparié,A,459,,Article 408.- Les dispositions des articles 397 à 405 inclus sont d’ordre public. Chapitre XVI Statut professionnel des voyageurs et représentants de commerce
+409,AR-409,124,False,FR-409,158,apparié,A,460,,"Article 409.- Les conventions intervenues entre industriels et commerçants, d’une part, et voyageurs, représentants et placiers d’autre part, sont des contrats "
+410,AR-410,125,False,FR-410,157,apparié,A,461,,"Article 410.- Les contrats ci-dessus définis doivent être écrits. Ils sont au choix des parties, soit d’une durée déterminée, soit d’une durée indéterminée; ils"
+411,AR-411,125,False,FR-411,156,apparié,A,462,,"Article 411.- Les conséquences de la rupture du contrat de travail par la volonté d’une seule des parties, sauf faute grave de l’autre partie, sont réglées comm"
+412,AR-412,127,False,FR-412,155,apparié,A,463,,"Article 412.- Quelles que soient la cause et la date de la cessation des services de l'employé, même lorsqu'elle se produit à l'expiration du contrat à durée dé"
+413,AR-413,127,False,FR-413,155,apparié,A,464,,Article 413.- En cas de résiliation d'un contrat fait sans détermination de durée par le fait de l'employeur et lorsque cette résiliation n'est pas provoquée pa
+414,AR-414,127,False,FR-414,154,apparié,A,465,,"Article 414.- Les réparations prévues par la législation des accidents du travail sont dues, sous réserve des dispositions ci-après, aux voyageurs, représentant"
+415,AR-415,127,False,FR-415,154,apparié,A,466,,Article 415.- Les délais impartis aux chefs d'entreprises par l'article 40 de la loi n° 57-73 du 11 décembre 1957 relative au régime de réparation des accidents
+416,AR-416,128,False,FR-416,153,apparié,A,467,,"Article 416.- Lorsqu'un voyageur, représentant ou placier est victime d’un accident au cours de visites ou de déplacements effectués pour le compte de plusieurs"
+417,AR-417,128,False,FR-417,153,apparié,A,468,années différentes : AR ['1957'] / FR [],"Article 417.- Chaque employeur a la faculté de s’exonérer de cette obligation solidaire, par l’exécution d’un mandat, par lui donné au voyageur, représentant ou"
+418,AR-418,128,False,FR-418,153,apparié,A,469,,"Article 418.- Dans tous les cas, et quelle que soit l'entreprise reconnue responsable, le salaire servant de base à la fixation des rentes et indemnités dues, s"
+419,AR-419,129,False,FR-419,153,apparié,A,470,"années différentes : AR [] / FR ['1957', '1994']","Article 419.- Pour l'application de la législation sur les congés payés, le voyageur, représentant ou placier, qui exerce sa profession (*) La loi n° 57-73 du 1"
+420,AR-420,129,False,FR-420,152,apparié,A,471,,Article 420.- Toute personne exerçant sur le territoire tunisien la profession de voyageur ou de représentant de commerce et dont l'occupation exclusive et cons
+421,AR-421,129,False,FR-421,152,apparié,A,472,,"Article 421.- La carte d'identité professionnelle doit être signée du titulaire et indiquer son signalement descriptif, ses nom, prénom, date et lieu de naissan"
+422,AR-422,130,False,FR-422,151,apparié,A,473,,"Article 422.- Si la maison représentée est située dans un pays lié à la Tunisie par une convention, les déclarations de l'établissement employeur doivent être v"
+423,AR-423,130,False,FR-423,151,apparié,A,474,,"Article 423.- Les cartes d'identité professionnelle sont délivrées par le Gouverneur du domicile du requérant et, s'il y a lieu, par le Délégué du Gouverneur ou"
+424,AR-424,130,False,FR-424,151,apparié,A,475,,Article 424.- La carte d'identité professionnelle doit être renouvelée tous les ans dans les conditions fixées aux articles précédents et sur la production des 
+425,AR-425,130,False,FR-425,151,apparié,A,476,,Article 425 (Modifié par la loi n° 94-29 du 21 février 1994).- Toute personne qui aura exercé la profession de voyageur ou représentant de commerce sur le terri
+426,AR-426,131,False,FR-426,150,apparié,A,477,,"Article 426.- Les boulangers patentés, titulaires de la carte professionnelle délivrée conformément à l'article 1°” du décret du 19 janvier 1956 qui font appel "
+427,AR-427,131,False,FR-427,150,apparié,A,478,,"Article 427.- La carte professionnelle d'ouvrier - boulanger est délivrée par le Sectaire d'Etat au Plan et à l'Economie Nationale, sur avis de la commission d'"
+428,AR-428,131,False,FR-428,150,apparié,A,479,,"Article 428 (Modifié par la loi n° 94-29 du 21 février 1994).- Les infractions aux dispositions de l'article 426 sont punies conformément aux articles 234, 236 "
+429,AR-429,131,False,FR-429,150,apparié,A,480,,"Article 429 (Modifié par la loi n° 70-20 du 30 avril 1970).- Une distinction honorifique dénommée ""Médaille du travail"" est décernée pour récompenser la conscie"
+430,AR-430,131,False,FR-430,149,apparié,A,481,,"Article 430.- La médaille du travail est décernée chaque année le 17 mai par arrêté du secrétaire d'Etat à la jeunesse, aux sports et aux affaires sociales."
+431,AR-431,132,False,FR-431,149,apparié,A,482,,"Article 431 (Modifié par la loi n° 70-20 du 30 avril 1970).- La Médaille du Travail comprend 5 échelons : - Echelon exceptionnel ""Médaille d'or"" qui est accordé"
+432,AR-432,132,False,FR-432,149,apparié,A,483,,"Article 432.- La médaille du travail est accordée à tout salarié tunisien travaillant dans les établissements et entreprises visés à l'article 429, tirant de so"
+433,AR-433,132,False,FR-433,149,apparié,A,484,,Article 433.- Les salariés résidant et travaillant à l'étranger chez un employeur tunisien ou dans une succursale ou agence d'un établissement dont le siège soc
+434,AR-434,132,False,FR-434,149,apparié,A,485,,Article 434.- La médaille du travail peut être attribuée à des travailleurs étrangers ressortissants d'un état qui accorde la réciprocité aux travailleurs tunis
+435,AR-435,132,False,FR-435,149,apparié,A,486,,"Article 435.- La médaille du travail ne peut être accordée aux directeurs généraux, directeurs et gérants de sociétés que s'ils sont assujettis, en raison de le"
+436,AR-436,132,False,FR-436,148,apparié,A,487,,Article 436.- La médaille du travail peut être attribuée aux 5 du travail dans la mesure où ils remplissent les conditions exigées pour son octroi. Elle peut êt
+437,AR-437,133,False,FR-437,148,apparié,A,488,,Article 437 (Modifié par la loi n° 70-20 du 30 avril 1970).- La médaille du travail ne sera conférée qu'aux personnes jouissant de leurs droits civils et politi
+438,AR-438,133,False,FR-438,148,apparié,A,489,,"Article 438.- La médaille du travail appartient à son titulaire, sa vie durant. Le titulaire ne peut être destitué à moins qu'il n'ait encouru une condamnation "
+439,AR-439,133,False,FR-439,148,apparié,A,490,,"Article 439.- La médaille du travail ne sera conférée, sauf cas exceptionnel, qu'en commençant par l'échelon le moins élevé. Il ne peut être prononcé de promoti"
+440,AR-440,133,False,FR-440,148,apparié,A,491,,Article 440 (Modifié par la loi n° 70-20 du 30 avril 1970).- Toute proposition à la médaille du travail doit être faite par l'employeur de l'intéressé et adress
+441,AR-441,134,False,FR-441,147,apparié,A,492,,"Article 441.- Lorsqu'un salarié est décédé des suites d'un accident du travail, la médaille du travail pourra lui être conférée à titre posthume par le Secrétai"
+442,AR-442,134,False,FR-442,147,apparié,A,493,,Article 442.- Les candidatures ou propositions sont instruites par les gouverneurs qui font procéder à une enquête sur l'honorabilité et la moralité du candidat
+443,AR-443,134,False,FR-443,147,apparié,A,494,,"Article 443.- Toute proposition formée régulièrement et à laquelle aucune suite n'a été donnée dans les 18 mois de son dépôt, doit être renouvelée pour pouvoir "
+444,AR-444,134,False,FR-444,146,apparié,A,495,,Article 444 (Modifié par la loi n° 70-20 du 30 avril 1970(.- La liste des promus est publiée au Journal Officiel de la République Tunisienne. Les titulaires de 
+445,AR-445,135,False,FR-445,146,apparié,A,496,,"Article 445 (Modifié par la loi n° 88-55 du 2 juin 1988, par la loi n° 91-15 du 25 février 1991 et par le décret-loi n°2011-51 du 6 juin 2011).- Sont jours féri"
+446,AR-446,135,False,FR-446,146,apparié,A,497,,"Article 446.- La rémunération et la récupération des heures ainsi perdues s'effectuent dans les conditions fixées aux articles 108, 109 et 110 du Code du Travai"
+1,,,,FR-1,289,hors Code (loi n° 66-27),,0,,Article premier.- Les textes publiés ci-après relatifs au droit du travail constituent le code du travail. Ce dernier entrera en vigueur le 1 mai 1966.
+2,,,,FR-2,289,hors Code (loi n° 66-27),,1,,"Article 2.- A titre transitoire, demeurent en vigueur les conventions collectives conclues en application du décret du 4 août 1936 relatif aux conventions colle"
+3,,,,FR-3,289,hors Code (loi n° 66-27),,2,,"Article 3.- Le paiement de salaires inférieurs aux minima fixés par les dispositions législatives ou réglementaires, les conventions collectives, accords ou sen"
+4,,,,FR-4,288,hors Code (loi n° 66-27),,3,,"Article 4.- Sont abrogées, toutes les dispositions antérieures contraires au présent Code et notamment les textes suivants : - décret du 15 juin 1910 déterminan"

@@ -1,0 +1,24 @@
+{
+  "fichiers": [
+    {
+      "source": "C:\\Users\\Moham\\Downloads\\questions_reference_v2.csv",
+      "destination": "data/test_locked/questions_reference_v2.csv",
+      "sha256": "0015db2c03d552eb281abf3b6a7230d62bf2164b145b626c898bdbbe65388083",
+      "identique_reference_historique": true
+    },
+    {
+      "source": "C:\\Users\\Moham\\Downloads\\ocr_candidats_v1.csv",
+      "destination": "data/test_locked/ocr_candidats_v1.csv",
+      "sha256": "0969c1aa98193fb40c1c8d9989f3fa4599ec072f4e9eab3448b5d0a7fc927608",
+      "identique_reference_historique": true
+    },
+    {
+      "source": "C:\\Users\\Moham\\Downloads\\ocr_baseline_v1.csv",
+      "destination": "data/test_locked/ocr_baseline_v1.csv",
+      "sha256": "f2be31a94d64886b313ec5a41f1d9dbcfc396d8a42126c1585417f2301cb59d3",
+      "identique_reference_historique": true
+    }
+  ],
+  "controle": "Empreintes et structure CSV uniquement ; aucune nouvelle mesure ni modification du gel.",
+  "nouvelle_evaluation_executee": false
+}

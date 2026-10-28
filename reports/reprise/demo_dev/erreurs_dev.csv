@@ -1,0 +1,44 @@
+﻿jeu,usage,id,variante,langue,question,reference,abstention,articles,categorie
+questions_dev_v2,developpement_non_independant,D06,sans_seuil_score,fr,Quelles sont les attributions des conseils de prud'hommes ?,183,False,182 | 185 | 191 | 211 | 195,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D06,seuil_historique,fr,Quelles sont les attributions des conseils de prud'hommes ?,183,False,182 | 185 | 191 | 211 | 195,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D14,sans_seuil_score,fr,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,abstention,False,365 | 435 | 151 | 139 | 30,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D14,seuil_historique,fr,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,abstention,False,365 | 435 | 151 | 139 | 30,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D15,sans_seuil_score,fr,Quelle est la durée de validité d'un passeport tunisien ?,abstention,False,313 | 433 | 22 | 263 | 432,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D16,sans_seuil_score,fr,Quel est le délai de recours devant le tribunal administratif ?,abstention,False,315 | 230 | 334 | 211 | 360,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D17,sans_seuil_score,fr,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,abstention,False,304 | 4 | 386 | 345 | 117,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D18,sans_seuil_score,fr,Quel est le montant de la pension de retraite versée par la CNSS ?,abstention,False,130 | 216 | 127 | 411 | 143,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D19,sans_seuil_score,fr,Quelle est la peine prévue pour la conduite en état d'ivresse ?,abstention,False,99 | 237 | 193 | 438 | 364,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D20,sans_seuil_score,fr,Quelle est la TVA appliquée aux services de restauration ?,abstention,False,68 | 236 | 287 | 233 bis | 300,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D21,sans_seuil_score,fr,Un commerçant peut-il vendre des produits périmés ?,abstention,False,409 | 138 | 242 | 152 | 292,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D22,sans_seuil_score,fr,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,abstention,False,153 | 258 | 15 | 245 | 7,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D23,sans_seuil_score,fr,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,abstention,False,148 | 319 | 415 | 436 | 416,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D24,sans_seuil_score,fr,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,abstention,False,371 | 21 | 22 | 240 | 233 bis,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D25,sans_seuil_score,fr,Quel est le taux d'intérêt légal en Tunisie ?,abstention,False,139 | 7 | 133 | 134 | 258,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D26,sans_seuil_score,fr,Quelle est la durée de la scolarité obligatoire en Tunisie ?,abstention,False,410 | 258 | 313 | 18 | 22,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D27,sans_seuil_score,ar,ما هي شروط الحصول على رخصة السياقة؟,abstention,False,281 | 300 | 308 | 21 | 307,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D28,sans_seuil_score,tun,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",abstention,False,445 | 2 | 233 | 268 | 53,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D30,sans_seuil_score,tun,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",22,False,445 | 6 | 370 | 18 | 22,article_voisin_classe_devant
+questions_dev_v2,developpement_non_independant,D30,seuil_historique,tun,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",22,True,,abstention_a_tort
+questions_dev_v2,developpement_non_independant,D32,sans_seuil_score,tun,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,79,False,445 | 79 | 140 | 90 | 132,article_voisin_classe_devant
+questions_dev_v2,developpement_non_independant,D32,seuil_historique,tun,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,79,True,,abstention_a_tort
+questions_dev_v2,developpement_non_independant,D35,sans_seuil_score,tun,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",122,False,445 | 124 | 119 | 130 | 118,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D35,seuil_historique,tun,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",122,True,,abstention_a_tort
+questions_dev_v2,developpement_non_independant,D38,sans_seuil_score,tun,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,170,False,445 | 2 | 3 | 4 | 5,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D38,seuil_historique,tun,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,170,True,,abstention_a_tort
+questions_dev_v2,developpement_non_independant,D42,sans_seuil_score,tun,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",198,False,191 | 194 | 195 | 187 | 196,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D42,seuil_historique,tun,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",198,False,191 | 194 | 195 | 187 | 196,reference_absente_top5
+questions_dev_v2,developpement_non_independant,D43,sans_seuil_score,fr,Quel est le montant de la taxe de séjour à Hammamet ?,abstention,False,318 | 316 | 7 | 216 | 313,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D44,sans_seuil_score,fr,Comment demander un permis de construire pour une villa ?,abstention,False,23 | 21 | 154 | 86 | 27,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D45,sans_seuil_score,fr,Quelle est la durée de la garde à vue en matière pénale ?,abstention,False,178 | 91 | 177 | 313 | 22,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D46,sans_seuil_score,fr,Une banque peut-elle refuser un crédit immobilier à un salarié ?,abstention,False,407 | 27 | 258 | 370 | 193,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D47,sans_seuil_score,fr,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,abstention,False,207 | 68 | 421 | 13 | 422,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D48,sans_seuil_score,fr,Quel est le délai de paiement des factures d'eau à la SONEDE ?,abstention,False,134 | 77 | 2 | 317 | 144,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D49,sans_seuil_score,fr,Quel est le régime fiscal des auto-entrepreneurs ?,abstention,False,30 | 94 | 134 | 278 | 77,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D50,sans_seuil_score,fr,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,abstention,False,385 | 255 | 146 | 412 | 215,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D51,sans_seuil_score,fr,Quelle est la durée d'un mandat de député en Tunisie ?,abstention,False,410 | 187 | 258 | 313 | 22,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D52,sans_seuil_score,tun,Kifech n7ell chikaya 3la el bank ?,abstention,False,445 | 2 | 3 | 4 | 5,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D53,sans_seuil_score,tun,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,abstention,False,196 | 445 | 323 | 269 | 324,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D53,seuil_historique,tun,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,abstention,False,196 | 445 | 323 | 269 | 324,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D54,sans_seuil_score,ar,ما هو أجل تقديم الطعن في الحكم الجزائي؟,abstention,False,17 | 47 | 269 | 224 | 315,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D55,sans_seuil_score,ar,ما هي شروط كراء المحل التجاري؟,abstention,False,15 | 238 | 154 | 413 | 191,hors_perimetre_accepte
+questions_dev_v2,developpement_non_independant,D56,sans_seuil_score,fr,Quel est le délai pour contester une amende fiscale ?,abstention,False,316 | 134 | 77 | 257 | 321,hors_perimetre_accepte

@@ -1,0 +1,861 @@
+{
+  "nature": "Contrôles de fichiers ; ni évaluation de modèle ni validation humaine.",
+  "indices": "fr_ligne et indices de corpus commencent à zéro, hors en-tête CSV.",
+  "integrite_recuperation": {
+    "data/processed/texte_travail.json": {
+      "sha256_actuel": "e17a630477073bda2e5e4970b5637a78de8f839c67cf2a27b70842bfb1e441f1",
+      "sha256_recu": "e17a630477073bda2e5e4970b5637a78de8f839c67cf2a27b70842bfb1e441f1",
+      "identique": true
+    },
+    "data/processed/articles_fr.csv": {
+      "sha256_actuel": "a75e4c21c679796a1e9ff04dc071fdc08c698004ddc3cd198d8c54fb0dca122b",
+      "sha256_recu": "a75e4c21c679796a1e9ff04dc071fdc08c698004ddc3cd198d8c54fb0dca122b",
+      "identique": true
+    },
+    "data/processed/articles_fr_corrige.csv": {
+      "sha256_actuel": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "sha256_recu": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "identique": true
+    },
+    "data/dev/questions_dev_v2.csv": {
+      "sha256_actuel": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+      "sha256_recu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+      "identique": true
+    },
+    "notebooks/01_data_exploration.ipynb": {
+      "sha256_actuel": "58157d3a196a6c67fd82df7ab44cb2b43f8c04ef2c0728cbc168ddb6cd8e6e89",
+      "sha256_recu": "58157d3a196a6c67fd82df7ab44cb2b43f8c04ef2c0728cbc168ddb6cd8e6e89",
+      "identique": true
+    },
+    "docs/Guide_Revue_Bronze.pdf": {
+      "sha256_actuel": "a67a547bbd80cdd57aa24db4984a44112fcc7e9594d4f294c00ff5846c479540",
+      "sha256_recu": "a67a547bbd80cdd57aa24db4984a44112fcc7e9594d4f294c00ff5846c479540",
+      "identique": true
+    },
+    "notebooks/03_alignement_fr_ar.ipynb": {
+      "sha256_actuel": "9e3e25e9392d64db2fefd5093542f6923606b6677465b5ec048efe7504f14bde",
+      "sha256_recu": "9e3e25e9392d64db2fefd5093542f6923606b6677465b5ec048efe7504f14bde",
+      "identique": true
+    },
+    "notebooks/03_alignement_fr_ar_v4.ipynb": {
+      "sha256_actuel": "f81b76b791b31bd2838fd2ac696389bc2809b8cac7468a26e8ba14895df89aa9",
+      "sha256_recu": "f81b76b791b31bd2838fd2ac696389bc2809b8cac7468a26e8ba14895df89aa9",
+      "identique": true
+    },
+    "notebooks/03_alignement_fr_ar_v5.ipynb": {
+      "sha256_actuel": "7214f6a6702145513cae58060922a81705e66351f4c2afcef4b2fa206f1ce0df",
+      "sha256_recu": "7214f6a6702145513cae58060922a81705e66351f4c2afcef4b2fa206f1ce0df",
+      "identique": true
+    },
+    "data/processed/articles_ar.csv": {
+      "sha256_actuel": "77fe24b3d3ffc5923fd42fe4298521ebdbcec5f7af001ccd576a90fa69846022",
+      "sha256_recu": "77fe24b3d3ffc5923fd42fe4298521ebdbcec5f7af001ccd576a90fa69846022",
+      "identique": true
+    },
+    "data/raw/arabic/majallat_al_shughl_2019.pdf": {
+      "sha256_actuel": "de17529ea734212b6efcec0d796762f39fefbf97455a573ca402bf83c74bc467",
+      "sha256_recu": "de17529ea734212b6efcec0d796762f39fefbf97455a573ca402bf83c74bc467",
+      "identique": true
+    }
+  },
+  "texte_travail": {
+    "pages": 291,
+    "cles_exactement_1_291": true,
+    "pages_vides": [
+      "136"
+    ]
+  },
+  "corpus_fr": {
+    "original": {
+      "entrees": 498,
+      "identifiants_distincts": 425,
+      "identifiants_repetes": {
+        "FR-1": 2,
+        "FR-2": 2,
+        "FR-3": 2,
+        "FR-4": 2,
+        "FR-5": 2,
+        "FR-6": 4,
+        "FR-14": 5,
+        "FR-21": 13,
+        "FR-23": 2,
+        "FR-26": 2,
+        "FR-53": 2,
+        "FR-63": 2,
+        "FR-68": 4,
+        "FR-76": 2,
+        "FR-77": 2,
+        "FR-94": 14,
+        "FR-134": 3,
+        "FR-151": 2,
+        "FR-152": 3,
+        "FR-153": 2,
+        "FR-154": 5,
+        "FR-161": 2,
+        "FR-166": 2,
+        "FR-169": 3,
+        "FR-233": 2,
+        "FR-234": 2,
+        "FR-258": 2,
+        "FR-268": 2,
+        "FR-376": 3,
+        "FR-381": 3,
+        "FR-382": 2,
+        "FR-384": 2,
+        "FR-385": 2,
+        "FR-386": 3
+      },
+      "textes_vides_indices": [],
+      "textes_identiques_en_exces": 0,
+      "longueurs_incoherentes_indices": [],
+      "numeros_sans_ligne_individuelle_1_446": [
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        336,
+        337,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "limite": "Les numéros répétés peuvent désigner des suffixes ou des textes distincts. Les absences peuvent relever de plages abrogées ; aucune correction automatique."
+    },
+    "corrige": {
+      "entrees": 498,
+      "identifiants_distincts": 425,
+      "identifiants_repetes": {
+        "FR-1": 2,
+        "FR-2": 2,
+        "FR-3": 2,
+        "FR-4": 2,
+        "FR-5": 2,
+        "FR-6": 4,
+        "FR-14": 5,
+        "FR-21": 13,
+        "FR-23": 2,
+        "FR-26": 2,
+        "FR-53": 2,
+        "FR-63": 2,
+        "FR-68": 4,
+        "FR-76": 2,
+        "FR-77": 2,
+        "FR-94": 14,
+        "FR-134": 3,
+        "FR-151": 2,
+        "FR-152": 3,
+        "FR-153": 2,
+        "FR-154": 5,
+        "FR-161": 2,
+        "FR-166": 2,
+        "FR-169": 3,
+        "FR-233": 2,
+        "FR-234": 2,
+        "FR-258": 2,
+        "FR-268": 2,
+        "FR-376": 3,
+        "FR-381": 3,
+        "FR-382": 2,
+        "FR-384": 2,
+        "FR-385": 2,
+        "FR-386": 3
+      },
+      "textes_vides_indices": [],
+      "textes_identiques_en_exces": 0,
+      "longueurs_incoherentes_indices": [],
+      "numeros_sans_ligne_individuelle_1_446": [
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        336,
+        337,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "limite": "Les numéros répétés peuvent désigner des suffixes ou des textes distincts. Les absences peuvent relever de plages abrogées ; aucune correction automatique."
+    }
+  },
+  "comparaison_fr": {
+    "ordre_identifiants_numeros_pages_identiques": true,
+    "indices_texte_modifie": [
+      2,
+      29,
+      63,
+      70,
+      77,
+      134,
+      160,
+      166,
+      181,
+      186,
+      214,
+      243,
+      277,
+      278,
+      283,
+      294,
+      331,
+      336,
+      381,
+      384,
+      386,
+      388,
+      391,
+      398,
+      403,
+      412,
+      427,
+      435,
+      441,
+      453,
+      464,
+      468,
+      470,
+      497
+    ],
+    "limite": "Comparaison de versions, pas validation des corrections sur les images."
+  },
+  "references_alignement_dev": {
+    "alignement_dev_v1.csv": {
+      "references": 60,
+      "identifiant_et_page_concordants": 60,
+      "non_resolues": [],
+      "limite": "Ne vérifie ni le suffixe dans le texte ni l'équivalence AR/FR."
+    },
+    "alignement_dev_v2_a_annoter.csv": {
+      "references": 100,
+      "identifiant_et_page_concordants": 100,
+      "non_resolues": [],
+      "limite": "Ne vérifie ni le suffixe dans le texte ni l'équivalence AR/FR."
+    }
+  },
+  "regles_alignement_v5": {
+    "indices_hors_code": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "cles_fr_distinctes_dans_code": 494,
+    "indices_sans_cle": [],
+    "cles_ambigues": {},
+    "controle_dev": {
+      "alignement_dev_v1.csv": {
+        "references": 60,
+        "lignes_retrouvees": 60,
+        "ecarts": []
+      },
+      "alignement_dev_v2_a_annoter.csv": {
+        "references": 100,
+        "lignes_retrouvees": 100,
+        "ecarts": []
+      }
+    },
+    "limite": "Règles originales exécutées sur les identifiants des références de développement héritées ; ce contrôle seul ne mesure ni rappel global ni résultat de test indépendant."
+  },
+  "obligations_dev": {
+    "candidats": 200,
+    "citations_non_uniques_ou_absentes": [
+      {
+        "id": "D045",
+        "indices_correspondants": []
+      }
+    ],
+    "champs_annotation_remplis": {
+      "qui": 0,
+      "modal": 0,
+      "quoi": 0,
+      "quand": 0,
+      "commentaire": 0
+    },
+    "limite": "La présence d'un extrait ne prouve pas qu'il exprime une obligation."
+  },
+  "questions_dev_v2": {
+    "questions": 56,
+    "par_type": {
+      "dans_perimetre": 27,
+      "hors_perimetre": 29
+    },
+    "par_langue": {
+      "fr": 44,
+      "tun": 9,
+      "ar": 3
+    },
+    "identifiants_dupliques": {},
+    "questions_dupliquees": {},
+    "hash_conforme_journal": true,
+    "limite": "Jeu de développement uniquement ; aucune comparaison dev/test effectuée."
+  },
+  "notebook": {
+    "cellules": 29,
+    "cellules_code": 16,
+    "erreurs_syntaxe": [],
+    "execute": false,
+    "limite": "Analyse syntaxique seule ; les sorties enregistrées sont historiques."
+  },
+  "empreintes_entrees_complementaires": {
+    "alignement_dev_v1.csv": "a208d2bef5207b987b538dc6408240da04010e4633354ab3dc0080c445f46e27",
+    "alignement_dev_v2_a_annoter.csv": "0cb92a177e95a98853ffb41db652b6dba2a363792b77a371997736d06e1569d0",
+    "obligations_candidats_dev_v1.csv": "8a1cac794bf52c568b3008cdb3e1b54bf7416b1cb5a21ca433ed9381b974ae76"
+  },
+  "alignement_complet": {
+    "articles_ar": 515,
+    "identifiants_dupliques": {},
+    "numeros_absents_1_446": [],
+    "articles_sans_chapitre": [],
+    "articles_abroges": 38,
+    "articles_marques_plage": 20,
+    "longueurs_incoherentes": [
+      {
+        "article_ar": "AR-367",
+        "longueur_stockee": 362,
+        "longueur_texte": 190
+      }
+    ],
+    "metriques_test_independant": {
+      "precision": null,
+      "rappel": null,
+      "f1": null,
+      "raison": "Référence indépendante absente ; contrôles de développement seulement."
+    },
+    "export_v6_present": true,
+    "statuts_v6": {
+      "apparié": 494,
+      "abrogé (plage)": 21,
+      "hors Code (loi n° 66-27)": 4
+    },
+    "lignes_v6": 519,
+    "controles_annees": [
+      {
+        "article_ar": "AR-18",
+        "controle": "années différentes : AR [] / FR ['2016']"
+      },
+      {
+        "article_ar": "AR-52",
+        "controle": "années différentes : AR [] / FR ['1973']"
+      },
+      {
+        "article_ar": "AR-335",
+        "controle": "années différentes : AR ['1996'] / FR ['1996', '2017']"
+      },
+      {
+        "article_ar": "AR-364",
+        "controle": "années différentes : AR ['1923', '1989'] / FR ['1923']"
+      },
+      {
+        "article_ar": "AR-417",
+        "controle": "années différentes : AR ['1957'] / FR []"
+      },
+      {
+        "article_ar": "AR-419",
+        "controle": "années différentes : AR [] / FR ['1957', '1994']"
+      }
+    ],
+    "apparies_avec_drapeau_abroge": [
+      "AR-9",
+      "AR-50",
+      "AR-80",
+      "AR-81",
+      "AR-135",
+      "AR-136",
+      "AR-156",
+      "AR-188",
+      "AR-264",
+      "AR-270",
+      "AR-271",
+      "AR-285",
+      "AR-288",
+      "AR-391",
+      "AR-397",
+      "AR-404",
+      "AR-405"
+    ],
+    "etiquettes_fr_sans_suffixe": [
+      {
+        "article_ar": "AR-5-مكرر",
+        "article_fr": "FR-5",
+        "cle": "5 bis"
+      },
+      {
+        "article_ar": "AR-6-2",
+        "article_fr": "FR-6",
+        "cle": "6-2"
+      },
+      {
+        "article_ar": "AR-6-3",
+        "article_fr": "FR-6",
+        "cle": "6-3"
+      },
+      {
+        "article_ar": "AR-6-4",
+        "article_fr": "FR-6",
+        "cle": "6-4"
+      },
+      {
+        "article_ar": "AR-14-مكرر",
+        "article_fr": "FR-14",
+        "cle": "14 bis"
+      },
+      {
+        "article_ar": "AR-14-ثالثا",
+        "article_fr": "FR-14",
+        "cle": "14 ter"
+      },
+      {
+        "article_ar": "AR-14-رابعا",
+        "article_fr": "FR-14",
+        "cle": "14 quater"
+      },
+      {
+        "article_ar": "AR-14-خامسا",
+        "article_fr": "FR-14",
+        "cle": "14 quinquies"
+      },
+      {
+        "article_ar": "AR-21-2",
+        "article_fr": "FR-21",
+        "cle": "21-2"
+      },
+      {
+        "article_ar": "AR-21-3",
+        "article_fr": "FR-21",
+        "cle": "21-3"
+      },
+      {
+        "article_ar": "AR-21-4",
+        "article_fr": "FR-21",
+        "cle": "21-4"
+      },
+      {
+        "article_ar": "AR-21-5",
+        "article_fr": "FR-21",
+        "cle": "21-5"
+      },
+      {
+        "article_ar": "AR-21-6",
+        "article_fr": "FR-21",
+        "cle": "21-6"
+      },
+      {
+        "article_ar": "AR-21-7",
+        "article_fr": "FR-21",
+        "cle": "21-7"
+      },
+      {
+        "article_ar": "AR-21-8",
+        "article_fr": "FR-21",
+        "cle": "21-8"
+      },
+      {
+        "article_ar": "AR-21-9",
+        "article_fr": "FR-21",
+        "cle": "21-9"
+      },
+      {
+        "article_ar": "AR-21-10",
+        "article_fr": "FR-21",
+        "cle": "21-10"
+      },
+      {
+        "article_ar": "AR-21-11",
+        "article_fr": "FR-21",
+        "cle": "21-11"
+      },
+      {
+        "article_ar": "AR-21-12",
+        "article_fr": "FR-21",
+        "cle": "21-12"
+      },
+      {
+        "article_ar": "AR-21-13",
+        "article_fr": "FR-21",
+        "cle": "21-13"
+      },
+      {
+        "article_ar": "AR-23-مكرر",
+        "article_fr": "FR-23",
+        "cle": "23 bis"
+      },
+      {
+        "article_ar": "AR-26-2",
+        "article_fr": "FR-26",
+        "cle": "26-2"
+      },
+      {
+        "article_ar": "AR-53-2",
+        "article_fr": "FR-53",
+        "cle": "53-2"
+      },
+      {
+        "article_ar": "AR-63-2",
+        "article_fr": "FR-63",
+        "cle": "63-2"
+      },
+      {
+        "article_ar": "AR-68-2",
+        "article_fr": "FR-68",
+        "cle": "68-2"
+      },
+      {
+        "article_ar": "AR-68-3",
+        "article_fr": "FR-68",
+        "cle": "68-3"
+      },
+      {
+        "article_ar": "AR-68-4",
+        "article_fr": "FR-68",
+        "cle": "68-4"
+      },
+      {
+        "article_ar": "AR-76-2",
+        "article_fr": "FR-76",
+        "cle": "76-2"
+      },
+      {
+        "article_ar": "AR-77-2",
+        "article_fr": "FR-77",
+        "cle": "77-2"
+      },
+      {
+        "article_ar": "AR-94-2",
+        "article_fr": "FR-94",
+        "cle": "94-2"
+      },
+      {
+        "article_ar": "AR-94-3",
+        "article_fr": "FR-94",
+        "cle": "94-3"
+      },
+      {
+        "article_ar": "AR-94-4",
+        "article_fr": "FR-94",
+        "cle": "94-4"
+      },
+      {
+        "article_ar": "AR-94-5",
+        "article_fr": "FR-94",
+        "cle": "94-5"
+      },
+      {
+        "article_ar": "AR-94-6",
+        "article_fr": "FR-94",
+        "cle": "94-6"
+      },
+      {
+        "article_ar": "AR-94-7",
+        "article_fr": "FR-94",
+        "cle": "94-7"
+      },
+      {
+        "article_ar": "AR-94-8",
+        "article_fr": "FR-94",
+        "cle": "94-8"
+      },
+      {
+        "article_ar": "AR-94-9",
+        "article_fr": "FR-94",
+        "cle": "94-9"
+      },
+      {
+        "article_ar": "AR-94-10",
+        "article_fr": "FR-94",
+        "cle": "94-10"
+      },
+      {
+        "article_ar": "AR-94-11",
+        "article_fr": "FR-94",
+        "cle": "94-11"
+      },
+      {
+        "article_ar": "AR-94-12",
+        "article_fr": "FR-94",
+        "cle": "94-12"
+      },
+      {
+        "article_ar": "AR-94-13",
+        "article_fr": "FR-94",
+        "cle": "94-13"
+      },
+      {
+        "article_ar": "AR-94-14",
+        "article_fr": "FR-94",
+        "cle": "94-14"
+      },
+      {
+        "article_ar": "AR-134-2",
+        "article_fr": "FR-134",
+        "cle": "134-2"
+      },
+      {
+        "article_ar": "AR-134-3",
+        "article_fr": "FR-134",
+        "cle": "134-3"
+      },
+      {
+        "article_ar": "AR-151-2",
+        "article_fr": "FR-151",
+        "cle": "151-2"
+      },
+      {
+        "article_ar": "AR-152-2",
+        "article_fr": "FR-152",
+        "cle": "152-2"
+      },
+      {
+        "article_ar": "AR-152-3",
+        "article_fr": "FR-152",
+        "cle": "152-3"
+      },
+      {
+        "article_ar": "AR-153-2",
+        "article_fr": "FR-153",
+        "cle": "153-2"
+      },
+      {
+        "article_ar": "AR-154-2",
+        "article_fr": "FR-154",
+        "cle": "154-2"
+      },
+      {
+        "article_ar": "AR-154-3",
+        "article_fr": "FR-154",
+        "cle": "154-3"
+      },
+      {
+        "article_ar": "AR-154-4",
+        "article_fr": "FR-154",
+        "cle": "154-4"
+      },
+      {
+        "article_ar": "AR-154-5",
+        "article_fr": "FR-154",
+        "cle": "154-5"
+      },
+      {
+        "article_ar": "AR-161-مكرر",
+        "article_fr": "FR-161",
+        "cle": "161 bis"
+      },
+      {
+        "article_ar": "AR-166-مكرر",
+        "article_fr": "FR-166",
+        "cle": "166 bis"
+      },
+      {
+        "article_ar": "AR-169-مكرر",
+        "article_fr": "FR-169",
+        "cle": "169 bis"
+      },
+      {
+        "article_ar": "AR-169-ثالثا",
+        "article_fr": "FR-169",
+        "cle": "169 ter"
+      },
+      {
+        "article_ar": "AR-233-مكرر",
+        "article_fr": "FR-233",
+        "cle": "233 bis"
+      },
+      {
+        "article_ar": "AR-234-مكرر",
+        "article_fr": "FR-234",
+        "cle": "234 bis"
+      },
+      {
+        "article_ar": "AR-258-2",
+        "article_fr": "FR-258",
+        "cle": "258-2"
+      },
+      {
+        "article_ar": "AR-268-2",
+        "article_fr": "FR-268",
+        "cle": "268-2"
+      },
+      {
+        "article_ar": "AR-376-مكرر",
+        "article_fr": "FR-376",
+        "cle": "376 bis"
+      },
+      {
+        "article_ar": "AR-376-ثالثا",
+        "article_fr": "FR-376",
+        "cle": "376 ter"
+      },
+      {
+        "article_ar": "AR-381-مكرر",
+        "article_fr": "FR-381",
+        "cle": "381 bis"
+      },
+      {
+        "article_ar": "AR-381-ثالثا",
+        "article_fr": "FR-381",
+        "cle": "381 ter"
+      },
+      {
+        "article_ar": "AR-382-مكرر",
+        "article_fr": "FR-382",
+        "cle": "382 bis"
+      },
+      {
+        "article_ar": "AR-384-مكرر",
+        "article_fr": "FR-384",
+        "cle": "384 bis"
+      },
+      {
+        "article_ar": "AR-385-مكرر",
+        "article_fr": "FR-385",
+        "cle": "385 bis"
+      },
+      {
+        "article_ar": "AR-386-مكرر",
+        "article_fr": "FR-386",
+        "cle": "386 bis"
+      },
+      {
+        "article_ar": "AR-386-ثالثا",
+        "article_fr": "FR-386",
+        "cle": "386 ter"
+      }
+    ],
+    "appariements_et_statuts_identiques_export_heritage": true,
+    "differences_export_heritage": [
+      {
+        "ligne": 162,
+        "article_ar": "AR-121",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 121%.- Dans les activités où les salariés ne sont pas habituellement occupés d'une façon continue chez un même employeur au cours de la période retenue ",
+            "apres": "Article 121.- Dans les activités où les salariés ne sont pas habituellement occupés d'une façon continue chez un même employeur au cours de la période retenue p"
+          }
+        }
+      },
+      {
+        "ligne": 177,
+        "article_ar": "AR-134-3",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 134 - 3% (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Une partie de la rémunération peut être fixée sur la base de la productivité en vertu d'accor",
+            "apres": "Article 134 - 3 (Ajouté par la loi n° 96-62 du 15 juillet 1996).- Une partie de la rémunération peut être fixée sur la base de la productivité en vertu d'accord"
+          }
+        }
+      },
+      {
+        "ligne": 273,
+        "article_ar": "AR-218",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 218%.- L'exécution provisoire des jugements des conseils de prud'hommes est de droit dans les cas prévus à l'article 125 du code de procédure civile et ",
+            "apres": "Article 218.- L'exécution provisoire des jugements des conseils de prud'hommes est de droit dans les cas prévus à l'article 125 du code de procédure civile et c"
+          }
+        }
+      },
+      {
+        "ligne": 274,
+        "article_ar": "AR-219",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 219%.- Le défendeur condamné à l'exécution provisoire peut saisir, par la voie du référé, le Président du Tribunal d'Appel, à l'effet de faire ordonner ",
+            "apres": "Article 219.- Le défendeur condamné à l'exécution provisoire peut saisir, par la voie du référé, le Président du Tribunal d'Appel, à l'effet de faire ordonner l"
+          }
+        }
+      },
+      {
+        "ligne": 403,
+        "article_ar": "AR-344",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 344 %.- Le contrat d'apprentissage doit être constaté par écrit, à peine de nullité. Il doit être rédigé au plus tard dans la quinzaine de sa mise à exé",
+            "apres": "Article 344.- Le contrat d'apprentissage doit être constaté par écrit, à peine de nullité. Il doit être rédigé au plus tard dans la quinzaine de sa mise à exécu"
+          }
+        }
+      },
+      {
+        "ligne": 410,
+        "article_ar": "AR-351",
+        "champs": {
+          "texte_fr_debut": {
+            "avant": "Article 351%.- Le contrat peut être résilié sur accord des parties ou à la demande de l'une d'elles : 1) en cas de mort ou de changement de profession du maître",
+            "apres": "Article 351.- Le contrat peut être résilié sur accord des parties ou à la demande de l'une d'elles : 1) en cas de mort ou de changement de profession du maître,"
+          }
+        }
+      },
+      {
+        "ligne": 423,
+        "article_ar": "AR-364",
+        "champs": {
+          "controle": {
+            "avant": "",
+            "apres": "années différentes : AR ['1923', '1989'] / FR ['1923']"
+          }
+        }
+      },
+      {
+        "ligne": 426,
+        "article_ar": "AR-367",
+        "champs": {
+          "controle": {
+            "avant": "années différentes : AR ['1923', '1989'] / FR []",
+            "apres": ""
+          }
+        }
+      }
+    ],
+    "controle_dev_export_reel": {
+      "alignement_dev_v1.csv": {
+        "references": 60,
+        "concordantes": 60,
+        "ecarts": []
+      },
+      "alignement_dev_v2_a_annoter.csv": {
+        "references": 100,
+        "concordantes": 100,
+        "ecarts": []
+      }
+    },
+    "empreintes_execution": {
+      "notebooks/03_alignement_fr_ar_v6.ipynb": "67897c8fdf17c3c3c0e10a95a2430c66bfca6e465d0fed6966a59bdae3a74288",
+      "src/executer_alignement.py": "c360e771e2ff99beb42e8fe911759081987fc0016ba268e89f01c371d991f3e6",
+      "data/processed/articles_ar.csv": "77fe24b3d3ffc5923fd42fe4298521ebdbcec5f7af001ccd576a90fa69846022",
+      "data/processed/articles_fr_corrige.csv": "ac627cfc3806ec10a8061bdd5df2bc5f17527195112dc51449d8a463e8d8e071",
+      "data/processed/alignement_fr_ar.csv": "807271cba8ff9a66a7e6a4027f5eb50568313ca9c03859939bd8e92e4a70893a",
+      "data/processed/alignement_fr_ar_v6.csv": "8054f6cbae742faa68f83f72d9740cae34b552aeacb94b0a30a95b1230c67fe1",
+      "data/processed/alignement_resume_v6.json": "af3ecc1fa56d63a725cb0476abde5bf66def4bdda51bfcc46101ff6783536631",
+      "data/processed/alignement_echantillon_image_v6.csv": "8739e05736f1ce12f9909cef6da03034a9a41d7d8d0770f56dfe0910c0c68b28"
+    }
+  },
+  "reproductibilite_alignement_v6": {
+    "deux_executions_comparees": true,
+    "exports_identiques_octet_par_octet": {
+      "alignement_fr_ar_v6.csv": true,
+      "alignement_resume_v6.json": true,
+      "alignement_echantillon_image_v6.csv": true
+    },
+    "limite": "Reproductibilite technique sur les memes entrees, pas validation independante."
+  }
+}

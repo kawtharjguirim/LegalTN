@@ -1,0 +1,933 @@
+{
+  "sources_recuperees": [
+    {
+      "source": "C:\\Users\\Moham\\Downloads\\baseline_bm25.py",
+      "destination": "src/evaluation/baseline_bm25.py",
+      "sha256": "97adc260105f42f47b6ee7fb6cdba0d18bc27926a18df58219f2cb9face25588"
+    },
+    {
+      "source": "C:\\Users\\Moham\\Downloads\\repondre.py",
+      "destination": "src/demo/repondre.py",
+      "sha256": "ce84affd5943b92eb8cc0c19199a5d020dc849efae8a06715b396c3e3ab25b9c"
+    }
+  ],
+  "articles_indexes": {
+    "fr": 496,
+    "ar": 491
+  },
+  "ecarts_intitules_fr": [
+    {
+      "ligne": 0,
+      "article_id": "FR-1",
+      "page": "289",
+      "bm25": null,
+      "alignement": "1"
+    },
+    {
+      "ligne": 4,
+      "article_id": "FR-1",
+      "page": "285",
+      "bm25": null,
+      "alignement": "1"
+    },
+    {
+      "ligne": 11,
+      "article_id": "FR-6",
+      "page": "282",
+      "bm25": "6",
+      "alignement": "6-2"
+    },
+    {
+      "ligne": 12,
+      "article_id": "FR-6",
+      "page": "282",
+      "bm25": "6",
+      "alignement": "6-3"
+    },
+    {
+      "ligne": 13,
+      "article_id": "FR-6",
+      "page": "282",
+      "bm25": "6",
+      "alignement": "6-4"
+    },
+    {
+      "ligne": 25,
+      "article_id": "FR-14",
+      "page": "277",
+      "bm25": "14",
+      "alignement": "14 quinquies"
+    },
+    {
+      "ligne": 33,
+      "article_id": "FR-21",
+      "page": "275",
+      "bm25": "21",
+      "alignement": "21-2"
+    },
+    {
+      "ligne": 34,
+      "article_id": "FR-21",
+      "page": "275",
+      "bm25": "21",
+      "alignement": "21-3"
+    },
+    {
+      "ligne": 35,
+      "article_id": "FR-21",
+      "page": "275",
+      "bm25": "21",
+      "alignement": "21-4"
+    },
+    {
+      "ligne": 36,
+      "article_id": "FR-21",
+      "page": "274",
+      "bm25": "21",
+      "alignement": "21-5"
+    },
+    {
+      "ligne": 37,
+      "article_id": "FR-21",
+      "page": "274",
+      "bm25": "21",
+      "alignement": "21-6"
+    },
+    {
+      "ligne": 38,
+      "article_id": "FR-21",
+      "page": "274",
+      "bm25": "21",
+      "alignement": "21-7"
+    },
+    {
+      "ligne": 39,
+      "article_id": "FR-21",
+      "page": "273",
+      "bm25": "21",
+      "alignement": "21-8"
+    },
+    {
+      "ligne": 40,
+      "article_id": "FR-21",
+      "page": "273",
+      "bm25": "21",
+      "alignement": "21-9"
+    },
+    {
+      "ligne": 41,
+      "article_id": "FR-21",
+      "page": "273",
+      "bm25": "21",
+      "alignement": "21-10"
+    },
+    {
+      "ligne": 42,
+      "article_id": "FR-21",
+      "page": "272",
+      "bm25": "21",
+      "alignement": "21-11"
+    },
+    {
+      "ligne": 43,
+      "article_id": "FR-21",
+      "page": "272",
+      "bm25": "21",
+      "alignement": "21-12"
+    },
+    {
+      "ligne": 44,
+      "article_id": "FR-21",
+      "page": "272",
+      "bm25": "21",
+      "alignement": "21-13"
+    },
+    {
+      "ligne": 51,
+      "article_id": "FR-26",
+      "page": "270",
+      "bm25": "26",
+      "alignement": "26-2"
+    },
+    {
+      "ligne": 79,
+      "article_id": "FR-53",
+      "page": "262",
+      "bm25": "53",
+      "alignement": "53-2"
+    },
+    {
+      "ligne": 90,
+      "article_id": "FR-63",
+      "page": "258",
+      "bm25": "63",
+      "alignement": "63-2"
+    },
+    {
+      "ligne": 96,
+      "article_id": "FR-68",
+      "page": "256",
+      "bm25": "68",
+      "alignement": "68-2"
+    },
+    {
+      "ligne": 97,
+      "article_id": "FR-68",
+      "page": "255",
+      "bm25": "68",
+      "alignement": "68-3"
+    },
+    {
+      "ligne": 98,
+      "article_id": "FR-68",
+      "page": "254",
+      "bm25": "68",
+      "alignement": "68-4"
+    },
+    {
+      "ligne": 107,
+      "article_id": "FR-76",
+      "page": "253",
+      "bm25": "76",
+      "alignement": "76-2"
+    },
+    {
+      "ligne": 109,
+      "article_id": "FR-77",
+      "page": "252",
+      "bm25": "77",
+      "alignement": "77-2"
+    },
+    {
+      "ligne": 127,
+      "article_id": "FR-94",
+      "page": "247",
+      "bm25": "94",
+      "alignement": "94-2"
+    },
+    {
+      "ligne": 128,
+      "article_id": "FR-94",
+      "page": "247",
+      "bm25": "94",
+      "alignement": "94-3"
+    },
+    {
+      "ligne": 129,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-4"
+    },
+    {
+      "ligne": 130,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-5"
+    },
+    {
+      "ligne": 131,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-6"
+    },
+    {
+      "ligne": 132,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-7"
+    },
+    {
+      "ligne": 133,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-8"
+    },
+    {
+      "ligne": 134,
+      "article_id": "FR-94",
+      "page": "246",
+      "bm25": "94",
+      "alignement": "94-9"
+    },
+    {
+      "ligne": 135,
+      "article_id": "FR-94",
+      "page": "245",
+      "bm25": "94",
+      "alignement": "94-10"
+    },
+    {
+      "ligne": 136,
+      "article_id": "FR-94",
+      "page": "245",
+      "bm25": "94",
+      "alignement": "94-11"
+    },
+    {
+      "ligne": 137,
+      "article_id": "FR-94",
+      "page": "245",
+      "bm25": "94",
+      "alignement": "94-12"
+    },
+    {
+      "ligne": 138,
+      "article_id": "FR-94",
+      "page": "245",
+      "bm25": "94",
+      "alignement": "94-13"
+    },
+    {
+      "ligne": 139,
+      "article_id": "FR-94",
+      "page": "245",
+      "bm25": "94",
+      "alignement": "94-14"
+    },
+    {
+      "ligne": 180,
+      "article_id": "FR-134",
+      "page": "232",
+      "bm25": "134",
+      "alignement": "134-2"
+    },
+    {
+      "ligne": 181,
+      "article_id": "FR-134",
+      "page": "231",
+      "bm25": "134",
+      "alignement": "134-3"
+    },
+    {
+      "ligne": 199,
+      "article_id": "FR-151",
+      "page": "227",
+      "bm25": "151",
+      "alignement": "151-2"
+    },
+    {
+      "ligne": 201,
+      "article_id": "FR-152",
+      "page": "227",
+      "bm25": "152",
+      "alignement": "152-2"
+    },
+    {
+      "ligne": 202,
+      "article_id": "FR-152",
+      "page": "227",
+      "bm25": "152",
+      "alignement": "152-3"
+    },
+    {
+      "ligne": 204,
+      "article_id": "FR-153",
+      "page": "226",
+      "bm25": "153",
+      "alignement": "153-2"
+    },
+    {
+      "ligne": 206,
+      "article_id": "FR-154",
+      "page": "225",
+      "bm25": "154",
+      "alignement": "154-2"
+    },
+    {
+      "ligne": 207,
+      "article_id": "FR-154",
+      "page": "225",
+      "bm25": "154",
+      "alignement": "154-3"
+    },
+    {
+      "ligne": 208,
+      "article_id": "FR-154",
+      "page": "225",
+      "bm25": "154",
+      "alignement": "154-4"
+    },
+    {
+      "ligne": 209,
+      "article_id": "FR-154",
+      "page": "224",
+      "bm25": "154",
+      "alignement": "154-5"
+    },
+    {
+      "ligne": 320,
+      "article_id": "FR-258",
+      "page": "195",
+      "bm25": "258",
+      "alignement": "258-2"
+    },
+    {
+      "ligne": 331,
+      "article_id": "FR-268",
+      "page": "193",
+      "bm25": "268",
+      "alignement": "268-2"
+    },
+    {
+      "ligne": 425,
+      "article_id": "FR-376",
+      "page": "167",
+      "bm25": "376",
+      "alignement": "376 ter"
+    },
+    {
+      "ligne": 434,
+      "article_id": "FR-382",
+      "page": "165",
+      "bm25": "382",
+      "alignement": "382 bis"
+    },
+    {
+      "ligne": 439,
+      "article_id": "FR-385",
+      "page": "163",
+      "bm25": "385",
+      "alignement": "385 bis"
+    },
+    {
+      "ligne": 441,
+      "article_id": "FR-386",
+      "page": "162",
+      "bm25": "386",
+      "alignement": "386 bis"
+    },
+    {
+      "ligne": 442,
+      "article_id": "FR-386",
+      "page": "162",
+      "bm25": "386",
+      "alignement": "386 ter"
+    }
+  ],
+  "ecarts_intitules_ar": [
+    {
+      "ligne": 0,
+      "article_id": "AR-1",
+      "page": "9",
+      "bm25": null,
+      "alignement": "1"
+    },
+    {
+      "ligne": 7,
+      "article_id": "AR-6-2",
+      "page": "12",
+      "bm25": "6",
+      "alignement": "6-2"
+    },
+    {
+      "ligne": 8,
+      "article_id": "AR-6-3",
+      "page": "12",
+      "bm25": "6",
+      "alignement": "6-3"
+    },
+    {
+      "ligne": 9,
+      "article_id": "AR-6-4",
+      "page": "12",
+      "bm25": "6",
+      "alignement": "6-4"
+    },
+    {
+      "ligne": 21,
+      "article_id": "AR-14-خامسا",
+      "page": "16",
+      "bm25": "14",
+      "alignement": "14 quinquies"
+    },
+    {
+      "ligne": 29,
+      "article_id": "AR-21-2",
+      "page": "17",
+      "bm25": "21",
+      "alignement": "21-2"
+    },
+    {
+      "ligne": 30,
+      "article_id": "AR-21-3",
+      "page": "17",
+      "bm25": "21",
+      "alignement": "21-3"
+    },
+    {
+      "ligne": 31,
+      "article_id": "AR-21-4",
+      "page": "18",
+      "bm25": "21",
+      "alignement": "21-4"
+    },
+    {
+      "ligne": 32,
+      "article_id": "AR-21-5",
+      "page": "18",
+      "bm25": "21",
+      "alignement": "21-5"
+    },
+    {
+      "ligne": 33,
+      "article_id": "AR-21-6",
+      "page": "19",
+      "bm25": "21",
+      "alignement": "21-6"
+    },
+    {
+      "ligne": 34,
+      "article_id": "AR-21-7",
+      "page": "19",
+      "bm25": "21",
+      "alignement": "21-7"
+    },
+    {
+      "ligne": 35,
+      "article_id": "AR-21-8",
+      "page": "19",
+      "bm25": "21",
+      "alignement": "21-8"
+    },
+    {
+      "ligne": 36,
+      "article_id": "AR-21-9",
+      "page": "19",
+      "bm25": "21",
+      "alignement": "21-9"
+    },
+    {
+      "ligne": 37,
+      "article_id": "AR-21-10",
+      "page": "20",
+      "bm25": "21",
+      "alignement": "21-10"
+    },
+    {
+      "ligne": 38,
+      "article_id": "AR-21-11",
+      "page": "20",
+      "bm25": "21",
+      "alignement": "21-11"
+    },
+    {
+      "ligne": 39,
+      "article_id": "AR-21-12",
+      "page": "20",
+      "bm25": "21",
+      "alignement": "21-12"
+    },
+    {
+      "ligne": 40,
+      "article_id": "AR-21-13",
+      "page": "20",
+      "bm25": "21",
+      "alignement": "21-13"
+    },
+    {
+      "ligne": 47,
+      "article_id": "AR-26-2",
+      "page": "22",
+      "bm25": "26",
+      "alignement": "26-2"
+    },
+    {
+      "ligne": 75,
+      "article_id": "AR-53-2",
+      "page": "29",
+      "bm25": "53",
+      "alignement": "53-2"
+    },
+    {
+      "ligne": 86,
+      "article_id": "AR-63-2",
+      "page": "32",
+      "bm25": "63",
+      "alignement": "63-2"
+    },
+    {
+      "ligne": 92,
+      "article_id": "AR-68-2",
+      "page": "35",
+      "bm25": "68",
+      "alignement": "68-2"
+    },
+    {
+      "ligne": 93,
+      "article_id": "AR-68-3",
+      "page": "36",
+      "bm25": "68",
+      "alignement": "68-3"
+    },
+    {
+      "ligne": 94,
+      "article_id": "AR-68-4",
+      "page": "36",
+      "bm25": "68",
+      "alignement": "68-4"
+    },
+    {
+      "ligne": 100,
+      "article_id": "AR-74",
+      "page": "37",
+      "bm25": null,
+      "alignement": "74"
+    },
+    {
+      "ligne": 103,
+      "article_id": "AR-76-2",
+      "page": "38",
+      "bm25": "76",
+      "alignement": "76-2"
+    },
+    {
+      "ligne": 105,
+      "article_id": "AR-77-2",
+      "page": "38",
+      "bm25": "77",
+      "alignement": "77-2"
+    },
+    {
+      "ligne": 123,
+      "article_id": "AR-94-2",
+      "page": "43",
+      "bm25": "94",
+      "alignement": "94-2"
+    },
+    {
+      "ligne": 124,
+      "article_id": "AR-94-3",
+      "page": "43",
+      "bm25": "94",
+      "alignement": "94-3"
+    },
+    {
+      "ligne": 125,
+      "article_id": "AR-94-4",
+      "page": "43",
+      "bm25": "94",
+      "alignement": "94-4"
+    },
+    {
+      "ligne": 126,
+      "article_id": "AR-94-5",
+      "page": "44",
+      "bm25": "94",
+      "alignement": "94-5"
+    },
+    {
+      "ligne": 127,
+      "article_id": "AR-94-6",
+      "page": "44",
+      "bm25": "94",
+      "alignement": "94-6"
+    },
+    {
+      "ligne": 128,
+      "article_id": "AR-94-7",
+      "page": "44",
+      "bm25": "94",
+      "alignement": "94-7"
+    },
+    {
+      "ligne": 129,
+      "article_id": "AR-94-8",
+      "page": "44",
+      "bm25": "94",
+      "alignement": "94-8"
+    },
+    {
+      "ligne": 130,
+      "article_id": "AR-94-9",
+      "page": "44",
+      "bm25": "94",
+      "alignement": "94-9"
+    },
+    {
+      "ligne": 131,
+      "article_id": "AR-94-10",
+      "page": "45",
+      "bm25": "94",
+      "alignement": "94-10"
+    },
+    {
+      "ligne": 132,
+      "article_id": "AR-94-11",
+      "page": "45",
+      "bm25": "94",
+      "alignement": "94-11"
+    },
+    {
+      "ligne": 133,
+      "article_id": "AR-94-12",
+      "page": "45",
+      "bm25": "94",
+      "alignement": "94-12"
+    },
+    {
+      "ligne": 134,
+      "article_id": "AR-94-13",
+      "page": "45",
+      "bm25": "94",
+      "alignement": "94-13"
+    },
+    {
+      "ligne": 135,
+      "article_id": "AR-94-14",
+      "page": "45",
+      "bm25": "94",
+      "alignement": "94-14"
+    },
+    {
+      "ligne": 176,
+      "article_id": "AR-134-2",
+      "page": "57",
+      "bm25": "134",
+      "alignement": "134-2"
+    },
+    {
+      "ligne": 177,
+      "article_id": "AR-134-3",
+      "page": "57",
+      "bm25": "134",
+      "alignement": "134-3"
+    },
+    {
+      "ligne": 195,
+      "article_id": "AR-151-2",
+      "page": "61",
+      "bm25": "151",
+      "alignement": "151-2"
+    },
+    {
+      "ligne": 197,
+      "article_id": "AR-152-2",
+      "page": "61",
+      "bm25": "152",
+      "alignement": "152-2"
+    },
+    {
+      "ligne": 198,
+      "article_id": "AR-152-3",
+      "page": "62",
+      "bm25": "152",
+      "alignement": "152-3"
+    },
+    {
+      "ligne": 200,
+      "article_id": "AR-153-2",
+      "page": "62",
+      "bm25": "153",
+      "alignement": "153-2"
+    },
+    {
+      "ligne": 202,
+      "article_id": "AR-154-2",
+      "page": "63",
+      "bm25": "154",
+      "alignement": "154-2"
+    },
+    {
+      "ligne": 203,
+      "article_id": "AR-154-3",
+      "page": "63",
+      "bm25": "154",
+      "alignement": "154-3"
+    },
+    {
+      "ligne": 204,
+      "article_id": "AR-154-4",
+      "page": "63",
+      "bm25": "154",
+      "alignement": "154-4"
+    },
+    {
+      "ligne": 205,
+      "article_id": "AR-154-5",
+      "page": "63",
+      "bm25": "154",
+      "alignement": "154-5"
+    },
+    {
+      "ligne": 316,
+      "article_id": "AR-258-2",
+      "page": "90",
+      "bm25": "258",
+      "alignement": "258-2"
+    },
+    {
+      "ligne": 327,
+      "article_id": "AR-268-2",
+      "page": "92",
+      "bm25": "268",
+      "alignement": "268-2"
+    },
+    {
+      "ligne": 331,
+      "article_id": "AR-272",
+      "page": "93",
+      "bm25": null,
+      "alignement": "272"
+    },
+    {
+      "ligne": 332,
+      "article_id": "AR-273",
+      "page": "93",
+      "bm25": null,
+      "alignement": "273"
+    },
+    {
+      "ligne": 333,
+      "article_id": "AR-274",
+      "page": "93",
+      "bm25": null,
+      "alignement": "274"
+    },
+    {
+      "ligne": 334,
+      "article_id": "AR-275",
+      "page": "93",
+      "bm25": null,
+      "alignement": "275"
+    },
+    {
+      "ligne": 335,
+      "article_id": "AR-276",
+      "page": "93",
+      "bm25": null,
+      "alignement": "276"
+    },
+    {
+      "ligne": 336,
+      "article_id": "AR-277",
+      "page": "93",
+      "bm25": null,
+      "alignement": "277"
+    },
+    {
+      "ligne": 384,
+      "article_id": "AR-325",
+      "page": "102",
+      "bm25": null,
+      "alignement": "325"
+    },
+    {
+      "ligne": 385,
+      "article_id": "AR-326",
+      "page": "102",
+      "bm25": null,
+      "alignement": "326"
+    },
+    {
+      "ligne": 386,
+      "article_id": "AR-327",
+      "page": "102",
+      "bm25": null,
+      "alignement": "327"
+    },
+    {
+      "ligne": 387,
+      "article_id": "AR-328",
+      "page": "102",
+      "bm25": null,
+      "alignement": "328"
+    },
+    {
+      "ligne": 388,
+      "article_id": "AR-329",
+      "page": "102",
+      "bm25": null,
+      "alignement": "329"
+    },
+    {
+      "ligne": 389,
+      "article_id": "AR-330",
+      "page": "102",
+      "bm25": null,
+      "alignement": "330"
+    },
+    {
+      "ligne": 390,
+      "article_id": "AR-331",
+      "page": "102",
+      "bm25": null,
+      "alignement": "331"
+    },
+    {
+      "ligne": 391,
+      "article_id": "AR-332",
+      "page": "102",
+      "bm25": null,
+      "alignement": "332"
+    },
+    {
+      "ligne": 395,
+      "article_id": "AR-336",
+      "page": "104",
+      "bm25": null,
+      "alignement": "336"
+    },
+    {
+      "ligne": 396,
+      "article_id": "AR-337",
+      "page": "104",
+      "bm25": null,
+      "alignement": "337"
+    },
+    {
+      "ligne": 459,
+      "article_id": "AR-391",
+      "page": "122",
+      "bm25": null,
+      "alignement": "391"
+    },
+    {
+      "ligne": 460,
+      "article_id": "AR-392",
+      "page": "122",
+      "bm25": null,
+      "alignement": "392"
+    },
+    {
+      "ligne": 461,
+      "article_id": "AR-393",
+      "page": "122",
+      "bm25": null,
+      "alignement": "393"
+    },
+    {
+      "ligne": 462,
+      "article_id": "AR-394",
+      "page": "122",
+      "bm25": null,
+      "alignement": "394"
+    },
+    {
+      "ligne": 463,
+      "article_id": "AR-395",
+      "page": "122",
+      "bm25": null,
+      "alignement": "395"
+    },
+    {
+      "ligne": 464,
+      "article_id": "AR-396",
+      "page": "122",
+      "bm25": null,
+      "alignement": "396"
+    },
+    {
+      "ligne": 467,
+      "article_id": "AR-399",
+      "page": "122",
+      "bm25": "9",
+      "alignement": "399"
+    }
+  ],
+  "limite": "Comparaison des identifiants entre deux traitements existants, pas mesure de pertinence ni annotation juridique."
+}

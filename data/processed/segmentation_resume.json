@@ -1,0 +1,17 @@
+{
+  "articles_ar": 515,
+  "articles_ar_abroges": 38,
+  "articles_ar_plages": 20,
+  "identifiants_en_double": 0,
+  "numeros_absents_1_446": 0,
+  "articles_sans_chapitre": 0,
+  "articles_avec_note": 266,
+  "notes_bas_de_page_retirees": 21,
+  "lignes_parasites_retirees": 10,
+  "titres_manuels_inseres": 6,
+  "tetes_rattrapees_par_continuite": 2,
+  "corrections_de_mots_appliquees": 104,
+  "articles_fr_reperes": 498,
+  "articles_fr_numeros_distincts": 425,
+  "articles_fr_ruptures_ordre": 1
+}

@@ -1,0 +1,13 @@
+{
+  "articles_ar": 515,
+  "entrees_fr": 498,
+  "statuts": {
+    "apparié": 494,
+    "abrogé (plage)": 21,
+    "hors Code (loi n° 66-27)": 4
+  },
+  "lot_A_appariements_uniques": 494,
+  "doublons_a_trancher": 0,
+  "absents_du_francais": 0,
+  "controles_annees_a_relire": 6
+}

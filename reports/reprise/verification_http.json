@@ -1,0 +1,85 @@
+[
+  {
+    "methode": "GET",
+    "route": "/health",
+    "requete": null,
+    "statut": 200,
+    "reponse": {
+      "statut": "ok",
+      "articles_indexes": {
+        "fr": 496,
+        "ar": 491
+      }
+    }
+  },
+  {
+    "methode": "POST",
+    "route": "/repondre",
+    "requete": {
+      "question": "Quel est le préavis de rupture du contrat de travail à durée indéterminée ?",
+      "k": 1
+    },
+    "statut": 200,
+    "reponse": {
+      "abstention": false,
+      "langue": "fr",
+      "candidats": [
+        {
+          "article": "14 bis",
+          "texte": "Article 14 bis. (Ajouté par la loi n° 94-29 du 21 février 1994).- Le préavis de rupture du contrat de travail à durée indéterminée est notifié par lettre recommandée adressée à l’autre partie un mois avant la rupture du contrat. Les travailleurs sont autorisés à s’absenter durant toute la deuxième moitié de la durée du préavis en vue de leur permettre de chercher un autre emploi. La durée d’absence est considérée comme travail effectif et n’entraîne aucune réduction de salaires ou d’indemnités. Le tout sans préjudice des prescriptions plus avantageuses pour le travailleur résultant de dispositions spéciales prévues par l’accord des parties, la convention collective ou l’usage.",
+          "page": "279",
+          "score": 19.57
+        }
+      ],
+      "latence_ms": 1.828
+    }
+  },
+  {
+    "methode": "POST",
+    "route": "/repondre",
+    "requete": {
+      "question": "Quelle est la capitale de la Tunisie ?"
+    },
+    "statut": 200,
+    "reponse": {
+      "abstention": true,
+      "langue": "fr",
+      "candidats": [],
+      "latence_ms": 0.491,
+      "message": "Je ne peux pas répondre à cette question avec le Code du travail disponible : elle ne correspond à aucun article de ce corpus. Consultez un professionnel."
+    }
+  },
+  {
+    "methode": "POST",
+    "route": "/repondre",
+    "requete": {
+      "question": "ما هي مدة الإعلام بإنهاء عقد الشغل؟"
+    },
+    "statut": 200,
+    "reponse": {
+      "abstention": false,
+      "langue": "ar",
+      "candidats": [
+        {
+          "article": "14 bis",
+          "texte": "الفصل 14 مكرر (أضيف بالقانون عدد 29 لسنة 1994 المؤرخ في 21 فيفري 1994).- يتم الإعلام بإنهاء عقد الشغل المبرم لمدة غير معينة برسالة مضمونة الوصول توجه إلى الطرف الآخر قبل شهر من إنهاء العقد. ويرخص للعملة بالتغيب كامل النصف الثاني من مدّة أجل الإعلام ليتسنى لهم السعي للحصول على شغل آخر. وتعتبر مدة التغيب عملا فعليا ولا ينجر عنه أي وكل هذا لا يمس بالمقتضيات الأكثر فائدة للعامل والناتجة عن أحكام خاصة تضمنها اتفاق الطرفين أو الاتفاقية المشتركة أو العرف.",
+          "page": "14",
+          "score": 14.31
+        },
+        {
+          "article": "14",
+          "texte": "الفصل 14 (نقح بالقانون عدد 29 لسنة 1994 المؤرخ في 21 فيفري 1994).- ينتهي عقد الشغل المبرم لمدة معينة بانتهاء المدة المتفق عليها أو بإتمام والعقد المبرم لمدة غير معينة ينتهي بانتهاء أجل الإعلام بإنهاء العمل. كما ينتهى عقد الشغل سواء كان مبرما لمدة معينة أو لمدة غير معينة : أ) باتفاق الطرفين ب) بإرادة أحد الطرفين تبعا لارتكاب خطإ فادح من الطرف الآخر ج) عند تعذر الإنجاز الناتج إما عن أمر طارئ أو قوة قاهرة حدثت قبل أو أثناء تنفيذ العقد أو عن وفاة العامل, د) بالفسخ المصرح به من طرف القاضي في الصور التي يُبِيَنها القانون, ه) في الحالات الأخرى التى ينص عليها القانون.",
+          "page": "14",
+          "score": 11.33
+        },
+        {
+          "article": "14 ter",
+          "texte": "الفصل 14 ثالثا (أضيف بالقانون عدد 29 لسنة 1994 المؤرخ في 21 فيفري 1994).- يتعين على المؤجر الذي يعتزم طرد عامل أن يبّين أسباب الطرد في رسالة الإعلام بإنهاء العمل. ويعتبر تعستفياء الطرد الواقع دون وجود سبب حقيقي وجدي يبرره أى دون احترام الإجراءات القانونية أو الترتيبية أو التعاقدية.",
+          "page": "15",
+          "score": 8.67
+        }
+      ],
+      "latence_ms": 1.438
+    }
+  }
+]

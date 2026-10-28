@@ -1,0 +1,7 @@
+﻿jeu,usage,variante,categorie,nombre,erreurs_variante,exemple_id
+questions_dev_v2,developpement_non_independant,sans_seuil_score,reference_absente_top5,4,35,D06
+questions_dev_v2,developpement_non_independant,sans_seuil_score,hors_perimetre_accepte,29,35,D14
+questions_dev_v2,developpement_non_independant,sans_seuil_score,article_voisin_classe_devant,2,35,D30
+questions_dev_v2,developpement_non_independant,seuil_historique,reference_absente_top5,2,8,D06
+questions_dev_v2,developpement_non_independant,seuil_historique,hors_perimetre_accepte,2,8,D14
+questions_dev_v2,developpement_non_independant,seuil_historique,abstention_a_tort,4,8,D30

@@ -1,0 +1,33 @@
+{
+  "donnees": {
+    "corpus": "nltk conll2002",
+    "langue": "esp",
+    "n_phrases_train": 8323,
+    "n_phrases_test": 1517,
+    "n_entites_dictionnaire": 7468
+  },
+  "baseline_publiee": {
+    "precision": 26.27,
+    "rappel": 56.48,
+    "f1": 35.86,
+    "f1_sans_erreurs_train": 62.49
+  },
+  "baseline_reproduite": {
+    "precision": 26.34,
+    "rappel": 56.62,
+    "f1": 35.95,
+    "vp": 2015,
+    "n_pred": 7651,
+    "n_gold": 3559
+  },
+  "baseline_stricte_classe_unique": {
+    "precision": 20.6,
+    "rappel": 39.25,
+    "f1": 27.02,
+    "vp": 1397,
+    "n_pred": 6783,
+    "n_gold": 3559
+  },
+  "lecture_retenue": "classe majoritaire par phrase, appariement glouton le plus long ; la lecture littérale « classe unique » donne F1=27.02, la lecture majoritaire reproduit le publié à ±0.1 point.",
+  "ecart_baseline_f1": 0.09
+}
