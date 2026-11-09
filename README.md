@@ -1,201 +1,98 @@
 # LegalTN
 
-Projet NLP sur le Code du travail tunisien en arabe et français.
-Cette copie est en cours de récupération. L'alignement, la démonstration BM25
-et un adaptateur HTTP local fonctionnent. Les corpus AR/FR, le PDF source et les
-caches OCR sont disponibles. Trois fichiers gelés ont été récupérés et la suite
-de tests actuelle passe. Une partie des références d'évaluation et plusieurs
-composants du projet complet restent à récupérer.
+Assistant de recherche dans le Code du travail tunisien bilingue arabe/français
+(édition IORT, PDF de 291 pages). Une question en français, en arabe, en tunisien
+ou en arabizi renvoie l'article cité (numéro, page, extrait), ou une abstention
+si la question sort du Code. **Composants classiques uniquement** : règles,
+lexiques, SymSpell, BM25. Aucun LLM, aucun modèle neuronal, aucune API payante.
 
-L'état vérifié et les exigences Bronze sont consignés dans
-[`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md). Les résultats de
-[`experiments.md`](experiments.md) sont historiques ; ils ne constituent pas des
-résultats tous reproduits sur cette copie. Les entrées de reprise distinguent
-les exécutions actuelles des résultats hérités.
+## Installer et lancer (une commande)
 
-## Démonstration et API locale
-
-La démonstration récupérée utilise uniquement la bibliothèque standard Python :
+Prérequis : Windows, **Python 3.11 ou plus** dans le `PATH` (vérifié avec 3.11.9).
 
 ```powershell
-python -X utf8 src/demo/repondre.py "Quel est le préavis de rupture du contrat de travail à durée indéterminée ?"
+.\demarrer.ps1
 ```
 
-Elle retourne un extrait cité, pas une consultation juridique rédigée.
-Les scripts `src/demo/repondre.py` et `src/evaluation/baseline_bm25.py` sont
-conservés à l'identique. Le seuil historique reste à 9,085.
+Le script crée `.venv` s'il manque (ou s'il est inutilisable), installe
+`requirements.txt`, puis lance l'API et l'interface web sur
+**http://127.0.0.1:8000** (port modifiable : `.\demarrer.ps1 -Port 18765`).
+Le serveur écoute uniquement en local.
 
-L'adaptateur `api.py` et le lanceur ci-dessous ont été ajoutés pendant la reprise ;
-ils ne proviennent pas de l'API Codex manquante :
+## Utiliser
+
+- **Interface web** : http://127.0.0.1:8000. Le bandeau « Vouliez-vous dire : … ? »
+  apparaît si la question a été corrigée, et le bouton « Voir les étapes » montre
+  la question après chaque étape du pipeline.
+- **Ligne de commande** :
+  `.venv\Scripts\python -X utf8 src/demo/repondre.py --debug "Quel est le préavis pour un CDI ?"`
+- **API** : `GET /health` ; `POST /repondre` avec `{"question": "...", "k": 3}`
+  (`k` entre 1 et 5). La réponse contient `question_originale`, `question_corrigee`,
+  `corrections`, `langue_detectee`, `etapes`, `abstention`, `candidats`
+  (article, page, texte, score) et `latence_ms`.
+
+## Pipeline de traitement des questions
+
+`src/pipeline/traitement.py`, une fonction testable par étape :
+
+1. détection de langue (fr, ar, tunisien, arabizi) ;
+2. translittération arabizi → arabe (mots français connus et nombres gardés) ;
+3. mots vides (`data/lexiques/stopwords_fr.txt`, `stopwords_ar.txt`), retirés avant la
+   normalisation de ى ; les négations et les modaux ne sont jamais retirés ;
+4. normalisation (FR : minuscules, accents ; AR : أإآ→ا, ة→ه, ى→ي, diacritiques, tatweel) ;
+5. lexique tunisien → standard et sigles (CDI, CDD, SMIG, SMAG, CNSS) ;
+6. racinisation arabe légère (reste ≥ 3 lettres) ;
+7. correction orthographique SymSpell (`src/correction/`) ;
+8. synonymes juridiques (expansion) ;
+9. BM25 (k1 = 1,5, b = 0,75), abstention sous le seuil 9,085.
+
+`data/dev/lexique_tunisien_v1.csv` et `data/dev/synonymes_juridiques_v1.csv` sont
+des **modèles de 5 exemples à valider**.
+
+## Tests
 
 ```powershell
-.\demarrer.ps1 -Port 18765
+.venv\Scripts\python -m pytest -q -p no:cacheprovider
 ```
 
-Alternative : `python -X utf8 api.py --port 18765`.
-Le serveur écoute uniquement sur `127.0.0.1`. Dans un autre terminal :
+Dernier résultat : **72 réussis, 1 xfail, 0 échec**. Le xfail strict documente
+une limite volontairement conservée du BM25 historique seul (sigle « CDI ») ;
+le pipeline complet répond sur ce cas. Les tests ne lancent aucune mesure sur
+les jeux gelés : ils vérifient leurs SHA-256.
 
-```powershell
-Invoke-RestMethod http://127.0.0.1:18765/health
-$corps = @{question = "Quel est le préavis de rupture du contrat de travail à durée indéterminée ?"; k = 1} | ConvertTo-Json
-Invoke-RestMethod http://127.0.0.1:18765/repondre -Method Post -ContentType "application/json; charset=utf-8" -Body ([System.Text.Encoding]::UTF8.GetBytes($corps))
-```
+## Chiffres de référence
 
-`POST /repondre` renvoie la langue, l'abstention éventuelle, les articles/pages/
-extraits candidats et la latence. `k` est optionnel (3 par défaut, entre 1 et 5).
-Le lancement PowerShell et les requêtes FR/AR/hors périmètre ont été vérifiés ;
-les serveurs de vérification ont ensuite été arrêtés.
+| Élément | Valeur |
+|---|---|
+| Corpus | 515 entrées AR, 498 entrées FR (`data/processed/`) |
+| Index de recherche | 496 articles FR, 491 AR (intitulés reconnus) |
+| Alignement AR/FR | 494 appariés, 21 abrogés (plage), 4 hors Code, 6 contrôles d'années |
+| Dev v2 (`data/dev/questions_dev_v2.csv`) | 56 questions : 27 dans le périmètre, 29 hors |
+| Jeux gelés (`data/test_locked/`) | 40 questions, 30 OCR, 30 baseline OCR, 100 obligations |
 
-Limites observées : le sigle « CDI » déclenche une abstention à tort ; les
-intitulés BM25 gèrent moins de suffixes que l'alignement et peuvent fusionner
-des sous-articles. Ce comportement historique est documenté, pas corrigé
-silencieusement au prix d'une modification des expériences de référence.
+Résultats sur le dev (non indépendant) et ablation du pipeline : voir
+[`experiments.md`](experiments.md). Aucun résultat sur test gelé n'est publié ici.
 
-## Contrôle sur développement et tableaux
+## Reproduire
 
-```powershell
-python src/evaluation/evaluer_dev_reprise.py --rapports reports/mon_controle_dev
-```
+| Commande | Sortie |
+|---|---|
+| `python src/executer_alignement.py --sortie reports/mon_alignement` | alignement AR/FR |
+| `python -X utf8 src/evaluation/evaluer_pipeline_dev.py --rapports reports/mon_pipeline` | ablation du pipeline (dev) |
+| `python -X utf8 src/evaluation/evaluer_correction_dev.py --rapports reports/ma_correction` | effet de SymSpell (dev) |
+| `python -m src.ner_crf.reproduire_baseline_conll` | reproduction CoNLL-2002 (CRF, baseline publiée) |
 
-Choisir un dossier neuf. Le script compare le seuil historique à la même
-récupération sans seuil de score, sans réglage et sans lire de jeu de test.
-Les références sont celles du dev v2 déjà utilisé historiquement.
+Les scripts refusent d'écrire dans un dossier existant non vide : choisir un dossier neuf.
 
-Rapports générés dans `reports/reprise/demo_dev/` :
+## Limites connues
 
-- `evaluation_demo_dev_v2.json` : configuration, empreintes et résultats détaillés ;
-- `tableau1_demo_dev.csv` : comparaison globale sur développement ;
-- `tableau2_langues_dev.csv` : résultats par langue ;
-- `tableau3_erreurs_dev.csv` et `erreurs_dev.csv` : catégories automatiques et exemples.
+- Pas de question arabe dans le périmètre du dev : le rappel arabe n'est pas mesuré.
+- Arabizi : la translittération évite les abstentions à tort mais ne retrouve pas
+  le bon article et accepte des questions hors périmètre (`reports/erreurs_analysees_dev.csv`).
+- Le seuil 9,085 a été choisi pour le BM25 historique ; il sera réglé une seule fois
+  sur le pipeline final, sur le dev.
+- Annotations humaines (obligations, NER, rappel d'alignement) encore vides.
+- Licence de l'édition IORT à clarifier avant tout partage public.
 
-Sur ce dev de 56 questions : 35 erreurs sans seuil contre 8 avec le seuil
-historique ; 27 erreurs évitées selon le critère « hors périmètre accepté,
-abstention à tort ou premier article incorrect ». Cela comprend néanmoins
-4 fausses abstentions, et le rappel article@5 passe de 23/27 à 21/27.
-Les questions arabes de ce dev sont toutes hors périmètre : aucun rappel de
-recherche en arabe n'y est mesurable. Ces tableaux **ne sont pas les résultats
-finaux sur test indépendant** et ne confirment pas les chiffres de la session Codex.
-
-## Lancer l'alignement
-
-Depuis le dossier du projet (environnement vérifié : Python 3.12.2) :
-
-```powershell
-python -m pip install -r requirements-alignement.txt
-python src/executer_alignement.py --sortie reports/mon_alignement
-```
-
-Choisir un dossier de sortie neuf : si l'un des trois exports v6 existe, le
-programme refuse de l'écraser. Les fichiers d'entrée restent dans
-`data/processed/`, indépendamment du dossier de sortie.
-
-Les résultats de la reprise sont déjà disponibles sous
-`data/processed/alignement_fr_ar_v6.csv`, `alignement_resume_v6.json` et
-`alignement_echantillon_image_v6.csv`. Une seconde exécution dans
-`reports/reprise/reproduction_v6/` a produit les mêmes fichiers octet par octet.
-
-Résultat actuel : 515 entrées AR, 498 entrées FR, 494 appariements,
-21 lignes classées `abrogé (plage)`, 4 hors Code et 6 contrôles d'années.
-Ces comptes décrivent la sortie du pipeline ; ils ne constituent pas une
-précision ou un rappel sur une référence indépendante.
-
-## Contrôler les fichiers récupérés
-
-Depuis le dossier du projet, avec Python 3.11 ou ultérieur :
-
-```powershell
-python src/auditer_reprise.py
-```
-
-Ce contrôle utilise uniquement la bibliothèque standard. Il lit les données,
-compare leurs empreintes, contrôle les références françaises et la syntaxe du
-notebook 01, puis affiche un rapport JSON. Il exécute uniquement les définitions
-de normalisation auditées du notebook d'alignement v5 pour contrôler les références
-de développement. Aucun fichier n'est modifié et aucun notebook n'est exécuté
-intégralement ; aucun score de test indépendant n'est mesuré.
-
-Le rapport obtenu pendant la récupération est disponible dans
-[`reports/reprise/audit_donnees_recuperees.json`](reports/reprise/audit_donnees_recuperees.json).
-Le contrôle étendu après récupération des notebooks d'alignement est dans
-[`reports/reprise/audit_alignement_v5.json`](reports/reprise/audit_alignement_v5.json).
-Le rapport actuel après récupération du corpus arabe et exécution complète est
-[`reports/reprise/audit_alignement_complet.json`](reports/reprise/audit_alignement_complet.json).
-Une sortie réussie du script indique que les contrôles ont pu être effectués ;
-les anomalies sont détaillées dans le rapport.
-
-## Éléments récupérés
-
-- `data/processed/texte_travail.json` : texte de travail de 291 pages.
-- `data/processed/articles_ar.csv` : 515 entrées arabes segmentées.
-- `data/processed/articles_fr.csv` et `articles_fr_corrige.csv` : deux versions
-  de 498 entrées ; les identifiants FR ne sont pas uniques.
-- `data/dev/questions_dev_v2.csv` : 56 questions de développement, déjà utilisées
-  historiquement pour la calibration.
-- `notebooks/01_data_exploration.ipynb` : exploration/OCR, conservée avec ses
-  sorties historiques.
-- `notebooks/03_alignement_fr_ar.ipynb`, `03_alignement_fr_ar_v4.ipynb` et
-  `03_alignement_fr_ar_v5.ipynb` : versions originales d'alignement conservées
-  à l'identique. La v5 est celle documentée par le pipeline historique.
-- `docs/Guide_Revue_Bronze.pdf` : guide de présentation, distinct du cahier des
-  charges complet de LegalTN.
-- `data/raw/arabic/majallat_al_shughl_2019.pdf` : PDF source de 291 pages,
-  empreinte identique à celle du journal historique.
-- `data/processed/page_images/`, `ocr_pages/`, `ocr_pages_fr/`, `ocr_bandes/` :
-  images et caches hérités, conservés sans recalcul.
-- Tables de notes, corrections et vérifications, ainsi que les anciens exports
-  d'alignement : sources récupérées, non modifiées.
-- `src/evaluation/baseline_bm25.py` et `src/demo/repondre.py` :
-  baseline et démonstration récupérées à l'identique.
-- `data/test_locked/questions_reference_v2.csv`, `ocr_candidats_v1.csv` et
-  `ocr_baseline_v1.csv` : fichiers gelés récupérés, empreintes historiques vérifiées.
-
-Les CSV de développement d'alignement et les candidats d'obligations présents
-avant cette récupération sont conservés. Les champs d'annotation des obligations
-restent vides.
-
-## Démarrage et tests applicatifs
-
-Les règles d'alignement récupérées ont maintenant une suite ciblée :
-
-```powershell
-python -m unittest discover -s tests -p test_alignement_notebook.py -v
-```
-
-Elle utilise pandas (version vérifiée : 2.2.2 ; les notebooks utilisent
-`include_groups=False`, disponible à partir de pandas 2.2). **10 tests exécutés
-et réussis**, avec des fixtures synthétiques et des exports temporaires.
-Ces tests ne remplacent pas une évaluation sur le corpus complet.
-
-La commande complète est `python -m pytest`. Dépendances de vérification :
-`python -m pip install -r requirements-alignement.txt pytest==9.2.0`.
-La dernière exécution donne **21 tests réussis et 1 échec attendu (`xfail`)**,
-avec un code de sortie 0. Le contrôle des empreintes passe après récupération
-des trois fichiers gelés ; aucun test n'a été désactivé. Le xfail strict documente
-la fausse abstention sur « CDI ». Les « 36 tests réussis » Codex ne sont pas confirmés :
-la suite actuellement disponible comporte 22 tests, dont les ajouts de la reprise.
-
-`demo_evaluation.sh` peut lancer les questions de démonstration, mais ses deux
-scripts d'analyse historiques restent absents. Les tests logiciels ne relancent
-aucune mesure sur les jeux gelés. Leur récupération ne réinitialise pas le gel :
-les évaluations historiques de questions v2 restent déjà consommées ; ne pas
-utiliser `--evaluer` ou la baseline en mode mesure pour régler le système.
-
-Le notebook 01 n'a pas besoin d'être relancé pour utiliser les données récupérées :
-il peut réécrire `texte_travail.json`. Tesseract est installé localement, mais les
-langues `ara` et `fra` restent absentes pour refaire l'OCR. Les notebooks
-de segmentation et de correction française sont encore à récupérer ;
-le notebook 01 ne remplace pas leurs traitements.
-
-## Version de travail de l'alignement
-
-`notebooks/03_alignement_fr_ar_v6.ipynb` conserve les règles de calcul v5 et corrige
-deux problèmes opérationnels : repérage de la racine sans `data/raw/` et refus
-d'écraser les sorties existantes, notamment l'échantillon pouvant être annoté.
-Les sorties portent le suffixe `_v6` ; les fichiers historiques sont préservés.
-
-Cette version a été exécutée sur les corpus réels et testée sur fixtures.
-Les sources récupérées restent inchangées. Le rapport décrit notamment
-69 étiquettes FR sans suffixe, 17 appariements dont le drapeau AR indique
-`abroge=True`, et la longueur stockée incohérente d'AR-367.
-L'indépendance des jeux, les métriques finales et la validité des corrections
-juridiques ne sont pas établies par ces contrôles techniques.
+Historique de la reprise du projet : [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md) et
+[`PIPELINE.md`](PIPELINE.md).
