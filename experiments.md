@@ -642,3 +642,93 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Aucune nouvelle mesure sur les jeux gelés ; aucun nouveau résultat scientifique ni annotation. Les gel et usages historiques ne sont pas réinitialisés. Les 36 tests Codex ne sont pas confondus avec les 22 tests présents.
 - Limites : `ocr_gold_v1.csv`, la référence indépendante de rappel d'alignement, les annotations d'obligations et les sources NER/CoNLL restent absents. Les trois fichiers récupérés ne suffisent pas à déclarer ces composants évalués.
 - Suite : poursuivre la récupération et l'audit des composants scientifiques manquants et du cahier des charges complet ; conserver la séparation entre validation logicielle et évaluation indépendante.
+
+## 2026-11-09 — Correction orthographique SymSpell des questions (dev uniquement)
+
+- Objectif : rendre le retrieval robuste aux fautes de frappe dans les questions, sans LLM.
+- Méthode : `src/correction/correcteur_symspell.py`, symspellpy 6.10.2 (MIT). Dictionnaires construits depuis `data/processed/articles_fr_corrige.csv` (3 654 mots normalisés) et `articles_ar.csv` (6 227 formes, 3 373 formes réduites), avec fréquences réelles du corpus. Distance de Damerau-Levenshtein max 1 (≤ 4 lettres), 2 au-delà ; à distance égale, le mot le plus fréquent du corpus.
+- Règles de non-correction : nombres, mots de moins de 3 lettres, mots du corpus, mots du lexique général FR/AR de pyspellchecker 0.9.1 (MIT, utilisé seulement pour reconnaître un mot correct, jamais pour proposer), mots en majuscule hors début de phrase (noms propres), questions en arabizi (mot mêlant lettres et chiffres). AR : normalisation أإآ→ا, ة→ه, ى→ي, sans diacritiques ni tatweel ; retrait d'au plus un préfixe et un suffixe (racine ≥ 3 lettres). Lexique de sigles appliqué avant : CDI, CDD, SMIG, SMAG, CNSS.
+- Réglages faits sur le dev (dev v2 uniquement) : ajout du lexique général (« rompre »→« compte », « capitale »→« capitaux » observés), de la règle arabizi (« fel »→« tel », « wela »→« delà ») et de la règle des noms propres (« Sousse »→« Sous », « SONEDE »→« Solde »). Aucun fichier de `data/test_locked/` lu.
+- Intégration : `repondre.repondre_question()` (langue → correction → BM25 → abstention), utilisée par la CLI et `api.py`. Sortie : `question_originale`, `question_corrigee`, `corrections`. `Corpus.repondre` (BM25 seul) inchangé = baseline. Interface : bandeau « Vouliez-vous dire : … ? ». Option CLI `--sans-correction`.
+- Jeu : `data/dev/questions_dev_v2.csv` (56 questions : 27 dans / 29 hors périmètre ; empreinte vérifiée après normalisation CRLF). Fautes générées : graine 2026, 1 faute (suppression, substitution, inversion, insertion) dans au plus 2 mots de contenu de 5 lettres ou plus par question. Seuil 9,085 inchangé.
+- Commande : `python -X utf8 src/evaluation/evaluer_correction_dev.py --rapports reports/correction_symspell` (deux exécutions, sorties identiques).
+
+| Condition (dev v2) | R@1 | R@5 | Abstentions à tort | Hors périmètre refusés | Questions modifiées |
+|---|---:|---:|---:|---:|---:|
+| propres, sans correction | 21/27 (0,778) | 21/27 (0,778) | 4/27 | 27/29 | 0/56 |
+| propres, avec correction | 21/27 (0,778) | 21/27 (0,778) | 4/27 | 26/29 | 1/56 |
+| avec fautes, sans correction | 19/27 (0,704) | 20/27 (0,741) | 7/27 | 29/29 | 0/56 |
+| avec fautes, avec correction | 21/27 (0,778) | 21/27 (0,778) | 5/27 | 25/29 | 45/56 |
+
+- Lecture : avec fautes, la correction rattrape le niveau des questions propres (R@1 0,704 → 0,778). Sur questions propres, aucune perte de rappel ; seule modification : CNSS développé (D18).
+- Coût observé : plus de questions hors périmètre acceptées (propres 27→26 via CNSS, D18 ; fautes 29→25). Les fautes rendaient ces questions inconnues, donc refusées « par chance » ; corrigées, elles redeviennent des questions hors périmètre normales. Une fausse abstention de plus avec fautes (D42) : question arabizi, ses mots français fautifs ne sont pas corrigés par choix.
+- Limites : n = 27 questions dans le périmètre (1 question = 3,7 points) ; fautes synthétiques, pas réelles ; aucune question AR dans le périmètre du dev, donc rappel arabe non mesuré ; dev déjà utilisé pour les choix ci-dessus, donc pas une mesure indépendante. Aucune mesure sur test gelé.
+- Tests : `tests/test_correction.py` (12 tests). Suite : `58 passed, 1 failed, 1 xfailed`. L'échec est préexistant (`test_jeux_geles_inchanges`, fins de ligne CRLF→LF au commit) ; `data/test_locked/` non modifié. Le xfail strict CDI reste valide pour le BM25 seul ; la chaîne corrigée répond sur ce cas (test dédié).
+
+## 2026-11-09 — Correction SymSpell : hors périmètre acceptés et balayage du seuil (dev uniquement, sans changement)
+
+- Objectif : comprendre la baisse des refus hors périmètre avec correction et le compromis du seuil d'abstention. Analyse seule : aucun paramètre ni seuil modifié (9,085 conservé). Jeu : dev v2 (27 dans / 29 hors), fautes graine 2026. Aucun fichier de `data/test_locked/` lu. Script d'analyse exécuté hors dépôt.
+- Questions hors périmètre refusées sans correction et acceptées avec (seuil 9,085) :
+
+| Jeu | Id | Question corrigée | Article renvoyé | Score avec / sans correction | Cause |
+|---|---|---|---|---:|---|
+| propres | D18 | … pension de retraite versée par la caisse nationale de sécurité sociale ? | 121 | 23,89 / 7,50 | sigle CNSS développé ; termes très présents dans le Code |
+| fautes | D18 | idem (pesion, reteraite corrigés) | 121 | 23,89 / 7,50 | idem |
+| fautes | D14 | … taux de l'impôt sur le revenu applicable aux salaires en Tunisie ? | 365 | 13,68 / 8,74 | correction juste, question hors sujet mais lexicalement proche |
+| fautes | D17 | … augmenter le loger d'un logement en cous de bail ? | 347 | 10,47 / 7,41 | fausse correction : « loyor » → « loger » (« loyer » absent du corpus) |
+| fautes | D21 | Un commerçants peut-il vendre des produits périmés ? | 409 | 10,22 / 3,22 | correction presque juste (pluriel) |
+
+- Balayage du seuil, R@5 / refus hors périmètre :
+
+| Seuil | propres sans | propres avec | fautes sans | fautes avec |
+|---:|---|---|---|---|
+| 0 | 23/27 · 0/29 | 23/27 · 0/29 | 22/27 · 0/29 | 22/27 · 0/29 |
+| 8 | 23/27 · 12/29 | 23/27 · 11/29 | 22/27 · 20/29 | 22/27 · 9/29 |
+| **9,085 (retenu)** | 21/27 · 27/29 | 21/27 · 26/29 | 20/27 · 29/29 | 21/27 · 25/29 |
+| 10 | 21/27 · 28/29 | 21/27 · 27/29 | 20/27 · 29/29 | 21/27 · 25/29 |
+| 11 | 21/27 · 28/29 | 21/27 · 27/29 | 17/27 · 29/29 | 21/27 · 27/29 |
+| 12 | 20/27 · 28/29 | 20/27 · 27/29 | 14/27 · 29/29 | 20/27 · 27/29 |
+| 14 | 18/27 · 29/29 | 18/27 · 28/29 | 13/27 · 29/29 | 18/27 · 28/29 |
+| 16 | 17/27 · 29/29 | 17/27 · 28/29 | 9/27 · 29/29 | 17/27 · 28/29 |
+
+- Lecture : avec correction, un seuil de 11 récupérerait 2 refus (fautes : 25 → 27/29 ; propres : 26 → 27/29) sans perte de R@5 sur ce dev. D18 (score 23,89) n'est rattrapable par aucun seuil raisonnable : c'est le lexique de sigles qui le fait accepter. Ces écarts portent sur 1 à 2 questions et sont choisis sur un dev déjà consulté : risque de surajustement. Seuil non modifié, décision laissée à l'auteure.
+- Démo `repondre_question` :
+  - « Quelle est la durée légale du travail hebdomadaire ? » : aucune correction ; top 3 = 88 (agricole, 10,85), 90 (7,01), 29 (6,77). L'article 79 (« 48 heures par semaine ») n'est pas en tête : écart de vocabulaire (hebdomadaire / par semaine), hors du champ d'un correcteur orthographique.
+  - « quel est le préavi pour un contart CDI ? » → « quel est le préavis pour un contrat contrat à durée indéterminée ? » ; top 3 = 14 (14,68), 14 bis (13,80), 6 (11,79). Défaut observé : « contrat » est dupliqué quand le sigle suit le mot « contrat », ce qui pousse l'article 14 devant le 14 bis. Non corrigé à ce stade.
+
+## 2026-11-09 — Décisions sur la correction SymSpell et correction du doublon de sigle
+
+- Décisions de l'équipe : seuil d'abstention maintenu à 9,085 (réglage unique prévu sur le pipeline final) ; CNSS conservé dans le lexique de sigles.
+- Correction : un sigle n'est plus précédé d'un doublon (« contrat CDI » → « contrat à durée indéterminée », y compris quand le mot précédent est mal écrit : « contart CDI »). Fonction `developper_sigles()`, test `test_sigle_sans_doublon`.
+- Effet : « quel est le préavi pour un contart CDI ? » → « quel est le préavis pour un contrat à durée indéterminée ? » ; top 3 = 14, 14 bis, 6. L'article 14 reste devant le 14 bis : le doublon n'était pas la seule cause (« contrat » et « durée indéterminée » sont très présents dans l'article 14).
+- Dev v2 : tableau et détails de `reports/correction_symspell/` régénérés à l'identique (octet par octet) : le correctif ne touche aucune question du dev.
+- Erreurs D17 (fausse correction « loyor » → « loger ») et D18 (CNSS, hors périmètre accepté) consignées dans `reports/erreurs_analysees_dev.csv`, fichier d'analyse manuelle (distinct de `erreurs_dev.csv`, régénéré par script).
+
+## 2026-11-09 — Pipeline complet de traitement des questions : intégration et ablation (dev uniquement)
+
+- Branche `pipeline-complet` (depuis `correction-symspell`). Sans LLM ni modèle neuronal.
+- Corrections du dépôt : `.gitignore` et retrait de `.venv` (13 608 fichiers) et des `.pyc` de l'index ; `.gitattributes` (`data/test_locked/*.csv -text`) et restauration CRLF de `ocr_candidats_v1.csv` et `ocr_baseline_v1.csv` : SHA-256 de référence retrouvés à l'octet près (`0969c1aa…`, `f2be31a9…`), vérifiés dans un clone neuf, hash non recalculés. `questions_reference_v2.csv` correspondait déjà en LF ; `obligations_candidats_test_v1.csv` sans hash de référence, laissé tel quel. `demarrer.ps1` recrée le `.venv` local et installe `requirements.txt` (vérifié : venv cassé remplacé, API lancée). Étapes 4 et 5 de `demo_evaluation.sh` désactivées (scripts absents).
+- Pipeline (`src/pipeline/traitement.py`) : 1 langue (fr / ar / tunisien / arabizi) → 2 translittération arabizi (mots français connus et nombres gardés) → 3 mots vides (`data/lexiques/stopwords_{fr,ar}.txt`, avant la normalisation de ى ; négations et modaux protégés par le code) → 4 normalisation → 5 lexique tunisien et sigles → 6 racinisation arabe légère (≥ 3 lettres) → 7 SymSpell (mots vides ni comptés ni proposés ; noms propres intacts) → 8 synonymes (expansion, pas remplacement) → BM25. Les étapes 3, 4 et 6 sont aussi appliquées au corpus indexé. Arabizi : jetons arabes sur le corpus AR, mots français sur le corpus FR, scores additionnés par numéro d'article (corpus alignés). Seuil 9,085 inchangé pour toutes les configurations.
+- Fichiers d'entrée absents du dépôt : `data/dev/lexique_tunisien_v1.csv` et `data/dev/synonymes_juridiques_v1.csv` créés comme MODÈLES (5 exemples chacun, marqués « à valider ») ; les résultats ci-dessous dépendent de ces modèles.
+- Mode debug : `repondre()` renvoie la question après chaque étape (`etapes`) ; interface : bouton « Voir les étapes » ; CLI : `--debug`.
+- Commande : `python -X utf8 src/evaluation/evaluer_pipeline_dev.py --rapports reports/pipeline_dev` (deux exécutions, sorties identiques). Dev v2 : FR 21 dans / 23 hors, tunisien (arabizi) 6 / 3, AR 0 / 3. Fautes : graine 2026 (mêmes que l'expérience SymSpell).
+
+| Configuration | FR R@1 | FR R@5 | FR abst. tort | FR refus hors | TUN R@1 | TUN R@5 | TUN abst. tort | TUN refus hors | AR refus hors | Total R@1 | Total R@5 | Total abst. tort | Total refus hors | Fautes R@1 | Fautes R@5 | Fautes refus hors |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 19/27 | 20/27 | 29/29 |
+| + mots vides | 20/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 4/6 | 3/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 18/27 | 20/27 | 29/29 |
+| + normalisation | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 18/27 | 20/27 | 29/29 |
+| + SymSpell | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 21/27 | 21/27 | 25/29 |
+| + synonymes | 19/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 20/27 | 21/27 | 4/27 | 27/29 | 20/27 | 21/27 | 25/29 |
+| pipeline complet | 19/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 0/6 | 0/3 | 2/3 | 20/27 | 21/27 | 0/27 | 23/29 | 20/27 | 21/27 | 24/29 |
+| complet sans translittération (diagnostic) | 19/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 4/6 | 2/3 | 2/3 | 20/27 | 21/27 | 4/27 | 25/29 | 20/27 | 21/27 | 24/29 |
+
+- Lecture :
+  - Mots vides et normalisation : aucun effet sur le rappel ici (la baseline les faisait déjà, avec d'autres listes).
+  - SymSpell : seul gain net, sur questions avec fautes (R@1 18 → 21/27), au prix de refus hors périmètre (29 → 25/29 ; cf. D17, D18).
+  - Synonymes (modèles) : −1 en R@1 (D07, salarié→travailleur) ; article 79 remonté du rang 35 au rang 4 pour la question « durée légale … hebdomadaire » (partie C), sans passer en tête.
+  - Translittération arabizi : supprime les 4 abstentions à tort tunisiennes mais sans gain de rappel (1/6) et accepte les 3 hors périmètre tunisiens. La ligne diagnostic montre qu'elle explique l'essentiel de la baisse des refus (25 → 23/29). La racinisation arabe fait accepter D55 (AR hors périmètre).
+  - Bilan honnête : le pipeline complet n'améliore pas le dev v2 par rapport à la baseline. Le seuil 9,085 n'est plus adapté aux scores fusionnés FR+AR et aux index racinisés ; il est laissé tel quel par décision de l'équipe, en vue d'un réglage unique sur le pipeline final.
+- Limites : 27 questions dans le périmètre, 6 tunisiennes, 0 arabe dans le périmètre (rappel AR non mesurable) ; lexiques modèles non validés ; dev déjà consulté. Aucune mesure sur test gelé.
+- Erreurs ajoutées à `reports/erreurs_analysees_dev.csv` : question hebdomadaire (partie C), D07, arabizi D30/D32/D35/D38 et D28/D52.
+- Tests : `python -m pytest -q -p no:cacheprovider` → `72 passed, 1 xfailed, 17 subtests passed` (0 échec). Le xfail strict est le cas CDI du BM25 historique seul, volontairement conservé ; la chaîne complète répond sur ce cas.

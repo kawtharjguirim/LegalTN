@@ -309,3 +309,15 @@ body{
   .badge-soft{display:none}
   .header{padding:12px 16px}
 }
+
+/* Bandeau « Vouliez-vous dire » (correction SymSpell) */
+.did-you-mean{background:#EEF4FB;border:1px solid #C9DBF0;color:#1F3B5C;border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:.9rem}
+.did-you-mean strong{font-weight:600}
+
+/* Mode debug : étapes du pipeline */
+.steps{border:1px solid #DDE3EA;border-radius:10px;padding:8px 14px;margin-bottom:12px;font-size:.85rem;background:#FAFBFC}
+.steps summary{cursor:pointer;font-weight:600;color:#1F3B5C}
+.steps ol{margin:8px 0 0 18px;padding:0}
+.steps li{margin:4px 0}
+.steps .step-name{display:inline-block;min-width:210px;color:#56606B}
+.steps code{font-size:.82rem;background:#EEF1F4;padding:1px 6px;border-radius:4px;word-break:break-word}

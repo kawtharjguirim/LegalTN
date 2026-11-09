@@ -1,0 +1,47 @@
+# Mots vides arabes : retirés AVANT la normalisation de ى (على est retiré, علي ne l'est pas).
+# Une ligne = un mot. Les lignes commençant par # sont des commentaires.
+# JAMAIS ici : négations لا، ليس، غير، إلا، لم، لن ; modaux يجب، يمنع، يجوز.
+# Le code les protège même s'ils sont ajoutés.
+# prépositions
+في
+من
+على
+إلى
+الى
+عن
+مع
+عند
+بين
+بعد
+قبل
+حتى
+# conjonctions et particules
+و
+أو
+او
+أن
+ان
+ثم
+قد
+إذا
+اذا
+# démonstratifs et relatifs
+هذا
+هذه
+ذلك
+التي
+الذي
+الذين
+# pronoms et auxiliaires
+هو
+هي
+كان
+كانت
+# interrogatifs
+ما
+هل
+كيف
+متى
+أين
+ماذا
+لماذا

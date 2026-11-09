@@ -1,0 +1,393 @@
+configuration,id,langue,dans,abstention,top1,top5,articles
+baseline,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
+baseline,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
+baseline,D03,fr,True,False,True,True,124 | 118 | 21 | 104 | 123
+baseline,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
+baseline,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 216
+baseline,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
+baseline,D07,fr,True,False,True,True,193 | 214 | 186 | 204 | 355
+baseline,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
+baseline,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
+baseline,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
+baseline,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
+baseline,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
+baseline,D13,tun,True,False,True,True,118 | 123 | 113 | 445 | 125
+baseline,D14,fr,False,False,False,False,365 | 435 | 151 | 139 | 30
+baseline,D15,fr,False,True,False,False,
+baseline,D16,fr,False,True,False,False,
+baseline,D17,fr,False,True,False,False,
+baseline,D18,fr,False,True,False,False,
+baseline,D19,fr,False,True,False,False,
+baseline,D20,fr,False,True,False,False,
+baseline,D21,fr,False,True,False,False,
+baseline,D22,fr,False,True,False,False,
+baseline,D23,fr,False,True,False,False,
+baseline,D24,fr,False,True,False,False,
+baseline,D25,fr,False,True,False,False,
+baseline,D26,fr,False,True,False,False,
+baseline,D27,ar,False,True,False,False,
+baseline,D28,tun,False,True,False,False,
+baseline,D29,fr,True,False,True,True,22 | 371 | 370 | 120 | 128
+baseline,D30,tun,True,True,False,False,
+baseline,D31,fr,True,False,True,True,79 | 22 | 90 | 114 | 94
+baseline,D32,tun,True,True,False,False,
+baseline,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
+baseline,D34,fr,True,False,True,True,122 | 120 | 64 | 112 | 128
+baseline,D35,tun,True,True,False,False,
+baseline,D36,fr,True,False,True,True,149 | 3 | 118 | 145 | 150
+baseline,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
+baseline,D38,tun,True,True,False,False,
+baseline,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
+baseline,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
+baseline,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
+baseline,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 196
+baseline,D43,fr,False,True,False,False,
+baseline,D44,fr,False,True,False,False,
+baseline,D45,fr,False,True,False,False,
+baseline,D46,fr,False,True,False,False,
+baseline,D47,fr,False,True,False,False,
+baseline,D48,fr,False,True,False,False,
+baseline,D49,fr,False,True,False,False,
+baseline,D50,fr,False,True,False,False,
+baseline,D51,fr,False,True,False,False,
+baseline,D52,tun,False,True,False,False,
+baseline,D53,tun,False,False,False,False,196 | 445 | 323 | 269 | 324
+baseline,D54,ar,False,True,False,False,
+baseline,D55,ar,False,True,False,False,
+baseline,D56,fr,False,True,False,False,
++ mots vides,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
++ mots vides,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
++ mots vides,D03,fr,True,False,True,True,124 | 118 | 21 | 104 | 123
++ mots vides,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
++ mots vides,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
++ mots vides,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
++ mots vides,D07,fr,True,False,True,True,193 | 214 | 355 | 185 | 399
++ mots vides,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
++ mots vides,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 309
++ mots vides,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
++ mots vides,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
++ mots vides,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
++ mots vides,D13,tun,True,False,True,True,118 | 123 | 113 | 125 | 114
++ mots vides,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
++ mots vides,D15,fr,False,True,False,False,
++ mots vides,D16,fr,False,False,False,False,315 | 230 | 334 | 211 | 360
++ mots vides,D17,fr,False,True,False,False,
++ mots vides,D18,fr,False,True,False,False,
++ mots vides,D19,fr,False,True,False,False,
++ mots vides,D20,fr,False,True,False,False,
++ mots vides,D21,fr,False,True,False,False,
++ mots vides,D22,fr,False,True,False,False,
++ mots vides,D23,fr,False,True,False,False,
++ mots vides,D24,fr,False,True,False,False,
++ mots vides,D25,fr,False,True,False,False,
++ mots vides,D26,fr,False,True,False,False,
++ mots vides,D27,ar,False,True,False,False,
++ mots vides,D28,tun,False,True,False,False,
++ mots vides,D29,fr,True,False,True,True,22 | 371 | 370 | 120 | 128
++ mots vides,D30,tun,True,True,False,False,
++ mots vides,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 132
++ mots vides,D32,tun,True,True,False,False,
++ mots vides,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
++ mots vides,D34,fr,True,False,True,True,122 | 120 | 64 | 112 | 128
++ mots vides,D35,tun,True,True,False,False,
++ mots vides,D36,fr,True,False,True,True,149 | 118 | 140 | 150 | 3
++ mots vides,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
++ mots vides,D38,tun,True,True,False,False,
++ mots vides,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
++ mots vides,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 214
++ mots vides,D41,fr,True,False,True,True,232 | 218 | 151 | 185 | 222
++ mots vides,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 196
++ mots vides,D43,fr,False,True,False,False,
++ mots vides,D44,fr,False,True,False,False,
++ mots vides,D45,fr,False,True,False,False,
++ mots vides,D46,fr,False,True,False,False,
++ mots vides,D47,fr,False,True,False,False,
++ mots vides,D48,fr,False,True,False,False,
++ mots vides,D49,fr,False,True,False,False,
++ mots vides,D50,fr,False,True,False,False,
++ mots vides,D51,fr,False,True,False,False,
++ mots vides,D52,tun,False,True,False,False,
++ mots vides,D53,tun,False,True,False,False,
++ mots vides,D54,ar,False,True,False,False,
++ mots vides,D55,ar,False,True,False,False,
++ mots vides,D56,fr,False,True,False,False,
++ normalisation,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
++ normalisation,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
++ normalisation,D03,fr,True,False,True,True,124 | 118 | 21 | 104 | 123
++ normalisation,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
++ normalisation,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
++ normalisation,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
++ normalisation,D07,fr,True,False,True,True,193 | 214 | 186 | 204 | 355
++ normalisation,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
++ normalisation,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
++ normalisation,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
++ normalisation,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
++ normalisation,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
++ normalisation,D13,tun,True,False,True,True,118 | 123 | 113 | 445 | 125
++ normalisation,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
++ normalisation,D15,fr,False,True,False,False,
++ normalisation,D16,fr,False,True,False,False,
++ normalisation,D17,fr,False,True,False,False,
++ normalisation,D18,fr,False,True,False,False,
++ normalisation,D19,fr,False,True,False,False,
++ normalisation,D20,fr,False,True,False,False,
++ normalisation,D21,fr,False,True,False,False,
++ normalisation,D22,fr,False,True,False,False,
++ normalisation,D23,fr,False,True,False,False,
++ normalisation,D24,fr,False,True,False,False,
++ normalisation,D25,fr,False,True,False,False,
++ normalisation,D26,fr,False,True,False,False,
++ normalisation,D27,ar,False,True,False,False,
++ normalisation,D28,tun,False,True,False,False,
++ normalisation,D29,fr,True,False,True,True,22 | 371 | 370 | 120 | 128
++ normalisation,D30,tun,True,True,False,False,
++ normalisation,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 132
++ normalisation,D32,tun,True,True,False,False,
++ normalisation,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
++ normalisation,D34,fr,True,False,True,True,122 | 120 | 64 | 112 | 128
++ normalisation,D35,tun,True,True,False,False,
++ normalisation,D36,fr,True,False,True,True,149 | 118 | 140 | 150 | 3
++ normalisation,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
++ normalisation,D38,tun,True,True,False,False,
++ normalisation,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
++ normalisation,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
++ normalisation,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
++ normalisation,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 196
++ normalisation,D43,fr,False,True,False,False,
++ normalisation,D44,fr,False,True,False,False,
++ normalisation,D45,fr,False,True,False,False,
++ normalisation,D46,fr,False,True,False,False,
++ normalisation,D47,fr,False,True,False,False,
++ normalisation,D48,fr,False,True,False,False,
++ normalisation,D49,fr,False,True,False,False,
++ normalisation,D50,fr,False,True,False,False,
++ normalisation,D51,fr,False,True,False,False,
++ normalisation,D52,tun,False,True,False,False,
++ normalisation,D53,tun,False,False,False,False,196 | 445 | 323 | 269 | 324
++ normalisation,D54,ar,False,True,False,False,
++ normalisation,D55,ar,False,True,False,False,
++ normalisation,D56,fr,False,True,False,False,
++ SymSpell,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
++ SymSpell,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
++ SymSpell,D03,fr,True,False,True,True,124 | 118 | 21 | 104 | 123
++ SymSpell,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
++ SymSpell,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
++ SymSpell,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
++ SymSpell,D07,fr,True,False,True,True,193 | 214 | 186 | 204 | 355
++ SymSpell,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
++ SymSpell,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
++ SymSpell,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
++ SymSpell,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
++ SymSpell,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
++ SymSpell,D13,tun,True,False,True,True,118 | 123 | 113 | 445 | 125
++ SymSpell,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
++ SymSpell,D15,fr,False,True,False,False,
++ SymSpell,D16,fr,False,True,False,False,
++ SymSpell,D17,fr,False,True,False,False,
++ SymSpell,D18,fr,False,True,False,False,
++ SymSpell,D19,fr,False,True,False,False,
++ SymSpell,D20,fr,False,True,False,False,
++ SymSpell,D21,fr,False,True,False,False,
++ SymSpell,D22,fr,False,True,False,False,
++ SymSpell,D23,fr,False,True,False,False,
++ SymSpell,D24,fr,False,True,False,False,
++ SymSpell,D25,fr,False,True,False,False,
++ SymSpell,D26,fr,False,True,False,False,
++ SymSpell,D27,ar,False,True,False,False,
++ SymSpell,D28,tun,False,True,False,False,
++ SymSpell,D29,fr,True,False,True,True,22 | 371 | 370 | 120 | 128
++ SymSpell,D30,tun,True,True,False,False,
++ SymSpell,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 132
++ SymSpell,D32,tun,True,True,False,False,
++ SymSpell,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
++ SymSpell,D34,fr,True,False,True,True,122 | 120 | 64 | 112 | 128
++ SymSpell,D35,tun,True,True,False,False,
++ SymSpell,D36,fr,True,False,True,True,149 | 118 | 140 | 150 | 3
++ SymSpell,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
++ SymSpell,D38,tun,True,True,False,False,
++ SymSpell,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
++ SymSpell,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
++ SymSpell,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
++ SymSpell,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 355
++ SymSpell,D43,fr,False,True,False,False,
++ SymSpell,D44,fr,False,True,False,False,
++ SymSpell,D45,fr,False,True,False,False,
++ SymSpell,D46,fr,False,True,False,False,
++ SymSpell,D47,fr,False,True,False,False,
++ SymSpell,D48,fr,False,True,False,False,
++ SymSpell,D49,fr,False,True,False,False,
++ SymSpell,D50,fr,False,True,False,False,
++ SymSpell,D51,fr,False,True,False,False,
++ SymSpell,D52,tun,False,True,False,False,
++ SymSpell,D53,tun,False,False,False,False,196 | 445 | 323 | 269 | 324
++ SymSpell,D54,ar,False,True,False,False,
++ SymSpell,D55,ar,False,True,False,False,
++ SymSpell,D56,fr,False,True,False,False,
++ synonymes,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
++ synonymes,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
++ synonymes,D03,fr,True,False,True,True,124 | 118 | 21 | 128 | 113
++ synonymes,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
++ synonymes,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
++ synonymes,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
++ synonymes,D07,fr,True,False,False,True,186 | 193 | 214 | 204 | 355
++ synonymes,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
++ synonymes,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
++ synonymes,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
++ synonymes,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
++ synonymes,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
++ synonymes,D13,tun,True,False,True,True,118 | 123 | 113 | 445 | 125
++ synonymes,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
++ synonymes,D15,fr,False,True,False,False,
++ synonymes,D16,fr,False,True,False,False,
++ synonymes,D17,fr,False,True,False,False,
++ synonymes,D18,fr,False,True,False,False,
++ synonymes,D19,fr,False,True,False,False,
++ synonymes,D20,fr,False,True,False,False,
++ synonymes,D21,fr,False,True,False,False,
++ synonymes,D22,fr,False,True,False,False,
++ synonymes,D23,fr,False,True,False,False,
++ synonymes,D24,fr,False,True,False,False,
++ synonymes,D25,fr,False,True,False,False,
++ synonymes,D26,fr,False,True,False,False,
++ synonymes,D27,ar,False,True,False,False,
++ synonymes,D28,tun,False,True,False,False,
++ synonymes,D29,fr,True,False,True,True,22 | 371 | 370 | 128 | 120
++ synonymes,D30,tun,True,True,False,False,
++ synonymes,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 106
++ synonymes,D32,tun,True,True,False,False,
++ synonymes,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
++ synonymes,D34,fr,True,False,True,True,122 | 128 | 120 | 64 | 112
++ synonymes,D35,tun,True,True,False,False,
++ synonymes,D36,fr,True,False,True,True,149 | 118 | 186 | 140 | 150
++ synonymes,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
++ synonymes,D38,tun,True,True,False,False,
++ synonymes,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
++ synonymes,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
++ synonymes,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
++ synonymes,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 355
++ synonymes,D43,fr,False,True,False,False,
++ synonymes,D44,fr,False,True,False,False,
++ synonymes,D45,fr,False,True,False,False,
++ synonymes,D46,fr,False,True,False,False,
++ synonymes,D47,fr,False,True,False,False,
++ synonymes,D48,fr,False,True,False,False,
++ synonymes,D49,fr,False,True,False,False,
++ synonymes,D50,fr,False,True,False,False,
++ synonymes,D51,fr,False,True,False,False,
++ synonymes,D52,tun,False,True,False,False,
++ synonymes,D53,tun,False,False,False,False,196 | 445 | 323 | 269 | 324
++ synonymes,D54,ar,False,True,False,False,
++ synonymes,D55,ar,False,True,False,False,
++ synonymes,D56,fr,False,True,False,False,
+pipeline complet,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
+pipeline complet,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
+pipeline complet,D03,fr,True,False,True,True,124 | 118 | 21 | 128 | 113
+pipeline complet,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
+pipeline complet,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
+pipeline complet,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
+pipeline complet,D07,fr,True,False,False,True,186 | 193 | 214 | 204 | 355
+pipeline complet,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
+pipeline complet,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
+pipeline complet,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
+pipeline complet,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
+pipeline complet,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
+pipeline complet,D13,tun,True,False,True,True,118 | 123 | 94 | 119 | 125
+pipeline complet,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
+pipeline complet,D15,fr,False,True,False,False,
+pipeline complet,D16,fr,False,True,False,False,
+pipeline complet,D17,fr,False,True,False,False,
+pipeline complet,D18,fr,False,False,False,False,121 | 143 | 122 | 28 | 120
+pipeline complet,D19,fr,False,True,False,False,
+pipeline complet,D20,fr,False,True,False,False,
+pipeline complet,D21,fr,False,True,False,False,
+pipeline complet,D22,fr,False,True,False,False,
+pipeline complet,D23,fr,False,True,False,False,
+pipeline complet,D24,fr,False,True,False,False,
+pipeline complet,D25,fr,False,True,False,False,
+pipeline complet,D26,fr,False,True,False,False,
+pipeline complet,D27,ar,False,True,False,False,
+pipeline complet,D28,tun,False,False,False,False,68 | 445 | 152 | 100 | 199
+pipeline complet,D29,fr,True,False,True,True,22 | 371 | 370 | 128 | 120
+pipeline complet,D30,tun,True,False,False,False,6 | 445 | 68 | 370 | 347
+pipeline complet,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 106
+pipeline complet,D32,tun,True,False,False,False,106 | 95 | 445 | 90 | 100
+pipeline complet,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
+pipeline complet,D34,fr,True,False,True,True,122 | 128 | 120 | 64 | 112
+pipeline complet,D35,tun,True,False,False,False,133 | 445 | 68 | 94 | 119
+pipeline complet,D36,fr,True,False,True,True,149 | 118 | 186 | 140 | 150
+pipeline complet,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
+pipeline complet,D38,tun,True,False,False,False,445 | 154 | 387 | 220 | 34
+pipeline complet,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
+pipeline complet,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
+pipeline complet,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
+pipeline complet,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 196
+pipeline complet,D43,fr,False,True,False,False,
+pipeline complet,D44,fr,False,True,False,False,
+pipeline complet,D45,fr,False,True,False,False,
+pipeline complet,D46,fr,False,True,False,False,
+pipeline complet,D47,fr,False,True,False,False,
+pipeline complet,D48,fr,False,True,False,False,
+pipeline complet,D49,fr,False,True,False,False,
+pipeline complet,D50,fr,False,True,False,False,
+pipeline complet,D51,fr,False,True,False,False,
+pipeline complet,D52,tun,False,False,False,False,445 | 182 | 428 | 232 | 233 bis
+pipeline complet,D53,tun,False,False,False,False,196 | 323 | 324 | 269 | 168
+pipeline complet,D54,ar,False,True,False,False,
+pipeline complet,D55,ar,False,False,False,False,5 | 420 | 317 | 419 | 414
+pipeline complet,D56,fr,False,True,False,False,
+complet sans translittération,D01,fr,True,False,True,True,23 | 24 | 411 | 20 | 193
+complet sans translittération,D02,fr,True,False,True,True,118 | 125 | 113 | 123 | 119
+complet sans translittération,D03,fr,True,False,True,True,124 | 118 | 21 | 128 | 113
+complet sans translittération,D04,fr,True,False,True,True,140 | 108 | 89 | 151 | 139
+complet sans translittération,D05,fr,True,False,True,True,147 | 148 | 183 | 42 | 18
+complet sans translittération,D06,fr,True,False,False,False,182 | 185 | 191 | 211 | 195
+complet sans translittération,D07,fr,True,False,False,True,186 | 193 | 214 | 204 | 355
+complet sans translittération,D08,fr,True,False,True,True,268 | 316 | 94 | 261 | 73
+complet sans translittération,D09,fr,True,False,True,True,366 | 320 | 324 | 389 | 417
+complet sans translittération,D10,fr,True,False,True,True,402 | 118 | 181 | 89 | 125
+complet sans translittération,D11,fr,True,False,True,True,252 | 248 | 246 | 247 | 242
+complet sans translittération,D12,fr,True,False,True,True,68 | 71 | 69 | 70 | 29
+complet sans translittération,D13,tun,True,False,True,True,118 | 123 | 113 | 445 | 125
+complet sans translittération,D14,fr,False,False,False,False,365 | 435 | 139 | 44 | 7
+complet sans translittération,D15,fr,False,True,False,False,
+complet sans translittération,D16,fr,False,True,False,False,
+complet sans translittération,D17,fr,False,True,False,False,
+complet sans translittération,D18,fr,False,False,False,False,121 | 143 | 122 | 28 | 120
+complet sans translittération,D19,fr,False,True,False,False,
+complet sans translittération,D20,fr,False,True,False,False,
+complet sans translittération,D21,fr,False,True,False,False,
+complet sans translittération,D22,fr,False,True,False,False,
+complet sans translittération,D23,fr,False,True,False,False,
+complet sans translittération,D24,fr,False,True,False,False,
+complet sans translittération,D25,fr,False,True,False,False,
+complet sans translittération,D26,fr,False,True,False,False,
+complet sans translittération,D27,ar,False,True,False,False,
+complet sans translittération,D28,tun,False,True,False,False,
+complet sans translittération,D29,fr,True,False,True,True,22 | 371 | 370 | 128 | 120
+complet sans translittération,D30,tun,True,True,False,False,
+complet sans translittération,D31,fr,True,False,True,True,79 | 90 | 114 | 94 | 106
+complet sans translittération,D32,tun,True,True,False,False,
+complet sans translittération,D33,fr,True,False,True,True,85 | 108 | 18 | 86 | 433
+complet sans translittération,D34,fr,True,False,True,True,122 | 128 | 120 | 64 | 112
+complet sans translittération,D35,tun,True,True,False,False,
+complet sans translittération,D36,fr,True,False,True,True,149 | 118 | 186 | 140 | 150
+complet sans translittération,D37,fr,True,False,True,True,160 | 164 | 162 | 161 | 168
+complet sans translittération,D38,tun,True,True,False,False,
+complet sans translittération,D39,fr,True,False,True,True,191 | 194 | 195 | 187 | 196
+complet sans translittération,D40,fr,True,False,True,True,216 | 221 | 185 | 227 | 184
+complet sans translittération,D41,fr,True,False,True,True,232 | 218 | 228 | 151 | 185
+complet sans translittération,D42,tun,True,False,False,False,191 | 194 | 195 | 187 | 355
+complet sans translittération,D43,fr,False,True,False,False,
+complet sans translittération,D44,fr,False,True,False,False,
+complet sans translittération,D45,fr,False,True,False,False,
+complet sans translittération,D46,fr,False,True,False,False,
+complet sans translittération,D47,fr,False,True,False,False,
+complet sans translittération,D48,fr,False,True,False,False,
+complet sans translittération,D49,fr,False,True,False,False,
+complet sans translittération,D50,fr,False,True,False,False,
+complet sans translittération,D51,fr,False,True,False,False,
+complet sans translittération,D52,tun,False,True,False,False,
+complet sans translittération,D53,tun,False,False,False,False,196 | 445 | 323 | 269 | 324
+complet sans translittération,D54,ar,False,True,False,False,
+complet sans translittération,D55,ar,False,False,False,False,5 | 420 | 317 | 419 | 414
+complet sans translittération,D56,fr,False,True,False,False,

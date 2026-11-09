@@ -33,6 +33,8 @@
       thinking: "Recherche dans le corpus…",
       results_title: "Articles trouvés",
       abs_title: "Aucune réponse trouvée",
+      did_you_mean: "Vouliez-vous dire :",
+      show_steps: "Voir les étapes", detected: "langue détectée",
       err_title: "Une erreur est survenue",
       err_conn: "Impossible de joindre le serveur local. Relancez l'API puis réessayez.",
       empty: "Les articles correspondants s'afficheront ici avec leur citation.",
@@ -73,6 +75,8 @@
       thinking: "جارٍ البحث في المحتوى…",
       results_title: "الفصول المطابقة",
       abs_title: "لا توجد إجابة",
+      did_you_mean: "هل تقصد:",
+      show_steps: "عرض المراحل", detected: "اللغة المكتشفة",
       err_title: "حدث خطأ",
       err_conn: "تعذر الاتصال بالخادم المحلي. أعد تشغيل الواجهة ثم حاول مجدداً.",
       empty: "ستظهر الفصول المطابقة هنا مع مصادرها.",
@@ -174,9 +178,26 @@
       <h3>${esc(t("err_title"))}</h3><p>${esc(msg)}</p></div></div>`;
   }
 
+  // Bandeau affiché seulement si le correcteur SymSpell a modifié la question.
+  function bandeauCorrection(d) {
+    if (!d.corrections || !d.corrections.length) return "";
+    return `<div class="did-you-mean">${esc(t("did_you_mean"))}
+      <strong>${esc(d.question_corrigee.replace(/[\s?؟]+$/, ""))}</strong> ?</div>`;
+  }
+
+  // Mode debug : question après chaque étape du pipeline (src/pipeline/traitement.py).
+  function panneauEtapes(d) {
+    if (!d.etapes || !d.etapes.length) return "";
+    const lignes = d.etapes.map(e =>
+      `<li><span class="step-name">${esc(e.etape)}</span><code dir="auto">${esc(e.sortie || "∅")}</code></li>`
+    ).join("");
+    return `<details class="steps"><summary>${esc(t("show_steps"))}
+      — ${esc(t("detected"))} : ${esc(d.langue_detectee || d.langue)}</summary><ol>${lignes}</ol></details>`;
+  }
+
   function rendre(d) {
     if (d.abstention) {
-      results.innerHTML = `<div class="abs-card">${ICON_WARN}<div>
+      results.innerHTML = bandeauCorrection(d) + panneauEtapes(d) + `<div class="abs-card">${ICON_WARN}<div>
         <h3>${esc(t("abs_title"))}</h3>
         <p>${esc(d.message || "")}</p></div></div>`;
       return;
@@ -197,7 +218,7 @@
         <p class="answer-text${ar}">${esc(c.texte)}</p>
       </article>`;
     }).join("");
-    results.innerHTML = `<div class="result-meta">
+    results.innerHTML = bandeauCorrection(d) + panneauEtapes(d) + `<div class="result-meta">
         ${esc(t("results_title"))} — ${d.candidats.length}
       </div>${cartes}
       <p class="latency">${d.latence_ms} ${esc(t("ms"))}</p>`;
