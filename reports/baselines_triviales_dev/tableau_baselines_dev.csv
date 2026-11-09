@@ -1,0 +1,5 @@
+systeme,fr_R@1,fr_R@5,fr_abst_tort,fr_refus_hors,tun_R@1,tun_R@5,tun_abst_tort,tun_refus_hors,ar_R@1,ar_R@5,ar_abst_tort,ar_refus_hors,toutes_R@1,toutes_R@5,toutes_abst_tort,toutes_refus_hors
+aléatoire (graine 2026),0/21,0/21,0/21,0/23,0/6,0/6,0/6,0/3,—,—,—,0/3,0/27,0/27,0/27,0/29
+mots communs,13/21,20/21,0/21,0/23,0/6,3/6,0/6,0/3,—,—,—,0/3,13/27,23/27,0/27,0/29
+"BM25 historique (seuil 9,085)",20/21,20/21,0/21,22/23,1/6,1/6,4/6,2/3,—,—,—,3/3,21/27,21/27,4/27,27/29
+"pipeline complet (seuil 9,085)",19/21,20/21,0/21,21/23,1/6,2/6,0/6,0/3,—,—,—,2/3,20/27,22/27,0/27,23/29

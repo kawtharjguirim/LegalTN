@@ -739,3 +739,19 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Correctif (sans remettre les mots vides dans le dictionnaire) : un mot inconnu au moins aussi proche d'un mot vide que du meilleur mot du corpus est considéré comme un mot vide mal écrit ; il est retiré dans le pipeline (comme à l'étape 3) et affiché sous sa forme correcte dans « Vouliez-vous dire ». Test `test_mot_vide_mal_ecrit_n_est_pas_corrige_en_mot_de_contenu`. Aucun seuil ni paramètre modifié.
 - Effet : l'expérience SymSpell (`reports/correction_symspell/`) est inchangée (correcteur par défaut sans liste de mots vides). L'ablation du pipeline change pour la seule configuration « pipeline complet » : R@5 tunisien 1/6 → 2/6 (D35 : l'article 122 entre dans le top 5), R@5 total 21/27 → 22/27, R@5 avec fautes 21/27 → 22/27. Nouvelle sortie : `reports/pipeline_dev_v2/` ; l'ancienne (`reports/pipeline_dev/`) est conservée pour traçabilité.
 - Commande : `python -X utf8 src/evaluation/evaluer_pipeline_dev.py --rapports reports/pipeline_dev_v2`. Tests : 73 réussis, 1 xfail, 0 échec.
+
+## 2026-11-09 — Baselines triviales du retrieval (dev uniquement)
+
+- Objectif : comparer le BM25 à des baselines triviales (exigence du guide Bronze : « toujours donner la baseline triviale à côté »).
+- Script : `python -X utf8 src/evaluation/baselines_triviales_dev.py --rapports reports/baselines_triviales_dev` (deux exécutions, sorties identiques). Jeu : dev v2 (27 dans / 29 hors). Aucun fichier de `data/test_locked/` lu ; seuil 9,085 inchangé.
+- Baselines : **aléatoire** = 5 articles distincts tirés au hasard (graine 2026) parmi 439 intitulés FR / 441 AR, jamais d'abstention (R@5 attendu ≈ 5/439 = 0,011) ; **mots communs** = articles classés par nombre de mots distincts partagés avec la question (mêmes jetons que le BM25 historique, sans pondération idf ni longueur), abstention seulement sans aucun mot commun.
+
+| Système | R@1 | R@5 | Abstentions à tort | Refus hors périmètre | FR R@5 | TUN R@5 |
+|---|---|---|---|---|---|---|
+| aléatoire (graine 2026) | 0/27 | 0/27 | 0/27 | 0/29 | 0/21 | 0/6 |
+| mots communs | 13/27 | 23/27 | 0/27 | 0/29 | 20/21 | 3/6 |
+| BM25 historique, seuil 9,085 | 21/27 | 21/27 | 4/27 | 27/29 | 20/21 | 1/6 |
+| pipeline complet, seuil 9,085 | 20/27 | 22/27 | 0/27 | 23/29 | 20/21 | 2/6 |
+
+- Lecture : l'apport du BM25 sur les mots communs porte sur le **classement** (R@1 13 → 21/27) : la pondération idf fait passer devant les articles qui partagent les mots rares de la question. En R@5, les mots communs (23/27) égalent le BM25 **sans seuil** (23/27, entrée du 27 octobre) ; l'écart avec le BM25 à seuil (21/27) vient du seuil, qui coûte 2 réussites en R@5 mais refuse 27/29 hors périmètre (0/29 pour les mots communs, qui ne s'abstiennent jamais). Les mots communs trouvent 3/6 tunisiens en top 5 : à analyser (les mots français des questions arabizi).
+- Limites : 27 questions dans le périmètre ; baseline aléatoire sur un seul tirage (graine fixe) ; dev déjà consulté. Aucune mesure sur test gelé.
