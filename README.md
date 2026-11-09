@@ -55,7 +55,7 @@ des **modèles de 5 exemples à valider**.
 .venv\Scripts\python -m pytest -q -p no:cacheprovider
 ```
 
-Dernier résultat : **72 réussis, 1 xfail, 0 échec**. Le xfail strict documente
+Dernier résultat : **79 réussis, 1 xfail, 0 échec**. Le xfail strict documente
 une limite volontairement conservée du BM25 historique seul (sigle « CDI ») ;
 le pipeline complet répond sur ce cas. Les tests ne lancent aucune mesure sur
 les jeux gelés : ils vérifient leurs SHA-256.
@@ -93,6 +93,10 @@ Les scripts refusent d'écrire dans un dossier existant non vide : choisir un do
   sur le pipeline final, sur le dev.
 - Annotations humaines (obligations, NER, rappel d'alignement) encore vides.
 - Licence de l'édition IORT à clarifier avant tout partage public.
+
+Documents à compléter par l'équipe : [](rapport_etape.md) (annotations
+et lexiques à remplir à la main), [](data_card.md), [](model_cards/),
+[](declaration_usage_IA.md) — brouillons marqués « À VÉRIFIER ».
 
 Historique de la reprise du projet : [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md) et
 [`PIPELINE.md`](PIPELINE.md).
