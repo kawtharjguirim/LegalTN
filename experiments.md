@@ -703,3 +703,32 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Effet : « quel est le préavi pour un contart CDI ? » → « quel est le préavis pour un contrat à durée indéterminée ? » ; top 3 = 14, 14 bis, 6. L'article 14 reste devant le 14 bis : le doublon n'était pas la seule cause (« contrat » et « durée indéterminée » sont très présents dans l'article 14).
 - Dev v2 : tableau et détails de `reports/correction_symspell/` régénérés à l'identique (octet par octet) : le correctif ne touche aucune question du dev.
 - Erreurs D17 (fausse correction « loyor » → « loger ») et D18 (CNSS, hors périmètre accepté) consignées dans `reports/erreurs_analysees_dev.csv`, fichier d'analyse manuelle (distinct de `erreurs_dev.csv`, régénéré par script).
+
+## 2026-11-09 — Pipeline complet de traitement des questions : intégration et ablation (dev uniquement)
+
+- Branche `pipeline-complet` (depuis `correction-symspell`). Sans LLM ni modèle neuronal.
+- Corrections du dépôt : `.gitignore` et retrait de `.venv` (13 608 fichiers) et des `.pyc` de l'index ; `.gitattributes` (`data/test_locked/*.csv -text`) et restauration CRLF de `ocr_candidats_v1.csv` et `ocr_baseline_v1.csv` : SHA-256 de référence retrouvés à l'octet près (`0969c1aa…`, `f2be31a9…`), vérifiés dans un clone neuf, hash non recalculés. `questions_reference_v2.csv` correspondait déjà en LF ; `obligations_candidats_test_v1.csv` sans hash de référence, laissé tel quel. `demarrer.ps1` recrée le `.venv` local et installe `requirements.txt` (vérifié : venv cassé remplacé, API lancée). Étapes 4 et 5 de `demo_evaluation.sh` désactivées (scripts absents).
+- Pipeline (`src/pipeline/traitement.py`) : 1 langue (fr / ar / tunisien / arabizi) → 2 translittération arabizi (mots français connus et nombres gardés) → 3 mots vides (`data/lexiques/stopwords_{fr,ar}.txt`, avant la normalisation de ى ; négations et modaux protégés par le code) → 4 normalisation → 5 lexique tunisien et sigles → 6 racinisation arabe légère (≥ 3 lettres) → 7 SymSpell (mots vides ni comptés ni proposés ; noms propres intacts) → 8 synonymes (expansion, pas remplacement) → BM25. Les étapes 3, 4 et 6 sont aussi appliquées au corpus indexé. Arabizi : jetons arabes sur le corpus AR, mots français sur le corpus FR, scores additionnés par numéro d'article (corpus alignés). Seuil 9,085 inchangé pour toutes les configurations.
+- Fichiers d'entrée absents du dépôt : `data/dev/lexique_tunisien_v1.csv` et `data/dev/synonymes_juridiques_v1.csv` créés comme MODÈLES (5 exemples chacun, marqués « à valider ») ; les résultats ci-dessous dépendent de ces modèles.
+- Mode debug : `repondre()` renvoie la question après chaque étape (`etapes`) ; interface : bouton « Voir les étapes » ; CLI : `--debug`.
+- Commande : `python -X utf8 src/evaluation/evaluer_pipeline_dev.py --rapports reports/pipeline_dev` (deux exécutions, sorties identiques). Dev v2 : FR 21 dans / 23 hors, tunisien (arabizi) 6 / 3, AR 0 / 3. Fautes : graine 2026 (mêmes que l'expérience SymSpell).
+
+| Configuration | FR R@1 | FR R@5 | FR abst. tort | FR refus hors | TUN R@1 | TUN R@5 | TUN abst. tort | TUN refus hors | AR refus hors | Total R@1 | Total R@5 | Total abst. tort | Total refus hors | Fautes R@1 | Fautes R@5 | Fautes refus hors |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 19/27 | 20/27 | 29/29 |
+| + mots vides | 20/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 4/6 | 3/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 18/27 | 20/27 | 29/29 |
+| + normalisation | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 18/27 | 20/27 | 29/29 |
+| + SymSpell | 20/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 21/27 | 21/27 | 4/27 | 27/29 | 21/27 | 21/27 | 25/29 |
+| + synonymes | 19/21 | 20/21 | 0/21 | 22/23 | 1/6 | 1/6 | 4/6 | 2/3 | 3/3 | 20/27 | 21/27 | 4/27 | 27/29 | 20/27 | 21/27 | 25/29 |
+| pipeline complet | 19/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 0/6 | 0/3 | 2/3 | 20/27 | 21/27 | 0/27 | 23/29 | 20/27 | 21/27 | 24/29 |
+| complet sans translittération (diagnostic) | 19/21 | 20/21 | 0/21 | 21/23 | 1/6 | 1/6 | 4/6 | 2/3 | 2/3 | 20/27 | 21/27 | 4/27 | 25/29 | 20/27 | 21/27 | 24/29 |
+
+- Lecture :
+  - Mots vides et normalisation : aucun effet sur le rappel ici (la baseline les faisait déjà, avec d'autres listes).
+  - SymSpell : seul gain net, sur questions avec fautes (R@1 18 → 21/27), au prix de refus hors périmètre (29 → 25/29 ; cf. D17, D18).
+  - Synonymes (modèles) : −1 en R@1 (D07, salarié→travailleur) ; article 79 remonté du rang 35 au rang 4 pour la question « durée légale … hebdomadaire » (partie C), sans passer en tête.
+  - Translittération arabizi : supprime les 4 abstentions à tort tunisiennes mais sans gain de rappel (1/6) et accepte les 3 hors périmètre tunisiens. La ligne diagnostic montre qu'elle explique l'essentiel de la baisse des refus (25 → 23/29). La racinisation arabe fait accepter D55 (AR hors périmètre).
+  - Bilan honnête : le pipeline complet n'améliore pas le dev v2 par rapport à la baseline. Le seuil 9,085 n'est plus adapté aux scores fusionnés FR+AR et aux index racinisés ; il est laissé tel quel par décision de l'équipe, en vue d'un réglage unique sur le pipeline final.
+- Limites : 27 questions dans le périmètre, 6 tunisiennes, 0 arabe dans le périmètre (rappel AR non mesurable) ; lexiques modèles non validés ; dev déjà consulté. Aucune mesure sur test gelé.
+- Erreurs ajoutées à `reports/erreurs_analysees_dev.csv` : question hebdomadaire (partie C), D07, arabizi D30/D32/D35/D38 et D28/D52.
+- Tests : `python -m pytest -q -p no:cacheprovider` → `72 passed, 1 xfailed, 17 subtests passed` (0 échec). Le xfail strict est le cas CDI du BM25 historique seul, volontairement conservé ; la chaîne complète répond sur ce cas.
