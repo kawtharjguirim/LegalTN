@@ -11,9 +11,10 @@
       status: "Statut", online: "en ligne", offline: "hors ligne",
       disclaimer: "Démo locale — ne remplace pas un avis juridique.",
       demo_badge: "Démo locale",
-      eyebrow: "Assistant juridique intelligent",
-      hero_title: "Votre copilote pour le Code du travail tunisien",
-      hero_sub: "Interrogez le corpus bilingue arabe/français en langage naturel. Chaque réponse cite l'article, sa page et son extrait — ou s'abstient honnêtement.",
+      skip: "Aller à la recherche", tagline: "Code du travail tunisien — recherche d'articles",
+      eyebrow: "Édition bilingue arabe / français",
+      hero_title: "Trouver l'article du Code du travail qui répond à votre question",
+      hero_sub: "Posez votre question en français, en arabe, en tunisien ou en arabizi. Chaque réponse cite l'article, sa page et son texte — ou l'assistant s'abstient si la question sort du Code.",
       cta_start: "Commencer une recherche", cta_corpus: "Voir le corpus",
       stat_bil: "2 langues", stat_bil_l: "Corpus bilingue aligné",
       f1_t: "Réponses sourcées",
@@ -22,8 +23,9 @@
       f2_d: "Posez votre question en français ou en arabe : le corpus correspondant est interrogé.",
       f3_t: "Abstention honnête",
       f3_d: "Hors périmètre, l'assistant refuse de répondre plutôt que d'inventer un article.",
-      ask: "Posez votre question juridique", send: "Envoyer",
-      placeholder: "Ex. : Quel est le délai de préavis en cas de licenciement ?",
+      ask: "Posez votre question juridique", send: "Rechercher", examples: "Exemples :",
+      placeholder: "Ex. : Quel est le préavis de rupture d'un CDI ?",
+      source: "Code du travail, édition bilingue IORT", latency_l: "Temps de réponse", qmark: "?",
       // Questions d'exemple vérifiées (bon article en tête ; la dernière doit s'abstenir).
       suggestions: [
         "Quel est le préavis de rupture d'un CDI ?",
@@ -32,7 +34,7 @@
         "Quelle est la capitale de la Tunisie ?",
       ],
       thinking: "Recherche dans le corpus…",
-      results_title: "Articles trouvés",
+      results_title: "articles trouvés",
       abs_title: "Question hors du Code du travail",
       did_you_mean: "Vouliez-vous dire :",
       show_steps: "Voir les étapes", detected: "Langue détectée",
@@ -62,9 +64,10 @@
       status: "الحالة", online: "متصل", offline: "غير متصل",
       disclaimer: "عرض محلي — لا يغني عن استشارة قانونية.",
       demo_badge: "عرض محلي",
-      eyebrow: "مساعد قانوني ذكي",
-      hero_title: "مرافقك الذكي لمجلة الشغل التونسية",
-      hero_sub: "اطرح سؤالك باللغة الطبيعية على النص الثنائي عربي/فرنسي. كل إجابة تذكر الفصل وصفحته ونصه الحرفي — أو تمتنع بصدق.",
+      skip: "الانتقال إلى البحث", tagline: "مجلة الشغل التونسية — البحث في الفصول",
+      eyebrow: "النسخة الثنائية عربي / فرنسي",
+      hero_title: "ابحث عن فصل مجلة الشغل الذي يجيب عن سؤالك",
+      hero_sub: "اطرح سؤالك بالعربية أو بالفرنسية أو بالتونسية أو بالعربيزي. كل إجابة تذكر الفصل وصفحته ونصه — أو يمتنع المساعد إذا كان السؤال خارج المجلة.",
       cta_start: "ابدأ بحثاً", cta_corpus: "اطلع على المحتوى",
       stat_bil: "لغتان", stat_bil_l: "نص ثنائي اللغة مطابق",
       f1_t: "إجابات موثقة",
@@ -73,8 +76,9 @@
       f2_d: "اطرح سؤالك بالفرنسية أو العربية : يُستجوب النص المناسب.",
       f3_t: "امتناع صادق",
       f3_d: "خارج المجال، يرفض المساعد الإجابة بدل اختلاق فصل.",
-      ask: "اطرح سؤالك القانوني", send: "إرسال",
-      placeholder: "مثال : ما هي مدة الإعلام قبل الفسخ ؟",
+      ask: "اطرح سؤالك القانوني", send: "بحث", examples: "أمثلة:",
+      placeholder: "مثال: ما هي مدة الإعلام بإنهاء عقد الشغل؟",
+      source: "مجلة الشغل، النسخة الثنائية للمطبعة الرسمية", latency_l: "زمن الاستجابة", qmark: "؟",
       // أمثلة تم التحقق منها
       suggestions: [
         "ما هي مدة الإعلام بإنهاء عقد الشغل؟",
@@ -82,7 +86,7 @@
         "Quel est le préavis de rupture d'un CDI ?",
       ],
       thinking: "جارٍ البحث في المحتوى…",
-      results_title: "الفصول المطابقة",
+      results_title: "فصول مطابقة",
       abs_title: "سؤال خارج مجلة الشغل",
       did_you_mean: "هل تقصد:",
       show_steps: "عرض المراحل", detected: "اللغة المكتشفة",
@@ -119,7 +123,10 @@
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     $$("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
     $$("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-    $$(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+    $$(".lang-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.lang === lang);
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
     titre();
     rendreSuggestions();
     if (state.dernier) rendre(state.dernier);   // réafficher le résultat dans la nouvelle langue
@@ -131,22 +138,14 @@
   function naviguer(vue) {
     state.vue = vue;
     $$(".view").forEach(v => v.classList.toggle("active", v.id === `view-${vue}`));
-    $$(".nav-item").forEach(n => n.classList.toggle("active", n.dataset.nav === vue));
+    $$(".nav-item").forEach(n => {
+      n.classList.toggle("active", n.dataset.nav === vue);
+      if (n.dataset.nav === vue) n.setAttribute("aria-current", "page"); else n.removeAttribute("aria-current");
+    });
     titre();
-    fermerSidebar();
+    window.scrollTo(0, 0);
     if (vue === "recherche") { $("#input-q").focus(); }
-    $(".content").scrollTop = 0;
   }
-
-  /* ---------- sidebar mobile ---------- */
-  const sidebar = $("#sidebar"), overlay = $("#overlay");
-  const fermerSidebar = () => { sidebar.classList.remove("open"); overlay.classList.remove("show"); };
-  $("#btn-menu").onclick = () => {
-    if (window.innerWidth > 900) sidebar.classList.toggle("collapsed");
-    else { sidebar.classList.add("open"); overlay.classList.add("show"); }
-  };
-  $("#btn-close").onclick = fermerSidebar;
-  overlay.onclick = fermerSidebar;
 
   /* ---------- santé API ---------- */
   async function chargerSante() {
@@ -226,7 +225,7 @@
     if (!d || !d.corrections || !d.corrections.length) { el.hidden = true; el.innerHTML = ""; return; }
     const corriges = d.corrections.flatMap(c => String(c.apres).match(MOT) || []).filter(m => m.length >= 3);
     const q = d.question_corrigee.replace(/[\s?؟]+$/, "");
-    el.innerHTML = `${esc(t("did_you_mean"))} <span class="dym-q${classeTexte(q)}" ${attrTexte(q)}>${surligner(q, corriges)}</span> ?`;
+    el.innerHTML = `<span class="dym-l">${esc(t("did_you_mean"))}</span> <span class="dym-q" ${attrTexte(q)}>${surligner(q, corriges)}</span> ${esc(t("qmark"))}`;
     el.hidden = false;
   }
 
@@ -234,18 +233,20 @@
   function panneauEtapes(d) {
     if (!state.debug || !d.etapes || !d.etapes.length) return "";
     const nomLangue = (I18N[state.lang].lang_names || {})[d.langue_detectee] || d.langue_detectee || d.langue;
-    const corr = (d.corrections || []).map(c =>
-      `<li><code dir="auto">${esc(c.avant)}</code> → <code dir="auto">${esc(c.apres)}</code></li>`).join("");
-    const syn = (d.synonymes_ajoutes || []).map(x => `<code dir="auto">${esc(x)}</code>`).join(" ");
+    // Les sorties arabes reçoivent lang="ar" : la police monospace casserait les liaisons.
+    const code = (x) => `<code ${attrTexte(x)}>${esc(x)}</code>`;
+    const corr = (d.corrections || []).map(c => `<li>${code(c.avant)} → ${code(c.apres)}</li>`).join("");
+    const syn = (d.synonymes_ajoutes || []).map(code).join(" ");
     const etapes = d.etapes.map(e =>
-      `<li><span class="step-name">${esc(e.etape)}</span><code dir="auto">${esc(e.sortie || "∅")}</code></li>`).join("");
+      `<tr><th scope="row">${esc(e.etape)}</th><td>${code(e.sortie || "∅")}</td></tr>`).join("");
     return `<details class="steps" open><summary>${esc(t("show_steps"))}</summary>
       <dl class="steps-meta">
         <dt>${esc(t("detected"))}</dt><dd>${esc(nomLangue)}</dd>
+        <dt>${esc(t("latency_l"))}</dt><dd>${esc(fmtMs(d.latence_ms))} ${esc(t("ms"))}</dd>
         <dt>${esc(t("corrections_l"))}</dt><dd>${corr ? `<ul>${corr}</ul>` : esc(t("none"))}</dd>
         <dt>${esc(t("synonyms_l"))}</dt><dd>${syn || esc(t("none"))}</dd>
       </dl>
-      <p class="steps-sub">${esc(t("steps_l"))}</p><ol>${etapes}</ol></details>`;
+      <table class="steps-table"><caption>${esc(t("steps_l"))}</caption><tbody>${etapes}</tbody></table></details>`;
   }
 
   function niveau(pct) {
@@ -268,7 +269,7 @@
     return `<article class="card card-answer" style="animation-delay:${i * 60}ms">
       <div class="answer-head">
         <span class="badge-article">${esc(t("article"))} <bdi>${esc(c.article)}</bdi></span>
-        <span class="badge-page">${esc(t("page"))} ${esc(String(c.page))}</span>
+        <span class="citation">${esc(t("source"))} · ${esc(t("page"))} ${esc(String(c.page))}</span>
         <span class="rel rel-${cls}">
           <span class="rel-label">${esc(t("relevance"))} : ${esc(lib)}</span>
           <span class="score-bar" role="meter" aria-label="${esc(t("relevance"))}"
@@ -299,7 +300,7 @@
     }
     const max = Math.max(...d.candidats.map(c => c.score), 1);
     results.innerHTML = panneauEtapes(d) + `<div class="result-meta">
-        <span>${esc(t("results_title"))} — ${d.candidats.length}</span>
+        <span>${d.candidats.length} ${esc(t("results_title"))}</span>
         <span class="latency-inline">${esc(fmtMs(d.latence_ms))} ${esc(t("ms"))}</span>
       </div>${d.candidats.map((c, i) => carte(c, i, max)).join("")}`;
   }

@@ -1,0 +1,156 @@
+{
+  "accueil_fr": {
+    "contraste": {
+      "total": 33,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": false,
+      "debordement": false
+    }
+  },
+  "fr_bureau_debug": {
+    "contraste": {
+      "total": 113,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": "Vouliez-vous dire : quel est le préavis de rupture d'un contrat à durée indéterminée ?",
+      "articles": [
+        "Article 14 bis",
+        "Article 14",
+        "Article 6"
+      ],
+      "marks": 46,
+      "etapes": true,
+      "abstention": false,
+      "latence": "6,8 ms",
+      "debordement": false
+    }
+  },
+  "ar_bureau_debug": {
+    "contraste": {
+      "total": 107,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": "هل تقصد: ما هي مدة الاعلام بانهاء عقد الشغل ؟",
+      "articles": [
+        "الفصل 14 bis",
+        "الفصل 14",
+        "الفصل 23"
+      ],
+      "marks": 49,
+      "etapes": true,
+      "abstention": false,
+      "latence": "7 م.ث",
+      "debordement": false
+    }
+  },
+  "fr_abstention": {
+    "contraste": {
+      "total": 28,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": true,
+      "latence": "0,4 ms",
+      "debordement": false
+    }
+  },
+  "accueil_ar": {
+    "contraste": {
+      "total": 33,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": false,
+      "debordement": false
+    }
+  },
+  "ar_abstention": {
+    "contraste": {
+      "total": 27,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": true,
+      "latence": "0,4 م.ث",
+      "debordement": false
+    }
+  },
+  "fr_mobile": {
+    "contraste": {
+      "total": 112,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": "Vouliez-vous dire : quel est le préavis de rupture d'un contrat à durée indéterminée ?",
+      "articles": [
+        "Article 14 bis",
+        "Article 14",
+        "Article 6"
+      ],
+      "marks": 46,
+      "etapes": true,
+      "abstention": false,
+      "latence": "4,2 ms",
+      "debordement": false
+    }
+  },
+  "ar_mobile": {
+    "contraste": {
+      "total": 106,
+      "echecs": []
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": "هل تقصد: ما هي مدة الاعلام بانهاء عقد الشغل ؟",
+      "articles": [
+        "الفصل 14 bis",
+        "الفصل 14",
+        "الفصل 23"
+      ],
+      "marks": 49,
+      "etapes": true,
+      "abstention": false,
+      "latence": "7,6 م.ث",
+      "debordement": false
+    }
+  },
+  "fr_clavier": {
+    "contraste": {
+      "total": 70,
+      "echecs": []
+    },
+    "etat": {
+      "tag": "BUTTON",
+      "texte": "Voir la version arabe",
+      "focusVisible": true,
+      "outline": "solid rgb(29, 95, 168)"
+    }
+  }
+}
