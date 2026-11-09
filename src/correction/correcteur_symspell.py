@@ -134,9 +134,13 @@ def _lexique_general(langue: str) -> set[str]:
 
 class Correcteur:
     def __init__(self, textes_fr: list[str] | None = None, textes_ar: list[str] | None = None,
-                 lexique_general: bool = True):
+                 lexique_general: bool = True, mots_vides: dict[str, set[str]] | None = None):
         self.lexique_fr = _lexique_general("fr") if lexique_general else set()
+        self.lexique_fr |= {normaliser_fr(w) for w in self.lexique_fr}
         self.lexique_ar = _lexique_general("ar") if lexique_general else set()
+        # Mots vides : ni comptés dans les dictionnaires, ni proposés comme correction.
+        vides_fr = {normaliser_fr(w) for w in (mots_vides or {}).get("fr", ())}
+        vides_ar = {normaliser_ar(w) for w in (mots_vides or {}).get("ar", ())}
         textes_fr = _lire_textes(CORPUS_FR, "texte_fr") if textes_fr is None else textes_fr
         textes_ar = _lire_textes(CORPUS_AR, "texte_ar") if textes_ar is None else textes_ar
 
@@ -147,6 +151,8 @@ class Correcteur:
         for texte in textes_fr:
             for mot in re.findall(r"[^\W\d_]+", texte.lower()):
                 cle = normaliser_fr(mot)
+                if cle in vides_fr:
+                    continue
                 self.freq_fr[cle] += 1
                 formes.setdefault(cle, Counter())[mot] += 1
         self.forme_fr = {cle: c.most_common(1)[0][0] for cle, c in formes.items()}
@@ -157,6 +163,8 @@ class Correcteur:
         self.freq_ar_reduit: Counter = Counter()
         for texte in textes_ar:
             for mot in re.findall(r"[^\W\d_]+", normaliser_ar(texte)):
+                if mot in vides_ar:
+                    continue
                 self.freq_ar[mot] += 1
                 self.freq_ar_reduit[reduire_ar(mot)[1]] += 1
         self.sym_ar = _symspell(self.freq_ar_reduit)
@@ -185,6 +193,22 @@ class Correcteur:
         if not suggestions:
             return None
         return prefixe + suggestions[0].term + suffixe
+
+    def est_mot_francais(self, mot: str) -> bool:
+        """Mot connu du Code ou du lexique général français (sert à la translittération)."""
+        cle = normaliser_fr(mot)
+        return cle in self.freq_fr or cle in self.lexique_fr or mot.lower() in self.lexique_fr
+
+    def corriger_jeton(self, jeton: str, langue: str, deja_reduit: bool = False) -> str | None:
+        """Version pipeline : jeton déjà normalisé (et déjà racinisé en arabe si deja_reduit)."""
+        if any(c.isdigit() for c in jeton) or len(jeton) < LONGUEUR_MIN:
+            return None
+        if langue != "ar" or not deja_reduit:
+            return self.corriger_mot(jeton, langue)
+        if jeton in self.freq_ar_reduit or jeton in self.freq_ar or jeton in self.lexique_ar:
+            return None
+        s = self.sym_ar.lookup(jeton, Verbosity.CLOSEST, max_edit_distance=distance_max(jeton))
+        return s[0].term if s else None
 
     def corriger_mot(self, mot: str, langue: str) -> str | None:
         """Retourne la correction, ou None si le mot doit rester tel quel."""

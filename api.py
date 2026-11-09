@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from src.demo import repondre
+from src.pipeline import traitement
 
 
 MAX_OCTETS = 16384
@@ -28,7 +29,7 @@ MIME = {
 
 
 def creer_serveur(port=8000):
-    corpus = repondre.charger()
+    chaine = traitement.pipeline()
 
     class Requetes(BaseHTTPRequestHandler):
         def envoyer(self, statut, contenu):
@@ -70,7 +71,7 @@ def creer_serveur(port=8000):
                 return
             self.envoyer(200, {
                 "statut": "ok",
-                "articles_indexes": {langue: len(c.articles) for langue, c in corpus.items()},
+                "articles_indexes": {langue: len(i["articles"]) for langue, i in chaine.index.items()},
             })
 
         def do_POST(self):
@@ -113,7 +114,7 @@ def creer_serveur(port=8000):
                 self.envoyer(400, {"erreur": "k doit être un entier entre 1 et 5."})
                 return
             debut = time.perf_counter()
-            resultat = repondre.repondre_question(corpus, question.strip(), k=k)
+            resultat = chaine.repondre(question.strip(), k=k)
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION

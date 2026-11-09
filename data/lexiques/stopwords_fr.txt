@@ -1,0 +1,76 @@
+# Mots vides français : retirés de la question ET du corpus avant la recherche.
+# Une ligne = un mot. Les lignes commençant par # sont des commentaires.
+# JAMAIS ici (sens juridique) : négations ne, pas, sans, sauf, aucun ;
+# modaux doit, peut, interdit, obligatoire. Le code les protège même s'ils sont ajoutés.
+# articles et déterminants
+le
+la
+les
+l
+un
+une
+des
+du
+de
+d
+au
+aux
+ce
+cet
+cette
+ces
+son
+sa
+ses
+leur
+leurs
+# prépositions et conjonctions
+a
+à
+en
+dans
+par
+pour
+sur
+avec
+et
+ou
+mais
+donc
+ainsi
+y
+# pronoms
+il
+elle
+ils
+elles
+on
+se
+s
+qu
+que
+qui
+dont
+je
+nous
+vous
+lui
+me
+c
+j
+m
+n
+t
+# auxiliaires
+est
+sont
+être
+été
+avoir
+ont
+# mots interrogatifs
+quel
+quelle
+quels
+quelles
+comment

@@ -171,7 +171,16 @@ def main():
     if not question:
         print("Question vide.")
         return
-    afficher(question, repondre_question(corpus, question, corriger="--sans-correction" not in sys.argv))
+    if "--historique" in sys.argv:          # chaîne de la correction seule (expérience SymSpell)
+        resultat = repondre_question(corpus, question, corriger="--sans-correction" not in sys.argv)
+    else:                                   # pipeline complet (src/pipeline/traitement.py)
+        sys.path.insert(0, str(RACINE))
+        from src.pipeline.traitement import pipeline
+        resultat = pipeline().repondre(question)
+        if "--debug" in sys.argv:
+            for e in resultat["etapes"]:
+                print(f"  [{e['etape']}] {e['sortie']}")
+    afficher(question, resultat)
 
 
 if __name__ == "__main__":
