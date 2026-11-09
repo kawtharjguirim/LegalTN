@@ -1,0 +1,12 @@
+# Dépendances complètes de LegalTN (versions épinglées, vérifiées sous Python 3.11.9).
+# Alignement
+numpy==2.4.1
+pandas==2.2.2
+# Correction orthographique des questions (src/correction/)
+symspellpy==6.10.2        # licence MIT : algorithme SymSpell (correction)
+pyspellchecker==0.9.1     # licence MIT : lexiques FR/AR, utilisés seulement pour NE PAS corriger un mot connu
+# NER par CRF (src/ner_crf/)
+sklearn-crfsuite==0.5.0
+nltk==3.9.1
+# Tests
+pytest==9.2.0

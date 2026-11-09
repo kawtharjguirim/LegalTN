@@ -113,8 +113,7 @@ def creer_serveur(port=8000):
                 self.envoyer(400, {"erreur": "k doit être un entier entre 1 et 5."})
                 return
             debut = time.perf_counter()
-            langue = repondre.detecter_langue(question)
-            resultat = corpus[langue].repondre(question.strip(), k=k)
+            resultat = repondre.repondre_question(corpus, question.strip(), k=k)
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION

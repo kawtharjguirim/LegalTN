@@ -1,0 +1,225 @@
+condition,id,question,question_corrigee,corrections,abstention,top5,reference
+propres / sans correction,D01,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,0,False,23 | 24 | 411 | 20 | 193,23
+propres / sans correction,D02,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,0,False,118 | 125 | 113 | 123 | 119,118
+propres / sans correction,D03,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,0,False,124 | 118 | 21 | 104 | 123,124
+propres / sans correction,D04,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,0,False,140 | 108 | 89 | 151 | 139,140
+propres / sans correction,D05,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,0,False,147 | 148 | 183 | 42 | 216,147
+propres / sans correction,D06,Quelles sont les attributions des conseils de prud'hommes ?,Quelles sont les attributions des conseils de prud'hommes ?,0,False,182 | 185 | 191 | 211 | 195,183
+propres / sans correction,D07,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,0,False,193 | 214 | 186 | 204 | 355,193
+propres / sans correction,D08,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,0,False,268 | 316 | 94 | 261 | 73,268
+propres / sans correction,D09,"Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?","Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",0,False,366 | 320 | 324 | 389 | 417,366
+propres / sans correction,D10,Un travail commandé et non publié doit-il être payé ?,Un travail commandé et non publié doit-il être payé ?,0,False,402 | 118 | 181 | 89 | 125,402
+propres / sans correction,D11,Des unions de syndicats peuvent-elles être constituées ?,Des unions de syndicats peuvent-elles être constituées ?,0,False,252 | 248 | 246 | 247 | 242,252
+propres / sans correction,D12,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,0,False,68 | 71 | 69 | 70 | 29,68
+propres / sans correction,D13,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?","Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",0,False,118 | 123 | 113 | 445 | 125,118
+propres / sans correction,D14,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,0,False,365 | 435 | 151 | 139 | 30,n/a
+propres / sans correction,D15,Quelle est la durée de validité d'un passeport tunisien ?,Quelle est la durée de validité d'un passeport tunisien ?,0,True,,n/a
+propres / sans correction,D16,Quel est le délai de recours devant le tribunal administratif ?,Quel est le délai de recours devant le tribunal administratif ?,0,True,,n/a
+propres / sans correction,D17,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,0,True,,n/a
+propres / sans correction,D18,Quel est le montant de la pension de retraite versée par la CNSS ?,Quel est le montant de la pension de retraite versée par la CNSS ?,0,True,,n/a
+propres / sans correction,D19,Quelle est la peine prévue pour la conduite en état d'ivresse ?,Quelle est la peine prévue pour la conduite en état d'ivresse ?,0,True,,n/a
+propres / sans correction,D20,Quelle est la TVA appliquée aux services de restauration ?,Quelle est la TVA appliquée aux services de restauration ?,0,True,,n/a
+propres / sans correction,D21,Un commerçant peut-il vendre des produits périmés ?,Un commerçant peut-il vendre des produits périmés ?,0,True,,n/a
+propres / sans correction,D22,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,0,True,,n/a
+propres / sans correction,D23,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,0,True,,n/a
+propres / sans correction,D24,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,0,True,,n/a
+propres / sans correction,D25,Quel est le taux d'intérêt légal en Tunisie ?,Quel est le taux d'intérêt légal en Tunisie ?,0,True,,n/a
+propres / sans correction,D26,Quelle est la durée de la scolarité obligatoire en Tunisie ?,Quelle est la durée de la scolarité obligatoire en Tunisie ?,0,True,,n/a
+propres / sans correction,D27,ما هي شروط الحصول على رخصة السياقة؟,ما هي شروط الحصول على رخصة السياقة؟,0,True,,n/a
+propres / sans correction,D28,"Ken na3mel test el code el route, chniya el mawed el lazmin ?","Ken na3mel test el code el route, chniya el mawed el lazmin ?",0,True,,n/a
+propres / sans correction,D29,"Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?","Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",0,False,22 | 371 | 370 | 120 | 128,22
+propres / sans correction,D30,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",0,True,,22
+propres / sans correction,D31,Quelle est la durée maximale du travail effectif par semaine ?,Quelle est la durée maximale du travail effectif par semaine ?,0,False,79 | 22 | 90 | 114 | 94,79
+propres / sans correction,D32,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,0,True,,79
+propres / sans correction,D33,Les salariés peuvent-ils travailler sans horaire précisé ?,Les salariés peuvent-ils travailler sans horaire précisé ?,0,False,85 | 108 | 18 | 86 | 433,85
+propres / sans correction,D34,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,0,False,122 | 120 | 64 | 112 | 128,122
+propres / sans correction,D35,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?","El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",0,True,,122
+propres / sans correction,D36,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,0,False,149 | 3 | 118 | 145 | 150,149
+propres / sans correction,D37,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,0,False,160 | 164 | 162 | 161 | 168,160
+propres / sans correction,D38,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,0,True,,170
+propres / sans correction,D39,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,0,False,191 | 194 | 195 | 187 | 196,191
+propres / sans correction,D40,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,0,False,216 | 221 | 185 | 227 | 184,216
+propres / sans correction,D41,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,0,False,232 | 218 | 228 | 151 | 185,232
+propres / sans correction,D42,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",0,False,191 | 194 | 195 | 187 | 196,198
+propres / sans correction,D43,Quel est le montant de la taxe de séjour à Hammamet ?,Quel est le montant de la taxe de séjour à Hammamet ?,0,True,,n/a
+propres / sans correction,D44,Comment demander un permis de construire pour une villa ?,Comment demander un permis de construire pour une villa ?,0,True,,n/a
+propres / sans correction,D45,Quelle est la durée de la garde à vue en matière pénale ?,Quelle est la durée de la garde à vue en matière pénale ?,0,True,,n/a
+propres / sans correction,D46,Une banque peut-elle refuser un crédit immobilier à un salarié ?,Une banque peut-elle refuser un crédit immobilier à un salarié ?,0,True,,n/a
+propres / sans correction,D47,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,0,True,,n/a
+propres / sans correction,D48,Quel est le délai de paiement des factures d'eau à la SONEDE ?,Quel est le délai de paiement des factures d'eau à la SONEDE ?,0,True,,n/a
+propres / sans correction,D49,Quel est le régime fiscal des auto-entrepreneurs ?,Quel est le régime fiscal des auto-entrepreneurs ?,0,True,,n/a
+propres / sans correction,D50,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,0,True,,n/a
+propres / sans correction,D51,Quelle est la durée d'un mandat de député en Tunisie ?,Quelle est la durée d'un mandat de député en Tunisie ?,0,True,,n/a
+propres / sans correction,D52,Kifech n7ell chikaya 3la el bank ?,Kifech n7ell chikaya 3la el bank ?,0,True,,n/a
+propres / sans correction,D53,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,0,False,196 | 445 | 323 | 269 | 324,n/a
+propres / sans correction,D54,ما هو أجل تقديم الطعن في الحكم الجزائي؟,ما هو أجل تقديم الطعن في الحكم الجزائي؟,0,True,,n/a
+propres / sans correction,D55,ما هي شروط كراء المحل التجاري؟,ما هي شروط كراء المحل التجاري؟,0,True,,n/a
+propres / sans correction,D56,Quel est le délai pour contester une amende fiscale ?,Quel est le délai pour contester une amende fiscale ?,0,True,,n/a
+propres / avec correction,D01,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,0,False,23 | 24 | 411 | 20 | 193,23
+propres / avec correction,D02,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,0,False,118 | 125 | 113 | 123 | 119,118
+propres / avec correction,D03,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,0,False,124 | 118 | 21 | 104 | 123,124
+propres / avec correction,D04,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,0,False,140 | 108 | 89 | 151 | 139,140
+propres / avec correction,D05,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,0,False,147 | 148 | 183 | 42 | 216,147
+propres / avec correction,D06,Quelles sont les attributions des conseils de prud'hommes ?,Quelles sont les attributions des conseils de prud'hommes ?,0,False,182 | 185 | 191 | 211 | 195,183
+propres / avec correction,D07,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,0,False,193 | 214 | 186 | 204 | 355,193
+propres / avec correction,D08,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,0,False,268 | 316 | 94 | 261 | 73,268
+propres / avec correction,D09,"Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?","Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",0,False,366 | 320 | 324 | 389 | 417,366
+propres / avec correction,D10,Un travail commandé et non publié doit-il être payé ?,Un travail commandé et non publié doit-il être payé ?,0,False,402 | 118 | 181 | 89 | 125,402
+propres / avec correction,D11,Des unions de syndicats peuvent-elles être constituées ?,Des unions de syndicats peuvent-elles être constituées ?,0,False,252 | 248 | 246 | 247 | 242,252
+propres / avec correction,D12,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,0,False,68 | 71 | 69 | 70 | 29,68
+propres / avec correction,D13,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?","Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",0,False,118 | 123 | 113 | 445 | 125,118
+propres / avec correction,D14,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,0,False,365 | 435 | 151 | 139 | 30,n/a
+propres / avec correction,D15,Quelle est la durée de validité d'un passeport tunisien ?,Quelle est la durée de validité d'un passeport tunisien ?,0,True,,n/a
+propres / avec correction,D16,Quel est le délai de recours devant le tribunal administratif ?,Quel est le délai de recours devant le tribunal administratif ?,0,True,,n/a
+propres / avec correction,D17,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,0,True,,n/a
+propres / avec correction,D18,Quel est le montant de la pension de retraite versée par la CNSS ?,Quel est le montant de la pension de retraite versée par la caisse nationale de sécurité sociale ?,1,False,121 | 143 | 122 | 28 | 120,n/a
+propres / avec correction,D19,Quelle est la peine prévue pour la conduite en état d'ivresse ?,Quelle est la peine prévue pour la conduite en état d'ivresse ?,0,True,,n/a
+propres / avec correction,D20,Quelle est la TVA appliquée aux services de restauration ?,Quelle est la TVA appliquée aux services de restauration ?,0,True,,n/a
+propres / avec correction,D21,Un commerçant peut-il vendre des produits périmés ?,Un commerçant peut-il vendre des produits périmés ?,0,True,,n/a
+propres / avec correction,D22,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,0,True,,n/a
+propres / avec correction,D23,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,0,True,,n/a
+propres / avec correction,D24,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,0,True,,n/a
+propres / avec correction,D25,Quel est le taux d'intérêt légal en Tunisie ?,Quel est le taux d'intérêt légal en Tunisie ?,0,True,,n/a
+propres / avec correction,D26,Quelle est la durée de la scolarité obligatoire en Tunisie ?,Quelle est la durée de la scolarité obligatoire en Tunisie ?,0,True,,n/a
+propres / avec correction,D27,ما هي شروط الحصول على رخصة السياقة؟,ما هي شروط الحصول على رخصة السياقة؟,0,True,,n/a
+propres / avec correction,D28,"Ken na3mel test el code el route, chniya el mawed el lazmin ?","Ken na3mel test el code el route, chniya el mawed el lazmin ?",0,True,,n/a
+propres / avec correction,D29,"Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?","Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",0,False,22 | 371 | 370 | 120 | 128,22
+propres / avec correction,D30,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",0,True,,22
+propres / avec correction,D31,Quelle est la durée maximale du travail effectif par semaine ?,Quelle est la durée maximale du travail effectif par semaine ?,0,False,79 | 22 | 90 | 114 | 94,79
+propres / avec correction,D32,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,0,True,,79
+propres / avec correction,D33,Les salariés peuvent-ils travailler sans horaire précisé ?,Les salariés peuvent-ils travailler sans horaire précisé ?,0,False,85 | 108 | 18 | 86 | 433,85
+propres / avec correction,D34,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,0,False,122 | 120 | 64 | 112 | 128,122
+propres / avec correction,D35,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?","El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",0,True,,122
+propres / avec correction,D36,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,0,False,149 | 3 | 118 | 145 | 150,149
+propres / avec correction,D37,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,0,False,160 | 164 | 162 | 161 | 168,160
+propres / avec correction,D38,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,0,True,,170
+propres / avec correction,D39,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,0,False,191 | 194 | 195 | 187 | 196,191
+propres / avec correction,D40,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,0,False,216 | 221 | 185 | 227 | 184,216
+propres / avec correction,D41,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,0,False,232 | 218 | 228 | 151 | 185,232
+propres / avec correction,D42,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",0,False,191 | 194 | 195 | 187 | 196,198
+propres / avec correction,D43,Quel est le montant de la taxe de séjour à Hammamet ?,Quel est le montant de la taxe de séjour à Hammamet ?,0,True,,n/a
+propres / avec correction,D44,Comment demander un permis de construire pour une villa ?,Comment demander un permis de construire pour une villa ?,0,True,,n/a
+propres / avec correction,D45,Quelle est la durée de la garde à vue en matière pénale ?,Quelle est la durée de la garde à vue en matière pénale ?,0,True,,n/a
+propres / avec correction,D46,Une banque peut-elle refuser un crédit immobilier à un salarié ?,Une banque peut-elle refuser un crédit immobilier à un salarié ?,0,True,,n/a
+propres / avec correction,D47,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,0,True,,n/a
+propres / avec correction,D48,Quel est le délai de paiement des factures d'eau à la SONEDE ?,Quel est le délai de paiement des factures d'eau à la SONEDE ?,0,True,,n/a
+propres / avec correction,D49,Quel est le régime fiscal des auto-entrepreneurs ?,Quel est le régime fiscal des auto-entrepreneurs ?,0,True,,n/a
+propres / avec correction,D50,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,0,True,,n/a
+propres / avec correction,D51,Quelle est la durée d'un mandat de député en Tunisie ?,Quelle est la durée d'un mandat de député en Tunisie ?,0,True,,n/a
+propres / avec correction,D52,Kifech n7ell chikaya 3la el bank ?,Kifech n7ell chikaya 3la el bank ?,0,True,,n/a
+propres / avec correction,D53,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,0,False,196 | 445 | 323 | 269 | 324,n/a
+propres / avec correction,D54,ما هو أجل تقديم الطعن في الحكم الجزائي؟,ما هو أجل تقديم الطعن في الحكم الجزائي؟,0,True,,n/a
+propres / avec correction,D55,ما هي شروط كراء المحل التجاري؟,ما هي شروط كراء المحل التجاري؟,0,True,,n/a
+propres / avec correction,D56,Quel est le délai pour contester une amende fiscale ?,Quel est le délai pour contester une amende fiscale ?,0,True,,n/a
+avec fautes / sans correction,D01,Que peut obteir un salarié en cas de rzupture abusive de son contrat de travail ?,Que peut obteir un salarié en cas de rzupture abusive de son contrat de travail ?,0,False,24 | 120 | 23 | 27 | 258,23
+avec fautes / sans correction,D02,Un congé payé de cinq jours ouvrablas peut-il être fractionn ?,Un congé payé de cinq jours ouvrablas peut-il être fractionn ?,0,False,118 | 125 | 94 | 113 | 119,118
+avec fautes / sans correction,D03,Dans quel adélai un salarié doit-il prendrve un congé de quinze jours ?,Dans quel adélai un salarié doit-il prendrve un congé de quinze jours ?,0,False,124 | 118 | 104 | 123 | 113,124
+avec fautes / sans correction,D04,À quelle fréquence doivent être paysé les salaires des travalileurs payés à l'heure ou à la journée ?,À quelle fréquence doivent être paysé les salaires des travalileurs payés à l'heure ou à la journée ?,0,False,140 | 108 | 89 | 151 | 149,140
+avec fautes / sans correction,D05,Dans quel délai se prescrivent les actions entre employeurs et slaariés nées des rleations de travail ?,Dans quel délai se prescrivent les actions entre employeurs et slaariés nées des rleations de travail ?,0,False,147 | 148 | 42 | 216 | 183,147
+avec fautes / sans correction,D06,Quelles sont les atrtibutions des ocnseils de prud'hommes ?,Quelles sont les atrtibutions des ocnseils de prud'hommes ?,0,True,,183
+avec fautes / sans correction,D07,Un employeur peut-il rompre le contrat d'un salrié parce qu'il sièdge au conseil de prud'hommes ?,Un employeur peut-il rompre le contrat d'un salrié parce qu'il sièdge au conseil de prud'hommes ?,0,False,193 | 214 | 355 | 220 | 202,193
+avec fautes / sans correction,D08,Quelle est l'amende pour défaut de présentatmion d'un regisstre exigé par la loi ?,Quelle est l'amende pour défaut de présentatmion d'un regisstre exigé par la loi ?,0,True,,268
+avec fautes / sans correction,D09,"Qui veilze à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de plice judiciaire ?","Qui veilze à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de plice judiciaire ?",0,False,366 | 320 | 389 | 324 | 309,366
+avec fautes / sans correction,D10,Un travapil commandé et non phublié doit-il être payé ?,Un travapil commandé et non phublié doit-il être payé ?,0,False,402 | 118 | 127 | 112 | 125,402
+avec fautes / sans correction,D11,Des unionvs de syndicats peuevnt-elles être constituées ?,Des unionvs de syndicats peuevnt-elles être constituées ?,0,False,252 | 248 | 247 | 246 | 254,252
+avec fautes / sans correction,D12,Dans quels cas l'interdiction du travail de nuit des femmers n'est-elle pas appliquéze ?,Dans quels cas l'interdiction du travail de nuit des femmers n'est-elle pas appliquéze ?,0,False,68 | 71 | 69 | 70 | 25,68
+avec fautes / sans correction,D13,"Ken el congé mta3i 5 ayem ouvrables, lezem yokun mtawel wela yemken yet9asem ?","Ken el congé mta3i 5 ayem ouvrables, lezem yokun mtawel wela yemken yet9asem ?",0,False,118 | 123 | 113 | 445 | 125,118
+avec fautes / sans correction,D14,Quel est le taux de l'impôzt sur le revelnu applicable aux salaires en Tunisie ?,Quel est le taux de l'impôzt sur le revelnu applicable aux salaires en Tunisie ?,0,True,,n/a
+avec fautes / sans correction,D15,Quelle est la durqée de validitré d'un passeport tunisien ?,Quelle est la durqée de validitré d'un passeport tunisien ?,0,True,,n/a
+avec fautes / sans correction,D16,Quel est le dézlai de recours wdevant le tribunal administratif ?,Quel est le dézlai de recours wdevant le tribunal administratif ?,0,True,,n/a
+avec fautes / sans correction,D17,Un propriétaire peut-il augmenter le loyor d'un logement en cous de bail ?,Un propriétaire peut-il augmenter le loyor d'un logement en cous de bail ?,0,True,,n/a
+avec fautes / sans correction,D18,Quel est le montant de la pesion de reteraite versée par la CNSS ?,Quel est le montant de la pesion de reteraite versée par la CNSS ?,0,True,,n/a
+avec fautes / sans correction,D19,uelle est la peine prévue pour la conduit en état d'ivresse ?,uelle est la peine prévue pour la conduit en état d'ivresse ?,0,True,,n/a
+avec fautes / sans correction,D20,uelle est la TVA appliquéve aux services de restauration ?,uelle est la TVA appliquéve aux services de restauration ?,0,True,,n/a
+avec fautes / sans correction,D21,Un ocmmerçant peut-il vendre des produitr périmés ?,Un ocmmerçant peut-il vendre des produitr périmés ?,0,True,,n/a
+avec fautes / sans correction,D22,Quelles sont les conditionu pour créer une sociéét anonyme en Tunisie ?,Quelles sont les conditionu pour créer une sociéét anonyme en Tunisie ?,0,True,,n/a
+avec fautes / sans correction,D23,Quel est le dzlai de prescription d'une action en responsabiliét après un accident de la route ?,Quel est le dzlai de prescription d'une action en responsabiliét après un accident de la route ?,0,True,,n/a
+avec fautes / sans correction,D24,Quelle est l'innemnité de licenciement d'un onctionnaire de l'État ?,Quelle est l'innemnité de licenciement d'un onctionnaire de l'État ?,0,True,,n/a
+avec fautes / sans correction,D25,Quel est le taux d'nitérêt léal en Tunisie ?,Quel est le taux d'nitérêt léal en Tunisie ?,0,True,,n/a
+avec fautes / sans correction,D26,Qulele est la durée de la scolarité obligatiore en Tunisie ?,Qulele est la durée de la scolarité obligatiore en Tunisie ?,0,True,,n/a
+avec fautes / sans correction,D27,ما هي شروط الحجول على رخصة السيضقة؟,ما هي شروط الحجول على رخصة السيضقة؟,0,True,,n/a
+avec fautes / sans correction,D28,"Ken na3mel test el code el route, chniva el bmawed el lazmin ?","Ken na3mel test el code el route, chniva el bmawed el lazmin ?",0,True,,n/a
+avec fautes / sans correction,D29,"Quelle indemnité eçoit un salqrié licencié après sa période d'essai, hors faute grave ?","Quelle indemnité eçoit un salqrié licencié après sa période d'essai, hors faute grave ?",0,False,22 | 371 | 370 | 410 | 411,22
+avec fautes / sans correction,D30,"Ken tet7arraq men el kwedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arraq men el kwedma b3ed el période d'essai, chnowa ye5ssni ?",0,True,,22
+avec fautes / sans correction,D31,Quelle est la durrée maximale du traail effectif par semaine ?,Quelle est la durrée maximale du traail effectif par semaine ?,0,False,79 | 22 | 140 | 233 bis | 300,79
+avec fautes / sans correction,D32,Ch7al el 7ad el aksa mta3 el 5edma fil selaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil selaine ?,0,True,,79
+avec fautes / sans correction,D33,Les salariés peuyvent-ils travailler sans horaire précisé ?,Les salariés peuyvent-ils travailler sans horaire précisé ?,0,False,85 | 108 | 86 | 373 | 133,85
+avec fautes / sans correction,D34,Un salarié a-t-il drooit à un congé à l'occasion de la naissance de son enfant ?,Un salarié a-t-il drooit à un congé à l'occasion de la naissance de son enfant ?,0,False,122 | 120 | 64 | 112 | 132,122
+avec fautes / sans correction,D35,"El kadem 3uandou 7a9 congé 3and wlidou, chnowa ya3mel ?","El kadem 3uandou 7a9 congé 3and wlidou, chnowa ya3mel ?",0,True,,122
+avec fautes / sans correction,D36,Un employeur peut-il retenir sur les saaires les solmes qui lui sont dues pour fournitures diverses ?,Un employeur peut-il retenir sur les saaires les solmes qui lui sont dues pour fournitures diverses ?,0,False,149 | 118 | 283 | 333 | 21,149
+avec fautes / sans correction,D37,Sur quelles questions la commission consultative d'entrepride est-elle conssltée ?,Sur quelles questions la commission consultative d'entrepride est-elle conssltée ?,0,False,160 | 164 | 168 | 162 | 161,160
+avec fautes / sans correction,D38,Chkoun el mas2oul 3an tanfiz el 9andun el 5edma fel mou2asasa ?,Chkoun el mas2oul 3an tanfiz el 9andun el 5edma fel mou2asasa ?,0,True,,170
+avec fautes / sans correction,D39,Qui fixe les conditions de dsignation et le régime disciplinairxe des conseillers prud'hommes ?,Qui fixe les conditions de dsignation et le régime disciplinairxe des conseillers prud'hommes ?,0,False,191 | 194 | 195 | 187 | 196,191
+avec fautes / sans correction,D40,Les conselis de prud'homms statuent-ils toujours en premier ressort ?,Les conselis de prud'homms statuent-ils toujours en premier ressort ?,0,False,216 | 221 | 185 | 227 | 214,216
+avec fautes / sans correction,D41,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'homes ?,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'homes ?,0,False,232 | 218 | 228 | 151 | 222,232
+avec fautes / sans correction,D42,"Ken wa7ed mel consaeillers prud'ommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel consaeillers prud'ommes ma7ta5ch, chkoun y7ker el 9adhiya ?",0,True,,198
+avec fautes / sans correction,D43,Quel est le motant de la taxe de séjour à Hmamamet ?,Quel est le motant de la taxe de séjour à Hmamamet ?,0,True,,n/a
+avec fautes / sans correction,D44,Comment demander un perms de constriure pour une villa ?,Comment demander un perms de constriure pour une villa ?,0,True,,n/a
+avec fautes / sans correction,D45,Quelle est la duréne de la garde à vue en matière pénal ?,Quelle est la duréne de la garde à vue en matière pénal ?,0,True,,n/a
+avec fautes / sans correction,D46,Une banque peut-elle refuser un créidt immobilier à un salaribé ?,Une banque peut-elle refuser un créidt immobilier à un salaribé ?,0,True,,n/a
+avec fautes / sans correction,D47,Qulele est la responsabilité d'un hôtelier en cas de vol dans une chmbre ?,Qulele est la responsabilité d'un hôtelier en cas de vol dans une chmbre ?,0,True,,n/a
+avec fautes / sans correction,D48,Quel est le délai de paiemnt des factuses d'eau à la SONEDE ?,Quel est le délai de paiemnt des factuses d'eau à la SONEDE ?,0,True,,n/a
+avec fautes / sans correction,D49,Quel est le rgime fiscal des auto-etrepreneurs ?,Quel est le rgime fiscal des auto-etrepreneurs ?,0,True,,n/a
+avec fautes / sans correction,D50,Quelles sont les règlse de sstationnement sur le trottoir à Sousse ?,Quelles sont les règlse de sstationnement sur le trottoir à Sousse ?,0,True,,n/a
+avec fautes / sans correction,D51,Quelle est la durmée d'un mvandat de député en Tunisie ?,Quelle est la durmée d'un mvandat de député en Tunisie ?,0,True,,n/a
+avec fautes / sans correction,D52,Kfech n7ell chikaiya 3la el bank ?,Kfech n7ell chikaiya 3la el bank ?,0,True,,n/a
+avec fautes / sans correction,D53,hnowa el 3a9ouba 3la el sar9a fel code pénnal ?,hnowa el 3a9ouba 3la el sar9a fel code pénnal ?,0,True,,n/a
+avec fautes / sans correction,D54,ما هو أجل تقديم اطعن في احكم الجزائي؟,ما هو أجل تقديم اطعن في احكم الجزائي؟,0,True,,n/a
+avec fautes / sans correction,D55,ما هي شروط كراء المحبل التجاي؟,ما هي شروط كراء المحبل التجاي؟,0,True,,n/a
+avec fautes / sans correction,D56,Quel est le délai pour wontester une amende fiscyle ?,Quel est le délai pour wontester une amende fiscyle ?,0,True,,n/a
+avec fautes / avec correction,D01,Que peut obteir un salarié en cas de rzupture abusive de son contrat de travail ?,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,2,False,23 | 24 | 411 | 20 | 193,23
+avec fautes / avec correction,D02,Un congé payé de cinq jours ouvrablas peut-il être fractionn ?,Un congé payé de cinq jours ouvrables peut-il être fraction ?,2,False,118 | 125 | 113 | 123 | 119,118
+avec fautes / avec correction,D03,Dans quel adélai un salarié doit-il prendrve un congé de quinze jours ?,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,2,False,124 | 118 | 21 | 104 | 123,124
+avec fautes / avec correction,D04,À quelle fréquence doivent être paysé les salaires des travalileurs payés à l'heure ou à la journée ?,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,2,False,140 | 108 | 89 | 151 | 139,140
+avec fautes / avec correction,D05,Dans quel délai se prescrivent les actions entre employeurs et slaariés nées des rleations de travail ?,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,2,False,147 | 148 | 183 | 42 | 216,147
+avec fautes / avec correction,D06,Quelles sont les atrtibutions des ocnseils de prud'hommes ?,Quelles sont les attributions des conseils de prud'hommes ?,2,False,182 | 185 | 191 | 211 | 195,183
+avec fautes / avec correction,D07,Un employeur peut-il rompre le contrat d'un salrié parce qu'il sièdge au conseil de prud'hommes ?,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,2,False,193 | 214 | 186 | 204 | 355,193
+avec fautes / avec correction,D08,Quelle est l'amende pour défaut de présentatmion d'un regisstre exigé par la loi ?,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,2,False,268 | 316 | 94 | 261 | 73,268
+avec fautes / avec correction,D09,"Qui veilze à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de plice judiciaire ?","Qui seize à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",2,False,366 | 320 | 324 | 389 | 74,366
+avec fautes / avec correction,D10,Un travapil commandé et non phublié doit-il être payé ?,Un travail commandé et non publié doit-il être payé ?,2,False,402 | 118 | 181 | 89 | 125,402
+avec fautes / avec correction,D11,Des unionvs de syndicats peuevnt-elles être constituées ?,Des unions de syndicats peuvent-elles être constituées ?,2,False,252 | 248 | 246 | 247 | 242,252
+avec fautes / avec correction,D12,Dans quels cas l'interdiction du travail de nuit des femmers n'est-elle pas appliquéze ?,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,2,False,68 | 71 | 69 | 70 | 29,68
+avec fautes / avec correction,D13,"Ken el congé mta3i 5 ayem ouvrables, lezem yokun mtawel wela yemken yet9asem ?","Ken el congé mta3i 5 ayem ouvrables, lezem yokun mtawel wela yemken yet9asem ?",0,False,118 | 123 | 113 | 445 | 125,118
+avec fautes / avec correction,D14,Quel est le taux de l'impôzt sur le revelnu applicable aux salaires en Tunisie ?,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,2,False,365 | 435 | 151 | 139 | 30,n/a
+avec fautes / avec correction,D15,Quelle est la durqée de validitré d'un passeport tunisien ?,Quelle est la durée de validité d'un passeport tunisien ?,2,True,,n/a
+avec fautes / avec correction,D16,Quel est le dézlai de recours wdevant le tribunal administratif ?,Quel est le délai de recours devant le tribunal administratif ?,2,True,,n/a
+avec fautes / avec correction,D17,Un propriétaire peut-il augmenter le loyor d'un logement en cous de bail ?,Un propriétaire peut-il augmenter le loger d'un logement en cous de bail ?,1,False,347 | 304 | 4 | 345 | 142,n/a
+avec fautes / avec correction,D18,Quel est le montant de la pesion de reteraite versée par la CNSS ?,Quel est le montant de la pension de retraite versée par la caisse nationale de sécurité sociale ?,3,False,121 | 143 | 122 | 28 | 120,n/a
+avec fautes / avec correction,D19,uelle est la peine prévue pour la conduit en état d'ivresse ?,elle est la peine prévue pour la conduit en état d'ivresse ?,1,True,,n/a
+avec fautes / avec correction,D20,uelle est la TVA appliquéve aux services de restauration ?,elle est la TVA appliquée aux services de restauration ?,2,True,,n/a
+avec fautes / avec correction,D21,Un ocmmerçant peut-il vendre des produitr périmés ?,Un commerçants peut-il vendre des produits périmés ?,2,False,409 | 138 | 420 | 242 | 152,n/a
+avec fautes / avec correction,D22,Quelles sont les conditionu pour créer une sociéét anonyme en Tunisie ?,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,2,True,,n/a
+avec fautes / avec correction,D23,Quel est le dzlai de prescription d'une action en responsabiliét après un accident de la route ?,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,2,True,,n/a
+avec fautes / avec correction,D24,Quelle est l'innemnité de licenciement d'un onctionnaire de l'État ?,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,2,True,,n/a
+avec fautes / avec correction,D25,Quel est le taux d'nitérêt léal en Tunisie ?,Quel est le taux d'intérêt légal en Tunisie ?,2,True,,n/a
+avec fautes / avec correction,D26,Qulele est la durée de la scolarité obligatiore en Tunisie ?,Quelle est la durée de la scolarité obligatoire en Tunisie ?,2,True,,n/a
+avec fautes / avec correction,D27,ما هي شروط الحجول على رخصة السيضقة؟,ما هي شروط الحصول على رخصة السيضقة؟,1,True,,n/a
+avec fautes / avec correction,D28,"Ken na3mel test el code el route, chniva el bmawed el lazmin ?","Ken na3mel test el code el route, chniva el bmawed el lazmin ?",0,True,,n/a
+avec fautes / avec correction,D29,"Quelle indemnité eçoit un salqrié licencié après sa période d'essai, hors faute grave ?","Quelle indemnité écrit un salarié licencié après sa période d'essai, hors faute grave ?",2,False,22 | 371 | 370 | 120 | 128,22
+avec fautes / avec correction,D30,"Ken tet7arraq men el kwedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arraq men el kwedma b3ed el période d'essai, chnowa ye5ssni ?",0,True,,22
+avec fautes / avec correction,D31,Quelle est la durrée maximale du traail effectif par semaine ?,Quelle est la durée maximale du travail effectif par semaine ?,2,False,79 | 22 | 90 | 114 | 94,79
+avec fautes / avec correction,D32,Ch7al el 7ad el aksa mta3 el 5edma fil selaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil selaine ?,0,True,,79
+avec fautes / avec correction,D33,Les salariés peuyvent-ils travailler sans horaire précisé ?,Les salariés peuvent-ils travailler sans horaire précisé ?,1,False,85 | 108 | 18 | 86 | 433,85
+avec fautes / avec correction,D34,Un salarié a-t-il drooit à un congé à l'occasion de la naissance de son enfant ?,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,1,False,122 | 120 | 64 | 112 | 128,122
+avec fautes / avec correction,D35,"El kadem 3uandou 7a9 congé 3and wlidou, chnowa ya3mel ?","El kadem 3uandou 7a9 congé 3and wlidou, chnowa ya3mel ?",0,True,,122
+avec fautes / avec correction,D36,Un employeur peut-il retenir sur les saaires les solmes qui lui sont dues pour fournitures diverses ?,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,2,False,149 | 3 | 118 | 145 | 150,149
+avec fautes / avec correction,D37,Sur quelles questions la commission consultative d'entrepride est-elle conssltée ?,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,2,False,160 | 164 | 162 | 161 | 168,160
+avec fautes / avec correction,D38,Chkoun el mas2oul 3an tanfiz el 9andun el 5edma fel mou2asasa ?,Chkoun el mas2oul 3an tanfiz el 9andun el 5edma fel mou2asasa ?,0,True,,170
+avec fautes / avec correction,D39,Qui fixe les conditions de dsignation et le régime disciplinairxe des conseillers prud'hommes ?,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,2,False,191 | 194 | 195 | 187 | 196,191
+avec fautes / avec correction,D40,Les conselis de prud'homms statuent-ils toujours en premier ressort ?,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,2,False,216 | 221 | 185 | 227 | 184,216
+avec fautes / avec correction,D41,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'homes ?,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,1,False,232 | 218 | 228 | 151 | 185,232
+avec fautes / avec correction,D42,"Ken wa7ed mel consaeillers prud'ommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel consaeillers prud'ommes ma7ta5ch, chkoun y7ker el 9adhiya ?",0,True,,198
+avec fautes / avec correction,D43,Quel est le motant de la taxe de séjour à Hmamamet ?,Quel est le montant de la taxe de séjour à Hmamamet ?,1,True,,n/a
+avec fautes / avec correction,D44,Comment demander un perms de constriure pour une villa ?,Comment demander un permis de constriure pour une villa ?,1,True,,n/a
+avec fautes / avec correction,D45,Quelle est la duréne de la garde à vue en matière pénal ?,Quelle est la durée de la garde à vue en matière pénal ?,1,True,,n/a
+avec fautes / avec correction,D46,Une banque peut-elle refuser un créidt immobilier à un salaribé ?,Une banque peut-elle refuser un crédit immobilier à un salarié ?,2,True,,n/a
+avec fautes / avec correction,D47,Qulele est la responsabilité d'un hôtelier en cas de vol dans une chmbre ?,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,2,True,,n/a
+avec fautes / avec correction,D48,Quel est le délai de paiemnt des factuses d'eau à la SONEDE ?,Quel est le délai de paiement des factuses d'eau à la SONEDE ?,1,True,,n/a
+avec fautes / avec correction,D49,Quel est le rgime fiscal des auto-etrepreneurs ?,Quel est le régime fiscal des auto-entrepreneurs ?,2,True,,n/a
+avec fautes / avec correction,D50,Quelles sont les règlse de sstationnement sur le trottoir à Sousse ?,Quelles sont les règles de sstationnement sur le trottoir à Sousse ?,1,True,,n/a
+avec fautes / avec correction,D51,Quelle est la durmée d'un mvandat de député en Tunisie ?,Quelle est la durée d'un mandat de député en Tunisie ?,2,True,,n/a
+avec fautes / avec correction,D52,Kfech n7ell chikaiya 3la el bank ?,Kfech n7ell chikaiya 3la el bank ?,0,True,,n/a
+avec fautes / avec correction,D53,hnowa el 3a9ouba 3la el sar9a fel code pénnal ?,hnowa el 3a9ouba 3la el sar9a fel code pénnal ?,0,True,,n/a
+avec fautes / avec correction,D54,ما هو أجل تقديم اطعن في احكم الجزائي؟,ما هو أجل تقديم اطعن في احكم الجزائي؟,0,True,,n/a
+avec fautes / avec correction,D55,ما هي شروط كراء المحبل التجاي؟,ما هي شروط كراء المحل التجاي؟,1,True,,n/a
+avec fautes / avec correction,D56,Quel est le délai pour wontester une amende fiscyle ?,Quel est le délai pour wontester une amende fiscyle ?,0,True,,n/a

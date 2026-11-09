@@ -309,3 +309,7 @@ body{
   .badge-soft{display:none}
   .header{padding:12px 16px}
 }
+
+/* Bandeau « Vouliez-vous dire » (correction SymSpell) */
+.did-you-mean{background:#EEF4FB;border:1px solid #C9DBF0;color:#1F3B5C;border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:.9rem}
+.did-you-mean strong{font-weight:600}

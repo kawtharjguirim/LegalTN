@@ -1,0 +1,49 @@
+{
+  "jeu": "questions_dev_v2 (développement, non indépendant)",
+  "empreinte_dev": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+  "graine": 2026,
+  "mots_fautifs_max": 2,
+  "seuil_abstention": 9.085,
+  "resultats": [
+    {
+      "condition": "propres / sans correction",
+      "rappel_1": 0.778,
+      "rappel_5": 0.778,
+      "top1_correct": "21/27",
+      "top5_correct": "21/27",
+      "abstentions_a_tort": "4/27",
+      "hors_perimetre_refuses": "27/29",
+      "questions_modifiees": "0/56"
+    },
+    {
+      "condition": "propres / avec correction",
+      "rappel_1": 0.778,
+      "rappel_5": 0.778,
+      "top1_correct": "21/27",
+      "top5_correct": "21/27",
+      "abstentions_a_tort": "4/27",
+      "hors_perimetre_refuses": "26/29",
+      "questions_modifiees": "1/56"
+    },
+    {
+      "condition": "avec fautes / sans correction",
+      "rappel_1": 0.704,
+      "rappel_5": 0.741,
+      "top1_correct": "19/27",
+      "top5_correct": "20/27",
+      "abstentions_a_tort": "7/27",
+      "hors_perimetre_refuses": "29/29",
+      "questions_modifiees": "0/56"
+    },
+    {
+      "condition": "avec fautes / avec correction",
+      "rappel_1": 0.778,
+      "rappel_5": 0.778,
+      "top1_correct": "21/27",
+      "top5_correct": "21/27",
+      "abstentions_a_tort": "5/27",
+      "hors_perimetre_refuses": "25/29",
+      "questions_modifiees": "45/56"
+    }
+  ]
+}

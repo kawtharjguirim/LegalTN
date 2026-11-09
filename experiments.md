@@ -642,3 +642,25 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Aucune nouvelle mesure sur les jeux gelés ; aucun nouveau résultat scientifique ni annotation. Les gel et usages historiques ne sont pas réinitialisés. Les 36 tests Codex ne sont pas confondus avec les 22 tests présents.
 - Limites : `ocr_gold_v1.csv`, la référence indépendante de rappel d'alignement, les annotations d'obligations et les sources NER/CoNLL restent absents. Les trois fichiers récupérés ne suffisent pas à déclarer ces composants évalués.
 - Suite : poursuivre la récupération et l'audit des composants scientifiques manquants et du cahier des charges complet ; conserver la séparation entre validation logicielle et évaluation indépendante.
+
+## 2026-11-09 — Correction orthographique SymSpell des questions (dev uniquement)
+
+- Objectif : rendre le retrieval robuste aux fautes de frappe dans les questions, sans LLM.
+- Méthode : `src/correction/correcteur_symspell.py`, symspellpy 6.10.2 (MIT). Dictionnaires construits depuis `data/processed/articles_fr_corrige.csv` (3 654 mots normalisés) et `articles_ar.csv` (6 227 formes, 3 373 formes réduites), avec fréquences réelles du corpus. Distance de Damerau-Levenshtein max 1 (≤ 4 lettres), 2 au-delà ; à distance égale, le mot le plus fréquent du corpus.
+- Règles de non-correction : nombres, mots de moins de 3 lettres, mots du corpus, mots du lexique général FR/AR de pyspellchecker 0.9.1 (MIT, utilisé seulement pour reconnaître un mot correct, jamais pour proposer), mots en majuscule hors début de phrase (noms propres), questions en arabizi (mot mêlant lettres et chiffres). AR : normalisation أإآ→ا, ة→ه, ى→ي, sans diacritiques ni tatweel ; retrait d'au plus un préfixe et un suffixe (racine ≥ 3 lettres). Lexique de sigles appliqué avant : CDI, CDD, SMIG, SMAG, CNSS.
+- Réglages faits sur le dev (dev v2 uniquement) : ajout du lexique général (« rompre »→« compte », « capitale »→« capitaux » observés), de la règle arabizi (« fel »→« tel », « wela »→« delà ») et de la règle des noms propres (« Sousse »→« Sous », « SONEDE »→« Solde »). Aucun fichier de `data/test_locked/` lu.
+- Intégration : `repondre.repondre_question()` (langue → correction → BM25 → abstention), utilisée par la CLI et `api.py`. Sortie : `question_originale`, `question_corrigee`, `corrections`. `Corpus.repondre` (BM25 seul) inchangé = baseline. Interface : bandeau « Vouliez-vous dire : … ? ». Option CLI `--sans-correction`.
+- Jeu : `data/dev/questions_dev_v2.csv` (56 questions : 27 dans / 29 hors périmètre ; empreinte vérifiée après normalisation CRLF). Fautes générées : graine 2026, 1 faute (suppression, substitution, inversion, insertion) dans au plus 2 mots de contenu de 5 lettres ou plus par question. Seuil 9,085 inchangé.
+- Commande : `python -X utf8 src/evaluation/evaluer_correction_dev.py --rapports reports/correction_symspell` (deux exécutions, sorties identiques).
+
+| Condition (dev v2) | R@1 | R@5 | Abstentions à tort | Hors périmètre refusés | Questions modifiées |
+|---|---:|---:|---:|---:|---:|
+| propres, sans correction | 21/27 (0,778) | 21/27 (0,778) | 4/27 | 27/29 | 0/56 |
+| propres, avec correction | 21/27 (0,778) | 21/27 (0,778) | 4/27 | 26/29 | 1/56 |
+| avec fautes, sans correction | 19/27 (0,704) | 20/27 (0,741) | 7/27 | 29/29 | 0/56 |
+| avec fautes, avec correction | 21/27 (0,778) | 21/27 (0,778) | 5/27 | 25/29 | 45/56 |
+
+- Lecture : avec fautes, la correction rattrape le niveau des questions propres (R@1 0,704 → 0,778). Sur questions propres, aucune perte de rappel ; seule modification : CNSS développé (D18).
+- Coût observé : plus de questions hors périmètre acceptées (propres 27→26 via CNSS, D18 ; fautes 29→25). Les fautes rendaient ces questions inconnues, donc refusées « par chance » ; corrigées, elles redeviennent des questions hors périmètre normales. Une fausse abstention de plus avec fautes (D42) : question arabizi, ses mots français fautifs ne sont pas corrigés par choix.
+- Limites : n = 27 questions dans le périmètre (1 question = 3,7 points) ; fautes synthétiques, pas réelles ; aucune question AR dans le périmètre du dev, donc rappel arabe non mesuré ; dev déjà utilisé pour les choix ci-dessus, donc pas une mesure indépendante. Aucune mesure sur test gelé.
+- Tests : `tests/test_correction.py` (12 tests). Suite : `58 passed, 1 failed, 1 xfailed`. L'échec est préexistant (`test_jeux_geles_inchanges`, fins de ligne CRLF→LF au commit) ; `data/test_locked/` non modifié. Le xfail strict CDI reste valide pour le BM25 seul ; la chaîne corrigée répond sur ce cas (test dédié).
