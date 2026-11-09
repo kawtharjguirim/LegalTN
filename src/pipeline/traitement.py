@@ -36,6 +36,8 @@ from src.correction.correcteur_symspell import (  # noqa: E402
 LEXIQUES = RACINE / "data" / "lexiques"
 LEXIQUE_TUNISIEN = RACINE / "data" / "dev" / "lexique_tunisien_v1.csv"
 SYNONYMES = RACINE / "data" / "dev" / "synonymes_juridiques_v1.csv"
+ALIGNEMENT = RACINE / "data" / "processed" / "alignement_fr_ar_v6.csv"
+LONGUEUR_EXTRAIT = 320    # caractères affichés par défaut (passage le plus pertinent)
 SEUIL_SCORE_MIN = 9.085   # seuil historique, inchangé (décision de l'équipe)
 
 # Jamais retirés, même s'ils figurent par erreur dans une liste de mots vides :
@@ -193,6 +195,7 @@ class Pipeline:
             self.synonymes.setdefault(b, set()).add(a)
         self.index = {"fr": self._indexer(FR, intitule_fr, "texte_fr"),
                       "ar": self._indexer(AR, intitule_ar, "texte_ar")}
+        self._charger_alignement()
 
     # Traitement commun question / corpus (étapes 3, 4, 6).
     def _forme_index(self, mot: str) -> str:
@@ -210,11 +213,13 @@ class Pipeline:
 
     def _indexer(self, chemin, intitule, colonne):
         articles, docs = [], []
-        for r in lire(chemin):
+        for ligne, r in enumerate(lire(chemin)):
             texte = r[colonne].strip()
             lab = intitule(texte)
             if lab:
-                articles.append({"article": lab, "texte": texte, "page": r["page"]})
+                # `ligne` (rang dans le CSV) et `article_id` servent à retrouver l'article aligné.
+                articles.append({"article": lab, "texte": texte, "page": r["page"],
+                                 "ligne": ligne, "article_id": r["article_id"]})
                 docs.append((lab, self.jetons_document(texte)))
         return {"articles": articles, "bm": Bm25(docs)}
 
@@ -245,6 +250,9 @@ class Pipeline:
                 sortie.append(j)
                 continue
             propose = self.correcteur.corriger_jeton(j, script_de(j), deja_reduit=self.config.complet)
+            if propose and self.correcteur.est_mot_vide(propose, script_de(j)):
+                corrections.append({"type": "mot vide mal écrit", "avant": j, "apres": propose})
+                continue                  # mot vide : retiré, comme à l'étape 3
             if propose and propose != j:
                 corrections.append({"type": "orthographe", "avant": j, "apres": propose})
                 sortie.append(self._forme_index(propose))
@@ -292,9 +300,13 @@ class Pipeline:
         etapes.append({"etape": "7. correction SymSpell", "sortie": " ".join(jetons)})
 
         if self.config.synonymes:
+            avant_synonymes = list(jetons)
             jetons = self.ajouter_synonymes(jetons)
+        else:
+            avant_synonymes = list(jetons)
         etapes.append({"etape": "8. synonymes", "sortie": " ".join(jetons)})
-        return {"langue_detectee": langue, "jetons": jetons, "etapes": etapes, "corrections": corrections}
+        return {"langue_detectee": langue, "jetons": jetons, "etapes": etapes, "corrections": corrections,
+                "synonymes_ajoutes": jetons[len(avant_synonymes):]}
 
     def _scores(self, corpus: str, jetons: list[str]) -> list[float]:
         bm = self.index[corpus]["bm"]
@@ -345,14 +357,65 @@ class Pipeline:
         classes = self.classer(traitement["jetons"], langue)
         corpus = "fr" if langue == "fr" else "ar"
         abstention = not classes or classes[0][1] < SEUIL_SCORE_MIN
-        candidats = [] if abstention else [{**a, "score": round(s, 2)} for a, s in classes[:k]]
+        candidats = [] if abstention else [
+            self.enrichir({**a, "score": round(s, 2)}, traitement["jetons"]) for a, s in classes[:k]]
         # Version lisible de la correction (mêmes dictionnaires et règles que l'étape 7).
         if self.config.symspell and langue != "arabizi":
             lisible = self.correcteur.corriger(question, corpus)
         else:
             lisible = {"question_originale": question, "question_corrigee": question, "corrections": []}
         return {**lisible, "langue": corpus, "langue_detectee": langue,
-                "etapes": traitement["etapes"], "abstention": abstention, "candidats": candidats}
+                "etapes": traitement["etapes"], "synonymes_ajoutes": traitement["synonymes_ajoutes"],
+                "abstention": abstention, "candidats": candidats}
+
+    # --- présentation des résultats (interface) -------------------------------------
+
+    def _charger_alignement(self):
+        """Alignement AR/FR existant : ligne du CSV français <-> identifiant arabe."""
+        self.ar_par_ligne_fr, self.ligne_fr_par_ar = {}, {}
+        for r in _lire_csv(ALIGNEMENT):
+            if r["fr_ligne"] and r["article_ar"]:
+                self.ar_par_ligne_fr[int(r["fr_ligne"])] = r["article_ar"]
+                self.ligne_fr_par_ar[r["article_ar"]] = int(r["fr_ligne"])
+        self.ar_par_id = {a["article_id"]: a for a in self.index["ar"]["articles"]}
+        self.ar_brut = {r["article_id"]: r for r in lire(AR)}
+        self.fr_par_ligne = {i: r for i, r in enumerate(lire(FR))}
+
+    def version_alignee(self, candidat: dict) -> dict:
+        """Article de l'autre langue, via l'alignement par numérotation (s'il existe)."""
+        if script_de(candidat["texte"][:40]) == "fr":
+            ident = self.ar_par_ligne_fr.get(candidat["ligne"])
+            r = self.ar_brut.get(ident) if ident else None
+            if not r:
+                return {"langue": "ar", "disponible": False}
+            return {"langue": "ar", "disponible": True, "article_id": ident,
+                    "page": r["page"], "texte": r["texte_ar"].strip()}
+        ligne = self.ligne_fr_par_ar.get(candidat["article_id"])
+        r = self.fr_par_ligne.get(ligne) if ligne is not None else None
+        if not r:
+            return {"langue": "fr", "disponible": False}
+        return {"langue": "fr", "disponible": True, "article_id": r["article_id"],
+                "page": r["page"], "texte": r["texte_fr"].strip()}
+
+    def mots_a_surligner(self, texte: str, jetons_question: list[str]) -> list[str]:
+        """Mots du texte dont la forme traitée (étapes 3, 4, 6) est un jeton de la question."""
+        cibles = set(jetons_question)
+        return sorted({m for m in decouper(texte) if cibles & set(self.jetons_document(m))})
+
+    def extrait(self, texte: str, jetons_question: list[str]) -> str:
+        """Phrase contenant le plus de jetons distincts de la question (la première à égalité)."""
+        phrases = [p for p in re.split(r"(?<=[.;؛:!?])\s+", texte) if p.strip()]
+        cibles = set(jetons_question)
+        meilleure = max(phrases, key=lambda p: len(cibles & set(self.jetons_document(p))), default=texte)
+        if len(meilleure) > LONGUEUR_EXTRAIT:
+            meilleure = meilleure[:LONGUEUR_EXTRAIT].rsplit(" ", 1)[0] + " …"
+        return meilleure
+
+    def enrichir(self, candidat: dict, jetons_question: list[str]) -> dict:
+        alignee = self.version_alignee(candidat)
+        return {**candidat, "extrait": self.extrait(candidat["texte"], jetons_question),
+                "surligner": self.mots_a_surligner(candidat["texte"], jetons_question),
+                "version_alignee": alignee}
 
 
 _PIPELINE: Pipeline | None = None
