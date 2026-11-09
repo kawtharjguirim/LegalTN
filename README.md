@@ -94,9 +94,9 @@ Les scripts refusent d'écrire dans un dossier existant non vide : choisir un do
 - Annotations humaines (obligations, NER, rappel d'alignement) encore vides.
 - Licence de l'édition IORT à clarifier avant tout partage public.
 
-Documents à compléter par l'équipe : [](rapport_etape.md) (annotations
-et lexiques à remplir à la main), [](data_card.md), [](model_cards/),
-[](declaration_usage_IA.md) — brouillons marqués « À VÉRIFIER ».
+Documents à compléter par l'équipe : [`rapport_etape.md`](rapport_etape.md) (annotations
+et lexiques à remplir à la main), [`data_card.md`](data_card.md), [`model_cards/`](model_cards/),
+[`declaration_usage_IA.md`](declaration_usage_IA.md) — brouillons marqués « À VÉRIFIER ».
 
 Historique de la reprise du projet : [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md) et
 [`PIPELINE.md`](PIPELINE.md).
