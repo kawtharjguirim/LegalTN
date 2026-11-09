@@ -1,0 +1,38 @@
+{
+  "a_institutionnel_fr": {
+    "contraste": {
+      "total": 83,
+      "echecs": []
+    }
+  },
+  "a_institutionnel_ar": {
+    "contraste": {
+      "total": 80,
+      "echecs": []
+    }
+  },
+  "b_moteur_epure_fr": {
+    "contraste": {
+      "total": 68,
+      "echecs": []
+    }
+  },
+  "b_moteur_epure_ar": {
+    "contraste": {
+      "total": 69,
+      "echecs": []
+    }
+  },
+  "c_outil_analyse_fr": {
+    "contraste": {
+      "total": 96,
+      "echecs": []
+    }
+  },
+  "c_outil_analyse_ar": {
+    "contraste": {
+      "total": 91,
+      "echecs": []
+    }
+  }
+}

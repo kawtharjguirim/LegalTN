@@ -1,0 +1,371 @@
+{
+  "accueil_fr": {
+    "contraste": {
+      "total": 33,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "Démo locale — ne remplace pas un avis ju",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "العربية",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        }
+      ]
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": false,
+      "debordement": false
+    }
+  },
+  "fr_bureau_debug": {
+    "contraste": {
+      "total": 108,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "Démo locale — ne remplace pas un avis ju",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "العربية",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span",
+          "texte": "Articles trouvés — 3",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span.latency-inline",
+          "texte": "11,1 ms",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 18.46",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "p.alt-meta",
+          "texte": "Article · page 14",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "bdi",
+          "texte": "14 bis",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 14.59",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 11.89",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        }
+      ]
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": "Vouliez-vous dire : quel est le préavis de rupture d'un contrat à durée indéterminée ?",
+      "articles": [
+        "Article 14 bis",
+        "Article 14",
+        "Article 6"
+      ],
+      "marks": 46,
+      "etapes": true,
+      "abstention": false,
+      "latence": "11,1 ms",
+      "debordement": false
+    }
+  },
+  "ar_bureau_debug": {
+    "contraste": {
+      "total": 102,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "عرض محلي — لا يغني عن استشارة قانونية.",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "FR",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span",
+          "texte": "الفصول المطابقة — 3",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span.latency-inline",
+          "texte": "8,6 م.ث",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "نقاط BM25 15.26",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "p.alt-meta",
+          "texte": "الفصل · صفحة 279",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "bdi",
+          "texte": "14 bis",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "نقاط BM25 12.81",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "نقاط BM25 10.3",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        }
+      ]
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": "هل تقصد: ما هي مدة الاعلام بانهاء عقد الشغل ?",
+      "articles": [
+        "الفصل 14 bis",
+        "الفصل 14",
+        "الفصل 23"
+      ],
+      "marks": 49,
+      "etapes": true,
+      "abstention": false,
+      "latence": "8,6 م.ث",
+      "debordement": false
+    }
+  },
+  "fr_abstention": {
+    "contraste": {
+      "total": 26,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "Démo locale — ne remplace pas un avis ju",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "العربية",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "p.latency",
+          "texte": "0,4 ms",
+          "ratio": 2.32,
+          "seuil": 4.5,
+          "px": 11.52
+        }
+      ]
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": null,
+      "articles": [],
+      "marks": 0,
+      "etapes": false,
+      "abstention": true,
+      "latence": "0,4 ms",
+      "debordement": false
+    }
+  },
+  "fr_mobile": {
+    "contraste": {
+      "total": 108,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "Démo locale — ne remplace pas un avis ju",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "العربية",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span",
+          "texte": "Articles trouvés — 3",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span.latency-inline",
+          "texte": "4,4 ms",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 18.46",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "p.alt-meta",
+          "texte": "Article · page 14",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "bdi",
+          "texte": "14 bis",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 11.84
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 14.59",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "span.score-raw",
+          "texte": "score BM25 11.89",
+          "ratio": 2.58,
+          "seuil": 4.5,
+          "px": 11.2
+        }
+      ]
+    },
+    "etat": {
+      "dir": "ltr",
+      "bandeau": "Vouliez-vous dire : quel est le préavis de rupture d'un contrat à durée indéterminée ?",
+      "articles": [
+        "Article 14 bis",
+        "Article 14",
+        "Article 6"
+      ],
+      "marks": 46,
+      "etapes": true,
+      "abstention": false,
+      "latence": "4,4 ms",
+      "debordement": false
+    }
+  },
+  "ar_mobile": {
+    "contraste": {
+      "total": 67,
+      "echecs": [
+        {
+          "el": "p.sidebar-foot",
+          "texte": "عرض محلي — لا يغني عن استشارة قانونية.",
+          "ratio": 4.13,
+          "seuil": 4.5,
+          "px": 11.2
+        },
+        {
+          "el": "button.lang-btn",
+          "texte": "FR",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span",
+          "texte": "الفصول المطابقة — 3",
+          "ratio": 4.49,
+          "seuil": 4.5,
+          "px": 12.8
+        },
+        {
+          "el": "span.latency-inline",
+          "texte": "9,4 م.ث",
+          "ratio": 4.14,
+          "seuil": 4.5,
+          "px": 11.84
+        }
+      ]
+    },
+    "etat": {
+      "dir": "rtl",
+      "bandeau": "هل تقصد: ما هي مدة الاعلام بانهاء عقد الشغل ?",
+      "articles": [
+        "الفصل 14 bis",
+        "الفصل 14",
+        "الفصل 23"
+      ],
+      "marks": 49,
+      "etapes": false,
+      "abstention": false,
+      "latence": "9,4 م.ث",
+      "debordement": false
+    }
+  }
+}

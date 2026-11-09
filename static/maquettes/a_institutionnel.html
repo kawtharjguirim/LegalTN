@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette A — Institutionnel juridique</title>
+<style>
+/* Direction A — « Institutionnel juridique » : papier ivoire, encre, bleu marine, bordeaux.
+   Polices système uniquement (rien n'est téléchargé). */
+:root{
+  --papier:#FAF8F3; --blanc:#FFFFFF; --encre:#1C2127; --encre-2:#4A5260;
+  --marine:#14365A; --marine-2:#0E2742; --bordeaux:#8C1D2C; --filet:#D8D2C4;
+  --surligne:#FBE7A6; --vert:#2E6B4F; --ocre:#8A6312; --gris:#5E6673;
+  --serif:"Sitka Text","Georgia","Cambria",serif;
+  --serif-titre:"Sitka Heading","Georgia","Cambria",serif;
+  --sans:"Segoe UI",system-ui,sans-serif;
+  --ar:"Segoe UI","Tahoma",sans-serif;
+  --ar-texte:"Sakkal Majalla","Traditional Arabic","Segoe UI",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papier);color:var(--encre);font:16px/1.6 var(--sans)}
+[dir=rtl] body{font-family:var(--ar)}
+header{background:var(--marine);color:#fff;border-bottom:4px solid var(--bordeaux)}
+.bandeau{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px}
+.sceau{width:38px;height:38px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;font:700 15px var(--serif-titre)}
+.marque{font:700 1.3rem var(--serif-titre);letter-spacing:.01em}
+.marque small{display:block;font:400 .82rem var(--sans);opacity:.9}
+[dir=rtl] .marque small{font-family:var(--ar)}
+.langues{margin-inline-start:auto;display:flex;border:1px solid rgba(255,255,255,.6);border-radius:4px;overflow:hidden}
+.langues button{background:none;border:0;color:#fff;padding:6px 12px;font:600 .85rem var(--sans)}
+.langues .on{background:#fff;color:var(--marine)}
+main{max-width:860px;margin:0 auto;padding:28px 20px 48px}
+label.q{display:block;font:700 1.05rem var(--serif-titre);color:var(--marine);margin-bottom:8px}
+[dir=rtl] label.q{font-family:var(--ar)}
+.recherche{display:flex;gap:10px}
+.recherche input{flex:1;border:1.5px solid #8C93A0;border-radius:4px;padding:12px 14px;font:inherit;background:#fff;color:var(--encre)}
+.recherche button{background:var(--marine);color:#fff;border:0;border-radius:4px;padding:0 22px;font:600 1rem var(--sans)}
+.options{display:flex;justify-content:flex-end;margin-top:8px;font-size:.88rem;color:var(--encre-2)}
+.dym{margin-top:14px;padding:10px 14px;border-inline-start:4px solid var(--ocre);background:#FFF8E6;color:var(--encre)}
+.dym b{color:var(--ocre)}
+mark{background:var(--surligne);color:inherit;padding:0 2px}
+.meta{display:flex;justify-content:space-between;margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--filet);font-size:.9rem;color:var(--encre-2)}
+.fiche{background:var(--blanc);border:1px solid var(--filet);border-inline-start:4px solid var(--bordeaux);padding:18px 22px;margin-bottom:14px}
+.tete{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.num{font:700 1.35rem var(--serif-titre);color:var(--marine)}
+[dir=rtl] .num{font-family:var(--ar)}
+.cit{font-size:.88rem;color:var(--encre-2)}
+.rel{margin-inline-start:auto;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--encre-2)}
+.barre{width:90px;height:6px;background:#E7E2D6}
+.barre i{display:block;height:100%}
+.high i{background:var(--vert)} .med i{background:var(--ocre)} .low i{background:var(--gris)}
+.texte{margin-top:10px;font:1.02rem/1.75 var(--serif)}
+.texte[lang=ar]{font:1.4rem/1.8 var(--ar-texte)}
+.actions{display:flex;gap:18px;margin-top:10px}
+.actions a{color:var(--marine);font-weight:600;font-size:.9rem;text-underline-offset:3px}
+.annexe{margin-top:26px;border:1px solid var(--filet);background:#fff}
+.annexe summary{padding:12px 18px;font:700 1rem var(--serif-titre);color:var(--marine);cursor:pointer;border-bottom:1px solid var(--filet)}
+[dir=rtl] .annexe summary{font-family:var(--ar)}
+.annexe dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;padding:12px 18px;font-size:.92rem}
+.annexe dt{color:var(--encre-2);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:start;padding:6px 18px;border-top:1px solid #ECE7DC;vertical-align:top}
+th{color:var(--encre-2);font-weight:600;width:34%}
+code{font:.86rem Consolas,"Cascadia Mono",monospace;color:var(--encre)}
+footer{max-width:860px;margin:0 auto;padding:0 20px 30px;font-size:.82rem;color:var(--encre-2)}
+@media(max-width:640px){.recherche{flex-direction:column}.recherche button{padding:12px}.rel{margin-inline-start:0;width:100%}th,td{display:block;width:auto;padding:4px 14px}}
+</style>
+</head>
+<body>
+<header><div class="bandeau">
+  <div class="sceau" aria-hidden="true">§</div>
+  <div class="marque" id="marque"></div>
+  <div class="langues"><button id="b-fr">FR</button><button id="b-ar">العربية</button></div>
+</div></header>
+<main id="main"></main>
+<footer id="pied"></footer>
+<script src="donnees_exemple.js"></script>
+<script src="commun.js"></script>
+<script>
+const { T, d, esc, surligner, attr, niveau, corriges, qCorrigee, fmtMs, lang, libAlt, nomLangue } = M;
+document.getElementById(lang === "ar" ? "b-ar" : "b-fr").className = "on";
+document.getElementById("marque").innerHTML = `${T.titre}<small>${esc(T.sous_titre)}</small>`;
+const fiches = d.candidats.map(c => { const n = niveau(c); return `
+  <article class="fiche">
+    <div class="tete">
+      <span class="num">${esc(T.article)} <bdi>${esc(c.article)}</bdi></span>
+      <span class="cit">${esc(T.source)} · ${esc(T.page)} ${esc(c.page)}</span>
+      <span class="rel ${n.cls}">${esc(T.relevance)} : ${esc(n.lib)}<span class="barre"><i style="width:${n.pct}%"></i></span></span>
+    </div>
+    <p class="texte" ${attr(c.extrait)}>${surligner(c.extrait, c.surligner)}</p>
+    <div class="actions"><a href="#">${esc(T.full)}</a><a href="#">${esc(libAlt(c))}</a></div>
+  </article>`; }).join("");
+const etapes = d.etapes.map(e => `<tr><th>${esc(e.etape)}</th><td><code dir="auto">${esc(e.sortie)}</code></td></tr>`).join("");
+const corr = d.corrections.map(c => `<code dir="auto">${esc(c.avant)}</code> → <code dir="auto">${esc(c.apres)}</code>`).join(" ; ");
+document.getElementById("main").innerHTML = `
+  <label class="q" for="q">${esc(T.ask)}</label>
+  <div class="recherche"><input id="q" value="${esc(d.question_originale)}" ${attr(d.question_originale)}><button>${esc(T.send)}</button></div>
+  <div class="options"><label><input type="checkbox" checked> ${esc(T.debug)}</label></div>
+  <p class="dym"><b>${esc(T.dym)}</b> <span ${attr(qCorrigee)}>${surligner(qCorrigee, corriges)}</span> ?</p>
+  <div class="meta"><span>${d.candidats.length} ${esc(T.results)}</span><span>${esc(fmtMs(d.latence_ms))} ${esc(T.ms)}</span></div>
+  ${fiches}
+  <details class="annexe" open><summary>${esc(T.steps)}</summary>
+    <dl><dt>${esc(T.detected)}</dt><dd>${esc(nomLangue)}</dd><dt>${esc(T.corrections)}</dt><dd>${corr || esc(T.none)}</dd>
+    <dt>${esc(T.synonyms)}</dt><dd>${esc(T.none)}</dd></dl>
+    <table>${etapes}</table></details>`;
+document.getElementById("pied").textContent = T.disclaimer;
+</script>
+</body>
+</html>

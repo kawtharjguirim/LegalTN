@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette B — Moteur de recherche épuré</title>
+<style>
+/* Direction B — « Moteur de recherche épuré » : blanc, une seule colonne, liste de résultats sans cartes.
+   Polices système uniquement. */
+:root{--fond:#FFFFFF;--texte:#1F2328;--texte-2:#59636E;--lien:#0B57D0;--filet:#E3E6EA;
+  --surligne:#FFF0A8;--vert:#1E7B45;--ocre:#946200;--gris:#6B7280;
+  --sans:"Segoe UI",system-ui,sans-serif;--ar:"Segoe UI","Tahoma",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fond);color:var(--texte);font:16px/1.6 var(--sans)}
+[dir=rtl] body{font-family:var(--ar)}
+.haut{display:flex;align-items:center;gap:16px;max-width:760px;margin:0 auto;padding:28px 20px 8px}
+.logo{font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+.logo span{color:var(--lien)}
+.langues{margin-inline-start:auto;font-size:.9rem;display:flex;gap:12px}
+.langues a{color:var(--texte-2)} .langues .on{color:var(--texte);font-weight:700;text-decoration:none}
+main{max-width:760px;margin:0 auto;padding:8px 20px 40px}
+.barre-q{display:flex;align-items:center;border:1px solid #A9B0B8;border-radius:28px;padding:4px 6px 4px 20px;box-shadow:0 1px 6px rgba(32,33,36,.12)}
+[dir=rtl] .barre-q{padding:4px 20px 4px 6px}
+.barre-q input{flex:1;border:0;outline:0;font:inherit;font-size:1.05rem;padding:10px 0;min-width:0;color:var(--texte)}
+.barre-q button{border:0;border-radius:22px;background:var(--lien);color:#fff;font:600 .95rem var(--sans);padding:10px 20px}
+.sous{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--texte-2);margin:10px 4px 0}
+.dym{margin:18px 4px 0;font-size:1rem}
+.dym b{color:var(--texte-2);font-weight:400}
+.dym span{color:var(--lien);font-style:italic}
+mark{background:var(--surligne);color:inherit}
+.dym mark{font-style:normal;font-weight:700;background:none;color:var(--lien)}
+.etapes{margin:12px 4px 0;font-size:.86rem;color:var(--texte-2)}
+.etapes summary{cursor:pointer;color:var(--lien)}
+.puces{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.puces span{border:1px solid var(--filet);border-radius:14px;padding:2px 10px;background:#F6F8FA}
+.puces b{font-weight:600;color:var(--texte)}
+code{font:.84rem Consolas,"Cascadia Mono",monospace}
+ol.res{list-style:none;margin-top:22px}
+ol.res li{padding:16px 4px;border-top:1px solid var(--filet)}
+.titre{font-size:1.2rem;color:var(--lien);font-weight:600}
+.cite{font-size:.86rem;color:var(--vert)}
+.extrait{margin-top:4px;color:var(--texte);font-size:.97rem}
+.extrait[lang=ar]{font-size:1.08rem;line-height:1.9}
+.bas{display:flex;flex-wrap:wrap;gap:16px;margin-top:6px;font-size:.86rem;color:var(--texte-2);align-items:center}
+.bas a{color:var(--lien)}
+.pts{display:inline-flex;gap:3px;vertical-align:middle;margin-inline-start:4px}
+.pts i{width:8px;height:8px;border-radius:50%;background:#D5D9DE}
+.high .pts i{background:var(--vert)} .med .pts i:nth-child(-n+2){background:var(--ocre)} .low .pts i:first-child{background:var(--gris)}
+.high .pts i{background:var(--vert)}
+footer{max-width:760px;margin:0 auto;padding:0 24px 30px;font-size:.82rem;color:var(--texte-2)}
+</style>
+</head>
+<body>
+<div class="haut"><div class="logo">Legal<span>TN</span></div>
+  <nav class="langues"><a id="b-fr" href="?lang=fr">Français</a><a id="b-ar" href="?lang=ar">العربية</a></nav></div>
+<main id="main"></main>
+<footer id="pied"></footer>
+<script src="donnees_exemple.js"></script>
+<script src="commun.js"></script>
+<script>
+const { T, d, esc, surligner, attr, niveau, corriges, qCorrigee, fmtMs, lang, libAlt, nomLangue } = M;
+document.getElementById(lang === "ar" ? "b-ar" : "b-fr").className = "on";
+const res = d.candidats.map(c => { const n = niveau(c); return `<li>
+  <div class="titre">${esc(T.article)} <bdi>${esc(c.article)}</bdi></div>
+  <div class="cite">${esc(T.source)} › ${esc(T.page)} ${esc(c.page)}</div>
+  <p class="extrait" ${attr(c.extrait)}>${surligner(c.extrait, c.surligner)}</p>
+  <div class="bas"><span class="${n.cls}">${esc(T.relevance)} : ${esc(n.lib)}<span class="pts"><i></i><i></i><i></i></span></span>
+    <a href="#">${esc(T.full)}</a><a href="#">${esc(libAlt(c))}</a></div></li>`; }).join("");
+const puces = d.etapes.map(e => `<span>${esc(e.etape)} : <b><code dir="auto">${esc(e.sortie)}</code></b></span>`).join("");
+document.getElementById("main").innerHTML = `
+  <div class="barre-q"><input aria-label="${esc(T.ask)}" value="${esc(d.question_originale)}" ${attr(d.question_originale)}><button>${esc(T.send)}</button></div>
+  <div class="sous"><span>${d.candidats.length} ${esc(T.results)} · ${esc(fmtMs(d.latence_ms))} ${esc(T.ms)}</span><label><input type="checkbox" checked> ${esc(T.debug)}</label></div>
+  <p class="dym"><b>${esc(T.dym)}</b> <span ${attr(qCorrigee)}>${surligner(qCorrigee, corriges)}</span> ?</p>
+  <details class="etapes" open><summary>${esc(T.steps)} — ${esc(T.detected)} : ${esc(nomLangue)} · ${esc(T.corrections)} : ${d.corrections.length}</summary>
+    <div class="puces">${puces}</div></details>
+  <ol class="res">${res}</ol>`;
+document.getElementById("pied").textContent = T.disclaimer;
+</script>
+</body>
+</html>

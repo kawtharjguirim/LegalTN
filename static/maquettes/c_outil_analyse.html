@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette C — Outil d'analyse avec panneau technique</title>
+<style>
+/* Direction C — « Outil d'analyse » : en-tête ardoise, résultats à gauche, panneau technique
+   permanent à droite (étapes, corrections, scores bruts et seuil). Polices système uniquement. */
+:root{--nuit:#0F172A;--fond:#F1F5F9;--carte:#FFFFFF;--texte:#0F172A;--texte-2:#475569;
+  --sarcelle:#0F766E;--sarcelle-c:#CCFBF1;--filet:#CBD5E1;--surligne:#FDE68A;--rouge:#B91C1C;
+  --sans:"Segoe UI",system-ui,sans-serif;--ar:"Segoe UI","Tahoma",sans-serif;
+  --mono:"Cascadia Mono",Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fond);color:var(--texte);font:15px/1.55 var(--sans)}
+[dir=rtl] body{font-family:var(--ar)}
+header{background:var(--nuit);color:#E2E8F0;display:flex;align-items:center;gap:14px;padding:10px 20px}
+.logo{font-weight:700;font-size:1.1rem;color:#fff}
+.logo em{font-style:normal;color:#5EEAD4;font-family:var(--mono);font-size:.8rem;margin-inline-start:8px}
+header input{flex:1;max-width:620px;background:#1E293B;border:1px solid #334155;color:#F8FAFC;border-radius:6px;padding:8px 12px;font:inherit}
+header button{background:#14B8A6;color:var(--nuit);border:0;border-radius:6px;padding:8px 16px;font-weight:700}
+.langues{margin-inline-start:auto;font:600 .82rem var(--sans)}
+.langues span{padding:4px 8px;border-radius:4px}
+.langues .on{background:#334155;color:#fff}
+.grille{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;padding:18px 20px;max-width:1280px;margin:0 auto}
+.dym{grid-column:1/-1;background:var(--carte);border:1px solid var(--filet);border-radius:8px;padding:10px 14px}
+.dym b{color:var(--sarcelle)}
+mark{background:var(--surligne);color:inherit}
+.res{display:flex;flex-direction:column;gap:12px}
+.carte{background:var(--carte);border:1px solid var(--filet);border-radius:8px;padding:14px 16px}
+.tete{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.86rem;color:var(--texte-2)}
+.num{background:var(--sarcelle);color:#fff;font-weight:700;border-radius:4px;padding:2px 10px;font-size:.9rem}
+.score{margin-inline-start:auto;font-family:var(--mono);font-size:.82rem;color:var(--texte)}
+.jauge{width:110px;height:8px;background:#E2E8F0;border-radius:4px;overflow:hidden;display:inline-block;vertical-align:middle;margin-inline-start:6px}
+.jauge i{display:block;height:100%;background:var(--sarcelle)}
+.texte{margin-top:8px}
+.texte[lang=ar]{font-size:1.06rem;line-height:1.9}
+.actions{display:flex;gap:14px;margin-top:8px;font-size:.86rem}
+.actions a{color:var(--sarcelle);font-weight:600}
+aside{background:var(--carte);border:1px solid var(--filet);border-radius:8px;padding:14px 16px;align-self:start;position:sticky;top:12px}
+aside h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--texte-2);margin:4px 0 8px}
+aside h2:not(:first-child){margin-top:16px}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:3px 12px;font-size:.86rem}
+.kv dt{color:var(--texte-2)}
+ol.ligne{list-style:none;border-inline-start:2px solid var(--sarcelle-c);margin-inline-start:6px}
+ol.ligne li{position:relative;padding:3px 0 7px 14px;font-size:.82rem}
+[dir=rtl] ol.ligne li{padding:3px 14px 7px 0}
+ol.ligne li::before{content:"";position:absolute;inset-inline-start:-6px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--sarcelle)}
+ol.ligne .n{color:var(--texte-2);display:block}
+code{font:.8rem var(--mono);background:#F1F5F9;padding:1px 5px;border-radius:3px;color:var(--texte)}
+table{width:100%;border-collapse:collapse;font:.82rem var(--mono)}
+td,th{padding:4px 6px;border-bottom:1px solid #E2E8F0;text-align:start}
+.seuil{color:var(--rouge)}
+@media(max-width:900px){.grille{grid-template-columns:1fr}aside{position:static}header{flex-wrap:wrap}header input{order:3;flex-basis:100%;max-width:none}}
+</style>
+</head>
+<body>
+<header><span class="logo">LegalTN<em>v2 · BM25</em></span><input id="q"><button id="go"></button>
+  <span class="langues"><span id="b-fr">FR</span><span id="b-ar">العربية</span></span></header>
+<div class="grille" id="grille"></div>
+<script src="donnees_exemple.js"></script>
+<script src="commun.js"></script>
+<script>
+const { T, d, esc, surligner, attr, niveau, corriges, qCorrigee, fmtMs, lang, libAlt, nomLangue } = M;
+document.getElementById(lang === "ar" ? "b-ar" : "b-fr").className = "on";
+const q = document.getElementById("q"); q.value = d.question_originale; q.dir = M.estArabe(q.value) ? "rtl" : "ltr";
+document.getElementById("go").textContent = T.send;
+const cartes = d.candidats.map(c => { const n = niveau(c); return `<article class="carte">
+  <div class="tete"><span class="num">${esc(T.article)} <bdi>${esc(c.article)}</bdi></span><span>${esc(T.page)} ${esc(c.page)}</span>
+   <span class="score">${esc(T.raw_score)} ${esc(c.score)}<span class="jauge"><i style="width:${n.pct}%"></i></span></span></div>
+  <p class="texte" ${attr(c.extrait)}>${surligner(c.extrait, c.surligner)}</p>
+  <div class="actions"><a href="#">${esc(T.full)}</a><a href="#">${esc(libAlt(c))}</a></div></article>`; }).join("");
+const ligne = d.etapes.map(e => `<li><span class="n">${esc(e.etape)}</span><code dir="auto">${esc(e.sortie)}</code></li>`).join("");
+const corr = d.corrections.map(c => `<div><code dir="auto">${esc(c.avant)}</code> → <code dir="auto">${esc(c.apres)}</code></div>`).join("");
+const scores = d.candidats.map(c => `<tr><td><bdi>${esc(c.article)}</bdi></td><td>${esc(c.score)}</td><td>${Number(c.score) >= 9.085 ? "✓" : "✗"}</td></tr>`).join("");
+document.getElementById("grille").innerHTML = `
+  <p class="dym"><b>${esc(T.dym)}</b> <span ${attr(qCorrigee)}>${surligner(qCorrigee, corriges)}</span> ?</p>
+  <section class="res">${cartes}</section>
+  <aside><h2>${esc(T.steps)}</h2>
+    <dl class="kv"><dt>${esc(T.detected)}</dt><dd>${esc(nomLangue)}</dd><dt>latence</dt><dd>${esc(fmtMs(d.latence_ms))} ${esc(T.ms)}</dd><dt>${esc(T.synonyms)}</dt><dd>${esc(T.none)}</dd></dl>
+    <h2>${esc(T.corrections)}</h2>${corr || esc(T.none)}
+    <h2>Pipeline</h2><ol class="ligne">${ligne}</ol>
+    <h2>BM25 <span class="seuil">· seuil 9,085</span></h2><table><tr><th>${esc(T.article)}</th><th>score</th><th>≥</th></tr>${scores}</table>
+  </aside>`;
+</script>
+</body>
+</html>
