@@ -145,7 +145,14 @@
               <span data-i18n="send">Envoyer</span>
             </button>
           </form>
-          <div class="suggestions" id="suggestions"></div>
+          <div class="did-you-mean" id="did-you-mean" role="status" hidden></div>
+          <div class="search-foot">
+            <div class="suggestions" id="suggestions"></div>
+            <label class="debug-toggle">
+              <input type="checkbox" id="chk-debug">
+              <span data-i18n="debug_mode">Mode debug</span>
+            </label>
+          </div>
         </div>
 
         <div class="results" id="results"></div>

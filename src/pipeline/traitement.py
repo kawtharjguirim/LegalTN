@@ -389,12 +389,14 @@ class Pipeline:
             if not r:
                 return {"langue": "ar", "disponible": False}
             return {"langue": "ar", "disponible": True, "article_id": ident,
+                    "article": intitule_ar(r["texte_ar"].strip()) or ident,
                     "page": r["page"], "texte": r["texte_ar"].strip()}
         ligne = self.ligne_fr_par_ar.get(candidat["article_id"])
         r = self.fr_par_ligne.get(ligne) if ligne is not None else None
         if not r:
             return {"langue": "fr", "disponible": False}
         return {"langue": "fr", "disponible": True, "article_id": r["article_id"],
+                "article": intitule_fr(r["texte_fr"].strip()) or r["article_id"],
                 "page": r["page"], "texte": r["texte_fr"].strip()}
 
     def mots_a_surligner(self, texte: str, jetons_question: list[str]) -> list[str]:

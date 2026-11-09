@@ -106,3 +106,13 @@ def test_mot_vide_mal_ecrit_n_est_pas_corrige_en_mot_de_contenu(p):
     r = p.repondre("Qulele est la durée maximale du traail effectif par semaine ?")
     assert r["question_corrigee"].startswith("Quelle est")
     assert "nulle" not in r["etapes"][6]["sortie"]
+
+
+def test_resultats_enrichis_pour_l_interface(p):
+    # Extrait court, mots à surligner et article aligné dans l'autre langue (alignement v6).
+    c = p.repondre("Quelle est la durée maximale du travail effectif par semaine ?", k=1)["candidats"][0]
+    assert c["article"] == "79"
+    assert "48 heures par semaine" in c["extrait"] and len(c["extrait"]) <= len(c["texte"])
+    assert {"durée", "travail", "semaine"} <= set(c["surligner"])
+    va = c["version_alignee"]
+    assert va["disponible"] and va["langue"] == "ar" and va["article"] == "79"
