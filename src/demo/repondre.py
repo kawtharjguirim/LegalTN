@@ -112,7 +112,7 @@ def charger():
 def afficher(question, resultat):
     print(f"Question : {question}")
     if resultat.get("corrections"):
-        print(f"Vouliez-vous dire : {resultat['question_corrigee']} ?")
+        print(f"Vouliez-vous dire : {resultat['question_corrigee'].rstrip(' ?')} ?")
     if resultat["abstention"]:
         print(MESSAGE_ABSTENTION)
         return

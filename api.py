@@ -74,26 +74,40 @@ def creer_serveur(port=8000):
                 "articles_indexes": {langue: len(i["articles"]) for langue, i in chaine.index.items()},
             })
 
+        def rejeter(self, statut, message):
+            """Refus avant lecture du corps : on lit (et jette) le corps annoncé, dans une
+            limite raisonnable, puis on ferme. Sinon, sous Windows, fermer une connexion qui
+            contient encore des octets non lus provoque une réinitialisation TCP : le client
+            reçoit ConnectionResetError/AbortedError au lieu du code d'erreur."""
+            try:
+                taille = int(self.headers.get("Content-Length", "0"))
+            except ValueError:
+                taille = 0
+            if 0 < taille <= 64 * MAX_OCTETS:
+                self.rfile.read(taille)
+            self.close_connection = True
+            self.envoyer(statut, {"erreur": message})
+
         def do_POST(self):
             if urlsplit(self.path).path != "/repondre":
-                self.envoyer(404, {"erreur": "Route inconnue."})
+                self.rejeter(404, "Route inconnue.")
                 return
             if self.headers.get_content_type() != "application/json":
-                self.envoyer(415, {"erreur": "Envoyer un corps JSON."})
+                self.rejeter(415, "Envoyer un corps JSON.")
                 return
             longueurs = self.headers.get_all("Content-Length", [])
             if len(longueurs) != 1 or self.headers.get("Transfer-Encoding"):
-                self.envoyer(400, {"erreur": "Une longueur de requête explicite est nécessaire."})
+                self.rejeter(400, "Une longueur de requête explicite est nécessaire.")
                 return
             try:
                 taille = int(longueurs[0])
             except ValueError:
                 taille = -1
             if taille < 0:
-                self.envoyer(400, {"erreur": "Longueur de requête invalide."})
+                self.rejeter(400, "Longueur de requête invalide.")
                 return
             if taille > MAX_OCTETS:
-                self.envoyer(413, {"erreur": "Requête trop longue."})
+                self.rejeter(413, "Requête trop longue.")
                 return
             try:
                 contenu = json.loads(self.rfile.read(taille).decode("utf-8"))

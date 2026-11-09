@@ -182,7 +182,7 @@
   function bandeauCorrection(d) {
     if (!d.corrections || !d.corrections.length) return "";
     return `<div class="did-you-mean">${esc(t("did_you_mean"))}
-      <strong>${esc(d.question_corrigee)}</strong> ?</div>`;
+      <strong>${esc(d.question_corrigee.replace(/[\s?؟]+$/, ""))}</strong> ?</div>`;
   }
 
   // Mode debug : question après chaque étape du pipeline (src/pipeline/traitement.py).
