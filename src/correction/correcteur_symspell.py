@@ -85,6 +85,27 @@ def reduire_ar(mot: str) -> tuple[str, str, str]:
     return prefixe, mot, suffixe
 
 
+def developper_sigles(texte: str, corrections: list | None = None, corriger_mot=None) -> str:
+    """CDI -> contrat à durée indéterminée.
+
+    Si le mot juste avant le sigle est déjà le premier mot du développement
+    (« contrat CDI »), il n'est pas répété : « contrat à durée indéterminée ».
+    `corriger_mot` sert seulement à cette comparaison (« contart CDI » est reconnu).
+    """
+    def remplacer(m: re.Match) -> str:
+        avant, sig = m.group(1), m.group(2)
+        developpe = SIGLES[sig]
+        premier, _, reste = developpe.partition(" ")
+        compare = (corriger_mot(avant) or avant) if (avant and corriger_mot) else avant
+        insere = reste if avant and normaliser_fr(compare) == normaliser_fr(premier) else developpe
+        if corrections is not None:
+            corrections.append({"type": "sigle", "avant": sig, "apres": insere})
+        return (avant + " " if avant else "") + insere
+
+    motif = r"(?:\b([^\W\d_]+)\s+)?\b(" + "|".join(SIGLES) + r")\b"
+    return re.sub(motif, remplacer, texte)
+
+
 def est_arabizi(question: str) -> bool:
     """Vrai si un mot mélange lettres latines et chiffres (« mta3 », « ch7al », « 9anoun »)."""
     return bool(re.search(r"\b(?=\w*[a-zA-Z])(?=\w*\d)\w+\b", question))
@@ -176,11 +197,7 @@ class Correcteur:
     def corriger(self, question: str, langue: str = "fr") -> dict:
         corrections = []
 
-        def sigle(m: re.Match) -> str:
-            corrections.append({"type": "sigle", "avant": m.group(0), "apres": SIGLES[m.group(0)]})
-            return SIGLES[m.group(0)]
-
-        texte = re.sub(r"\b(" + "|".join(SIGLES) + r")\b", sigle, question)
+        texte = developper_sigles(question, corrections, lambda w: self.corriger_mot(w, langue))
 
         # Arabizi tunisien (« mta3 », « wa7ed ») : pas de dictionnaire fiable, on ne corrige pas
         # l'orthographe (sinon « fel » deviendrait « tel »). Les sigles restent développés.

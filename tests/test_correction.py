@@ -52,6 +52,14 @@ def test_cdi_expanse(c):
     assert r["corrections"] == [{"type": "sigle", "avant": "CDI", "apres": "contrat à durée indéterminée"}]
 
 
+def test_sigle_sans_doublon(c):
+    # « contrat CDI » ne doit pas donner « contrat contrat à durée indéterminée ».
+    r = c.corriger("Quel est le préavis pour un contrat CDI ?")
+    assert r["question_corrigee"] == "Quel est le préavis pour un contrat à durée indéterminée ?"
+    r = c.corriger("quel est le préavi pour un contart CDI ?")
+    assert r["question_corrigee"] == "quel est le préavis pour un contrat à durée indéterminée ?"
+
+
 def test_mot_correct_absent_du_code_non_corrige(c):
     # « capitale » n'est pas dans le Code mais c'est un mot français : on n'y touche pas.
     assert c.corriger("Quelle est la capitale de la Tunisie ?")["corrections"] == []

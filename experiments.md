@@ -664,3 +664,42 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Coût observé : plus de questions hors périmètre acceptées (propres 27→26 via CNSS, D18 ; fautes 29→25). Les fautes rendaient ces questions inconnues, donc refusées « par chance » ; corrigées, elles redeviennent des questions hors périmètre normales. Une fausse abstention de plus avec fautes (D42) : question arabizi, ses mots français fautifs ne sont pas corrigés par choix.
 - Limites : n = 27 questions dans le périmètre (1 question = 3,7 points) ; fautes synthétiques, pas réelles ; aucune question AR dans le périmètre du dev, donc rappel arabe non mesuré ; dev déjà utilisé pour les choix ci-dessus, donc pas une mesure indépendante. Aucune mesure sur test gelé.
 - Tests : `tests/test_correction.py` (12 tests). Suite : `58 passed, 1 failed, 1 xfailed`. L'échec est préexistant (`test_jeux_geles_inchanges`, fins de ligne CRLF→LF au commit) ; `data/test_locked/` non modifié. Le xfail strict CDI reste valide pour le BM25 seul ; la chaîne corrigée répond sur ce cas (test dédié).
+
+## 2026-11-09 — Correction SymSpell : hors périmètre acceptés et balayage du seuil (dev uniquement, sans changement)
+
+- Objectif : comprendre la baisse des refus hors périmètre avec correction et le compromis du seuil d'abstention. Analyse seule : aucun paramètre ni seuil modifié (9,085 conservé). Jeu : dev v2 (27 dans / 29 hors), fautes graine 2026. Aucun fichier de `data/test_locked/` lu. Script d'analyse exécuté hors dépôt.
+- Questions hors périmètre refusées sans correction et acceptées avec (seuil 9,085) :
+
+| Jeu | Id | Question corrigée | Article renvoyé | Score avec / sans correction | Cause |
+|---|---|---|---|---:|---|
+| propres | D18 | … pension de retraite versée par la caisse nationale de sécurité sociale ? | 121 | 23,89 / 7,50 | sigle CNSS développé ; termes très présents dans le Code |
+| fautes | D18 | idem (pesion, reteraite corrigés) | 121 | 23,89 / 7,50 | idem |
+| fautes | D14 | … taux de l'impôt sur le revenu applicable aux salaires en Tunisie ? | 365 | 13,68 / 8,74 | correction juste, question hors sujet mais lexicalement proche |
+| fautes | D17 | … augmenter le loger d'un logement en cous de bail ? | 347 | 10,47 / 7,41 | fausse correction : « loyor » → « loger » (« loyer » absent du corpus) |
+| fautes | D21 | Un commerçants peut-il vendre des produits périmés ? | 409 | 10,22 / 3,22 | correction presque juste (pluriel) |
+
+- Balayage du seuil, R@5 / refus hors périmètre :
+
+| Seuil | propres sans | propres avec | fautes sans | fautes avec |
+|---:|---|---|---|---|
+| 0 | 23/27 · 0/29 | 23/27 · 0/29 | 22/27 · 0/29 | 22/27 · 0/29 |
+| 8 | 23/27 · 12/29 | 23/27 · 11/29 | 22/27 · 20/29 | 22/27 · 9/29 |
+| **9,085 (retenu)** | 21/27 · 27/29 | 21/27 · 26/29 | 20/27 · 29/29 | 21/27 · 25/29 |
+| 10 | 21/27 · 28/29 | 21/27 · 27/29 | 20/27 · 29/29 | 21/27 · 25/29 |
+| 11 | 21/27 · 28/29 | 21/27 · 27/29 | 17/27 · 29/29 | 21/27 · 27/29 |
+| 12 | 20/27 · 28/29 | 20/27 · 27/29 | 14/27 · 29/29 | 20/27 · 27/29 |
+| 14 | 18/27 · 29/29 | 18/27 · 28/29 | 13/27 · 29/29 | 18/27 · 28/29 |
+| 16 | 17/27 · 29/29 | 17/27 · 28/29 | 9/27 · 29/29 | 17/27 · 28/29 |
+
+- Lecture : avec correction, un seuil de 11 récupérerait 2 refus (fautes : 25 → 27/29 ; propres : 26 → 27/29) sans perte de R@5 sur ce dev. D18 (score 23,89) n'est rattrapable par aucun seuil raisonnable : c'est le lexique de sigles qui le fait accepter. Ces écarts portent sur 1 à 2 questions et sont choisis sur un dev déjà consulté : risque de surajustement. Seuil non modifié, décision laissée à l'auteure.
+- Démo `repondre_question` :
+  - « Quelle est la durée légale du travail hebdomadaire ? » : aucune correction ; top 3 = 88 (agricole, 10,85), 90 (7,01), 29 (6,77). L'article 79 (« 48 heures par semaine ») n'est pas en tête : écart de vocabulaire (hebdomadaire / par semaine), hors du champ d'un correcteur orthographique.
+  - « quel est le préavi pour un contart CDI ? » → « quel est le préavis pour un contrat contrat à durée indéterminée ? » ; top 3 = 14 (14,68), 14 bis (13,80), 6 (11,79). Défaut observé : « contrat » est dupliqué quand le sigle suit le mot « contrat », ce qui pousse l'article 14 devant le 14 bis. Non corrigé à ce stade.
+
+## 2026-11-09 — Décisions sur la correction SymSpell et correction du doublon de sigle
+
+- Décisions de l'équipe : seuil d'abstention maintenu à 9,085 (réglage unique prévu sur le pipeline final) ; CNSS conservé dans le lexique de sigles.
+- Correction : un sigle n'est plus précédé d'un doublon (« contrat CDI » → « contrat à durée indéterminée », y compris quand le mot précédent est mal écrit : « contart CDI »). Fonction `developper_sigles()`, test `test_sigle_sans_doublon`.
+- Effet : « quel est le préavi pour un contart CDI ? » → « quel est le préavis pour un contrat à durée indéterminée ? » ; top 3 = 14, 14 bis, 6. L'article 14 reste devant le 14 bis : le doublon n'était pas la seule cause (« contrat » et « durée indéterminée » sont très présents dans l'article 14).
+- Dev v2 : tableau et détails de `reports/correction_symspell/` régénérés à l'identique (octet par octet) : le correctif ne touche aucune question du dev.
+- Erreurs D17 (fausse correction « loyor » → « loger ») et D18 (CNSS, hors périmètre accepté) consignées dans `reports/erreurs_analysees_dev.csv`, fichier d'analyse manuelle (distinct de `erreurs_dev.csv`, régénéré par script).
