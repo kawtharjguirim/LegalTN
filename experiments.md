@@ -732,3 +732,10 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Limites : 27 questions dans le périmètre, 6 tunisiennes, 0 arabe dans le périmètre (rappel AR non mesurable) ; lexiques modèles non validés ; dev déjà consulté. Aucune mesure sur test gelé.
 - Erreurs ajoutées à `reports/erreurs_analysees_dev.csv` : question hebdomadaire (partie C), D07, arabizi D30/D32/D35/D38 et D28/D52.
 - Tests : `python -m pytest -q -p no:cacheprovider` → `72 passed, 1 xfailed, 17 subtests passed` (0 échec). Le xfail strict est le cas CDI du BM25 historique seul, volontairement conservé ; la chaîne complète répond sur ce cas.
+
+## 2026-11-09 — Correctif : mots vides mal écrits dans SymSpell (dev uniquement)
+
+- Défaut trouvé en testant les questions d'exemple de l'interface : les mots vides étant exclus du dictionnaire SymSpell (choix de l'équipe), un mot vide mal écrit était « corrigé » vers un mot de contenu (« Qulele » → « Nulle » au lieu de « Quelle »), ce qui ajoutait du bruit au BM25.
+- Correctif (sans remettre les mots vides dans le dictionnaire) : un mot inconnu au moins aussi proche d'un mot vide que du meilleur mot du corpus est considéré comme un mot vide mal écrit ; il est retiré dans le pipeline (comme à l'étape 3) et affiché sous sa forme correcte dans « Vouliez-vous dire ». Test `test_mot_vide_mal_ecrit_n_est_pas_corrige_en_mot_de_contenu`. Aucun seuil ni paramètre modifié.
+- Effet : l'expérience SymSpell (`reports/correction_symspell/`) est inchangée (correcteur par défaut sans liste de mots vides). L'ablation du pipeline change pour la seule configuration « pipeline complet » : R@5 tunisien 1/6 → 2/6 (D35 : l'article 122 entre dans le top 5), R@5 total 21/27 → 22/27, R@5 avec fautes 21/27 → 22/27. Nouvelle sortie : `reports/pipeline_dev_v2/` ; l'ancienne (`reports/pipeline_dev/`) est conservée pour traçabilité.
+- Commande : `python -X utf8 src/evaluation/evaluer_pipeline_dev.py --rapports reports/pipeline_dev_v2`. Tests : 73 réussis, 1 xfail, 0 échec.

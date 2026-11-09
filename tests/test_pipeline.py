@@ -99,3 +99,10 @@ def test_duree_hebdomadaire_article_79_dans_le_top5(p):
     # (le 90 contient aussi « normale » et « semaine »). Cas consigné dans les erreurs.
     r = p.repondre("Quelle est la durée légale du travail hebdomadaire ?", k=5)
     assert "79" in [c["article"] for c in r["candidats"]]
+
+
+def test_mot_vide_mal_ecrit_n_est_pas_corrige_en_mot_de_contenu(p):
+    # « Qulele » est plus proche de « quelle » (mot vide) que de « nulle » : retiré, pas « corrigé ».
+    r = p.repondre("Qulele est la durée maximale du traail effectif par semaine ?")
+    assert r["question_corrigee"].startswith("Quelle est")
+    assert "nulle" not in r["etapes"][6]["sortie"]

@@ -169,13 +169,35 @@ class Correcteur:
                 self.freq_ar_reduit[reduire_ar(mot)[1]] += 1
         self.sym_ar = _symspell(self.freq_ar_reduit)
 
+        # Mots vides absents des dictionnaires : un mot inconnu au moins aussi proche d'un
+        # mot vide que de tout mot du corpus est un mot vide mal écrit (« Qulele » -> « Quelle »),
+        # pas un mot de contenu (« Nulle »).
+        self.vides = {"fr": vides_fr, "ar": vides_ar}
+        self.forme_vide = {normaliser_fr(w): w for w in (mots_vides or {}).get("fr", ())}
+        self.forme_vide.update({normaliser_ar(w): w for w in (mots_vides or {}).get("ar", ())})
+        self.sym_vides = {"fr": _symspell(Counter(vides_fr)) if vides_fr else None,
+                          "ar": _symspell(Counter(vides_ar)) if vides_ar else None}
+
     # --- décisions mot par mot -------------------------------------------------
+
+    def _vide_plus_proche(self, cle: str, langue: str, suggestions) -> str | None:
+        """Mot vide à distance <= à la meilleure suggestion de contenu, sinon None."""
+        sym = self.sym_vides.get(langue)
+        if sym is None:
+            return None
+        v = sym.lookup(cle, Verbosity.CLOSEST, max_edit_distance=distance_max(cle))
+        if v and (not suggestions or v[0].distance <= suggestions[0].distance):
+            return self.forme_vide.get(v[0].term, v[0].term)
+        return None
 
     def _corriger_fr(self, mot: str) -> str | None:
         cle = normaliser_fr(mot)
         if cle in self.freq_fr or cle in MOTS_PROTEGES_FR or mot.lower() in self.lexique_fr:
             return None
         suggestions = self.sym_fr.lookup(cle, Verbosity.CLOSEST, max_edit_distance=distance_max(cle))
+        vide = self._vide_plus_proche(cle, "fr", suggestions)
+        if vide:
+            return vide
         if not suggestions:
             return None
         return self.forme_fr[suggestions[0].term]
@@ -208,7 +230,14 @@ class Correcteur:
         if jeton in self.freq_ar_reduit or jeton in self.freq_ar or jeton in self.lexique_ar:
             return None
         s = self.sym_ar.lookup(jeton, Verbosity.CLOSEST, max_edit_distance=distance_max(jeton))
+        vide = self._vide_plus_proche(jeton, "ar", s)
+        if vide:
+            return vide
         return s[0].term if s else None
+
+    def est_mot_vide(self, mot: str, langue: str) -> bool:
+        norm = normaliser_ar(mot) if langue == "ar" else normaliser_fr(mot)
+        return norm in self.vides.get(langue, ())
 
     def corriger_mot(self, mot: str, langue: str) -> str | None:
         """Retourne la correction, ou None si le mot doit rester tel quel."""
