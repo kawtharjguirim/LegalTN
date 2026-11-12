@@ -1,0 +1,2 @@
+# Jeux geles : octets conserves tels quels (les sha256 du journal en dependent)
+data/test_locked/** -text
