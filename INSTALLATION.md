@@ -24,13 +24,21 @@ cd LegalTN
 
 ## 3. Créer un environnement Python
 
-**Ne pas utiliser le dossier `.venv` présent dans le dépôt.** Il a été créé sur un autre
-poste et pointe vers `C:\Python312\python.exe` : sur une autre machine, il échoue avec
-l'erreur `No Python at 'C:\Python312\python.exe'`. Le script `demarrer.ps1` l'utilise en
-priorité, donc il échoue aussi tant que ce dossier est dans le dépôt (voir section 8).
+Le dépôt ne contient plus d'environnement Python (voir section 8) : chaque poste crée le
+sien. Deux possibilités.
 
-Créez votre propre environnement **en dehors du dossier du projet**, pour ne pas le
-mélanger aux fichiers suivis par git :
+**Option A — environnement dans le projet (`.venv`, utilisé par `demarrer.ps1`).** Le dossier
+`.venv` est ignoré par git :
+
+```powershell
+python -m venv .venv
+$py = ".\.venv\Scripts\python.exe"
+& $py --version
+```
+
+`demarrer.ps1` utilise `.venv\Scripts\python.exe` s'il existe, sinon le `python` du PATH.
+
+**Option B — environnement en dehors du projet :**
 
 ```powershell
 python -m venv $HOME\venvs\legaltn
@@ -121,9 +129,12 @@ relancer peut réécrire des fichiers de `data/processed/`.
 
 ## 8. Problèmes connus
 
-- **Le dossier `.venv` est suivi par git** (environ 13 600 fichiers) et ne fonctionne que
-  sur le poste où il a été créé. Il faudrait le retirer du dépôt (`git rm -r --cached .venv`)
-  et ajouter un fichier `.gitignore` contenant `.venv/`. À faire avec l'accord de toute
-  l'équipe, car cela touche le dépôt partagé.
+- **`.venv` retiré du dépôt.** Jusqu'au commit `c10298a`, le dossier `.venv` (13 608
+  fichiers) et des fichiers `.pyc` compilés étaient suivis par git ; le `.venv` ne
+  fonctionnait que sur le poste où il avait été créé (`No Python at 'C:\Python312\python.exe'`).
+  Ils sont désormais retirés et ignorés (`.gitignore`). **Conséquence pour les postes qui
+  avaient déjà cloné le dépôt :** au `git pull` suivant, git supprime le `.venv` local ; il
+  faut le recréer avec la section 3 puis réinstaller les paquets (section 5). L'historique
+  git garde l'ancien `.venv` : le dossier `.git` reste lourd (environ 164 Mo).
 - **Accents dans le terminal** : lancer Python avec `-X utf8` (comme dans les commandes
   ci-dessus) évite les caractères mal affichés sous Windows.

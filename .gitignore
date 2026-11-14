@@ -1,0 +1,8 @@
+# Environnements Python locaux (a creer sur chaque poste, voir INSTALLATION.md)
+.venv/
+venv/
+
+# Fichiers compiles generes automatiquement
+__pycache__/
+*.pyc
+.pytest_cache/
