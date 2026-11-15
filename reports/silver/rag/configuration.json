@@ -1,0 +1,36 @@
+{
+  "jeux": [
+    "questions_dev_v2.csv",
+    "questions_dev_ar_traduites_v1.csv"
+  ],
+  "n_questions": 77,
+  "modeles": [
+    "intfloat/multilingual-e5-base",
+    "sentence-transformers/LaBSE"
+  ],
+  "configs": [
+    [
+      "bm25",
+      false
+    ],
+    [
+      "dense",
+      false
+    ],
+    [
+      "dense",
+      true
+    ],
+    [
+      "hybride",
+      false
+    ],
+    [
+      "hybride",
+      true
+    ]
+  ],
+  "rrf_k": 60,
+  "abstention": "seuil cosinus LOO ; BM25 : seuil Bronze",
+  "avertissement": "dev déjà consulté ; questions AR traduites automatiquement, à valider"
+}

@@ -1,0 +1,12 @@
+# Palier Silver : encodeurs, fine-tuning NER, RAG dense, LLM local.
+# torch s'installe à part depuis l'index CUDA (voir README, section Silver).
+-r requirements-alignement.txt
+pytest
+transformers
+sentence-transformers
+datasets
+accelerate
+seqeval
+sklearn-crfsuite
+scipy
+ollama

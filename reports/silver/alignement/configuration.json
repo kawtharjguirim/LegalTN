@@ -1,0 +1,27 @@
+{
+  "modeles": [
+    "sentence-transformers/LaBSE",
+    "intfloat/multilingual-e5-base"
+  ],
+  "variantes": [
+    "brut",
+    "sans_entete",
+    "sans_entete_norm"
+  ],
+  "methodes": [
+    "argmax",
+    "mutuel",
+    "hongrois"
+  ],
+  "lambdas": [
+    0.0,
+    0.1,
+    0.3
+  ],
+  "max_len": 256,
+  "appareil": "cuda",
+  "n_gold": 160,
+  "n_reference_numerotation": 494,
+  "n_ar": 515,
+  "n_fr": 498
+}
