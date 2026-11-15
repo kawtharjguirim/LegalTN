@@ -1,0 +1,4 @@
+# Jeux gelés : empreintes SHA-256 vérifiées octet par octet, ne jamais convertir les fins de ligne.
+data/test_locked/** -text
+*.pdf binary
+*.png binary
