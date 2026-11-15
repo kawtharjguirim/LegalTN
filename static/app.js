@@ -37,6 +37,10 @@
       err_conn: "Impossible de joindre le serveur local. Relancez l'API puis réessayez.",
       empty: "Les articles correspondants s'afficheront ici avec leur citation.",
       page: "page", score: "pertinence", ms: "ms",
+      mode_label: "Mode de réponse", mode_bm25: "Extraits (BM25)", mode_rag: "Réponse rédigée (RAG)",
+      thinking_rag: "Le modèle de langage rédige une réponse à partir des articles trouvés…",
+      rag_title: "Réponse", rag_sources: "Articles cités", rag_quote: "Extrait cité",
+      rag_note: "Réponse rédigée par un modèle de langage local, uniquement à partir des articles cités ci-dessous. Vérifiez toujours le texte de l'article.",
       about_t: "À propos du corpus",
       about_p1: "LegalTN interroge l'édition bilingue du Code du travail tunisien (291 pages, arabe et français) avec un moteur de recherche lexical BM25 et un appariement des articles par numérotation.",
       ab_k1: "Corpus français", ab_k2: "Corpus arabe",
@@ -77,6 +81,10 @@
       err_conn: "تعذر الاتصال بالخادم المحلي. أعد تشغيل الواجهة ثم حاول مجدداً.",
       empty: "ستظهر الفصول المطابقة هنا مع مصادرها.",
       page: "صفحة", score: "الصلة", ms: "م.ث",
+      mode_label: "نوع الإجابة", mode_bm25: "مقتطفات (BM25)", mode_rag: "إجابة محررة (RAG)",
+      thinking_rag: "يحرر النموذج اللغوي إجابة انطلاقاً من الفصول المسترجعة…",
+      rag_title: "الإجابة", rag_sources: "الفصول المذكورة", rag_quote: "المقطع المقتبس",
+      rag_note: "إجابة محررة بنموذج لغوي محلي، اعتماداً فقط على الفصول المذكورة أدناه. تحقق دائماً من نص الفصل.",
       about_t: "حول المجموعة",
       about_p1: "يستجوب LegalTN النسخة الثنائية من مجلة الشغل التونسية (291 صفحة بالعربية والفرنسية) بمحرك بحث معجمي BM25 ومطابقة للفصول حسب الترقيم.",
       ab_k1: "النص الفرنسي", ab_k2: "النص العربي",
@@ -88,7 +96,7 @@
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const state = { lang: "fr", vue: "accueil", charge: false };
+  const state = { lang: "fr", vue: "accueil", charge: false, mode: "bm25" };
   const t = (k) => I18N[state.lang][k] ?? k;
 
   /* ---------- i18n ---------- */
@@ -165,13 +173,37 @@
   }
 
   function etatChargement() {
-    results.innerHTML = `<div class="result-meta">${esc(t("thinking"))}</div>` +
+    const msg = state.mode === "rag" ? t("thinking_rag") : t("thinking");
+    results.innerHTML = `<div class="result-meta">${esc(msg)}</div>` +
       "<div class='skel'></div>".repeat(3);
   }
 
   function etatErreur(msg) {
     results.innerHTML = `<div class="err-card">${ICON_ERR}<div>
       <h3>${esc(t("err_title"))}</h3><p>${esc(msg)}</p></div></div>`;
+  }
+
+  function rendreRag(d) {
+    const ar = d.langue === "ar" ? " ar-text" : "";
+    const sources = d.articles_cites.map((c, i) => `
+      <article class="card card-answer" style="animation-delay:${i * 60}ms">
+        <div class="answer-head">
+          <span class="badge-article">${esc("Article " + c.article)}</span>
+          <span class="badge-page">${esc(t("page"))} ${esc(String(c.page))}</span>
+        </div>
+        ${c.texte_fr ? `<p class="answer-text">${esc(c.texte_fr)}</p>` : ""}
+        ${c.texte_ar ? `<p class="answer-text ar-text" dir="rtl">${esc(c.texte_ar)}</p>` : ""}
+      </article>`).join("");
+    results.innerHTML = `
+      <div class="card rag-answer">
+        <h3>${esc(t("rag_title"))}</h3>
+        <p class="answer-text${ar}">${esc(d.reponse)}</p>
+        ${d.extrait ? `<blockquote class="rag-quote">${esc(t("rag_quote"))} : ${esc(d.extrait)}</blockquote>` : ""}
+        <p class="rag-note">${esc(t("rag_note"))} (${esc(d.modele)})</p>
+      </div>
+      <div class="result-meta">${esc(t("rag_sources"))} — ${d.articles_cites.length}</div>
+      ${sources}
+      <p class="latency">${d.latence_ms} ${esc(t("ms"))}</p>`;
   }
 
   function rendre(d) {
@@ -181,6 +213,8 @@
         <p>${esc(d.message || "")}</p></div></div>`;
       return;
     }
+    if (d.mode === "rag") { rendreRag(d); return; }
+    const avert = d.avertissement ? `<div class="abs-card">${ICON_WARN}<div><p>${esc(d.avertissement)}</p></div></div>` : "";
     const max = Math.max(...d.candidats.map(c => c.score), 1);
     const cartes = d.candidats.map((c, i) => {
       const pct = Math.round((c.score / max) * 100);
@@ -197,7 +231,7 @@
         <p class="answer-text${ar}">${esc(c.texte)}</p>
       </article>`;
     }).join("");
-    results.innerHTML = `<div class="result-meta">
+    results.innerHTML = avert + `<div class="result-meta">
         ${esc(t("results_title"))} — ${d.candidats.length}
       </div>${cartes}
       <p class="latency">${d.latence_ms} ${esc(t("ms"))}</p>`;
@@ -213,7 +247,7 @@
       const r = await fetch("/repondre", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: q, k: 3 }),
+        body: JSON.stringify({ question: q, k: 3, mode: state.mode }),
       });
       const d = await r.json();
       if (!r.ok) etatErreur(d.erreur || String(r.status));
@@ -234,6 +268,10 @@
   $$("[data-nav]").forEach(el =>
     el.addEventListener("click", e => { e.preventDefault(); naviguer(el.dataset.nav); }));
   $$(".lang-btn").forEach(b => b.onclick = () => appliquerLangue(b.dataset.lang));
+  $$(".mode-btn").forEach(b => b.onclick = () => {
+    state.mode = b.dataset.mode;
+    $$(".mode-btn").forEach(x => x.classList.toggle("active", x === b));
+  });
 
   etatVide();
   chargerSante();

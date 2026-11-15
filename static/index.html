@@ -133,6 +133,13 @@
       <section class="view" id="view-recherche">
         <div class="search-card card">
           <p class="search-label" data-i18n="ask">Posez votre question juridique</p>
+          <div class="mode-row">
+            <span class="mode-label" data-i18n="mode_label">Mode de réponse</span>
+            <div class="lang-switch" role="group" aria-label="Mode">
+              <button type="button" class="mode-btn active" data-mode="bm25" data-i18n="mode_bm25">Extraits (BM25)</button>
+              <button type="button" class="mode-btn" data-mode="rag" data-i18n="mode_rag">Réponse rédigée (RAG)</button>
+            </div>
+          </div>
           <form class="search-form" id="form-search">
             <div class="search-field">
               <svg viewBox="0 0 24 24" class="i field-i"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>

@@ -97,3 +97,46 @@ class TestAPI(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestModesSilver(unittest.TestCase):
+    """Mode RAG : validation du paramètre et repli BM25 quand le LLM est injoignable (sans appel réel)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.serveur = api.creer_serveur(port=0)
+        cls.thread = threading.Thread(target=cls.serveur.serve_forever, daemon=True)
+        cls.thread.start()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.serveur.shutdown()
+        cls.serveur.server_close()
+        cls.thread.join(timeout=5)
+
+    requete = TestAPI.requete
+
+    def test_mode_inconnu_refuse(self):
+        statut, resultat = self.requete("POST", "/repondre", {"question": "préavis", "mode": "magie"})
+        self.assertEqual(statut, 400)
+        self.assertIn("mode", resultat["erreur"])
+
+    def test_mode_par_defaut_reste_bm25(self):
+        statut, resultat = self.requete("POST", "/repondre", {
+            "question": "Quel est le préavis de rupture du contrat de travail à durée indéterminée ?"})
+        self.assertEqual(statut, 200)
+        self.assertEqual(resultat["mode"], "bm25")
+
+    def test_rag_repli_bm25_si_llm_absent(self):
+        ancien = api.rag.OLLAMA
+        api.rag.OLLAMA = "http://127.0.0.1:9/api/chat"  # port fermé : simule Ollama éteint
+        try:
+            statut, resultat = self.requete("POST", "/repondre", {
+                "question": "Quel est le préavis de rupture du contrat de travail à durée indéterminée ?",
+                "mode": "rag"})
+        finally:
+            api.rag.OLLAMA = ancien
+        self.assertEqual(statut, 200)
+        self.assertEqual(resultat["mode"], "bm25")
+        self.assertIn("avertissement", resultat)
+        self.assertEqual(resultat["candidats"][0]["article"], "14 bis")
