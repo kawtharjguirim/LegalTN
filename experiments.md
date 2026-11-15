@@ -642,3 +642,24 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Aucune nouvelle mesure sur les jeux gelés ; aucun nouveau résultat scientifique ni annotation. Les gel et usages historiques ne sont pas réinitialisés. Les 36 tests Codex ne sont pas confondus avec les 22 tests présents.
 - Limites : `ocr_gold_v1.csv`, la référence indépendante de rappel d'alignement, les annotations d'obligations et les sources NER/CoNLL restent absents. Les trois fichiers récupérés ne suffisent pas à déclarer ces composants évalués.
 - Suite : poursuivre la récupération et l'audit des composants scientifiques manquants et du cahier des charges complet ; conserver la séparation entre validation logicielle et évaluation indépendante.
+
+## 2026-11-15 — Silver, chantier 2 : recherche dense et hybride sur le dev v2 (aucun test lu)
+
+- Objectif : comparer BM25, un encodeur multilingue pré-entraîné et leur fusion, sans aucun réglage.
+- Code : `src/retrieval/dense.py`, `src/retrieval/hybride.py`, `src/evaluation/evaluer_retrieval.py` ; tests `tests/test_retrieval_hybride.py`.
+- Configuration : `intfloat/multilingual-e5-base` (préfixes query:/passage:, troncature 512 jetons), sentence-transformers 6.3.0, torch 2.15.0+cpu, transformers 5.23.0, Python 3.11.9, CPU. Fusion RRF k=60 (valeur de l'article d'origine, non réglée). Graine torch 2026 (encodage déterministe, pas d'entraînement).
+- Jeu : `data/dev/questions_dev_v2.csv` (sha256 9c616a6c…, vérifié par le script ; le script refuse `data/test_locked/`). 27 questions dans le périmètre : 21 FR, 6 « tun », 0 AR.
+- Commande : `.venv/Scripts/python.exe -X utf8 src/evaluation/evaluer_retrieval.py --rapports reports/silver/retrieval_dev`. Index : 351,6 s ; 0,214 s par question.
+- Contrôle : la ligne BM25 reproduit le contrôle du 2026-10-27 sans seuil (R@1 21/27, R@5 23/27).
+
+| Langue (n dans périmètre) | BM25 R@1 / R@5 | Dense même langue | Dense croisé FR+AR | Hybride RRF |
+|---|---|---|---|---|
+| Toutes (27) | 21 / 23 | 21 / 22 | 21 / 22 | 21 / 21 |
+| FR (21) | 20 / 21 | 21 / 21 | 21 / 21 | 21 / 21 |
+| tun (6) | 1 / 3 | 0 / 1 | 0 / 1 | 0 / 0 |
+| AR (0) | non mesurable | — | — | — |
+
+- Lecture : en FR, le dense corrige la seule erreur top-1 de BM25 (20 → 21/21). Sur les 6 questions « tun », toutes écrites en caractères latins avec chiffres (arabizi), l'encodeur échoue et la fusion fait pire que BM25 (R@5 0/6 contre 3/6). Au total, l'hybride n'améliore pas BM25 sur ce dev (R@5 21 contre 23).
+- Limites : effectifs minuscules (1 question d'écart = 4 points sur 27, 17 points sur 6) ; aucune conclusion statistique possible. Aucune question AR dans le périmètre. La catégorie « tun » du dev est en fait de l'arabizi. Abstention non traitée ici (les scores maximaux sont enregistrés pour un choix ultérieur sur dev).
+- Sorties : `reports/silver/retrieval_dev/resultats.json`, `resume_par_langue.csv` (marqués développement non indépendant).
+- Suite : questions AR/tunisien en écriture arabe/arabizi écrites par l'équipe (dev v3) ; ne pas choisir la configuration finale sur 27 questions.

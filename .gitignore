@@ -6,3 +6,6 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Vecteurs de la recherche dense (recalculables)
+data/processed/cache_dense/
