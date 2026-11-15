@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "legaltn-hybride",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "demarrer.ps1", "-Port", "18765", "-Moteur", "hybride"],
+      "port": 18765
+    },
+    {
+      "name": "legaltn-bm25",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "demarrer.ps1", "-Port", "18766", "-Moteur", "bm25"],
+      "port": 18766
+    }
+  ]
+}

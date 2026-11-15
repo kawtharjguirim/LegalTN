@@ -1,6 +1,30 @@
 # LegalTN
 
 Projet NLP sur le Code du travail tunisien en arabe et français.
+
+## Palier Silver (novembre 2026)
+
+Environnement : le disque C étant presque plein, Python, caches et modèles sont sur
+`D:\LegalTN-cache` (modifiable par la variable `LEGALTN_CACHE`).
+
+```powershell
+. .\env_silver.ps1                       # variables + chemin du Python Silver ($Py)
+& $Py -m pip install torch --index-url https://download.pytorch.org/whl/cu126
+& $Py -m pip install -r requirements-silver.txt
+```
+
+Démo Silver (recherche hybride BM25 + e5, abstention par langue, citation bilingue,
+étapes visibles) : `.\demarrer.ps1 -Port 18765 -Moteur hybride` puis http://127.0.0.1:18765/.
+`-Moteur bm25` (défaut) garde la démo Bronze en bibliothèque standard seule.
+
+| Composant | Code | Résultats |
+|---|---|---|
+| Alignement AR↔FR par embeddings (LaBSE, e5) | `src/alignement_embeddings/` | `reports/silver/alignement/RESULTATS.md` |
+| Recherche dense / hybride bilingue | `src/rag/recherche.py`, `service.py` | `reports/silver/rag/RESULTATS.md` |
+| LLM (Ollama, 3 stratégies de prompting) | `src/rag/generer.py` | non exécuté : Ollama à installer |
+| NER fine-tuné (CamemBERT, AraBERT, XLM-R) | `src/ner_juridique/` | en attente des lots corrigés (`data/a_annoter/`) |
+
+Les sections suivantes décrivent l'état Bronze repris.
 Cette copie est en cours de récupération. L'alignement, la démonstration BM25
 et un adaptateur HTTP local fonctionnent. Les corpus AR/FR, le PDF source et les
 caches OCR sont disponibles. Trois fichiers gelés ont été récupérés et la suite

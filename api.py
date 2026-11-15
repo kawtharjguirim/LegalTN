@@ -1,12 +1,16 @@
 """Adaptateur HTTP local ajouté à la reprise, autour de la démo BM25 récupérée.
 
-Lancer : python -X utf8 api.py --port 8000
+Lancer : python -X utf8 api.py --port 8000 [--moteur bm25|hybride]
 GET /health ; POST /repondre avec {"question": "...", "k": 3}.
+- ``bm25`` (défaut) : démo Bronze, bibliothèque standard seule.
+- ``hybride`` : moteur Silver (BM25 + e5, abstention par langue, citation bilingue) ;
+  nécessite l'environnement Silver (torch, sentence-transformers, modèle e5 en cache).
 Ne lance aucune évaluation et ne modifie ni seuil ni fichiers.
 """
 
 import argparse
 import json
+import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -27,8 +31,44 @@ MIME = {
 }
 
 
-def creer_serveur(port=8000):
-    corpus = repondre.charger()
+NOMS_LANGUE = {"fr": "français", "ar": "arabe"}
+
+
+class MoteurBM25:
+    """Démo Bronze inchangée (BM25 + seuil 9,085), avec étapes visibles."""
+    nom = "bm25"
+
+    def __init__(self):
+        self.corpus = repondre.charger()
+
+    def articles_indexes(self):
+        return {langue: len(c.articles) for langue, c in self.corpus.items()}
+
+    def repondre(self, question, k=3):
+        langue = repondre.detecter_langue(question)
+        resultat = self.corpus[langue].repondre(question, k=k)
+        resultat["moteur"] = self.nom
+        resultat["etapes"] = [
+            f"Langue détectée : {NOMS_LANGUE[langue]}",
+            f"BM25 (seuil {repondre.SEUIL_SCORE_MIN})",
+            "Abstention : question hors du Code du travail" if resultat["abstention"]
+            else f"Citation : article {resultat['candidats'][0]['article']}",
+        ]
+        return resultat
+
+
+def creer_moteur(nom):
+    if nom == "bm25":
+        return MoteurBM25()
+    if nom == "hybride":
+        from src.rag.service import MoteurHybride  # import tardif : dépendances Silver
+        return MoteurHybride()
+    raise ValueError(f"moteur inconnu : {nom}")
+
+
+def creer_serveur(port=8000, moteur="bm25"):
+    moteur = creer_moteur(moteur) if isinstance(moteur, str) else moteur
+    verrou = threading.Lock()
 
     class Requetes(BaseHTTPRequestHandler):
         def envoyer(self, statut, contenu):
@@ -70,7 +110,8 @@ def creer_serveur(port=8000):
                 return
             self.envoyer(200, {
                 "statut": "ok",
-                "articles_indexes": {langue: len(c.articles) for langue, c in corpus.items()},
+                "moteur": moteur.nom,
+                "articles_indexes": moteur.articles_indexes(),
             })
 
         def do_POST(self):
@@ -113,8 +154,8 @@ def creer_serveur(port=8000):
                 self.envoyer(400, {"erreur": "k doit être un entier entre 1 et 5."})
                 return
             debut = time.perf_counter()
-            langue = repondre.detecter_langue(question)
-            resultat = corpus[langue].repondre(question.strip(), k=k)
+            with verrou:  # un seul encodage à la fois sur le GPU
+                resultat = moteur.repondre(question.strip(), k=k)
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION
@@ -126,9 +167,10 @@ def creer_serveur(port=8000):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--moteur", choices=["bm25", "hybride"], default="bm25")
     args = parser.parse_args()
-    serveur = creer_serveur(args.port)
-    print(f"API LegalTN : http://127.0.0.1:{serveur.server_port}/health", flush=True)
+    serveur = creer_serveur(args.port, args.moteur)
+    print(f"API LegalTN ({args.moteur}) : http://127.0.0.1:{serveur.server_port}/", flush=True)
     try:
         serveur.serve_forever()
     except KeyboardInterrupt:

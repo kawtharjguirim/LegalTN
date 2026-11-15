@@ -37,6 +37,9 @@
       err_conn: "Impossible de joindre le serveur local. Relancez l'API puis réessayez.",
       empty: "Les articles correspondants s'afficheront ici avec leur citation.",
       page: "page", score: "pertinence", ms: "ms",
+      steps: "Étapes du traitement", engine: "Moteur",
+      other_fr: "Version française", other_ar: "Version arabe",
+      eng_bm25: "BM25 (Bronze)", eng_hybride: "Hybride BM25 + e5 (Silver)",
       about_t: "À propos du corpus",
       about_p1: "LegalTN interroge l'édition bilingue du Code du travail tunisien (291 pages, arabe et français) avec un moteur de recherche lexical BM25 et un appariement des articles par numérotation.",
       ab_k1: "Corpus français", ab_k2: "Corpus arabe",
@@ -77,6 +80,9 @@
       err_conn: "تعذر الاتصال بالخادم المحلي. أعد تشغيل الواجهة ثم حاول مجدداً.",
       empty: "ستظهر الفصول المطابقة هنا مع مصادرها.",
       page: "صفحة", score: "الصلة", ms: "م.ث",
+      steps: "مراحل المعالجة", engine: "المحرك",
+      other_fr: "النص الفرنسي", other_ar: "النص العربي",
+      eng_bm25: "BM25 (برونزي)", eng_hybride: "هجين BM25 + e5 (فضي)",
       about_t: "حول المجموعة",
       about_p1: "يستجوب LegalTN النسخة الثنائية من مجلة الشغل التونسية (291 صفحة بالعربية والفرنسية) بمحرك بحث معجمي BM25 ومطابقة للفصول حسب الترقيم.",
       ab_k1: "النص الفرنسي", ab_k2: "النص العربي",
@@ -174,14 +180,32 @@
       <h3>${esc(t("err_title"))}</h3><p>${esc(msg)}</p></div></div>`;
   }
 
+  /* Étapes visibles et moteur utilisé (renvoyés par l'API). */
+  function blocEtapes(d) {
+    if (!d.etapes || !d.etapes.length) return "";
+    const moteur = d.moteur ? `<span class="badge-engine">${esc(t("engine"))} : ${esc(t("eng_" + d.moteur))}</span>` : "";
+    return `<details class="steps"><summary>${esc(t("steps"))} ${moteur}</summary>
+      <ol>${d.etapes.map(e => `<li>${esc(e)}</li>`).join("")}</ol></details>`;
+  }
+
+  /* Article de même intitulé dans l'autre langue (citation bilingue). */
+  function blocAutreLangue(c) {
+    const a = c.autre_langue;
+    if (!a) return "";
+    const cls = a.langue === "ar" ? " ar-text" : "";
+    return `<details class="other-lang"><summary>${esc(t("other_" + a.langue))}
+        · ${esc(t("page"))} ${esc(String(a.page))}</summary>
+      <p class="answer-text${cls}" dir="${a.langue === "ar" ? "rtl" : "ltr"}">${esc(a.texte)}</p></details>`;
+  }
+
   function rendre(d) {
     if (d.abstention) {
       results.innerHTML = `<div class="abs-card">${ICON_WARN}<div>
         <h3>${esc(t("abs_title"))}</h3>
-        <p>${esc(d.message || "")}</p></div></div>`;
+        <p>${esc(d.message || "")}</p></div></div>${blocEtapes(d)}`;
       return;
     }
-    const max = Math.max(...d.candidats.map(c => c.score), 1);
+    const max = Math.max(...d.candidats.map(c => c.score), 1e-9);
     const cartes = d.candidats.map((c, i) => {
       const pct = Math.round((c.score / max) * 100);
       const ar = d.langue === "ar" ? " ar-text" : "";
@@ -194,12 +218,13 @@
             <span class="score-bar"><span class="score-fill" style="width:${pct}%"></span></span>
           </span>
         </div>
-        <p class="answer-text${ar}">${esc(c.texte)}</p>
+        <p class="answer-text${ar}" dir="${d.langue === "ar" ? "rtl" : "ltr"}">${esc(c.texte)}</p>
+        ${blocAutreLangue(c)}
       </article>`;
     }).join("");
     results.innerHTML = `<div class="result-meta">
         ${esc(t("results_title"))} — ${d.candidats.length}
-      </div>${cartes}
+      </div>${blocEtapes(d)}${cartes}
       <p class="latency">${d.latence_ms} ${esc(t("ms"))}</p>`;
   }
 

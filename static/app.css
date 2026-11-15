@@ -235,6 +235,17 @@ body{
   text-align:justify}
 .answer-text.ar-text{text-align:right;line-height:2}
 .latency{font-size:.72rem;color:var(--ardoise-3);margin-top:10px}
+/* Étapes visibles et citation bilingue (Silver) */
+.steps{background:var(--blanc);border:1px solid var(--bordure);border-radius:var(--r);
+  padding:10px 16px;font-size:.82rem;color:var(--ardoise-2)}
+.steps summary{cursor:pointer;font-weight:600;color:var(--ardoise);display:flex;
+  align-items:center;gap:10px;flex-wrap:wrap}
+.steps ol{margin:8px 0 2px;padding-inline-start:20px;line-height:1.8}
+.badge-engine{background:var(--sauge);color:#2F5A43;font-size:.72rem;font-weight:600;
+  padding:3px 10px;border-radius:999px}
+.other-lang{margin-top:12px;border-top:1px dashed var(--bordure);padding-top:10px}
+.other-lang summary{cursor:pointer;font-size:.8rem;font-weight:600;color:var(--bleu-3)}
+.other-lang .answer-text{margin-top:8px;font-size:.9rem;color:var(--ardoise-2)}
 .abs-card{
   display:flex;gap:14px;padding:20px 22px;background:#FFFBEA;
   border:1px solid #F2E6B8;border-radius:var(--r);animation:fade .25s ease;
