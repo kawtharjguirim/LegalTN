@@ -3,129 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LegalTN — Code du travail tunisien</title>
+<title>LegalTN — Assistant juridique</title>
 <link rel="icon" href="/static/logo.png">
 <link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
-<a class="evitement" href="#input-q" data-i18n="skip">Aller à la recherche</a>
+<div class="app" id="app">
 
-<!-- ===== Bandeau (direction « institutionnel juridique ») ===== -->
-<header class="bandeau">
-  <div class="bandeau-in">
-    <a class="marque" href="#" data-nav="accueil">
-      <span class="marque-logo"><img src="/static/logo.png" alt="LegalTN"></span>
-      <span class="marque-sous" data-i18n="tagline">Code du travail tunisien — recherche d'articles</span>
-    </a>
-    <div class="lang-switch" role="group" aria-label="Langue / اللغة">
-      <button type="button" class="lang-btn active" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
-      <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a class="brand" href="#" data-nav="accueil">
+        <img class="brand-logo" src="/static/logo.png" alt="LegalTN">
+      </a>
+      <button class="icon-btn sidebar-close" id="btn-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" class="i"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
     </div>
+
+    <button class="btn-primary btn-new" id="btn-new">
+      <svg viewBox="0 0 24 24" class="i"><path d="M12 5v14M5 12h14"/></svg>
+      <span data-i18n="new_search">Nouvelle recherche</span>
+    </button>
+
+    <nav class="nav">
+      <p class="nav-label" data-i18n="sections">Rubriques</p>
+      <a href="#" class="nav-item active" data-nav="accueil">
+        <svg viewBox="0 0 24 24" class="i"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        <span data-i18n="home">Accueil</span>
+      </a>
+      <a href="#" class="nav-item" data-nav="recherche">
+        <svg viewBox="0 0 24 24" class="i"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span data-i18n="search">Recherche juridique</span>
+      </a>
+      <a href="#" class="nav-item" data-nav="apropos">
+        <svg viewBox="0 0 24 24" class="i"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        <span data-i18n="about">À propos du corpus</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-info">
+      <div class="info-card">
+        <p class="info-title" data-i18n="corpus_title">Corpus indexé</p>
+        <div class="info-row"><span data-i18n="art_fr">Articles français</span><strong id="st-fr">—</strong></div>
+        <div class="info-row"><span data-i18n="art_ar">Articles arabes</span><strong id="st-ar">—</strong></div>
+        <div class="info-row"><span data-i18n="status">Statut</span>
+          <strong class="dot-wrap"><span class="dot" id="st-dot"></span><span id="st-ok">…</span></strong>
+        </div>
+      </div>
+      <p class="sidebar-foot" data-i18n="disclaimer">Démo locale — ne remplace pas un avis juridique.</p>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ===== Colonne principale ===== -->
+  <div class="main-col">
+    <header class="header">
+      <button class="icon-btn" id="btn-menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" class="i"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <h1 class="page-title" id="page-title" data-i18n="home">Accueil</h1>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Langue">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ar">العربية</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- ===== Vue Accueil ===== -->
+      <section class="view active" id="view-accueil">
+        <div class="hero card">
+          <div class="hero-text">
+            <span class="eyebrow" data-i18n="eyebrow">Assistant juridique intelligent</span>
+            <h2 data-i18n="hero_title">Votre copilote pour le Code du travail tunisien</h2>
+            <p data-i18n="hero_sub">Interrogez le corpus bilingue arabe/français en langage naturel. Chaque réponse cite l'article, sa page et son extrait — ou s'abstient honnêtement.</p>
+            <div class="hero-cta">
+              <button class="btn-primary" data-nav="recherche">
+                <svg viewBox="0 0 24 24" class="i"><path d="m5 3 14 9-14 9V3z" transform="scale(.9) translate(1.3,1.2)"/></svg>
+                <span data-i18n="cta_start">Commencer une recherche</span>
+              </button>
+              <button class="btn-ghost" data-nav="apropos" data-i18n="cta_corpus">Voir le corpus</button>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-card">
+              <svg viewBox="0 0 24 24" class="i art-i"><path d="M12 3v18M7 21h10"/><path d="m3 7 4-4 4 4a4 4 0 0 1-8 0z" transform="translate(0,0)"/><path d="M3 7c0 2.2 1.8 4 4 4s4-1.8 4-4M13 13c0 2.2 1.8 4 4 4s4-1.8 4-4"/><path d="m3 7 4-4 4 4m2 6 4-4 4 4"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card stat">
+            <p class="stat-num" id="h-fr">—</p>
+            <p class="stat-label" data-i18n="art_fr">Articles français</p>
+          </div>
+          <div class="card stat">
+            <p class="stat-num" id="h-ar">—</p>
+            <p class="stat-label" data-i18n="art_ar">Articles arabes</p>
+          </div>
+          <div class="card stat">
+            <p class="stat-num accent" data-i18n="stat_bil">2 langues</p>
+            <p class="stat-label" data-i18n="stat_bil_l">Corpus bilingue aligné</p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="card feature">
+            <div class="feat-icon sage"><svg viewBox="0 0 24 24" class="i"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+            <h3 data-i18n="f1_t">Réponses sourcées</h3>
+            <p data-i18n="f1_d">Chaque réponse affiche l'article, sa page PDF et l'extrait exact du texte.</p>
+          </div>
+          <div class="card feature">
+            <div class="feat-icon blue"><svg viewBox="0 0 24 24" class="i"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg></div>
+            <h3 data-i18n="f2_t">Bilingue FR / AR</h3>
+            <p data-i18n="f2_d">Posez votre question en français ou en arabe : le corpus correspondant est interrogé.</p>
+          </div>
+          <div class="card feature">
+            <div class="feat-icon red"><svg viewBox="0 0 24 24" class="i"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3 data-i18n="f3_t">Abstention honnête</h3>
+            <p data-i18n="f3_d">Hors périmètre, l'assistant refuse de répondre plutôt que d'inventer un article.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Vue Recherche ===== -->
+      <section class="view" id="view-recherche">
+        <div class="search-card card">
+          <p class="search-label" data-i18n="ask">Posez votre question juridique</p>
+          <form class="search-form" id="form-search">
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" class="i field-i"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="input-q" type="text" autocomplete="off" maxlength="2000"
+                     data-i18n-ph="placeholder"
+                     placeholder="Ex. : Quel est le délai de préavis en cas de licenciement ?">
+            </div>
+            <button type="submit" class="btn-primary btn-send" id="btn-send">
+              <svg viewBox="0 0 24 24" class="i"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+              <span data-i18n="send">Envoyer</span>
+            </button>
+          </form>
+          <div class="did-you-mean" id="did-you-mean" role="status" hidden></div>
+          <div class="search-foot">
+            <div class="suggestions" id="suggestions"></div>
+            <label class="debug-toggle">
+              <input type="checkbox" id="chk-rag">
+              <span data-i18n="rag_mode">Réponse rédigée (RAG)</span>
+            </label>
+            <label class="debug-toggle">
+              <input type="checkbox" id="chk-debug">
+              <span data-i18n="debug_mode">Mode debug</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="results" id="results"></div>
+      </section>
+
+      <!-- ===== Vue À propos ===== -->
+      <section class="view" id="view-apropos">
+        <div class="card about">
+          <h2 data-i18n="about_t">À propos du corpus</h2>
+          <p data-i18n="about_p1">LegalTN interroge l'édition bilingue du Code du travail tunisien (291 pages, arabe et français) avec un moteur de recherche lexical BM25 et un appariement des articles par numérotation.</p>
+          <div class="about-grid">
+            <div class="about-item"><span class="about-k" data-i18n="ab_k1">Corpus français</span><strong id="a-fr">—</strong></div>
+            <div class="about-item"><span class="about-k" data-i18n="ab_k2">Corpus arabe</span><strong id="a-ar">—</strong></div>
+            <div class="about-item"><span class="about-k" data-i18n="ab_k3">Couverture</span><strong data-i18n="ab_v3">Code du travail uniquement</strong></div>
+            <div class="about-item"><span class="about-k" data-i18n="ab_k4">Comportement</span><strong data-i18n="ab_v4">Citation + abstention hors périmètre</strong></div>
+          </div>
+          <p class="about-note" data-i18n="about_note">Outil de démonstration scientifique. Les réponses sont des extraits d'articles, pas un avis juridique. En cas de doute, consultez un professionnel.</p>
+        </div>
+      </section>
+
+    </main>
   </div>
-  <nav class="onglets" aria-label="Rubriques">
-    <div class="onglets-in">
-      <a href="#" class="nav-item active" data-nav="accueil" aria-current="page" data-i18n="home">Accueil</a>
-      <a href="#" class="nav-item" data-nav="recherche" data-i18n="search">Recherche juridique</a>
-      <a href="#" class="nav-item" data-nav="apropos" data-i18n="about">À propos du corpus</a>
-    </div>
-  </nav>
-</header>
-
-<main class="content" id="contenu">
-  <h1 class="sr-only" id="page-title" data-i18n="home">Accueil</h1>
-
-  <!-- ===== Vue Accueil ===== -->
-  <section class="view active" id="view-accueil">
-    <div class="hero">
-      <p class="eyebrow" data-i18n="eyebrow">Édition bilingue arabe / français</p>
-      <h2 data-i18n="hero_title">Trouver l'article du Code du travail qui répond à votre question</h2>
-      <p class="hero-sub" data-i18n="hero_sub">Posez votre question en français, en arabe, en tunisien ou en arabizi. Chaque réponse cite l'article, sa page et son texte — ou l'assistant s'abstient si la question sort du Code.</p>
-      <div class="hero-cta">
-        <button type="button" class="btn-primary" data-nav="recherche" data-i18n="cta_start">Commencer une recherche</button>
-        <button type="button" class="btn-ghost" data-nav="apropos" data-i18n="cta_corpus">Voir le corpus</button>
-      </div>
-    </div>
-
-    <dl class="stats-grid">
-      <div class="stat"><dt class="stat-label" data-i18n="art_fr">Articles français</dt><dd class="stat-num" id="h-fr">—</dd></div>
-      <div class="stat"><dt class="stat-label" data-i18n="art_ar">Articles arabes</dt><dd class="stat-num" id="h-ar">—</dd></div>
-      <div class="stat"><dt class="stat-label" data-i18n="stat_bil_l">Corpus bilingue aligné</dt><dd class="stat-num" data-i18n="stat_bil">2 langues</dd></div>
-    </dl>
-
-    <div class="features-grid">
-      <div class="feature">
-        <h3 data-i18n="f1_t">Réponses sourcées</h3>
-        <p data-i18n="f1_d">Chaque réponse affiche l'article, sa page PDF et l'extrait exact du texte.</p>
-      </div>
-      <div class="feature">
-        <h3 data-i18n="f2_t">Bilingue FR / AR</h3>
-        <p data-i18n="f2_d">Posez votre question en français ou en arabe : le corpus correspondant est interrogé.</p>
-      </div>
-      <div class="feature">
-        <h3 data-i18n="f3_t">Abstention honnête</h3>
-        <p data-i18n="f3_d">Hors périmètre, l'assistant refuse de répondre plutôt que d'inventer un article.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Vue Recherche ===== -->
-  <section class="view" id="view-recherche">
-    <form class="search-form" id="form-search" role="search">
-      <label class="search-label" for="input-q" data-i18n="ask">Posez votre question juridique</label>
-      <div class="search-row">
-        <input id="input-q" type="text" autocomplete="off" maxlength="2000" dir="auto"
-               data-i18n-ph="placeholder"
-               placeholder="Ex. : Quel est le préavis de rupture d'un CDI ?">
-        <button type="submit" class="btn-primary btn-send" id="btn-send" data-i18n="send">Rechercher</button>
-      </div>
-    </form>
-    <div class="search-foot">
-      <button type="button" class="btn-link" id="btn-new" data-i18n="new_search">Nouvelle recherche</button>
-      <label class="debug-toggle">
-        <input type="checkbox" id="chk-rag">
-        <span data-i18n="rag_mode">Réponse rédigée (RAG)</span>
-      </label>
-      <label class="debug-toggle">
-        <input type="checkbox" id="chk-debug">
-        <span data-i18n="debug_mode">Mode debug</span>
-      </label>
-    </div>
-    <div class="did-you-mean" id="did-you-mean" role="status" hidden></div>
-    <div class="suggestions-bloc">
-      <p class="suggestions-titre" data-i18n="examples">Exemples :</p>
-      <div class="suggestions" id="suggestions"></div>
-    </div>
-
-    <div class="results" id="results" aria-live="polite"></div>
-  </section>
-
-  <!-- ===== Vue À propos ===== -->
-  <section class="view" id="view-apropos">
-    <div class="about">
-      <h2 data-i18n="about_t">À propos du corpus</h2>
-      <p data-i18n="about_p1">LegalTN interroge l'édition bilingue du Code du travail tunisien (291 pages, arabe et français) avec un moteur de recherche lexical BM25 et un appariement des articles par numérotation.</p>
-      <dl class="about-grid">
-        <div class="about-item"><dt data-i18n="ab_k1">Corpus français</dt><dd id="a-fr">—</dd></div>
-        <div class="about-item"><dt data-i18n="ab_k2">Corpus arabe</dt><dd id="a-ar">—</dd></div>
-        <div class="about-item"><dt data-i18n="ab_k3">Couverture</dt><dd data-i18n="ab_v3">Code du travail uniquement</dd></div>
-        <div class="about-item"><dt data-i18n="ab_k4">Comportement</dt><dd data-i18n="ab_v4">Citation + abstention hors périmètre</dd></div>
-      </dl>
-      <p class="about-note" data-i18n="about_note">Outil de démonstration scientifique. Les réponses sont des extraits d'articles, pas un avis juridique. En cas de doute, consultez un professionnel.</p>
-    </div>
-  </section>
-</main>
-
-<footer class="pied">
-  <div class="pied-in">
-    <p class="statut">
-      <span data-i18n="corpus_title">Corpus indexé</span> :
-      <span data-i18n="art_fr">Articles français</span> <strong id="st-fr">—</strong> ·
-      <span data-i18n="art_ar">Articles arabes</span> <strong id="st-ar">—</strong> ·
-      <span class="dot" id="st-dot" aria-hidden="true"></span> <span id="st-ok">…</span>
-    </p>
-    <p data-i18n="disclaimer">Démo locale — ne remplace pas un avis juridique.</p>
-  </div>
-</footer>
+</div>
 
 <script src="/static/app.js"></script>
 </body>
