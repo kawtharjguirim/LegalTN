@@ -70,11 +70,24 @@ def citations(texte: str) -> list[str]:
     return [" ".join(c.lower().split()) for c in RE_CITATION.findall(texte)]
 
 
-def appeler(messages: list[dict], modele: str = MODELE_DEFAUT, graine: int = 0) -> str:
+def client(timeout: float = 120.0):
     import ollama
 
-    rep = ollama.chat(model=modele, messages=messages,
-                      options={"temperature": 0.0, "seed": graine, "num_ctx": 4096})
+    return ollama.Client(timeout=timeout)  # hôte : variable OLLAMA_HOST, sinon 127.0.0.1:11434
+
+
+def disponible(modele: str = MODELE_DEFAUT) -> bool:
+    """Vrai si le serveur Ollama répond et que le modèle est téléchargé."""
+    try:
+        noms = {m.model for m in client(timeout=2).list().models}
+    except Exception:
+        return False
+    return modele in noms or f"{modele}:latest" in noms
+
+
+def appeler(messages: list[dict], modele: str = MODELE_DEFAUT, graine: int = 0) -> str:
+    rep = client().chat(model=modele, messages=messages,
+                        options={"temperature": 0.0, "seed": graine, "num_ctx": 4096})
     return rep["message"]["content"].strip()
 
 

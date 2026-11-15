@@ -40,6 +40,9 @@
       steps: "Étapes du traitement", engine: "Moteur",
       other_fr: "Version française", other_ar: "Version arabe",
       eng_bm25: "BM25 (Bronze)", eng_hybride: "Hybride BM25 + e5 (Silver)",
+      answer_title: "Réponse rédigée", llm_by: "Rédigée par",
+      summary_btn: "Résumé en langage clair", summary_wait: "Résumé en cours…",
+      summary_err: "Résumé indisponible.",
       about_t: "À propos du corpus",
       about_p1: "LegalTN interroge l'édition bilingue du Code du travail tunisien (291 pages, arabe et français) avec un moteur de recherche lexical BM25 et un appariement des articles par numérotation.",
       ab_k1: "Corpus français", ab_k2: "Corpus arabe",
@@ -83,6 +86,9 @@
       steps: "مراحل المعالجة", engine: "المحرك",
       other_fr: "النص الفرنسي", other_ar: "النص العربي",
       eng_bm25: "BM25 (برونزي)", eng_hybride: "هجين BM25 + e5 (فضي)",
+      answer_title: "إجابة محررة", llm_by: "حررها",
+      summary_btn: "ملخص بلغة واضحة", summary_wait: "جارٍ التلخيص…",
+      summary_err: "الملخص غير متاح.",
       about_t: "حول المجموعة",
       about_p1: "يستجوب LegalTN النسخة الثنائية من مجلة الشغل التونسية (291 صفحة بالعربية والفرنسية) بمحرك بحث معجمي BM25 ومطابقة للفصول حسب الترقيم.",
       ab_k1: "النص الفرنسي", ab_k2: "النص العربي",
@@ -94,7 +100,7 @@
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const state = { lang: "fr", vue: "accueil", charge: false };
+  const state = { lang: "fr", vue: "accueil", charge: false, llm: false };
   const t = (k) => I18N[state.lang][k] ?? k;
 
   /* ---------- i18n ---------- */
@@ -138,6 +144,7 @@
       const r = await fetch("/health");
       const d = await r.json();
       const fr = d.articles_indexes.fr, ar = d.articles_indexes.ar;
+      state.llm = Boolean(d.llm);
       ["st-fr", "h-fr", "a-fr"].forEach(id => { $("#" + id).textContent = fr; });
       ["st-ar", "h-ar", "a-ar"].forEach(id => { $("#" + id).textContent = ar; });
       $("#st-dot").className = "dot ok";
@@ -198,6 +205,44 @@
       <p class="answer-text${cls}" dir="${a.langue === "ar" ? "rtl" : "ltr"}">${esc(a.texte)}</p></details>`;
   }
 
+  /* Réponse rédigée par le LLM, citation vérifiée côté serveur. */
+  function blocRedaction(d) {
+    const r = d.reponse_redigee;
+    if (!r) return "";
+    const cls = d.langue === "ar" ? " ar-text" : "";
+    return `<article class="card card-llm">
+      <div class="answer-head"><span class="badge-llm">${esc(t("answer_title"))}</span>
+        <span class="score-txt">${esc(t("llm_by"))} ${esc(r.modele)} · ${r.latence_ms} ${esc(t("ms"))}</span></div>
+      <p class="answer-text${cls}" dir="${d.langue === "ar" ? "rtl" : "ltr"}">${esc(r.texte)}</p>
+      <p class="llm-warn">${esc(r.avertissement)}</p></article>`;
+  }
+
+  function boutonResume(c, langue) {
+    if (!state.llm) return "";
+    return `<button type="button" class="btn-summary" data-article="${esc(c.article)}"
+      data-langue="${esc(langue)}">${esc(t("summary_btn"))}</button><div class="summary"></div>`;
+  }
+
+  async function resumer(btn) {
+    const zone = btn.nextElementSibling;
+    btn.disabled = true;
+    zone.textContent = t("summary_wait");
+    try {
+      const r = await fetch("/resumer", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ article: btn.dataset.article, langue: btn.dataset.langue }),
+      });
+      const d = await r.json();
+      if (!r.ok) throw new Error(d.erreur);
+      zone.dir = d.langue === "ar" ? "rtl" : "ltr";
+      zone.innerHTML = `<p>${esc(d.resume)}</p><p class="llm-warn">${esc(d.avertissement)}</p>`;
+      btn.remove();
+    } catch {
+      zone.textContent = t("summary_err");
+      btn.disabled = false;
+    }
+  }
+
   function rendre(d) {
     if (d.abstention) {
       results.innerHTML = `<div class="abs-card">${ICON_WARN}<div>
@@ -219,13 +264,15 @@
           </span>
         </div>
         <p class="answer-text${ar}" dir="${d.langue === "ar" ? "rtl" : "ltr"}">${esc(c.texte)}</p>
+        ${boutonResume(c, d.langue)}
         ${blocAutreLangue(c)}
       </article>`;
     }).join("");
     results.innerHTML = `<div class="result-meta">
         ${esc(t("results_title"))} — ${d.candidats.length}
-      </div>${blocEtapes(d)}${cartes}
+      </div>${blocEtapes(d)}${blocRedaction(d)}${cartes}
       <p class="latency">${d.latence_ms} ${esc(t("ms"))}</p>`;
+    $$(".btn-summary", results).forEach(b => b.onclick = () => resumer(b));
   }
 
   async function soumettre() {

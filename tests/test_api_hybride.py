@@ -11,6 +11,7 @@ import sys
 import threading
 import unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import api
@@ -70,6 +71,69 @@ class TestAPIHybride(unittest.TestCase):
         self.assertEqual(d["langue"], "ar")
         self.assertFalse(d["abstention"])
         self.assertEqual(d["candidats"][0]["autre_langue"]["langue"], "fr")
+
+    # ---------------------------------------------------- LLM simulé (pas d'Ollama)
+    def simuler_llm(self, disponible=True, sortie=""):
+        from src.rag import generer
+
+        appels = []
+        patchs = [mock.patch.object(generer, "disponible", return_value=disponible),
+                  mock.patch.object(generer, "appeler",
+                                    side_effect=lambda m, *a, **k: appels.append(m) or sortie)]
+        for p in patchs:
+            p.start()
+            self.addCleanup(p.stop)
+        MOTEUR._llm_etat = (0.0, False)  # force une nouvelle vérification
+        self.addCleanup(setattr, MOTEUR, "_llm_etat", (0.0, False))
+        return appels
+
+    def test_llm_citation_valide(self):
+        appels = self.simuler_llm(sortie="La durée ne peut excéder 48 heures [Article 79].")
+        _, d = self.poser("Quelle est la durée maximale du travail effectif par semaine ?")
+        r = d["reponse_redigee"]
+        self.assertEqual(r["citations"], ["79"])
+        self.assertFalse(r["abstention"])
+        self.assertIn("48 heures", r["texte"])
+        self.assertIn("citation vérifiée", d["etapes"][-1])
+        # Le LLM ne reçoit que les articles retrouvés (3 au plus).
+        self.assertEqual(appels[0][-1]["content"].count("[Article "), 3)
+
+    def test_llm_citation_inventee_rejetee(self):
+        self.simuler_llm(sortie="La durée est de 40 heures [Article 999].")
+        _, d = self.poser("Quelle est la durée maximale du travail effectif par semaine ?")
+        r = d["reponse_redigee"]
+        self.assertTrue(r["abstention"])
+        self.assertNotIn("999", r["texte"])
+        self.assertFalse(d["abstention"])  # les extraits restent affichés
+
+    def test_llm_indisponible_extraits_seuls(self):
+        self.simuler_llm(disponible=False)
+        _, d = self.poser("Quelle est la durée maximale du travail effectif par semaine ?")
+        self.assertIsNone(d["reponse_redigee"])
+        self.assertIn("indisponible", d["etapes"][-1])
+        self.assertTrue(d["candidats"])
+
+    def test_resume(self):
+        self.simuler_llm(sortie="Le travail est limité à 48 heures par semaine.")
+        statut, d = self.envoyer_json("/resumer", {"article": "79", "langue": "fr"})
+        self.assertEqual(statut, 200)
+        self.assertIn("48 heures", d["resume"])
+        self.assertEqual(self.envoyer_json("/resumer", {"article": "9999", "langue": "fr"})[0], 404)
+        self.assertEqual(self.envoyer_json("/resumer", {"article": "79", "langue": "en"})[0], 400)
+
+    def test_resume_sans_llm(self):
+        self.simuler_llm(disponible=False)
+        self.assertEqual(self.envoyer_json("/resumer", {"article": "79", "langue": "fr"})[0], 503)
+
+    def envoyer_json(self, route, corps):
+        c = http.client.HTTPConnection("127.0.0.1", self.serveur.server_port, timeout=60)
+        try:
+            c.request("POST", route, body=json.dumps(corps).encode(),
+                      headers={"Content-Type": "application/json"})
+            r = c.getresponse()
+            return r.status, json.loads(r.read().decode())
+        finally:
+            c.close()
 
     def test_hors_perimetre(self):
         statut, d = self.poser("Quelle est la capitale de la Tunisie ?")

@@ -108,14 +108,18 @@ def creer_serveur(port=8000, moteur="bm25"):
             if chemin != "/health":
                 self.servir_fichier(chemin)
                 return
+            llm = getattr(moteur, "llm_disponible", None)
             self.envoyer(200, {
                 "statut": "ok",
                 "moteur": moteur.nom,
+                "llm": bool(llm and llm()),
                 "articles_indexes": moteur.articles_indexes(),
             })
 
         def do_POST(self):
-            if urlsplit(self.path).path != "/repondre":
+            route = urlsplit(self.path).path
+            if route not in {"/repondre", "/resumer"} or (
+                    route == "/resumer" and not hasattr(moteur, "resumer")):
                 self.envoyer(404, {"erreur": "Route inconnue."})
                 return
             if self.headers.get_content_type() != "application/json":
@@ -143,6 +147,9 @@ def creer_serveur(port=8000, moteur="bm25"):
             if not isinstance(contenu, dict):
                 self.envoyer(400, {"erreur": "Le corps doit être un objet JSON."})
                 return
+            if route == "/resumer":
+                self.traiter_resume(contenu)
+                return
             question, k = contenu.get("question"), contenu.get("k", 3)
             if not isinstance(question, str) or not question.strip():
                 self.envoyer(400, {"erreur": "Fournir une question non vide."})
@@ -160,6 +167,29 @@ def creer_serveur(port=8000, moteur="bm25"):
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION
             self.envoyer(200, resultat)
+
+        def traiter_resume(self, contenu):
+            """POST /resumer {"article": "14 bis", "langue": "fr"} : résumé en langage clair."""
+            article, langue = contenu.get("article"), contenu.get("langue", "fr")
+            if not isinstance(article, str) or not article.strip() or len(article) > 20:
+                self.envoyer(400, {"erreur": "Fournir un intitulé d'article (ex. « 14 bis »)."})
+                return
+            if langue not in {"fr", "ar"}:
+                self.envoyer(400, {"erreur": "langue doit valoir fr ou ar."})
+                return
+            try:
+                with verrou:
+                    resume = moteur.resumer(article.strip(), langue)
+            except KeyError:
+                self.envoyer(404, {"erreur": "Article inconnu."})
+                return
+            except RuntimeError as e:
+                self.envoyer(503, {"erreur": str(e)})
+                return
+            except Exception as e:  # erreur du serveur Ollama
+                self.envoyer(502, {"erreur": f"Échec du LLM : {type(e).__name__}."})
+                return
+            self.envoyer(200, resume)
 
     return ThreadingHTTPServer(("127.0.0.1", port), Requetes)
 

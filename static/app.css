@@ -246,6 +246,18 @@ body{
 .other-lang{margin-top:12px;border-top:1px dashed var(--bordure);padding-top:10px}
 .other-lang summary{cursor:pointer;font-size:.8rem;font-weight:600;color:var(--bleu-3)}
 .other-lang .answer-text{margin-top:8px;font-size:.9rem;color:var(--ardoise-2)}
+/* Réponse rédigée et résumé par LLM (Silver) */
+.card-llm{padding:18px 22px;border-inline-start:4px solid var(--sauge-d);animation:fade .25s ease}
+.badge-llm{background:var(--sauge-d);color:#fff;font-size:.78rem;font-weight:700;
+  padding:4px 12px;border-radius:8px}
+.llm-warn{font-size:.74rem;color:var(--ardoise-3);margin-top:8px;font-style:italic}
+.btn-summary{margin-top:12px;font-family:inherit;font-size:.8rem;font-weight:600;
+  color:var(--bleu-3);background:var(--ivoire);border:1px solid var(--bordure);
+  border-radius:999px;padding:6px 14px;cursor:pointer;transition:border-color var(--t)}
+.btn-summary:hover{border-color:var(--bleu-3)}
+.btn-summary:disabled{opacity:.6;cursor:wait}
+.summary{margin-top:8px;font-size:.88rem;line-height:1.7;color:var(--ardoise)}
+.summary:empty{display:none}
 .abs-card{
   display:flex;gap:14px;padding:20px 22px;background:#FFFBEA;
   border:1px solid #F2E6B8;border-radius:var(--r);animation:fade .25s ease;

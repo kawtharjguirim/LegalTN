@@ -17,11 +17,16 @@ Démo Silver (recherche hybride BM25 + e5, abstention par langue, citation bilin
 étapes visibles) : `.\demarrer.ps1 -Port 18765 -Moteur hybride` puis http://127.0.0.1:18765/.
 `-Moteur bm25` (défaut) garde la démo Bronze en bibliothèque standard seule.
 
+Si Ollama tourne avec `qwen2.5:3b`, la démo hybride ajoute une **réponse rédigée** (citation
+forcée : une réponse qui cite un article absent des extraits est remplacée par l'abstention)
+et un bouton **« Résumé en langage clair »** par article (`POST /resumer`). Sans Ollama, elle
+affiche les extraits seuls et l'indique dans les étapes. `GET /health` renvoie `llm: true|false`.
+
 | Composant | Code | Résultats |
 |---|---|---|
 | Alignement AR↔FR par embeddings (LaBSE, e5) | `src/alignement_embeddings/` | `reports/silver/alignement/RESULTATS.md` |
 | Recherche dense / hybride bilingue | `src/rag/recherche.py`, `service.py` | `reports/silver/rag/RESULTATS.md` |
-| LLM (Ollama, 3 stratégies de prompting) | `src/rag/generer.py` | non exécuté : Ollama à installer |
+| LLM (Ollama, 3 stratégies de prompting) | `src/rag/generer.py` | branché dans la démo ; mesures non faites : Ollama à installer |
 | NER fine-tuné (CamemBERT, AraBERT, XLM-R) | `src/ner_juridique/` | en attente des lots corrigés (`data/a_annoter/`) |
 
 Les sections suivantes décrivent l'état Bronze repris.
