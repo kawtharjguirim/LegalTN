@@ -663,3 +663,26 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Limites : effectifs minuscules (1 question d'écart = 4 points sur 27, 17 points sur 6) ; aucune conclusion statistique possible. Aucune question AR dans le périmètre. La catégorie « tun » du dev est en fait de l'arabizi. Abstention non traitée ici (les scores maximaux sont enregistrés pour un choix ultérieur sur dev).
 - Sorties : `reports/silver/retrieval_dev/resultats.json`, `resume_par_langue.csv` (marqués développement non indépendant).
 - Suite : questions AR/tunisien en écriture arabe/arabizi écrites par l'équipe (dev v3) ; ne pas choisir la configuration finale sur 27 questions.
+
+## 2026-11-15 — Silver, chantier 4 : RAG avec LLM local, comparaison de 4 prompts sur le dev v2 (aucun test lu)
+
+- Objectif : mesurer l'apport des passages retrouvés et du format de prompt sur la citation, les articles inventés et l'abstention.
+- Code : `src/rag/rag.py`, `src/evaluation/evaluer_rag.py` ; tests `tests/test_rag.py` (sans appel au LLM).
+- Configuration : Ollama 0.40.16, `qwen2.5:3b` (Q4_K_M) en local sur GTX 1650 ; température 0, seed 2026, num_ctx 8192, num_predict 400. Récupération : BM25 langue détectée, top-3, sans seuil ; textes FR + AR fournis, tronqués à 1 500 caractères chacun.
+- Variantes : P0 LLM seul sans passage ; P1 RAG zéro-shot réponse libre ; P2 RAG + JSON imposé + règle d'abstention ; P3 = P2 + 2 exemples few-shot (D01, D14) ; P2V = P2 + rejet de toute réponse sans citation ou citant un article non fourni.
+- Jeu : dev v2 (sha256 9c616a6c…), D01 et D14 exclus pour toutes les variantes → 26 dans le périmètre (20 FR, 6 tun), 28 hors (22 FR, 3 tun, 3 AR). Durée : 1 303 s. Premier lancement interrompu par un délai dépassé (génération non bornée) : corrigé par num_predict/num_ctx puis relancé en entier ; seul le second lancement est rapporté.
+- Commande : `.venv/Scripts/python.exe -X utf8 src/evaluation/evaluer_rag.py --rapports reports/silver/rag_dev`.
+
+| Variante | Citation exacte (dans, n=26) | Fausses abstentions | Hors périmètre refusé (n=28) | Citations non fournies |
+|---|---|---|---|---|
+| P0 LLM seul | 0 | 0 | 0 | 37 (aucun passage fourni) |
+| P1 RAG libre | 20 | 0 | 0 | 0 |
+| P2 RAG JSON | 18 | 2 | 26 | 0 |
+| P3 few-shot | 19 | 1 | 22 | 3 |
+| P2V vérifié | 18 | 3 | 26 | 0 |
+
+- Par langue (citation exacte) : FR P0 0/20, P1 18/20, P2 16/20, P3 17/20, P2V 16/20 ; tun 0/6, 2/6, 2/6, 2/6, 2/6. AR : 0 question dans le périmètre (non mesurable) ; les 3 AR hors périmètre sont refusées par P2, P3, P2V.
+- Lecture : sans passages (P0), le modèle ne cite jamais le bon article et cite 37 numéros non justifiés (existant dans le corpus, mais non pertinents) : c'est l'argument pour le RAG. P1 cite le mieux mais ne s'abstient jamais (0/28). P2 obtient l'abstention (26/28) au prix de 2 bonnes réponses perdues. Le few-shot (P3) n'aide pas l'abstention (22/28) et réintroduit 3 citations non fournies. P2V supprime toute citation non fournie par construction et coûte une fausse abstention de plus.
+- Points de comparaison : la démo BM25 + seuil 9,085 refuse 27/29 hors périmètre sur le dev v2 complet (jeux légèrement différents : D01/D14 inclus).
+- Limites : effectifs très faibles ; un seul modèle (3B) et une seule graine ; « citation exacte » ne dit rien de la justesse de la réponse rédigée (fidélité non évaluée : grille humaine à faire par l'équipe) ; extraction des citations de P0/P1 par expression régulière (« article N », « الفصل N ») ; plafonné par la récupération BM25 top-3.
+- Sorties : `reports/silver/rag_dev/resultats.json` (toutes les sorties brutes), `reports/silver/rag_dev_log.txt`.
