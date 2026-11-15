@@ -798,3 +798,27 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Points de comparaison : la démo BM25 + seuil 9,085 refuse 27/29 hors périmètre sur le dev v2 complet (jeux légèrement différents : D01/D14 inclus).
 - Limites : effectifs très faibles ; un seul modèle (3B) et une seule graine ; « citation exacte » ne dit rien de la justesse de la réponse rédigée (fidélité non évaluée : grille humaine à faire par l'équipe) ; extraction des citations de P0/P1 par expression régulière (« article N », « الفصل N ») ; plafonné par la récupération BM25 top-3.
 - Sorties : `reports/silver/rag_dev/resultats.json` (toutes les sorties brutes), `reports/silver/rag_dev_log.txt`.
+
+## 2026-11-15 — Silver, chantier 3 : fine-tuning de l'encodeur e5 sur les paires FR ↔ AR (aucun test lu)
+
+- Objectif : spécialiser l'encodeur `intfloat/multilingual-e5-base` sur le Code du travail en rapprochant les versions FR et AR d'un même article.
+- Code : `src/retrieval/fine_tuning.py`. Données : 436 paires d'articles présents dans les deux langues (corpus de la démo), découpage par article, graine 20261115 : 349 entraînement / 87 évaluation, aucun article des deux côtés.
+- Protocole fixé avant mesure : MultipleNegativesRankingLoss dans les deux sens (préfixes query:/passage:), 2 époques, lots de 16, lr 2e-5, 256 jetons, graines 13 / 42 / 2026. Écart au plan initial, décidé avant toute mesure « après » : couche de vocabulaire (word_embeddings) gelée et demi-précision (AMP), pour tenir dans les 4 Go de la GTX 1650.
+- Matériel : GPU NVIDIA GeForce GTX 1650, torch 2.14.1+cu130, sentence-transformers 6.3.0, Python 3.11.9. Un premier lancement sur CPU (torch 2.15.0+cpu) a été arrêté avant la fin à la demande de l'utilisateur ; seule sa mesure « avant » (identique) avait été produite.
+- Commande : `python -X utf8 src/retrieval/fine_tuning.py --rapports reports/silver/fine_tuning` ; environ 19 min par graine.
+
+| Mesure | Avant | Graine 13 | Graine 42 | Graine 2026 | Moyenne ± écart |
+|---|---:|---:|---:|---:|---:|
+| AR → FR, R@1 (/87, articles jamais vus) | 84 | 87 | 87 | 87 | 87 ± 0 |
+| AR → FR, R@5 | 86 | 87 | 87 | 87 | 87 ± 0 |
+| FR → AR, R@1 | 80 | 86 | 87 | 87 | 86,67 ± 0,58 |
+| FR → AR, R@5 | 84 | 87 | 87 | 87 | 87 ± 0 |
+| Questions dev v2, R@1 (/27) | 20 | 6 | 5 | 6 | 5,67 ± 0,58 |
+| Questions dev v2, R@5 (/27) | 22 | 11 | 7 | 10 | 9,33 ± 2,08 |
+| dont FR R@5 (/21) | 21 | 11 | 7 | 10 | 9,33 ± 2,08 |
+| dont tunisien R@5 (/6) | 1 | 0 | 0 | 0 | 0 |
+
+- Lecture : le fine-tuning atteint le plafond sur l'alignement article-article (87/87), mais **effondre la recherche à partir de questions** (R@5 22 → 9,33/27 en moyenne), de façon stable sur les 3 graines. Interprétation probable : le modèle apprend à associer des textes longs de même contenu dans deux langues et perd sa capacité à relier une question courte à un article (spécialisation excessive / oubli). La perte d'entraînement proche de 0 (≈ 0,001) indique une tâche trop facile.
+- Décision : l'encodeur fine-tuné n'est **pas** utilisé ; l'encodeur pré-entraîné reste la référence. Aucun réglage supplémentaire fait sur le dev pour « sauver » le fine-tuning (ce serait du surajustement).
+- Limites : une seule configuration d'entraînement ; mesure B non indépendante (articles visés par les questions du dev possiblement dans l'entraînement) ; 27 questions. Piste pour plus tard, à régler sans le dev : données question → article, ou mélange avec la tâche d'origine.
+- Sorties : `reports/silver/fine_tuning/resultats.json` (pertes et mesures par graine), `complet_log.txt`.
