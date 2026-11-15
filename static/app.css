@@ -244,3 +244,9 @@ code[lang="ar"]{font:1.05rem var(--ar);font-family:var(--ar)}
   .steps-table td{border-top:0;padding-bottom:8px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- Mode RAG (Silver) ---------- */
+.rag-answer{padding:20px 22px;border-inline-start:4px solid var(--marine)}
+.rag-answer h3{font:700 1.08rem var(--serif-titre);color:var(--marine);margin-bottom:8px}
+.rag-quote{border-inline-start:3px solid var(--bordeaux);padding:4px 12px;margin:10px 0;font-style:italic;color:var(--encre)}
+.rag-note{font-size:.85rem;color:var(--gris);margin-top:8px}

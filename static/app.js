@@ -34,6 +34,9 @@
         "Quelle est la capitale de la Tunisie ?",
       ],
       thinking: "Recherche dans le corpus…",
+      rag_mode: "Réponse rédigée (RAG)", thinking_rag: "Le modèle de langage rédige une réponse à partir des articles trouvés…",
+      rag_title: "Réponse", rag_sources: "articles cités", rag_quote: "Extrait cité",
+      rag_note: "Réponse rédigée par un modèle de langage local, uniquement à partir des articles cités ci-dessous. Vérifiez toujours le texte de l'article.",
       results_title: "articles trouvés",
       abs_title: "Question hors du Code du travail",
       did_you_mean: "Vouliez-vous dire :",
@@ -86,6 +89,9 @@
         "Quel est le préavis de rupture d'un CDI ?",
       ],
       thinking: "جارٍ البحث في المحتوى…",
+      rag_mode: "إجابة محررة (RAG)", thinking_rag: "يحرر النموذج اللغوي إجابة انطلاقاً من الفصول المسترجعة…",
+      rag_title: "الإجابة", rag_sources: "فصول مذكورة", rag_quote: "المقطع المقتبس",
+      rag_note: "إجابة محررة بنموذج لغوي محلي، اعتماداً فقط على الفصول المذكورة أدناه. تحقق دائماً من نص الفصل.",
       results_title: "فصول مطابقة",
       abs_title: "سؤال خارج مجلة الشغل",
       did_you_mean: "هل تقصد:",
@@ -112,7 +118,7 @@
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const state = { lang: "fr", vue: "accueil", charge: false, debug: false, dernier: null };
+  const state = { lang: "fr", vue: "accueil", charge: false, debug: false, rag: false, dernier: null };
   try { state.debug = localStorage.getItem("legaltn-debug") === "1"; } catch { /* stockage indisponible */ }
   const t = (k) => I18N[state.lang][k] ?? k;
 
@@ -187,7 +193,8 @@
 
   function etatChargement() {
     bandeauCorrection(null);
-    results.innerHTML = `<div class="result-meta">${esc(t("thinking"))}</div>` +
+    const msg = state.rag ? t("thinking_rag") : t("thinking");
+    results.innerHTML = `<div class="result-meta">${esc(msg)}</div>` +
       "<div class='skel'></div>".repeat(3);
   }
 
@@ -288,9 +295,36 @@
     </article>`;
   }
 
+  // Mode RAG (Silver) : réponse rédigée + extrait + articles cités (FR et AR).
+  function rendreRag(d) {
+    const sources = d.articles_cites.map((c, i) => `
+      <article class="card card-answer" style="animation-delay:${i * 60}ms">
+        <div class="answer-head">
+          <span class="badge-article">${esc(t("article"))} <bdi>${esc(c.article)}</bdi></span>
+          <span class="citation">${esc(t("source"))} · ${esc(t("page"))} ${esc(String(c.page))}</span>
+        </div>
+        ${c.texte_fr ? `<p class="answer-text${classeTexte(c.texte_fr)}" ${attrTexte(c.texte_fr)}>${esc(c.texte_fr)}</p>` : ""}
+        ${c.texte_ar ? `<p class="answer-text${classeTexte(c.texte_ar)}" ${attrTexte(c.texte_ar)}>${esc(c.texte_ar)}</p>` : ""}
+      </article>`).join("");
+    results.innerHTML = `
+      <div class="card rag-answer">
+        <h3>${esc(t("rag_title"))}</h3>
+        <p class="answer-text${classeTexte(d.reponse)}" ${attrTexte(d.reponse)}>${esc(d.reponse)}</p>
+        ${d.extrait ? `<blockquote class="rag-quote${classeTexte(d.extrait)}" ${attrTexte(d.extrait)}>${esc(d.extrait)}</blockquote>` : ""}
+        <p class="rag-note">${esc(t("rag_note"))} (${esc(d.modele)})</p>
+      </div>
+      <div class="result-meta">
+        <span>${d.articles_cites.length} ${esc(t("rag_sources"))}</span>
+        <span class="latency-inline">${esc(fmtMs(d.latence_ms))} ${esc(t("ms"))}</span>
+      </div>${sources}`;
+  }
+
   function rendre(d) {
     state.dernier = d;
     bandeauCorrection(d);
+    if (d.mode === "rag" && !d.abstention) { rendreRag(d); return; }
+    const avert = d.avertissement
+      ? `<div class="abs-card" role="status">${ICON_WARN}<div><p>${esc(d.avertissement)}</p></div></div>` : "";
     if (d.abstention) {
       results.innerHTML = panneauEtapes(d) + `<div class="abs-card" role="status">${ICON_WARN}<div>
         <h3>${esc(t("abs_title"))}</h3>
@@ -299,7 +333,7 @@
       return;
     }
     const max = Math.max(...d.candidats.map(c => c.score), 1);
-    results.innerHTML = panneauEtapes(d) + `<div class="result-meta">
+    results.innerHTML = avert + panneauEtapes(d) + `<div class="result-meta">
         <span>${d.candidats.length} ${esc(t("results_title"))}</span>
         <span class="latency-inline">${esc(fmtMs(d.latence_ms))} ${esc(t("ms"))}</span>
       </div>${d.candidats.map((c, i) => carte(c, i, max)).join("")}`;
@@ -334,7 +368,7 @@
       const r = await fetch("/repondre", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: q, k: 3 }),
+        body: JSON.stringify({ question: q, k: 3, mode: state.rag ? "rag" : "bm25" }),
       });
       const d = await r.json();
       if (!r.ok) etatErreur(d.erreur || String(r.status));
@@ -356,6 +390,7 @@
     try { localStorage.setItem("legaltn-debug", state.debug ? "1" : "0"); } catch { /* ignoré */ }
     if (state.dernier) rendre(state.dernier);
   };
+  $("#chk-rag").onchange = (e) => { state.rag = e.target.checked; };
   $("#btn-new").onclick = () => {
     $("#input-q").value = ""; state.dernier = null; bandeauCorrection(null); etatVide(); naviguer("recherche");
   };

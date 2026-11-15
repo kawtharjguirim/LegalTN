@@ -1,3 +1,4 @@
 # Jeux gelés : stockés octet par octet (pas de conversion des fins de ligne),
 # sinon leurs SHA-256 de référence ne correspondent plus après un clone.
 data/test_locked/** -text
+data/dev/questions_dev_v2.csv -text

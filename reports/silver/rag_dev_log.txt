@@ -1,0 +1,75 @@
+D02 {'P0': (['106'], False), 'P1': (['118'], False), 'P2': (['118'], False), 'P3': (['118'], False), 'P2V': (['118'], False)}
+D03 {'P0': ([], False), 'P1': (['124'], False), 'P2': (['124'], False), 'P3': (['124'], False), 'P2V': (['124'], False)}
+D04 {'P0': (['106'], False), 'P1': (['140'], False), 'P2': (['140'], False), 'P3': (['140'], False), 'P2V': (['140'], False)}
+D05 {'P0': (['206'], False), 'P1': (['147'], False), 'P2': (['147'], False), 'P3': (['147'], False), 'P2V': (['147'], False)}
+D06 {'P0': (['146'], False), 'P1': (['182'], False), 'P2': (['182'], False), 'P3': (['185'], False), 'P2V': (['182'], False)}
+D07 {'P0': ([], False), 'P1': (['193'], False), 'P2': (['193'], False), 'P3': ([], True), 'P2V': (['193'], False)}
+D08 {'P0': ([], False), 'P1': (['268'], False), 'P2': (['268'], False), 'P3': (['268'], False), 'P2V': (['268'], False)}
+D09 {'P0': (['15'], False), 'P1': (['366'], False), 'P2': (['366'], False), 'P3': (['366'], False), 'P2V': (['366'], False)}
+D10 {'P0': (['24'], False), 'P1': (['402'], False), 'P2': (['402'], False), 'P3': (['402'], False), 'P2V': (['402'], False)}
+D11 {'P0': ([], False), 'P1': (['252'], False), 'P2': (['252'], False), 'P3': (['252'], False), 'P2V': (['252'], False)}
+D12 {'P0': (['14', '15'], False), 'P1': (['68'], False), 'P2': (['68'], False), 'P3': (['68'], False), 'P2V': (['68'], False)}
+D13 {'P0': (['106'], False), 'P1': (['118', '123'], False), 'P2': (['118'], False), 'P3': (['118'], False), 'P2V': (['118'], False)}
+D15 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D16 {'P0': (['149'], False), 'P1': (['315'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D17 {'P0': ([], False), 'P1': (['4'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D18 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D19 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D20 {'P0': (['13'], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D21 {'P0': ([], False), 'P1': (['409'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D22 {'P0': (['136', '137', '138'], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D23 {'P0': (['229'], False), 'P1': (['415'], False), 'P2': (['415'], False), 'P3': (['40'], False), 'P2V': (['415'], False)}
+D24 {'P0': ([], False), 'P1': (['371'], False), 'P2': ([], True), 'P3': (['371'], False), 'P2V': ([], True)}
+D25 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D26 {'P0': (['111'], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D27 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D28 {'P0': (['2', '3'], False), 'P1': (['2'], False), 'P2': ([], True), 'P3': (['445'], False), 'P2V': ([], True)}
+D29 {'P0': (['63'], False), 'P1': ([], False), 'P2': (['22', '371'], False), 'P3': (['22'], False), 'P2V': (['22', '371'], False)}
+D30 {'P0': (['143', '144'], False), 'P1': (['370'], False), 'P2': (['370'], False), 'P3': (['370'], False), 'P2V': (['370'], False)}
+D31 {'P0': (['14'], False), 'P1': (['79'], False), 'P2': (['79'], False), 'P3': (['79'], False), 'P2V': (['79'], False)}
+D32 {'P0': ([], False), 'P1': (['79'], False), 'P2': (['79'], False), 'P3': (['79'], False), 'P2V': (['79'], False)}
+D33 {'P0': (['14'], False), 'P1': (['85'], False), 'P2': ([], True), 'P3': (['85'], False), 'P2V': ([], True)}
+D34 {'P0': ([], False), 'P1': (['122'], False), 'P2': (['122'], False), 'P3': (['64'], False), 'P2V': (['122'], False)}
+D35 {'P0': (['146'], False), 'P1': (['119'], False), 'P2': (['119'], False), 'P3': (['119'], False), 'P2V': (['119'], False)}
+D36 {'P0': (['44'], False), 'P1': (['149'], False), 'P2': ([], False), 'P3': (['149'], False), 'P2V': ([], True)}
+D37 {'P0': (['146', '147', '148', '149'], False), 'P1': (['160'], False), 'P2': (['160'], False), 'P3': (['160'], False), 'P2V': (['160'], False)}
+D38 {'P0': ([], False), 'P1': (['445'], False), 'P2': (['445'], False), 'P3': (['234'], False), 'P2V': (['445'], False)}
+D39 {'P0': (['14'], False), 'P1': (['191'], False), 'P2': (['191'], False), 'P3': (['191'], False), 'P2V': (['191'], False)}
+D40 {'P0': (['14'], False), 'P1': (['216'], False), 'P2': ([], True), 'P3': (['216'], False), 'P2V': ([], True)}
+D41 {'P0': (['146', '147', '148'], False), 'P1': (['232'], False), 'P2': (['232'], False), 'P3': (['232'], False), 'P2V': (['232'], False)}
+D42 {'P0': ([], False), 'P1': (['191'], False), 'P2': (['194'], False), 'P3': (['195'], False), 'P2V': (['194'], False)}
+D43 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D44 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D45 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D46 {'P0': ([], False), 'P1': (['27'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D47 {'P0': ([], False), 'P1': (['421'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D48 {'P0': (['14'], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D49 {'P0': (['141'], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D50 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D51 {'P0': ([], False), 'P1': (['187'], False), 'P2': ([], True), 'P3': (['187'], False), 'P2V': ([], True)}
+D52 {'P0': ([], False), 'P1': (['445'], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D53 {'P0': ([], False), 'P1': (['196'], False), 'P2': (['323'], False), 'P3': (['153'], False), 'P2V': (['323'], False)}
+D54 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D55 {'P0': ([], False), 'P1': ([], False), 'P2': ([], True), 'P3': ([], True), 'P2V': ([], True)}
+D56 {'P0': (['141'], False), 'P1': ([], False), 'P2': ([], True), 'P3': (['316'], False), 'P2V': ([], True)}
+{"jeu": "questions_dev_v2.csv", "sha256_jeu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8", "modele": "qwen2.5:3b", "temperature": 0, "graine": 2026, "k_passages": 3, "recuperation": "BM25 langue detectee, sans seuil", "exemples_exclus": ["D01", "D14"], "statut": "developpement_non_independant", "secondes": 1303}
+toutes P0 {"n_dans": 26, "n_hors": 28, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 8, "abstention_correcte_hors": 0, "citations_non_fournies": 37, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+toutes P1 {"n_dans": 26, "n_hors": 28, "citation_exacte": 20, "fausse_abstention": 0, "reponse_sans_citation": 1, "abstention_correcte_hors": 0, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+toutes P2 {"n_dans": 26, "n_hors": 28, "citation_exacte": 18, "fausse_abstention": 2, "reponse_sans_citation": 1, "abstention_correcte_hors": 26, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+toutes P3 {"n_dans": 26, "n_hors": 28, "citation_exacte": 19, "fausse_abstention": 1, "reponse_sans_citation": 0, "abstention_correcte_hors": 22, "citations_non_fournies": 3, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 1}
+toutes P2V {"n_dans": 26, "n_hors": 28, "citation_exacte": 18, "fausse_abstention": 3, "reponse_sans_citation": 0, "abstention_correcte_hors": 26, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+fr P0 {"n_dans": 20, "n_hors": 22, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 5, "abstention_correcte_hors": 0, "citations_non_fournies": 31, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+fr P1 {"n_dans": 20, "n_hors": 22, "citation_exacte": 18, "fausse_abstention": 0, "reponse_sans_citation": 1, "abstention_correcte_hors": 0, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+fr P2 {"n_dans": 20, "n_hors": 22, "citation_exacte": 16, "fausse_abstention": 2, "reponse_sans_citation": 1, "abstention_correcte_hors": 21, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+fr P3 {"n_dans": 20, "n_hors": 22, "citation_exacte": 17, "fausse_abstention": 1, "reponse_sans_citation": 0, "abstention_correcte_hors": 18, "citations_non_fournies": 1, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 1}
+fr P2V {"n_dans": 20, "n_hors": 22, "citation_exacte": 16, "fausse_abstention": 3, "reponse_sans_citation": 0, "abstention_correcte_hors": 21, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P0 {"n_dans": 6, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 3, "abstention_correcte_hors": 0, "citations_non_fournies": 6, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P1 {"n_dans": 6, "n_hors": 3, "citation_exacte": 2, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 0, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P2 {"n_dans": 6, "n_hors": 3, "citation_exacte": 2, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P3 {"n_dans": 6, "n_hors": 3, "citation_exacte": 2, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 1, "citations_non_fournies": 2, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P2V {"n_dans": 6, "n_hors": 3, "citation_exacte": 2, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P0 {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 0, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P1 {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 0, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P2 {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 3, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P3 {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 3, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P2V {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 3, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}

@@ -1,7 +1,8 @@
 """Adaptateur HTTP local ajouté à la reprise, autour de la démo BM25 récupérée.
 
 Lancer : python -X utf8 api.py --port 8000
-GET /health ; POST /repondre avec {"question": "...", "k": 3}.
+GET /health ; POST /repondre avec {"question": "...", "k": 3, "mode": "bm25" | "rag"}.
+Le mode "rag" (Silver) interroge un LLM local via Ollama ; repli automatique sur BM25 s'il est absent.
 Ne lance aucune évaluation et ne modifie ni seuil ni fichiers.
 """
 
@@ -12,8 +13,13 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import sys
+
 from src.demo import repondre
 from src.pipeline import traitement
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+from rag import rag  # noqa: E402  (bibliothèque standard seulement : l'API reste sans dépendance)
 
 
 MAX_OCTETS = 16384
@@ -26,6 +32,44 @@ MIME = {
     ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
     ".svg": "image/svg+xml", ".webp": "image/webp", ".ico": "image/x-icon",
 }
+
+
+# "bm25" = pipeline de traitement des questions (mode historique, par défaut) ; "rag" = Silver.
+MODES = ("bm25", "rag")
+_CORPUS_RAG = {}
+
+
+def corpus_rag():
+    """Corpus BM25 utilisé par le RAG (celui des mesures Silver), chargé au premier appel seulement."""
+    if not _CORPUS_RAG:
+        _CORPUS_RAG.update(repondre.charger())
+    return _CORPUS_RAG
+
+
+def repondre_rag(question, chaine, k):
+    """Mode RAG (variante P2V) : LLM local limité aux articles retrouvés, citations vérifiées.
+
+    Si le LLM est injoignable, on répond avec le pipeline et on le signale : la démo ne plante pas."""
+    corpus = corpus_rag()
+    langue = repondre.detecter_langue(question)
+    r = rag.repondre_rag(question, corpus, "P2V")
+    if r.get("erreur"):
+        repli = chaine.repondre(question, k=k)
+        repli.update({"mode": "bm25", "avertissement":
+                      "LLM local indisponible : réponse par la recherche classique seule."})
+        return repli
+    textes = {}
+    for lg in ("fr", "ar"):
+        for a in corpus[lg].articles:
+            if a["article"] in r["articles_cites"]:
+                textes.setdefault(a["article"], {"article": a["article"], "page": a["page"]})
+                textes[a["article"]].setdefault("texte_" + lg, a["texte"])
+    return {
+        "mode": "rag", "modele": r["modele"], "langue": langue, "abstention": r["abstention"],
+        "reponse": r["reponse"], "extrait": r["extrait"],
+        "articles_cites": [textes[a] for a in r["articles_cites"] if a in textes],
+        "passages_fournis": r["passages"], "rejet": r.get("rejet"), "candidats": [],
+    }
 
 
 def creer_serveur(port=8000):
@@ -127,8 +171,16 @@ def creer_serveur(port=8000):
             if type(k) is not int or not 1 <= k <= 5:
                 self.envoyer(400, {"erreur": "k doit être un entier entre 1 et 5."})
                 return
+            mode = contenu.get("mode", "bm25")
+            if mode not in MODES:
+                self.envoyer(400, {"erreur": f"mode doit être l'un de : {', '.join(MODES)}."})
+                return
             debut = time.perf_counter()
-            resultat = chaine.repondre(question.strip(), k=k)
+            if mode == "rag":
+                resultat = repondre_rag(question.strip(), chaine, k)
+            else:
+                resultat = chaine.repondre(question.strip(), k=k)
+                resultat["mode"] = "bm25"
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION
