@@ -1,5 +1,8 @@
-# Environnements et caches Python
+# Environnements Python locaux (à créer sur chaque poste, voir INSTALLATION.md)
 .venv/
+venv/
+
+# Caches et fichiers compilés générés automatiquement
 __pycache__/
 *.pyc
 .pytest_cache/
