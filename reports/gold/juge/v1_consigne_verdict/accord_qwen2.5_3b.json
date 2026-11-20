@@ -1,0 +1,29 @@
+{
+  "modele": "qwen2.5:3b",
+  "n": 56,
+  "illisibles": 44,
+  "distribution_juge": {
+    "fidele": 11,
+    "partiel": 1,
+    "infidele": 0
+  },
+  "verdict_claude": {
+    "n": 56,
+    "accord_brut_3_classes": 0.161,
+    "kappa_3_classes": 0.051,
+    "kappa_fidele_vs_non": 0.178,
+    "matrice": {
+      "fidele->fidele": 9,
+      "fidele->partiel": 1,
+      "fidele->illisible": 22,
+      "partiel->fidele": 1,
+      "partiel->illisible": 10,
+      "infidele->fidele": 1,
+      "infidele->illisible": 12
+    },
+    "par_langue": {
+      "fr": 0.084,
+      "ar": 0.017
+    }
+  }
+}

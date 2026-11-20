@@ -53,6 +53,14 @@ def dedoublonner(indices, scores, articles) -> list[tuple[str, float, int]]:
     return sortie
 
 
+def normaliser_signal(texte: str, langue: str) -> str:
+    """Normalisation commune question / articles pour le signal d'abstention."""
+    from baseline_bm25 import normaliser_ar, sans_accents
+
+    texte = " ".join(texte.split())
+    return normaliser_ar(texte) if langue == "ar" else sans_accents(texte.lower())
+
+
 class Recherche:
     def __init__(self, nom_modele: str | None = "intfloat/multilingual-e5-base",
                  appareil: str | None = None):
@@ -82,6 +90,16 @@ class Recherche:
         CACHE.mkdir(parents=True, exist_ok=True)
         np.save(chemin, emb)
         return emb
+
+    def emb_normalise(self, langue: str) -> np.ndarray:
+        """Embeddings des articles normalisés (sans accents / alif unifié), pour le signal
+        d'abstention seulement ; calculés à la première demande puis mis en cache."""
+        if not hasattr(self, "_emb_norm"):
+            self._emb_norm = {}
+        if langue not in self._emb_norm:
+            textes = [normaliser_signal(a["texte"], langue) for a in self.corpus[langue].articles]
+            self._emb_norm[langue] = self._encoder_passages(textes)
+        return self._emb_norm[langue]
 
     def encoder_requete(self, question: str) -> np.ndarray:
         prefixe = PREFIXE_REQUETE.get(self.nom_modele, "")
@@ -123,6 +141,11 @@ class Recherche:
                     meilleurs.setdefault(lab, (lg, i))
         signaux["cos_max"] = max((v for k_, v in signaux.items() if k_.startswith("cos_max_")),
                                  default=0.0)
+        if mode in {"dense", "hybride"}:
+            # Signal d'abstention insensible aux accents (FR) et aux variantes de l'alif (AR) :
+            # question et articles normalisés de la même façon. Le classement ne change pas.
+            qn = self.encoder_requete(normaliser_signal(question, langue))
+            signaux["cosnorm_max"] = max(float((self.emb_normalise(lg) @ qn).max()) for lg in langues)
         fusion = rrf(classements) if len(classements) > 1 else {
             lab: 1.0 / (K_RRF + r) for r, lab in enumerate(classements[0] if classements else [], 1)}
         ordre = sorted(fusion, key=lambda lab: -fusion[lab])[:k]

@@ -1,0 +1,114 @@
+{
+  "modele": "qwen2.5:3b",
+  "strategie": "citation_forcee",
+  "k_contexte": 3,
+  "appels_llm_en_echec": 0,
+  "seuils": {
+    "ar": 0.8188,
+    "fr": 0.8567
+  },
+  "signal": "cosnorm_max",
+  "n_requetes": 493,
+  "avertissement": "dev déjà consulté ; traductions et paraphrases par Claude, à valider",
+  "hallucinations": {
+    "reponses_llm": 336,
+    "article_invente_brut": 0.0,
+    "citation_hors_contexte_brut": 0.021,
+    "sans_citation_brut": 0.11,
+    "article_invente_affiche": 0.0,
+    "hors_perimetre_avec_reponse": 0.007
+  },
+  "abstention_par_langue": {
+    "ar": {
+      "n_dans": 0,
+      "n_hors": 3,
+      "fausse_abstention_recherche": null,
+      "fausse_abstention_finale": null,
+      "reference_citee": null,
+      "abstention_correcte_hors": 1.0
+    },
+    "ar_trad": {
+      "n_dans": 21,
+      "n_hors": 0,
+      "fausse_abstention_recherche": 0.095,
+      "fausse_abstention_finale": 0.286,
+      "reference_citee": 0.619,
+      "abstention_correcte_hors": null
+    },
+    "fr": {
+      "n_dans": 21,
+      "n_hors": 23,
+      "fausse_abstention_recherche": 0.0,
+      "fausse_abstention_finale": 0.095,
+      "reference_citee": 0.905,
+      "abstention_correcte_hors": 1.0
+    },
+    "tun": {
+      "n_dans": 6,
+      "n_hors": 3,
+      "fausse_abstention_recherche": 1.0,
+      "fausse_abstention_finale": 1.0,
+      "reference_citee": 0.0,
+      "abstention_correcte_hors": 1.0
+    }
+  },
+  "invariance": {
+    "bruit_reference (original répété)": {
+      "n": 154,
+      "recherche": 1.0,
+      "decision": 0.974,
+      "citations": 0.961
+    },
+    "faute_de_frappe": {
+      "n": 60,
+      "recherche": 0.833,
+      "decision": 0.883,
+      "citations": 0.833
+    },
+    "minuscules": {
+      "n": 21,
+      "recherche": 1.0,
+      "decision": 0.905,
+      "citations": 0.905
+    },
+    "normalisation_alef": {
+      "n": 11,
+      "recherche": 1.0,
+      "decision": 1.0,
+      "citations": 0.818
+    },
+    "paraphrase": {
+      "n": 42,
+      "recherche": 0.524,
+      "decision": 0.667,
+      "citations": 0.571
+    },
+    "politesse": {
+      "n": 68,
+      "recherche": 0.897,
+      "decision": 0.897,
+      "citations": 0.882
+    },
+    "sans_accents": {
+      "n": 18,
+      "recherche": 0.944,
+      "decision": 1.0,
+      "citations": 0.889
+    },
+    "sans_ponctuation": {
+      "n": 42,
+      "recherche": 0.976,
+      "decision": 0.905,
+      "citations": 0.857
+    }
+  },
+  "ecart_langues": {
+    "paires": 21,
+    "meme_premier_article": 0.619,
+    "meme_decision": 0.714,
+    "memes_citations": 0.619,
+    "juste_fr_seulement": 7,
+    "juste_ar_seulement": 1,
+    "juste_les_deux": 12
+  }
+}

@@ -1,0 +1,43 @@
+id,source_id,langue,paraphrase,article_reference,statut,commentaire
+P01,D01,fr,Quels droits a un salarié dont le contrat est rompu de manière abusive ?,23,a_valider,paraphrase par Claude
+P02,D02,fr,Peut-on diviser un congé payé qui ne dure que cinq jours ouvrables ?,118,a_valider,paraphrase par Claude
+P03,D03,fr,Jusqu'à quand un salarié peut-il prendre ses quinze jours de congé ?,124,a_valider,paraphrase par Claude
+P04,D04,fr,Tous les combien faut-il payer les ouvriers rémunérés à l'heure ou à la journée ?,140,a_valider,paraphrase par Claude
+P05,D05,fr,Au bout de combien de temps un litige de travail entre employeur et salarié est-il prescrit ?,147,a_valider,paraphrase par Claude
+P06,D06,fr,Quel est le rôle des conseils de prud'hommes ?,183,a_valider,paraphrase par Claude
+P07,D07,fr,Est-il permis de licencier un salarié parce qu'il est conseiller prud'homme ?,193,a_valider,paraphrase par Claude
+P08,D08,fr,Que risque-t-on si l'on ne présente pas un registre obligatoire ?,268,a_valider,paraphrase par Claude
+P09,D09,fr,"Qui est chargé, avec les officiers de police judiciaire, de faire appliquer les dispositions de ce chapitre ?",366,a_valider,paraphrase par Claude
+P10,D10,fr,Faut-il rémunérer un travail commandé même s'il n'est pas publié ?,402,a_valider,paraphrase par Claude
+P11,D11,fr,Les syndicats ont-ils le droit de se regrouper en unions ?,252,a_valider,paraphrase par Claude
+P12,D12,fr,Quelles sont les exceptions à l'interdiction du travail de nuit pour les femmes ?,68,a_valider,paraphrase par Claude
+P29,D29,fr,Quelle indemnité est due à un salarié licencié sans faute grave une fois sa période d'essai terminée ?,22,a_valider,paraphrase par Claude
+P31,D31,fr,Combien d'heures au maximum peut-on travailler par semaine ?,79,a_valider,paraphrase par Claude
+P33,D33,fr,Un employeur peut-il faire travailler ses salariés sans fixer d'horaire ?,85,a_valider,paraphrase par Claude
+P34,D34,fr,Un père a-t-il droit à un congé quand son enfant naît ?,122,a_valider,paraphrase par Claude
+P36,D36,fr,L'employeur peut-il déduire du salaire ce que le salarié lui doit pour des fournitures ?,149,a_valider,paraphrase par Claude
+P37,D37,fr,Pour quels sujets doit-on consulter la commission consultative d'entreprise ?,160,a_valider,paraphrase par Claude
+P39,D39,fr,Qui détermine comment sont désignés les conseillers prud'hommes et leur discipline ?,191,a_valider,paraphrase par Claude
+P40,D40,fr,Les conseils de prud'hommes jugent-ils toujours en premier ressort ?,216,a_valider,paraphrase par Claude
+P41,D41,fr,Les règles de procédure civile et commerciale valent-elles devant les conseils de prud'hommes ?,232,a_valider,paraphrase par Claude
+PA01,DA01,ar,ما هي حقوق العامل إذا فسخ عقده بصفة تعسفية؟,23,a_valider,paraphrase par Claude
+PA02,DA02,ar,هل يجوز تقسيم عطلة خالصة الأجر لا تتجاوز خمسة أيام عمل؟,118,a_valider,paraphrase par Claude
+PA03,DA03,ar,متى يجب على العامل أن يأخذ عطلته البالغة خمسة عشر يوما؟,124,a_valider,paraphrase par Claude
+PA04,DA04,ar,كل كم يجب دفع أجور العملة المأجورين بالساعة أو باليوم؟,140,a_valider,paraphrase par Claude
+PA05,DA05,ar,بعد كم من الوقت تسقط النزاعات بين المؤجر والعامل المتعلقة بالشغل؟,147,a_valider,paraphrase par Claude
+PA06,DA06,ar,ما هو دور مجالس العرف؟,183,a_valider,paraphrase par Claude
+PA07,DA07,ar,هل يمكن طرد عامل لأنه عضو في مجلس العرف؟,193,a_valider,paraphrase par Claude
+PA08,DA08,ar,ما هي العقوبة عند عدم الاستظهار بدفتر إجباري؟,268,a_valider,paraphrase par Claude
+PA09,DA09,ar,من يكلف مع مأموري الضابطة العدلية بتطبيق أحكام هذا الباب؟,366,a_valider,paraphrase par Claude
+PA10,DA10,ar,هل يستحق الأجر عن عمل مطلوب لم ينشر؟,402,a_valider,paraphrase par Claude
+PA11,DA11,ar,هل يحق للنقابات أن تتجمع في اتحادات؟,252,a_valider,paraphrase par Claude
+PA12,DA12,ar,ما هي الاستثناءات من منع تشغيل النساء ليلا؟,68,a_valider,paraphrase par Claude
+PA29,DA29,ar,ما هي المنحة المستحقة للعامل المطرود دون خطأ فادح بعد فترة التجربة؟,22,a_valider,paraphrase par Claude
+PA31,DA31,ar,كم عدد ساعات العمل القصوى في الأسبوع؟,79,a_valider,paraphrase par Claude
+PA33,DA33,ar,هل يجوز للمؤجر تشغيل العملة دون ضبط توقيت للعمل؟,85,a_valider,paraphrase par Claude
+PA34,DA34,ar,هل يحق للأب عطلة عند ولادة طفله؟,122,a_valider,paraphrase par Claude
+PA36,DA36,ar,هل يمكن للمؤجر أن يخصم من الأجر ما يدين به العامل مقابل لوازم؟,149,a_valider,paraphrase par Claude
+PA37,DA37,ar,في أي المواضيع تتم استشارة اللجنة الاستشارية للمؤسسة؟,160,a_valider,paraphrase par Claude
+PA39,DA39,ar,من يحدد طريقة تعيين أعضاء مجالس العرف ونظام تأديبهم؟,191,a_valider,paraphrase par Claude
+PA40,DA40,ar,هل تحكم مجالس العرف دائما في الطور الابتدائي؟,216,a_valider,paraphrase par Claude
+PA41,DA41,ar,هل تطبق قواعد المرافعات المدنية والتجارية أمام مجالس العرف؟,232,a_valider,paraphrase par Claude

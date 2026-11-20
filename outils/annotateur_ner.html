@@ -248,7 +248,12 @@ function aller(k) {
 }
 function valider() {
   const l = etat.lignes[etat.i]; if (!l) return;
-  memoriserCommentaire(); l.statut = "verifie"; sauver();
+  memoriserCommentaire();
+  if (l.statut === "verifie_claude" && /^annoté par Claude.*à relire$/.test(l.commentaire.trim())) {
+    l.commentaire = "annoté par Claude, relu et validé par un humain";
+    $("#commentaire").value = l.commentaire;  // sinon aller() relirait l'ancien texte
+  }
+  l.statut = "verifie"; sauver();
   const suivante = etat.lignes.findIndex((x, k) => k > etat.i && x.statut !== "verifie");
   if (suivante >= 0) aller(suivante);
   else { rendre(); message(etat.lignes.every(x => x.statut === "verifie") ? "Toutes les phrases sont vérifiées : enregistrez le CSV." : "Dernière phrase du lot."); }
@@ -256,14 +261,27 @@ function valider() {
 function memoriserCommentaire() { const l = etat.lignes[etat.i]; if (l) l.commentaire = $("#commentaire").value; }
 function message(m) { $("#message").textContent = m; }
 
-/* ---------- persistance ---------- */
+/* ---------- persistance ----------
+   Le travail gardé dans le navigateur n'est repris que si le fichier ouvert est exactement celui
+   sur lequel il a été fait (même empreinte). Un fichier modifié entre-temps (enregistré, ou
+   réécrit par un script) n'est jamais écrasé par une ancienne copie. */
 const cle = () => "annotateur-ner:" + etat.nom;
+function empreinte(texte) {
+  let h = 5381;
+  for (let k = 0; k < texte.length; k++) h = ((h << 5) + h + texte.charCodeAt(k)) | 0;
+  return texte.length + ":" + (h >>> 0).toString(16);
+}
 function sauver() {
-  try { localStorage.setItem(cle(), JSON.stringify(etat.lignes.map(l => ({ id: l.brut.item_id, e: l.entites, s: l.statut, c: l.commentaire })))); } catch {}
+  try {
+    localStorage.setItem(cle(), JSON.stringify({ empreinte: etat.empreinte,
+      lignes: etat.lignes.map(l => ({ id: l.brut.item_id, e: l.entites, s: l.statut, c: l.commentaire })) }));
+  } catch {}
 }
 function restaurer() {
   try {
-    const s = JSON.parse(localStorage.getItem(cle()) || "null"); if (!s) return false;
+    const garde = JSON.parse(localStorage.getItem(cle()) || "null");
+    if (!garde || Array.isArray(garde) || garde.empreinte !== etat.empreinte) return false;  // ancien format ou autre version du fichier
+    const s = garde.lignes;
     const par = Object.fromEntries(s.map(x => [x.id, x]));
     let n = 0;
     etat.lignes.forEach(l => { const x = par[l.brut.item_id]; if (x) { l.entites = x.e; l.statut = x.s; l.commentaire = x.c; n++; } });
@@ -276,6 +294,7 @@ async function ouvrir(fichier) {
 }
 function charger(texte, nom) {
   etat.nom = nom;
+  etat.empreinte = empreinte(texte);
   etat.lignes = lireCSV(texte).map(r => ({ brut: r, phrase: r.phrase, entites: depuisTexte(r.entites || ""),
                                            statut: (r.statut || "a_verifier").trim(), commentaire: r.commentaire || "" }));
   const repris = restaurer();
@@ -291,6 +310,7 @@ async function enregistrer() {
     try {
       if (!etat.poignee) etat.poignee = await showSaveFilePicker({ suggestedName: etat.nom, types: [{ description: "CSV", accept: { "text/csv": [".csv"] } }] });
       const w = await etat.poignee.createWritable(); await w.write(new Blob([contenu], { type: "text/csv" })); await w.close();
+      etat.empreinte = empreinte(contenu); sauver();  // le fichier enregistré devient la référence
       message(`Enregistré dans ${etat.poignee.name}.`); return;
     } catch (e) { if (e.name === "AbortError") return; }
   }

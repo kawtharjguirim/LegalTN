@@ -16,7 +16,22 @@ from . import generer
 from .recherche import Recherche
 
 MODELE = "intfloat/multilingual-e5-base"
-SEUILS = {"ar": 0.822, "fr": 0.860}
+# Règle d'abstention (palier Gold, reports/gold/abstention/) :
+# - français : cosinus « normalisé » (question et articles sans accents, en minuscules) < 0,8567,
+#   insensible aux accents tapés ou non par l'utilisateur ;
+# - arabe : s'abstenir si le cosinus brut < 0,8217 OU le cosinus normalisé < 0,8188 (le signal
+#   normalisé seul laissait passer davantage de questions hors périmètre).
+# Seuils réglés sur tout le dev par écriture. Ancienne règle Silver : cosinus brut, fr 0,860, ar 0,822.
+SIGNAL = "cosnorm_max"
+SEUILS = {"ar": 0.8188, "fr": 0.8567}          # seuils du cosinus normalisé
+SEUILS_BRUT = {"ar": 0.8217}                    # seuil du cosinus brut, arabe seulement
+
+
+def abstenir(sig: dict, langue: str) -> bool:
+    """Décision d'abstention de la recherche, d'après ses signaux."""
+    if sig[SIGNAL] < SEUILS[langue]:
+        return True
+    return langue in SEUILS_BRUT and sig["cos_max"] < SEUILS_BRUT[langue]
 NOMS_LANGUE = {"fr": "français", "ar": "arabe"}
 K_CONTEXTE_LLM = 3          # articles transmis au LLM
 DELAI_VERIF_LLM = 60.0      # secondes entre deux vérifications de disponibilité d'Ollama
@@ -81,11 +96,13 @@ class MoteurHybride:
         resultats, sig = self.recherche.rechercher(question, mode="hybride", bilingue=False, k=k)
         langue = sig["langue"]
         seuil = self.seuils[langue]
-        abstention = not resultats or sig["cos_max"] < seuil
+        abstention = not resultats or abstenir(sig, langue)
         etapes = [
             f"Langue détectée : {NOMS_LANGUE[langue]}",
             f"BM25 : meilleur score {sig.get('bm25_max', 0.0):.2f}",
-            f"Recherche dense e5 : similarité max {sig['cos_max']:.3f} (seuil {seuil:.3f})",
+            f"Recherche dense e5 : similarité max {sig['cos_max']:.3f}",
+            f"Similarité normalisée {sig[SIGNAL]:.3f} (seuil {seuil:.3f})"
+            + (f", brute {sig['cos_max']:.3f} (seuil {SEUILS_BRUT[langue]:.3f})" if langue in SEUILS_BRUT else ""),
             "Fusion des classements (RRF, k = 60)",
             "Abstention : question hors du Code du travail" if abstention
             else f"Citation : article {resultats[0].article}",
@@ -100,7 +117,8 @@ class MoteurHybride:
             for r in resultats]
         return {"abstention": abstention, "langue": langue, "candidats": candidats,
                 "moteur": self.nom, "etapes": etapes, "reponse_redigee": redaction,
-                "signaux": {"similarite_max": round(sig["cos_max"], 4), "seuil": seuil}}
+                "signaux": {"similarite_max": round(sig["cos_max"], 4),
+                            "similarite_normalisee": round(sig[SIGNAL], 4), "seuil": seuil}}
 
     def resumer(self, article: str, langue: str) -> dict:
         """Résumé en langage clair d'un article indexé (LLM requis)."""

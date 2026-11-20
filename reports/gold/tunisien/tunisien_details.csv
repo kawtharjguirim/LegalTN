@@ -1,0 +1,196 @@
+﻿methode,jeu,id,dans,reference,question,texte_cherche,rang,top3,abstention,cos_max,cosnorm_max
+directe_fr,tun_v1,T01,True,23,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?","Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",99,355 | 352 | 26,True,0.8026,0.8022
+directe_fr,tun_v1,T02,True,23,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?","Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",99,372 | 323 | 285,True,0.8245,0.8207
+directe_fr,tun_v1,T03,True,118,Najem nkasem el congé mta3 5 ayem ?,Najem nkasem el congé mta3 5 ayem ?,26,50 | 49 | 94,True,0.7947,0.7987
+directe_fr,tun_v1,T04,True,124,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,10,94 | 116 | 131,True,0.8221,0.8191
+directe_fr,tun_v1,T05,True,140,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?","Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",99,403 | 354 | 323,True,0.7995,0.8036
+directe_fr,tun_v1,T06,True,147,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,99,9 | 186 | 4,True,0.8217,0.8209
+directe_fr,tun_v1,T07,True,147,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?","El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",99,9 | 7 | 4,True,0.8106,0.8123
+directe_fr,tun_v1,T08,True,183,Chnowa ye5dem el conseil de prud'hommes ?,Chnowa ye5dem el conseil de prud'hommes ?,32,220 | 186 | 354,True,0.8208,0.8238
+directe_fr,tun_v1,T09,True,193,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,28,186 | 229 | 198,True,0.8117,0.8115
+directe_fr,tun_v1,T10,True,268,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?","Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",3,179 | 59 | 268,True,0.8135,0.8132
+directe_fr,tun_v1,T11,True,252,Najmou les syndicats ya3mlou union binethom ?,Najmou les syndicats ya3mlou union binethom ?,6,246 | 243 | 377,True,0.8102,0.809
+directe_fr,tun_v1,T12,True,68,Fi ama 7alat tnajem el mra tekhdem bel lil ?,Fi ama 7alat tnajem el mra tekhdem bel lil ?,99,9 | 7 | 17,True,0.7824,0.7767
+directe_fr,tun_v1,T13,True,22,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?","Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",15,349 | 371 | 6,True,0.8268,0.8214
+directe_fr,tun_v1,T14,True,79,Akthar 9adech men se3a najem nekhdem fel jem3a ?,Akthar 9adech men se3a najem nekhdem fel jem3a ?,99,403 | 354 | 323,True,0.8052,0.8045
+directe_fr,tun_v1,T15,True,79,Ch7al men se3a khedma fel semaine maximum ?,Ch7al men se3a khedma fel semaine maximum ?,1,79 | 88 | 322,True,0.8288,0.8301
+directe_fr,tun_v1,T16,True,85,Lazem el patron y7aded wa9t el khedma lel khadema ?,Lazem el patron y7aded wa9t el khedma lel khadema ?,99,9 | 4 | 445,True,0.7735,0.777
+directe_fr,tun_v1,T17,True,122,"Mrati weldet, 3andi 7a9 fi congé ?","Mrati weldet, 3andi 7a9 fi congé ?",44,110 | 419 | 94,True,0.8056,0.814
+directe_fr,tun_v1,T18,True,149,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,99,9 | 7 | 5,True,0.805,0.8043
+directe_fr,tun_v1,T19,True,160,3la chnowa ychawrou el commission consultative fel chrika ?,3la chnowa ychawrou el commission consultative fel chrika ?,4,169 | 157 | 379,True,0.8112,0.8089
+directe_fr,tun_v1,T20,True,191,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,7,194 | 195 | 354,True,0.8362,0.8381
+directe_fr,tun_v1,T21,True,216,Les prud'hommes dima y7akmou en premier ressort ?,Les prud'hommes dima y7akmou en premier ressort ?,2,221 | 216 | 186,True,0.8197,0.8307
+directe_fr,tun_v1,T22,True,232,El code de procédure civile yetteb9 3al prud'hommes ?,El code de procédure civile yetteb9 3al prud'hommes ?,1,232 | 218 | 196,False,0.8596,0.8584
+directe_fr,tun_v1,T23,True,118,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?","Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",29,94 | 50 | 49,True,0.8177,0.8127
+directe_fr,tun_v1,T24,True,140,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?","El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",99,9 | 2 | 15,True,0.811,0.8134
+directe_fr,tun_v1,TH01,False,,Chnowa a7sen restaurant fi Tounes ?,Chnowa a7sen restaurant fi Tounes ?,99,322 | 96 | 67,True,0.7717,0.7834
+directe_fr,tun_v1,TH02,False,,Kifech nekhou el permis ?,Kifech nekhou el permis ?,99,9 | 4 | 49,True,0.7767,0.7879
+directe_fr,tun_v1,TH03,False,,9adech soum el kra fi Sousse ?,9adech soum el kra fi Sousse ?,99,9 | 19 | 49,True,0.786,0.7888
+directe_fr,tun_v1,TH04,False,,Chkoun rbe7 el match el bera7 ?,Chkoun rbe7 el match el bera7 ?,99,9 | 4 | 7,True,0.7787,0.7867
+directe_fr,tun_v1,TH05,False,,Kifech na3mel passeport jdid ?,Kifech na3mel passeport jdid ?,99,425 | 268 | 311,True,0.8003,0.8111
+directe_fr,tun_v1,TH06,False,,Wa9tech yabda Ramdhan ?,Wa9tech yabda Ramdhan ?,99,403 | 9 | 49,True,0.7823,0.7826
+directe_fr,dev_v2,D13,True,118,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?","Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",20,94 | 110 | 131,True,0.8262,0.8254
+directe_fr,dev_v2,D28,False,n/a,"Ken na3mel test el code el route, chniya el mawed el lazmin ?","Ken na3mel test el code el route, chniya el mawed el lazmin ?",99,323 | 233 | 152,True,0.7927,0.8074
+directe_fr,dev_v2,D30,True,22,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",20,349 | 6 | 18,True,0.8134,0.812
+directe_fr,dev_v2,D32,True,79,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,12,9 | 94 | 132,True,0.8222,0.8226
+directe_fr,dev_v2,D35,True,122,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?","El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",35,110 | 131 | 94,True,0.8218,0.8139
+directe_fr,dev_v2,D38,True,170,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,99,9 | 2 | 7,True,0.8148,0.8098
+directe_fr,dev_v2,D42,True,198,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",12,194 | 195 | 191,True,0.8332,0.8366
+directe_fr,dev_v2,D52,False,n/a,Kifech n7ell chikaya 3la el bank ?,Kifech n7ell chikaya 3la el bank ?,99,9 | 3 | 5,True,0.7846,0.7928
+directe_fr,dev_v2,D53,False,n/a,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,99,323 | 324 | 233,True,0.8286,0.8389
+multilingue,tun_v1,T01,True,23,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?","Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",99,285 | 401 | 131,True,0.8026,0.8022
+multilingue,tun_v1,T02,True,23,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?","Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",99,372 | 311 | 347,True,0.8245,0.8207
+multilingue,tun_v1,T03,True,118,Najem nkasem el congé mta3 5 ayem ?,Najem nkasem el congé mta3 5 ayem ?,99,50 | 403 | 354,True,0.7965,0.7987
+multilingue,tun_v1,T04,True,124,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,99,323 | 311 | 354,True,0.8241,0.8241
+multilingue,tun_v1,T05,True,140,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?","Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",99,403 | 311 | 323,True,0.8093,0.8131
+multilingue,tun_v1,T06,True,147,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,99,311 | 352 | 403,True,0.8217,0.8209
+multilingue,tun_v1,T07,True,147,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?","El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",99,403 | 311 | 352,True,0.811,0.8125
+multilingue,tun_v1,T08,True,183,Chnowa ye5dem el conseil de prud'hommes ?,Chnowa ye5dem el conseil de prud'hommes ?,99,50 | 185 | 198,True,0.8208,0.8238
+multilingue,tun_v1,T09,True,193,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,99,50 | 403 | 198,True,0.8117,0.8115
+multilingue,tun_v1,T10,True,268,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?","Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",99,179 | 311 | 352,True,0.8223,0.8205
+multilingue,tun_v1,T11,True,252,Najmou les syndicats ya3mlou union binethom ?,Najmou les syndicats ya3mlou union binethom ?,99,403 | 341 | 43,True,0.8102,0.809
+multilingue,tun_v1,T12,True,68,Fi ama 7alat tnajem el mra tekhdem bel lil ?,Fi ama 7alat tnajem el mra tekhdem bel lil ?,99,372 | 403 | 76,True,0.7907,0.7924
+multilingue,tun_v1,T13,True,22,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?","Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",99,372 | 403 | 311,True,0.8268,0.8214
+multilingue,tun_v1,T14,True,79,Akthar 9adech men se3a najem nekhdem fel jem3a ?,Akthar 9adech men se3a najem nekhdem fel jem3a ?,99,403 | 311 | 354,True,0.8052,0.8045
+multilingue,tun_v1,T15,True,79,Ch7al men se3a khedma fel semaine maximum ?,Ch7al men se3a khedma fel semaine maximum ?,14,403 | 372 | 373,True,0.8288,0.8301
+multilingue,tun_v1,T16,True,85,Lazem el patron y7aded wa9t el khedma lel khadema ?,Lazem el patron y7aded wa9t el khedma lel khadema ?,99,311 | 372 | 9,True,0.7779,0.7834
+multilingue,tun_v1,T17,True,122,"Mrati weldet, 3andi 7a9 fi congé ?","Mrati weldet, 3andi 7a9 fi congé ?",99,311 | 403 | 372,True,0.8137,0.814
+multilingue,tun_v1,T18,True,149,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,99,311 | 372 | 323,True,0.8136,0.8158
+multilingue,tun_v1,T19,True,160,3la chnowa ychawrou el commission consultative fel chrika ?,3la chnowa ychawrou el commission consultative fel chrika ?,99,311 | 340 | 354,True,0.8112,0.8089
+multilingue,tun_v1,T20,True,191,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,31,372 | 403 | 311,True,0.8362,0.8381
+multilingue,tun_v1,T21,True,216,Les prud'hommes dima y7akmou en premier ressort ?,Les prud'hommes dima y7akmou en premier ressort ?,23,230 | 403 | 221,True,0.8197,0.8307
+multilingue,tun_v1,T22,True,232,El code de procédure civile yetteb9 3al prud'hommes ?,El code de procédure civile yetteb9 3al prud'hommes ?,10,354 | 209 | 185,False,0.8596,0.8584
+multilingue,tun_v1,T23,True,118,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?","Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",99,311 | 403 | 323,True,0.8189,0.8189
+multilingue,tun_v1,T24,True,140,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?","El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",99,347 | 372 | 311,True,0.8201,0.8268
+multilingue,tun_v1,TH01,False,,Chnowa a7sen restaurant fi Tounes ?,Chnowa a7sen restaurant fi Tounes ?,99,96 | 7 | 67,True,0.7717,0.7834
+multilingue,tun_v1,TH02,False,,Kifech nekhou el permis ?,Kifech nekhou el permis ?,99,49 | 9 | 50,True,0.7797,0.7895
+multilingue,tun_v1,TH03,False,,9adech soum el kra fi Sousse ?,9adech soum el kra fi Sousse ?,99,9 | 372 | 311,True,0.7928,0.7955
+multilingue,tun_v1,TH04,False,,Chkoun rbe7 el match el bera7 ?,Chkoun rbe7 el match el bera7 ?,99,372 | 72 | 9,True,0.7841,0.7905
+multilingue,tun_v1,TH05,False,,Kifech na3mel passeport jdid ?,Kifech na3mel passeport jdid ?,99,311 | 425 | 268,True,0.8003,0.8111
+multilingue,tun_v1,TH06,False,,Wa9tech yabda Ramdhan ?,Wa9tech yabda Ramdhan ?,99,403 | 9 | 49,True,0.7823,0.7826
+multilingue,dev_v2,D13,True,118,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?","Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",99,311 | 403 | 352,True,0.83,0.8284
+multilingue,dev_v2,D28,False,n/a,"Ken na3mel test el code el route, chniya el mawed el lazmin ?","Ken na3mel test el code el route, chniya el mawed el lazmin ?",99,311 | 352 | 372,True,0.8052,0.8194
+multilingue,dev_v2,D30,True,22,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?","Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",99,352 | 403 | 311,True,0.8198,0.8179
+multilingue,dev_v2,D32,True,79,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,99,403 | 372 | 311,True,0.826,0.8243
+multilingue,dev_v2,D35,True,122,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?","El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",99,323 | 311 | 403,True,0.823,0.8139
+multilingue,dev_v2,D38,True,170,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,99,352 | 372 | 311,True,0.8188,0.823
+multilingue,dev_v2,D42,True,198,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",3,179 | 403 | 198,True,0.8332,0.8366
+multilingue,dev_v2,D52,False,n/a,Kifech n7ell chikaya 3la el bank ?,Kifech n7ell chikaya 3la el bank ?,99,311 | 372 | 354,True,0.7958,0.7928
+multilingue,dev_v2,D53,False,n/a,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,99,311 | 323 | 324,True,0.8286,0.8389
+translit_ar,tun_v1,T01,True,23,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",كن البترون يفسخلي الكونترت بلة سب شنوة نجم نخو؟,11,143 | 28 | 194,True,0.7765,0.79
+translit_ar,tun_v1,T02,True,23,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",تردوني من الخدمة بلة سب عندي حق في تعويد؟,13,8 | 21 | 18,True,0.8078,0.8239
+translit_ar,tun_v1,T03,True,118,Najem nkasem el congé mta3 5 ayem ?,نجم نكسم الكونق متع 5 ايم؟,99,50 | 5 bis | 49,True,0.7608,0.7609
+translit_ar,tun_v1,T04,True,124,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,قدش عندي وقت بش نخو الكونق متع 15 يوم؟,36,95 | 123 | 97,True,0.8132,0.8145
+translit_ar,tun_v1,T05,True,140,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",كن نخدم بالسعة كول قدش لزم يخلسوني؟,99,11 | 8 | 98,True,0.8025,0.8128
+translit_ar,tun_v1,T06,True,147,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,بعد قدش وقت معدش نجم نشكي بالبترون؟,99,441 | 348 | 436,True,0.7741,0.7727
+translit_ar,tun_v1,T07,True,147,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",القضية بين الخدم والبترون قدش توسقوت بالوقت؟,2,148 | 147 | 94,True,0.7979,0.8067
+translit_ar,tun_v1,T08,True,183,Chnowa ye5dem el conseil de prud'hommes ?,شنوة يخدم الكونسيل د هومس؟,99,194 | 256 | 152,True,0.7568,0.7647
+translit_ar,tun_v1,T09,True,193,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,نجم البترون يترودني ختر انة كونسيلر هوم؟,99,251 | 23 bis | 28,True,0.7552,0.7674
+translit_ar,tun_v1,T10,True,268,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",كن مقدمتش الرقيستر وقت الكونتر ل قدش الختية؟,99,9 | 21 | 159,True,0.7748,0.7915
+translit_ar,tun_v1,T11,True,252,Najmou les syndicats ya3mlou union binethom ?,نجمو لس سينديكتس يعملو ونيون بينثوم؟,99,403 | 87 | 8,True,0.7524,0.7616
+translit_ar,tun_v1,T12,True,68,Fi ama 7alat tnajem el mra tekhdem bel lil ?,في امة حلت تنجم المرة تخدم بالليل؟,1,68 | 83 | 69,True,0.7901,0.7843
+translit_ar,tun_v1,T13,True,22,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",كن تردوني بعد الب ريود اسي عندي حق في يندمنيت؟,99,8 | 28 | 68,True,0.7886,0.8013
+translit_ar,tun_v1,T14,True,79,Akthar 9adech men se3a najem nekhdem fel jem3a ?,اكثر قدش من سعة نجم نخدم في الجمعة؟,41,97 | 93 | 66,True,0.7849,0.7796
+translit_ar,tun_v1,T15,True,79,Ch7al men se3a khedma fel semaine maximum ?,شحل من سعة خدمة في السمين مكسيموم؟,99,371 | 3 | 115,True,0.7785,0.7689
+translit_ar,tun_v1,T16,True,85,Lazem el patron y7aded wa9t el khedma lel khadema ?,لزم البترون يحد وقت الخدمة للخدمة؟,10,98 | 115 | 123,True,0.8068,0.8131
+translit_ar,tun_v1,T17,True,122,"Mrati weldet, 3andi 7a9 fi congé ?",مرتي ولدت عندي حق في كونق؟,45,5 bis | 8 | 215,True,0.7806,0.7751
+translit_ar,tun_v1,T18,True,149,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,البترون ينجم يقتع من شهريتي الفلوس الي علية؟,99,8 | 202 | 353,True,0.7848,0.7864
+translit_ar,tun_v1,T19,True,160,3la chnowa ychawrou el commission consultative fel chrika ?,علة شنوة يشورو الكوميسيون كونسولتيف في الشريكة؟,99,172 | 169 ter | 129,True,0.7667,0.7762
+translit_ar,tun_v1,T20,True,191,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,شكون يعين لس كونسيلرس هومس و يحسب فيهوم؟,99,384 | 5 | 9,True,0.7782,0.7907
+translit_ar,tun_v1,T21,True,216,Les prud'hommes dima y7akmou en premier ressort ?,لس هومس ديمة يحكمو ان برمير رسورت؟,99,226 | 229 | 200,True,0.7667,0.7831
+translit_ar,tun_v1,T22,True,232,El code de procédure civile yetteb9 3al prud'hommes ?,الكود د بروك دور كيفيل يتبق على الهومس؟,99,314 | 152 | 179,True,0.7721,0.7589
+translit_ar,tun_v1,T23,True,118,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",كونق متع 5 ايم لزم نخدو مرة وحدة؟,99,5 bis | 50 | 64,True,0.7856,0.793
+translit_ar,tun_v1,T24,True,140,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",العومل الي يخدمو باليوم يخلسوهوم كول جمعة ولة كول شهر؟,19,114 | 97 | 94,True,0.8154,0.823
+translit_ar,tun_v1,TH01,False,,Chnowa a7sen restaurant fi Tounes ?,شنوة احسن رستورنت في تونس؟,99,7 | 21 | 3,True,0.7893,0.802
+translit_ar,tun_v1,TH02,False,,Kifech nekhou el permis ?,كيفش نخو البرميس؟,99,439 | 14 | 405,True,0.7648,0.7744
+translit_ar,tun_v1,TH03,False,,9adech soum el kra fi Sousse ?,قدش سوم الكرة في سوس؟,99,430 | 121 | 143,True,0.7605,0.7796
+translit_ar,tun_v1,TH04,False,,Chkoun rbe7 el match el bera7 ?,شكون ربح المتش البرح؟,99,412 | 371 | 439,True,0.771,0.7804
+translit_ar,tun_v1,TH05,False,,Kifech na3mel passeport jdid ?,كيفش نعمل بسبورت جديد؟,99,26 | 370 | 9,True,0.7909,0.7945
+translit_ar,tun_v1,TH06,False,,Wa9tech yabda Ramdhan ?,وقتش يبدة رمضن؟,99,141 | 65 | 92,True,0.7799,0.7783
+translit_ar,dev_v2,D13,True,118,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",كن الكونق متعي 5 ايم وفربلس لزم يكون متول ولة يمكن يتقسم؟,12,5 bis | 50 | 49,True,0.7968,0.7971
+translit_ar,dev_v2,D28,False,n/a,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",كن نعمل تست الكود الروت شنية المود اللزمين؟,99,174 | 359 | 152,True,0.7992,0.8082
+translit_ar,dev_v2,D30,True,22,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",كن تحر من الخدمة بعد الب ريود اسي شنوة يخسني؟,18,371 | 8 | 21,True,0.8013,0.8196
+translit_ar,dev_v2,D32,True,79,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,شحل الحد الكسة متع الخدمة في السمين؟,99,371 | 115 | 3,True,0.7762,0.795
+translit_ar,dev_v2,D35,True,122,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",الخدم عندو حق كونق عند وليدو شنوة يعمل؟,24,8 | 27 | 148,True,0.7845,0.7942
+translit_ar,dev_v2,D38,True,170,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,شكون المسءول عن تنفيز القنون الخدمة في الموءسة؟,99,8 | 21 | 18,True,0.7973,0.8149
+translit_ar,dev_v2,D42,True,198,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",كن وحد من الكونسيلرس هومس محتخش شكون يحكر القضية؟,1,198 | 205 | 14,True,0.7865,0.7953
+translit_ar,dev_v2,D52,False,n/a,Kifech n7ell chikaya 3la el bank ?,كيفش نحل شيكية علة البنك؟,99,167 | 28 | 5,True,0.7892,0.8015
+translit_ar,dev_v2,D53,False,n/a,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,شنوة العقوبة علة السرقة في الكود ب نل؟,99,167 | 14 quater | 240,True,0.8211,0.7896
+traduction_fr,tun_v1,T01,True,23,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?","Que faire si l'employeur rompt le contrat sans motif, comment obtenir indemnisation ?",5,413 | 120 | 370,False,0.864,0.8727
+traduction_fr,tun_v1,T02,True,23,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?","Ai-je droit à une absence pour motif personnel, et si taudid ?",99,20 | 167 | 205,True,0.8285,0.8407
+traduction_fr,tun_v1,T03,True,118,Najem nkasem el congé mta3 5 ayem ?,Quelle est la durée du congé lorsque je suis absent ?,6,123 | 115 | 113,False,0.8662,0.8606
+traduction_fr,tun_v1,T04,True,124,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,Ai-je droit à un congé de 15 jours ?,1,124 | 123 | 113,False,0.8743,0.896
+traduction_fr,tun_v1,T05,True,140,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?","Si je travaille 9 heures, tous les jours, dois-je être payé ?",8,94 | 89 | 107,False,0.8555,0.8609
+traduction_fr,tun_v1,T06,True,147,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,Quel est mon droit après un accident de travail chez mon patron ?,99,415 | 416 | 8,False,0.8632,0.8691
+traduction_fr,tun_v1,T07,True,147,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",Quel est le temps de travail pour un employé chez l'employeur et le patron ?,38,193 | 94 | 165,True,0.8449,0.8551
+traduction_fr,tun_v1,T08,True,183,Chnowa ye5dem el conseil de prud'hommes ?,Ai droit à un conseil de prud'hommes ?,18,185 | 186 | 184,False,0.8575,0.8765
+traduction_fr,tun_v1,T09,True,193,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,Est-ce que l'employeur me conseille un conseiller prud'homme ?,3,186 | 229 | 193,False,0.8487,0.8646
+traduction_fr,tun_v1,T10,True,268,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?","Que faire si je manque un contrôle de travail, quelle est la conséquence ?",99,21 | 62 | 92,True,0.8347,0.8382
+traduction_fr,tun_v1,T11,True,252,Najmou les syndicats ya3mlou union binethom ?,Les syndicats ont-ils le droit de faire des unions familiales ?,3,242 | 244 | 252,True,0.8357,0.8405
+traduction_fr,tun_v1,T12,True,68,Fi ama 7alat tnajem el mra tekhdem bel lil ?,Ai droit à la maternité pendant la maternité ?,5,94 | 64 | 63,False,0.8524,0.8712
+traduction_fr,tun_v1,T13,True,22,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",Ai-je droit à une indemnité après la période d'essai ?,4,349 | 18 | 371,True,0.8616,0.8551
+traduction_fr,tun_v1,T14,True,79,Akthar 9adech men se3a najem nekhdem fel jem3a ?,Ai droit à une retraite à la fin du contrat ?,99,412 | 413 | 411,False,0.8547,0.8607
+traduction_fr,tun_v1,T15,True,79,Ch7al men se3a khedma fel semaine maximum ?,Quelle est la durée maximum de la première période de travail ?,2,88 | 79 | 410,False,0.846,0.8575
+traduction_fr,tun_v1,T16,True,85,Lazem el patron y7aded wa9t el khedma lel khadema ?,Doit l'employeur donner congé pour le travail ?,99,132 | 117 | 118,False,0.8717,0.886
+traduction_fr,tun_v1,T17,True,122,"Mrati weldet, 3andi 7a9 fi congé ?",Ai-je droit à un congé parental ?,4,124 | 94 | 419,False,0.8571,0.8585
+traduction_fr,tun_v1,T18,True,149,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,L'employeur est tenu de fournir des protections contre les accidents du travail dans l'entreprise ?,99,152 | 154 | 153,False,0.8705,0.8743
+traduction_fr,tun_v1,T19,True,160,3la chnowa ychawrou el commission consultative fel chrika ?,N'ai-je pas droit à la commission consultative lors de la rupture du contrat ?,11,23 | 158 | 166,True,0.8412,0.8464
+traduction_fr,tun_v1,T20,True,191,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,Les conseillers prud'hommes sont-ils consultés ?,2,196 | 191 | 187,True,0.855,0.8553
+traduction_fr,tun_v1,T21,True,216,Les prud'hommes dima y7akmou en premier ressort ?,Les prud'hommes décident-ils en premier ressort ?,2,221 | 216 | 184,False,0.8566,0.87
+traduction_fr,tun_v1,T22,True,232,El code de procédure civile yetteb9 3al prud'hommes ?,Le code de la procédure civile est-il applicable aux prud'hommes ?,1,232 | 218 | 228,False,0.8949,0.8935
+traduction_fr,tun_v1,T23,True,118,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",Quel est le délai pour demander un congé de maternité ?,12,114 | 124 | 94,True,0.8685,0.8429
+traduction_fr,tun_v1,T24,True,140,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",Le travailleur est-il tenu de présenter tous ses justificatifs ou seulement ceux nécessaires ?,26,152 | 261 | 174,True,0.852,0.8552
+traduction_fr,tun_v1,TH01,False,,Chnowa a7sen restaurant fi Tounes ?,Ai droit au restaurant à Tébessa ?,99,312 | 403 | 8,True,0.8048,0.8202
+traduction_fr,tun_v1,TH02,False,,Kifech nekhou el permis ?,Comment faire pour récupérer mon permis ?,99,93 | 316 | 339,True,0.8251,0.8349
+traduction_fr,tun_v1,TH03,False,,9adech soum el kra fi Sousse ?,Où se situe le souk de Sousse ?,99,3 | 4 | 214,True,0.7631,0.7846
+traduction_fr,tun_v1,TH04,False,,Chkoun rbe7 el match el bera7 ?,Ai droit à la retraite ?,99,96 | 21 | 254,True,0.834,0.845
+traduction_fr,tun_v1,TH05,False,,Kifech na3mel passeport jdid ?,Comment faire pour obtenir un passeport ?,99,425 | 433 | 284,True,0.8218,0.8273
+traduction_fr,tun_v1,TH06,False,,Wa9tech yabda Ramdhan ?,Est-ce que je travaille pendant le Ramadhan ?,99,133 | 109 | 111,True,0.8251,0.8356
+traduction_fr,dev_v2,D13,True,118,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?","Ai droit à un congé de trois jours ouvrables, sera-t-il payé et recevra-t-il des indemnités ?",7,94 | 119 | 113,False,0.8625,0.8756
+traduction_fr,dev_v2,D28,False,n/a,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",Que faire si le code du travail ne concerne pas ma situation salariale ?,99,21 | 5 | 68,True,0.8458,0.8535
+traduction_fr,dev_v2,D30,True,22,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?","Que faire si le contrat est rompu pendant la période d'essai, qu'ils me payent ?",6,349 | 370 | 18,True,0.8509,0.8508
+traduction_fr,dev_v2,D32,True,79,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,Combien d'heures d'absence pour une absence de travail la semaine ?,1,79 | 95 | 106,False,0.8531,0.8668
+traduction_fr,dev_v2,D35,True,122,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?","Le salarié a droit à un congé pour absence maladie, comment puis-je faire ?",8,132 | 20 | 118,False,0.8644,0.8804
+traduction_fr,dev_v2,D38,True,170,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,Est-ce que le mis en cause est tenu pour responsable des dommages corporels au travail ?,99,152 | 154 | 26,False,0.8547,0.8585
+traduction_fr,dev_v2,D42,True,198,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?","Que faire si seul un conseiller prud'hommes est disponible, comment obtenir la décision ?",6,229 | 185 | 202,False,0.8528,0.8648
+traduction_fr,dev_v2,D52,False,n/a,Kifech n7ell chikaya 3la el bank ?,Comment faire pour récupérer mon chèque du banque ?,99,316 | 93 | 11,True,0.809,0.8182
+traduction_fr,dev_v2,D53,False,n/a,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,Ai droit à la retraite selon le code pénal ?,99,196 | 324 | 269,False,0.8487,0.8592
+traduction_ar,tun_v1,T01,True,23,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",ماذا أفعل إذا قام المدير ب-break العقد بلا سبب، نجوم؟,99,400 | 128 | 351,True,0.8198,0.8265
+traduction_ar,tun_v1,T02,True,23,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",هل أ享有无故缺勤的权利، 3andi 7a9 fi تعظيم؟,23,8 | 6 | 14 quater,False,0.8404,0.84
+traduction_ar,tun_v1,T03,True,118,Najem nkasem el congé mta3 5 ayem ?,متى يحق لي استلام تعويض عطلة؟,47,141 | 122 | 445,False,0.8363,0.8267
+traduction_ar,tun_v1,T04,True,124,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,هل لدي الحق في تعليق العمل لمدة 15 يوماً بسبب الإصابة؟,8,123 | 94 | 113,False,0.8294,0.8413
+traduction_ar,tun_v1,T05,True,140,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",ما هي وظيفتي في حالة停工，所有员工必须遵守？,99,89 | 21 | 152,True,0.8184,0.8121
+traduction_ar,tun_v1,T06,True,147,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,بعد وفاة زوجي ما أفعل بسائقي من الموكلين؟,99,436 | 441 | 122,True,0.7935,0.7922
+traduction_ar,tun_v1,T07,True,147,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",متى يجب أن أقدم طلبي للتوظيف للموظف والمؤجر؟,99,94 | 421 | 279,False,0.8386,0.8323
+traduction_ar,tun_v1,T08,True,183,Chnowa ye5dem el conseil de prud'hommes ?,ماذا أفعل إذا تم استدعائي للمحكمة المختصة؟,99,205 | 374 | 155,False,0.8307,0.8478
+traduction_ar,tun_v1,T09,True,193,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,ما هي الوظيفة التي يتمتع بها المدير في качестве م Advocate للعملاء في نقابة المأجورين؟,99,21 | 239 | 254,True,0.8039,0.8028
+traduction_ar,tun_v1,T10,True,268,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",ماذا أفعل إذا تم إدخالي في عملية التحقق من الموظف، هل هو قرار؟,99,10 | 298 | 318,True,0.8108,0.8233
+traduction_ar,tun_v1,T11,True,252,Najmou les syndicats ya3mlou union binethom ?,ما هي علاقة الأندية العمالية بالنقابات المهنية؟,99,21 | 244 | 243,True,0.8083,0.8216
+traduction_ar,tun_v1,T12,True,68,Fi ama 7alat tnajem el mra tekhdem bel lil ?,هل أ earn أجرة تكسي المرأة لنقل Lil؟,1,68 | 371 | 345,True,0.8203,0.8028
+traduction_ar,tun_v1,T13,True,22,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",ماذا أفعل بعد نهاية فترة ال prueba، إذا كنتي في إعانة؟,2,371 | 22 | 21,True,0.8279,0.8115
+traduction_ar,tun_v1,T14,True,79,Akthar 9adech men se3a najem nekhdem fel jem3a ?,ما هي حقوقي في حالة إجازة الموظف في حالة الإجازة المرضية؟,99,119 | 94 | 114,False,0.8309,0.842
+traduction_ar,tun_v1,T15,True,79,Ch7al men se3a khedma fel semaine maximum ?,كمount من الزمن العمل في الأسبوع الأقصى؟,1,79 | 90 | 106,False,0.8299,0.8251
+traduction_ar,tun_v1,T16,True,85,Lazem el patron y7aded wa9t el khedma lel khadema ?,إذا كان الموظف يستحق加班费给员工？,29,11 | 411 | 9,False,0.8332,0.8281
+traduction_ar,tun_v1,T17,True,122,"Mrati weldet, 3andi 7a9 fi congé ?",هل لدي الحق في عطلةernity؟,4,100 | 64 | 94,True,0.83,0.8122
+traduction_ar,tun_v1,T18,True,149,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,هل يحق لي استبدال الموظف في هذه اللحظة؟,99,5 | 8 | 167,True,0.817,0.8228
+traduction_ar,tun_v1,T19,True,160,3la chnowa ychawrou el commission consultative fel chrika ?,هل يشارك العامل في المقابلة العمالية؟,99,370 | 283 | 8,True,0.8088,0.8218
+traduction_ar,tun_v1,T20,True,191,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,هل يخول لهم القضاة الماليزون العمل نيابة عنهم؟,99,225 | 384 bis | 94,True,0.7943,0.7972
+traduction_ar,tun_v1,T21,True,216,Les prud'hommes dima y7akmou en premier ressort ?,هل للمؤسسات الصناعية الحق في الطعن في النزاعات في الطور الأول؟,7,215 | 183 | 294,True,0.8061,0.8276
+traduction_ar,tun_v1,T22,True,232,El code de procédure civile yetteb9 3al prud'hommes ?,ما هو قانون الإجراءات المدني تطبيق على القضايا العمالية؟,20,212 | 244 | 185,True,0.8187,0.8338
+traduction_ar,tun_v1,T23,True,118,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",هل أحتاج إلى مبرر للعطلة المرضية؟,36,94 | 63 | 125,False,0.8223,0.8363
+traduction_ar,tun_v1,T24,True,140,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",هل يحق لهم جميعًا الحصول على عطلة أو كل ح罢؟,99,64 | 141 | 122,True,0.8121,0.8178
+traduction_ar,tun_v1,TH01,False,,Chnowa a7sen restaurant fi Tounes ?,ماذا أفعل في تونس في المطعم؟,99,433 | 96 | 251,True,0.7883,0.8024
+traduction_ar,tun_v1,TH02,False,,Kifech nekhou el permis ?,كيف أحصل على الموافقة؟,99,41 | 40 | 38,True,0.8108,0.8215
+traduction_ar,tun_v1,TH03,False,,9adech soum el kra fi Sousse ?,ما هي سكنات سوسة؟,99,245 | 64 | 347,True,0.7509,0.7805
+traduction_ar,tun_v1,TH04,False,,Chkoun rbe7 el match el bera7 ?,هل لدي الحق في تعويض نهاية contrat؟,99,23 | 371 | 21,False,0.8258,0.8234
+traduction_ar,tun_v1,TH05,False,,Kifech na3mel passeport jdid ?,كيف أحصل على بطاقة تأشيرة جديدة؟,99,421 | 424 | 278,True,0.818,0.8166
+traduction_ar,tun_v1,TH06,False,,Wa9tech yabda Ramdhan ?,متى بدء شهر رمضان؟,99,114 | 123 | 113,True,0.7991,0.7971
+traduction_ar,dev_v2,D13,True,118,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",متى يبدأ العطلة الشهرية، هل يجب أن يكون مطابقًا للعطلة المفتوحة ويتضمن الاجازات؟,4,117 | 94 | 89,False,0.8341,0.8552
+traduction_ar,dev_v2,D28,False,n/a,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",ماذا أفعل إذا تم اختبار مسار العمل، من هو المورد المطلوب؟,99,18 | 60 | 5,True,0.812,0.8166
+traduction_ar,dev_v2,D30,True,22,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",ما هي مدة إخطار الخروج من الخدمة خلال فترة الشهور؟,1,22 | 371 | 83,True,0.8155,0.8129
+traduction_ar,dev_v2,D32,True,79,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,متى يحق للسائق الاستراحة في الأسبوع؟,1,79 | 106 | 97,False,0.8313,0.8317
+traduction_ar,dev_v2,D35,True,122,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",هل أني有权享受3个月的病假，妻子同时也在休假，我该怎么办？,11,20 | 8 | 19,True,0.7913,0.7983
+traduction_ar,dev_v2,D38,True,170,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,هل يحق للمسوؤل طلب假寐 لمدة الساعات في المؤسسة؟,99,93 | 92 | 94,False,0.8253,0.841
+traduction_ar,dev_v2,D42,True,198,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",ماذا أفعل إذا طلب أحد الموظفين من المحامين الماليين؟,22,407 | 6 | 5,True,0.8089,0.8256
+traduction_ar,dev_v2,D52,False,n/a,Kifech n7ell chikaya 3la el bank ?,كيف أودع الأموال في البنك؟,99,279 | 5 | 21,True,0.7977,0.8077
+traduction_ar,dev_v2,D53,False,n/a,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,هل الحق في التقاضي أمام المحكمة مكتوب في القانون؟,99,222 | 229 | 224,True,0.8198,0.8275

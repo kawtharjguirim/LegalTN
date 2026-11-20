@@ -1,0 +1,41 @@
+{
+  "n_questions": 77,
+  "signaux": {
+    "cosinus_brut": {
+      "seuils_demo": {
+        "fr": 0.8602,
+        "ar": 0.8217
+      },
+      "leave_one_out": {
+        "fausses_abstentions": 9,
+        "hors_refusees": 25,
+        "n_hors": 29,
+        "exactitude": 0.766
+      },
+      "variantes": {
+        "n": 56,
+        "decision_identique": 0.875,
+        "fausses_abstentions_variante": 10,
+        "dans_perimetre": 32
+      }
+    },
+    "cosinus_normalise": {
+      "seuils_demo": {
+        "fr": 0.8567,
+        "ar": 0.8188
+      },
+      "leave_one_out": {
+        "fausses_abstentions": 10,
+        "hors_refusees": 25,
+        "n_hors": 29,
+        "exactitude": 0.74
+      },
+      "variantes": {
+        "n": 56,
+        "decision_identique": 1.0,
+        "fausses_abstentions_variante": 3,
+        "dans_perimetre": 32
+      }
+    }
+  }
+}

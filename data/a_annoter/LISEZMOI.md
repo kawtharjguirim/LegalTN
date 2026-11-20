@@ -23,6 +23,28 @@ CSV…**. Sélectionner du texte à la souris puis `1` ROLE, `2` INSTITUTION, `3
 **Enregistrer le CSV** (ou `Ctrl+S`) en choisissant le fichier d'origine dans `data/a_annoter/`.
 Évaluation ensuite : `python -X utf8 -m src.ner_juridique.evaluer_gold --langue fr` (puis `ar`).
 
+## Relire le pré-gold de Claude (lots dev)
+
+Les 120 phrases des lots dev ont été annotées par Claude (statut `verifie_claude`, « C » dans
+la liste de l'outil). Pour en faire un gold humain : ouvrir le lot dans l'outil, vérifier chaque
+phrase, corriger si besoin, puis `Entrée` (la phrase passe en `verifie`, le commentaire devient
+« relu et validé par un humain »). Enregistrer sur le fichier d'origine.
+
+Conventions suivies par Claude — à vérifier, et à changer si vous n'êtes pas d'accord (le dire
+dans le commentaire) :
+- **âge = MONTANT**, sans « moins de / دون » : « dix-huit ans », « الثمانية عشر عاما » ;
+- **un délai est un DELAI quelle que soit son unité** (« في أجل لا يتجاوز ثمان وأربعين ساعة ») ;
+  une durée de travail en heures reste un MONTANT (« 10 heures ») ;
+- **DELAI = expression entière** : « dans un délai n'excédant pas trois jours », « 1 à 15 jours » ;
+- montant en jours ou mois de salaire = MONTANT (« quatre vingt dix jours de salaire ») ;
+- plage horaire de la journée = DELAI (« entre dix heures du soir et cinq heures du matin ») ;
+- **personne qui dirige un organisme = ROLE** (« رئيس تفقدية الشغل », « le Directeur Général de
+  l'Inspection du Travail ») ; l'organisme seul = INSTITUTION ;
+- organisation représentative avec son complément = une seule INSTITUTION ;
+- ministres et secrétaires d'État = INSTITUTION, intitulé complet.
+
+Liste complète des décisions : `annotations_claude_dev_v1.json` (clé `_decisions`).
+
 ## Comment corriger une ligne à la main
 
 1. Lire `entites_lisibles` : `[l'employeur]ROLE doit ...`.

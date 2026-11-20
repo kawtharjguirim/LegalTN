@@ -1,0 +1,31 @@
+id,langue,type,question,article_reference,sujet,statut,commentaire
+T01,tun,dans_perimetre,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",23,rupture abusive,a_valider,rédigée par Claude
+T02,tun,dans_perimetre,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",23,rupture abusive,a_valider,rédigée par Claude
+T03,tun,dans_perimetre,Najem nkasem el congé mta3 5 ayem ?,118,fractionnement du congé,a_valider,rédigée par Claude
+T04,tun,dans_perimetre,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,124,délai de prise du congé,a_valider,rédigée par Claude
+T05,tun,dans_perimetre,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",140,fréquence de paiement,a_valider,rédigée par Claude
+T06,tun,dans_perimetre,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,147,prescription,a_valider,rédigée par Claude
+T07,tun,dans_perimetre,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",147,prescription,a_valider,rédigée par Claude
+T08,tun,dans_perimetre,Chnowa ye5dem el conseil de prud'hommes ?,183,attributions des prud'hommes,a_valider,rédigée par Claude
+T09,tun,dans_perimetre,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,193,protection du conseiller,a_valider,rédigée par Claude
+T10,tun,dans_perimetre,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",268,amende registre,a_valider,rédigée par Claude
+T11,tun,dans_perimetre,Najmou les syndicats ya3mlou union binethom ?,252,unions de syndicats,a_valider,rédigée par Claude
+T12,tun,dans_perimetre,Fi ama 7alat tnajem el mra tekhdem bel lil ?,68,travail de nuit des femmes,a_valider,rédigée par Claude
+T13,tun,dans_perimetre,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",22,indemnité de licenciement,a_valider,rédigée par Claude
+T14,tun,dans_perimetre,Akthar 9adech men se3a najem nekhdem fel jem3a ?,79,durée maximale hebdomadaire,a_valider,rédigée par Claude
+T15,tun,dans_perimetre,Ch7al men se3a khedma fel semaine maximum ?,79,durée maximale hebdomadaire,a_valider,rédigée par Claude
+T16,tun,dans_perimetre,Lazem el patron y7aded wa9t el khedma lel khadema ?,85,horaire de travail,a_valider,rédigée par Claude
+T17,tun,dans_perimetre,"Mrati weldet, 3andi 7a9 fi congé ?",122,congé de naissance,a_valider,rédigée par Claude
+T18,tun,dans_perimetre,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,149,retenue sur salaire,a_valider,rédigée par Claude
+T19,tun,dans_perimetre,3la chnowa ychawrou el commission consultative fel chrika ?,160,commission consultative,a_valider,rédigée par Claude
+T20,tun,dans_perimetre,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,191,désignation des conseillers,a_valider,rédigée par Claude
+T21,tun,dans_perimetre,Les prud'hommes dima y7akmou en premier ressort ?,216,premier ressort,a_valider,rédigée par Claude
+T22,tun,dans_perimetre,El code de procédure civile yetteb9 3al prud'hommes ?,232,procédure applicable,a_valider,rédigée par Claude
+T23,tun,dans_perimetre,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",118,fractionnement du congé,a_valider,rédigée par Claude
+T24,tun,dans_perimetre,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",140,fréquence de paiement,a_valider,rédigée par Claude
+TH01,tun,hors_perimetre,Chnowa a7sen restaurant fi Tounes ?,,hors sujet,a_valider,rédigée par Claude
+TH02,tun,hors_perimetre,Kifech nekhou el permis ?,,hors sujet,a_valider,rédigée par Claude
+TH03,tun,hors_perimetre,9adech soum el kra fi Sousse ?,,hors sujet,a_valider,rédigée par Claude
+TH04,tun,hors_perimetre,Chkoun rbe7 el match el bera7 ?,,hors sujet,a_valider,rédigée par Claude
+TH05,tun,hors_perimetre,Kifech na3mel passeport jdid ?,,hors sujet,a_valider,rédigée par Claude
+TH06,tun,hors_perimetre,Wa9tech yabda Ramdhan ?,,hors sujet,a_valider,rédigée par Claude

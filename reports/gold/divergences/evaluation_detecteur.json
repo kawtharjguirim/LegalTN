@@ -1,0 +1,36 @@
+{
+  "n": 34,
+  "relus_humain": 0,
+  "par_selection": {
+    "similarite_faible": {
+      "n": 12,
+      "verdicts": {
+        "artefact_ocr": 7,
+        "artefact_segmentation": 4,
+        "meme_sens": 1
+      },
+      "part_problemes": 0.917,
+      "part_divergences_reelles": 0.0,
+      "avec_impact_juridique": 1
+    },
+    "nombres_differents": {
+      "n": 12,
+      "verdicts": {
+        "artefact_ocr": 9,
+        "meme_sens": 3
+      },
+      "part_problemes": 0.75,
+      "part_divergences_reelles": 0.0,
+      "avec_impact_juridique": 8
+    },
+    "temoin_aleatoire": {
+      "n": 10,
+      "verdicts": {
+        "meme_sens": 10
+      },
+      "part_problemes": 0.0,
+      "part_divergences_reelles": 0.0,
+      "avec_impact_juridique": 0
+    }
+  }
+}

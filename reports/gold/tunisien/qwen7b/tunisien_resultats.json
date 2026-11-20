@@ -1,0 +1,75 @@
+{
+  "n_questions": 39,
+  "modele_traduction": "qwen2.5:7b",
+  "methodes": {
+    "traduction_fr": {
+      "global": {
+        "n_dans": 30,
+        "n_hors": 9,
+        "r_at_1": 0.267,
+        "r_at_5": 0.5,
+        "mrr": 0.357,
+        "fausse_abstention": 0.3,
+        "repond_et_juste": 0.2,
+        "hors_refuse": 0.778
+      },
+      "par_jeu": {
+        "tun_v1": {
+          "n_dans": 24,
+          "n_hors": 6,
+          "r_at_1": 0.208,
+          "r_at_5": 0.5,
+          "mrr": 0.312,
+          "fausse_abstention": 0.292,
+          "repond_et_juste": 0.167,
+          "hors_refuse": 0.833
+        },
+        "dev_v2": {
+          "n_dans": 6,
+          "n_hors": 3,
+          "r_at_1": 0.5,
+          "r_at_5": 0.5,
+          "mrr": 0.539,
+          "fausse_abstention": 0.333,
+          "repond_et_juste": 0.333,
+          "hors_refuse": 0.667
+        }
+      }
+    },
+    "traduction_ar": {
+      "global": {
+        "n_dans": 30,
+        "n_hors": 9,
+        "r_at_1": 0.1,
+        "r_at_5": 0.4,
+        "mrr": 0.232,
+        "fausse_abstention": 0.4,
+        "repond_et_juste": 0.1,
+        "hors_refuse": 0.778
+      },
+      "par_jeu": {
+        "tun_v1": {
+          "n_dans": 24,
+          "n_hors": 6,
+          "r_at_1": 0.083,
+          "r_at_5": 0.375,
+          "mrr": 0.203,
+          "fausse_abstention": 0.417,
+          "repond_et_juste": 0.083,
+          "hors_refuse": 0.833
+        },
+        "dev_v2": {
+          "n_dans": 6,
+          "n_hors": 3,
+          "r_at_1": 0.167,
+          "r_at_5": 0.5,
+          "mrr": 0.35,
+          "fausse_abstention": 0.333,
+          "repond_et_juste": 0.167,
+          "hors_refuse": 0.667
+        }
+      }
+    }
+  },
+  "avertissement": "questions tun_v1 rédigées par Claude, à valider par une locutrice native ; dev_v2 déjà consulté ; abstention réglée pour FR/AR, pas pour le tunisien"
+}
