@@ -58,6 +58,11 @@ def spans_depuis_tokens(offsets, labels: list[str], phrase: str) -> list[tuple[i
     for (d, f), lab in zip(offsets, labels):
         if d == f:
             continue
+        # Offsets chevauchants (ex. XLM-R : « ▁ » puis « vingt » sur la même position) :
+        # un token qui recouvre l'entité en cours la prolonge, même étiqueté B.
+        if cur is not None and lab != "O" and lab[2:] == cur[2] and d < cur[1]:
+            cur[1] = max(cur[1], f)
+            continue
         if lab.startswith("B-") or (lab.startswith("I-") and (cur is None or cur[2] != lab[2:])):
             if cur:
                 spans.append(cur)
@@ -94,8 +99,8 @@ def representables(tok, phrases) -> float:
 
 
 # ------------------------------------------------------------------ encodeurs
-def entrainer_encodeur(nom_hf: str, train, val, graine: int, epoques: int = 6,
-                       lr: float = 3e-5, lot: int = 16, max_len: int = 192):
+def entrainer_encodeur(nom_hf: str, train, val, graine: int, epoques: int = 12,
+                       lr: float = 5e-5, lot: int = 8, max_len: int = 192):
     import torch
     from torch.utils.data import DataLoader
     from transformers import (AutoModelForTokenClassification, AutoTokenizer,
@@ -121,13 +126,18 @@ def entrainer_encodeur(nom_hf: str, train, val, graine: int, epoques: int = 6,
     gen = torch.Generator().manual_seed(graine)
     chargeur = DataLoader(encoder(train), batch_size=lot, shuffle=True, collate_fn=collate,
                           generator=gen)
-    optim = torch.optim.AdamW(modele.parameters(), lr=lr, weight_decay=0.01)
+    # Embeddings de mots gelés pour tous les encodeurs : avec 4 Go de VRAM, ceux de XLM-R
+    # (250k x 768 = 192 M paramètres) et leurs états AdamW débordent en mémoire partagée
+    # (entraînement ~10x plus lent). Les couches Transformer restent entraînées.
+    modele.get_input_embeddings().weight.requires_grad_(False)
+    entrainables = [p for p in modele.parameters() if p.requires_grad]
+    optim = torch.optim.AdamW(entrainables, lr=lr, weight_decay=0.01)
     pas = epoques * len(chargeur)
     sched = get_linear_schedule_with_warmup(optim, int(0.1 * pas), pas)
     scaler = torch.amp.GradScaler(enabled=appareil == "cuda")
 
     meilleur, etat = -1.0, None
-    for _ in range(epoques):
+    for epoque in range(epoques):
         modele.train()
         for b in chargeur:
             b = {k: v.to(appareil) for k, v in b.items()}
@@ -136,12 +146,13 @@ def entrainer_encodeur(nom_hf: str, train, val, graine: int, epoques: int = 6,
             optim.zero_grad()
             scaler.scale(perte).backward()
             scaler.unscale_(optim)
-            torch.nn.utils.clip_grad_norm_(modele.parameters(), 1.0)
+            torch.nn.utils.clip_grad_norm_(entrainables, 1.0)
             scaler.step(optim)
             scaler.update()
             sched.step()
         f1 = f1_spans([l["entites"] for l in val],
                       predire_encodeur(modele, tok, val, max_len))["micro"]["f1"]
+        print(f"    époque {epoque + 1}/{epoques}  perte {perte.item():.4f}  F1 val {f1:.3f}", flush=True)
         if f1 > meilleur:
             meilleur = f1
             etat = {k: v.detach().cpu().clone() for k, v in modele.state_dict().items()}
@@ -214,9 +225,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--langue", choices=["fr", "ar"], required=True)
     parser.add_argument("--modeles", nargs="+", default=["regles", "crf", "xlmr"])
-    parser.add_argument("--epoques", type=int, default=6)
+    parser.add_argument("--epoques", type=int, default=12)
     parser.add_argument("--test", action="store_true", help="Évaluer le lot test gelé (une fois).")
     parser.add_argument("--sortie", type=Path, default=RACINE / "reports/silver/ner")
+    parser.add_argument("--graines", type=int, nargs="+", default=list(GRAINES))
+    parser.add_argument("--sauver", type=Path, default=None,
+                        help="Sauvegarde le modèle de la première graine de chaque encodeur dans "
+                             "<dossier>/<langue>_<modèle> (pour la démo) ; le rapport JSON "
+                             "n'est alors pas réécrit.")
     args = parser.parse_args()
 
     silver = charger_silver(args.langue)
@@ -228,7 +244,7 @@ def main() -> None:
                  "fichier_gold": chemin_gold.name, "systemes": {}}
     for nom in args.modeles:
         par_graine = []
-        graines = (0,) if nom == "regles" else GRAINES
+        graines = (0,) if nom == "regles" else args.graines
         for graine in graines:
             train, val = separer_validation(silver, graine=graine)
             debut = time.perf_counter()
@@ -245,6 +261,11 @@ def main() -> None:
                 pred_val = predire_encodeur(modele, tok, val)
                 pred_gold = predire_encodeur(modele, tok, gold)
                 extra = {"spans_gold_representables": representables(tok, gold or val)}
+                if args.sauver and graine == args.graines[0]:
+                    dossier = args.sauver / f"{args.langue}_{nom}"
+                    modele.save_pretrained(dossier)
+                    tok.save_pretrained(dossier)
+                    print(f"  modèle sauvegardé -> {dossier}")
                 del modele
             mesure = {"graine": graine, "duree_s": round(time.perf_counter() - debut, 1),
                       "accord_regles_val_silver": f1_spans([l["entites"] for l in val], pred_val),
@@ -262,6 +283,8 @@ def main() -> None:
             "f1_macro": resumer([m[cle]["macro_f1"] for m in par_graine]),
             "mesure_sur": cle,
         }
+    if args.sauver:
+        return  # entraînement pour la démo : ne pas écraser le rapport des 3 graines
     args.sortie.mkdir(parents=True, exist_ok=True)
     fichier = args.sortie / f"ner_{args.langue}_{eval_nom}.json"
     with open(fichier, "w", encoding="utf-8") as f:

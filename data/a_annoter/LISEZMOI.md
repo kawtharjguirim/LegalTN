@@ -14,7 +14,16 @@ et des oublis : elles ne deviennent un gold qu'après ta relecture.
 Un article n'apparaît que dans un seul lot ; l'entraînement d'une langue exclut
 les articles évalués dans cette langue (`data/silver/ner_silver_resume.json`).
 
-## Comment corriger une ligne
+## Avec l'outil d'annotation (recommandé)
+
+Ouvrir `outils/annotateur_ner.html` dans Chrome ou Edge (double-clic), puis **Ouvrir un lot
+CSV…**. Sélectionner du texte à la souris puis `1` ROLE, `2` INSTITUTION, `3` DELAI,
+`4` MONTANT ; cliquer une entité pour changer son type ou la supprimer (`Suppr`) ;
+`Entrée` = phrase vérifiée, suivante. Le travail est gardé dans le navigateur ;
+**Enregistrer le CSV** (ou `Ctrl+S`) en choisissant le fichier d'origine dans `data/a_annoter/`.
+Évaluation ensuite : `python -X utf8 -m src.ner_juridique.evaluer_gold --langue fr` (puis `ar`).
+
+## Comment corriger une ligne à la main
 
 1. Lire `entites_lisibles` : `[l'employeur]ROLE doit ...`.
 2. Corriger la colonne **`entites`** (c'est la seule qui compte) au format
@@ -46,3 +55,10 @@ Règles propres à l'arabe :
   (« الوزير المكلف بالشؤون الاجتماعية »).
 
 Ne pas annoter les renvois d'articles ni les références de lois.
+
+Cas tranchés pendant la démonstration de l'outil (lot FR, N001–N004) :
+- une fourchette est une seule entité : « 1 à 15 jours » (DELAI), « 120 à 300 dinars » (MONTANT) ;
+- « fixer un délai » sans durée précisée n'est pas un DELAI ;
+- une personne désignée par l'entreprise est un ROLE même hors des listes des règles
+  (« un responsable de sécurité au travail ») ;
+- « des deux parties » est un ROLE (les règles le ratent à cause de « deux »).

@@ -10,3 +10,7 @@ seqeval
 sklearn-crfsuite
 scipy
 ollama
+# Capsule vidéo (src/rapports/generer_capsule_silver.py) ; Playwright pilote le Chrome installé.
+pillow
+imageio-ffmpeg
+playwright

@@ -1,0 +1,150 @@
+{
+  "langue": "fr",
+  "fichier_gold": "ner_dev_fr_v1.csv",
+  "nature_reference": "pré-gold Claude",
+  "n_phrases_relues_humain": 0,
+  "n_phrases": 60,
+  "n_entites": 86,
+  "systemes": {
+    "regles": {
+      "micro": {
+        "precision": 0.5357142857142857,
+        "rappel": 0.3488372093023256,
+        "f1": 0.4225352112676056,
+        "n_gold": 86,
+        "n_pred": 56
+      },
+      "par_type": {
+        "ROLE": {
+          "precision": 0.7741935483870968,
+          "rappel": 0.5,
+          "f1": 0.6075949367088608,
+          "n_gold": 48,
+          "n_pred": 31
+        },
+        "INSTITUTION": {
+          "precision": 0.5,
+          "rappel": 0.23809523809523808,
+          "f1": 0.3225806451612903,
+          "n_gold": 21,
+          "n_pred": 10
+        },
+        "DELAI": {
+          "precision": 0.0,
+          "rappel": 0.0,
+          "f1": 0.0,
+          "n_gold": 8,
+          "n_pred": 10
+        },
+        "MONTANT": {
+          "precision": 0.2,
+          "rappel": 0.1111111111111111,
+          "f1": 0.14285714285714285,
+          "n_gold": 9,
+          "n_pred": 5
+        }
+      },
+      "macro_f1": 0.2682581811818235,
+      "souple": {
+        "precision": 0.7857142857142857,
+        "rappel": 0.5116279069767442,
+        "f1": 0.619718309859155
+      }
+    },
+    "crf": {
+      "micro": {
+        "precision": 0.5384615384615384,
+        "rappel": 0.32558139534883723,
+        "f1": 0.4057971014492754,
+        "n_gold": 86,
+        "n_pred": 52
+      },
+      "par_type": {
+        "ROLE": {
+          "precision": 0.75,
+          "rappel": 0.4375,
+          "f1": 0.5526315789473685,
+          "n_gold": 48,
+          "n_pred": 28
+        },
+        "INSTITUTION": {
+          "precision": 0.6666666666666666,
+          "rappel": 0.2857142857142857,
+          "f1": 0.4,
+          "n_gold": 21,
+          "n_pred": 9
+        },
+        "DELAI": {
+          "precision": 0.0,
+          "rappel": 0.0,
+          "f1": 0.0,
+          "n_gold": 8,
+          "n_pred": 10
+        },
+        "MONTANT": {
+          "precision": 0.2,
+          "rappel": 0.1111111111111111,
+          "f1": 0.14285714285714285,
+          "n_gold": 9,
+          "n_pred": 5
+        }
+      },
+      "macro_f1": 0.2738721804511278,
+      "souple": {
+        "precision": 0.7692307692307693,
+        "rappel": 0.46511627906976744,
+        "f1": 0.5797101449275363
+      }
+    },
+    "fr_xlmr": {
+      "micro": {
+        "precision": 0.5833333333333334,
+        "rappel": 0.4069767441860465,
+        "f1": 0.4794520547945206,
+        "n_gold": 86,
+        "n_pred": 60
+      },
+      "par_type": {
+        "ROLE": {
+          "precision": 0.7878787878787878,
+          "rappel": 0.5416666666666666,
+          "f1": 0.6419753086419753,
+          "n_gold": 48,
+          "n_pred": 33
+        },
+        "INSTITUTION": {
+          "precision": 0.7272727272727273,
+          "rappel": 0.38095238095238093,
+          "f1": 0.5,
+          "n_gold": 21,
+          "n_pred": 11
+        },
+        "DELAI": {
+          "precision": 0.0,
+          "rappel": 0.0,
+          "f1": 0.0,
+          "n_gold": 8,
+          "n_pred": 11
+        },
+        "MONTANT": {
+          "precision": 0.2,
+          "rappel": 0.1111111111111111,
+          "f1": 0.14285714285714285,
+          "n_gold": 9,
+          "n_pred": 5
+        }
+      },
+      "macro_f1": 0.3212081128747795,
+      "souple": {
+        "precision": 0.7833333333333333,
+        "rappel": 0.5465116279069767,
+        "f1": 0.6438356164383561
+      }
+    }
+  },
+  "crf_3_graines_f1_micro": [
+    0.4058,
+    0.3942,
+    0.3942
+  ]
+}

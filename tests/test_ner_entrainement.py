@@ -28,6 +28,14 @@ def test_i_orphelin_ouvre_une_entite():
     assert spans_depuis_tokens([(0, 3), (4, 8)], ["I-ROLE", "I-ROLE"], "abc defg") == [(0, 8, "ROLE")]
 
 
+def test_offsets_chevauchants_fusionnes():
+    # « vingt heures » : XLM-R produit « ▁ » (5, 6) puis « vingt » (5, 10), tous deux en B.
+    p = "pour vingt heures"
+    offsets = [(0, 4), (5, 6), (5, 10), (11, 17)]
+    labels = ["O", "B-MONTANT", "B-MONTANT", "I-MONTANT"]
+    assert spans_depuis_tokens(offsets, labels, p) == [(5, 17, "MONTANT")]
+
+
 def test_mots_offsets():
     assert [(w, d, f) for w, d, f in mots("Il paie.")] == [("Il", 0, 2), ("paie", 3, 7), (".", 7, 8)]
 

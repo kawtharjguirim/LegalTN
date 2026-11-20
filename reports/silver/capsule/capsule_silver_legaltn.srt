@@ -1,0 +1,100 @@
+﻿1
+00:00:00,000 --> 00:00:04,950
+LegalTN répond aux questions sur le Code du travail
+tunisien, en français et en arabe.
+
+2
+00:00:05,000 --> 00:00:10,950
+Au Bronze, la recherche était lexicale. Le Silver ajoute
+encodeurs, RAG, LLM et NER fine-tuné.
+
+3
+00:00:11,000 --> 00:00:15,450
+L'application tourne en local : 496 articles français et 491
+articles arabes indexés.
+
+4
+00:00:15,500 --> 00:00:21,450
+Question en français. Le LLM rédige une réponse et cite
+l'article 183, le bon article.
+
+5
+00:00:21,500 --> 00:00:26,450
+Le moteur BM25 du Bronze citait l'article 182 : la recherche
+hybride corrige l'erreur.
+
+6
+00:00:26,500 --> 00:00:32,450
+Toutes les étapes sont visibles : langue, BM25, recherche
+dense e5, fusion RRF, citation.
+
+7
+00:00:32,500 --> 00:00:37,450
+Le serveur vérifie que l'article cité par le LLM fait partie
+des extraits retrouvés.
+
+8
+00:00:37,500 --> 00:00:42,450
+La citation est bilingue : le même article est affiché dans
+sa version arabe.
+
+9
+00:00:42,500 --> 00:00:48,450
+En arabe, la réponse est rédigée en arabe et cite l'article
+68. Le BM25 citait l'article 29.
+
+10
+00:00:48,500 --> 00:00:53,450
+Sur le dev, la recherche hybride gagne 10 points de rappel
+en arabe (0,62 contre 0,52).
+
+11
+00:00:53,500 --> 00:00:58,950
+Hors du Code du travail, le système s'abstient plutôt que
+d'inventer un article.
+
+12
+00:00:59,000 --> 00:01:04,950
+Limite assumée : « CDI » n'apparaît pas dans le Code, d'où
+une abstention à tort.
+
+13
+00:01:05,000 --> 00:01:10,450
+NER fine-tuné : XLM-R en français, AraBERT en arabe,
+comparés aux règles.
+
+14
+00:01:10,500 --> 00:01:16,950
+Le modèle reconnaît « les stagiaires » et, en arabe, « le
+directeur de la société » comme rôles : les règles les
+ratent.
+
+15
+00:01:17,000 --> 00:01:22,950
+Alignement : 97,5 % sans le numéro d'article, 100 % en
+combinant embeddings et numéro.
+
+16
+00:01:23,000 --> 00:01:29,450
+Un seuil d'abstention unique rejette les questions arabes
+valides : il faut un seuil par langue.
+
+17
+00:01:29,500 --> 00:01:35,950
+La citation forcée supprime les citations inventées, mais
+augmente les refus injustifiés.
+
+18
+00:01:36,000 --> 00:01:42,450
+En français, XLM-R dépasse les règles qui l'ont entraîné ;
+en arabe, pas encore.
+
+19
+00:01:42,500 --> 00:01:48,450
+L'accord avec les règles surestimait la qualité : il fallait
+une référence corrigée.
+
+20
+00:01:48,500 --> 00:01:55,450
+Prochaines étapes : fidélité des réponses, questions en
+tunisien et relecture humaine du NER.

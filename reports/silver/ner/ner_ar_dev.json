@@ -1,0 +1,542 @@
+{
+  "langue": "ar",
+  "evaluation": "dev",
+  "n_gold": 0,
+  "fichier_gold": "ner_dev_ar_v1.csv",
+  "systemes": {
+    "regles": {
+      "graines": [
+        {
+          "graine": 0,
+          "duree_s": 0.0,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 1.0,
+              "rappel": 1.0,
+              "f1": 1.0,
+              "n_gold": 68,
+              "n_pred": 68
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 45,
+                "n_pred": 45
+              },
+              "INSTITUTION": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 13,
+                "n_pred": 13
+              },
+              "DELAI": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 9,
+                "n_pred": 9
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 1.0
+          }
+        }
+      ],
+      "f1_micro": {
+        "moyenne": 1.0,
+        "ecart_type": 0.0,
+        "valeurs": [
+          1.0
+        ]
+      },
+      "f1_macro": {
+        "moyenne": 1.0,
+        "ecart_type": 0.0,
+        "valeurs": [
+          1.0
+        ]
+      },
+      "mesure_sur": "accord_regles_val_silver"
+    },
+    "crf": {
+      "graines": [
+        {
+          "graine": 13,
+          "duree_s": 4.2,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.9285714285714286,
+              "rappel": 0.5977011494252874,
+              "f1": 0.7272727272727274,
+              "n_gold": 87,
+              "n_pred": 56
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.972972972972973,
+                "rappel": 0.5806451612903226,
+                "f1": 0.7272727272727273,
+                "n_gold": 62,
+                "n_pred": 37
+              },
+              "INSTITUTION": {
+                "precision": 0.9230769230769231,
+                "rappel": 0.6666666666666666,
+                "f1": 0.7741935483870968,
+                "n_gold": 18,
+                "n_pred": 13
+              },
+              "DELAI": {
+                "precision": 0.6666666666666666,
+                "rappel": 0.6666666666666666,
+                "f1": 0.6666666666666666,
+                "n_gold": 6,
+                "n_pred": 6
+              },
+              "MONTANT": {
+                "precision": 0.0,
+                "rappel": 0.0,
+                "f1": 0.0,
+                "n_gold": 1,
+                "n_pred": 0
+              }
+            },
+            "macro_f1": 0.5420332355816226
+          }
+        },
+        {
+          "graine": 42,
+          "duree_s": 2.6,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.9,
+              "rappel": 0.6835443037974683,
+              "f1": 0.776978417266187,
+              "n_gold": 79,
+              "n_pred": 60
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.9655172413793104,
+                "rappel": 0.6511627906976745,
+                "f1": 0.7777777777777779,
+                "n_gold": 43,
+                "n_pred": 29
+              },
+              "INSTITUTION": {
+                "precision": 0.8125,
+                "rappel": 0.7647058823529411,
+                "f1": 0.787878787878788,
+                "n_gold": 17,
+                "n_pred": 16
+              },
+              "DELAI": {
+                "precision": 0.8571428571428571,
+                "rappel": 0.6666666666666666,
+                "f1": 0.75,
+                "n_gold": 18,
+                "n_pred": 14
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.8289141414141414
+          }
+        },
+        {
+          "graine": 2026,
+          "duree_s": 2.4,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.8653846153846154,
+              "rappel": 0.5625,
+              "f1": 0.6818181818181818,
+              "n_gold": 80,
+              "n_pred": 52
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.92,
+                "rappel": 0.5476190476190477,
+                "f1": 0.6865671641791046,
+                "n_gold": 42,
+                "n_pred": 25
+              },
+              "INSTITUTION": {
+                "precision": 0.9444444444444444,
+                "rappel": 0.85,
+                "f1": 0.8947368421052632,
+                "n_gold": 20,
+                "n_pred": 18
+              },
+              "DELAI": {
+                "precision": 0.5,
+                "rappel": 0.23529411764705882,
+                "f1": 0.31999999999999995,
+                "n_gold": 17,
+                "n_pred": 8
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.725326001571092
+          }
+        }
+      ],
+      "f1_micro": {
+        "moyenne": 0.7286897754523654,
+        "ecart_type": 0.04759594123228901,
+        "valeurs": [
+          0.7272727272727274,
+          0.776978417266187,
+          0.6818181818181818
+        ]
+      },
+      "f1_macro": {
+        "moyenne": 0.6987577928556187,
+        "ecart_type": 0.14527410580892708,
+        "valeurs": [
+          0.5420332355816226,
+          0.8289141414141414,
+          0.725326001571092
+        ]
+      },
+      "mesure_sur": "accord_regles_val_silver"
+    },
+    "arabert": {
+      "graines": [
+        {
+          "graine": 13,
+          "duree_s": 467.9,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.7662337662337663,
+              "rappel": 0.6781609195402298,
+              "f1": 0.7195121951219511,
+              "n_gold": 87,
+              "n_pred": 77
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.8541666666666666,
+                "rappel": 0.6612903225806451,
+                "f1": 0.7454545454545455,
+                "n_gold": 62,
+                "n_pred": 48
+              },
+              "INSTITUTION": {
+                "precision": 0.5789473684210527,
+                "rappel": 0.6111111111111112,
+                "f1": 0.5945945945945946,
+                "n_gold": 18,
+                "n_pred": 19
+              },
+              "DELAI": {
+                "precision": 0.6666666666666666,
+                "rappel": 1.0,
+                "f1": 0.8,
+                "n_gold": 6,
+                "n_pred": 9
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.785012285012285
+          },
+          "spans_gold_representables": 1.0
+        },
+        {
+          "graine": 42,
+          "duree_s": 299.9,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.8333333333333334,
+              "rappel": 0.759493670886076,
+              "f1": 0.7947019867549668,
+              "n_gold": 79,
+              "n_pred": 72
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.9117647058823529,
+                "rappel": 0.7209302325581395,
+                "f1": 0.8051948051948051,
+                "n_gold": 43,
+                "n_pred": 34
+              },
+              "INSTITUTION": {
+                "precision": 0.7777777777777778,
+                "rappel": 0.8235294117647058,
+                "f1": 0.7999999999999999,
+                "n_gold": 17,
+                "n_pred": 18
+              },
+              "DELAI": {
+                "precision": 0.7368421052631579,
+                "rappel": 0.7777777777777778,
+                "f1": 0.7567567567567567,
+                "n_gold": 18,
+                "n_pred": 19
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.8404878904878904
+          },
+          "spans_gold_representables": 1.0
+        },
+        {
+          "graine": 2026,
+          "duree_s": 270.8,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.8169014084507042,
+              "rappel": 0.725,
+              "f1": 0.7682119205298014,
+              "n_gold": 80,
+              "n_pred": 71
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.75,
+                "rappel": 0.5714285714285714,
+                "f1": 0.6486486486486486,
+                "n_gold": 42,
+                "n_pred": 32
+              },
+              "INSTITUTION": {
+                "precision": 0.9444444444444444,
+                "rappel": 0.85,
+                "f1": 0.8947368421052632,
+                "n_gold": 20,
+                "n_pred": 18
+              },
+              "DELAI": {
+                "precision": 0.8421052631578947,
+                "rappel": 0.9411764705882353,
+                "f1": 0.8888888888888888,
+                "n_gold": 17,
+                "n_pred": 19
+              },
+              "MONTANT": {
+                "precision": 0.5,
+                "rappel": 1.0,
+                "f1": 0.6666666666666666,
+                "n_gold": 1,
+                "n_pred": 2
+              }
+            },
+            "macro_f1": 0.7747352615773668
+          },
+          "spans_gold_representables": 1.0
+        }
+      ],
+      "f1_micro": {
+        "moyenne": 0.7608087008022397,
+        "ecart_type": 0.03813767085448454,
+        "valeurs": [
+          0.7195121951219511,
+          0.7947019867549668,
+          0.7682119205298014
+        ]
+      },
+      "f1_macro": {
+        "moyenne": 0.8000784790258474,
+        "ecart_type": 0.035370817119512274,
+        "valeurs": [
+          0.785012285012285,
+          0.8404878904878904,
+          0.7747352615773668
+        ]
+      },
+      "mesure_sur": "accord_regles_val_silver"
+    },
+    "xlmr": {
+      "graines": [
+        {
+          "graine": 13,
+          "duree_s": 217.9,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.6421052631578947,
+              "rappel": 0.7011494252873564,
+              "f1": 0.6703296703296704,
+              "n_gold": 87,
+              "n_pred": 95
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.65625,
+                "rappel": 0.6774193548387096,
+                "f1": 0.6666666666666667,
+                "n_gold": 62,
+                "n_pred": 64
+              },
+              "INSTITUTION": {
+                "precision": 0.5714285714285714,
+                "rappel": 0.6666666666666666,
+                "f1": 0.6153846153846153,
+                "n_gold": 18,
+                "n_pred": 21
+              },
+              "DELAI": {
+                "precision": 0.6666666666666666,
+                "rappel": 1.0,
+                "f1": 0.8,
+                "n_gold": 6,
+                "n_pred": 9
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.7705128205128206
+          },
+          "spans_gold_representables": 1.0
+        },
+        {
+          "graine": 42,
+          "duree_s": 222.3,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.6888888888888889,
+              "rappel": 0.7848101265822784,
+              "f1": 0.7337278106508875,
+              "n_gold": 79,
+              "n_pred": 90
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.7272727272727273,
+                "rappel": 0.7441860465116279,
+                "f1": 0.735632183908046,
+                "n_gold": 43,
+                "n_pred": 44
+              },
+              "INSTITUTION": {
+                "precision": 0.56,
+                "rappel": 0.8235294117647058,
+                "f1": 0.6666666666666666,
+                "n_gold": 17,
+                "n_pred": 25
+              },
+              "DELAI": {
+                "precision": 0.75,
+                "rappel": 0.8333333333333334,
+                "f1": 0.7894736842105262,
+                "n_gold": 18,
+                "n_pred": 20
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.7979431336963096
+          },
+          "spans_gold_representables": 1.0
+        },
+        {
+          "graine": 2026,
+          "duree_s": 275.0,
+          "accord_regles_val_silver": {
+            "micro": {
+              "precision": 0.5825242718446602,
+              "rappel": 0.75,
+              "f1": 0.6557377049180327,
+              "n_gold": 80,
+              "n_pred": 103
+            },
+            "par_type": {
+              "ROLE": {
+                "precision": 0.5555555555555556,
+                "rappel": 0.5952380952380952,
+                "f1": 0.574712643678161,
+                "n_gold": 42,
+                "n_pred": 45
+              },
+              "INSTITUTION": {
+                "precision": 0.4864864864864865,
+                "rappel": 0.9,
+                "f1": 0.631578947368421,
+                "n_gold": 20,
+                "n_pred": 37
+              },
+              "DELAI": {
+                "precision": 0.8,
+                "rappel": 0.9411764705882353,
+                "f1": 0.8648648648648648,
+                "n_gold": 17,
+                "n_pred": 20
+              },
+              "MONTANT": {
+                "precision": 1.0,
+                "rappel": 1.0,
+                "f1": 1.0,
+                "n_gold": 1,
+                "n_pred": 1
+              }
+            },
+            "macro_f1": 0.7677891139778616
+          },
+          "spans_gold_representables": 0.975
+        }
+      ],
+      "f1_micro": {
+        "moyenne": 0.6865983952995303,
+        "ecart_type": 0.041462244357537786,
+        "valeurs": [
+          0.6703296703296704,
+          0.7337278106508875,
+          0.6557377049180327
+        ]
+      },
+      "f1_macro": {
+        "moyenne": 0.7787483560623306,
+        "ecart_type": 0.0166788566944971,
+        "valeurs": [
+          0.7705128205128206,
+          0.7979431336963096,
+          0.7677891139778616
+        ]
+      },
+      "mesure_sur": "accord_regles_val_silver"
+    }
+  }
+}

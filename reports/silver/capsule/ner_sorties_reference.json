@@ -1,0 +1,11 @@
+{
+  "_source": "Sorties réelles de src.ner_juridique.predire, modèles models/ner/fr_xlmr et models/ner/ar_arabert (graine 13), exécution du 16/11/2026 (DEMO_SILVER.md). Utilisées par la capsule si l'exécution en direct échoue.",
+  "Les stagiaires ne peuvent être employés plus de six heures par jour.": [
+    "Règles        : Les stagiaires ne peuvent être employés plus de [six heures par jour]MONTANT.",
+    "fr_xlmr       : [Les stagiaires]ROLE ne peuvent être employés plus de [six heures par jour]MONTANT.  (567 ms)"
+  ],
+  "يجب على مدير الشركة التصريح بكل متربص لدى الصندوق في أجل ثمانية أيام.": [
+    "Règles        : يجب على مدير الشركة التصريح بكل متربص لدى الصندوق [في أجل ثمانية أيام]DELAI.",
+    "ar_arabert    : يجب على [مدير الشركة]ROLE التصريح بكل متربص لدى الصندوق [في أجل ثمانية أيام]DELAI.  (1358 ms)"
+  ]
+}

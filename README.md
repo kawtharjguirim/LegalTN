@@ -13,6 +13,9 @@ Environnement : le disque C étant presque plein, Python, caches et modèles son
 & $Py -m pip install -r requirements-silver.txt
 ```
 
+**Démonstration de validation : scénario complet dans [`DEMO_SILVER.md`](DEMO_SILVER.md), lancement
+vérifié en une commande : `.\demo_silver.ps1`.**
+
 Démo Silver (recherche hybride BM25 + e5, abstention par langue, citation bilingue,
 étapes visibles) : `.\demarrer.ps1 -Port 18765 -Moteur hybride` puis http://127.0.0.1:18765/.
 `-Moteur bm25` (défaut) garde la démo Bronze en bibliothèque standard seule.

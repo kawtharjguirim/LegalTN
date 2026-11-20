@@ -7,3 +7,6 @@ runs/
 *.safetensors
 *.bin
 .env
+reports/silver/capsule/brut/
+reports/silver/capsule/images/
+reports/silver/capsule/plans.txt

@@ -35,8 +35,12 @@ def separer_validation(lignes: list[dict], part: float = 0.1, graine: int = 0):
     return [l for l in lignes if l["article"] not in val], [l for l in lignes if l["article"] in val]
 
 
-def charger_lot(nom: str, langue: str, verifies_seulement: bool = True) -> tuple[list[dict], Path]:
-    """Premier fichier existant parmi les emplacements prévus (gelé, puis à annoter)."""
+def charger_lot(nom: str, langue: str, verifies_seulement: bool = True,
+                statuts: tuple[str, ...] = ("verifie",)) -> tuple[list[dict], Path]:
+    """Premier fichier existant parmi les emplacements prévus (gelé, puis à annoter).
+
+    ``statuts`` : statuts acceptés comme référence (``verifie`` = relu par un humain ;
+    ``verifie_claude`` = annoté par Claude, à n'accepter qu'explicitement)."""
     for chemin in LOTS[(nom, langue)]:
         if chemin.exists():
             break
@@ -45,9 +49,28 @@ def charger_lot(nom: str, langue: str, verifies_seulement: bool = True) -> tuple
     with open(chemin, encoding="utf-8-sig", newline="") as f:
         lignes = list(csv.DictReader(f))
     if verifies_seulement:
-        lignes = [l for l in lignes if l.get("statut", "").strip() == "verifie"]
-    return [{"id": l["item_id"], "phrase": l["phrase"], "entites": depuis_texte(l["entites"])}
-            for l in lignes], chemin
+        lignes = [l for l in lignes if l.get("statut", "").strip() in statuts]
+    return [{"id": l["item_id"], "phrase": l["phrase"], "entites": depuis_texte(l["entites"]),
+             "statut": l.get("statut", "").strip()} for l in lignes], chemin
+
+
+def f1_chevauchement(gold: list[list], pred: list[list]) -> dict:
+    """F1 « souple » : une entité est juste si elle chevauche une entité de même type
+    (chaque entité appariée une seule fois). Mesure secondaire, à côté du F1 strict."""
+    vp_p = vp_g = n_p = n_g = 0
+    for g, p in zip(gold, pred):
+        g, p = list(map(tuple, g)), list(map(tuple, p))
+        n_g, n_p = n_g + len(g), n_p + len(p)
+        libres = list(g)
+        for e in p:
+            m = next((x for x in libres if x[2] == e[2] and x[0] < e[1] and e[0] < x[1]), None)
+            if m:
+                libres.remove(m)
+                vp_p += 1
+        vp_g = vp_p
+    pr = vp_p / n_p if n_p else 0.0
+    rp = vp_g / n_g if n_g else 0.0
+    return {"precision": pr, "rappel": rp, "f1": 2 * pr * rp / (pr + rp) if pr + rp else 0.0}
 
 
 def f1_spans(gold: list[list], pred: list[list]) -> dict:

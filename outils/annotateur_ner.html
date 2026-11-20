@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annotateur NER LegalTN</title>
+<style>
+:root{--marine:#17324D;--ivoire:#F5F3EE;--papier:#FBFBF8;--bord:#E4E1D8;--texte:#344054;--texte2:#667085;
+ --role:#2F6FB3;--inst:#7A4BB8;--delai:#B5671B;--montant:#2E7D5B;--ok:#2E7D5B;--warn:#B08A1E}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--ivoire);color:var(--texte)}
+header{background:var(--marine);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0 12px 0 0}
+button,.fichier{font:inherit;font-size:14px;border-radius:8px;border:1px solid var(--bord);background:var(--papier);
+ color:var(--marine);padding:7px 14px;cursor:pointer}
+button:hover,.fichier:hover{border-color:var(--marine)}
+button.primaire{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
+button:disabled{opacity:.45;cursor:default}
+.fichier input{display:none}
+#progression{margin-left:auto;font-size:14px}
+.barre{display:inline-block;width:160px;height:8px;background:#355B80;border-radius:9px;overflow:hidden;vertical-align:middle;margin-left:8px}
+.barre i{display:block;height:100%;background:#8FD3A9}
+main{display:grid;grid-template-columns:240px 1fr 300px;gap:16px;padding:16px;max-width:1500px;margin:auto}
+@media (max-width:1100px){main{grid-template-columns:1fr}}
+.panneau{background:var(--papier);border:1px solid var(--bord);border-radius:12px;padding:14px}
+#liste{max-height:calc(100vh - 120px);overflow:auto;padding:6px}
+#liste div{padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between}
+#liste div:hover{background:var(--ivoire)} #liste div.actif{background:#E2EAF3;font-weight:600}
+#liste .v{color:var(--ok)} #liste .a{color:var(--texte2)}
+#meta{font-size:13px;color:var(--texte2);margin-bottom:10px;display:flex;gap:14px;flex-wrap:wrap}
+#statut{font-weight:700} #statut.verifie{color:var(--ok)} #statut.a_verifier{color:var(--warn)}
+#statut.verifie_claude{color:#7A4BB8}
+#phrase{font-size:22px;line-height:2.1;padding:18px 20px;background:#fff;border:1px solid var(--bord);border-radius:10px;
+ user-select:text;min-height:120px}
+#phrase[dir=rtl]{font-size:26px;font-family:"Segoe UI",Tahoma,sans-serif}
+mark{border-radius:4px;padding:2px 1px;cursor:pointer;color:inherit;background:transparent;border-bottom:3px solid}
+mark sub{font-size:11px;font-weight:700;color:#fff;border-radius:3px;padding:0 4px;margin:0 2px;vertical-align:1px;
+ user-select:none;font-family:"Segoe UI",sans-serif}
+mark.ROLE{background:#2F6FB31F;border-color:var(--role)} mark.ROLE sub{background:var(--role)}
+mark.INSTITUTION{background:#7A4BB81F;border-color:var(--inst)} mark.INSTITUTION sub{background:var(--inst)}
+mark.DELAI{background:#B5671B1F;border-color:var(--delai)} mark.DELAI sub{background:var(--delai)}
+mark.MONTANT{background:#2E7D5B1F;border-color:var(--montant)} mark.MONTANT sub{background:var(--montant)}
+mark.choisie{outline:2px solid var(--marine);outline-offset:2px}
+.types{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.types button{font-weight:600}
+.types .ROLE{color:var(--role)} .types .INSTITUTION{color:var(--inst)} .types .DELAI{color:var(--delai)} .types .MONTANT{color:var(--montant)}
+kbd{font-family:Consolas,monospace;font-size:12px;background:var(--ivoire);border:1px solid var(--bord);border-radius:4px;padding:0 5px}
+textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--bord);border-radius:8px;padding:8px;min-height:54px}
+.actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+#entites{font-size:14px;margin-top:12px} #entites li{margin:3px 0}
+.aide{font-size:13px;line-height:1.55} .aide h3{font-size:14px;margin:12px 0 4px;color:var(--marine)}
+.aide p{margin:4px 0} .vide{color:var(--texte2);font-size:15px;padding:40px;text-align:center}
+#message{font-size:13px;color:var(--texte2);min-height:18px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+ <h1>Annotateur NER · LegalTN</h1>
+ <label class="fichier">Ouvrir un lot CSV…<input type="file" id="ouvrir" accept=".csv"></label>
+ <button id="enregistrer" disabled>Enregistrer le CSV</button>
+ <span id="nomFichier"></span>
+ <span id="progression"></span>
+</header>
+<main>
+ <div class="panneau" id="liste"><div class="vide">Aucun lot ouvert</div></div>
+ <section class="panneau">
+  <div id="meta"></div>
+  <div id="phrase"><div class="vide">Ouvrez <b>data/a_annoter/ner_dev_fr_v1.csv</b> ou <b>ner_dev_ar_v1.csv</b>.</div></div>
+  <div class="types">
+   <button class="ROLE" data-type="ROLE"><kbd>1</kbd> ROLE</button>
+   <button class="INSTITUTION" data-type="INSTITUTION"><kbd>2</kbd> INSTITUTION</button>
+   <button class="DELAI" data-type="DELAI"><kbd>3</kbd> DELAI</button>
+   <button class="MONTANT" data-type="MONTANT"><kbd>4</kbd> MONTANT</button>
+   <button id="supprimer"><kbd>Suppr</kbd> Supprimer l'entité choisie</button>
+  </div>
+  <label for="commentaire" style="font-size:13px;color:var(--texte2)">Commentaire (doute, cas limite)</label>
+  <textarea id="commentaire"></textarea>
+  <div class="actions">
+   <button id="precedente"><kbd>←</kbd> Précédente</button>
+   <button class="primaire" id="valider"><kbd>Entrée</kbd> Vérifiée, suivante</button>
+   <button id="suivante">Suivante <kbd>→</kbd></button>
+   <button id="remettre">Remettre « à vérifier »</button>
+  </div>
+  <ul id="entites"></ul>
+  <div id="message"></div>
+ </section>
+ <aside class="panneau aide">
+  <h3>Comment faire</h3>
+  <p><b>Ajouter</b> : sélectionnez le texte à la souris, puis touche <kbd>1</kbd>–<kbd>4</kbd> (ou bouton).</p>
+  <p><b>Changer le type</b> : cliquez l'entité, puis <kbd>1</kbd>–<kbd>4</kbd>.</p>
+  <p><b>Supprimer</b> : cliquez l'entité, puis <kbd>Suppr</kbd>.</p>
+  <p><b>Valider</b> : <kbd>Entrée</kbd> marque la phrase « verifie », même si rien n'a changé, et passe à la suivante.</p>
+  <p><b>« C » dans la liste</b> : phrase annotée par Claude, à relire. Après relecture, <kbd>Entrée</kbd> la passe en « vérifiée » (par vous).</p>
+  <p><b>Effacer</b> une sélection ratée : <kbd>Échap</kbd> (ne pas cliquer « ailleurs » : un bouton pourrait s'appliquer).</p>
+  <p><b>Pièges</b> : regardez le début et la fin de la zone surlignée avant d'appuyer (un bout de mot voisin n'est pas retiré) ; ne commencez jamais à glisser <i>dans</i> un texte déjà sélectionné (il serait déplacé, pas resélectionné) ; terminez plutôt sur l'espace qui suit le dernier mot.</p>
+  <p><b>Corriger des bornes</b> : sélectionnez la bonne étendue par-dessus l'ancienne, elle est remplacée.</p>
+  <p>Le travail est gardé automatiquement dans ce navigateur. <b>Enregistrez le CSV</b> à la fin (et de temps en temps) sur le fichier d'origine.</p>
+  <h3>Les 4 types</h3>
+  <p><b style="color:var(--role)">ROLE</b> : personne ou groupe porteur ou bénéficiaire d'une règle (« l'employeur », « tout salarié », « المؤجر »). Une personne en fonction (« l'inspecteur du travail ») est un ROLE.</p>
+  <p><b style="color:var(--inst)">INSTITUTION</b> : organisme, juridiction, autorité nommée (« l'inspection du travail », « تفقدية الشغل »).</p>
+  <p><b style="color:var(--delai)">DELAI</b> : durée ou échéance (« dans un délai de quinze jours », « أجل شهر »).</p>
+  <p><b style="color:var(--montant)">MONTANT</b> : somme ou quantité chiffrée, âges compris (« 300 dinars », « 48 heures », « 18 ans »).</p>
+  <h3>Règles</h3>
+  <p>Étendue minimale, déterminant compris si la lecture l'exige (« l'employeur »).</p>
+  <p>Une fourchette forme une seule entité : « 1 à 15 jours » (DELAI), « 120 à 300 dinars » (MONTANT).</p>
+  <p>« un délai » sans durée précisée n'est pas un DELAI.</p>
+  <p>Arabe : proclitiques و ف ب ل ك <b>hors</b> de l'entité (« وللمؤجر » → « لمؤجر »).</p>
+  <p>Ne pas annoter les renvois d'articles ni les références de lois.</p>
+  <p>Guide complet : <code>data/a_annoter/LISEZMOI.md</code>.</p>
+ </aside>
+</main>
+<script>
+"use strict";
+const TYPES = ["ROLE", "INSTITUTION", "DELAI", "MONTANT"];
+const COLONNES = ["item_id","langue","article","page","phrase","entites","entites_lisibles","statut","commentaire"];
+const $ = s => document.querySelector(s);
+const etat = { nom: "", lignes: [], i: 0, choisie: null, poignee: null };
+
+/* ---------- CSV (RFC 4180, guillemets doublés) ---------- */
+function lireCSV(texte) {
+  texte = texte.replace(/^﻿/, "");
+  const lignes = []; let ligne = [], champ = "", guill = false;
+  for (let k = 0; k < texte.length; k++) {
+    const c = texte[k];
+    if (guill) {
+      if (c === '"') { if (texte[k + 1] === '"') { champ += '"'; k++; } else guill = false; }
+      else champ += c;
+    } else if (c === '"') guill = true;
+    else if (c === ",") { ligne.push(champ); champ = ""; }
+    else if (c === "\n") { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); ligne = []; champ = ""; }
+    else champ += c;
+  }
+  if (champ !== "" || ligne.length) { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); }
+  const tete = lignes.shift();
+  return lignes.filter(l => l.length > 1).map(l => Object.fromEntries(tete.map((t, j) => [t, l[j] ?? ""])));
+}
+const echapper = v => /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+function ecrireCSV() {
+  const corps = etat.lignes.map(l => {
+    const r = { ...l.brut, entites: versTexte(l.entites), entites_lisibles: lisible(l.phrase, l.entites),
+                statut: l.statut, commentaire: l.commentaire };
+    return COLONNES.map(c => echapper(String(r[c] ?? ""))).join(",");
+  });
+  return "﻿" + COLONNES.join(",") + "\r\n" + corps.join("\r\n") + "\r\n";
+}
+
+/* ---------- entités ---------- */
+function depuisTexte(champ) {
+  if (!champ.trim()) return [];
+  return champ.split(";").map(b => { const [d, f, t] = b.split("|"); return { d: +d, f: +f, t }; })
+              .filter(e => TYPES.includes(e.t)).sort((a, b) => a.d - b.d);
+}
+const versTexte = es => es.slice().sort((a, b) => a.d - b.d).map(e => `${e.d}|${e.f}|${e.t}`).join(";");
+function lisible(p, es) {
+  let s = "", pos = 0;
+  for (const e of es.slice().sort((a, b) => a.d - b.d)) { s += p.slice(pos, e.d) + "[" + p.slice(e.d, e.f) + "]" + e.t; pos = e.f; }
+  return s + p.slice(pos);
+}
+const arabe = p => /[؀-ۿ]/.test(p);
+
+/* ---------- affichage ---------- */
+function rendre() {
+  const l = etat.lignes[etat.i];
+  if (!l) return;
+  const p = l.phrase, zone = $("#phrase");
+  zone.dir = arabe(p) ? "rtl" : "ltr";
+  zone.innerHTML = "";
+  let pos = 0;
+  const morceau = (d, f) => { const s = document.createElement("span"); s.dataset.debut = d; s.textContent = p.slice(d, f); zone.appendChild(s); };
+  l.entites.forEach((e, k) => {
+    if (e.d > pos) morceau(pos, e.d);
+    const m = document.createElement("mark");
+    m.className = e.t + (etat.choisie === k ? " choisie" : "");
+    const t = document.createElement("span"); t.dataset.debut = e.d; t.textContent = p.slice(e.d, e.f);
+    const b = document.createElement("sub"); b.textContent = e.t;
+    m.append(t, b);
+    m.onclick = ev => { ev.stopPropagation(); etat.choisie = k; rendre(); };
+    zone.appendChild(m);
+    pos = e.f;
+  });
+  if (pos < p.length) morceau(pos, p.length);
+  $("#meta").innerHTML = `<span><b>${l.brut.item_id}</b></span><span>${l.brut.article} · page ${l.brut.page}</span>` +
+    `<span>Phrase ${etat.i + 1} / ${etat.lignes.length}</span><span id="statut" class="${l.statut}">${
+      l.statut === "verifie" ? "✓ vérifiée" : l.statut === "verifie_claude" ? "annotée par Claude, à relire" : "à vérifier"}</span>`;
+  $("#commentaire").value = l.commentaire;
+  $("#entites").innerHTML = l.entites.length ? l.entites.map(e => `<li><b>${e.t}</b> : « ${p.slice(e.d, e.f)} » <small>(${e.d}–${e.f})</small></li>`).join("")
+                                             : "<li><i>Aucune entité dans cette phrase.</i></li>";
+  rendreListe();
+}
+function rendreListe() {
+  const n = etat.lignes.filter(l => l.statut === "verifie").length;
+  $("#progression").innerHTML = `${n} / ${etat.lignes.length} vérifiées <span class="barre"><i style="width:${100 * n / etat.lignes.length}%"></i></span>`;
+  $("#liste").innerHTML = etat.lignes.map((l, k) =>
+    `<div data-k="${k}" class="${k === etat.i ? "actif" : ""}"><span>${l.brut.item_id}</span>` +
+    `<span class="${l.statut === "verifie" ? "v" : "a"}" title="${l.statut}">${
+      l.statut === "verifie" ? "✓" : l.statut === "verifie_claude" ? "C" : "…"}</span></div>`).join("");
+  $("#liste").querySelectorAll("div[data-k]").forEach(d => d.onclick = () => aller(+d.dataset.k));
+  const actif = $("#liste .actif"); if (actif) actif.scrollIntoView({ block: "nearest" });
+}
+
+/* ---------- sélection -> positions ---------- */
+function positionDans(noeud, decalage) {
+  let el = noeud.nodeType === 3 ? noeud.parentElement : noeud;
+  if (el && el.tagName === "SUB") return null;
+  while (el && el.dataset && el.dataset.debut === undefined && el.id !== "phrase") el = el.parentElement;
+  if (!el || el.id === "phrase" || el.dataset.debut === undefined) return null;
+  return +el.dataset.debut + (noeud.nodeType === 3 ? decalage : 0);
+}
+function selectionCourante() {
+  const s = window.getSelection();
+  if (!s.rangeCount || s.isCollapsed) return null;
+  const r = s.getRangeAt(0);
+  if (!$("#phrase").contains(r.commonAncestorContainer)) return null;
+  let d = positionDans(r.startContainer, r.startOffset), f = positionDans(r.endContainer, r.endOffset);
+  if (d === null || f === null) return null;
+  if (d > f) [d, f] = [f, d];
+  const p = etat.lignes[etat.i].phrase;
+  while (d < f && /[\s,.;:،؛]/.test(p[d])) d++;
+  while (f > d && /[\s,.;:،؛]/.test(p[f - 1])) f--;
+  return f > d ? { d, f } : null;
+}
+
+/* ---------- actions ---------- */
+function appliquerType(t) {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  const sel = selectionCourante();
+  if (sel) {
+    const avant = l.entites.length;
+    l.entites = l.entites.filter(e => e.f <= sel.d || e.d >= sel.f);  // remplace les chevauchements
+    l.entites.push({ d: sel.d, f: sel.f, t });
+    l.entites.sort((a, b) => a.d - b.d);
+    etat.choisie = l.entites.findIndex(e => e.d === sel.d);
+    window.getSelection().removeAllRanges();
+    message(avant > l.entites.length - 1 ? "Entité ajoutée (chevauchement remplacé)." : "Entité ajoutée.");
+  } else if (etat.choisie !== null && l.entites[etat.choisie]) {
+    l.entites[etat.choisie].t = t; message("Type modifié.");
+  } else { message("Sélectionnez d'abord du texte, ou cliquez une entité."); return; }
+  sauver(); rendre();
+}
+function supprimer() {
+  const l = etat.lignes[etat.i];
+  if (!l || etat.choisie === null) { message("Cliquez d'abord l'entité à supprimer."); return; }
+  l.entites.splice(etat.choisie, 1); etat.choisie = null; message("Entité supprimée."); sauver(); rendre();
+}
+function aller(k) {
+  if (k < 0 || k >= etat.lignes.length) return;
+  memoriserCommentaire(); etat.i = k; etat.choisie = null; sauver(); rendre();
+}
+function valider() {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  memoriserCommentaire(); l.statut = "verifie"; sauver();
+  const suivante = etat.lignes.findIndex((x, k) => k > etat.i && x.statut !== "verifie");
+  if (suivante >= 0) aller(suivante);
+  else { rendre(); message(etat.lignes.every(x => x.statut === "verifie") ? "Toutes les phrases sont vérifiées : enregistrez le CSV." : "Dernière phrase du lot."); }
+}
+function memoriserCommentaire() { const l = etat.lignes[etat.i]; if (l) l.commentaire = $("#commentaire").value; }
+function message(m) { $("#message").textContent = m; }
+
+/* ---------- persistance ---------- */
+const cle = () => "annotateur-ner:" + etat.nom;
+function sauver() {
+  try { localStorage.setItem(cle(), JSON.stringify(etat.lignes.map(l => ({ id: l.brut.item_id, e: l.entites, s: l.statut, c: l.commentaire })))); } catch {}
+}
+function restaurer() {
+  try {
+    const s = JSON.parse(localStorage.getItem(cle()) || "null"); if (!s) return false;
+    const par = Object.fromEntries(s.map(x => [x.id, x]));
+    let n = 0;
+    etat.lignes.forEach(l => { const x = par[l.brut.item_id]; if (x) { l.entites = x.e; l.statut = x.s; l.commentaire = x.c; n++; } });
+    return n > 0;
+  } catch { return false; }
+}
+async function ouvrir(fichier) {
+  etat.nom = fichier.name; etat.poignee = null;
+  charger(await fichier.text(), fichier.name);
+}
+function charger(texte, nom) {
+  etat.nom = nom;
+  etat.lignes = lireCSV(texte).map(r => ({ brut: r, phrase: r.phrase, entites: depuisTexte(r.entites || ""),
+                                           statut: (r.statut || "a_verifier").trim(), commentaire: r.commentaire || "" }));
+  const repris = restaurer();
+  const premiere = etat.lignes.findIndex(l => l.statut !== "verifie");
+  etat.i = premiere >= 0 ? premiere : 0; etat.choisie = null;
+  $("#nomFichier").textContent = nom; $("#enregistrer").disabled = false;
+  rendre(); message(repris ? "Travail précédent repris depuis ce navigateur." : `${etat.lignes.length} phrases chargées.`);
+}
+async function enregistrer() {
+  memoriserCommentaire(); sauver();
+  const contenu = ecrireCSV();
+  if (window.showSaveFilePicker) {
+    try {
+      if (!etat.poignee) etat.poignee = await showSaveFilePicker({ suggestedName: etat.nom, types: [{ description: "CSV", accept: { "text/csv": [".csv"] } }] });
+      const w = await etat.poignee.createWritable(); await w.write(new Blob([contenu], { type: "text/csv" })); await w.close();
+      message(`Enregistré dans ${etat.poignee.name}.`); return;
+    } catch (e) { if (e.name === "AbortError") return; }
+  }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([contenu], { type: "text/csv" })); a.download = etat.nom; a.click();
+  message("Téléchargé : remplacez le fichier dans data/a_annoter/ par celui-ci.");
+}
+
+/* ---------- câblage ---------- */
+$("#ouvrir").onchange = e => e.target.files[0] && ouvrir(e.target.files[0]);
+$("#enregistrer").onclick = enregistrer;
+document.querySelectorAll(".types button[data-type]").forEach(b => b.onclick = () => appliquerType(b.dataset.type));
+$("#supprimer").onclick = supprimer;
+$("#precedente").onclick = () => aller(etat.i - 1);
+$("#suivante").onclick = () => aller(etat.i + 1);
+$("#valider").onclick = valider;
+$("#remettre").onclick = () => { const l = etat.lignes[etat.i]; if (l) { l.statut = "a_verifier"; sauver(); rendre(); } };
+$("#phrase").addEventListener("click", () => { if (window.getSelection().isCollapsed && etat.choisie !== null) { etat.choisie = null; rendre(); } });
+$("#commentaire").addEventListener("input", () => { memoriserCommentaire(); sauver(); });
+document.addEventListener("keydown", e => {
+  if (!etat.lignes.length || e.target.tagName === "TEXTAREA") return;
+  if (["1", "2", "3", "4"].includes(e.key)) { e.preventDefault(); appliquerType(TYPES[+e.key - 1]); }
+  else if (e.key === "Delete" || e.key === "Backspace") { e.preventDefault(); supprimer(); }
+  else if (e.key === "Enter") { e.preventDefault(); valider(); }
+  else if (e.key === "Escape") { window.getSelection().removeAllRanges(); etat.choisie = null; rendre(); message("Sélection effacée."); }
+  else if (e.key === "ArrowRight") aller(etat.i + 1);
+  else if (e.key === "ArrowLeft") aller(etat.i - 1);
+  else if ((e.ctrlKey || e.metaKey) && e.key === "s") { e.preventDefault(); enregistrer(); }
+});
+window.addEventListener("beforeunload", () => { memoriserCommentaire(); sauver(); });
+window.annotateur = { charger, etat, ecrireCSV };  // pour les tests automatisés
+</script>
+</body>
+</html>
