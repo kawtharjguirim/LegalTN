@@ -7,7 +7,7 @@ from src.rapports import tableau_de_bord as td
 
 def test_page_contient_les_blocs_et_les_chiffres_des_rapports():
     page = td.construire()
-    for titre in ("Synthèse", "Validation humaine", "Alignement", "Audit", "Abstention calibrée", "Obligations", "LLM-juge", "Références croisées"):
+    for titre in ("Synthèse", "Validation humaine", "Alignement", "Audit", "Abstention calibrée", "Obligations", "LLM-juge", "Références croisées", "Classification de domaine"):
         assert titre in page
     assert "Référence Claude, non relue" in page and "Référence humaine" in page
     audit = td.json_(td.R / "gold/audit/audit_resultats.json")

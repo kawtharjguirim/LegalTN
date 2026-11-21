@@ -1,0 +1,1298 @@
+{
+  "n_fr": 478,
+  "n_ar": 463,
+  "domaines": {
+    "contrat_de_travail": 54,
+    "conventions_collectives": 20,
+    "conditions_et_protection_du_travail": 39,
+    "duree_repos_conges": 66,
+    "salaire": 19,
+    "hygiene_securite_sante": 49,
+    "representation_du_personnel": 17,
+    "inspection_et_sanctions": 24,
+    "conflits_et_juridictions": 73,
+    "syndicats": 16,
+    "emploi_et_formation": 54,
+    "statuts_particuliers": 47
+  },
+  "systemes": {
+    "majorite_fr": {
+      "macro_f1": 0.0188,
+      "macro_f1_ecart_type": 0.0043,
+      "macro_f1_par_graine": [
+        0.0129,
+        0.0207,
+        0.0229
+      ],
+      "exactitude": 0.0711,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.0,
+        "conflits_et_juridictions": 0.151,
+        "contrat_de_travail": 0.0,
+        "conventions_collectives": 0.0,
+        "duree_repos_conges": 0.075,
+        "emploi_et_formation": 0.0,
+        "hygiene_securite_sante": 0.0,
+        "inspection_et_sanctions": 0.0,
+        "representation_du_personnel": 0.0,
+        "salaire": 0.0,
+        "statuts_particuliers": 0.0,
+        "syndicats": 0.0
+      }
+    },
+    "majorite_ar": {
+      "macro_f1": 0.0213,
+      "macro_f1_ecart_type": 0.0055,
+      "macro_f1_par_graine": [
+        0.0138,
+        0.0266,
+        0.0235
+      ],
+      "exactitude": 0.0871,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.0,
+        "conflits_et_juridictions": 0.182,
+        "contrat_de_travail": 0.0,
+        "conventions_collectives": 0.0,
+        "duree_repos_conges": 0.074,
+        "emploi_et_formation": 0.0,
+        "hygiene_securite_sante": 0.0,
+        "inspection_et_sanctions": 0.0,
+        "representation_du_personnel": 0.0,
+        "salaire": 0.0,
+        "statuts_particuliers": 0.0,
+        "syndicats": 0.0
+      }
+    },
+    "tfidf_fr": {
+      "macro_f1": 0.5747,
+      "macro_f1_ecart_type": 0.0183,
+      "macro_f1_par_graine": [
+        0.5717,
+        0.5984,
+        0.5538
+      ],
+      "exactitude": 0.6018,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.709,
+        "conflits_et_juridictions": 0.799,
+        "contrat_de_travail": 0.422,
+        "conventions_collectives": 0.783,
+        "duree_repos_conges": 0.677,
+        "emploi_et_formation": 0.506,
+        "hygiene_securite_sante": 0.618,
+        "inspection_et_sanctions": 0.413,
+        "representation_du_personnel": 0.673,
+        "salaire": 0.23,
+        "statuts_particuliers": 0.536,
+        "syndicats": 0.531
+      }
+    },
+    "tfidf_ar": {
+      "macro_f1": 0.6071,
+      "macro_f1_ecart_type": 0.0176,
+      "macro_f1_par_graine": [
+        0.5915,
+        0.6317,
+        0.5979
+      ],
+      "exactitude": 0.6415,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.794,
+        "conflits_et_juridictions": 0.786,
+        "contrat_de_travail": 0.456,
+        "conventions_collectives": 0.774,
+        "duree_repos_conges": 0.702,
+        "emploi_et_formation": 0.597,
+        "hygiene_securite_sante": 0.632,
+        "inspection_et_sanctions": 0.398,
+        "representation_du_personnel": 0.635,
+        "salaire": 0.195,
+        "statuts_particuliers": 0.638,
+        "syndicats": 0.679
+      }
+    },
+    "e5_fr": {
+      "macro_f1": 0.6315,
+      "macro_f1_ecart_type": 0.0238,
+      "macro_f1_par_graine": [
+        0.6173,
+        0.665,
+        0.6121
+      ],
+      "exactitude": 0.6576,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.748,
+        "conflits_et_juridictions": 0.862,
+        "contrat_de_travail": 0.515,
+        "conventions_collectives": 0.727,
+        "duree_repos_conges": 0.806,
+        "emploi_et_formation": 0.655,
+        "hygiene_securite_sante": 0.547,
+        "inspection_et_sanctions": 0.413,
+        "representation_du_personnel": 0.541,
+        "salaire": 0.41,
+        "statuts_particuliers": 0.55,
+        "syndicats": 0.803
+      }
+    },
+    "e5_ar": {
+      "macro_f1": 0.5998,
+      "macro_f1_ecart_type": 0.033,
+      "macro_f1_par_graine": [
+        0.58,
+        0.6463,
+        0.5731
+      ],
+      "exactitude": 0.622,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.781,
+        "conflits_et_juridictions": 0.811,
+        "contrat_de_travail": 0.419,
+        "conventions_collectives": 0.729,
+        "duree_repos_conges": 0.793,
+        "emploi_et_formation": 0.514,
+        "hygiene_securite_sante": 0.559,
+        "inspection_et_sanctions": 0.452,
+        "representation_du_personnel": 0.589,
+        "salaire": 0.3,
+        "statuts_particuliers": 0.515,
+        "syndicats": 0.736
+      }
+    },
+    "e5_bilingue_fr": {
+      "macro_f1": 0.6128,
+      "macro_f1_ecart_type": 0.0337,
+      "macro_f1_par_graine": [
+        0.5909,
+        0.6604,
+        0.5872
+      ],
+      "exactitude": 0.6464,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.75,
+        "conflits_et_juridictions": 0.835,
+        "contrat_de_travail": 0.491,
+        "conventions_collectives": 0.713,
+        "duree_repos_conges": 0.821,
+        "emploi_et_formation": 0.647,
+        "hygiene_securite_sante": 0.578,
+        "inspection_et_sanctions": 0.433,
+        "representation_du_personnel": 0.561,
+        "salaire": 0.351,
+        "statuts_particuliers": 0.509,
+        "syndicats": 0.666
+      }
+    },
+    "e5_bilingue_ar": {
+      "macro_f1": 0.5662,
+      "macro_f1_ecart_type": 0.0404,
+      "macro_f1_par_graine": [
+        0.5386,
+        0.6233,
+        0.5368
+      ],
+      "exactitude": 0.5983,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.77,
+        "conflits_et_juridictions": 0.804,
+        "contrat_de_travail": 0.394,
+        "conventions_collectives": 0.649,
+        "duree_repos_conges": 0.79,
+        "emploi_et_formation": 0.505,
+        "hygiene_securite_sante": 0.546,
+        "inspection_et_sanctions": 0.435,
+        "representation_du_personnel": 0.566,
+        "salaire": 0.274,
+        "statuts_particuliers": 0.477,
+        "syndicats": 0.586
+      }
+    },
+    "transfert_fr_vers_ar": {
+      "macro_f1": 0.4086,
+      "macro_f1_ecart_type": 0.0201,
+      "macro_f1_par_graine": [
+        0.4001,
+        0.4363,
+        0.3895
+      ],
+      "exactitude": 0.4629,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.785,
+        "conflits_et_juridictions": 0.626,
+        "contrat_de_travail": 0.219,
+        "conventions_collectives": 0.422,
+        "duree_repos_conges": 0.698,
+        "emploi_et_formation": 0.451,
+        "hygiene_securite_sante": 0.357,
+        "inspection_et_sanctions": 0.298,
+        "representation_du_personnel": 0.102,
+        "salaire": 0.195,
+        "statuts_particuliers": 0.386,
+        "syndicats": 0.365
+      }
+    },
+    "transfert_ar_vers_fr": {
+      "macro_f1": 0.4122,
+      "macro_f1_ecart_type": 0.0261,
+      "macro_f1_par_graine": [
+        0.3919,
+        0.4489,
+        0.3956
+      ],
+      "exactitude": 0.5021,
+      "f1_par_classe": {
+        "conditions_et_protection_du_travail": 0.675,
+        "conflits_et_juridictions": 0.637,
+        "contrat_de_travail": 0.322,
+        "conventions_collectives": 0.539,
+        "duree_repos_conges": 0.753,
+        "emploi_et_formation": 0.44,
+        "hygiene_securite_sante": 0.431,
+        "inspection_et_sanctions": 0.288,
+        "representation_du_personnel": 0.0,
+        "salaire": 0.182,
+        "statuts_particuliers": 0.365,
+        "syndicats": 0.313
+      }
+    }
+  },
+  "matrice_e5_fr_graine0": {
+    "classes": [
+      "conditions_et_protection_du_travail",
+      "conflits_et_juridictions",
+      "contrat_de_travail",
+      "conventions_collectives",
+      "duree_repos_conges",
+      "emploi_et_formation",
+      "hygiene_securite_sante",
+      "inspection_et_sanctions",
+      "representation_du_personnel",
+      "salaire",
+      "statuts_particuliers",
+      "syndicats"
+    ],
+    "valeurs": [
+      [
+        29,
+        0,
+        5,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        63,
+        1,
+        1,
+        1,
+        0,
+        1,
+        4,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        4,
+        5,
+        28,
+        1,
+        0,
+        3,
+        2,
+        1,
+        6,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        7,
+        11,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        3,
+        0,
+        54,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        38,
+        4,
+        8,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0,
+        0,
+        2,
+        23,
+        9,
+        3,
+        5,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        5,
+        4,
+        11,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        3,
+        0,
+        2,
+        1,
+        0,
+        11,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        9,
+        0,
+        6,
+        4,
+        5,
+        1,
+        1,
+        2,
+        16,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        13
+      ]
+    ]
+  },
+  "erreurs_e5_fr_graine0": [
+    {
+      "numero": 1,
+      "vrai": "contrat_de_travail",
+      "predit": "statuts_particuliers"
+    },
+    {
+      "numero": 2,
+      "vrai": "contrat_de_travail",
+      "predit": "conventions_collectives"
+    },
+    {
+      "numero": 3,
+      "vrai": "contrat_de_travail",
+      "predit": "salaire"
+    },
+    {
+      "numero": 1,
+      "vrai": "contrat_de_travail",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 2,
+      "vrai": "contrat_de_travail",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 3,
+      "vrai": "contrat_de_travail",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 4,
+      "vrai": "contrat_de_travail",
+      "predit": "statuts_particuliers"
+    },
+    {
+      "numero": 5,
+      "vrai": "contrat_de_travail",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 5,
+      "vrai": "contrat_de_travail",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 7,
+      "vrai": "contrat_de_travail",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 12,
+      "vrai": "contrat_de_travail",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 14,
+      "vrai": "contrat_de_travail",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 16,
+      "vrai": "contrat_de_travail",
+      "predit": "syndicats"
+    },
+    {
+      "numero": 20,
+      "vrai": "contrat_de_travail",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 21,
+      "vrai": "contrat_de_travail",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 26,
+      "vrai": "contrat_de_travail",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 31,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 32,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 33,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 34,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 42,
+      "vrai": "conventions_collectives",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 47,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 48,
+      "vrai": "conventions_collectives",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 51,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 52,
+      "vrai": "conventions_collectives",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 64,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 68,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 68,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 70,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 72,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 75,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 76,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 86,
+      "vrai": "duree_repos_conges",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 88,
+      "vrai": "duree_repos_conges",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 94,
+      "vrai": "duree_repos_conges",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 111,
+      "vrai": "duree_repos_conges",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 120,
+      "vrai": "duree_repos_conges",
+      "predit": "statuts_particuliers"
+    },
+    {
+      "numero": 131,
+      "vrai": "duree_repos_conges",
+      "predit": "salaire"
+    },
+    {
+      "numero": 134,
+      "vrai": "salaire",
+      "predit": "conventions_collectives"
+    },
+    {
+      "numero": 137,
+      "vrai": "salaire",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 138,
+      "vrai": "salaire",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 140,
+      "vrai": "salaire",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 141,
+      "vrai": "salaire",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 142,
+      "vrai": "salaire",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 147,
+      "vrai": "salaire",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 150,
+      "vrai": "salaire",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 152,
+      "vrai": "hygiene_securite_sante",
+      "predit": "salaire"
+    },
+    {
+      "numero": 152,
+      "vrai": "hygiene_securite_sante",
+      "predit": "salaire"
+    },
+    {
+      "numero": 152,
+      "vrai": "hygiene_securite_sante",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 153,
+      "vrai": "hygiene_securite_sante",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 153,
+      "vrai": "hygiene_securite_sante",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 154,
+      "vrai": "hygiene_securite_sante",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 154,
+      "vrai": "hygiene_securite_sante",
+      "predit": "statuts_particuliers"
+    },
+    {
+      "numero": 154,
+      "vrai": "hygiene_securite_sante",
+      "predit": "syndicats"
+    },
+    {
+      "numero": 154,
+      "vrai": "hygiene_securite_sante",
+      "predit": "salaire"
+    },
+    {
+      "numero": 154,
+      "vrai": "hygiene_securite_sante",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 155,
+      "vrai": "hygiene_securite_sante",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 159,
+      "vrai": "representation_du_personnel",
+      "predit": "salaire"
+    },
+    {
+      "numero": 166,
+      "vrai": "representation_du_personnel",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 166,
+      "vrai": "representation_du_personnel",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 167,
+      "vrai": "representation_du_personnel",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 169,
+      "vrai": "representation_du_personnel",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 169,
+      "vrai": "representation_du_personnel",
+      "predit": "syndicats"
+    },
+    {
+      "numero": 174,
+      "vrai": "inspection_et_sanctions",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 175,
+      "vrai": "inspection_et_sanctions",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 176,
+      "vrai": "inspection_et_sanctions",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 193,
+      "vrai": "conflits_et_juridictions",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 196,
+      "vrai": "conflits_et_juridictions",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 213,
+      "vrai": "conflits_et_juridictions",
+      "predit": "salaire"
+    },
+    {
+      "numero": 233,
+      "vrai": "inspection_et_sanctions",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 233,
+      "vrai": "inspection_et_sanctions",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 234,
+      "vrai": "inspection_et_sanctions",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 234,
+      "vrai": "inspection_et_sanctions",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 235,
+      "vrai": "inspection_et_sanctions",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 236,
+      "vrai": "inspection_et_sanctions",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 237,
+      "vrai": "inspection_et_sanctions",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 238,
+      "vrai": "inspection_et_sanctions",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 239,
+      "vrai": "inspection_et_sanctions",
+      "predit": "salaire"
+    },
+    {
+      "numero": 241,
+      "vrai": "inspection_et_sanctions",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 247,
+      "vrai": "syndicats",
+      "predit": "conventions_collectives"
+    },
+    {
+      "numero": 248,
+      "vrai": "syndicats",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 257,
+      "vrai": "syndicats",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 260,
+      "vrai": "emploi_et_formation",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 262,
+      "vrai": "emploi_et_formation",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 263,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 265,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 266,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 268,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 268,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 269,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 278,
+      "vrai": "emploi_et_formation",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 285,
+      "vrai": "emploi_et_formation",
+      "predit": "statuts_particuliers"
+    },
+    {
+      "numero": 286,
+      "vrai": "emploi_et_formation",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 289,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 290,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 291,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 292,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 298,
+      "vrai": "hygiene_securite_sante",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 301,
+      "vrai": "hygiene_securite_sante",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 315,
+      "vrai": "hygiene_securite_sante",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 317,
+      "vrai": "hygiene_securite_sante",
+      "predit": "salaire"
+    },
+    {
+      "numero": 320,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 321,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 322,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 323,
+      "vrai": "hygiene_securite_sante",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 324,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 333,
+      "vrai": "hygiene_securite_sante",
+      "predit": "salaire"
+    },
+    {
+      "numero": 334,
+      "vrai": "hygiene_securite_sante",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 346,
+      "vrai": "emploi_et_formation",
+      "predit": "conditions_et_protection_du_travail"
+    },
+    {
+      "numero": 354,
+      "vrai": "emploi_et_formation",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 364,
+      "vrai": "emploi_et_formation",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 366,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 367,
+      "vrai": "emploi_et_formation",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 370,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 371,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 372,
+      "vrai": "conditions_et_protection_du_travail",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 376,
+      "vrai": "conflits_et_juridictions",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 381,
+      "vrai": "conflits_et_juridictions",
+      "predit": "conventions_collectives"
+    },
+    {
+      "numero": 381,
+      "vrai": "conflits_et_juridictions",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 386,
+      "vrai": "conflits_et_juridictions",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 387,
+      "vrai": "conflits_et_juridictions",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 388,
+      "vrai": "conflits_et_juridictions",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 390,
+      "vrai": "conflits_et_juridictions",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 398,
+      "vrai": "statuts_particuliers",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 399,
+      "vrai": "statuts_particuliers",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 400,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 401,
+      "vrai": "statuts_particuliers",
+      "predit": "salaire"
+    },
+    {
+      "numero": 402,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 403,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 406,
+      "vrai": "statuts_particuliers",
+      "predit": "representation_du_personnel"
+    },
+    {
+      "numero": 407,
+      "vrai": "statuts_particuliers",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 408,
+      "vrai": "statuts_particuliers",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 409,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 410,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 411,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 412,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 413,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 415,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 416,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 417,
+      "vrai": "statuts_particuliers",
+      "predit": "contrat_de_travail"
+    },
+    {
+      "numero": 418,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 419,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 421,
+      "vrai": "statuts_particuliers",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 422,
+      "vrai": "statuts_particuliers",
+      "predit": "conflits_et_juridictions"
+    },
+    {
+      "numero": 423,
+      "vrai": "statuts_particuliers",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 424,
+      "vrai": "statuts_particuliers",
+      "predit": "hygiene_securite_sante"
+    },
+    {
+      "numero": 425,
+      "vrai": "statuts_particuliers",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 426,
+      "vrai": "statuts_particuliers",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 428,
+      "vrai": "statuts_particuliers",
+      "predit": "inspection_et_sanctions"
+    },
+    {
+      "numero": 435,
+      "vrai": "statuts_particuliers",
+      "predit": "salaire"
+    },
+    {
+      "numero": 442,
+      "vrai": "statuts_particuliers",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 443,
+      "vrai": "statuts_particuliers",
+      "predit": "emploi_et_formation"
+    },
+    {
+      "numero": 445,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    },
+    {
+      "numero": 446,
+      "vrai": "statuts_particuliers",
+      "predit": "duree_repos_conges"
+    }
+  ]
+}

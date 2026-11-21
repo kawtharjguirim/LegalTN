@@ -342,6 +342,24 @@ def bloc_references() -> str:
     return carte("Références croisées (extraction par règles)", "auto", corps)
 
 
+def bloc_domaine() -> str:
+    d = json_(R / "platinum/domaine/resultats.json")
+    if not d:
+        return carte("Classification de domaine", "auto", absent("python -m src.domaine.evaluer"), large=True)
+    lora = (json_(R / "platinum/domaine/lora.json") or {}).get("systemes", {})
+    noms = {"majorite_fr": "Majorité (FR)", "tfidf_fr": "TF-IDF + LR (FR)", "tfidf_ar": "TF-IDF + LR (AR)", "e5_fr": "e5 + LR (FR)", "e5_ar": "e5 + LR (AR)",
+            "e5_bilingue_fr": "e5 + LR bilingue, test FR", "e5_bilingue_ar": "e5 + LR bilingue, test AR",
+            "transfert_fr_vers_ar": "Transfert : appris en FR, testé en AR", "transfert_ar_vers_fr": "Transfert : appris en AR, testé en FR"}
+    corps = "".join(barre(noms[k], v["macro_f1"], 1.0, f'± {f(v["macro_f1_ecart_type"], 3)}', "ref" if k.startswith("majorite") else "") for k, v in d["systemes"].items() if k in noms)
+    noms_lora = {"lora_fr": "LoRA e5 (FR)", "lora_ar": "LoRA e5 (AR)", "lora_transfert_fr_vers_ar": "LoRA, transfert FR → AR", "lora_transfert_ar_vers_fr": "LoRA, transfert AR → FR"}
+    corps += "".join(barre(noms_lora[k], v["macro_f1"], 1.0, "1 graine", "fort") for k, v in lora.items() if k in noms_lora)
+    par = d["systemes"]["e5_fr"]["f1_par_classe"]
+    classes = "".join(barre(k.replace("_", " "), v, 1.0, f'n = {d["domaines"].get(k, "")}') for k, v in sorted(par.items(), key=lambda kv: -kv[1]))
+    corps = f'<div class="deux"><div><h3>Macro-F1 (5 plis par blocs, 3 graines)</h3>{corps}</div><div><h3>F1 par domaine (e5 + LR, français)</h3>{classes}</div></div>'
+    return carte(f'Classification de domaine : {len(par)} domaines, {d["n_fr"]} articles FR / {d["n_ar"]} AR', "auto", corps,
+                 "Étiquettes tirées de la structure du Code (intitulés de chapitres), pas d'une annotation. Plis par blocs de 6 articles voisins, FR et AR dans le même pli.", large=True)
+
+
 def bloc_resume() -> str:
     rs = csv_(R / "silver/llm/resumes_a_noter.csv")
     notes = sum(1 for x in rs if x.get("exactitude_1_5", "").strip() and x.get("clarte_1_5", "").strip())
@@ -380,7 +398,7 @@ footer{max-width:1240px;margin:0 auto;padding:0 16px 30px;color:var(--texte2);fo
 
 def construire() -> str:
     blocs = [bloc_synthese(), bloc_validation(), bloc_alignement(), bloc_recherche(), bloc_llm(), bloc_audit(), bloc_tunisien(),
-             bloc_ner(), bloc_obligations(), bloc_references(), bloc_abstention(), bloc_juge(), bloc_divergences(), bloc_resume()]
+             bloc_ner(), bloc_obligations(), bloc_references(), bloc_domaine(), bloc_abstention(), bloc_juge(), bloc_divergences(), bloc_resume()]
     legende = "".join(badge(n) for n in ("humain", "claude", "auto", "mixte"))
     return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f"<title>Tableau de bord LegalTN</title><style>{CSS}</style></head><body>"
