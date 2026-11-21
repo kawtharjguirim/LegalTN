@@ -14,8 +14,13 @@ import time
 
 from . import generer
 from .recherche import Recherche
+from src.tunisien.arabizi import est_tunisien
+from src.tunisien.traduction import traduire
 
 MODELE = "intfloat/multilingual-e5-base"
+# Question en arabizi : traduction vers le français par ce modèle avant la recherche
+# (palier Gold, reports/gold/tunisien/RESULTATS.md : meilleure méthode mesurée).
+MODELE_TRADUCTION_TUN = "qwen2.5:7b"
 # Règle d'abstention (palier Gold, reports/gold/abstention/) :
 # - français : cosinus « normalisé » (question et articles sans accents, en minuscules) < 0,8567,
 #   insensible aux accents tapés ou non par l'utilisateur ;
@@ -92,12 +97,32 @@ class MoteurHybride:
                      f"{', '.join(r['citations'])}")
         return redaction, etape
 
+    def traduire_tunisien(self, question: str) -> tuple[str | None, str]:
+        """Traduction en français d'une question en arabizi, et étape à afficher.
+        Renvoie (None, étape) si la traduction est impossible : la recherche directe reprend."""
+        if not generer.disponible(MODELE_TRADUCTION_TUN):
+            return None, (f"Question en tunisien : traduction indisponible ({MODELE_TRADUCTION_TUN} "
+                          "absent d'Ollama), recherche directe")
+        try:
+            texte = traduire(question, "fr", MODELE_TRADUCTION_TUN)
+        except Exception as e:  # Ollama arrêté entre-temps, délai dépassé...
+            return None, f"Question en tunisien : échec de traduction ({type(e).__name__}), recherche directe"
+        if not texte:
+            return None, "Question en tunisien : traduction vide, recherche directe"
+        return texte, (f"Question en tunisien traduite en français ({MODELE_TRADUCTION_TUN}) : "
+                       f"« {texte} »")
+
     def repondre(self, question: str, k: int = 3, rediger: bool = True) -> dict:
-        resultats, sig = self.recherche.rechercher(question, mode="hybride", bilingue=False, k=k)
+        traduction, etape_tun = None, None
+        requete = question
+        if est_tunisien(question):
+            traduction, etape_tun = self.traduire_tunisien(question)
+            requete = traduction or question
+        resultats, sig = self.recherche.rechercher(requete, mode="hybride", bilingue=False, k=k)
         langue = sig["langue"]
         seuil = self.seuils[langue]
         abstention = not resultats or abstenir(sig, langue)
-        etapes = [
+        etapes = ([etape_tun] if etape_tun else []) + [
             f"Langue détectée : {NOMS_LANGUE[langue]}",
             f"BM25 : meilleur score {sig.get('bm25_max', 0.0):.2f}",
             f"Recherche dense e5 : similarité max {sig['cos_max']:.3f}",
@@ -109,7 +134,7 @@ class MoteurHybride:
         ]
         redaction = None
         if not abstention and rediger:
-            redaction, etape = self.rediger(question, resultats, langue)
+            redaction, etape = self.rediger(requete, resultats, langue)
             etapes.append(etape)
         candidats = [] if abstention else [
             {"article": r.article, "texte": r.texte, "page": r.page, "score": round(r.score, 4),
@@ -117,6 +142,7 @@ class MoteurHybride:
             for r in resultats]
         return {"abstention": abstention, "langue": langue, "candidats": candidats,
                 "moteur": self.nom, "etapes": etapes, "reponse_redigee": redaction,
+                "traduction": traduction,
                 "signaux": {"similarite_max": round(sig["cos_max"], 4),
                             "similarite_normalisee": round(sig[SIGNAL], 4), "seuil": seuil}}
 
