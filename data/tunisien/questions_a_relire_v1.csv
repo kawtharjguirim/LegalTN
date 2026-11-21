@@ -1,59 +1,59 @@
 id,langue,type,question,article_propose,sujet,statut,commentaire
-A01,tun,dans_perimetre,"Chnouwa el préavis mta3 rupture ta3 contrat de travail eli mch mouhaddd ?",14 bis,préavis CDI,a_relire,texte lu : préavis de rupture d'un CDI
+A01,tun,dans_perimetre,Chnouwa el préavis mta3 rupture ta3 contrat de travail eli mch mouhaddd ?,14 bis,préavis CDI,a_relire,texte lu : préavis de rupture d'un CDI
 A02,tun,dans_perimetre,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",23 bis,licenciement abusif,a_relire,texte lu : dommages-intérêts en cas de licenciement abusif
-A04,tun,dans_perimetre,"3andi 7a9 fi congé maladie ?",20,maladie,a_relire,texte lu : la maladie suspend le contrat
-A05,tun,dans_perimetre,"Kadech ndhar 3la congé payé fel sena ?",113,congé payé,a_relire,texte lu : durée du congé selon l'ancienneté
+A04,tun,dans_perimetre,3andi 7a9 fi congé maladie ?,20,maladie,a_relire,texte lu : la maladie suspend le contrat
+A05,tun,dans_perimetre,Kadech ndhar 3la congé payé fel sena ?,113,congé payé,a_relire,texte lu : durée du congé selon l'ancienneté
 A06,tun,dans_perimetre,"Kifech ywelli el congé mta3 el khedma, win yetzid ?",117,période du congé annuel,a_relire,texte lu : congé annuel du 1er juin au 31 octobre
-A07,tun,dans_perimetre,"Najem ntfarrag 3la congé mta3i fi 7ajjet 9sar ?",118,fractionnement du congé,a_relire,texte lu : congé de six jours ou moins continu
+A07,tun,dans_perimetre,Najem ntfarrag 3la congé mta3i fi 7ajjet 9sar ?,118,fractionnement du congé,a_relire,texte lu : congé de six jours ou moins continu
 A08,tun,dans_perimetre,"Ken 3andi khedma w ma3andich repos chhriya, chnowa lazem ?",106,repos hebdomadaire,a_relire,texte lu : repos hebdomadaire de 24 heures
 A09,tun,dans_perimetre,"Fel période d'essai, najem ykhalouni nefsa5 el khedma ?",411,rupture pendant la période d'essai,a_relire,texte lu : rupture pendant la période d'essai
-A10,tun,dans_perimetre,"Ken el 3amel yerfed, chkoun yekhelles el préavis ?",14 bis,démission et préavis,a_relire,le préavis CDI couvre aussi la démission : à vérifier
-A11,tun,dans_perimetre,"Chnowa el 3amel 3andou 7a9 fi el flous ki yetfasa5 el contrat ?",22,indemnités à la rupture,a_relire,à vérifier
+A10,tun,dans_perimetre,"Ken el 3amel yerfed, chkoun yekhelles el préavis ?",14 bis,démission et préavis,a_relire,texte lu : préavis d un mois pour un CDI (la démission est-elle couverte ? à confirmer)
+A11,tun,dans_perimetre,Chnowa el 3amel 3andou 7a9 fi el flous ki yetfasa5 el contrat ?,22,indemnités à la rupture,a_relire,texte lu : gratification de fin de service
 A12,tun,dans_perimetre,"Fel 7mel, chnowa 7a9 el mra mta3 el khedma ?",64,congé de maternité,a_relire,texte lu : accouchement et droits de la femme
-A13,tun,dans_perimetre,"Chkoun yet7assab el khedma el youm el jomaa ?",106,jour de repos,a_relire,à vérifier : repos hebdomadaire
-A14,tun,dans_perimetre,"Ken el 3amel ma khalasnich el salaire, chnowa na3mel ?",134,salaire,a_relire,à vérifier : rémunération
-A15,tun,dans_perimetre,"Chnouwa el 7a9 mta3 el 3amel fi el ta3wid ki ytra9 ?",23 bis,dommages-intérêts,a_relire,à vérifier
-A16,tun,dans_perimetre,"Chnowa el jour el 3ayd eli lazem yet3ti 3al khedma ?",106,jours fériés,a_relire,à vérifier : repos et jours fériés
-A17,tun,dans_perimetre,"Ken el 3amel 3andou 7ajja ghir 3ando ta3 el sen, chnowa ya3mel ?",20,maladie,a_relire,à vérifier
-A18,tun,dans_perimetre,"Win ynajem el khedma tkoun tbadlet ki el 3amel yerfed ?",411,démission,a_relire,à vérifier : fin du contrat par une partie
-A19,tun,dans_perimetre,"Chnowa lazem el patron ya3mel 9bal ma yfasa5 el contrat ?",14 ter,licenciement,a_relire,à vérifier : motifs du licenciement
-A20,tun,dans_perimetre,"Chnouwa el 7a9 mta3 el mra enti tkoun 7amla fi el khedma ?",64,grossesse,a_relire,à vérifier
-A21,tun,dans_perimetre,"Ken el 3amel khdem fil lil, chnowa el 7a9 mta3ou ?",64,travail de nuit,a_relire,à vérifier : article sur le travail de nuit des femmes à lire
-A22,tun,dans_perimetre,"Kifech ywelli el 3amel ynajem yerfed 3al khadma b wa9t 9bal ?",14 bis,démission avec préavis,a_relire,question volontairement difficile : à relire pour le sens
-A23,tun,dans_perimetre,"Chnowa el ta3wid ki el 3amel yetfasa5 el contrat ba3d el période mta3 el essai ?",22,indemnité après essai,a_relire,à vérifier
-A24,tun,dans_perimetre,"Chnouwa el 3ataleh mta3 el 3amel 7aleh el 7adra ?",20,absence pour maladie,a_relire,à vérifier
-A25,tun,dans_perimetre,"Ken el khedma tbaddlet, el patron lazem yfassar el sabeb ?",14 ter,motif du licenciement,a_relire,à vérifier
-A26,tun,dans_perimetre,"Chnouwa el mouddah el asslya mta3 el congé ?",113,durée du congé,a_relire,à vérifier
-A27,tun,dans_perimetre,"Chnowa el 7a9 fi ta3wid el 3amel ki yetfasa5 el khedma b5ater mta3ou ?",23 bis,licenciement abusif,a_relire,à vérifier
-A28,tun,dans_perimetre,"Chnouwa el 3amel el ghayeb 9bal ma yetfassa5, chnowa ya3mel ?",20,absence,a_relire,à vérifier
-A29,tun,dans_perimetre,"Kifech ywelli el préavis mta3 el grève ?",376 bis,grève,a_relire,texte lu : préavis de 10 jours avant la grève
-A30,tun,dans_perimetre,"Chnouwa el 9adhiya mta3 el khadma el youm ?",89,repos pendant la journée,a_relire,à vérifier : repos dans la journée de travail
-A31,tun,dans_perimetre,"Chnowa el 7add el adna mta3 el flous fi el khedma ?",134,salaire minimum,a_relire,à vérifier : rémunération
-A32,tun,dans_perimetre,"Chkoun el 3amel el mouallem fel khedma ta3ou ?",370,contrat permanent,a_relire,à vérifier
-A33,tun,dans_perimetre,"Win ynajem el 3amel yet3ayyan fel khedma ?",370,engagement du salarié,a_relire,à vérifier
-A34,tun,dans_perimetre,"Chnowa el 3amel 3andou 7a9 fi ajaza, win ytle3 ?",117,congé annuel,a_relire,à vérifier
+A13,tun,dans_perimetre,Chkoun yet7assab el khedma el youm el jomaa ?,106,jour de repos,a_relire,texte lu : repos hebdomadaire de 24 heures
+A14,tun,dans_perimetre,"Ken el 3amel ma khalasnich el salaire, chnowa na3mel ?",134,salaire,a_relire,texte lu : rémunération et salaire minimum garanti
+A15,tun,dans_perimetre,Chnouwa el 7a9 mta3 el 3amel fi el ta3wid ki ytra9 ?,23 bis,dommages-intérêts,a_relire,texte lu : dommages-intérêts pour licenciement abusif
+A16,tun,dans_perimetre,Chnowa el jour el 3ayd eli lazem yet3ti 3al khedma ?,107,jours fériés,a_relire,"corrigé : 106 remplacé par 107 (jours fériés, texte lu)"
+A17,tun,dans_perimetre,"Ken el 3amel 3andou 7ajja ghir 3ando ta3 el sen, chnowa ya3mel ?",20,maladie,a_relire,texte lu : la maladie suspend le contrat ; congé maladie rémunéré non traité
+A18,tun,dans_perimetre,Win ynajem el khedma tkoun tbadlet ki el 3amel yerfed ?,411,démission,a_relire,texte lu : rupture par l une des parties ; démission traitée partiellement
+A19,tun,dans_perimetre,Chnowa lazem el patron ya3mel 9bal ma yfasa5 el contrat ?,14 ter,licenciement,a_relire,texte lu : causes du licenciement dans la lettre de préavis
+A20,tun,dans_perimetre,Chnouwa el 7a9 mta3 el mra enti tkoun 7amla fi el khedma ?,64,grossesse,a_relire,"texte lu : accouchement, congé de 30 jours"
+A21,tun,dans_perimetre,"Ken el 3amel khdem fil lil, chnowa el 7a9 mta3ou ?",68,travail de nuit,a_relire,"corrigé : 64 remplacé par 68 (travail de nuit des femmes, texte lu dans la recherche)"
+A22,tun,dans_perimetre,Kifech ywelli el 3amel ynajem yerfed 3al khadma b wa9t 9bal ?,14 bis,démission avec préavis,a_relire,question volontairement difficile : à relire pour le sens
+A23,tun,dans_perimetre,Chnowa el ta3wid ki el 3amel yetfasa5 el contrat ba3d el période mta3 el essai ?,22,indemnité après essai,a_relire,texte lu : gratification après licenciement ; essai partiellement couvert
+A24,tun,dans_perimetre,Chnouwa el 3ataleh mta3 el 3amel 7aleh el 7adra ?,20,absence pour maladie,a_relire,texte lu : maladie et suspension du contrat
+A25,tun,dans_perimetre,"Ken el khedma tbaddlet, el patron lazem yfassar el sabeb ?",14 ter,motif du licenciement,a_relire,texte lu : motifs du licenciement
+A26,tun,dans_perimetre,Chnouwa el mouddah el asslya mta3 el congé ?,113,durée du congé,a_relire,texte lu : durée du congé par mois de travail
+A27,tun,dans_perimetre,Chnowa el 7a9 fi ta3wid el 3amel ki yetfasa5 el khedma b5ater mta3ou ?,23 bis,licenciement abusif,a_relire,texte lu : dommages-intérêts pour licenciement abusif
+A28,tun,dans_perimetre,"Chnouwa el 3amel el ghayeb 9bal ma yetfassa5, chnowa ya3mel ?",20,absence,a_relire,"faible : la question parle d absence, article 20 seulement partiel"
+A29,tun,dans_perimetre,Kifech ywelli el préavis mta3 el grève ?,376 bis,grève,a_relire,texte lu : préavis de 10 jours avant la grève
+A30,tun,dans_perimetre,Chnouwa el 9adhiya mta3 el khadma el youm ?,89,repos pendant la journée,a_relire,texte lu : repos pendant la journée de travail
+A31,tun,dans_perimetre,Chnowa el 7add el adna mta3 el flous fi el khedma ?,134,salaire minimum,a_relire,texte lu : salaire minimum garanti
+A32,tun,dans_perimetre,Chkoun el 3amel el mouallem fel khedma ta3ou ?,370,contrat permanent,a_relire,"attention : article sur le travail agricole, à remplacer par un article général"
+A33,tun,dans_perimetre,Win ynajem el 3amel yet3ayyan fel khedma ?,370,engagement du salarié,a_relire,"attention : article sur le travail agricole, à remplacer par un article général"
+A34,tun,dans_perimetre,"Chnowa el 3amel 3andou 7a9 fi ajaza, win ytle3 ?",117,congé annuel,a_relire,texte lu : congé annuel entre le 1er juin et le 31 octobre
 A35,tun,dans_perimetre,"Ken el 3amel 3andou ouled ta7t 18, chnowa lazem el patron ya3mel ?",63-2,travail des enfants,a_relire,texte lu : heures supplémentaires interdites pour les moins de 18 ans
-A36,tun,hors_perimetre,"Chkoun el président ta3 Tounes ?",,hors périmètre,a_relire,question hors Code du travail
-A37,tun,hors_perimetre,"Chnouwa 3asma el capitale ta3 Tounes ?",,hors périmètre,a_relire,question hors Code du travail
-A38,tun,hors_perimetre,"Kifech nasna3 couscous ?",,hors périmètre,a_relire,question hors Code du travail
-A39,tun,hors_perimetre,"Chnowa el 7al ta3 el carte d'identité ?",,hors périmètre,a_relire,question hors droit du travail
-A40,tun,hors_perimetre,"Chnouwa el 7ar 9adech 7arrart el sayf ?",,hors périmètre,a_relire,question hors Code du travail
-A41,tun,dans_perimetre,"Ken el 3amel khdem fel weekend w 3ando sa3at zaydin, chnouwa ya5ou ?",93,heures supplémentaires,a_relire,à vérifier : durée hebdomadaire maximale
-A42,tun,dans_perimetre,"Chnowa el ta3wid ki el 3amel ma ykhdhhch ajaza kamla 9bal ma yetfassa5 el contrat ?",120,congé non pris à la rupture,a_relire,texte lu : indemnité compensatrice
-A43,tun,dans_perimetre,"Kifech yetHassab el salaire mta3 el congé ?",127,salaire pendant le congé,a_relire,texte lu : indemnité journalière de congé
+A36,tun,hors_perimetre,Chkoun el président ta3 Tounes ?,,hors périmètre,a_relire,question hors Code du travail
+A37,tun,hors_perimetre,Chnouwa 3asma el capitale ta3 Tounes ?,,hors périmètre,a_relire,question hors Code du travail
+A38,tun,hors_perimetre,Kifech nasna3 couscous ?,,hors périmètre,a_relire,question hors Code du travail
+A39,tun,hors_perimetre,Chnowa el 7al ta3 el carte d'identité ?,,hors périmètre,a_relire,question hors droit du travail
+A40,tun,hors_perimetre,Chnouwa el 7ar 9adech 7arrart el sayf ?,,hors périmètre,a_relire,question hors Code du travail
+A41,tun,dans_perimetre,"Ken el 3amel khdem fel weekend w 3ando sa3at zaydin, chnouwa ya5ou ?",93,heures supplémentaires,a_relire,texte lu : soixante heures par semaine maximum
+A42,tun,dans_perimetre,Chnowa el ta3wid ki el 3amel ma ykhdhhch ajaza kamla 9bal ma yetfassa5 el contrat ?,120,congé non pris à la rupture,a_relire,texte lu : indemnité compensatrice
+A43,tun,dans_perimetre,Kifech yetHassab el salaire mta3 el congé ?,127,salaire pendant le congé,a_relire,texte lu : indemnité journalière de congé
 A44,tun,dans_perimetre,"Ken el patron yfasa5 el 3amel ba3d 6 chhour khedma w ma khdhhch ajaza, chnowa 7a9ou ?",128,résiliation avant le congé,a_relire,texte lu : six mois de services continus
-A45,tun,dans_perimetre,"Chnouwa el 7a9 mta3 el délégué du personnel ki yetfassa5 ?",167,délégué du personnel,a_relire,texte lu : suspension pour faute grave
-A46,tun,dans_perimetre,"Chkoun yekhdem fel apprentissage w chnowa el contrat lazem ykoun fih ?",345,contrat d'apprentissage,a_relire,texte lu : contenu du contrat
-A47,tun,dans_perimetre,"Chkoun ywalli el jours el 3outla el rasmiya fel khedma ?",107,jours fériés,a_relire,texte lu : fixés par décret ou convention
+A45,tun,dans_perimetre,Chnouwa el 7a9 mta3 el délégué du personnel ki yetfassa5 ?,167,délégué du personnel,a_relire,texte lu : suspension pour faute grave
+A46,tun,dans_perimetre,Chkoun yekhdem fel apprentissage w chnowa el contrat lazem ykoun fih ?,345,contrat d'apprentissage,a_relire,texte lu : contenu du contrat
+A47,tun,dans_perimetre,Chkoun ywalli el jours el 3outla el rasmiya fel khedma ?,107,jours fériés,a_relire,texte lu : fixés par décret ou convention
 A48,tun,dans_perimetre,"Ken el juge yet7ajjej 3al licenciement, chnowa ysir fel fazl ?",14 quinter,contrôle du juge,a_relire,texte lu : cause réelle et sérieuse
 A49,tun,dans_perimetre,"Ken el 3amel khdem fel 3askria, el patron yfasa5 el contrat bi sabab ?",19,service militaire,a_relire,texte lu : le service militaire n'est pas une cause de rupture
-A50,tun,dans_perimetre,"Chnowa el 7add el aksa mta3 el sa3at fel jem3a ?",93,durée maximale,a_relire,texte lu : soixante heures par semaine
-A51,tun,dans_perimetre,"Kifech yetzad el congé b sanawet el khedma ?",115,augmentation du congé,a_relire,texte lu : un jour par période de cinq ans
-A52,tun,dans_perimetre,"Chnowa el 7a9 mta3 el délégué fel sirr mta3 el khedma ?",168,secret professionnel,a_relire,texte lu : secret professionnel
-A53,tun,dans_perimetre,"Chnouwa el ma3na mta3 el congé payé ?",112,définition du congé payé,a_relire,texte lu : droit au congé payé chaque année
-A54,tun,dans_perimetre,"Win yet7attat el 9adha mta3 el congé ?",117,fixer le congé,a_relire,à vérifier
-A55,tun,hors_perimetre,"Kifech nsawwbou el tricot fel dar ?",,hors périmètre,a_relire,question hors Code du travail
-A56,tun,hors_perimetre,"Chnowa el 7al mta3 el météo lyoum ?",,hors périmètre,a_relire,question hors Code du travail
-A57,tun,hors_perimetre,"Kifech nta3mel les pâtes bel sauce ?",,hors périmètre,a_relire,question hors Code du travail
-A58,tun,hors_perimetre,"Chkoun kteb el Muqaddima ta3 ibn Khaldoun ?",,hors périmètre,a_relire,question hors Code du travail
-A59,tun,hors_perimetre,"Chnowa el 9adhiya ta3 el match elli tel3ab lyoum ?",,hors périmètre,a_relire,question hors Code du travail
+A50,tun,dans_perimetre,Chnowa el 7add el aksa mta3 el sa3at fel jem3a ?,93,durée maximale,a_relire,texte lu : soixante heures par semaine
+A51,tun,dans_perimetre,Kifech yetzad el congé b sanawet el khedma ?,115,augmentation du congé,a_relire,texte lu : un jour par période de cinq ans
+A52,tun,dans_perimetre,Chnowa el 7a9 mta3 el délégué fel sirr mta3 el khedma ?,168,secret professionnel,a_relire,texte lu : secret professionnel
+A53,tun,dans_perimetre,Chnouwa el ma3na mta3 el congé payé ?,112,définition du congé payé,a_relire,texte lu : droit au congé payé chaque année
+A54,tun,dans_perimetre,Win yet7attat el 9adha mta3 el congé ?,117,fixer le congé,a_relire,texte lu : ordre des départs en congé
+A55,tun,hors_perimetre,Kifech nsawwbou el tricot fel dar ?,,hors périmètre,a_relire,question hors Code du travail
+A56,tun,hors_perimetre,Chnowa el 7al mta3 el météo lyoum ?,,hors périmètre,a_relire,question hors Code du travail
+A57,tun,hors_perimetre,Kifech nta3mel les pâtes bel sauce ?,,hors périmètre,a_relire,question hors Code du travail
+A58,tun,hors_perimetre,Chkoun kteb el Muqaddima ta3 ibn Khaldoun ?,,hors périmètre,a_relire,question hors Code du travail
+A59,tun,hors_perimetre,Chnowa el 9adhiya ta3 el match elli tel3ab lyoum ?,,hors périmètre,a_relire,question hors Code du travail
