@@ -124,3 +124,27 @@ def test_evaluateur_refuse_modele_vide(tmp_path):
                     encoding="utf-8")
     assert main(["--gold", str(gold), "--predictions", str(gold),
                  "--sortie", str(tmp_path / "s.json")]) == 2
+
+
+def test_classe_role_normalise_les_formulations():
+    from src.obligation_extraction.evaluer_obligations import classe_role
+    assert classe_role("") == "aucun"
+    assert classe_role("L'employeur") == classe_role("Tout employeur qui fait une avance en espèces") == "employeur"
+    assert classe_role("Le Travailleur") == classe_role("les salariés") == "salarie"
+    assert classe_role("le Conseil de prud'hommes") == "juridiction"        # avant « conseil » / « entreprise »
+    assert classe_role("la commission consultative d'entreprise") == "organisation"
+    assert classe_role("Le maître ou toute personne") == "maitre"
+    assert classe_role("Nul") == "toute_personne" and classe_role("quelque chose") == "autre"
+
+
+def test_f1_par_role():
+    gold = [dict(_lig("a", "obligation"), qui="l'employeur"), dict(_lig("b", "obligation"), qui="le salarié"),
+            dict(_lig("c", "obligation"), qui="")]
+    preds = [dict(_pred("a", True, "obligation"), qui_predit="les employeurs"),
+             dict(_pred("b", True, "obligation"), qui_predit="l'employeur"),
+             dict(_pred("c", True, "obligation"), qui_predit="")]
+    r = evaluer(gold, preds)["resultats"]
+    assert r["role_par_classe"]["employeur"]["vp"] == 1 and r["role_par_classe"]["employeur"]["fp"] == 1
+    assert r["role_par_classe"]["salarie"]["fn"] == 1
+    assert r["role_par_classe"]["aucun"]["f1"] == 1.0
+    assert r["role_exactitude_classes"] == round(2 / 3, 4)

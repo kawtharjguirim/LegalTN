@@ -36,5 +36,109 @@
   },
   "qui_exactitude": 0.3016,
   "quand_exactitude": 0.1139,
-  "n_erreurs": 24
+  "n_erreurs": 24,
+  "role_par_classe": {
+    "employeur": {
+      "precision": 0.5714,
+      "rappel": 0.4615,
+      "f1": 0.5106,
+      "vp": 12,
+      "fp": 9,
+      "fn": 14,
+      "support_gold": 26
+    },
+    "salarie": {
+      "precision": 0.3333,
+      "rappel": 0.5556,
+      "f1": 0.4167,
+      "vp": 5,
+      "fp": 10,
+      "fn": 4,
+      "support_gold": 9
+    },
+    "apprenti": {
+      "precision": 0.0,
+      "rappel": 0.0,
+      "f1": 0.0,
+      "vp": 0,
+      "fp": 3,
+      "fn": 1,
+      "support_gold": 1
+    },
+    "maitre": {
+      "precision": 1.0,
+      "rappel": 0.5,
+      "f1": 0.6667,
+      "vp": 2,
+      "fp": 0,
+      "fn": 2,
+      "support_gold": 4
+    },
+    "administration": {
+      "precision": 0.6667,
+      "rappel": 0.2857,
+      "f1": 0.4,
+      "vp": 2,
+      "fp": 1,
+      "fn": 5,
+      "support_gold": 7
+    },
+    "juridiction": {
+      "precision": 1.0,
+      "rappel": 0.6667,
+      "f1": 0.8,
+      "vp": 2,
+      "fp": 0,
+      "fn": 1,
+      "support_gold": 3
+    },
+    "organisation": {
+      "precision": 0.2,
+      "rappel": 0.2,
+      "f1": 0.2,
+      "vp": 1,
+      "fp": 4,
+      "fn": 4,
+      "support_gold": 5
+    },
+    "parties": {
+      "precision": 0.0,
+      "rappel": 0.0,
+      "f1": 0.0,
+      "vp": 0,
+      "fp": 1,
+      "fn": 1,
+      "support_gold": 1
+    },
+    "toute_personne": {
+      "precision": 0.0,
+      "rappel": 0.0,
+      "f1": 0.0,
+      "vp": 0,
+      "fp": 2,
+      "fn": 1,
+      "support_gold": 1
+    },
+    "autre": {
+      "precision": 0.0,
+      "rappel": 0.0,
+      "f1": 0.0,
+      "vp": 0,
+      "fp": 0,
+      "fn": 6,
+      "support_gold": 6
+    },
+    "aucun": {
+      "precision": 0.7,
+      "rappel": 0.7624,
+      "f1": 0.7299,
+      "vp": 77,
+      "fp": 33,
+      "fn": 24,
+      "support_gold": 101
+    }
+  },
+  "role_exactitude_classes": 0.6159,
+  "role_macro_f1": 0.3385,
+  "role_macro_f1_roles_nommes": 0.2994
 }

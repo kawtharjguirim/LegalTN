@@ -12,6 +12,10 @@ qwen2.5:3b sur la carte graphique). Détail par requête : `audit_details.csv` ;
   AR + 42 paraphrases FR/AR. **Traductions et paraphrases écrites par Claude, à valider.**
   Aucun jeu de test gelé n'est lu.
 - **493 requêtes**, 310 réponses du LLM, **0 appel en échec**.
+- **Attention : les sections 1 à 4 décrivent la première exécution (règle d'abstention du Silver).**
+  Les chiffres de l'exécution finale (règle corrigée, 326 réponses du LLM) sont dans la section 5 et
+  dans `audit_resultats.json` ; le tableau de bord lit ce dernier. Ex. paraphrase : décision
+  identique 0,643 → **0,571** ; juste dans les deux langues : 11 → **12** sur 21.
 - Chaque question originale est posée **3 fois** : l'écart entre ces répétitions donne le **bruit de
   référence** du LLM (non déterministe), à comparer aux effets des perturbations.
 

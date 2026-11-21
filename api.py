@@ -85,6 +85,8 @@ def creer_serveur(port=8000, moteur="bm25"):
             Refuse tout chemin sortant du dossier static."""
             if chemin == "/":
                 fichier = STATIC / "index.html"
+            elif chemin == "/tableau-de-bord":      # généré par src/rapports/tableau_de_bord.py
+                fichier = STATIC / "tableau_de_bord.html"
             elif chemin.startswith("/static/"):
                 fichier = (STATIC / chemin[len("/static/"):]).resolve()
                 if not fichier.is_relative_to(STATIC):

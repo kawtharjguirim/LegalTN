@@ -13,7 +13,7 @@ alignement article par article de 494 paires arabe-français, (ii) 200 phrases a
 obligations (qui, modal, quoi, quand), sans le texte intégral du Code, et (iii) une évaluation
 de la fiabilité de l'abstention. Sur les questions neuves de l'étude, le système cite le bon
 article pour 9 questions sur 9 auxquelles il répond et refuse les 2 questions hors Code ; il
-s'abstient à tort pour 1 question sur 10. Aucun article inventé n'a été observé sur 310 réponses
+s'abstient à tort pour 1 question sur 10. Aucun article inventé n'a été observé sur 326 réponses
 générées. **Les annotations d'obligations sont des pré-annotations automatiques par un modèle de
 langage, non encore relues par un humain ; l'étude d'utilité avec des étudiants est conçue mais
 pas réalisée.**
@@ -56,6 +56,19 @@ la même distribution** (le dev ne permet pas d'évaluer la détection des permi
 test sont des quasi-doublons de phrases du dev (même article), et 46 articles figurent dans les deux
 jeux : le découpage ne garantit pas l'indépendance par article.
 
+**Évaluation de l'extracteur (dev, pré-gold Claude).** Détection d'obligation F1 0,94 ; type
+(obligation, interdiction) F1 0,98–0,99 ; **F1 par rôle** (11 classes) : exactitude 0,62, F1 macro
+0,34 — le type est trouvé, le rôle rarement, car il n'est pas nommé dans 101 phrases sur 164 (voix
+passive, sujet implicite). Le dev ayant été annoté avec les prédictions sous les yeux, ces chiffres
+sont probablement surestimés ; le test n'est pas encore mesuré.
+
+**Références croisées.** Extraction à base de règles, en français et en arabe (176 et 145 mentions :
+articles cités, plages, sous-articles, relatifs « l'article précédent », textes externes).
+Précision estimée à 91 % sur 35 mentions relues par Claude (pas de gold humain, rappel non mesuré).
+Le contrôle automatique des cibles et la **comparaison arabe/français des renvois** (68 entrées sur
+102 identiques) révèlent des défauts d'OCR du texte arabe non vus ailleurs (art. 87, 100, 125, 176,
+227, 265, 287), à confirmer sur image. Détail : `reports/platinum/references/RESULTATS.md`.
+
 **Publication.** Le dossier `data/publication/legaltn_v1/` contient l'alignement (sans texte),
 les obligations dev (la phrase est remplacée par son empreinte), les questions de développement, une
 fiche de données et des empreintes. Il **ne contient ni le texte des articles ni le test des
@@ -69,10 +82,11 @@ obligations** : la licence de l'édition source n'est pas clarifiée (`LICENCE.m
 forcée** : toute citation absente des extraits fournis est bloquée. Sur le dev (77 questions),
 R@1 est de 1,00 en français et 0,62 en arabe traduit (BM25 seul : 0,95 et 0,52).
 
-**Audit (493 requêtes, 310 réponses générées).** **0 article inventé** affiché, **0 question
+**Audit (493 requêtes, 326 réponses générées).** **0 article inventé** affiché, **0 question
 hors Code ayant reçu une réponse**. Robustesse : la décision reste identique dans 94 % des cas
-quand on retire les accents (50 % avant le correctif du signal d'abstention), 64 % pour une
-paraphrase, contre un bruit de référence de 97 % (le LLM n'est pas déterministe). Les questions en
+quand on retire les accents (50 % avant le correctif du signal d'abstention), 57 % pour une
+paraphrase, contre un bruit de référence de 97 % (le LLM n'est pas déterministe). Entre le français
+et sa traduction arabe, la réponse est juste dans les deux langues pour 12 questions sur 21. Les questions en
 dialecte tunisien latinisé sont mal traitées par la recherche directe (R@5 0,03) ; les traduire
 vers le français avec qwen2.5:7b avant la recherche donne R@5 0,50.
 

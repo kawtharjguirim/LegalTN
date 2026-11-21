@@ -138,7 +138,7 @@ statut `a_valider`) ; dev déjà consulté pour régler les seuils.
 |---|---|
 | Code | `src/audit/perturbations.py` (sans accents, faute de frappe, politesse, alif…), `src/audit/audit.py`, `src/audit/calibrer_signal.py` |
 | Commande | `& $Py -X utf8 -m src.audit.audit --sortie reports/gold/audit` (~493 requêtes, long) |
-| Résultat | 0 article inventé, 0 question hors périmètre répondue ; sans accents : décision identique 0,500 → **0,944** après correctif ; paraphrase 0,643 ; même réponse juste FR et AR : 11/21 |
+| Résultat | 0 article inventé, 0 question hors périmètre répondue ; sans accents : décision identique 0,500 → **0,944** après correctif ; paraphrase 0,571 ; même réponse juste FR et AR : 12/21 |
 | Correctif livré | signal d'abstention normalisé (`service.abstenir`) : FR normalisé < 0,8567 ; AR brut < 0,8217 **ou** normalisé < 0,8188 |
 | Rapport | `reports/gold/audit/RESULTATS.md` (versions avant correctif conservées dans les sous-dossiers) |
 
