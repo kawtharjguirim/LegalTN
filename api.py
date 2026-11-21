@@ -1,8 +1,7 @@
 """Adaptateur HTTP local ajouté à la reprise, autour de la démo BM25 récupérée.
 
 Lancer : python -X utf8 api.py --port 8000
-GET /health ; POST /repondre avec {"question": "...", "k": 3, "mode": "bm25" | "rag"}.
-Le mode "rag" (Silver) interroge un LLM local via Ollama ; repli automatique sur BM25 s'il est absent.
+GET /health ; POST /repondre avec {"question": "...", "k": 3}.
 Ne lance aucune évaluation et ne modifie ni seuil ni fichiers.
 """
 
@@ -13,13 +12,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
-import sys
-
 from src.demo import repondre
-from src.pipeline import traitement
-
-sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
-from rag import rag  # noqa: E402  (bibliothèque standard seulement : l'API reste sans dépendance)
 
 
 MAX_OCTETS = 16384
@@ -34,46 +27,8 @@ MIME = {
 }
 
 
-# "bm25" = pipeline de traitement des questions (mode historique, par défaut) ; "rag" = Silver.
-MODES = ("bm25", "rag")
-_CORPUS_RAG = {}
-
-
-def corpus_rag():
-    """Corpus BM25 utilisé par le RAG (celui des mesures Silver), chargé au premier appel seulement."""
-    if not _CORPUS_RAG:
-        _CORPUS_RAG.update(repondre.charger())
-    return _CORPUS_RAG
-
-
-def repondre_rag(question, chaine, k):
-    """Mode RAG (variante P2V) : LLM local limité aux articles retrouvés, citations vérifiées.
-
-    Si le LLM est injoignable, on répond avec le pipeline et on le signale : la démo ne plante pas."""
-    corpus = corpus_rag()
-    langue = repondre.detecter_langue(question)
-    r = rag.repondre_rag(question, corpus, "P2V")
-    if r.get("erreur"):
-        repli = chaine.repondre(question, k=k)
-        repli.update({"mode": "bm25", "avertissement":
-                      "LLM local indisponible : réponse par la recherche classique seule."})
-        return repli
-    textes = {}
-    for lg in ("fr", "ar"):
-        for a in corpus[lg].articles:
-            if a["article"] in r["articles_cites"]:
-                textes.setdefault(a["article"], {"article": a["article"], "page": a["page"]})
-                textes[a["article"]].setdefault("texte_" + lg, a["texte"])
-    return {
-        "mode": "rag", "modele": r["modele"], "langue": langue, "abstention": r["abstention"],
-        "reponse": r["reponse"], "extrait": r["extrait"],
-        "articles_cites": [textes[a] for a in r["articles_cites"] if a in textes],
-        "passages_fournis": r["passages"], "rejet": r.get("rejet"), "candidats": [],
-    }
-
-
 def creer_serveur(port=8000):
-    chaine = traitement.pipeline()
+    corpus = repondre.charger()
 
     class Requetes(BaseHTTPRequestHandler):
         def envoyer(self, statut, contenu):
@@ -115,43 +70,29 @@ def creer_serveur(port=8000):
                 return
             self.envoyer(200, {
                 "statut": "ok",
-                "articles_indexes": {langue: len(i["articles"]) for langue, i in chaine.index.items()},
+                "articles_indexes": {langue: len(c.articles) for langue, c in corpus.items()},
             })
-
-        def rejeter(self, statut, message):
-            """Refus avant lecture du corps : on lit (et jette) le corps annoncé, dans une
-            limite raisonnable, puis on ferme. Sinon, sous Windows, fermer une connexion qui
-            contient encore des octets non lus provoque une réinitialisation TCP : le client
-            reçoit ConnectionResetError/AbortedError au lieu du code d'erreur."""
-            try:
-                taille = int(self.headers.get("Content-Length", "0"))
-            except ValueError:
-                taille = 0
-            if 0 < taille <= 64 * MAX_OCTETS:
-                self.rfile.read(taille)
-            self.close_connection = True
-            self.envoyer(statut, {"erreur": message})
 
         def do_POST(self):
             if urlsplit(self.path).path != "/repondre":
-                self.rejeter(404, "Route inconnue.")
+                self.envoyer(404, {"erreur": "Route inconnue."})
                 return
             if self.headers.get_content_type() != "application/json":
-                self.rejeter(415, "Envoyer un corps JSON.")
+                self.envoyer(415, {"erreur": "Envoyer un corps JSON."})
                 return
             longueurs = self.headers.get_all("Content-Length", [])
             if len(longueurs) != 1 or self.headers.get("Transfer-Encoding"):
-                self.rejeter(400, "Une longueur de requête explicite est nécessaire.")
+                self.envoyer(400, {"erreur": "Une longueur de requête explicite est nécessaire."})
                 return
             try:
                 taille = int(longueurs[0])
             except ValueError:
                 taille = -1
             if taille < 0:
-                self.rejeter(400, "Longueur de requête invalide.")
+                self.envoyer(400, {"erreur": "Longueur de requête invalide."})
                 return
             if taille > MAX_OCTETS:
-                self.rejeter(413, "Requête trop longue.")
+                self.envoyer(413, {"erreur": "Requête trop longue."})
                 return
             try:
                 contenu = json.loads(self.rfile.read(taille).decode("utf-8"))
@@ -171,16 +112,9 @@ def creer_serveur(port=8000):
             if type(k) is not int or not 1 <= k <= 5:
                 self.envoyer(400, {"erreur": "k doit être un entier entre 1 et 5."})
                 return
-            mode = contenu.get("mode", "bm25")
-            if mode not in MODES:
-                self.envoyer(400, {"erreur": f"mode doit être l'un de : {', '.join(MODES)}."})
-                return
             debut = time.perf_counter()
-            if mode == "rag":
-                resultat = repondre_rag(question.strip(), chaine, k)
-            else:
-                resultat = chaine.repondre(question.strip(), k=k)
-                resultat["mode"] = "bm25"
+            langue = repondre.detecter_langue(question)
+            resultat = corpus[langue].repondre(question.strip(), k=k)
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION

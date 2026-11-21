@@ -1,6 +1,6 @@
 """Démo de bout en bout : question brute -> article le plus pertinent, ou abstention.
 
-Chaîne : détection de la langue -> correction orthographique SymSpell (src/correction) -> BM25 sur le corpus (FR ou AR) -> règle d'abstention -> article cité.
+Chaîne : détection de la langue -> BM25 sur le corpus (FR ou AR) -> règle d'abstention -> article cité.
 Aucun LLM, aucune API payante. La réponse est un extrait de l'article cité, pas une réponse rédigée.
 
 Usage :
@@ -86,22 +86,6 @@ def detecter_langue(question):
     return "ar" if re.search(r"[؀-ۿ]", question) else "fr"
 
 
-def repondre_question(corpus, question, k=3, corriger=True):
-    """Chaîne complète : langue -> correction SymSpell -> BM25 -> abstention.
-
-    Corpus.repondre (BM25 seul) reste inchangé : c'est la baseline sans correction.
-    """
-    langue = detecter_langue(question)
-    if corriger:
-        sys.path.insert(0, str(RACINE))
-        from src.correction.correcteur_symspell import correcteur
-        correction = correcteur().corriger(question, langue)
-    else:
-        correction = {"question_originale": question, "question_corrigee": question, "corrections": []}
-    resultat = corpus[langue].repondre(correction["question_corrigee"], k=k)
-    return {**correction, **resultat}
-
-
 def charger():
     return {
         "fr": Corpus(FR, "fr", intitule_fr, "texte_fr"),
@@ -111,8 +95,6 @@ def charger():
 
 def afficher(question, resultat):
     print(f"Question : {question}")
-    if resultat.get("corrections"):
-        print(f"Vouliez-vous dire : {resultat['question_corrigee'].rstrip(' ?')} ?")
     if resultat["abstention"]:
         print(MESSAGE_ABSTENTION)
         return
@@ -167,20 +149,12 @@ def main():
     if "--evaluer" in sys.argv:
         evaluer(corpus)
         return
-    question = " ".join(a for a in sys.argv[1:] if not a.startswith("--")).strip() or input("Question : ").strip()
+    question = " ".join(a for a in sys.argv[1:]).strip() or input("Question : ").strip()
     if not question:
         print("Question vide.")
         return
-    if "--historique" in sys.argv:          # chaîne de la correction seule (expérience SymSpell)
-        resultat = repondre_question(corpus, question, corriger="--sans-correction" not in sys.argv)
-    else:                                   # pipeline complet (src/pipeline/traitement.py)
-        sys.path.insert(0, str(RACINE))
-        from src.pipeline.traitement import pipeline
-        resultat = pipeline().repondre(question)
-        if "--debug" in sys.argv:
-            for e in resultat["etapes"]:
-                print(f"  [{e['etape']}] {e['sortie']}")
-    afficher(question, resultat)
+    langue = detecter_langue(question)
+    afficher(question, corpus[langue].repondre(question))
 
 
 if __name__ == "__main__":
