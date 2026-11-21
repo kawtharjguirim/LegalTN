@@ -1,0 +1,82 @@
+{
+  "regle": {
+    "signal": "cosnorm_max",
+    "seuils": {
+      "ar": 0.8188,
+      "fr": 0.8567
+    },
+    "seuil_brut_ar": {
+      "ar": 0.8217
+    }
+  },
+  "dev": {
+    "n": 77,
+    "n_dans": 48,
+    "n_hors": 29,
+    "fausses_abstentions": 8,
+    "hors_perimetre_repondu": 1,
+    "reponses_donnees": 41,
+    "bon_article_parmi_reponses_dans_perimetre": 34,
+    "decision_juste": 0.805,
+    "ic95_decision_juste": [
+      0.714,
+      0.883
+    ],
+    "reponse_fausse_ou_hors_parmi_donnees": 0.171
+  },
+  "etude_12_questions_neuves": {
+    "n": 12,
+    "n_dans": 10,
+    "n_hors": 2,
+    "fausses_abstentions": 1,
+    "hors_perimetre_repondu": 0,
+    "reponses_donnees": 9,
+    "bon_article_parmi_reponses_dans_perimetre": 9,
+    "decision_juste": 0.917,
+    "ic95_decision_juste": [
+      0.75,
+      1.0
+    ],
+    "reponse_fausse_ou_hors_parmi_donnees": 0.0
+  },
+  "auroc_dev": {
+    "global": 0.754,
+    "fr": 0.821,
+    "ar": 0.873
+  },
+  "dev_leave_one_out": {
+    "decision_juste": 0.74,
+    "ic95": [
+      0.649,
+      0.831
+    ],
+    "fausses_abstentions": 10,
+    "hors_perimetre_repondu": 4
+  },
+  "risque_couverture": {
+    "aire_risque": 0.2516,
+    "risque_sans_abstention": 0.558,
+    "points_cles": [
+      {
+        "couverture": 0.247,
+        "seuil": 0.8753,
+        "risque": 0.053
+      },
+      {
+        "couverture": 0.494,
+        "seuil": 0.8449,
+        "risque": 0.237
+      },
+      {
+        "couverture": 0.753,
+        "seuil": 0.8263,
+        "risque": 0.431
+      },
+      {
+        "couverture": 1.0,
+        "seuil": 0.7784,
+        "risque": 0.558
+      }
+    ]
+  }
+}

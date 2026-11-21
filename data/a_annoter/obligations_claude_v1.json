@@ -1,0 +1,2105 @@
+{
+ "_description": "Pré-annotation des 300 obligations (200 dev D001-D200, 100 test T001-T100) par Claude, le 21/11/2026, statut verifie_claude, à relire par l'auteure. Valeur : [modal, qui, quoi, quand, commentaire]. modal vide + commentaire \"non_obligation : ...\" = phrase non retenue. Conventions : qui = rôle tel qu'écrit, vide si non nommé (employeur implicite signalé en commentaire) ; une phrase à deux obligations = une ligne (la principale), l'autre signalée en commentaire. Le test (T001-T100) a été annoté par Claude, donc n'est pas indépendant de lui.",
+ "annotations": {
+  "D001": [
+   "interdiction",
+   "",
+   "organiser l'enseignement méthodique et complet de certains métiers autrement que selon les prescriptions d'un décret",
+   "dans les entreprises visées à l'article 338",
+   "rôle non nommé (sujet passif : l'enseignement)"
+  ],
+  "D002": [
+   "obligation",
+   "La caisse nationale de sécurité sociale",
+   "faire état de la durée des services accomplis chez les employeurs affiliés, dans le décompte des services",
+   "sur le vu des justifications nécessaires",
+   ""
+  ],
+  "D003": [
+   "obligation",
+   "",
+   "mentionner les accidents graves, les motifs des conflits collectifs et individuels et les éléments utiles au développement économique et social",
+   "",
+   "rôle absent : sujet = « ces rapports » (rédacteurs non nommés)"
+  ],
+  "D004": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : renvoi à un arrêté qui fixera les conditions ; l'obligation est dans l'arrêté"
+  ],
+  "D005": [
+   "obligation",
+   "",
+   "reproduire les mentions du bulletin de paie sur un livre de paie",
+   "",
+   "rôle absent (employeur implicite) ; contient aussi une permission : les inspecteurs du travail peuvent à tout moment exiger la communication du livre"
+  ],
+  "D006": [
+   "obligation",
+   "",
+   "afficher l'ordre des départs en congé dans l'entreprise",
+   "au moins 15 jours avant sa date d'entrée en application",
+   "rôle absent (employeur implicite)"
+  ],
+  "D007": [
+   "interdiction",
+   "",
+   "employer les enfants de moins de dix-huit ans et les femmes dans les établissements visés à l'article 109",
+   "pendant les journées fériées, chômées et payées, même pour rangement d'atelier",
+   "rôle absent (employeur implicite) ; les personnes citées sont les protégés"
+  ],
+  "D008": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : définition d'une catégorie d'établissements"
+  ],
+  "D009": [
+   "obligation",
+   "",
+   "faire jouir le salarié d'au moins deux jours de repos par mois",
+   "",
+   "droit du salarié ; débiteur (employeur) non nommé"
+  ],
+  "D010": [
+   "obligation",
+   "Les enfants et les adolescents travaillant sur la voie publique",
+   "porter un document reproduisant les mentions du registre",
+   "",
+   ""
+  ],
+  "D011": [
+   "obligation",
+   "le juge",
+   "apprécier l'existence du caractère réel et sérieux des causes du licenciement et le respect des procédures",
+   "sur la base des éléments de preuve présentés par les parties",
+   "« il appartient » : attribution de compétence, limite obligation/compétence"
+  ],
+  "D012": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : condition de prise en compte des services discontinus, pas de rôle ni d'action"
+  ],
+  "D013": [
+   "obligation",
+   "",
+   "déterminer les règles de représentation des syndicats au conseil d'administration et aux assemblées générales",
+   "",
+   "rôle absent : sujet = « leurs statuts » (ceux des unions de syndicats)"
+  ],
+  "D014": [
+   "obligation",
+   "",
+   "évaluer en espèces les avantages en nature non maintenus et verser la somme en plus de l'indemnité journalière",
+   "pendant la durée du congé",
+   "rôle absent (employeur implicite)"
+  ],
+  "D015": [
+   "obligation",
+   "Le travailleur",
+   "respecter les prescriptions de santé et de sécurité au travail et ne commettre aucun acte entravant leur application",
+   "",
+   ""
+  ],
+  "D016": [
+   "interdiction",
+   "",
+   "réduire les traitements et salaires à cause du chômage",
+   "en cas de chômage dans les circonstances de l'article précédent",
+   "rôle absent (employeur implicite)"
+  ],
+  "D017": [
+   "obligation",
+   "le travailleur",
+   "avertir son ancien employeur par lettre recommandée avec accusé de réception",
+   "dès qu'il connaît la date de libération du service militaire et au plus tard dans le mois suivant",
+   "condition : s'il désire reprendre son emploi"
+  ],
+  "D018": [
+   "obligation",
+   "",
+   "avertir l'employeur et attendre ses instructions",
+   "lorsque ces motifs existent, sauf péril en la demeure",
+   "sujet « il » : travailleur (référent dans la phrase précédente)"
+  ],
+  "D019": [
+   "interdiction",
+   "Aucun employeur",
+   "recruter un travailleur étranger",
+   "avant l'expiration du contrat de travail le liant à l'employeur précédent",
+   ""
+  ],
+  "D020": [
+   "obligation",
+   "",
+   "faire bénéficier les personnes touchées d'un repos compensateur égal au repos supprimé",
+   "",
+   "droit des personnes ; débiteur (employeur) non nommé"
+  ],
+  "D021": [
+   "interdiction",
+   "",
+   "charger les enfants de moins de 18 ans d'heures supplémentaires au-delà de la durée normale du travail",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D022": [
+   "obligation",
+   "un chef d'établissement",
+   "se pourvoir d'une nouvelle autorisation",
+   "lorsqu'il veut ajouter une autre activité classée à son exploitation première",
+   ""
+  ],
+  "D023": [
+   "obligation",
+   "",
+   "faire suivre le travail journalier d'un repos ininterrompu d'au moins dix heures",
+   "",
+   "rôle absent ; réserve : dispositions spéciales femmes et enfants"
+  ],
+  "D024": [
+   "interdiction",
+   "Les groupements de travailleurs ou d'employeurs liés par une convention collective",
+   "faire quoi que ce soit de nature à compromettre l'exécution loyale de la convention",
+   "",
+   "formulation « tenus de ne rien faire »"
+  ],
+  "D025": [
+   "interdiction",
+   "Tout employeur qui fait une avance en espèces",
+   "se rembourser autrement que par retenues successives ne dépassant pas le dixième des salaires dus",
+   "",
+   ""
+  ],
+  "D026": [
+   "obligation",
+   "Le maître ou toute personne à qui il aura confié la formation professionnelle",
+   "se conduire envers l'apprenti mineur en bon père de famille",
+   "",
+   ""
+  ],
+  "D027": [
+   "obligation",
+   "",
+   "établir par écrit les contrats définis",
+   "",
+   "rôle absent (parties aux contrats)"
+  ],
+  "D028": [
+   "obligation",
+   "L'employeur qui a l'intention de licencier un travailleur",
+   "indiquer les causes du licenciement dans la lettre de préavis",
+   "",
+   ""
+  ],
+  "D029": [
+   "obligation",
+   "",
+   "prendre la décision définitive concernant l'intéressé",
+   "dans un délai ne dépassant pas un mois à compter de la date de sa suspension du travail",
+   "rôle absent (auteur de la décision non nommé)"
+  ],
+  "D030": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : principe d'égalité des droits et obligations, sans obligation propre"
+  ],
+  "D031": [
+   "obligation",
+   "l'entrepreneur",
+   "respecter le délai-congé",
+   "même en cas de cessation de l'entreprise, sauf force majeure",
+   "formulation négative : la cessation ne libère pas de l'obligation"
+  ],
+  "D032": [
+   "obligation",
+   "",
+   "fixer les horaires de façon à ménager une interruption d'une demi-heure au moins après six heures consécutives de travail",
+   "après plus de six heures consécutives",
+   "rôle absent ; sujet « ils » = les horaires"
+  ],
+  "D033": [
+   "obligation",
+   "Tout employeur",
+   "prendre les mesures nécessaires et appropriées pour la protection des travailleurs et la prévention des risques professionnels",
+   "",
+   ""
+  ],
+  "D034": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : conséquence procédurale (perte d'une faculté, assujettissement)"
+  ],
+  "D035": [
+   "obligation",
+   "",
+   "établir par écrit (l'acte visé), à peine de nullité",
+   "",
+   "référent « elle » absent de la phrase ; rôle absent"
+  ],
+  "D036": [
+   "interdiction",
+   "",
+   "employer un apprenti non muni d'un contrat d'apprentissage visé par le service compétent",
+   "",
+   "rôle absent (employeur implicite) ; phrase = premier point d'une liste (1)"
+  ],
+  "D037": [
+   "obligation",
+   "",
+   "introduire le pourvoi judiciaire et l'accompagner du récépissé de dépôt de la demande en décharge ou réduction, à peine de déchéance",
+   "dans le délai d'un mois à compter de la notification de la décision",
+   "rôle absent (le demandeur)"
+  ],
+  "D038": [
+   "obligation",
+   "L'acquéreur d'un établissement",
+   "s'assurer que la taxe grevant l'établissement a été payée jusqu'au jour de la vente",
+   "",
+   ""
+  ],
+  "D039": [
+   "obligation",
+   "",
+   "rédiger le document (« il »)",
+   "au plus tard dans la quinzaine de sa mise à exécution",
+   "rôle absent ; référent « il » absent de la phrase"
+  ],
+  "D040": [
+   "obligation",
+   "",
+   "motiver la sentence",
+   "",
+   "rôle absent (arbitres)"
+  ],
+  "D041": [
+   "obligation",
+   "les employeurs",
+   "tenir un registre indiquant nom, date de naissance, heures de travail et conditions d'emploi des personnes de moins de dix-huit ans",
+   "",
+   "dans toutes les activités non agricoles"
+  ],
+  "D042": [
+   "interdiction",
+   "",
+   "arrêter l'activité de l'entreprise plus de 48 heures consécutives du fait de l'octroi de ces jours",
+   "pendant plus de 48 heures consécutives",
+   "rôle absent (employeur implicite)"
+  ],
+  "D043": [
+   "obligation",
+   "",
+   "rendre la décision",
+   "dans les quinze jours suivant la demande",
+   "rôle absent (autorité décisionnaire non nommée)"
+  ],
+  "D044": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : fixation de l'ordre des départs par l'employeur ; consultation facultative (« éventuellement »), prérogative décrite"
+  ],
+  "D045": [
+   "obligation",
+   "Les représentants patronaux et ouvriers",
+   "exercer leur activité professionnelle depuis au moins 3 ans et justifier de leur inscription sur la liste électorale du conseil des prud'hommes",
+   "",
+   "condition d'éligibilité exprimée par « doivent » ; OCR bruité (« avoir » °°”)"
+  ],
+  "D046": [
+   "obligation",
+   "Les employeurs",
+   "tenir un registre portant leur nom et leur adresse où sont indiquées les périodes de vacances",
+   "en vue du contrôle de l'application du chapitre",
+   "phrase coupée : liste numérotée tronquée"
+  ],
+  "D047": [
+   "obligation",
+   "",
+   "renouveler la proposition pour qu'elle puisse être réexaminée",
+   "si aucune suite n'a été donnée dans les 18 mois de son dépôt",
+   "rôle absent (auteur de la proposition)"
+  ],
+  "D048": [
+   "obligation",
+   "Chaque employeur occupant des travailleurs à temps partiel",
+   "tenir un registre où sont inscrits les noms et dates de naissance de ces travailleurs",
+   "",
+   ""
+  ],
+  "D049": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : extension du champ d'une obligation précédente (« cette obligation ») ; obligation propre dans la phrase précédente"
+  ],
+  "D050": [
+   "obligation",
+   "Le maître",
+   "donner à l'apprenti un enseignement progressif et complet de l'art du métier ou de la profession",
+   "",
+   ""
+  ],
+  "D051": [
+   "obligation",
+   "",
+   "obtenir une autorisation préalable pour tout transfert, transformation ou extension d'un établissement classé",
+   "avant le transfert, la transformation ou l'extension",
+   "rôle absent (exploitant implicite)"
+  ],
+  "D052": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : durée d'exercice d'un droit et rappel d'une condition de procédure ; renvoi"
+  ],
+  "D053": [
+   "obligation",
+   "",
+   "prendre le congé après entente entre l'employeur et le bénéficiaire, le jour de la naissance ou dans les 7 jours qui suivent",
+   "le jour de la naissance ou au cours des 7 jours qui suivent",
+   "rôle absent (époux salarié, nommé dans la phrase précédente)"
+  ],
+  "D054": [
+   "obligation",
+   "",
+   "faire approuver la grève ou le lock-out par la centrale syndicale ouvrière ou l'organisation centrale des employeurs",
+   "",
+   "rôle absent (organisation qui déclenche)"
+  ],
+  "D055": [
+   "permission",
+   "Chaque employeur",
+   "s'exonérer de l'obligation solidaire par un mandat donné au voyageur, représentant ou placier de conclure une police d'assurance",
+   "",
+   ""
+  ],
+  "D056": [
+   "obligation",
+   "Tout étranger qui veut exercer en Tunisie un travail salarié",
+   "être muni d'un contrat de travail et d'une carte de séjour portant la mention « autorisé à exercer un travail salarié en Tunisie »",
+   "",
+   ""
+  ],
+  "D057": [
+   "obligation",
+   "Les membres de tout syndicat professionnel chargés de l'administration ou de la direction",
+   "être de nationalité tunisienne depuis au moins cinq ans, avoir 20 ans au moins et jouir de leurs droits civils et politiques",
+   "",
+   "condition d'éligibilité"
+  ],
+  "D058": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : effet de la sentence (exécutoire, non susceptible de recours), pas d'action imposée à un rôle"
+  ],
+  "D059": [
+   "obligation",
+   "l'inspection du travail ou la Direction Générale de l'Inspection du Travail",
+   "soumettre le dossier du licenciement ou de la mise en chômage à la commission régionale ou centrale de contrôle du licenciement",
+   "dans les trois jours qui suivent l'accomplissement de la tentative de conciliation, à défaut de conciliation",
+   ""
+  ],
+  "D060": [
+   "obligation",
+   "",
+   "conclure la convention collective entre les organisations syndicales patronales et ouvrières les plus représentatives de la branche dans le territoire d'application",
+   "",
+   "rôle absent (parties à la convention)"
+  ],
+  "D061": [
+   "interdiction",
+   "",
+   "porter la durée hebdomadaire du travail à plus de soixante heures par des heures supplémentaires ou de récupération",
+   "sauf travaux urgents dont l'exécution immédiate est nécessaire pour prévenir des accidents imminents ou organiser des mesures de sauvetage",
+   "rôle absent (employeur implicite)"
+  ],
+  "D062": [
+   "obligation",
+   "",
+   "informer l'intéressé par lettre recommandée indiquant la date et les raisons de la suspension",
+   "dans un délai n'excédant pas trois jours",
+   "rôle absent (employeur implicite)"
+  ],
+  "D063": [
+   "obligation",
+   "l'employeur de l'intéressé",
+   "faire la proposition à la médaille du travail et l'adresser au gouverneur de la circonscription du candidat",
+   "",
+   "exception : personnels de l'Etat, collectivités locales et établissements publics administratifs"
+  ],
+  "D064": [
+   "interdiction",
+   "",
+   "donner un préavis inférieur à 8 jours pleins après la période d'essai",
+   "une fois la période d'essai terminée, sauf faute grave du salarié",
+   "rôle absent (employeur implicite)"
+  ],
+  "D065": [
+   "permission",
+   "Les décrets pris conformément au 1) du présent article",
+   "fixer les rapports minima obligatoires entre le nombre des apprentis et celui des ouvriers ou employés qualifiés",
+   "",
+   "sujet = des décrets (habilitation), pas un rôle de personne"
+  ],
+  "D066": [
+   "obligation",
+   "",
+   "signer la carte d'identité professionnelle par le titulaire et y indiquer signalement, nom, prénom, date et lieu de naissance, nationalité et domicile",
+   "",
+   "rôle absent (titulaire / autorité qui délivre)"
+  ],
+  "D067": [
+   "interdiction",
+   "Nul",
+   "recevoir des apprentis mineurs s'il n'est âgé de moins de 20 ans",
+   "",
+   "texte à vérifier : la condition d'âge semble inversée (OCR ou texte source)"
+  ],
+  "D068": [
+   "interdiction",
+   "",
+   "dépasser quatre-vingt-dix jours de salaire pour le montant total de l'indemnité de licenciement",
+   "",
+   "plafond ; rôle absent (employeur / juge)"
+  ],
+  "D069": [
+   "interdiction",
+   "",
+   "embaucher par l'intermédiaire d'une personne autre que celles visées, notamment les caporaux",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D070": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : champ d'exclusion (cas où les dispositions ne s'appliquent pas)"
+  ],
+  "D071": [
+   "obligation",
+   "Les membres de la commission consultative d'entreprise et les délégués du personnel, titulaires ou suppléants",
+   "respecter le secret professionnel pour les renseignements confidentiels et les procédés de fabrication",
+   "pendant l'exercice de leurs fonctions",
+   ""
+  ],
+  "D072": [
+   "obligation",
+   "",
+   "reprendre le travail",
+   "dans le mois suivant la réception de la lettre du travailleur, lorsque la reprise est possible",
+   "rôle absent (employeur implicite)"
+  ],
+  "D073": [
+   "interdiction",
+   "",
+   "récupérer les heures perdues par suite de grève ou de lock-out",
+   "sauf accord des parties",
+   "rôle absent (employeur implicite)"
+  ],
+  "D074": [
+   "interdiction",
+   "Ils",
+   "exiger une indemnité de congé payé pour les jours de repos réclamés en sus de ceux acquis",
+   "au cours de la période de référence",
+   "« ils » = les salariés (référent hors phrase)"
+  ],
+  "D075": [
+   "interdiction",
+   "",
+   "excéder deux heures par jour (le temps visé)",
+   "",
+   "référent « ce temps » absent de la phrase ; rôle absent"
+  ],
+  "D076": [
+   "obligation",
+   "",
+   "accompagner la notification des justifications de la demande de licenciement ou de mise en chômage et de la liste de tous les travailleurs de l'entreprise avec état civil, date de recrutement et qualifications",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D077": [
+   "obligation",
+   "l'employeur",
+   "dater et signer la déclaration adressée sous pli recommandé en trois exemplaires",
+   "",
+   ""
+  ],
+  "D078": [
+   "obligation",
+   "",
+   "soumettre directement au directeur général de l'inspection du travail et de conciliation tout licenciement envisagé d'un délégué titulaire ou suppléant du personnel",
+   "",
+   "sujet implicite : l'employeur (« envisagé par l'employeur ») ; le directeur doit émettre un avis motivé dans le même délai"
+  ],
+  "D079": [
+   "interdiction",
+   "",
+   "faire de discrimination entre l'homme et la femme dans l'application du code et des textes pris pour son application",
+   "",
+   "rôle absent (toute personne soumise au code)"
+  ],
+  "D080": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : sanction pénale (renvoi à l'article 254 du code pénal)"
+  ],
+  "D081": [
+   "obligation",
+   "",
+   "afficher les noms des salariés auxquels s'appliquent les dérogations permanentes de l'article 83, 2°",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D082": [
+   "obligation",
+   "l'employeur",
+   "créer et équiper un service de médecine du travail propre à l'entreprise",
+   "dans toute entreprise employant 500 travailleurs au moins",
+   ""
+  ],
+  "D083": [
+   "interdiction",
+   "",
+   "employer les enfants sans l'aptitude physique nécessaire pour les travaux confiés, dans les établissements visés à l'article 372",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D084": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : précision sur l'articulation avec le Code des obligations et des contrats (preuve)"
+  ],
+  "D085": [
+   "interdiction",
+   "",
+   "remettre l'établissement en activité sans autorisation nouvelle",
+   "avant l'obtention d'une autorisation nouvelle dans les conditions de l'article 296",
+   "rôle absent (exploitant implicite)"
+  ],
+  "D086": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : fragment de phrase (liste de droits) ; obligation à restituer dans l'article 25 complet"
+  ],
+  "D087": [
+   "obligation",
+   "",
+   "surveiller la conduite et les mœurs de l'apprenti et avertir ses parents ou leurs représentants de ses fautes graves ou de ses penchants vicieux",
+   "en tous lieux où l'apprenti demeure sous sa dépendance",
+   "sujet « il » = le maître (hors phrase)"
+  ],
+  "D088": [
+   "interdiction",
+   "",
+   "faire passer le travailleur du plein temps au temps partiel ou inversement sans son accord écrit",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D089": [
+   "interdiction",
+   "",
+   "donner à ces repos une durée totale inférieure à une heure",
+   "",
+   "rôle absent ; référent « ces repos »"
+  ],
+  "D090": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : habilitation à admettre des dérogations (point 3 d'une liste), pas d'obligation pour un rôle"
+  ],
+  "D091": [
+   "interdiction",
+   "Les salariés",
+   "être employés autrement que conformément à un horaire précisant la répartition des heures de travail",
+   "",
+   "obligation de l'employeur d'établir un horaire (débiteur implicite) ; « Les salariés » = personnes protégées"
+  ],
+  "D092": [
+   "obligation",
+   "Ce décret",
+   "déterminer les conditions d'organisation de l'enseignement professionnel et les modalités du recrutement des jeunes gens",
+   "",
+   "sujet = un décret (norme), pas un rôle de personne"
+  ],
+  "D093": [
+   "obligation",
+   "",
+   "introduire la demande de dommages-intérêts auprès du greffe du conseil de prud'hommes, à peine de déchéance",
+   "dans l'année qui suit la rupture",
+   "rôle absent (le demandeur)"
+  ],
+  "D094": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : élément de composition d'une commission (membre représentant l'organisation des employeurs)"
+  ],
+  "D095": [
+   "obligation",
+   "",
+   "tenir le registre à la disposition de l'Inspection du Travail",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D096": [
+   "interdiction",
+   "",
+   "fixer l'âge minimum d'admission au travail dangereux à moins de dix-huit ans",
+   "",
+   "règle générale d'âge ; rôle absent"
+  ],
+  "D097": [
+   "obligation",
+   "l'ouvrier",
+   "aviser son employeur des motifs de son absence",
+   "dans un délai de quinze jours",
+   "condition pour obtenir le bénéfice de la disposition"
+  ],
+  "D098": [
+   "obligation",
+   "Ils",
+   "fournir des rapports circonstanciés sur l'application des dispositions dont ils sont chargés d'assurer l'exécution",
+   "chaque trimestre",
+   "« ils » = les agents (hors phrase) ; ex. inspecteurs"
+  ],
+  "D099": [
+   "obligation",
+   "Ils",
+   "donner leurs avis sur les questions soumises par l'autorité administrative",
+   "",
+   "« ils » = membres d'une instance (hors phrase)"
+  ],
+  "D100": [
+   "interdiction",
+   "Aucun maître célibataire, veuf, divorcé ou séparé de corps",
+   "loger comme apprenties des jeunes mineures",
+   "",
+   ""
+  ],
+  "D101": [
+   "interdiction",
+   "Ils",
+   "connaître des actions fondées sur des accidents du travail et des maladies professionnelles et des litiges relatifs aux régimes de sécurité sociale",
+   "",
+   "« ils » = les conseils de prud'hommes (hors phrase) ; incompétence"
+  ],
+  "D102": [
+   "interdiction",
+   "",
+   "contenir dans les conventions collectives d'établissement des dispositions moins favorables aux travailleurs que celles de la convention agréée applicable",
+   "",
+   "sujet = les conventions (normes) ; rôle absent"
+  ],
+  "D103": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : effet juridique (inefficacité de la convention non agréée)"
+  ],
+  "D104": [
+   "obligation",
+   "",
+   "déclarer toute modification apportée aux déclarations consignées à la carte d'identité professionnelle",
+   "au moment du renouvellement",
+   "rôle absent (titulaire de la carte)"
+  ],
+  "D105": [
+   "interdiction",
+   "",
+   "donner aux autres fractions du congé une durée inférieure à un jour entier",
+   "",
+   "rôle absent ; référent « les autres fractions »"
+  ],
+  "D106": [
+   "interdiction",
+   "Aucun enfant âgé de moins de 16 ans",
+   "être occupé à des travaux légers plus de deux heures par jour ni consacrer à l'école et aux travaux légers plus de sept heures par jour",
+   "plus de deux heures par jour, jours de classe comme jours de vacances",
+   "débiteur réel : l'employeur ; 2e point d'une liste"
+  ],
+  "D107": [
+   "obligation",
+   "le chef d'entreprise",
+   "payer à son personnel toutes gratifications de fin de service prévues par la loi, les conventions ou les usages",
+   "si la fermeture ou l'interdiction doit excéder trois mois",
+   "sans préjudice des dommages-intérêts éventuels"
+  ],
+  "D108": [
+   "interdiction",
+   "",
+   "dépasser le salaire de trois mois pour la gratification de fin de service",
+   "quelle que soit la durée du service effectif, sauf dispositions plus favorables",
+   "plafond ; rôle absent (employeur / juge)"
+  ],
+  "D109": [
+   "interdiction",
+   "Les Conseils Régionaux et le Conseil Central d'Arbitrage",
+   "statuer sur autre chose que les points litigieux soumis à l'arbitrage",
+   "",
+   ""
+  ],
+  "D110": [
+   "obligation",
+   "",
+   "faire jouir chaque ouvrier d'un repos compensateur d'une durée égale au repos supprimé",
+   "dans ces entreprises",
+   "droit de l'ouvrier ; débiteur (employeur) non nommé"
+  ],
+  "D111": [
+   "interdiction",
+   "",
+   "conclure des conventions collectives d'établissement sauf si une convention collective agréée est déjà applicable",
+   "sauf dérogation prévue par arrêté du Secrétaire d'Etat",
+   "rôle absent (parties à la convention)"
+  ],
+  "D112": [
+   "obligation",
+   "le ministre",
+   "rendre la décision",
+   "dans le mois suivant la réclamation",
+   "« la décision du ministre doit intervenir »"
+  ],
+  "D113": [
+   "interdiction",
+   "",
+   "ouvrir un établissement classé sans autorisation accordée par arrêté du Secrétaire d'Etat au Plan et à l'Economie Nationale",
+   "",
+   "rôle absent (exploitant)"
+  ],
+  "D114": [
+   "obligation",
+   "",
+   "contenir les nom, prénom, nationalité, date de naissance, profession, domicile du maître ou raison et siège social de l'entreprise",
+   "",
+   "référent « il » absent (contrat d'apprentissage) ; premier point d'une liste ; rôle absent"
+  ],
+  "D115": [
+   "interdiction",
+   "Aucun syndicat",
+   "se constituer comme une section d'une organisation syndicale étrangère dépendant administrativement de celle-ci",
+   "",
+   ""
+  ],
+  "D116": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : fragment OCR tronqué (début illisible) ; décrit comment sont appréciés les dommages-intérêts"
+  ],
+  "D117": [
+   "interdiction",
+   "",
+   "faire durer la période d'emploi de l'enfant au-delà de minuit et ne pas lui accorder un repos de quatorze heures consécutives au moins",
+   "",
+   "rôle absent (employeur implicite) ; contient deux obligations : plafond horaire (interdiction) et repos de 14 h (obligation)"
+  ],
+  "D118": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : dispense du secret professionnel (levée d'une obligation) au profit des agents de l'inspection"
+  ],
+  "D119": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : conséquence procédurale (affaire rayée, réintroduction après 8 jours)"
+  ],
+  "D120": [
+   "obligation",
+   "L'employeur",
+   "informer par écrit l'Inspection du Travail territorialement compétente de son intention de réembaucher les travailleurs",
+   "",
+   ""
+  ],
+  "D121": [
+   "obligation",
+   "",
+   "soumettre à la commission consultative d'entreprise, pour avis, tout licenciement envisagé d'un représentant du personnel membre de la commission",
+   "",
+   "sujet implicite : l'employeur (« envisagé par l'employeur »)"
+  ],
+  "D122": [
+   "obligation",
+   "",
+   "tenir le livre de paie par ordre de date, sans blanc, lacune, rature, surcharge ni apostille non approuvés du salarié",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D123": [
+   "interdiction",
+   "",
+   "employer ou laisser employer les enfants de moins de dix-huit ans et les femmes dans les établissements de récupération, transformation ou entreposage des vieux métaux",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D124": [
+   "obligation",
+   "Les bénéficiaires d'un congé",
+   "jouir du congé de quinze jours",
+   "dans l'année qui suit la date d'ouverture du droit à congé",
+   "phrase coupée (la suite de la liste concerne les congés plus courts)"
+  ],
+  "D125": [
+   "obligation",
+   "tous les chefs de ces entreprises",
+   "réparer solidairement les conséquences de l'accident",
+   "lorsqu'un voyageur, représentant ou placier est victime d'un accident au cours de déplacements pour le compte de plusieurs entreprises",
+   "« incombe solidairement »"
+  ],
+  "D126": [
+   "obligation",
+   "",
+   "accompagner la demande du récépissé postal de la lettre recommandée et de l'avis de réception",
+   "dans les deux années suivant l'accident",
+   "fragment de phrase ; rôle absent (demandeur)"
+  ],
+  "D127": [
+   "obligation",
+   "un chef d'établissement ou son gérant responsable",
+   "faire connaître au Bureau Public de Placement ou à l'Inspection régionale du travail les nom, prénom, nationalité et adresse du préposé",
+   "lorsqu'il charge un préposé d'embaucher le personnel",
+   ""
+  ],
+  "D128": [
+   "obligation",
+   "",
+   "régler immédiatement les parties de la demande reconnues exactes par le défendeur",
+   "",
+   "rôle absent (le défendeur) ; la seconde moitié (« seules les parties contestées sont soumises au jugement ») est procédurale"
+  ],
+  "D129": [
+   "obligation",
+   "",
+   "soumettre à l'inspection médicale du travail territorialement compétente tout licenciement envisagé d'un médecin du travail",
+   "après avis de la commission consultative d'entreprise ou du délégué du personnel",
+   "sujet implicite : l'employeur (« celui-ci »)"
+  ],
+  "D130": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : intitulé de chapitre"
+  ],
+  "D131": [
+   "obligation",
+   "Tout employeur ayant recruté un travailleur étranger",
+   "inscrire le travailleur sur un registre spécial conforme au modèle fixé par arrêté du ministre chargé de l'emploi",
+   "dans un délai de 48 heures",
+   ""
+  ],
+  "D132": [
+   "obligation",
+   "",
+   "mentionner l'examen médical d'aptitude au registre visé à l'article 59",
+   "",
+   "rôle absent (médecin du travail / employeur) ; l'examen est gratuit (précision)"
+  ],
+  "D133": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de responsabilité (le salarié est responsable du vol), pas une action imposée ; l'obligation de restituer est présupposée"
+  ],
+  "D134": [
+   "permission",
+   "Tout salarié",
+   "exiger de son employeur un certificat contenant la date d'entrée, la date de sortie, la nature des emplois et les périodes d'emploi",
+   "à l'expiration du contrat de travail",
+   ""
+  ],
+  "D135": [
+   "interdiction",
+   "Le salarié",
+   "renoncer par avance au droit éventuel de demander des dommages et intérêts",
+   "",
+   ""
+  ],
+  "D136": [
+   "obligation",
+   "",
+   "associer les responsables de la santé et de la sécurité au travail à l'examen des questions de santé et de sécurité",
+   "au moment de l'examen des questions de santé et de sécurité au travail",
+   "rôle absent (employeur / commission) ; « s'ils existent »"
+  ],
+  "D137": [
+   "obligation",
+   "Les propriétaires, directeurs ou gérants des établissements sus indiqués",
+   "permettre à tout moment aux agents de faire les constatations nécessaires et de prendre connaissance des arrêtés d'autorisation ou des titres en tenant lieu",
+   "à tout moment, ou après avoir été dûment requis",
+   ""
+  ],
+  "D138": [
+   "obligation",
+   "",
+   "prévenir sans retard (les parents de l'apprenti) en cas de maladie, d'absence ou de tout autre fait motivant leur intervention",
+   "en cas de maladie, d'absence ou de tout autre fait de nature à motiver leur intervention",
+   "sujet « il » = le maître (hors phrase)"
+  ],
+  "D139": [
+   "obligation",
+   "ils",
+   "stipuler un délai-congé d'une durée au moins égale à celle fixée par les conventions collectives ou, à défaut, par les usages",
+   "dans ce dernier cas",
+   "« ils » = les parties (hors phrase) ; texte confus (OCR)"
+  ],
+  "D140": [
+   "obligation",
+   "La Caisse Nationale de Sécurité Sociale",
+   "faire figurer le montant des remboursements effectués et le nombre des bénéficiaires dans son rapport annuel d'activité adressé au secrétariat d'Etat",
+   "avant le 1er avril de chaque année",
+   ""
+  ],
+  "D141": [
+   "obligation",
+   "Le chef d'établissement",
+   "tenir à jour un tableau inscrivant les dates des jours où il est fait usage des dérogations avec indication de leur durée",
+   "au fur et à mesure de l'envoi des avis à l'Inspection du Travail",
+   ""
+  ],
+  "D142": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : élément d'une liste de cas où le CDD est possible"
+  ],
+  "D143": [
+   "obligation",
+   "",
+   "mettre à pied les travailleurs étrangers indûment employés",
+   "dès la constatation de l'infraction, sur réquisition des agents désignés à l'article 270",
+   "rôle absent (employeur) ; « Les travailleurs » est le complément, pas le débiteur"
+  ],
+  "D144": [
+   "interdiction",
+   "l'employeur",
+   "rompre le contrat de travail en raison de la suspension du travail prévue à l'article, à peine de dommages-intérêts au profit du salarié",
+   "",
+   ""
+  ],
+  "D145": [
+   "obligation",
+   "Les membres de la commission",
+   "respecter le secret professionnel sur les informations et documents obtenus à l'occasion de leurs fonctions",
+   "",
+   ""
+  ],
+  "D146": [
+   "obligation",
+   "L'employeur",
+   "justifier aux agents chargés de l'application du chapitre avoir fait les déclarations des articles 278 et 280",
+   "à tout moment",
+   ""
+  ],
+  "D147": [
+   "obligation",
+   "",
+   "protéger l'apprenti contre les mauvais traitements de la part de ses compagnons de travail ou d'autres personnes",
+   "",
+   "sujet « il » = le maître (hors phrase)"
+  ],
+  "D148": [
+   "interdiction",
+   "",
+   "employer les enfants de moins de 18 ans sans examen médical approfondi justifiant leur aptitude",
+   "avant l'emploi : après un examen médical approfondi",
+   "rôle absent (employeur implicite)"
+  ],
+  "D149": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : critères d'appréciation du préjudice par le juge (règle d'évaluation)"
+  ],
+  "D150": [
+   "obligation",
+   "",
+   "contenir les jour, mois et an, les nom, prénom, profession et domicile du demandeur, l'indication des chefs de la demande, le jour et l'heure de la comparution",
+   "",
+   "sujet = la lettre (convocation) ; rôle absent (greffe)"
+  ],
+  "D151": [
+   "interdiction",
+   "",
+   "employer les enfants de moins de 16 ans dans les activités régies par le code",
+   "sous réserve des dispositions spéciales du code",
+   "rôle absent (employeur implicite)"
+  ],
+  "D152": [
+   "obligation",
+   "",
+   "remplacer le temps non employé en raison d'une maladie ou d'une absence de plus de 15 jours",
+   "à la fin de l'apprentissage",
+   "sujet « il » = l'apprenti (hors phrase)"
+  ],
+  "D153": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : mise à disposition des avis des syndicats aux parties, qui peuvent en prendre copie (droit d'accès) ; permission portée par « les parties »"
+  ],
+  "D154": [
+   "interdiction",
+   "",
+   "recruter des étrangers lorsqu'il existe des compétences tunisiennes dans les spécialités concernées",
+   "lorsqu'il existe des compétences tunisiennes dans les spécialités concernées",
+   "rôle absent (employeur implicite)"
+  ],
+  "D155": [
+   "obligation",
+   "",
+   "compenser les prolongations de la durée du travail par des heures de repos équivalentes",
+   "durant l'année",
+   "rôle absent (employeur implicite)"
+  ],
+  "D156": [
+   "obligation",
+   "",
+   "faire la déclaration de cessation d'activité de l'entreprise",
+   "un mois avant la date de cessation de l'activité",
+   "rôle absent (employeur implicite)"
+  ],
+  "D157": [
+   "obligation",
+   "",
+   "faire bénéficier les enfants de moins de dix-huit ans d'un repos de nuit d'au moins douze heures consécutives (moins de seize ans) ou dix heures (de seize à dix-huit ans), avec repos compensateur pendant le jour",
+   "pendant la nuit ; repos compensateur pendant le jour",
+   "droit des enfants ; débiteur (employeur) non nommé"
+  ],
+  "D158": [
+   "obligation",
+   "les employeurs",
+   "fournir à chaque membre du personnel permanent deux complets de travail, deux chemises, une paire de chaussures et un couvre-chef",
+   "le 1er mai de chaque année",
+   "frais supportés moitié par l'employeur, moitié par le salarié (art. 333)"
+  ],
+  "D159": [
+   "interdiction",
+   "",
+   "rompre le contrat de travail en raison de l'application de l'article 68-3",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D160": [
+   "obligation",
+   "",
+   "prononcer le jugement en audience publique",
+   "toujours",
+   "rôle absent (juridiction)"
+  ],
+  "D161": [
+   "obligation",
+   "",
+   "aménager une chambre spéciale d'allaitement",
+   "dans tout établissement occupant au moins cinquante femmes",
+   "rôle absent (employeur implicite)"
+  ],
+  "D162": [
+   "obligation",
+   "l'employeur",
+   "délivrer au salarié un certificat justificatif de ses droits à congé, compte tenu de la durée des services",
+   "à l'occasion de la résiliation du contrat de travail, quelles qu'en soient les circonstances",
+   "présent de l'indicatif à valeur obligatoire"
+  ],
+  "D163": [
+   "obligation",
+   "L'apprenti",
+   "devoir à son maître fidélité, obéissance et respect, et l'aider par son travail dans la mesure de ses aptitudes et de ses forces",
+   "",
+   ""
+  ],
+  "D164": [
+   "obligation",
+   "",
+   "munir chaque salle d'un nombre de sièges égal à celui des femmes qui y sont employées",
+   "",
+   "rôle absent (chef d'entreprise implicite) ; sujet = les locaux"
+  ],
+  "D165": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : principe d'égalité de droits et d'obligations entre travailleur étranger et tunisien"
+  ],
+  "D166": [
+   "obligation",
+   "",
+   "faire figurer dans la notification le nom et l'adresse de l'entreprise, le nom du responsable, la date de démarrage et la nature de l'activité, et les raisons de la demande de licenciement ou de mise en chômage",
+   "",
+   "sujet = la notification ; rôle absent (employeur)"
+  ],
+  "D167": [
+   "obligation",
+   "les sous-entrepreneurs",
+   "porter sur les bulletins de paie, outre leur propre nom et adresse, ceux de la personne de qui ils tiennent les travaux",
+   "quel que soit le lieu où s'exécutent les travaux",
+   ""
+  ],
+  "D168": [
+   "obligation",
+   "",
+   "aviser le salarié, lors de son embauchage, s'il est engagé à titre permanent, saisonnier ou occasionnel",
+   "lors de son embauchage",
+   "droit du salarié ; débiteur (employeur) non nommé"
+  ],
+  "D169": [
+   "obligation",
+   "Le maître",
+   "délivrer à l'apprenti ou à son représentant un certificat constatant l'exécution du contrat",
+   "à la fin de l'apprentissage",
+   ""
+  ],
+  "D170": [
+   "obligation",
+   "Le greffier du conseil",
+   "inscrire la requête sur le registre consacré à cet effet et la présenter au président du conseil",
+   "le jour de sa réception",
+   ""
+  ],
+  "D171": [
+   "obligation",
+   "",
+   "payer tout travail commandé ou accepté et non publié",
+   "",
+   "rôle absent (commanditaire)"
+  ],
+  "D172": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : description de la composition d'une commission (parité)"
+  ],
+  "D173": [
+   "obligation",
+   "",
+   "établir le contrat en trois originaux : un pour l'employeur, un pour l'apprenti ou son représentant légal, un pour le service compétent",
+   "",
+   "rôle absent (parties) ; sujet « il » = le contrat d'apprentissage"
+  ],
+  "D174": [
+   "obligation",
+   "Tout employeur qui a l'intention de licencier ou de mettre en chômage pour des raisons économiques ou technologiques tout ou partie de son personnel permanent",
+   "notifier son intention à l'inspection du travail territorialement compétente",
+   "au préalable",
+   ""
+  ],
+  "D175": [
+   "obligation",
+   "",
+   "mentionner sur la carte la production de l'attestation avec les visas qu'elle comporte",
+   "",
+   "rôle absent (autorité qui délivre la carte)"
+  ],
+  "D176": [
+   "interdiction",
+   "",
+   "fixer l'indemnité à une somme inférieure à un mois des derniers appointements par année ou fraction d'année de collaboration, dans la limite de 15 mensualités",
+   "",
+   "plancher ; référent « elle » absent (indemnité) ; rôle absent"
+  ],
+  "D177": [
+   "permission",
+   "Des arrêtés du Secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales",
+   "substituer à l'intervalle de repos un autre intervalle de douze heures qui ne peut commencer après huit heures trente du soir ni se terminer avant six heures du matin",
+   "en raison des conditions locales ou des circonstances, après avis des organisations syndicales intéressées",
+   "sujet = des arrêtés (habilitation), pas un rôle de personne"
+  ],
+  "D178": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de calcul de l'effectif"
+  ],
+  "D179": [
+   "interdiction",
+   "",
+   "maintenir l'enfant dans son emploi sans renouvellement de l'examen médical",
+   "au cours de chaque semestre",
+   "rôle absent (employeur implicite)"
+  ],
+  "D180": [
+   "obligation",
+   "",
+   "signer le contrat d'apprentissage par le maître, par l'apprenti s'il est majeur ou par son représentant légal s'il est mineur",
+   "",
+   "sujet = le contrat ; signataires = maître, apprenti ou représentant"
+  ],
+  "D181": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de propriété de la médaille du travail"
+  ],
+  "D182": [
+   "obligation",
+   "",
+   "tenir compte des usages, de la nature des services, de l'ancienneté combinée avec l'âge, des retenues et versements pour retraite et de toutes les circonstances pour fixer l'indemnité",
+   "",
+   "tournure impersonnelle « il est tenu compte » ; rôle absent (juge)"
+  ],
+  "D183": [
+   "obligation",
+   "",
+   "déclarer sur timbre, avec la signature légalisée des parties, toute modification de la situation juridique d'un établissement classé",
+   "",
+   "rôle absent (exploitant / parties)"
+  ],
+  "D184": [
+   "interdiction",
+   "",
+   "verser des salaires inférieurs à ceux fixés par les textes réglementaires ou les conventions collectives sectorielles du fait de l'application des dispositions précédentes",
+   "en aucun cas",
+   "rôle absent (employeur implicite)"
+  ],
+  "D185": [
+   "obligation",
+   "L'employeur",
+   "adresser les trois originaux au service compétent du Secrétariat d'Etat",
+   "",
+   "« obligatoirement » ; contient aussi l'obligation du service de retourner les deux originaux visés"
+  ],
+  "D186": [
+   "interdiction",
+   "",
+   "employer l'apprenti à d'autres travaux et services que ceux qui se rattachent à l'exercice de sa profession",
+   "sauf convention contraire écrite",
+   "sujet « il » = le maître (hors phrase)"
+  ],
+  "D187": [
+   "interdiction",
+   "",
+   "prononcer une promotion à un échelon supérieur si l'intéressé compte moins de 5 ans dans l'échelon inférieur",
+   "à moins de services exceptionnels rendus dans le cadre du développement économique et social du pays",
+   "rôle absent (autorité)"
+  ],
+  "D188": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : définition d'une catégorie d'établissements classés (même si « doivent être éloignés »)"
+  ],
+  "D189": [
+   "interdiction",
+   "",
+   "employer la nuit les enfants de moins de quatorze ans pendant une période d'au moins quatorze heures consécutives comprenant l'intervalle de huit heures du soir à huit heures du matin",
+   "pendant une période d'au moins quatorze heures consécutives incluant 20 h–8 h",
+   "rôle absent (employeur implicite)"
+  ],
+  "D190": [
+   "interdiction",
+   "",
+   "effectuer le paiement le jour où l'ouvrier ou l'employé a droit au repos",
+   "le jour de repos légal ou conventionnel",
+   "rôle absent (employeur implicite)"
+  ],
+  "D191": [
+   "obligation",
+   "",
+   "payer la rémunération en monnaie ayant cours légal en Tunisie",
+   "",
+   "rôle absent (employeur implicite) ; sauf dispositions contraires"
+  ],
+  "D192": [
+   "interdiction",
+   "",
+   "accorder la médaille du travail aux directeurs généraux, directeurs et gérants de sociétés non assujettis à l'impôt sur les traitements et salaires",
+   "",
+   "rôle absent (autorité qui décerne)"
+  ],
+  "D193": [
+   "obligation",
+   "l'employeur",
+   "faire bénéficier le salarié de son congé de façon qu'il soit achevé une semaine au moins avant l'expiration du contrat, sous peine de dommages-intérêts",
+   "lorsque le contrat est à durée déterminée ; congé achevé au moins une semaine avant l'expiration",
+   ""
+  ],
+  "D194": [
+   "obligation",
+   "",
+   "présenter le registre aux agents de l'Inspection du Travail",
+   "à chaque demande",
+   "« obligatoirement » ; rôle absent (employeur implicite)"
+  ],
+  "D195": [
+   "interdiction",
+   "",
+   "verser aux travailleurs en CDD des salaires de base et indemnités inférieurs à ceux des travailleurs permanents de même qualification",
+   "",
+   "sujet = les salaires ; rôle absent (employeur implicite) ; point 3 d'une liste"
+  ],
+  "D196": [
+   "obligation",
+   "Les fondateurs de tout syndicat professionnel",
+   "déposer ou adresser par pli recommandé avec accusé de réception, en cinq exemplaires, au siège du Gouvernorat ou de la Délégation, les statuts et les pièces listées",
+   "dès la constitution du syndicat",
+   "phrase coupée : liste numérotée tronquée"
+  ],
+  "D197": [
+   "obligation",
+   "",
+   "constater le contrat d'apprentissage par écrit, à peine de nullité",
+   "",
+   "rôle absent (parties)"
+  ],
+  "D198": [
+   "interdiction",
+   "",
+   "imputer sur le congé annuel les jours de maladie, les repos des femmes en couches et les périodes obligatoires d'instruction militaire",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "D199": [
+   "obligation",
+   "La partie qui prend la décision de demander la résiliation du contrat pour l'une des causes prévues",
+   "notifier la décision par écrit à l'autre partie ou à son représentant ainsi qu'au service compétent du Secrétariat d'Etat",
+   "",
+   ""
+  ],
+  "D200": [
+   "interdiction",
+   "Les conseillers prud'hommes",
+   "réclamer aux parties des frais pour les formalités remplies par eux",
+   "",
+   "ils exercent gratuitement leurs fonctions"
+  ],
+  "T001": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : renvoi à un arrêté qui fixera l'âge minimum des autorisations individuelles"
+  ],
+  "T002": [
+   "permission",
+   "le Ministre chargé des Affaires Sociales",
+   "prescrire par arrêté des intervalles de temps différents pendant lesquels l'emploi des enfants est interdit",
+   "dans certaines régions, industries ou entreprises, après consultation des organisations syndicales, à condition que le repos de nuit comprenne l'intervalle de 23 h à 7 h",
+   ""
+  ],
+  "T003": [
+   "permission",
+   "",
+   "ordonner la comparution personnelle des parties",
+   "toujours",
+   "rôle absent (juridiction)"
+  ],
+  "T004": [
+   "obligation",
+   "",
+   "indiquer l'existence de la convention collective, les parties signataires, la date et le lieu de son dépôt",
+   "",
+   "sujet = l'avis ; rôle absent (autorité qui publie)"
+  ],
+  "T005": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de preuve (liberté des moyens de preuve)"
+  ],
+  "T006": [
+   "permission",
+   "l'employeur et le travailleur",
+   "conclure un accord par lequel le travailleur s'engage à poursuivre son travail dans l'entreprise en contrepartie d'une formation, pour une durée minimale proportionnelle aux frais et n'excédant pas quatre ans",
+   "",
+   ""
+  ],
+  "T007": [
+   "permission",
+   "l'employeur",
+   "fractionner le congé lorsqu'il s'accompagne de la fermeture de l'établissement",
+   "sur avis conforme des délégués du personnel, s'il en existe",
+   ""
+  ],
+  "T008": [
+   "obligation",
+   "",
+   "veiller à la protection de la santé des travailleurs, garantir des conditions de travail adéquates, protéger des risques liés aux machines, fournir des moyens de prévention et initier les travailleurs, informer et sensibiliser sur les risques de la profession",
+   "",
+   "sujet « il » = l'employeur (art. 152, hors phrase) ; liste de cinq actions"
+  ],
+  "T009": [
+   "permission",
+   "les agents chargés de l'Inspection du Travail",
+   "prescrire des mesures immédiatement exécutoires",
+   "dans le cas de danger imminent pour la santé et la sécurité des travailleurs",
+   ""
+  ],
+  "T010": [
+   "interdiction",
+   "",
+   "appliquer les dispositions de l'article 68-2 à la femme travailleuse",
+   "pendant une période de seize semaines au minimum avant et après l'accouchement, dont au moins huit avant la date probable",
+   "rôle absent (employeur implicite)"
+  ],
+  "T011": [
+   "interdiction",
+   "",
+   "employer les femmes, quel que soit leur âge, et les enfants de moins de 18 ans à des travaux souterrains dans les mines et carrières",
+   "",
+   "rôle absent (employeur implicite)"
+  ],
+  "T012": [
+   "permission",
+   "",
+   "renouveler plus d'une fois le contrat de travail d'étrangers",
+   "dans le cadre de projets de développement agréés par les autorités compétentes, pour des étrangers employés dans leurs entreprises exerçant en Tunisie",
+   "rôle absent (employeur implicite) ; exception à une limite"
+  ],
+  "T013": [
+   "permission",
+   "Le Conseil d'Arbitrage",
+   "corriger une erreur matérielle dans le texte de la sentence",
+   "sur sa propre initiative ou à la demande d'une partie, au cours de sept jours à partir de la sentence",
+   ""
+  ],
+  "T014": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : début de phrase long, coupé (présentation du cas) ; mesures dans la suite non incluse"
+  ],
+  "T015": [
+   "obligation",
+   "",
+   "contenir un rapport de l'employeur justifiant l'attribution de la Médaille du Travail, l'échelon occupé et la date de la dernière promotion, un extrait de casier judiciaire de moins de trois mois et les attestations justifiant l'ancienneté",
+   "",
+   "sujet = la demande ; rôle absent (employeur auteur de la demande) ; texte avec numérotation mêlée"
+  ],
+  "T016": [
+   "interdiction",
+   "",
+   "employer les enfants de moins de dix-huit ans à aucun travail",
+   "entre dix heures du soir et cinq heures du matin",
+   "rôle absent (employeur implicite)"
+  ],
+  "T017": [
+   "obligation",
+   "l'employeur",
+   "verser au budget de l'Etat, pour le fonds des accidents du travail, une somme égale au triple de la partie du salaire insuffisamment payée",
+   "en cas de paiement de salaire insuffisant",
+   "sans préjudice de la réparation due au salarié"
+  ],
+  "T018": [
+   "permission",
+   "Le Président du Conseil de Prud'hommes",
+   "autoriser la convocation pour un délai plus court, même d'heure à heure",
+   "",
+   ""
+  ],
+  "T019": [
+   "obligation",
+   "Celle-ci (la femme)",
+   "avertir l'employeur du motif de son absence",
+   "",
+   "référent « celle-ci » = la femme (phrase précédente)"
+  ],
+  "T020": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de recouvrement (peuvent être poursuivis solidairement), pas d'action imposée"
+  ],
+  "T021": [
+   "obligation",
+   "Le greffier de la juridiction d'appel",
+   "inscrire l'appel sur un registre ad hoc, en délivrer récépissé à son auteur et une convocation à la séance du jugement dont la date ne doit pas dépasser 15 jours à partir de la réception de la demande",
+   "dont la date ne doit pas dépasser 15 jours à partir de la réception de la demande d'appel",
+   ""
+  ],
+  "T022": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : précision sur l'objet possible d'un document (délivré pour un travail ou une durée déterminés) ; « il » absent"
+  ],
+  "T023": [
+   "permission",
+   "Le Secrétaire d'Etat au Plan et à l'Economie Nationale",
+   "accorder la remise totale ou partielle de l'amende",
+   "sur demande timbrée",
+   ""
+  ],
+  "T024": [
+   "permission",
+   "",
+   "conclure un contrat de travail à durée déterminée dans d'autres cas, sur accord entre l'employeur et le travailleur",
+   "à condition que la durée n'excède pas quatre ans, renouvellements compris ; tout recrutement après l'expiration sera permanent et sans période d'essai",
+   "rôle absent (parties) ; contient une conséquence (recrutement permanent)"
+  ],
+  "T025": [
+   "permission",
+   "",
+   "accorder le repos hebdomadaire un autre jour de la semaine",
+   "sur accord des deux parties dans l'entreprise ou par autorisation du gouverneur lorsque la nécessité du travail l'exige",
+   "référent « il » = le repos hebdomadaire"
+  ],
+  "T026": [
+   "permission",
+   "L'inspection du travail et l'inspection médicale du travail",
+   "exiger des renouvellements spéciaux de l'examen médical",
+   "",
+   ""
+  ],
+  "T027": [
+   "permission",
+   "Les salariés résidant et travaillant à l'étranger chez un employeur tunisien ou dans une succursale ou agence d'un établissement dont le siège social est en Tunisie",
+   "obtenir la Médaille du Travail",
+   "",
+   ""
+  ],
+  "T028": [
+   "obligation",
+   "",
+   "faire signer le registre par les bénéficiaires du congé et le tenir à la disposition des Inspecteurs du Travail",
+   "",
+   "rôle absent (employeur) ; deux actions"
+  ],
+  "T029": [
+   "interdiction",
+   "",
+   "cumuler le travail à plein temps et le travail à temps partiel",
+   "",
+   "rôle absent (travailleur / employeur)"
+  ],
+  "T030": [
+   "permission",
+   "Les agents chargés de l'Inspection du Travail, munis d'une pièce justificative de leurs fonctions",
+   "pénétrer librement sans avertissement préalable, à toute heure, dans tout établissement assujetti au contrôle ; pénétrer de jour dans les locaux supposés assujettis",
+   "à toute heure du jour et de la nuit pour les établissements assujettis ; de jour pour les autres locaux",
+   "phrase coupée : liste de 3 autorisations"
+  ],
+  "T031": [
+   "permission",
+   "Ce Ministère",
+   "désigner un médecin de l'inspection médicale du travail ou un expert pour faire un rapport sur la question",
+   "le cas échéant",
+   ""
+  ],
+  "T032": [
+   "obligation",
+   "",
+   "adresser la lettre à la direction générale de l'inspection du travail selon les conditions de l'article 21",
+   "lorsque la notification concerne des travailleurs de filiales situées dans deux gouvernorats ou plus",
+   "rôle absent (employeur implicite)"
+  ],
+  "T033": [
+   "obligation",
+   "",
+   "adresser à l'inspection du travail territorialement compétente un double de l'horaire et de toute modification",
+   "préalablement",
+   "rôle absent (employeur implicite)"
+  ],
+  "T034": [
+   "obligation",
+   "Les bénéficiaires d'un congé",
+   "jouir du congé dans l'année suivant l'ouverture du droit pour un congé de quinze jours, dans les six mois pour un congé de moins de quinze jours",
+   "dans l'année pour 15 jours ; dans les six mois pour moins de quinze jours",
+   ""
+  ],
+  "T035": [
+   "permission",
+   "Les mineurs âgés de plus de 16 ans",
+   "adhérer aux syndicats",
+   "sauf opposition de leur père ou tuteur",
+   ""
+  ],
+  "T036": [
+   "obligation",
+   "",
+   "rétablir le travailleur dans tous ses droits et lui verser le salaire correspondant à la durée de suspension dépassant celle de la sanction",
+   "lorsque la décision définitive ne comporte pas de licenciement ni de privation de salaire, ou comporte une privation de salaire plus courte que la suspension",
+   "rôle absent (employeur implicite) ; futur « sera rétabli »"
+  ],
+  "T037": [
+   "permission",
+   "",
+   "récupérer ce temps",
+   "",
+   "rôle absent (employeur) ; référent « ce temps » absent"
+  ],
+  "T038": [
+   "permission",
+   "",
+   "fixer par décret la rémunération des travailleurs de secteurs non régis par des conventions collectives",
+   "",
+   "sujet = le pouvoir réglementaire (décret) ; rôle absent"
+  ],
+  "T039": [
+   "permission",
+   "Le travailleur étranger",
+   "conclure un nouveau contrat",
+   "après avoir justifié que son contrat précédent a été résilié à l'amiable ou par voie judiciaire",
+   ""
+  ],
+  "T040": [
+   "permission",
+   "",
+   "ordonner la fermeture de l'établissement",
+   "passé le délai, si les mesures n'ont pas été exécutées",
+   "sujet « il » absent (autorité administrative)"
+  ],
+  "T041": [
+   "permission",
+   "",
+   "résilier le contrat d'apprentissage sur accord des parties ou à la demande de l'une d'elles dans les cas énumérés (mort ou changement de profession du maître, service militaire, manquements, infractions, etc.)",
+   "demande formulée dans un délai de 3 mois en cas de mort ou de changement de profession du maître",
+   "phrase coupée : liste de cas"
+  ],
+  "T042": [
+   "obligation",
+   "ce dernier (le chef d'entreprise)",
+   "continuer à payer à son personnel les salaires, indemnités et rémunérations de toute nature",
+   "pendant la durée de la fermeture ou de l'interdiction, sans excéder trois mois",
+   "durée limitée à trois mois selon la suite du texte"
+  ],
+  "T043": [
+   "permission",
+   "",
+   "conclure la convention collective pour une durée indéterminée ou pour une durée déterminée ne pouvant excéder cinq ans",
+   "",
+   "rôle absent (parties)"
+  ],
+  "T044": [
+   "obligation",
+   "",
+   "renouveler la carte d'identité professionnelle tous les ans, dans les conditions fixées aux articles précédents et sur la production des mêmes justifications",
+   "tous les ans",
+   "rôle absent (titulaire)"
+  ],
+  "T045": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : renvoi à une sanction pénale (article 53 du Code pénal)"
+  ],
+  "T046": [
+   "obligation",
+   "Le chef d'entreprise ou la personne à laquelle il aura délégué ses pouvoirs",
+   "faire la preuve, devant l'agent de l'Inspection du travail, de l'identité des salariés dont les noms sont portés sur les listes",
+   "",
+   "formulation « doit être en mesure de »"
+  ],
+  "T047": [
+   "permission",
+   "",
+   "diviser les conseils en sections",
+   "",
+   "rôle absent (autorité)"
+  ],
+  "T048": [
+   "permission",
+   "Ils",
+   "adresser aux autorités locales toutes les réquisitions utiles",
+   "s'il y a lieu",
+   "« ils » = agents (hors phrase) ; contient aussi l'obligation des autorités locales de prêter aide sans délai"
+  ],
+  "T049": [
+   "obligation",
+   "Les entreprises non agricoles ou leurs dépendances",
+   "donner à leur personnel un repos hebdomadaire de vingt-quatre heures consécutives",
+   "sous réserve des dérogations prévues aux articles suivants",
+   ""
+  ],
+  "T050": [
+   "permission",
+   "",
+   "précompter le montant des arriérés sur le prix de l'aliénation",
+   "dans la négative et sauf stipulation contraire",
+   "sujet « il » = l'acquéreur / le cessionnaire (hors phrase)"
+  ],
+  "T051": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : précise que des actions en réparation restent possibles (faculté ouverte à la victime)"
+  ],
+  "T052": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : qualification juridique (contrats de louage de services) selon des critères ; pas d'obligation"
+  ],
+  "T053": [
+   "permission",
+   "Les parties",
+   "déposer toutes conclusions par écrit",
+   "",
+   ""
+  ],
+  "T054": [
+   "obligation",
+   "",
+   "comprendre des radiographies des poumons et une expertise fonctionnelle de la respiration dans l'examen médical de l'article 61",
+   "",
+   "sujet = l'examen médical ; rôle absent (médecin du travail)"
+  ],
+  "T055": [
+   "permission",
+   "une entreprise ou un groupement d'entreprises",
+   "créer des centres de formation professionnelle organisés conformément à l'article 361",
+   "",
+   ""
+  ],
+  "T056": [
+   "permission",
+   "",
+   "faire la déclaration de l'accident sous forme de lettre recommandée adressée dans le délai légal, le récépissé postal justifiant du jour de l'envoi",
+   "dans le délai légal",
+   "rôle absent (déclarant) ; au poste de police ou de la Garde Nationale du lieu"
+  ],
+  "T057": [
+   "permission",
+   "",
+   "conclure un contrat de travail à durée déterminée dans les cas énumérés (travaux de premier établissement, surcroît extraordinaire de travail, remplacement provisoire, travaux urgents…)",
+   "",
+   "phrase coupée ; rôle absent (parties) ; liste de cas"
+  ],
+  "T058": [
+   "interdiction",
+   "",
+   "employer la nuit les enfants de plus de 14 ans et de moins de 18 ans et les femmes pendant une période d'au moins 12 heures consécutives comprenant l'intervalle de 22 h à 6 h",
+   "pendant une période d'au moins 12 heures consécutives comprenant 22 h – 6 h",
+   "rôle absent (employeur implicite)"
+  ],
+  "T059": [
+   "permission",
+   "",
+   "porter la durée hebdomadaire de présence à 64 heures au maximum pour certaines entreprises ou catégories de personnel",
+   "par arrêté du Ministre chargé des Affaires Sociales, pour tenir compte de la perte de temps ou de la nature du travail",
+   "sujet implicite : le pouvoir réglementaire (arrêté)"
+  ],
+  "T060": [
+   "interdiction",
+   "Aucun apprenti âgé de moins de 14 ans ou de plus de 18 ans",
+   "entrer en apprentissage sans autorisation du service compétent du secrétariat d'Etat",
+   "",
+   ""
+  ],
+  "T061": [
+   "obligation",
+   "",
+   "indiquer le numéro de la carte de séjour, la date de sa délivrance et la durée de sa validité pour les travailleurs étrangers",
+   "",
+   "rôle absent (déclarant : employeur)"
+  ],
+  "T062": [
+   "obligation",
+   "leur employeur",
+   "verser aux salariés occupés pendant les journées fériées, chômées et payées une indemnité égale au montant du salaire correspondant au travail effectué, en plus de ce salaire",
+   "dans les activités où le travail ne peut être interrompu",
+   "droit des salariés exprimé comme charge de l'employeur"
+  ],
+  "T063": [
+   "permission",
+   "le ministre chargé de l'industrie",
+   "mettre le chef de l'établissement en demeure de faire disparaître les dangers ou préjudices",
+   "après avis du comité spécial des établissements dangereux, insalubres ou incommodes, lorsque l'exploitation risque d'engendrer un danger ou un préjudice",
+   "texte tronqué dans la suite"
+  ],
+  "T064": [
+   "obligation",
+   "les agents désignés à l'article 270",
+   "préciser dans les procès-verbaux les circonstances de l'infraction constatée et la date de son début",
+   "",
+   "« devront préciser » ; s'appuie sur les documents et les déclarations à la caisse de sécurité sociale"
+  ],
+  "T065": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : droit des travailleurs de réintégrer le plein temps (droit, pas d'action imposée à un rôle) ; permission portée par les travailleurs"
+  ],
+  "T066": [
+   "obligation",
+   "",
+   "viser l'attestation, après examen et vérification des pièces, par la chambre de commerce du ressort de la maison représentée ou de son principal établissement et par la chambre de commerce du domicile du requérant",
+   "après examen et vérification des pièces fournies",
+   "sujet = l'attestation ; acteur = les chambres de commerce"
+  ],
+  "T067": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : fragment OCR mêlant renvoi à des sanctions et début de point 2 (cours professionnels rendus obligatoires) ; texte tronqué"
+  ],
+  "T068": [
+   "permission",
+   "Les parties",
+   "comparaître en personne, ou se faire assister ou représenter",
+   "",
+   "conformément aux dispositions de l'article 204"
+  ],
+  "T069": [
+   "interdiction",
+   "",
+   "réduire le salaire des travailleurs rémunérés au mois, en cas de chômage des jours de fêtes chômés, au-delà de la suppression des heures supplémentaires qui auraient été effectuées",
+   "en cas de chômage à l'occasion des jours de fêtes chômés",
+   "rôle absent (employeur implicite)"
+  ],
+  "T070": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de calcul des délais (le temps d'instruction prémilitaire ne compte pas)"
+  ],
+  "T071": [
+   "permission",
+   "",
+   "employer des enfants de moins de 16 ans dans les établissements où sont seuls occupés les membres de la famille sous l'autorité du père, de la mère ou du tuteur",
+   "à condition que l'emploi n'ait aucun effet négatif sur leur santé, leur développement et leur scolarité",
+   "rôle absent (employeur implicite)"
+  ],
+  "T072": [
+   "permission",
+   "",
+   "notifier la réquisition par voie d'affichage dans l'entreprise ou par les moyens d'information",
+   "lorsque la réquisition concerne une entreprise ou l'ensemble de son personnel",
+   "rôle absent (autorité qui notifie)"
+  ],
+  "T073": [
+   "permission",
+   "Tout membre d'un syndicat professionnel",
+   "se retirer à tout instant de l'association, nonobstant toute clause contraire",
+   "à tout instant",
+   "sans préjudice du droit du syndicat de réclamer la cotisation des six mois suivant le retrait"
+  ],
+  "T074": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : règle de compétence (le conseil de prud'hommes du lieu d'exécution)"
+  ],
+  "T075": [
+   "permission",
+   "Les établissements de vente de denrées alimentaires au détail",
+   "ne donner le repos hebdomadaire que pendant l'après-midi du jour choisi, avec un repos compensateur d'une demi-journée par roulement",
+   "pendant l'après-midi du jour choisi ; repos compensateur d'une demi-journée au cours de la semaine",
+   "« ont le droit de »"
+  ],
+  "T076": [
+   "permission",
+   "La commission régionale ou la commission centrale de conciliation",
+   "faire procéder à toutes les enquêtes et s'entourer de tous les avis utiles",
+   "",
+   ""
+  ],
+  "T077": [
+   "permission",
+   "Le Président du Conseil de Prud'hommes",
+   "faire citer le défendeur par huissier-notaire",
+   "de sa propre initiative ou à la requête du demandeur",
+   ""
+  ],
+  "T078": [
+   "permission",
+   "",
+   "octroyer le repos un autre jour de la semaine",
+   "sur accord des deux parties dans l'entreprise ou par autorisation du gouverneur lorsque la nécessité du travail l'exige",
+   "référent « il » = le repos ; rôle absent"
+  ],
+  "T079": [
+   "permission",
+   "le président",
+   "prononcer le huis clos",
+   "si les débats sont de nature à porter atteinte à l'ordre public ou aux bonnes mœurs",
+   ""
+  ],
+  "T080": [
+   "interdiction",
+   "Les parties",
+   "renoncer par avance au droit éventuel de demander des dommages-intérêts",
+   "",
+   "dispositions applicables même si l'employé est lié à plusieurs employeurs"
+  ],
+  "T081": [
+   "permission",
+   "Ils",
+   "mettre en demeure l'employeur d'apporter aux installations les modifications nécessaires pour assurer l'application des dispositions sur la santé et la sécurité",
+   "dans un délai qui ne saurait être inférieur à 4 jours",
+   "« ils » = agents de l'inspection (hors phrase)"
+  ],
+  "T082": [
+   "permission",
+   "",
+   "récupérer les heures perdues par suite d'interruption collective de travail",
+   "dans les deux mois suivant l'interruption du travail",
+   "rôle absent (employeur)"
+  ],
+  "T083": [
+   "obligation",
+   "L'inspection du travail territorialement compétente ou la Direction Générale de l'Inspection du Travail",
+   "procéder à une enquête sur la demande de licenciement ou de mise en chômage et tenter la conciliation des deux parties",
+   "dans un délai de quinze jours à partir de la date de sa saisine",
+   ""
+  ],
+  "T084": [
+   "obligation",
+   "la partie intéressée",
+   "adresser un préavis de 10 jours à l'autre partie et au bureau régional de conciliation (ou à l'Inspection Régionale du Travail) avant toute décision de grève ou de lock-out",
+   "10 jours avant la décision de grève ou de lock-out",
+   "sujet grammatical = la décision ; acteur = la partie intéressée"
+  ],
+  "T085": [
+   "obligation",
+   "Le requérant",
+   "produire l'attestation écrite délivrée par les producteurs, industriels et commerçants qui l'emploient",
+   "",
+   "contient aussi l'obligation des employeurs de délivrer l'attestation (« obligatoirement délivrée »)"
+  ],
+  "T086": [
+   "permission",
+   "",
+   "attribuer la médaille du travail aux personnels de l'Etat, des collectivités publiques locales et des établissements publics administratifs",
+   "",
+   "rôle absent (autorité qui décerne)"
+  ],
+  "T087": [
+   "permission",
+   "l'inspection du travail territorialement compétente",
+   "autoriser l'employeur à prolonger la durée du travail pour l'exécution de travaux urgents en cas d'accidents, de réparations nécessaires ou de sauvetage",
+   "à titre exceptionnel, dans certaines circonstances exceptionnelles",
+   ""
+  ],
+  "T088": [
+   "permission",
+   "Des arrêtés conjoints du Secrétaire d'Etat à la Jeunesse, aux Sports et aux Affaires Sociales et du Secrétaire d'Etat au Plan et à l'Economie Nationale",
+   "subordonner à des conditions spéciales l'autorisation de faire exécuter aux femmes et aux enfants de moins de seize ans certains travaux agricoles présentant des risques particuliers",
+   "",
+   "sujet = des arrêtés (habilitation)"
+  ],
+  "T089": [
+   "obligation",
+   "",
+   "comporter les nom, prénom, profession et domicile du demandeur et du défendeur, l'objet de la requête et les demandes du requérant",
+   "",
+   "sujet = la requête ; rôle absent (demandeur)"
+  ],
+  "T090": [
+   "obligation",
+   "Tout chef d'entreprise qui veut user des facultés prévues à l'article 83, 1°",
+   "adresser à l'Inspection du Travail une déclaration sous pli recommandé datée spécifiant la nature et la cause de la dérogation, le nombre de salariés concernés, les jours d'usage, les heures de travail et de repos",
+   "au préalable",
+   ""
+  ],
+  "T091": [
+   "obligation",
+   "",
+   "contenir la déclaration des maisons ou produits déjà représentés et l'engagement de ne pas prendre de nouvelles représentations sans autorisation préalable de l'employeur",
+   "lorsque les contrats ne contiennent pas l'interdiction, à moins que les parties n'y renoncent par stipulation expresse",
+   "sujet = les contrats ; rôle absent (parties)"
+  ],
+  "T092": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : énumération des ressources du groupement de médecine du travail (description)"
+  ],
+  "T093": [
+   "obligation",
+   "",
+   "contenir les nom, prénom, nationalité, date de naissance, profession, domicile du maître ou raison et siège social, les mêmes indications pour l'apprenti, pour ses père et mère, tuteur ou personne autorisée s'il est mineur, et le cas échéant celles du délégué à la formation",
+   "",
+   "sujet = le contrat d'apprentissage ; phrase coupée : liste numérotée ; rôle absent (parties)"
+  ],
+  "T094": [
+   "",
+   "",
+   "",
+   "",
+   "non_obligation : faculté de suspendre la récupération et les heures supplémentaires en cas de chômage, par arrêté ; habilitation de l'autorité (permission portée par arrêté / inspecteur)"
+  ],
+  "T095": [
+   "permission",
+   "Tout contribuable qui n'accepte pas la décision du Secrétaire d'Etat au Plan et à l'Economie Nationale",
+   "se pourvoir devant le tribunal compétent du lieu de la situation de l'établissement",
+   "",
+   ""
+  ],
+  "T096": [
+   "permission",
+   "le donateur ou ses ayants droit",
+   "revendiquer les biens provenant de dons et legs faits aux syndicats depuis moins d'un an pour les meubles et moins de dix ans pour les immeubles",
+   "en cas de dévolution au profit de l'Etat ; à compter de la date de dissolution",
+   ""
+  ],
+  "T097": [
+   "permission",
+   "La caisse nationale de sécurité sociale",
+   "nommer des contrôleurs chargés de collaborer à la surveillance de l'application de la législation sur les congés payés",
+   "",
+   ""
+  ],
+  "T098": [
+   "permission",
+   "l'employeur",
+   "fractionner le congé d'une durée supérieure à six jours ouvrables",
+   "avec l'agrément du salarié",
+   ""
+  ],
+  "T099": [
+   "permission",
+   "",
+   "occuper les enfants âgés de 13 ans à des travaux légers non nuisibles à leur santé, à leur développement, à leur assiduité et à leur aptitude scolaires",
+   "dans les activités non industrielles et non agricoles",
+   "phrase coupée ; point 1 d'une liste ; le point 2 contient une interdiction (moins de 16 ans, deux heures par jour) ; rôle absent (employeur)"
+  ],
+  "T100": [
+   "obligation",
+   "Les fondateurs de tout syndicat professionnel",
+   "déposer ou adresser par pli recommandé avec accusé de réception, en cinq exemplaires, au siège du Gouvernorat ou de la Délégation, les statuts et la liste complète des personnes chargées de l'administration ou de la direction",
+   "dès la constitution du syndicat",
+   "quasi-doublon de D196 (même article 250) : fuite dev/test à signaler"
+  ]
+ }
+}

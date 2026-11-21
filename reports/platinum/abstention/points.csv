@@ -1,0 +1,90 @@
+﻿jeu,id,langue,dans,question,reference,top1,cos,cosnorm,abstient,bon_top1
+dev,D01,fr,True,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,23,23,0.8671869039535522,0.8865266442298889,False,True
+dev,D02,fr,True,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,118,118,0.9090302586555481,0.921589732170105,False,True
+dev,D03,fr,True,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,124,124,0.8839777708053589,0.8853100538253784,False,True
+dev,D04,fr,True,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,140,140,0.8808314800262451,0.8972891569137573,False,True
+dev,D05,fr,True,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,147,147,0.8770896196365356,0.8849781155586243,False,True
+dev,D06,fr,True,Quelles sont les attributions des conseils de prud'hommes ?,183,183,0.8802929520606995,0.8869761228561401,False,True
+dev,D07,fr,True,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,193,193,0.886060357093811,0.884559690952301,False,True
+dev,D08,fr,True,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,268,268,0.8958600163459778,0.9072573781013489,False,True
+dev,D09,fr,True,"Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",366,366,0.8615226149559021,0.8711949586868286,False,True
+dev,D10,fr,True,Un travail commandé et non publié doit-il être payé ?,402,402,0.8746761679649353,0.8764297366142273,False,True
+dev,D11,fr,True,Des unions de syndicats peuvent-elles être constituées ?,252,252,0.8654124736785889,0.8660087585449219,False,True
+dev,D12,fr,True,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,68,68,0.8975622057914734,0.9101896286010742,False,True
+dev,D13,tun,True,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",118,94,0.8261816501617432,0.8253675699234009,True,False
+dev,D14,fr,False,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,n/a,139,0.849643886089325,0.8529102802276611,True,False
+dev,D15,fr,False,Quelle est la durée de validité d'un passeport tunisien ?,n/a,267,0.8430496454238892,0.8512756824493408,True,False
+dev,D16,fr,False,Quel est le délai de recours devant le tribunal administratif ?,n/a,230,0.8473423719406128,0.840880274772644,True,False
+dev,D17,fr,False,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,n/a,345,0.8144276142120361,0.8262796998023987,True,False
+dev,D18,fr,False,Quel est le montant de la pension de retraite versée par la CNSS ?,n/a,143,0.8342217803001404,0.8312625885009766,True,False
+dev,D19,fr,False,Quelle est la peine prévue pour la conduite en état d'ivresse ?,n/a,237,0.8333592414855957,0.8337467908859253,True,False
+dev,D20,fr,False,Quelle est la TVA appliquée aux services de restauration ?,n/a,313,0.8248090744018555,0.8287047147750854,True,False
+dev,D21,fr,False,Un commerçant peut-il vendre des produits périmés ?,n/a,409,0.8179606795310974,0.8339840173721313,True,False
+dev,D22,fr,False,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,n/a,258,0.8340156078338623,0.8523730635643005,True,False
+dev,D23,fr,False,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,n/a,415,0.8588226437568665,0.8752577304840088,False,False
+dev,D24,fr,False,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,n/a,371,0.8514776229858398,0.8449454307556152,True,False
+dev,D25,fr,False,Quel est le taux d'intérêt légal en Tunisie ?,n/a,139,0.8363229036331177,0.8432374596595764,True,False
+dev,D26,fr,False,Quelle est la durée de la scolarité obligatoire en Tunisie ?,n/a,410,0.83640456199646,0.8430919647216797,True,False
+dev,D27,ar,False,ما هي شروط الحصول على رخصة السياقة؟,n/a,115,0.8181606531143188,0.8253564834594727,True,False
+dev,D28,tun,False,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",n/a,323,0.7927096486091614,0.807354211807251,True,False
+dev,D29,fr,True,"Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",22,22,0.8731698989868164,0.883655309677124,False,True
+dev,D30,tun,True,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",22,349,0.81339031457901,0.8120031952857971,True,False
+dev,D31,fr,True,Quelle est la durée maximale du travail effectif par semaine ?,79,79,0.8809541463851929,0.882448673248291,False,True
+dev,D32,tun,True,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,79,9,0.822163999080658,0.8226276636123657,True,False
+dev,D33,fr,True,Les salariés peuvent-ils travailler sans horaire précisé ?,85,85,0.8625596165657043,0.858328104019165,False,True
+dev,D34,fr,True,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,122,122,0.8686087131500244,0.8992969989776611,False,True
+dev,D35,tun,True,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",122,110,0.8217827677726746,0.8138824105262756,True,False
+dev,D36,fr,True,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,149,149,0.8702475428581238,0.8649505376815796,False,True
+dev,D37,fr,True,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,160,160,0.8949561715126038,0.8990117311477661,False,True
+dev,D38,tun,True,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,170,9,0.8147612810134888,0.8098282814025879,True,False
+dev,D39,fr,True,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,191,191,0.8978352546691895,0.9018588066101074,False,True
+dev,D40,fr,True,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,216,216,0.8680287599563599,0.8770185708999634,False,True
+dev,D41,fr,True,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,232,232,0.8997332453727722,0.8950771689414978,False,True
+dev,D42,tun,True,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",198,194,0.8332117795944214,0.8366344571113586,True,False
+dev,D43,fr,False,Quel est le montant de la taxe de séjour à Hammamet ?,n/a,316,0.8073475360870361,0.814749538898468,True,False
+dev,D44,fr,False,Comment demander un permis de construire pour une villa ?,n/a,351,0.8205026984214783,0.8255188465118408,True,False
+dev,D45,fr,False,Quelle est la durée de la garde à vue en matière pénale ?,n/a,210,0.8348739147186279,0.8337428569793701,True,False
+dev,D46,fr,False,Une banque peut-elle refuser un crédit immobilier à un salarié ?,n/a,27,0.828443706035614,0.8326665163040161,True,False
+dev,D47,fr,False,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,n/a,13,0.8279472589492798,0.8366491794586182,True,False
+dev,D48,fr,False,Quel est le délai de paiement des factures d'eau à la SONEDE ?,n/a,142,0.8150484561920166,0.8113682270050049,True,False
+dev,D49,fr,False,Quel est le régime fiscal des auto-entrepreneurs ?,n/a,30,0.8190492391586304,0.8197652697563171,True,False
+dev,D50,fr,False,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,n/a,4,0.8042526245117188,0.82062828540802,True,False
+dev,D51,fr,False,Quelle est la durée d'un mandat de député en Tunisie ?,n/a,410,0.8399859666824341,0.8551648855209351,True,False
+dev,D52,tun,False,Kifech n7ell chikaya 3la el bank ?,n/a,9,0.7846424579620361,0.792831301689148,True,False
+dev,D53,tun,False,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,n/a,323,0.82855224609375,0.838896632194519,True,False
+dev,D54,ar,False,ما هو أجل تقديم الطعن في الحكم الجزائي؟,n/a,269,0.8120293617248535,0.8170293569564819,True,False
+dev,D55,ar,False,ما هي شروط كراء المحل التجاري؟,n/a,238,0.8264169692993164,0.8129725456237793,True,False
+dev,D56,fr,False,Quel est le délai pour contester une amende fiscale ?,n/a,316,0.8534559607505798,0.8395367860794067,True,False
+dev,DA01,ar_trad,True,ماذا يمكن أن يتحصل عليه العامل في صورة الفسخ التعسفي لعقد الشغل؟,23,23,0.854206919670105,0.8583574295043945,False,True
+dev,DA02,ar_trad,True,هل يمكن تجزئة عطلة خالصة الأجر مدتها خمسة أيام عمل؟,118,125,0.8663516044616699,0.8633800148963928,False,False
+dev,DA03,ar_trad,True,في أي أجل يجب على العامل أن يتمتع بعطلة مدتها خمسة عشر يوما؟,124,123,0.8387165069580078,0.8462232351303101,False,False
+dev,DA04,ar_trad,True,كم مرة يجب خلاص أجور العملة الذين يتقاضون أجرهم بالساعة أو باليوم؟,140,140,0.842882513999939,0.8378496766090393,False,True
+dev,DA05,ar_trad,True,ما هو أجل سقوط الدعاوى بين المؤجرين والعملة الناشئة عن علاقات الشغل بمرور الزمن؟,147,147,0.8573124408721924,0.8483138084411621,False,True
+dev,DA06,ar_trad,True,ما هي مشمولات مجالس العرف؟,183,352,0.8025123476982117,0.7994219064712524,True,False
+dev,DA07,ar_trad,True,هل يجوز للمؤجر فسخ عقد عامل بسبب عضويته في مجلس العرف؟,193,120,0.8623741865158081,0.8653067946434021,False,False
+dev,DA08,ar_trad,True,ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟,268,268,0.8354278802871704,0.8496589660644531,False,True
+dev,DA09,ar_trad,True,من يسهر على تنفيذ أحكام هذا الباب بالتزامن مع مأموري الضابطة العدلية؟,366,366,0.8265586495399475,0.8366743326187134,False,True
+dev,DA10,ar_trad,True,هل يجب خلاص عمل وقع طلبه ولم يقع نشره؟,402,402,0.8322736024856567,0.8326653242111206,False,True
+dev,DA11,ar_trad,True,هل يمكن تكوين اتحادات نقابات؟,252,242,0.8421981930732727,0.8351129293441772,False,False
+dev,DA12,ar_trad,True,في أي الحالات لا ينطبق تحجير العمل الليلي على النساء؟,68,68,0.873123049736023,0.8629902601242065,False,True
+dev,DA29,ar_trad,True,ما هي المنحة التي يتحصل عليها العامل المطرود بعد انقضاء فترة التجربة في غير صورة الخطأ الفادح؟,22,22,0.8454651832580566,0.8471454381942749,False,True
+dev,DA31,ar_trad,True,ما هي المدة القصوى للعمل الفعلي في الأسبوع؟,79,79,0.8370131850242615,0.8206300735473633,False,True
+dev,DA33,ar_trad,True,هل يمكن تشغيل العملة دون توقيت محدد؟,85,91,0.828040599822998,0.8292654752731323,False,False
+dev,DA34,ar_trad,True,هل للعامل الحق في عطلة بمناسبة ولادة طفله؟,122,122,0.8530586361885071,0.8460782766342163,False,True
+dev,DA36,ar_trad,True,هل يجوز للمؤجر أن يقتطع من الأجور المبالغ المستحقة له بعنوان لوازم مختلفة؟,149,149,0.8675267696380615,0.8702293634414673,False,True
+dev,DA37,ar_trad,True,ما هي المسائل التي تستشار فيها اللجنة الاستشارية للمؤسسة؟,160,160,0.8660787343978882,0.8783941268920898,False,True
+dev,DA39,ar_trad,True,من يضبط شروط تعيين أعضاء مجالس العرف ونظامهم التأديبي؟,191,345,0.8253359794616699,0.8247407674789429,False,False
+dev,DA40,ar_trad,True,هل تبت مجالس العرف دائما ابتدائيا؟,216,350,0.781001091003418,0.778417706489563,True,False
+dev,DA41,ar_trad,True,هل تنطبق مجلة المرافعات المدنية والتجارية على مجالس العرف؟,232,232,0.8326884508132935,0.8342438340187073,False,True
+etude,E01,fr,True,Une PME vient de recruter un ingénieur de nationalité étrangère. Dans quel délai son employeur doit-il l'inscrire sur le registre spécial prévu pour les travailleurs étrangers ?,261,261,0.8986213803291321,0.8965850472450256,False,True
+etude,E02,fr,True,Un syndicat veut déclencher une grève. De combien de jours de préavis a-t-il besoin avant de la déclencher ?,376 bis,376,0.8904150128364563,0.9006308913230896,False,True
+etude,E03,fr,True,"Une boutique de vêtements (activité non agricole) veut fermer le mardi pour le repos hebdomadaire de ses employés. Est-ce possible, et à quelle condition ?",95,95,0.8590903878211975,0.8677034974098206,False,True
+etude,E04,fr,True,Un technicien de nationalité étrangère est encore lié par un contrat à son employeur actuel. Une autre société tunisienne souhaite l'embaucher tout de suite. Le peut-elle ?,262,262,0.8609706163406372,0.8681085109710693,False,True
+etude,E05,fr,True,Un employeur a avancé de l'argent à une salariée. Peut-il se rembourser en retenant tout son salaire du mois ?,150,150,0.8579769730567932,0.8755214214324951,False,True
+etude,E06,fr,False,Quel est le montant actuel du salaire minimum (SMIG) en dinars ?,,257,0.8329427242279053,0.8346222043037415,True,False
+etude,E07,fr,True,Un atelier propose à un jeune de 17 ans d'effectuer des heures supplémentaires pour finir une commande. Est-ce permis ?,63-2,63,0.8440178036689758,0.8486018180847168,True,True
+etude,E08,fr,True,Une usine emploie deux apprentis de 17 ans. Quelle obligation de registre l'employeur a-t-il à leur sujet ?,73,73,0.8650444746017456,0.8652867674827576,False,True
+etude,E09,fr,True,À partir de quel effectif une entreprise doit-elle créer son propre service de médecine du travail ?,153,153,0.9069154262542725,0.9136850833892822,False,True
+etude,E10,fr,True,Un membre d'un syndicat veut le quitter malgré une clause des statuts qui l'interdit. Peut-il le faire ? Doit-il encore quelque chose au syndicat ?,254,254,0.8617637753486633,0.8704104423522949,False,True
+etude,E11,fr,True,Un salarié quitte son entreprise et demande un certificat de travail. Que doit contenir ce certificat ?,27,27,0.8834683895111084,0.8992908000946045,False,True
+etude,E12,fr,False,Quelles sont les conditions pour obtenir un permis de conduire en Tunisie ?,,258,0.8349812626838684,0.8391478061676025,True,False

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juge de fidélité LegalTN</title>
+<style>
+:root{--marine:#17324D;--ivoire:#F5F3EE;--papier:#FBFBF8;--bord:#E4E1D8;--texte:#344054;--texte2:#667085;
+ --fidele:#2E7D5B;--partiel:#B08A1E;--infidele:#B4412F}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--ivoire);color:var(--texte)}
+header{background:var(--marine);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0 12px 0 0}
+button,.fichier{font:inherit;font-size:14px;border-radius:8px;border:1px solid var(--bord);background:var(--papier);
+ color:var(--marine);padding:7px 14px;cursor:pointer}
+button:hover,.fichier:hover{border-color:var(--marine)}
+button:disabled{opacity:.45;cursor:default}
+.fichier input{display:none}
+#progression{margin-left:auto;font-size:14px}
+.barre{display:inline-block;width:160px;height:8px;background:#355B80;border-radius:9px;overflow:hidden;vertical-align:middle;margin-left:8px}
+.barre i{display:block;height:100%;background:#8FD3A9}
+main{display:grid;grid-template-columns:190px 1fr 290px;gap:16px;padding:16px;max-width:1500px;margin:auto}
+@media (max-width:1100px){main{grid-template-columns:1fr}}
+.panneau{background:var(--papier);border:1px solid var(--bord);border-radius:12px;padding:14px}
+#liste{max-height:calc(100vh - 120px);overflow:auto;padding:6px}
+#liste div{padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between}
+#liste div:hover{background:var(--ivoire)} #liste div.actif{background:#E2EAF3;font-weight:600}
+.f{color:var(--fidele)} .p{color:var(--partiel)} .i{color:var(--infidele)} .a{color:var(--texte2)}
+#meta{font-size:13px;color:var(--texte2);margin-bottom:10px;display:flex;gap:14px;flex-wrap:wrap}
+.etiquette{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--texte2);margin:14px 0 4px}
+.bloc{background:#fff;border:1px solid var(--bord);border-radius:10px;padding:12px 16px;line-height:1.7;font-size:16px;white-space:pre-wrap}
+.bloc[dir=rtl]{font-size:19px}
+#question{font-weight:600}
+#articles{font-size:15px;max-height:320px;overflow:auto;background:#FAF8F2}
+.verdicts{display:flex;gap:10px;margin:16px 0 8px;flex-wrap:wrap}
+.verdicts button{font-weight:700;padding:10px 18px;font-size:15px}
+.verdicts button.fidele{color:var(--fidele)} .verdicts button.partiel{color:var(--partiel)} .verdicts button.infidele{color:var(--infidele)}
+.verdicts button.choisi.fidele{background:var(--fidele);color:#fff;border-color:var(--fidele)}
+.verdicts button.choisi.partiel{background:var(--partiel);color:#fff;border-color:var(--partiel)}
+.verdicts button.choisi.infidele{background:var(--infidele);color:#fff;border-color:var(--infidele)}
+kbd{font-family:Consolas,monospace;font-size:12px;background:var(--ivoire);border:1px solid var(--bord);border-radius:4px;padding:0 5px;color:var(--texte)}
+textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--bord);border-radius:8px;padding:8px;min-height:50px}
+.actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+#claude{margin-top:12px;font-size:14px;padding:10px 12px;border-radius:8px;background:#EEF1F5;display:none}
+#claude.visible{display:block}
+.aide{font-size:13px;line-height:1.55} .aide h3{font-size:14px;margin:12px 0 4px;color:var(--marine)} .aide p{margin:4px 0}
+.vide{color:var(--texte2);font-size:15px;padding:40px;text-align:center}
+#message{font-size:13px;color:var(--texte2);min-height:18px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+ <h1>Juge de fidélité · LegalTN</h1>
+ <label class="fichier">Ouvrir l'échantillon CSV…<input type="file" id="ouvrir" accept=".csv"></label>
+ <button id="enregistrer" disabled>Enregistrer le CSV</button>
+ <span id="nomFichier"></span>
+ <span id="progression"></span>
+</header>
+<main>
+ <div class="panneau" id="liste"><div class="vide">Aucun fichier ouvert</div></div>
+ <section class="panneau" id="centre">
+  <div class="vide">Ouvrez <b>data/a_annoter/juge_echantillon_v1.csv</b>.</div>
+ </section>
+ <aside class="panneau aide">
+  <h3>Comment faire</h3>
+  <p>Lisez la <b>question</b>, la <b>réponse</b>, puis les <b>articles cités</b>. Jugez la réponse
+   <b>d'après ces articles seulement</b>, pas d'après ce que vous savez du Code.</p>
+  <p><kbd>1</kbd> <b class="f">fidèle</b> : tout ce que dit la réponse est dans les articles, et elle répond à la question.</p>
+  <p><kbd>2</kbd> <b class="p">partiel</b> : juste mais incomplète sur un point important (condition, exception, plafond), ou ajoute un élément absent des articles sans les contredire.</p>
+  <p><kbd>3</kbd> <b class="i">infidèle</b> : contredit les articles, leur fait dire ce qu'ils ne disent pas, ou ne répond pas à la question.</p>
+  <p>Le choix passe à la réponse suivante non jugée. <kbd>←</kbd> <kbd>→</kbd> pour naviguer.</p>
+  <h3>À l'aveugle</h3>
+  <p>Le verdict de Claude reste <b>caché</b> tant que vous n'avez pas jugé la réponse. Il apparaît ensuite pour comparaison : ne changez votre verdict que si vous aviez mal lu, pas pour vous aligner.</p>
+  <h3>Enregistrer</h3>
+  <p>Le travail est gardé dans ce navigateur. <b>Enregistrez le CSV</b> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) sur le fichier d'origine dans <code>data/a_annoter/</code>, puis lancez :</p>
+  <p><code>python -X utf8 -m src.juge.juge accord</code></p>
+ </aside>
+</main>
+<script>
+"use strict";
+const VERDICTS = ["fidele", "partiel", "infidele"];
+const NOMS = { fidele: "fidèle", partiel: "partiel", infidele: "infidèle" };
+const $ = s => document.querySelector(s);
+const etat = { nom: "", colonnes: [], lignes: [], i: 0, poignee: null, empreinte: "" };
+
+/* ---------- CSV (RFC 4180) ---------- */
+function lireCSV(texte) {
+  texte = texte.replace(/^﻿/, "");
+  const lignes = []; let ligne = [], champ = "", guill = false;
+  for (let k = 0; k < texte.length; k++) {
+    const c = texte[k];
+    if (guill) {
+      if (c === '"') { if (texte[k + 1] === '"') { champ += '"'; k++; } else guill = false; }
+      else champ += c;
+    } else if (c === '"') guill = true;
+    else if (c === ",") { ligne.push(champ); champ = ""; }
+    else if (c === "\n") { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); ligne = []; champ = ""; }
+    else champ += c;
+  }
+  if (champ !== "" || ligne.length) { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); }
+  const tete = lignes.shift();
+  return { tete, lignes: lignes.filter(l => l.length > 1).map(l => Object.fromEntries(tete.map((t, j) => [t, l[j] ?? ""]))) };
+}
+const echapper = v => /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+function ecrireCSV() {
+  const corps = etat.lignes.map(l => etat.colonnes.map(c => echapper(String(l[c] ?? ""))).join(","));
+  return "﻿" + etat.colonnes.join(",") + "\r\n" + corps.join("\r\n") + "\r\n";
+}
+
+/* ---------- affichage ---------- */
+const arabe = t => /[؀-ۿ]/.test(t);
+const echapperHtml = t => t.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+const classe = v => v === "fidele" ? "f" : v === "partiel" ? "p" : v === "infidele" ? "i" : "a";
+function rendre() {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  const juge = l.verdict_humain.trim();
+  const dir = arabe(l.question) ? "rtl" : "ltr";
+  $("#centre").innerHTML = `
+   <div id="meta"><span><b>${l.id}</b></span><span>${l.langue.toUpperCase()} · ${l.type}</span>
+    <span>articles cités : ${echapperHtml(l.articles_cites)}</span><span>${etat.i + 1} / ${etat.lignes.length}</span></div>
+   <div class="etiquette">Question</div><div class="bloc" id="question" dir="${dir}"></div>
+   <div class="etiquette">Réponse de LegalTN</div><div class="bloc" id="reponse" dir="${dir}"></div>
+   <div class="etiquette">Articles cités (texte du corpus)</div><div class="bloc" id="articles" dir="${dir}"></div>
+   <div class="verdicts">${VERDICTS.map((v, k) =>
+     `<button class="${v}${juge === v ? " choisi" : ""}" data-v="${v}"><kbd>${k + 1}</kbd> ${NOMS[v]}</button>`).join("")}</div>
+   <label for="commentaire" style="font-size:13px;color:var(--texte2)">Votre commentaire (facultatif : pourquoi partiel ou infidèle)</label>
+   <textarea id="commentaire"></textarea>
+   <div class="actions"><button id="precedente"><kbd>←</kbd> Précédente</button>
+    <button id="suivante">Suivante <kbd>→</kbd></button><button id="effacer">Effacer mon verdict</button></div>
+   <div id="claude"></div><div id="message"></div>`;
+  $("#question").textContent = l.question;
+  $("#reponse").textContent = l.reponse;
+  $("#articles").textContent = l.textes_articles;
+  $("#commentaire").value = l.commentaire_humain || "";
+  if (juge) {
+    $("#claude").classList.add("visible");
+    const c = l.verdict_claude.trim();
+    $("#claude").innerHTML = `Claude avait jugé : <b class="${classe(c)}">${NOMS[c] || "—"}</b>` +
+      (l.commentaire ? ` — ${echapperHtml(l.commentaire)}` : "") + (c && c !== juge ? " <b>(désaccord)</b>" : "");
+  }
+  document.querySelectorAll(".verdicts button").forEach(b => b.onclick = () => choisir(b.dataset.v));
+  $("#precedente").onclick = () => aller(etat.i - 1);
+  $("#suivante").onclick = () => aller(etat.i + 1);
+  $("#effacer").onclick = () => { l.verdict_humain = ""; sauver(); rendre(); };
+  $("#commentaire").oninput = () => { l.commentaire_humain = $("#commentaire").value; sauver(); };
+  rendreListe();
+}
+function rendreListe() {
+  const n = etat.lignes.filter(l => VERDICTS.includes(l.verdict_humain.trim())).length;
+  $("#progression").innerHTML = `${n} / ${etat.lignes.length} jugées <span class="barre"><i style="width:${100 * n / etat.lignes.length}%"></i></span>`;
+  $("#liste").innerHTML = etat.lignes.map((l, k) => {
+    const v = l.verdict_humain.trim();
+    return `<div data-k="${k}" class="${k === etat.i ? "actif" : ""}"><span>${l.id} <small class="a">${l.langue}</small></span>` +
+      `<span class="${classe(v)}">${v ? NOMS[v] : "…"}</span></div>`;
+  }).join("");
+  $("#liste").querySelectorAll("div[data-k]").forEach(d => d.onclick = () => aller(+d.dataset.k));
+  const actif = $("#liste .actif"); if (actif) actif.scrollIntoView({ block: "nearest" });
+}
+
+/* ---------- actions ---------- */
+function choisir(v) {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  const deja = VERDICTS.includes(l.verdict_humain.trim());
+  l.verdict_humain = v; sauver();
+  if (deja) { rendre(); message("Verdict modifié."); return; }   // une correction ne fait pas avancer
+  const suivante = etat.lignes.findIndex((x, k) => k > etat.i && !x.verdict_humain.trim());
+  if (suivante >= 0) { aller(suivante); message(`${l.id} : ${NOMS[v]}. Claude avait dit : ${NOMS[l.verdict_claude.trim()] || "—"}.`); }
+  else { rendre(); message(etat.lignes.every(x => x.verdict_humain.trim()) ? "Tout est jugé : enregistrez le CSV." : "Dernière réponse : il en reste plus haut dans la liste."); }
+}
+function aller(k) { if (k < 0 || k >= etat.lignes.length) return; etat.i = k; sauver(); rendre(); }
+function message(m) { const el = $("#message"); if (el) el.textContent = m; }
+
+/* ---------- persistance (reprise seulement sur le même fichier) ---------- */
+const cle = () => "juge-fidelite:" + etat.nom;
+function empreinte(texte) {
+  let h = 5381;
+  for (let k = 0; k < texte.length; k++) h = ((h << 5) + h + texte.charCodeAt(k)) | 0;
+  return texte.length + ":" + (h >>> 0).toString(16);
+}
+function sauver() {
+  try {
+    localStorage.setItem(cle(), JSON.stringify({ empreinte: etat.empreinte, i: etat.i,
+      lignes: etat.lignes.map(l => ({ id: l.id, v: l.verdict_humain, c: l.commentaire_humain })) }));
+  } catch {}
+}
+function restaurer() {
+  try {
+    const g = JSON.parse(localStorage.getItem(cle()) || "null");
+    if (!g || g.empreinte !== etat.empreinte) return false;
+    const par = Object.fromEntries(g.lignes.map(x => [x.id, x]));
+    etat.lignes.forEach(l => { const x = par[l.id]; if (x) { l.verdict_humain = x.v; l.commentaire_humain = x.c; } });
+    return g.lignes.some(x => x.v || x.c);
+  } catch { return false; }
+}
+function charger(texte, nom) {
+  const { tete, lignes } = lireCSV(texte);
+  if (!tete.includes("verdict_humain")) { alert("Ce fichier n'est pas l'échantillon du juge (colonne verdict_humain absente)."); return; }
+  etat.nom = nom; etat.empreinte = empreinte(texte);
+  etat.colonnes = tete.includes("commentaire_humain") ? tete : [...tete, "commentaire_humain"];
+  etat.lignes = lignes.map(r => ({ ...r, commentaire_humain: r.commentaire_humain || "" }));
+  const repris = restaurer();
+  const premiere = etat.lignes.findIndex(l => !l.verdict_humain.trim());
+  etat.i = premiere >= 0 ? premiere : 0;
+  $("#nomFichier").textContent = nom; $("#enregistrer").disabled = false;
+  rendre(); message(repris ? "Travail précédent repris depuis ce navigateur." : `${etat.lignes.length} réponses chargées.`);
+}
+async function enregistrer() {
+  if (!etat.lignes.length) return;
+  sauver();
+  const contenu = ecrireCSV();
+  if (window.showSaveFilePicker) {
+    try {
+      if (!etat.poignee) etat.poignee = await showSaveFilePicker({ suggestedName: etat.nom, types: [{ description: "CSV", accept: { "text/csv": [".csv"] } }] });
+      const w = await etat.poignee.createWritable(); await w.write(new Blob([contenu], { type: "text/csv" })); await w.close();
+      etat.empreinte = empreinte(contenu); sauver();
+      message(`Enregistré dans ${etat.poignee.name}.`); return;
+    } catch (e) { if (e.name === "AbortError") return; }
+  }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([contenu], { type: "text/csv" })); a.download = etat.nom; a.click();
+  message("Téléchargé : remplacez data/a_annoter/juge_echantillon_v1.csv par ce fichier.");
+}
+
+/* ---------- câblage ---------- */
+$("#ouvrir").onchange = async e => { const f = e.target.files[0]; if (f) { etat.poignee = null; charger(await f.text(), f.name); } };
+$("#enregistrer").onclick = enregistrer;
+document.addEventListener("keydown", e => {
+  if (!etat.lignes.length || e.target.tagName === "TEXTAREA") return;
+  if (["1", "2", "3"].includes(e.key)) { e.preventDefault(); choisir(VERDICTS[+e.key - 1]); }
+  else if (e.key === "ArrowRight") aller(etat.i + 1);
+  else if (e.key === "ArrowLeft") aller(etat.i - 1);
+  else if ((e.ctrlKey || e.metaKey) && e.key === "s") { e.preventDefault(); enregistrer(); }
+});
+window.addEventListener("beforeunload", sauver);
+window.jugeFidelite = { charger, etat, ecrireCSV };  // pour les tests automatisés
+</script>
+</body>
+</html>

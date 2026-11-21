@@ -1,0 +1,108 @@
+id,langue,type,question,article_reference,statut
+D01,fr,dans_perimetre,Que peut obtenir un salarié en cas de rupture abusive de son contrat de travail ?,23,verifie
+D02,fr,dans_perimetre,Un congé payé de cinq jours ouvrables peut-il être fractionné ?,118,verifie
+D03,fr,dans_perimetre,Dans quel délai un salarié doit-il prendre un congé de quinze jours ?,124,verifie
+D04,fr,dans_perimetre,À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?,140,verifie
+D05,fr,dans_perimetre,Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?,147,verifie
+D06,fr,dans_perimetre,Quelles sont les attributions des conseils de prud'hommes ?,183,verifie
+D07,fr,dans_perimetre,Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?,193,verifie
+D08,fr,dans_perimetre,Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?,268,verifie
+D09,fr,dans_perimetre,"Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",366,verifie
+D10,fr,dans_perimetre,Un travail commandé et non publié doit-il être payé ?,402,verifie
+D11,fr,dans_perimetre,Des unions de syndicats peuvent-elles être constituées ?,252,verifie
+D12,fr,dans_perimetre,Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?,68,verifie
+D13,tun,dans_perimetre,"Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",118,verifie
+D14,fr,hors_perimetre,Quel est le taux de l'impôt sur le revenu applicable aux salaires en Tunisie ?,n/a,verifie
+D15,fr,hors_perimetre,Quelle est la durée de validité d'un passeport tunisien ?,n/a,verifie
+D16,fr,hors_perimetre,Quel est le délai de recours devant le tribunal administratif ?,n/a,verifie
+D17,fr,hors_perimetre,Un propriétaire peut-il augmenter le loyer d'un logement en cours de bail ?,n/a,verifie
+D18,fr,hors_perimetre,Quel est le montant de la pension de retraite versée par la CNSS ?,n/a,verifie
+D19,fr,hors_perimetre,Quelle est la peine prévue pour la conduite en état d'ivresse ?,n/a,verifie
+D20,fr,hors_perimetre,Quelle est la TVA appliquée aux services de restauration ?,n/a,verifie
+D21,fr,hors_perimetre,Un commerçant peut-il vendre des produits périmés ?,n/a,verifie
+D22,fr,hors_perimetre,Quelles sont les conditions pour créer une société anonyme en Tunisie ?,n/a,verifie
+D23,fr,hors_perimetre,Quel est le délai de prescription d'une action en responsabilité après un accident de la route ?,n/a,verifie
+D24,fr,hors_perimetre,Quelle est l'indemnité de licenciement d'un fonctionnaire de l'État ?,n/a,verifie
+D25,fr,hors_perimetre,Quel est le taux d'intérêt légal en Tunisie ?,n/a,verifie
+D26,fr,hors_perimetre,Quelle est la durée de la scolarité obligatoire en Tunisie ?,n/a,verifie
+D27,ar,hors_perimetre,ما هي شروط الحصول على رخصة السياقة؟,n/a,verifie
+D28,tun,hors_perimetre,"Ken na3mel test el code el route, chniya el mawed el lazmin ?",n/a,verifie
+D29,fr,dans_perimetre,"Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",22,verifie
+D30,tun,dans_perimetre,"Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",22,verifie
+D31,fr,dans_perimetre,Quelle est la durée maximale du travail effectif par semaine ?,79,verifie
+D32,tun,dans_perimetre,Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?,79,verifie
+D33,fr,dans_perimetre,Les salariés peuvent-ils travailler sans horaire précisé ?,85,verifie
+D34,fr,dans_perimetre,Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?,122,verifie
+D35,tun,dans_perimetre,"El khadem 3andou 7a9 congé 3and wlidou, chnowa ya3mel ?",122,verifie
+D36,fr,dans_perimetre,Un employeur peut-il retenir sur les salaires les sommes qui lui sont dues pour fournitures diverses ?,149,verifie
+D37,fr,dans_perimetre,Sur quelles questions la commission consultative d'entreprise est-elle consultée ?,160,verifie
+D38,tun,dans_perimetre,Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?,170,verifie
+D39,fr,dans_perimetre,Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?,191,verifie
+D40,fr,dans_perimetre,Les conseils de prud'hommes statuent-ils toujours en premier ressort ?,216,verifie
+D41,fr,dans_perimetre,Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?,232,verifie
+D42,tun,dans_perimetre,"Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",198,verifie
+D43,fr,hors_perimetre,Quel est le montant de la taxe de séjour à Hammamet ?,n/a,verifie
+D44,fr,hors_perimetre,Comment demander un permis de construire pour une villa ?,n/a,verifie
+D45,fr,hors_perimetre,Quelle est la durée de la garde à vue en matière pénale ?,n/a,verifie
+D46,fr,hors_perimetre,Une banque peut-elle refuser un crédit immobilier à un salarié ?,n/a,verifie
+D47,fr,hors_perimetre,Quelle est la responsabilité d'un hôtelier en cas de vol dans une chambre ?,n/a,verifie
+D48,fr,hors_perimetre,Quel est le délai de paiement des factures d'eau à la SONEDE ?,n/a,verifie
+D49,fr,hors_perimetre,Quel est le régime fiscal des auto-entrepreneurs ?,n/a,verifie
+D50,fr,hors_perimetre,Quelles sont les règles de stationnement sur le trottoir à Sousse ?,n/a,verifie
+D51,fr,hors_perimetre,Quelle est la durée d'un mandat de député en Tunisie ?,n/a,verifie
+D52,tun,hors_perimetre,Kifech n7ell chikaya 3la el bank ?,n/a,verifie
+D53,tun,hors_perimetre,Chnowa el 3a9ouba 3la el sar9a fel code pénal ?,n/a,verifie
+D54,ar,hors_perimetre,ما هو أجل تقديم الطعن في الحكم الجزائي؟,n/a,verifie
+D55,ar,hors_perimetre,ما هي شروط كراء المحل التجاري؟,n/a,verifie
+D56,fr,hors_perimetre,Quel est le délai pour contester une amende fiscale ?,n/a,verifie
+DA01,ar,dans_perimetre,ماذا يمكن أن يتحصل عليه العامل في صورة الفسخ التعسفي لعقد الشغل؟,23,a_valider
+DA02,ar,dans_perimetre,هل يمكن تجزئة عطلة خالصة الأجر مدتها خمسة أيام عمل؟,118,a_valider
+DA03,ar,dans_perimetre,في أي أجل يجب على العامل أن يتمتع بعطلة مدتها خمسة عشر يوما؟,124,a_valider
+DA04,ar,dans_perimetre,كم مرة يجب خلاص أجور العملة الذين يتقاضون أجرهم بالساعة أو باليوم؟,140,a_valider
+DA05,ar,dans_perimetre,ما هو أجل سقوط الدعاوى بين المؤجرين والعملة الناشئة عن علاقات الشغل بمرور الزمن؟,147,a_valider
+DA06,ar,dans_perimetre,ما هي مشمولات مجالس العرف؟,183,a_valider
+DA07,ar,dans_perimetre,هل يجوز للمؤجر فسخ عقد عامل بسبب عضويته في مجلس العرف؟,193,a_valider
+DA08,ar,dans_perimetre,ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟,268,a_valider
+DA09,ar,dans_perimetre,من يسهر على تنفيذ أحكام هذا الباب بالتزامن مع مأموري الضابطة العدلية؟,366,a_valider
+DA10,ar,dans_perimetre,هل يجب خلاص عمل وقع طلبه ولم يقع نشره؟,402,a_valider
+DA11,ar,dans_perimetre,هل يمكن تكوين اتحادات نقابات؟,252,a_valider
+DA12,ar,dans_perimetre,في أي الحالات لا ينطبق تحجير العمل الليلي على النساء؟,68,a_valider
+DA29,ar,dans_perimetre,ما هي المنحة التي يتحصل عليها العامل المطرود بعد انقضاء فترة التجربة في غير صورة الخطأ الفادح؟,22,a_valider
+DA31,ar,dans_perimetre,ما هي المدة القصوى للعمل الفعلي في الأسبوع؟,79,a_valider
+DA33,ar,dans_perimetre,هل يمكن تشغيل العملة دون توقيت محدد؟,85,a_valider
+DA34,ar,dans_perimetre,هل للعامل الحق في عطلة بمناسبة ولادة طفله؟,122,a_valider
+DA36,ar,dans_perimetre,هل يجوز للمؤجر أن يقتطع من الأجور المبالغ المستحقة له بعنوان لوازم مختلفة؟,149,a_valider
+DA37,ar,dans_perimetre,ما هي المسائل التي تستشار فيها اللجنة الاستشارية للمؤسسة؟,160,a_valider
+DA39,ar,dans_perimetre,من يضبط شروط تعيين أعضاء مجالس العرف ونظامهم التأديبي؟,191,a_valider
+DA40,ar,dans_perimetre,هل تبت مجالس العرف دائما ابتدائيا؟,216,a_valider
+DA41,ar,dans_perimetre,هل تنطبق مجلة المرافعات المدنية والتجارية على مجالس العرف؟,232,a_valider
+T01,tun,dans_perimetre,"Ken el patron yfasa5li el contrat bla sbab, chnowa najem nekhou ?",23,a_valider
+T02,tun,dans_perimetre,"Tradouni mel khedma bla sbab, 3andi 7a9 fi ta3wid ?",23,a_valider
+T03,tun,dans_perimetre,Najem nkasem el congé mta3 5 ayem ?,118,a_valider
+T04,tun,dans_perimetre,9adech 3andi wa9t bech nekhou el congé mta3 15 youm ?,124,a_valider
+T05,tun,dans_perimetre,"Ken nekhdem bel se3a, kol 9adech lazem ykhalsouni ?",140,a_valider
+T06,tun,dans_perimetre,Ba3d 9adech wa9t ma3adech najem nchaki bel patron ?,147,a_valider
+T07,tun,dans_perimetre,"El 9adhiya bin el khedam wel patron, 9adech tos9ot bel wa9t ?",147,a_valider
+T08,tun,dans_perimetre,Chnowa ye5dem el conseil de prud'hommes ?,183,a_valider
+T09,tun,dans_perimetre,Najem el patron yatrodni 5ater ena conseiller prud'homme ?,193,a_valider
+T10,tun,dans_perimetre,"Ken ma9addemtech el registre wa9t el contrôle, 9adech el khtiya ?",268,a_valider
+T11,tun,dans_perimetre,Najmou les syndicats ya3mlou union binethom ?,252,a_valider
+T12,tun,dans_perimetre,Fi ama 7alat tnajem el mra tekhdem bel lil ?,68,a_valider
+T13,tun,dans_perimetre,"Ken tradouni ba3d el période d'essai, 3andi 7a9 fi indemnité ?",22,a_valider
+T14,tun,dans_perimetre,Akthar 9adech men se3a najem nekhdem fel jem3a ?,79,a_valider
+T15,tun,dans_perimetre,Ch7al men se3a khedma fel semaine maximum ?,79,a_valider
+T16,tun,dans_perimetre,Lazem el patron y7aded wa9t el khedma lel khadema ?,85,a_valider
+T17,tun,dans_perimetre,"Mrati weldet, 3andi 7a9 fi congé ?",122,a_valider
+T18,tun,dans_perimetre,El patron ynajem ye9ta3 men chehriti el flous elli 3liya ?,149,a_valider
+T19,tun,dans_perimetre,3la chnowa ychawrou el commission consultative fel chrika ?,160,a_valider
+T20,tun,dans_perimetre,Chkoun y3ayen les conseillers prud'hommes w y7aseb fihom ?,191,a_valider
+T21,tun,dans_perimetre,Les prud'hommes dima y7akmou en premier ressort ?,216,a_valider
+T22,tun,dans_perimetre,El code de procédure civile yetteb9 3al prud'hommes ?,232,a_valider
+T23,tun,dans_perimetre,"Congé mta3 5 ayem, lazem nekhdou mrra wa7da ?",118,a_valider
+T24,tun,dans_perimetre,"El 3omal elli yekhdmou bel youm, ykhalsouhom kol jem3a wala kol chhar ?",140,a_valider
+TH01,tun,hors_perimetre,Chnowa a7sen restaurant fi Tounes ?,,a_valider
+TH02,tun,hors_perimetre,Kifech nekhou el permis ?,,a_valider
+TH03,tun,hors_perimetre,9adech soum el kra fi Sousse ?,,a_valider
+TH04,tun,hors_perimetre,Chkoun rbe7 el match el bera7 ?,,a_valider
+TH05,tun,hors_perimetre,Kifech na3mel passeport jdid ?,,a_valider
+TH06,tun,hors_perimetre,Wa9tech yabda Ramdhan ?,,a_valider

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étude d'utilité LegalTN</title>
+<style>
+:root{--marine:#17324D;--ivoire:#F5F3EE;--papier:#FBFBF8;--bord:#E4E1D8;--texte:#344054;--texte2:#667085;--ok:#2E7D5B;--warn:#B08A1E}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--ivoire);color:var(--texte);line-height:1.5}
+header{background:var(--marine);color:#fff;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}
+#etape{margin-left:auto;font-size:14px}
+main{max-width:820px;margin:20px auto;padding:0 16px}
+.carte{background:var(--papier);border:1px solid var(--bord);border-radius:12px;padding:20px;margin-bottom:16px}
+h2{font-size:19px;margin:0 0 10px;color:var(--marine)} h3{font-size:15px;margin:16px 0 6px;color:var(--marine)}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input[type=text],select,textarea{width:100%;font:inherit;font-size:15px;border:1px solid var(--bord);border-radius:8px;padding:8px 10px;background:#fff;color:var(--texte)}
+textarea{min-height:110px}
+button{font:inherit;font-size:15px;border-radius:8px;border:1px solid var(--bord);background:var(--papier);color:var(--marine);padding:9px 18px;cursor:pointer}
+button.primaire{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
+button:disabled{opacity:.45;cursor:default}
+.enonce{font-size:18px;background:#fff;border:1px solid var(--bord);border-radius:10px;padding:14px 16px;margin:8px 0 4px}
+.echelle{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.echelle label{display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:400;font-size:13px;margin:0;border:1px solid var(--bord);border-radius:8px;padding:6px 10px;background:#fff;cursor:pointer;min-width:48px}
+.echelle input:checked + span{font-weight:700;color:var(--ok)}
+.item{padding:10px 0;border-bottom:1px solid var(--bord)} .item:last-child{border-bottom:0}
+.ligne{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chrono{font-variant-numeric:tabular-nums;color:var(--texte2);font-size:14px}
+.note{font-size:13px;color:var(--texte2)}
+.alerte{background:#FFF7E0;border:1px solid #E8D48A;border-radius:8px;padding:10px 12px;font-size:14px}
+#message{color:#B4412F;font-size:14px;min-height:20px;margin-top:8px}
+kbd{font-family:Consolas,monospace;font-size:12px;background:var(--ivoire);border:1px solid var(--bord);border-radius:4px;padding:0 5px}
+</style>
+</head>
+<body>
+<header><h1>Étude d'utilité · LegalTN</h1><span id="etape"></span></header>
+<main id="main"></main>
+<script>
+"use strict";
+/* Les énoncés seuls sont ici : le corrigé reste dans etude_utilite/taches_v1.csv (facilitateur). */
+const TACHES = {
+  A: [
+   ["E01","Une PME vient de recruter un ingénieur de nationalité étrangère. Dans quel délai son employeur doit-il l'inscrire sur le registre spécial prévu pour les travailleurs étrangers ?"],
+   ["E02","Un syndicat veut déclencher une grève. De combien de jours de préavis a-t-il besoin avant de la déclencher ?"],
+   ["E03","Une boutique de vêtements (activité non agricole) veut fermer le mardi pour le repos hebdomadaire de ses employés. Est-ce possible, et à quelle condition ?"],
+   ["E04","Un technicien de nationalité étrangère est encore lié par un contrat à son employeur actuel. Une autre société tunisienne souhaite l'embaucher tout de suite. Le peut-elle ?"],
+   ["E05","Un employeur a avancé de l'argent à une salariée. Peut-il se rembourser en retenant tout son salaire du mois ?"],
+   ["E06","Quel est le montant actuel du salaire minimum (SMIG) en dinars ?"]],
+  B: [
+   ["E07","Un atelier propose à un jeune de 17 ans d'effectuer des heures supplémentaires pour finir une commande. Est-ce permis ?"],
+   ["E08","Une usine emploie deux apprentis de 17 ans. Quelle obligation de registre l'employeur a-t-il à leur sujet ?"],
+   ["E09","À partir de quel effectif une entreprise doit-elle créer son propre service de médecine du travail ?"],
+   ["E10","Un membre d'un syndicat veut le quitter malgré une clause des statuts qui l'interdit. Peut-il le faire ? Doit-il encore quelque chose au syndicat ?"],
+   ["E11","Un salarié quitte son entreprise et demande un certificat de travail. Que doit contenir ce certificat ?"],
+   ["E12","Quelles sont les conditions pour obtenir un permis de conduire en Tunisie ?"]]
+};
+const GROUPES = { G1: [["LegalTN","A"],["Code","B"]], G2: [["LegalTN","B"],["Code","A"]], G3: [["Code","A"],["LegalTN","B"]], G4: [["Code","B"],["LegalTN","A"]] };
+const SUS = ["Je pense que j'aimerais utiliser cet outil fréquemment.","Je trouve cet outil inutilement complexe.","Je trouve cet outil facile à utiliser.","Je pense que j'aurais besoin de l'aide d'une personne technique pour utiliser cet outil.","Je trouve que les différentes fonctions de cet outil sont bien intégrées.","Je trouve qu'il y a trop d'incohérences dans cet outil.","Je pense que la plupart des gens apprendraient très vite à utiliser cet outil.","Je trouve cet outil très lourd à utiliser.","Je me sentais très en confiance en utilisant cet outil.","J'ai dû apprendre beaucoup de choses avant de pouvoir utiliser cet outil."];
+const SPEC = ["J'ai confiance dans les réponses que cet outil m'a permis de trouver.","Les références (articles, pages) m'ont permis de vérifier la réponse.","Cet outil m'a aidé à savoir quand le Code ne répond pas à la question."];
+const CONSIGNES = {
+  LegalTN: "Utilisez <b>l'application LegalTN</b> (adresse donnée par le facilitateur) : posez votre question, lisez la réponse et l'article cité. Vous pouvez aussi lire l'article complet.",
+  Code: "Utilisez <b>le Code du travail en PDF</b> et la recherche par mot-clé (<kbd>Ctrl</kbd>+<kbd>F</kbd>). Aucun autre outil (ni moteur de recherche, ni assistant)."
+};
+const $ = s => document.querySelector(s);
+const etat = { phase: "accueil", participant: "", groupe: "", profil: {}, bloc: 0, tache: 0, debut: 0, taches: [], questionnaires: [], final: {}, consentement: false };
+const html = (strings, ...v) => strings.reduce((a, s, i) => a + s + (v[i] ?? ""), "");
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const cle = () => "etude-utilite:" + etat.participant;
+function sauver() { try { if (etat.participant) localStorage.setItem(cle(), JSON.stringify(etat)); } catch {} }
+function reprendre(code) { try { const g = JSON.parse(localStorage.getItem("etude-utilite:" + code) || "null"); return g; } catch { return null; } }
+function etape(t) { $("#etape").textContent = t; }
+function echelle(nom, n, valeurs = null, bas = "", haut = "") {
+  const v = valeurs || Array.from({ length: n }, (_, i) => i + 1);
+  return `<div class="echelle">${v.map(x => `<label><input type="radio" name="${nom}" value="${x}"><span>${x}</span></label>`).join("")}</div>` +
+         (bas || haut ? `<div class="note ligne" style="justify-content:space-between"><span>${bas}</span><span>${haut}</span></div>` : "");
+}
+const lu = nom => { const e = document.querySelector(`input[name="${nom}"]:checked`); return e ? e.value : ""; };
+const msg = m => { const el = $("#message"); if (el) el.textContent = m; };
+
+/* ---------- écrans ---------- */
+function accueil() {
+  etat.phase = "accueil"; etape("Accueil");
+  $("#main").innerHTML = html`<div class="carte"><h2>Bienvenue</h2>
+   <p>Cette étude mesure si l'outil <b>LegalTN</b> aide à trouver une règle du Code du travail tunisien. Vous répondrez à deux séries de 6 questions, avec un outil différent à chaque série, puis donnerez votre avis. Durée : 30 à 40 minutes.</p>
+   <p>Ce n'est <b>pas vous</b> qui êtes évalué(e) : ce sont les outils. Une question peut ne pas avoir de réponse dans le Code ; dans ce cas, dites-le.</p>
+   <h3>Consentement</h3>
+   <p class="note">Participation volontaire ; vous pouvez arrêter à tout moment sans justification. Vos réponses sont enregistrées sous un <b>code</b> (pas de nom) et servent uniquement à évaluer l'outil, dans un rapport de projet universitaire. Aucune donnée personnelle n'est collectée.</p>
+   <label style="font-weight:400"><input type="checkbox" id="consent"> J'ai lu ces informations et j'accepte de participer.</label>
+   <label for="code">Code participant et groupe (donnés par le facilitateur, ex. <code>P01-G2</code>)</label>
+   <input type="text" id="code" placeholder="P01-G2" autocomplete="off">
+   <p><button class="primaire" id="go">Commencer</button></p><div id="message"></div></div>`;
+  $("#go").onclick = () => {
+    const m = /^(P\d{1,3})-(G[1-4])$/i.exec($("#code").value.trim());
+    if (!$("#consent").checked) return msg("Le consentement est nécessaire pour continuer.");
+    if (!m) return msg("Code attendu : P suivi d'un numéro, tiret, puis G1 à G4 (ex. P01-G2).");
+    etat.participant = m[1].toUpperCase(); etat.groupe = m[2].toUpperCase(); etat.consentement = true;
+    const ancien = reprendre(etat.participant);
+    if (ancien && ancien.groupe === etat.groupe && ancien.phase !== "accueil") { Object.assign(etat, ancien); return ecran(); }
+    profil();
+  };
+}
+function profil() {
+  etat.phase = "profil"; etape("Profil");
+  $("#main").innerHTML = html`<div class="carte"><h2>Votre profil</h2>
+   <label for="domaine">Domaine d'études</label><select id="domaine"><option value="">—</option><option>Droit</option><option>Administration / sciences politiques</option><option>Gestion / économie</option><option>Autre</option></select>
+   <label for="niveau">Niveau</label><select id="niveau"><option value="">—</option><option>Licence 1–2</option><option>Licence 3</option><option>Master</option><option>Doctorat / autre</option></select>
+   <h3>Familiarité avec le Code du travail</h3>${echelle("fam", 5, null, "aucune", "très bonne")}
+   <h3>Usage d'outils d'IA (assistants, chatbots) pour vos études</h3>${echelle("ia", 5, null, "jamais", "tous les jours")}
+   <p><button class="primaire" id="suite">Continuer</button></p><div id="message"></div></div>`;
+  $("#suite").onclick = () => {
+    if (!$("#domaine").value || !$("#niveau").value || !lu("fam") || !lu("ia")) return msg("Merci de tout renseigner.");
+    etat.profil = { domaine: $("#domaine").value, niveau: $("#niveau").value, familiarite: +lu("fam"), usage_ia: +lu("ia") };
+    etat.bloc = 0; etat.tache = 0; sauver(); introBloc();
+  };
+}
+const planBloc = () => GROUPES[etat.groupe][etat.bloc];
+function introBloc() {
+  etat.phase = "intro"; const [cond, ens] = planBloc(); etape(`Série ${etat.bloc + 1} / 2`); sauver();
+  $("#main").innerHTML = html`<div class="carte"><h2>Série ${etat.bloc + 1} sur 2</h2>
+   <p>${CONSIGNES[cond]}</p>
+   <div class="alerte">Le temps est chronométré pour chaque question (8 minutes au plus). Si le Code ne contient pas la réponse, cochez « Pas de réponse dans le Code ».</div>
+   <p><button class="primaire" id="go">Prêt(e), commencer la série</button></p></div>`;
+  $("#go").onclick = () => { etat.tache = 0; question(); };
+}
+let minuteur = null;
+function question() {
+  etat.phase = "question"; const [cond, ens] = planBloc(); const [id, enonce] = TACHES[ens][etat.tache];
+  etape(`Série ${etat.bloc + 1} / 2 · question ${etat.tache + 1} / 6`); etat.debut = Date.now(); sauver();
+  $("#main").innerHTML = html`<div class="carte"><div class="ligne"><h2 style="margin:0">Question ${etat.tache + 1}</h2><span class="chrono" id="chrono">0:00</span></div>
+   <div class="enonce">${esc(enonce)}</div>
+   <label for="rep">Votre réponse (rédigez-la en une ou deux phrases)</label><textarea id="rep"></textarea>
+   <label for="art">Article du Code cité (numéro)</label><input type="text" id="art" placeholder="ex. 95">
+   <label style="font-weight:400"><input type="checkbox" id="non"> Pas de réponse dans le Code</label>
+   <h3>Quelle confiance avez-vous dans votre réponse ?</h3>${echelle("conf", 5, null, "aucune", "totale")}
+   <p><button class="primaire" id="suite">Valider et continuer</button></p><div id="message"></div></div>`;
+  clearInterval(minuteur);
+  minuteur = setInterval(() => { const s = Math.round((Date.now() - etat.debut) / 1000); const el = $("#chrono"); if (el) el.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }, 500);
+  $("#suite").onclick = () => {
+    const non = $("#non").checked, rep = $("#rep").value.trim();
+    if (!lu("conf")) return msg("Indiquez votre confiance (1 à 5).");
+    if (!non && !rep) return msg("Écrivez une réponse, ou cochez « Pas de réponse dans le Code ».");
+    clearInterval(minuteur);
+    etat.taches.push({ participant: etat.participant, groupe: etat.groupe, bloc: etat.bloc + 1, condition: cond, ensemble: ens, tache_id: id,
+      reponse: rep, article_cite: $("#art").value.trim(), non_trouve: non ? 1 : 0, confiance: +lu("conf"),
+      duree_s: Math.round((Date.now() - etat.debut) / 1000), note_reponse: "", note_article: "" });
+    if (etat.tache < 5) { etat.tache++; question(); } else sus();
+  };
+}
+function sus() {
+  etat.phase = "sus"; const [cond] = planBloc(); etape(`Série ${etat.bloc + 1} / 2 · questionnaire`); sauver();
+  const lignes = items => items.map((t, i) => `<div class="item"><div>${esc(t)}</div>${echelle(items === SUS ? "s" + i : "x" + i, 5, null, "pas du tout d'accord", "tout à fait d'accord")}</div>`).join("");
+  $("#main").innerHTML = html`<div class="carte"><h2>Votre avis sur l'outil de cette série</h2>
+   <p class="note">Pensez à l'outil que vous venez d'utiliser (${cond === "LegalTN" ? "LegalTN" : "le Code en PDF avec Ctrl+F"}).</p>
+   ${lignes(SUS)}<h3>Trois questions de plus</h3>${lignes(SPEC)}
+   <p><button class="primaire" id="suite">Continuer</button></p><div id="message"></div></div>`;
+  $("#suite").onclick = () => {
+    const s = SUS.map((_, i) => lu("s" + i)), x = SPEC.map((_, i) => lu("x" + i));
+    if (s.some(v => !v) || x.some(v => !v)) return msg("Merci de répondre à toutes les affirmations.");
+    const n = s.map(Number); const score = n.reduce((a, v, i) => a + (i % 2 === 0 ? v - 1 : 5 - v), 0) * 2.5;
+    const q = { participant: etat.participant, groupe: etat.groupe, bloc: etat.bloc + 1, condition: cond, sus_score: score };
+    n.forEach((v, i) => q["sus_" + (i + 1)] = v); x.forEach((v, i) => q["spec_" + (i + 1)] = +v);
+    etat.questionnaires.push(q);
+    if (etat.bloc === 0) { etat.bloc = 1; introBloc(); } else final();
+  };
+}
+function final() {
+  etat.phase = "final"; etape("Dernière étape"); sauver();
+  $("#main").innerHTML = html`<div class="carte"><h2>Pour terminer</h2>
+   <h3>Quel outil préférez-vous pour ce genre de questions ?</h3>
+   <div class="echelle">${["LegalTN","Code en PDF","Pas de préférence"].map(v => `<label><input type="radio" name="pref" value="${v}"><span>${v}</span></label>`).join("")}</div>
+   <h3>Pourriez-vous utiliser LegalTN dans vos études ou votre travail ?</h3>${echelle("usage", 5, null, "sûrement pas", "sûrement")}
+   <label for="com">Commentaires libres (ce qui a aidé, ce qui a gêné, ce qui manque)</label><textarea id="com"></textarea>
+   <p><button class="primaire" id="suite">Terminer et exporter</button></p><div id="message"></div></div>`;
+  $("#suite").onclick = () => {
+    if (!lu("pref") || !lu("usage")) return msg("Merci de répondre aux deux questions.");
+    etat.final = { preference: lu("pref"), intention_usage: +lu("usage"), commentaire: $("#com").value.trim() };
+    etat.phase = "fin"; sauver(); fin();
+  };
+}
+const echapperCSV = v => /[",\r\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v);
+function versCSV(lignes) {
+  if (!lignes.length) return "";
+  const champs = [...new Set(lignes.flatMap(Object.keys))];
+  return "﻿" + champs.join(",") + "\r\n" + lignes.map(l => champs.map(c => echapperCSV(l[c] ?? "")).join(",")).join("\r\n") + "\r\n";
+}
+function telecharger(nom, contenu, type) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([contenu], { type })); a.download = nom; a.click(); }
+function exporter() {
+  const p = etat.participant;
+  telecharger(`${p}_taches.csv`, versCSV(etat.taches), "text/csv");
+  const quest = etat.questionnaires.map(q => ({ ...q, ...(q.bloc === 2 ? { preference: etat.final.preference, intention_usage: etat.final.intention_usage } : {}) }));
+  telecharger(`${p}_questionnaires.csv`, versCSV(quest.map(q => ({ ...q, ...etat.profil }))), "text/csv");
+  telecharger(`${p}_complet.json`, JSON.stringify({ participant: p, groupe: etat.groupe, profil: etat.profil, taches: etat.taches, questionnaires: etat.questionnaires, final: etat.final }, null, 1), "application/json");
+}
+function fin() {
+  etape("Terminé");
+  $("#main").innerHTML = html`<div class="carte"><h2>Merci !</h2><p>Votre participation est terminée. Cliquez pour enregistrer vos réponses (3 fichiers) et remettez-les au facilitateur.</p>
+   <p><button class="primaire" id="exp">Enregistrer mes réponses</button></p></div>`;
+  $("#exp").onclick = exporter;
+}
+function ecran() { ({ accueil, profil, intro: introBloc, question, sus, final, fin })[etat.phase](); }
+window.etudeUtilite = { etat, ecran, versCSV, TACHES, GROUPES };
+accueil();
+</script>
+</body>
+</html>

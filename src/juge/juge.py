@@ -10,6 +10,7 @@ dans le périmètre, réponse donnée), avec le texte des articles cités.
 Usage :
   python -X utf8 -m src.juge.juge echantillon
   python -X utf8 -m src.juge.juge juger --modele qwen2.5:7b
+  python -X utf8 -m src.juge.juge accord      # après le jugement humain (outils/juge_fidelite.html)
 """
 
 from __future__ import annotations
@@ -123,6 +124,51 @@ def binaire(v: str) -> str:
     return "fidele" if v == "fidele" else "non_fidele"
 
 
+def mesurer(triplets: list[tuple[str, str, str]]) -> dict | None:
+    """Accord entre une référence et un juge : triplets (référence, juge, langue)."""
+    if not triplets:
+        return None
+    a, b = [x for x, _, _ in triplets], [y for _, y, _ in triplets]
+    paires = list(zip(a, b))
+    return {
+        "n": len(triplets),
+        "accord_brut_3_classes": round(sum(x == y for x, y in paires) / len(paires), 3),
+        "kappa_3_classes": round(kappa(a, b), 3),
+        "kappa_fidele_vs_non": round(kappa([binaire(x) for x in a], [binaire(y) for y in b]), 3),
+        "kappa_infidele_vs_non": round(kappa([x == "infidele" for x in a], [y == "infidele" for y in b]), 3),
+        "matrice": {f"{x}->{y}": n for x in VERDICTS for y in VERDICTS + ("illisible",)
+                    if (n := sum(1 for p in paires if p == (x, y)))},
+        "par_langue": {lg: round(kappa([x for x, _, l in triplets if l == lg], [y for _, y, l in triplets if l == lg]), 3)
+                       for lg in ("fr", "ar")},
+    }
+
+
+def accord_humain(sortie: Path) -> None:
+    """Après le jugement humain : accord humain/Claude et humain/juges, sans relancer les LLM.
+
+    Les verdicts des juges sont relus dans ``juge_<modele>.csv`` ; le verdict humain dans
+    l'échantillon (il a pu être rempli après l'exécution du juge).
+    """
+    lignes = [l for l in lire(ECHANTILLON) if l["verdict_humain"].strip() in VERDICTS]
+    if not lignes:
+        raise SystemExit("Aucun verdict_humain rempli dans l'échantillon : rien à mesurer.")
+    humain = {l["id"]: (l["verdict_humain"].strip(), l["langue"]) for l in lignes}
+    res = {"n_jugees_humain": len(lignes), "n_echantillon": len(lire(ECHANTILLON)),
+           "distribution_humain": {v: sum(h == v for h, _ in humain.values()) for v in VERDICTS},
+           "humain_vs_claude": mesurer([(h, l["verdict_claude"].strip(), lg) for l in lignes
+                                        for h, lg in [humain[l["id"]]]])}
+    for f in sorted(sortie.glob("juge_*.csv")):
+        juges = {r["id"]: r["verdict_juge"] for r in lire(f)}
+        res[f"humain_vs_{f.stem[5:]}"] = mesurer([(h, juges[i], lg) for i, (h, lg) in humain.items() if i in juges])
+    with open(sortie / "accord_humain.json", "w", encoding="utf-8") as f:
+        json.dump(res, f, ensure_ascii=False, indent=2)
+    for nom, m in res.items():
+        if isinstance(m, dict) and "kappa_3_classes" in m:
+            print(f"{nom:28s} n={m['n']:2d}  accord {m['accord_brut_3_classes']:.3f}  κ3 {m['kappa_3_classes']:.3f}"
+                  f"  κ fidèle/non {m['kappa_fidele_vs_non']:.3f}  κ infidèle/non {m['kappa_infidele_vs_non']:.3f}")
+    print(f"-> {sortie / 'accord_humain.json'}")
+
+
 def juger(modele: str, sortie: Path) -> None:
     lignes = lire(ECHANTILLON)
     resultats = []
@@ -143,21 +189,9 @@ def juger(modele: str, sortie: Path) -> None:
               "illisibles": sum(r["verdict_juge"] == "illisible" for r in resultats),
               "distribution_juge": {v: sum(r["verdict_juge"] == v for r in resultats) for v in VERDICTS}}
     for ref in ("verdict_humain", "verdict_claude"):
-        paires = [(r[ref], r["verdict_juge"]) for r in resultats if r[ref] in VERDICTS]
-        if not paires:
-            continue
-        a, b = [x for x, _ in paires], [y for _, y in paires]
-        accord[ref] = {
-            "n": len(paires),
-            "accord_brut_3_classes": round(sum(x == y for x, y in paires) / len(paires), 3),
-            "kappa_3_classes": round(kappa(a, b), 3),
-            "kappa_fidele_vs_non": round(kappa([binaire(x) for x in a], [binaire(y) for y in b]), 3),
-            "matrice": {f"{x}->{y}": sum(1 for p in paires if p == (x, y)) for x in VERDICTS for y in VERDICTS + ("illisible",)
-                        if any(p == (x, y) for p in paires)},
-            "par_langue": {lg: round(kappa([x for (x, _), r in zip(paires, resultats) if r["langue"] == lg],
-                                           [y for (_, y), r in zip(paires, resultats) if r["langue"] == lg]), 3)
-                           for lg in ("fr", "ar")},
-        }
+        m = mesurer([(r[ref], r["verdict_juge"], r["langue"]) for r in resultats if r[ref] in VERDICTS])
+        if m:
+            accord[ref] = m
     with open(sortie / f"accord_{nom}.json", "w", encoding="utf-8") as f:
         json.dump(accord, f, ensure_ascii=False, indent=2)
     print(json.dumps(accord, ensure_ascii=False, indent=1))
@@ -165,7 +199,7 @@ def juger(modele: str, sortie: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=["echantillon", "appliquer", "juger"])
+    parser.add_argument("action", choices=["echantillon", "appliquer", "juger", "accord"])
     parser.add_argument("--modele", default="qwen2.5:7b")
     parser.add_argument("--jugements", type=Path, default=RACINE / "data/a_annoter/juge_jugements_claude_v1.json")
     parser.add_argument("--sortie", type=Path, default=RACINE / "reports/gold/juge")
@@ -174,6 +208,8 @@ def main() -> None:
         construire_echantillon()
     elif args.action == "appliquer":
         appliquer(args.jugements)
+    elif args.action == "accord":
+        accord_humain(args.sortie)
     else:
         juger(args.modele, args.sortie)
 

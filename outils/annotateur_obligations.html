@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relecture des obligations LegalTN</title>
+<style>
+:root{--marine:#17324D;--ivoire:#F5F3EE;--papier:#FBFBF8;--bord:#E4E1D8;--texte:#344054;--texte2:#667085;
+ --ok:#2E7D5B;--warn:#B08A1E;--claude:#7A4BB8;--oblig:#2F6FB3;--inter:#B4412F;--perm:#2E7D5B;--non:#667085}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--ivoire);color:var(--texte)}
+header{background:var(--marine);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0 12px 0 0}
+button,.fichier,select,input[type=text]{font:inherit;font-size:14px;border-radius:8px;border:1px solid var(--bord);background:var(--papier);color:var(--marine);padding:7px 12px}
+button,.fichier{cursor:pointer} button:hover,.fichier:hover{border-color:var(--marine)} button:disabled{opacity:.45;cursor:default}
+button.primaire{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
+.fichier input{display:none}
+#progression{margin-left:auto;font-size:14px}
+.barre{display:inline-block;width:160px;height:8px;background:#355B80;border-radius:9px;overflow:hidden;vertical-align:middle;margin-left:8px}
+.barre i{display:block;height:100%;background:#8FD3A9}
+main{display:grid;grid-template-columns:200px 1fr 290px;gap:16px;padding:16px;max-width:1500px;margin:auto}
+@media (max-width:1100px){main{grid-template-columns:1fr}}
+.panneau{background:var(--papier);border:1px solid var(--bord);border-radius:12px;padding:14px}
+#liste{max-height:calc(100vh - 120px);overflow:auto;padding:6px}
+#liste div{padding:5px 8px;border-radius:6px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between;gap:6px}
+#liste div:hover{background:var(--ivoire)} #liste div.actif{background:#E2EAF3;font-weight:600}
+.s-v{color:var(--ok)} .s-c{color:var(--claude)} .s-a{color:var(--texte2)}
+#meta{font-size:13px;color:var(--texte2);margin-bottom:10px;display:flex;gap:14px;flex-wrap:wrap}
+#statut{font-weight:700}
+#phrase{font-size:19px;line-height:1.8;padding:16px 20px;background:#fff;border:1px solid var(--bord);border-radius:10px;min-height:90px}
+.champ{margin-top:12px} .champ label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--texte2);margin-bottom:3px}
+.champ input[type=text],.champ textarea{width:100%} textarea{font:inherit;font-size:14px;border:1px solid var(--bord);border-radius:8px;padding:8px;min-height:50px;width:100%}
+.modaux{display:flex;gap:8px;flex-wrap:wrap}
+.modaux button{font-weight:700}
+.modaux button.choisi{color:#fff}
+.modaux button.choisi[data-m=obligation]{background:var(--oblig);border-color:var(--oblig)}
+.modaux button.choisi[data-m=interdiction]{background:var(--inter);border-color:var(--inter)}
+.modaux button.choisi[data-m=permission]{background:var(--perm);border-color:var(--perm)}
+.modaux button.choisi[data-m=non]{background:var(--non);border-color:var(--non)}
+kbd{font-family:Consolas,monospace;font-size:12px;background:var(--ivoire);border:1px solid var(--bord);border-radius:4px;padding:0 5px;color:var(--texte)}
+.modaux button.choisi kbd{color:var(--texte)}
+.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.aide{font-size:13px;line-height:1.55} .aide h3{font-size:14px;margin:12px 0 4px;color:var(--marine)} .aide p{margin:4px 0}
+.vide{color:var(--texte2);font-size:15px;padding:40px;text-align:center}
+#message{font-size:13px;color:var(--texte2);min-height:18px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+ <h1>Relecture des obligations · LegalTN</h1>
+ <label class="fichier">Ouvrir un lot CSV…<input type="file" id="ouvrir" accept=".csv"></label>
+ <button id="enregistrer" disabled>Enregistrer le CSV</button>
+ <span id="nomFichier"></span>
+ <span id="progression"></span>
+</header>
+<main>
+ <div class="panneau" id="liste"><div class="vide">Aucun lot ouvert</div></div>
+ <section class="panneau" id="centre">
+  <div class="vide">Ouvrez <b>data/a_annoter/obligations_dev_claude_v1.csv</b> ou <b>obligations_test_claude_v1.csv</b>.</div>
+ </section>
+ <aside class="panneau aide">
+  <h3>Comment faire</h3>
+  <p>Lisez la <b>phrase</b>, vérifiez ce que Claude a rempli, corrigez, puis <kbd>Entrée</kbd> : la ligne passe en « vérifiée par vous » et on passe à la suivante.</p>
+  <p><b>Type</b> : <kbd>1</kbd> obligation (doit faire), <kbd>2</kbd> interdiction (ne doit pas / ne peut… que), <kbd>3</kbd> permission (peut), <kbd>4</kbd> non retenue (définition, renvoi, règle sans action d'un rôle).</p>
+  <p><b>Qui</b> : le rôle <b>tel qu'écrit</b> dans la phrase ; vide s'il n'est pas nommé (« l'employeur » implicite : le dire en commentaire).</p>
+  <p><b>Quoi</b> : l'action, au plus court, fidèle au texte. <b>Quand</b> : condition, délai ou moment ; vide s'il n'y en a pas.</p>
+  <p>Les touches <kbd>1</kbd>–<kbd>4</kbd> et <kbd>←</kbd> <kbd>→</kbd> ne marchent pas pendant la saisie dans un champ texte ; <kbd>Ctrl</kbd>+<kbd>Entrée</kbd> valide depuis un champ.</p>
+  <h3>Cas à surveiller</h3>
+  <p>Phrases où Claude a signalé un doute : voir son commentaire (rôle absent, phrase coupée par l'OCR, deux obligations dans une phrase).</p>
+  <p>Pour le <b>test</b> : ne relisez qu'après avoir fixé vos conventions sur le dev, et ne modifiez plus les règles de l'extracteur après l'avoir lu.</p>
+  <h3>Enregistrer</h3>
+  <p><b>Enregistrer le CSV</b> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) sur le fichier d'origine dans <code>data/a_annoter/</code>, puis :</p>
+  <p><code>python -X utf8 -m src.obligation_extraction.evaluer_obligations --gold data/a_annoter/obligations_dev_claude_v1.csv</code></p>
+ </aside>
+</main>
+<script>
+"use strict";
+const MODAUX = { obligation: "obligation", interdiction: "interdiction", permission: "permission", non: "" };
+const NOMS = { obligation: "obligation", interdiction: "interdiction", permission: "permission", non: "non retenue" };
+const $ = s => document.querySelector(s);
+const etat = { nom: "", colonnes: [], lignes: [], i: 0, poignee: null, empreinte: "" };
+
+function lireCSV(texte) {
+  texte = texte.replace(/^﻿/, "");
+  const lignes = []; let ligne = [], champ = "", guill = false;
+  for (let k = 0; k < texte.length; k++) {
+    const c = texte[k];
+    if (guill) { if (c === '"') { if (texte[k + 1] === '"') { champ += '"'; k++; } else guill = false; } else champ += c; }
+    else if (c === '"') guill = true;
+    else if (c === ",") { ligne.push(champ); champ = ""; }
+    else if (c === "\n") { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); ligne = []; champ = ""; }
+    else champ += c;
+  }
+  if (champ !== "" || ligne.length) { ligne.push(champ.replace(/\r$/, "")); lignes.push(ligne); }
+  const tete = lignes.shift();
+  return { tete, lignes: lignes.filter(l => l.length > 1).map(l => Object.fromEntries(tete.map((t, j) => [t, l[j] ?? ""]))) };
+}
+const echapper = v => /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+function ecrireCSV() {
+  const corps = etat.lignes.map(l => etat.colonnes.map(c => echapper(String(l[c] ?? ""))).join(","));
+  return "﻿" + etat.colonnes.join(",") + "\r\n" + corps.join("\r\n") + "\r\n";
+}
+const typeDe = l => l.modal ? l.modal : (/non_obligation/i.test(l.commentaire) ? "non" : "");
+const classeStatut = s => s === "verifie" ? "s-v" : s === "verifie_claude" ? "s-c" : "s-a";
+const echapperHtml = t => t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function rendre() {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  const t = typeDe(l);
+  $("#centre").innerHTML = `
+   <div id="meta"><span><b>${l.obligation_id}</b></span><span>${l.article_fr} · page ${l.page_fr}</span><span>${etat.i + 1} / ${etat.lignes.length}</span>
+    <span id="statut" class="${classeStatut(l.statut)}">${l.statut === "verifie" ? "✓ vérifiée par vous" : l.statut === "verifie_claude" ? "annotée par Claude, à relire" : "à vérifier"}</span></div>
+   <div id="phrase"></div>
+   <div class="champ"><label>Type</label><div class="modaux">${["obligation", "interdiction", "permission", "non"].map((m, k) =>
+     `<button data-m="${m}" class="${t === m ? "choisi" : ""}"><kbd>${k + 1}</kbd> ${NOMS[m]}</button>`).join("")}</div></div>
+   <div class="champ"><label for="qui">Qui (rôle tel qu'écrit)</label><input type="text" id="qui"></div>
+   <div class="champ"><label for="quoi">Quoi (l'action)</label><input type="text" id="quoi"></div>
+   <div class="champ"><label for="quand">Quand (condition, délai, moment)</label><input type="text" id="quand"></div>
+   <div class="champ"><label for="commentaire">Commentaire</label><textarea id="commentaire"></textarea></div>
+   <div class="actions"><button id="precedente"><kbd>←</kbd> Précédente</button>
+    <button class="primaire" id="valider"><kbd>Entrée</kbd> Vérifiée, suivante</button>
+    <button id="suivante">Suivante <kbd>→</kbd></button><button id="remettre">Remettre « à vérifier »</button></div>
+   <div id="message"></div>`;
+  $("#phrase").textContent = l.phrase;
+  for (const c of ["qui", "quoi", "quand", "commentaire"]) {
+    const el = $("#" + c); el.value = l[c];
+    el.oninput = () => { l[c] = el.value; sauver(); };
+    el.onkeydown = e => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); valider(); } };
+  }
+  document.querySelectorAll(".modaux button").forEach(b => b.onclick = () => choisirType(b.dataset.m));
+  $("#precedente").onclick = () => aller(etat.i - 1); $("#suivante").onclick = () => aller(etat.i + 1);
+  $("#valider").onclick = valider;
+  $("#remettre").onclick = () => { l.statut = "a_verifier"; sauver(); rendre(); };
+  rendreListe();
+}
+function rendreListe() {
+  const n = etat.lignes.filter(l => l.statut === "verifie").length;
+  $("#progression").innerHTML = `${n} / ${etat.lignes.length} vérifiées <span class="barre"><i style="width:${100 * n / etat.lignes.length}%"></i></span>`;
+  $("#liste").innerHTML = etat.lignes.map((l, k) => {
+    const t = typeDe(l);
+    return `<div data-k="${k}" class="${k === etat.i ? "actif" : ""}"><span>${l.obligation_id}</span>` +
+      `<span class="${classeStatut(l.statut)}" title="${l.statut}">${t ? t.slice(0, 3) : "—"} ${l.statut === "verifie" ? "✓" : l.statut === "verifie_claude" ? "C" : "…"}</span></div>`;
+  }).join("");
+  $("#liste").querySelectorAll("div[data-k]").forEach(d => d.onclick = () => aller(+d.dataset.k));
+  const actif = $("#liste .actif"); if (actif) actif.scrollIntoView({ block: "nearest" });
+}
+function choisirType(m) {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  l.modal = MODAUX[m];
+  if (m === "non") { if (!/non_obligation/i.test(l.commentaire)) l.commentaire = "non_obligation : " + l.commentaire.replace(/^non_obligation\s*:?\s*/i, ""); }
+  else l.commentaire = l.commentaire.replace(/^non_obligation\s*:?\s*/i, "");
+  sauver(); rendre();
+}
+function valider() {
+  const l = etat.lignes[etat.i]; if (!l) return;
+  if (!typeDe(l)) { message("Choisissez d'abord un type (1 à 4)."); return; }
+  l.statut = "verifie"; sauver();
+  const suivante = etat.lignes.findIndex((x, k) => k > etat.i && x.statut !== "verifie");
+  if (suivante >= 0) aller(suivante);
+  else { rendre(); message(etat.lignes.every(x => x.statut === "verifie") ? "Tout est vérifié : enregistrez le CSV." : "Dernière ligne : il en reste plus haut."); }
+}
+function aller(k) { if (k < 0 || k >= etat.lignes.length) return; etat.i = k; sauver(); rendre(); }
+function message(m) { const el = $("#message"); if (el) el.textContent = m; }
+
+const cle = () => "annotateur-obligations:" + etat.nom;
+function empreinte(texte) { let h = 5381; for (let k = 0; k < texte.length; k++) h = ((h << 5) + h + texte.charCodeAt(k)) | 0; return texte.length + ":" + (h >>> 0).toString(16); }
+function sauver() {
+  try { localStorage.setItem(cle(), JSON.stringify({ empreinte: etat.empreinte, lignes: etat.lignes.map(l => ({ id: l.obligation_id, modal: l.modal, qui: l.qui, quoi: l.quoi, quand: l.quand, c: l.commentaire, s: l.statut })) })); } catch {}
+}
+function restaurer() {
+  try {
+    const g = JSON.parse(localStorage.getItem(cle()) || "null");
+    if (!g || g.empreinte !== etat.empreinte) return false;
+    const par = Object.fromEntries(g.lignes.map(x => [x.id, x])); let n = 0;
+    etat.lignes.forEach(l => { const x = par[l.obligation_id]; if (x) { l.modal = x.modal; l.qui = x.qui; l.quoi = x.quoi; l.quand = x.quand; l.commentaire = x.c; l.statut = x.s; n++; } });
+    return n > 0;
+  } catch { return false; }
+}
+function charger(texte, nom) {
+  const { tete, lignes } = lireCSV(texte);
+  if (!tete.includes("obligation_id") || !tete.includes("modal")) { alert("Ce fichier n'est pas un lot d'obligations (colonnes obligation_id et modal absentes)."); return; }
+  etat.nom = nom; etat.empreinte = empreinte(texte);
+  etat.colonnes = tete.includes("statut") ? tete : [...tete, "statut"];
+  etat.lignes = lignes.map(r => ({ ...r, statut: (r.statut || "a_verifier").trim() }));
+  const repris = restaurer();
+  const premiere = etat.lignes.findIndex(l => l.statut !== "verifie");
+  etat.i = premiere >= 0 ? premiere : 0;
+  $("#nomFichier").textContent = nom; $("#enregistrer").disabled = false;
+  rendre(); message(repris ? "Travail précédent repris depuis ce navigateur." : `${etat.lignes.length} lignes chargées.`);
+}
+async function enregistrer() {
+  if (!etat.lignes.length) return;
+  sauver(); const contenu = ecrireCSV();
+  if (window.showSaveFilePicker) {
+    try {
+      if (!etat.poignee) etat.poignee = await showSaveFilePicker({ suggestedName: etat.nom, types: [{ description: "CSV", accept: { "text/csv": [".csv"] } }] });
+      const w = await etat.poignee.createWritable(); await w.write(new Blob([contenu], { type: "text/csv" })); await w.close();
+      etat.empreinte = empreinte(contenu); sauver(); message(`Enregistré dans ${etat.poignee.name}.`); return;
+    } catch (e) { if (e.name === "AbortError") return; }
+  }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([contenu], { type: "text/csv" })); a.download = etat.nom; a.click();
+  message("Téléchargé : remplacez le fichier dans data/a_annoter/ par celui-ci.");
+}
+
+$("#ouvrir").onchange = async e => { const f = e.target.files[0]; if (f) { etat.poignee = null; charger(await f.text(), f.name); } };
+$("#enregistrer").onclick = enregistrer;
+document.addEventListener("keydown", e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === "s") { e.preventDefault(); enregistrer(); return; }
+  if (!etat.lignes.length || ["TEXTAREA", "INPUT"].includes(e.target.tagName)) return;
+  if (["1", "2", "3", "4"].includes(e.key)) { e.preventDefault(); choisirType(["obligation", "interdiction", "permission", "non"][+e.key - 1]); }
+  else if (e.key === "Enter") { e.preventDefault(); valider(); }
+  else if (e.key === "ArrowRight") aller(etat.i + 1);
+  else if (e.key === "ArrowLeft") aller(etat.i - 1);
+});
+window.addEventListener("beforeunload", sauver);
+window.annotateurObligations = { charger, etat, ecrireCSV };
+</script>
+</body>
+</html>

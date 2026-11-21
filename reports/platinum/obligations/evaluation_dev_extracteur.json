@@ -1,0 +1,40 @@
+{
+  "n_commun": 200,
+  "detection_obligation": {
+    "precision": 0.9213,
+    "rappel": 0.9591,
+    "f1": 0.9398,
+    "vp": 164,
+    "fp": 14,
+    "fn": 7
+  },
+  "modal_par_classe": {
+    "obligation": {
+      "precision": 0.9906,
+      "rappel": 0.9813,
+      "f1": 0.9859,
+      "vp": 105,
+      "fp": 1,
+      "fn": 2
+    },
+    "interdiction": {
+      "precision": 0.9811,
+      "rappel": 0.9811,
+      "f1": 0.9811,
+      "vp": 52,
+      "fp": 1,
+      "fn": 1
+    },
+    "permission": {
+      "precision": 0.8,
+      "rappel": 1.0,
+      "f1": 0.8889,
+      "vp": 4,
+      "fp": 1,
+      "fn": 0
+    }
+  },
+  "qui_exactitude": 0.3016,
+  "quand_exactitude": 0.1139,
+  "n_erreurs": 24
+}
