@@ -67,7 +67,19 @@ logistique à classes équilibrées.
 | **Transfert** : appris en français, testé en arabe | 0,409 ± 0,020 | 0,463 |
 | **Transfert** : appris en arabe, testé en français | 0,412 ± 0,026 | 0,502 |
 
-LORA_PLACEHOLDER
+### Fine-tuning LoRA (multilingual-e5-base, rang 8, projections query et value)
+
+Même protocole (5 plis par blocs), **une seule graine** (graine 0, 8 époques, ~10 minutes pour les 10
+modèles sur la carte de 4 Go). Comparaison avec les autres systèmes **sur la même graine 0** :
+
+| Système | LoRA | e5 + LR (graine 0) | Écart |
+|---|---:|---:|---:|
+| Français → français | **0,713** | 0,617 | +0,096 |
+| Arabe → arabe | **0,638** | 0,580 | +0,058 |
+| Transfert français → arabe | 0,453 | 0,400 | +0,053 |
+| Transfert arabe → français | 0,518 | 0,392 | +0,126 |
+
+Exactitude : 0,734 (FR), 0,650 (AR), 0,492 (FR→AR), 0,590 (AR→FR).
 
 ## Lecture
 
@@ -78,7 +90,13 @@ LORA_PLACEHOLDER
    par rapport à l'apprentissage dans la langue : un classifieur appris en français sert en arabe sans
    étiquette arabe, avec une qualité nettement moindre. **Ajouter l'autre langue à l'apprentissage
    n'aide pas** (bilingue ≤ monolingue).
-3. **Domaines faciles** (F1 e5 français) : conflits et juridictions 0,86, durée-repos-congés 0,81, syndicats
+3. **LoRA fait mieux que la régression logistique sur les embeddings figés** dans les quatre cas (+0,05 à
+   +0,13 de macro-F1 sur la même graine), y compris en transfert : adapter les couches de l'encodeur aide,
+   en français (0,71) comme en arabe (0,64). Le meilleur transfert reste inférieur à l'apprentissage dans la
+   langue (0,52 contre 0,71 en test français). **Réserve** : une seule graine pour LoRA ; l'écart de 0,05 à 0,10
+   dépasse la dispersion observée entre graines des autres systèmes (0,05 pour e5 + LR en français), mais
+   l'écart-type de LoRA n'est pas mesuré.
+4. **Domaines faciles** (F1 e5 français) : conflits et juridictions 0,86, durée-repos-congés 0,81, syndicats
    0,80, conditions et protection 0,75, conventions collectives 0,73. **Difficiles** : salaire 0,41,
    inspection et sanctions 0,41, contrat de travail 0,52, hygiène-sécurité 0,55, statuts particuliers 0,55.
    Les confusions principales : statuts particuliers → contrat de travail (9 articles), hygiène-sécurité →
@@ -94,5 +112,7 @@ LORA_PLACEHOLDER
 - Regroupement en 12 domaines non validé ; changer le regroupement change les scores.
 - Petits effectifs (16 à 73 articles par domaine) ; un article = un exemple, texte tronqué à 256 jetons.
 - Les écarts-types sont sur 3 découpages d'un même jeu, pas sur des échantillons indépendants.
+- LoRA : une graine, hyperparamètres (rang 8, taux 3e-4, 8 époques) non réglés ; aucun réglage sur les plis
+  de test, mais aucune validation séparée non plus. Le F1 par domaine de LoRA n'est pas détaillé.
 - Les mentions de lois modificatives (« Modifié par la loi n° … ») ne sont pas supprimées en arabe quand
   l'intitulé est mal formé (15 articles) : légère fuite de période, sans lien direct avec le domaine.

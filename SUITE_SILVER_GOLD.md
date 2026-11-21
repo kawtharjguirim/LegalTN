@@ -270,3 +270,10 @@ Rapport brouillon : `reports/platinum/RAPPORT.md` (tableau d'état en annexe). C
 3. **Licence** : renseigner `data/publication/legaltn_v1/LICENCE.md`, puis publier (toi). Test des obligations : `preparer --avec-test` seulement après l'étape 2.
 4. **Étude d'utilité** : `etude_utilite/PROTOCOLE.md` (faire valider les 12 tâches par un juriste, pilote à 2 personnes, 12 à 20 étudiants). Passation avec `outils/etude_utilite.html`, résultats dans `etude_utilite/resultats/`, notation des colonnes `note_reponse` / `note_article`, puis `python -X utf8 -m src.etude.analyser`.
 5. **Corriger les 8 articles arabes** (voir 2.2) avant de publier le texte arabe.
+
+### Classification de domaine (Platinum, lot C de la fiche)
+
+`python -X utf8 -m src.domaine.etiquettes` (étiquettes et bornes), `python -X utf8 -m src.domaine.evaluer` (TF-IDF, e5, transfert, 3 graines), `python -X utf8 -m src.domaine.lora` (LoRA sur GPU, ~10 min). Rapport : `reports/platinum/domaine/RESULTATS.md`. À faire :
+1. **Faire valider le regroupement en 12 domaines** par un juriste (`PLAGES` dans `src/domaine/etiquettes.py`) : c'est la décision de conception qui change le plus les scores.
+2. **LoRA sur 3 graines** pour avoir un écart-type (`--graine 1`, `--graine 2`), puis comparer.
+3. Essayer une étiquette plus fine (chapitres plutôt que domaines) ou une tâche au niveau de la phrase.

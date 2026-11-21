@@ -29,7 +29,8 @@ cite, vérifie ses citations et sait refuser, et un jeu de ressources réutilisa
 Contributions : (1) un alignement AR/FR par embeddings validé sur 160 paires ; (2) un audit des
 hallucinations et de la robustesse (accents, fautes, paraphrases, tunisien) ; (3) un jeu
 d'obligations et un extracteur à base de règles ; (4) une calibration de l'abstention avec courbe
-risque-couverture ; (5) le protocole, les outils et le script d'analyse d'une étude d'utilité.
+risque-couverture ; (5) le protocole, les outils et le script d'analyse d'une étude d'utilité ; (6) une classification de
+domaine des articles, avec transfert entre langues et fine-tuning LoRA.
 
 ## 2. Données
 
@@ -93,6 +94,17 @@ vers le français avec qwen2.5:7b avant la recherche donne R@5 0,50.
 **Fidélité.** Un LLM-juge (qwen2.5:7b) compare chaque réponse aux articles cités : κ = 0,45
 avec les verdicts de Claude, **13 réponses infidèles sur 13 signalées**, mais 6 fausses alertes
 sur 32 réponses fidèles. Il sert de filtre, pas de juge ; sa validation humaine reste à faire.
+
+**Classification de domaine.** Prédire le domaine d'un article (12 classes : contrat, durée-repos-congés,
+salaire, conflits et juridictions…) d'après son texte. Les étiquettes sont tirées de la **structure du
+Code** (intitulés de chapitres), non annotées ; le regroupement en 12 domaines est une décision de
+conception non validée par un juriste. Validation croisée par blocs de 6 articles voisins, français et
+arabe dans le même pli. Macro-F1 : TF-IDF 0,58 (FR) et 0,61 (AR) ; embeddings e5 + régression logistique
+0,63 et 0,60 ; **LoRA sur e5 : 0,71 (FR) et 0,64 (AR)** (une graine). **Transfert entre langues** : appris
+en français, testé en arabe 0,41 (0,45 avec LoRA) ; appris en arabe, testé en français 0,41 (0,52 avec
+LoRA) : la langue d'apprentissage compte, et ajouter l'autre langue n'aide pas. Les domaines définis par
+leur place plutôt que par leur sujet (inspection et sanctions, statuts particuliers) sont les plus
+difficiles (F1 ~0,4–0,55). Détail : `reports/platinum/domaine/RESULTATS.md`.
 
 ## 4. Abstention calibrée
 
