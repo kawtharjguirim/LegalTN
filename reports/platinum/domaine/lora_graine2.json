@@ -1,0 +1,31 @@
+{
+  "graine": 2,
+  "epoques": 8,
+  "modele": "intfloat/multilingual-e5-base",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "cibles": [
+      "query",
+      "value"
+    ]
+  },
+  "systemes": {
+    "lora_fr": {
+      "macro_f1": 0.7011,
+      "exactitude": 0.728
+    },
+    "lora_transfert_fr_vers_ar": {
+      "macro_f1": 0.4062,
+      "exactitude": 0.4579
+    },
+    "lora_transfert_ar_vers_fr": {
+      "macro_f1": 0.5133,
+      "exactitude": 0.5921
+    },
+    "lora_ar": {
+      "macro_f1": 0.6176,
+      "exactitude": 0.635
+    }
+  }
+}

@@ -23,38 +23,34 @@ arabes écrits à l'envers par l'OCR (« 4-94 » pour 94-4) remis dans l'ordre.
 
 | | Français (498 articles) | Arabe (477, hors abrogés) |
 |---|---:|---:|
-| Mentions extraites | 176 | 145 |
-| dont internes / externes / relatives | 125 / 34 / 17 | 112 / 23 / 10 |
+| Mentions extraites | 176 | 147 |
+| dont internes / externes / relatives | 125 / 34 / 17 | 114 / 23 / 10 |
 | Articles contenant un renvoi | 132 | 116 |
-| Cibles internes | 313 | 303 |
-| **Cibles sans article correspondant** | **0** | **3** (dans 2 mentions) |
-| Cibles vers un article abrogé | 14 | 11 |
+| Cibles internes | 313 | 265 |
+| **Cibles sans article correspondant** | **0** | **0** (3 avant correction du texte arabe) |
+| Cibles vers un article abrogé | 14 | 10 |
 
-Les 3 cibles arabes sans article sont des **défauts d'OCR** : « الفصل 0 » (art. 265) et « 2779 », « 2854 »
-pour 279 et 284 (art. 287) — ce sont les renvois déjà repérés par l'audit des divergences.
+Avant la correction du texte arabe, 3 cibles arabes n'avaient pas d'article : « الفصل 0 » (art. 265) et « 2779 »,
+« 2854 » pour 279 et 284 (art. 287) — des **défauts d'OCR** repérés par ce contrôle puis corrigés (voir
+`reports/platinum/corpus_arabe/RESULTATS.md`). Les chiffres ci-dessus sont ceux du texte arabe **corrigé** ; le nombre
+de cibles arabes baisse (303 → 265) surtout parce que « الفصول من 7 إلى 111 » (105 articles) était en fait « 107 à 111 ».
 
 ## Contrôle de cohérence arabe / français
 
 Les deux versions d'un article doivent citer les mêmes articles. Comparaison par entrée française
-(union des renvois des articles arabes alignés) : sur **102** entrées qui contiennent un renvoi,
-**68 sont identiques (66,7 %)**, 17 diffèrent, 17 n'ont un renvoi que d'un côté.
+(union des renvois des articles arabes alignés), sur **102** entrées qui contiennent un renvoi :
 
-Les différences sont en grande partie des **défauts d'OCR du texte arabe** (candidats à vérifier sur
-l'image du PDF) :
+| | Avant correction du texte arabe | Après |
+|---|---:|---:|
+| Entrées aux renvois **identiques** | 68 (66,7 %) | **75 (73,5 %)** |
+| Entrées aux renvois différents | 17 | 10 |
+| Renvoi d'un seul côté | 17 | 17 |
 
-| Article | Français | Arabe | Lecture probable |
-|---|---|---|---|
-| 100 | 95 | 5 | « 95 » tronqué |
-| 87 | 85 | 5 | « 85 » tronqué |
-| 125 | 107 à 111 | 7 à 111 | « 107 » tronqué |
-| 176 | 171 | 1 | « 171 » tronqué |
-| 227 | 216 | 6 | « 216 » tronqué |
-| 265 | 270 | 0 | « 270 » illisible |
-| 287 | 279 | 2779 | « 279 » avec un chiffre en trop |
-
-Les autres écarts viennent de renvois que le français répète et que l'arabe abrège ou omet
-(article 234 et suivants : listes d'infractions), ce qui peut aussi être un défaut de numérisation.
-**Aucun écart n'a été confirmé sur image** : ce sont des candidats.
+Les écarts initiaux étaient en grande partie des **défauts d'OCR du texte arabe** (art. 87, 100, 125, 176, 227, 265,
+287, plus les articles 94-14 et 234 aux listes tronquées) : le contrôle a servi à les trouver, puis ils ont été
+corrigés. Les 7 corrections déduites du français (articles 87, 100, 125, 176, 196, 227, 265) sont **à confirmer sur
+image**. Les écarts restants viennent surtout de listes d'infractions répétées en français (articles 21, 234, 334, 386,
+428 renvoient aux sanctions 234 à 237) ou d'extractions françaises incomplètes, pas toujours d'un défaut arabe.
 
 ## Précision (estimation sur échantillon, jugée par Claude)
 

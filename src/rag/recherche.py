@@ -33,12 +33,13 @@ class Resultat:
     details: dict = field(default_factory=dict)
 
 
-def rrf(classements: list[list[str]], k: int = K_RRF) -> dict[str, float]:
-    """Reciprocal Rank Fusion : somme de 1 / (k + rang) sur les classements."""
+def rrf(classements: list[list[str]], k: int = K_RRF, poids: list[float] | None = None) -> dict[str, float]:
+    """Reciprocal Rank Fusion : somme de poids / (k + rang) sur les classements (poids 1 par défaut)."""
     scores: dict[str, float] = {}
-    for classement in classements:
+    for i, classement in enumerate(classements):
+        p = 1.0 if poids is None else poids[i]
         for rang, lab in enumerate(classement, 1):
-            scores[lab] = scores.get(lab, 0.0) + 1.0 / (k + rang)
+            scores[lab] = scores.get(lab, 0.0) + p / (k + rang)
     return scores
 
 
@@ -120,22 +121,27 @@ class Recherche:
         return dedoublonner(np.argsort(-sims), sims, self.corpus[langue].articles)
 
     def rechercher(self, question: str, mode: str = "hybride", bilingue: bool = True,
-                   k: int = 5) -> tuple[list[Resultat], dict]:
-        """Classement final et signaux d'abstention (meilleur cosinus, meilleur BM25)."""
+                   k: int = 5, poids_autre: float = 1.0) -> tuple[list[Resultat], dict]:
+        """Classement final et signaux d'abstention (meilleur cosinus, meilleur BM25).
+
+        ``poids_autre`` : en recherche bilingue, poids du classement dense de la langue **autre** que celle de la
+        question dans la fusion RRF (1 = traité à égalité, 0 = ignoré ; palier Platinum, biais de langue)."""
         langue = repondre.detecter_langue(question)
         langues = ["fr", "ar"] if bilingue else [langue]
         q = self.encoder_requete(question) if mode in {"dense", "hybride"} else None
-        classements, signaux, meilleurs = [], {"langue": langue}, {}
+        classements, signaux, meilleurs, poids = [], {"langue": langue}, {}, []
         for lg in langues:
             if mode in {"bm25", "hybride"} and lg == langue:
                 c_bm = self.bm25(question, lg)
                 classements.append([lab for lab, _, _ in c_bm])
+                poids.append(1.0)
                 signaux["bm25_max"] = c_bm[0][1] if c_bm else 0.0
                 for lab, s, i in c_bm[:50]:
                     meilleurs.setdefault(lab, (lg, i))
             if mode in {"dense", "hybride"}:
                 c_de = self.dense(question, lg, q)
                 classements.append([lab for lab, _, _ in c_de])
+                poids.append(1.0 if lg == langue else poids_autre)
                 signaux[f"cos_max_{lg}"] = c_de[0][1]
                 for lab, s, i in c_de[:50]:
                     meilleurs.setdefault(lab, (lg, i))
@@ -146,7 +152,7 @@ class Recherche:
             # question et articles normalisés de la même façon. Le classement ne change pas.
             qn = self.encoder_requete(normaliser_signal(question, langue))
             signaux["cosnorm_max"] = max(float((self.emb_normalise(lg) @ qn).max()) for lg in langues)
-        fusion = rrf(classements) if len(classements) > 1 else {
+        fusion = rrf(classements, poids=poids) if len(classements) > 1 else {
             lab: 1.0 / (K_RRF + r) for r, lab in enumerate(classements[0] if classements else [], 1)}
         ordre = sorted(fusion, key=lambda lab: -fusion[lab])[:k]
         sortie = []

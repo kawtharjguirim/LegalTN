@@ -193,7 +193,8 @@ def traiter(langue: str) -> tuple[list[dict], dict]:
         lignes = _lire(RACINE / "data/processed/articles_fr_corrige.csv")
         champ_id, champ_texte = "article_id", "texte_fr"
     else:
-        lignes = _lire(RACINE / "data/processed/articles_ar.csv")
+        corrige = RACINE / "data/processed/articles_ar_corrige.csv"     # défauts d'OCR corrigés, s'il existe
+        lignes = _lire(corrige if corrige.exists() else RACINE / "data/processed/articles_ar.csv")
         champ_id, champ_texte = "article_id", "texte_ar"
     numeros = {int(l["numero"]) for l in lignes if str(l["numero"]).isdigit()}
     abroges = {int(l["numero"]) for l in lignes if str(l["numero"]).isdigit()

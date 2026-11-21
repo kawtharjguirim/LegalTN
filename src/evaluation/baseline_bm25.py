@@ -14,7 +14,8 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parents[2]
 TEST = RACINE / "data" / "test_locked" / "questions_reference_v2.csv"
 FR = RACINE / "data" / "processed" / "articles_fr_corrige.csv"
-AR = RACINE / "data" / "processed" / "articles_ar.csv"
+# Texte arabe corrigé (défauts d'OCR vérifiés, ``src/corpus/corriger_arabe.py``) s'il existe ; l'original reste intact.
+AR = RACINE / "data" / "processed" / ("articles_ar_corrige.csv" if (RACINE / "data" / "processed" / "articles_ar_corrige.csv").exists() else "articles_ar.csv")
 SORTIE = RACINE / "data" / "processed" / "baseline_bm25_v2_resultats.csv"
 
 K1, B = 1.5, 0.75

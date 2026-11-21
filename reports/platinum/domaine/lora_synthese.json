@@ -1,0 +1,50 @@
+{
+  "graines": [
+    0,
+    1,
+    2
+  ],
+  "n_graines": 3,
+  "systemes": {
+    "lora_fr": {
+      "macro_f1": 0.7149,
+      "macro_f1_ecart_type": 0.0121,
+      "macro_f1_par_graine": [
+        0.7129,
+        0.7306,
+        0.7011
+      ],
+      "exactitude": 0.7371
+    },
+    "lora_transfert_fr_vers_ar": {
+      "macro_f1": 0.4557,
+      "macro_f1_ecart_type": 0.0417,
+      "macro_f1_par_graine": [
+        0.4526,
+        0.5082,
+        0.4062
+      ],
+      "exactitude": 0.4953
+    },
+    "lora_transfert_ar_vers_fr": {
+      "macro_f1": 0.5258,
+      "macro_f1_ecart_type": 0.0142,
+      "macro_f1_par_graine": [
+        0.5184,
+        0.5456,
+        0.5133
+      ],
+      "exactitude": 0.5998
+    },
+    "lora_ar": {
+      "macro_f1": 0.6416,
+      "macro_f1_ecart_type": 0.0211,
+      "macro_f1_par_graine": [
+        0.6384,
+        0.6689,
+        0.6176
+      ],
+      "exactitude": 0.6566
+    }
+  }
+}

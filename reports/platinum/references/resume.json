@@ -16,25 +16,25 @@
   },
   "ar": {
     "articles_lus": 477,
-    "mentions": 145,
+    "mentions": 147,
     "articles_avec_renvoi": 116,
     "par_type": {
-      "interne": 112,
+      "interne": 114,
       "externe": 23,
       "relative": 10
     },
-    "portee_implicite": 67,
-    "cibles_internes": 303,
-    "cibles_sans_article": 3,
-    "mentions_avec_cible_inexistante": 2,
-    "cibles_vers_article_abroge": 11
+    "portee_implicite": 69,
+    "cibles_internes": 265,
+    "cibles_sans_article": 0,
+    "mentions_avec_cible_inexistante": 0,
+    "cibles_vers_article_abroge": 10
   },
   "coherence_ar_fr": {
     "entrees_fr_appariees": 425,
     "avec_renvoi": 102,
-    "identiques": 68,
-    "differentes": 17,
+    "identiques": 75,
+    "differentes": 10,
     "un_seul_cote": 17,
-    "taux_identiques": 0.667
+    "taux_identiques": 0.735
   }
 }

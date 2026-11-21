@@ -1,0 +1,97 @@
+﻿1
+00:00:00,000 --> 00:00:05,950
+LegalTN répond sur le Code du travail tunisien, avec
+citation ou abstention. Cette vidéo montre aussi ses
+limites.
+
+2
+00:00:06,000 --> 00:00:12,950
+Le Gold mesure la fiabilité ; le Platinum ajoute les
+ressources publiables et la calibration.
+
+3
+00:00:13,000 --> 00:00:16,950
+L'application tourne en local, sans service payant.
+
+4
+00:00:17,000 --> 00:00:22,950
+En français : la réponse cite l'article 79, avec sa page et
+sa version arabe.
+
+5
+00:00:23,000 --> 00:00:29,950
+En arabe, sur la maternité : le texte de l'article 64
+affiche maintenant 30 jours, corrigé sur l'image du PDF.
+
+6
+00:00:30,000 --> 00:00:35,450
+Hors du Code, le système s'abstient plutôt que d'inventer un
+article.
+
+7
+00:00:35,500 --> 00:00:41,450
+Le tableau de bord d'évaluation lit les résultats du projet
+: aucun chiffre n'y est saisi à la main.
+
+8
+00:00:41,500 --> 00:00:48,450
+Chaque bloc dit la nature de sa référence. Ici : ce qui a
+été relu par un humain, à ce jour presque rien.
+
+9
+00:00:48,500 --> 00:00:55,450
+Audit de 493 requêtes : aucun article inventé, aucune
+question hors Code ayant reçu une réponse.
+
+10
+00:00:55,500 --> 00:01:02,450
+La courbe risque-couverture : plus on répond, plus le risque
+d'erreur monte.
+
+11
+00:01:02,500 --> 00:01:09,450
+Classification de domaine en 12 classes : embeddings, LoRA
+et transfert entre langues.
+
+12
+00:01:09,500 --> 00:01:16,450
+Zéro article inventé sur 326 réponses ; mais une paraphrase
+change la décision une fois sur deux.
+
+13
+00:01:16,500 --> 00:01:23,450
+Sur 12 questions neuves : 9 réponses sur 9 avec le bon
+article, 0 question hors Code répondue, 1 refus à tort.
+
+14
+00:01:23,500 --> 00:01:29,950
+Traduire en français puis chercher bat la recherche
+multilingue directe : 0,50 contre 0,03.
+
+15
+00:01:30,000 --> 00:01:37,950
+Sur trois graines, le fine-tuning LoRA gagne 4 à 8 points
+sur e5 ; le transfert entre langues reste inférieur à
+l'apprentissage dans la langue.
+
+16
+00:01:38,000 --> 00:01:44,950
+L'extracteur trouve le type d'obligation, mais le rôle
+seulement six fois sur dix ; les renvois ont servi à
+corriger l'arabe.
+
+17
+00:01:45,000 --> 00:01:51,950
+Le français retrouve le bon article en tête, l'arabe moins
+souvent : le biais est mesuré, il n'est pas toujours
+corrigé.
+
+18
+00:01:52,000 --> 00:01:58,950
+Le juge signale toutes les réponses infidèles mais il n'est
+validé que contre Claude, pas contre un humain.
+
+19
+00:01:59,000 --> 00:02:06,950
+Ce qui manque : relectures humaines, étude avec des
+étudiants, licence et publication.

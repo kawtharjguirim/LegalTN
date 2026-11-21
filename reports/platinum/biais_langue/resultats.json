@@ -1,0 +1,172 @@
+{
+  "n_paires": 21,
+  "configurations": {
+    "monolingue": {
+      "r_at_1_fr": 1.0,
+      "r_at_1_ar": 0.619,
+      "r_at_5_fr": 1.0,
+      "r_at_5_ar": 0.905,
+      "juste_les_deux": 13,
+      "fr_seulement": 8,
+      "ar_seulement": 0,
+      "meme_premier_article": 0.619,
+      "ecart_r_at_1": 0.381
+    },
+    "bilingue_poids_0.0": {
+      "r_at_1_fr": 1.0,
+      "r_at_1_ar": 0.571,
+      "r_at_5_fr": 1.0,
+      "r_at_5_ar": 0.905,
+      "juste_les_deux": 12,
+      "fr_seulement": 9,
+      "ar_seulement": 0,
+      "meme_premier_article": 0.571,
+      "ecart_r_at_1": 0.429
+    },
+    "bilingue_poids_0.25": {
+      "r_at_1_fr": 0.81,
+      "r_at_1_ar": 0.571,
+      "r_at_5_fr": 1.0,
+      "r_at_5_ar": 0.905,
+      "juste_les_deux": 10,
+      "fr_seulement": 7,
+      "ar_seulement": 2,
+      "meme_premier_article": 0.476,
+      "ecart_r_at_1": 0.238
+    },
+    "bilingue_poids_0.5": {
+      "r_at_1_fr": 0.762,
+      "r_at_1_ar": 0.619,
+      "r_at_5_fr": 1.0,
+      "r_at_5_ar": 0.905,
+      "juste_les_deux": 10,
+      "fr_seulement": 6,
+      "ar_seulement": 3,
+      "meme_premier_article": 0.476,
+      "ecart_r_at_1": 0.143
+    },
+    "bilingue_poids_1.0": {
+      "r_at_1_fr": 0.714,
+      "r_at_1_ar": 0.619,
+      "r_at_5_fr": 0.857,
+      "r_at_5_ar": 0.905,
+      "juste_les_deux": 9,
+      "fr_seulement": 6,
+      "ar_seulement": 4,
+      "meme_premier_article": 0.429,
+      "ecart_r_at_1": 0.095
+    }
+  },
+  "pivot_traduction": {
+    "modele_traduction": "qwen2.5:7b",
+    "r_at_1_ar": 0.714,
+    "r_at_5_ar": 0.81,
+    "exemples": [
+      {
+        "id": "D01",
+        "juste": false,
+        "traduction": "Quels droits peut obtenir le travailleur en cas de résiliation licenciement sans cause réelle et sérieuse ?"
+      },
+      {
+        "id": "D02",
+        "juste": true,
+        "traduction": "Peut-on diviser une congé intégral de cinq jours de travail ?"
+      },
+      {
+        "id": "D03",
+        "juste": true,
+        "traduction": "Dans quel délai doit le travailleur bénéficier d'une congé de quinze jours ?"
+      },
+      {
+        "id": "D04",
+        "juste": true,
+        "traduction": "Combien de fois doit-on payer le salaire des travailleurs qui perçoivent leur salaire à l'heure ou par jour ?"
+      },
+      {
+        "id": "D05",
+        "juste": true,
+        "traduction": "Quel est le délai de prescription des contentieux entre les bailleurs et les locataires concernant des relations de travail sur la durée ?"
+      },
+      {
+        "id": "D06",
+        "juste": false,
+        "traduction": "Quelles sont les compétences des conseils de l'usage ?"
+      },
+      {
+        "id": "D07",
+        "juste": true,
+        "traduction": "Est-il licite pour le bailleur de résilier le contrat de travail d'un ouvrier pour sa membership dans un conseil de fabrique ?"
+      },
+      {
+        "id": "D08",
+        "juste": false,
+        "traduction": "Quelle est la ligne de conduite à suivre lorsque l'on ne remet pas le cahier imposé par la loi ?"
+      },
+      {
+        "id": "D09",
+        "juste": true,
+        "traduction": "Qui s'assure du respect et de l'exécution des dispositions de ce chapitre en collaboration avec les officiers de la police judiciaire ?"
+      },
+      {
+        "id": "D10",
+        "juste": true,
+        "traduction": "Doit-on valider un travail qui a été demandé mais pas publié ?"
+      },
+      {
+        "id": "D11",
+        "juste": true,
+        "traduction": "Peut-on former des syndicats syndicalisés ?"
+      },
+      {
+        "id": "D12",
+        "juste": true,
+        "traduction": "Dans quels cas le travail nocturne ne est pas interdit pour les femmes ?"
+      },
+      {
+        "id": "D29",
+        "juste": true,
+        "traduction": "Quelle est l'indemnité qui est due au travailleur licencié après l'expiration de la période d'essai en cas autres que celui de faute grave ?"
+      },
+      {
+        "id": "D31",
+        "juste": true,
+        "traduction": "Quelle est la durée maximale d'activité réelle par semaine ?"
+      },
+      {
+        "id": "D33",
+        "juste": false,
+        "traduction": "Peut-on embaucher un travailleur sans fixer de horaires précis ?"
+      },
+      {
+        "id": "D34",
+        "juste": true,
+        "traduction": "L'employé a-t-il le droit à une congé en raison de la naissance de son enfant ?"
+      },
+      {
+        "id": "D36",
+        "juste": true,
+        "traduction": "Le locataire peut-il déduire des salaires les montants qu'il estime dus pour des fournitures diverses ?"
+      },
+      {
+        "id": "D37",
+        "juste": true,
+        "traduction": "Quelles sont les questions qui sont soumises à la commission consultative de l'établissement ?"
+      },
+      {
+        "id": "D39",
+        "juste": true,
+        "traduction": "Quel organisme réglemente les conditions d'engagement des membres des conseils populaires ainsi que leur régime disciplinaire ?"
+      },
+      {
+        "id": "D40",
+        "juste": false,
+        "traduction": "Les conseils de la coutume juge toujours en instance préalable."
+      },
+      {
+        "id": "D41",
+        "juste": false,
+        "traduction": "La Convention des Tribunaux Civils et Commerciaux s'applique-t-elle aux conseils de la coutume ?"
+      }
+    ]
+  }
+}

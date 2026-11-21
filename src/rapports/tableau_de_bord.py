@@ -338,7 +338,7 @@ def bloc_references() -> str:
             for lg, nom in (("fr", "Français"), ("ar", "Arabe"))]
     corps = (tableau(["Langue", "Mentions", "internes / externes / relatives", "Cibles sans article", "Vers un article abrogé"], rows) +
              barre("Renvois identiques en AR et FR", co["taux_identiques"], 1.0, f'{co["identiques"]} / {co["avec_renvoi"]} entrées') +
-             '<p class="note">Les écarts sont des défauts d\'OCR probables du texte arabe (art. 87, 100, 125, 176, 227, 265, 287), non confirmés sur image. Précision estimée à 91 % sur 35 mentions relues par Claude.</p>')
+             '<p class="note">Le contrôle a révélé des défauts d\'OCR du texte arabe, corrigés depuis (20 corrections, dont 13 lues sur image : <code>reports/platinum/corpus_arabe/</code>). Précision estimée à 91 % sur 35 mentions relues par Claude.</p>')
     return carte("Références croisées (extraction par règles)", "auto", corps)
 
 
@@ -346,18 +346,19 @@ def bloc_domaine() -> str:
     d = json_(R / "platinum/domaine/resultats.json")
     if not d:
         return carte("Classification de domaine", "auto", absent("python -m src.domaine.evaluer"), large=True)
-    lora = (json_(R / "platinum/domaine/lora.json") or {}).get("systemes", {})
+    synth = json_(R / "platinum/domaine/lora_synthese.json") or json_(R / "platinum/domaine/lora.json") or {}
+    lora, n_graines = synth.get("systemes", {}), synth.get("n_graines", 1)
     noms = {"majorite_fr": "Majorité (FR)", "tfidf_fr": "TF-IDF + LR (FR)", "tfidf_ar": "TF-IDF + LR (AR)", "e5_fr": "e5 + LR (FR)", "e5_ar": "e5 + LR (AR)",
             "e5_bilingue_fr": "e5 + LR bilingue, test FR", "e5_bilingue_ar": "e5 + LR bilingue, test AR",
             "transfert_fr_vers_ar": "Transfert : appris en FR, testé en AR", "transfert_ar_vers_fr": "Transfert : appris en AR, testé en FR"}
     corps = "".join(barre(noms[k], v["macro_f1"], 1.0, f'± {f(v["macro_f1_ecart_type"], 3)}', "ref" if k.startswith("majorite") else "") for k, v in d["systemes"].items() if k in noms)
     noms_lora = {"lora_fr": "LoRA e5 (FR)", "lora_ar": "LoRA e5 (AR)", "lora_transfert_fr_vers_ar": "LoRA, transfert FR → AR", "lora_transfert_ar_vers_fr": "LoRA, transfert AR → FR"}
-    corps += "".join(barre(noms_lora[k], v["macro_f1"], 1.0, "1 graine", "fort") for k, v in lora.items() if k in noms_lora)
+    corps += "".join(barre(noms_lora[k], v["macro_f1"], 1.0, f'± {f(v["macro_f1_ecart_type"], 3)}' if "macro_f1_ecart_type" in v else "1 graine", "fort") for k, v in lora.items() if k in noms_lora)
     par = d["systemes"]["e5_fr"]["f1_par_classe"]
     classes = "".join(barre(k.replace("_", " "), v, 1.0, f'n = {d["domaines"].get(k, "")}') for k, v in sorted(par.items(), key=lambda kv: -kv[1]))
     corps = f'<div class="deux"><div><h3>Macro-F1 (5 plis par blocs, 3 graines)</h3>{corps}</div><div><h3>F1 par domaine (e5 + LR, français)</h3>{classes}</div></div>'
     return carte(f'Classification de domaine : {len(par)} domaines, {d["n_fr"]} articles FR / {d["n_ar"]} AR', "auto", corps,
-                 "Étiquettes tirées de la structure du Code (intitulés de chapitres), pas d'une annotation. Plis par blocs de 6 articles voisins, FR et AR dans le même pli.", large=True)
+                 f"Étiquettes tirées de la structure du Code (intitulés de chapitres), pas d'une annotation. Plis par blocs de 6 articles voisins, FR et AR dans le même pli. LoRA : {n_graines} graine(s).", large=True)
 
 
 def bloc_resume() -> str:

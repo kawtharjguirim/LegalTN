@@ -44,3 +44,16 @@ def test_plis_par_blocs_communs_aux_deux_langues():
         p = plis(numeros, graine)
         assert set(p.values()) == set(range(PLIS))
         assert p[10 // BLOC] == p[11 // BLOC]                          # deux articles voisins ne sont jamais séparés
+
+
+def test_synthese_lora_moyenne_et_ecart_type(tmp_path, monkeypatch):
+    import json
+
+    from src.domaine import synthese_lora as sl
+
+    for nom, graine, v in (("lora.json", 0, 0.70), ("lora_graine1.json", 1, 0.74)):
+        (tmp_path / nom).write_text(json.dumps({"graine": graine, "systemes": {"lora_fr": {"macro_f1": v, "exactitude": v}}}), encoding="utf-8")
+    monkeypatch.setattr(sl, "DOSSIER", tmp_path)
+    r = sl.synthese()
+    assert r["n_graines"] == 2 and abs(r["systemes"]["lora_fr"]["macro_f1"] - 0.72) < 1e-9
+    assert abs(r["systemes"]["lora_fr"]["macro_f1_ecart_type"] - 0.02) < 1e-9
