@@ -35,12 +35,39 @@ def _lire_cache() -> dict:
         return {}
 
 
+LEXIQUE = RACINE / "data/tunisien/lexique_derja_fr.csv"
+
+
+def _lire_lexique() -> list[tuple[str, str]]:
+    """Paires (mot derja, équivalent français) du lexique, dont le statut n'est pas « rejeté »."""
+    import csv
+    try:
+        with LEXIQUE.open(encoding="utf-8", newline="") as f:
+            lignes = list(csv.DictReader(f))
+    except OSError:
+        return []
+    return [(r["derja"], r["francais"]) for r in lignes if r.get("statut") != "rejete"]
+
+
+def glossaire(question: str) -> list[tuple[str, str]]:
+    """Entrées du lexique présentes dans la question (mots entiers, insensible à la casse)."""
+    import re
+    texte = " " + " ".join(re.findall(r"[a-z0-9']+", question.lower())) + " "
+    return [(d, f) for d, f in _lire_lexique() if f" {d} " in texte]
+
+
 def traduire(question: str, cible: str = "fr", modele: str = generer.MODELE_DEFAUT) -> str:
+    gloss = glossaire(question) if cible == "fr" else []
+    signature = "|".join(f"{d}={f}" for d, f in gloss)
     cache = _lire_cache()
-    cle = f"{modele}|{cible}|{question}"
+    cle = f"{modele}|{cible}|{signature}|{question}"
     if cle in cache:
         return cache[cle]
-    messages = [{"role": "system", "content": CONSIGNES[cible]}]
+    consigne = CONSIGNES[cible]
+    if gloss:
+        consigne += ("\nLexique à respecter (dialecte → français) : "
+                     + "; ".join(f"« {d} » = {f}" for d, f in gloss) + ".")
+    messages = [{"role": "system", "content": consigne}]
     for q, t in EXEMPLES[cible]:
         messages += [{"role": "user", "content": q}, {"role": "assistant", "content": t}]
     messages.append({"role": "user", "content": question})
