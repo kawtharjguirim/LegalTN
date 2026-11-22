@@ -37,6 +37,13 @@ MOTIF_ARTICLE = re.compile(r"\b(?:article|art\.)\s*(\d+)(?:\s*(bis|ter|quater))?
 MOTIF_ARTICLE_AR = re.compile(r"الفصل\s*(\d+)(?:\s*(مكرر))?")
 MESSAGE_ABSTENTION = ("Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre "
                       "de manière fiable à cette question.")
+MESSAGE_ABSTENTION_AR = "لا أملك مصدرا كافيا في مجلة الشغل للإجابة عن هذا السؤال بشكل موثوق."
+ARABE = re.compile(r"[؀-ۿ]")
+
+
+def message_abstention(question):
+    """Message d'abstention dans l'écriture de la question (arabe ou latine)."""
+    return MESSAGE_ABSTENTION_AR if ARABE.search(str(question)) else MESSAGE_ABSTENTION
 
 SYSTEME_BASE = (
     "Tu es un assistant d'information sur le Code du travail tunisien. "
@@ -117,7 +124,9 @@ def appeler_llm(messages, modele=MODELE_DEFAUT, json_impose=False, delai=300):
 
 
 def normaliser_article(texte):
-    m = re.fullmatch(r"\s*(?:article\s*)?(\d+)(?:\s*(bis|ter|quater|مكرر))?\s*", str(texte), re.IGNORECASE)
+    # Accepte « 14 », « Article 14 bis », « art. 14 », « الفصل 14 مكرر », avec ponctuation finale éventuelle.
+    m = re.fullmatch(r"\s*(?:(?:article|art\.?|(?:ال)?فصل)\s*)?(\d+)(?:\s*(bis|ter|quater|مكرر))?\s*[.,;:،؛)\]]*\s*",
+                     str(texte), re.IGNORECASE)
     if not m:
         return None
     suffixe = {"مكرر": "bis"}.get(m.group(2), (m.group(2) or "").lower())
@@ -179,6 +188,8 @@ def repondre_rag(question, corpus, variante="P2V", modele=MODELE_DEFAUT, exemple
     sortie = analyser(variante, brut)
     if variante == "P2V":
         sortie = verifier_citations(sortie, passages)
+        if sortie.get("rejet") and sortie["reponse"] == MESSAGE_ABSTENTION:
+            sortie["reponse"] = message_abstention(question)
     return {"variante": variante, "modele": modele, "passages": [p["article"] for p in passages],
             "brut": brut, **sortie}
 

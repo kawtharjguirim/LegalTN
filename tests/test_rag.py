@@ -58,3 +58,19 @@ def test_p3_contient_les_exemples():
     ex = [{"question": "qe", "passages": PASSAGES, "sortie": {"abstention": True}}]
     m = rag.construire_messages("P3", "q", PASSAGES, ex)
     assert [x["role"] for x in m] == ["system", "user", "assistant", "user"]
+
+
+def test_normaliser_article_formats_arabes_et_ponctuation():
+    from rag.rag import normaliser_article
+    assert normaliser_article("الفصل 14") == "14"
+    assert normaliser_article("الفصل 14 مكرر") == "14 bis"
+    assert normaliser_article("فصل 23") == "23"
+    assert normaliser_article("article 14 bis.") == "14 bis"
+    assert normaliser_article("Art. 79") == "79"
+    assert normaliser_article("الفصل الرابع عشر") is None  # nombre en toutes lettres : non reconnu
+
+
+def test_message_abstention_selon_ecriture():
+    from rag.rag import message_abstention, MESSAGE_ABSTENTION, MESSAGE_ABSTENTION_AR
+    assert message_abstention("ما هي مدة فترة التجربة؟") == MESSAGE_ABSTENTION_AR
+    assert message_abstention("Quelle est la période d'essai ?") == MESSAGE_ABSTENTION

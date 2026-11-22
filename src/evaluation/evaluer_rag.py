@@ -72,6 +72,7 @@ def main():
     p.add_argument("--jeu", default=str(DEV_V2))
     p.add_argument("--modele", default=rag.MODELE_DEFAUT)
     p.add_argument("--rapports", required=True)
+    p.add_argument("--variantes", default="P0,P1,P2,P3", help="sous-ensemble a evaluer (P2V est derive de P2)")
     a = p.parse_args()
     jeu = verifier_jeu(a.jeu)
     corpus = repondre.charger()
@@ -84,9 +85,13 @@ def main():
         if q["id"] in IDS_EXEMPLES:
             continue
         sorties = {}
-        for v in ("P0", "P1", "P2", "P3"):
+        for v in a.variantes.split(","):
             sorties[v] = rag.repondre_rag(q["question"], corpus, v, a.modele, exemples)
-        p2 = sorties["P2"]
+        p2 = sorties.get("P2")
+        if p2 is None:
+            lignes.append({"id": q["id"], "langue": q["langue"], "dans_perimetre": q["type"] == "dans_perimetre",
+                           "reference": q["article_reference"].strip(), "sorties": sorties})
+            continue
         sorties["P2V"] = {**p2, "variante": "P2V", **rag.verifier_citations(
             {k: p2[k] for k in ("reponse", "articles_cites", "extrait", "abstention", "json_valide")},
             [{"article": x} for x in p2["passages"]])}
@@ -98,7 +103,7 @@ def main():
     groupes = {"toutes": lignes}
     for l in lignes:
         groupes.setdefault(l["langue"], []).append(l)
-    resume = {g: {v: mesurer(ls, v, labels) for v in rag.VARIANTES} for g, ls in groupes.items()}
+    resume = {g: {v: mesurer(ls, v, labels) for v in rag.VARIANTES if v in ls[0]["sorties"]} for g, ls in groupes.items()}
     meta = {"jeu": jeu.name, "sha256_jeu": hashlib.sha256(jeu.read_bytes()).hexdigest(),
             "modele": a.modele, "temperature": 0, "graine": rag.GRAINE, "k_passages": rag.K_PASSAGES,
             "recuperation": "BM25 langue detectee, sans seuil", "exemples_exclus": IDS_EXEMPLES,
