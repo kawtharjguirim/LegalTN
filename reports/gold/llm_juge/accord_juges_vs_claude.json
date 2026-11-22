@@ -1,0 +1,25 @@
+{
+ "reference": "annotation Claude (IA) - pas une annotation humaine",
+ "resultats": {
+  "ollama_fidele": {
+   "kappa": 0.035,
+   "accord": 0.235,
+   "n": 17
+  },
+  "ollama_repond": {
+   "kappa": -0.053,
+   "accord": 0.588,
+   "n": 17
+  },
+  "gemini_fidele": {
+   "kappa": 0.577,
+   "accord": 0.857,
+   "n": 21
+  },
+  "gemini_repond": {
+   "kappa": 1.0,
+   "accord": 1.0,
+   "n": 21
+  }
+ }
+}

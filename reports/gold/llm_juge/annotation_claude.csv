@@ -1,0 +1,24 @@
+id,fidele,repond,commentaire
+D02,oui,non,Cite 118 (bon : congé ≤ 6 jours continu) mais ne dit pas que le congé de 5 jours ne peut pas être fractionné
+D03,oui,non,Cite 124 (bon) sans donner le délai (dans l'année qui suit)
+D04,oui,non,Cite 140 (bon) sans donner la fréquence
+D05,oui,non,Cite 147 (bon) sans donner le délai d'un an
+D06,non,non,Affirme que les attributions sont fixées par décret selon l'art. 182 : faux (182 vise le statut des inspecteurs)
+D07,oui,oui,"Réponse « false » = non ; conforme à 193 (la suspension ne peut être une cause de rupture), mais forme peu claire"
+D08,oui,non,Cite 268 (bon) sans donner le montant
+D09,oui,non,Cite 366 (bon) sans dire « les agents de l'Inspection du travail »
+D10,oui,oui,« Oui » conforme à 402 (tout travail commandé et non publié doit être payé)
+D11,oui,oui,« oui » conforme à 252
+D12,oui,oui,Reprend fidèlement les cas de l'art. 68
+D13,oui,non,Cite 118 (bon) sans répondre (congé de 5 jours : continu)
+D29,oui,non,Cite 22 (bon) sans dire « gratification de fin de service »
+D30,non,non,Cite 370 (classement des salariés agricoles) : article sans rapport avec la question
+D31,oui,oui,« 48 heures » conforme à 79
+D32,oui,non,Cite 79 (bon) sans donner 48 heures
+D34,oui,non,Cite 122 (bon) sans dire « un jour »
+D37,oui,non,Cite 160 (bon) sans lister les questions
+D38,non,non,Cite 445 (jours fériés) : sans rapport avec la question
+D39,oui,non,"Cite 191 (bon) sans dire « fixées par décret »"
+D41,oui,non,Cite 232 (bon) sans dire « oui s'il n'est pas contraire »
+D42,non,non,Cite 194 (gratuité des fonctions) : ne répond pas à qui juge en cas d'absence
+D53,non,non,Question hors Code du travail ; invente « article 153 du code pénal » à partir du renvoi de l'art. 323

@@ -884,3 +884,11 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - e5 R@5 total : 2 → 7 → 15/22.
 - RAG P2V bon article : tunisien 2 → 4 → 4/13 ; arabizi 0 → 1 → 5/9 ; total 2 → 5 → 9/22. Fausses abstentions 16 → 11 → 9/22. Abstentions correctes 8 → 7 → 7/9.
 - Lecture : la réponse à la question de recherche est oui, à condition que le traducteur comprenne le dialecte. Le gain vient surtout de l'arabizi et de l'encodeur e5. Coût : dépendance à une API externe et une abstention correcte en moins. Petits effectifs, un seul annotateur.
+
+## 2026-11-22 — Gold : accord des LLM-juges avec une annotation de Claude (PAS une validation humaine)
+- À la demande de l'utilisateur, Claude a annoté les 23 réponses RAG (fidèle / répond) après lecture des articles cités : reports/gold/llm_juge/annotation_claude.csv. Les colonnes humaines de annotation_humaine.csv restent vides.
+- Annotation Claude : fidèles 18/23, répondent 6/23 (réponses souvent réduites au numéro d'article).
+- Accord avec Claude (kappa de Cohen / accord brut) :
+  - juge local qwen2.5:3b : fidèle κ = 0,04 (24 %, n = 17) ; répond κ = −0,05 (59 %) ;
+  - juge Gemini 3.5 Flash : fidèle κ = 0,58 (86 %, n = 21) ; répond κ = 1,00 (100 %).
+- Lecture : le juge 3B n'est pas exploitable ; Gemini est cohérent avec une seconde IA. Ce n'est pas l'exigence « LLM-juge validé » de Gold, qui demande une référence humaine : à compléter par une annotation humaine, même partielle.
