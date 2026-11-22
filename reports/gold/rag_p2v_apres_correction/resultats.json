@@ -1,0 +1,2325 @@
+{
+ "meta": {
+  "jeu": "questions_dev_v2.csv",
+  "sha256_jeu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+  "modele": "qwen2.5:3b",
+  "temperature": 0,
+  "graine": 2026,
+  "k_passages": 3,
+  "recuperation": "BM25 langue detectee, sans seuil",
+  "exemples_exclus": [
+   "D01",
+   "D14"
+  ],
+  "statut": "developpement_non_independant",
+  "secondes": 321
+ },
+ "resume": {
+  "toutes": {
+   "P2": {
+    "n_dans": 26,
+    "n_hors": 28,
+    "citation_exacte": 18,
+    "fausse_abstention": 2,
+    "reponse_sans_citation": 2,
+    "abstention_correcte_hors": 27,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 26,
+    "n_hors": 28,
+    "citation_exacte": 18,
+    "fausse_abstention": 4,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 27,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  },
+  "fr": {
+   "P2": {
+    "n_dans": 20,
+    "n_hors": 22,
+    "citation_exacte": 16,
+    "fausse_abstention": 2,
+    "reponse_sans_citation": 1,
+    "abstention_correcte_hors": 22,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 20,
+    "n_hors": 22,
+    "citation_exacte": 16,
+    "fausse_abstention": 3,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 22,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  },
+  "tun": {
+   "P2": {
+    "n_dans": 6,
+    "n_hors": 3,
+    "citation_exacte": 2,
+    "fausse_abstention": 0,
+    "reponse_sans_citation": 1,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 6,
+    "n_hors": 3,
+    "citation_exacte": 2,
+    "fausse_abstention": 1,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  },
+  "ar": {
+   "P2": {
+    "n_dans": 0,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 0,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 3,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 0,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 0,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 3,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "D02",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "118",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "125",
+      "113"
+     ],
+     "brut": "{\"reponse\": \"articles 118, 125\", \"articles_cites\": [\"118\", \"125\"], \"extrait\": \"article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"abstention\": false}",
+     "reponse": "articles 118, 125",
+     "articles_cites": [
+      "118",
+      "125"
+     ],
+     "extrait": "article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "125",
+      "113"
+     ],
+     "brut": "{\"reponse\": \"articles 118, 125\", \"articles_cites\": [\"118\", \"125\"], \"extrait\": \"article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"abstention\": false}",
+     "reponse": "articles 118, 125",
+     "articles_cites": [
+      "118",
+      "125"
+     ],
+     "extrait": "article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D03",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "124",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "124",
+      "118",
+      "21"
+     ],
+     "brut": "{\"reponse\": \"Article 124\", \"articles_cites\": [\"124\"], \"extrait\": \"Article 124.- Les bénéficiaires d’un congé doivent en jouir, s’il s’agit d’un congé de quinze jours, dans l’année qui suit la date d'ouverture du droit à congé ; s’il s’agit d’un congé de moins de quinze jours, dans les six mois qui suivent cette même date.\", \"abstention\": false}",
+     "reponse": "Article 124",
+     "articles_cites": [
+      "124"
+     ],
+     "extrait": "Article 124.- Les bénéficiaires d’un congé doivent en jouir, s’il s’agit d’un congé de quinze jours, dans l’année qui suit la date d'ouverture du droit à congé ; s’il s’agit d’un congé de moins de quinze jours, dans les six mois qui suivent cette même date.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "124",
+      "118",
+      "21"
+     ],
+     "brut": "{\"reponse\": \"Article 124\", \"articles_cites\": [\"124\"], \"extrait\": \"Article 124.- Les bénéficiaires d’un congé doivent en jouir, s’il s’agit d’un congé de quinze jours, dans l’année qui suit la date d'ouverture du droit à congé ; s’il s’agit d’un congé de moins de quinze jours, dans les six mois qui suivent cette même date.\", \"abstention\": false}",
+     "reponse": "Article 124",
+     "articles_cites": [
+      "124"
+     ],
+     "extrait": "Article 124.- Les bénéficiaires d’un congé doivent en jouir, s’il s’agit d’un congé de quinze jours, dans l’année qui suit la date d'ouverture du droit à congé ; s’il s’agit d’un congé de moins de quinze jours, dans les six mois qui suivent cette même date.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D04",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "140",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "140",
+      "108",
+      "89"
+     ],
+     "brut": "{\"reponse\": \"Article 140\", \"articles_cites\": [\"140\"], \"extrait\": \"Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.\", \"abstention\": false}",
+     "reponse": "Article 140",
+     "articles_cites": [
+      "140"
+     ],
+     "extrait": "Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "140",
+      "108",
+      "89"
+     ],
+     "brut": "{\"reponse\": \"Article 140\", \"articles_cites\": [\"140\"], \"extrait\": \"Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.\", \"abstention\": false}",
+     "reponse": "Article 140",
+     "articles_cites": [
+      "140"
+     ],
+     "extrait": "Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D05",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "147",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "147",
+      "148",
+      "183"
+     ],
+     "brut": "{\"reponse\": \"Article 147\", \"articles_cites\": [\"147\"], \"extrait\": \"Article 147.- Toutes les actions de quelque nature qu’elles soient entre employeurs, salariés, organismes gérant les prestations sociales, découlant des relations de travail, se prescrivent par un délai d’un an.\", \"abstention\": false}",
+     "reponse": "Article 147",
+     "articles_cites": [
+      "147"
+     ],
+     "extrait": "Article 147.- Toutes les actions de quelque nature qu’elles soient entre employeurs, salariés, organismes gérant les prestations sociales, découlant des relations de travail, se prescrivent par un délai d’un an.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "147",
+      "148",
+      "183"
+     ],
+     "brut": "{\"reponse\": \"Article 147\", \"articles_cites\": [\"147\"], \"extrait\": \"Article 147.- Toutes les actions de quelque nature qu’elles soient entre employeurs, salariés, organismes gérant les prestations sociales, découlant des relations de travail, se prescrivent par un délai d’un an.\", \"abstention\": false}",
+     "reponse": "Article 147",
+     "articles_cites": [
+      "147"
+     ],
+     "extrait": "Article 147.- Toutes les actions de quelque nature qu’elles soient entre employeurs, salariés, organismes gérant les prestations sociales, découlant des relations de travail, se prescrivent par un délai d’un an.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D06",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "183",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "182",
+      "185",
+      "191"
+     ],
+     "brut": "{\"reponse\": \"Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.\", \"articles_cites\": [\"182\"], \"extrait\": \"Article 182 (Modifié par la loi n°94-29 du 21 février 1994).- Le statut particulier des agents de l'Inspection du Travail est fixé par décret. LIVRE V LES CONFLITS INDIVIDUELS DU TRAVAIL? TITRE UNIQUE LES JURIDICTIONS PROFESSIONNELLES Chapitre Premier Institution et attributions des conseils de prud'hommes!\", \"abstention\": false}",
+     "reponse": "Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.",
+     "articles_cites": [
+      "182"
+     ],
+     "extrait": "Article 182 (Modifié par la loi n°94-29 du 21 février 1994).- Le statut particulier des agents de l'Inspection du Travail est fixé par décret. LIVRE V LES CONFLITS INDIVIDUELS DU TRAVAIL? TITRE UNIQUE LES JURIDICTIONS PROFESSIONNELLES Chapitre Premier Institution et attributions des conseils de prud'hommes!",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "182",
+      "185",
+      "191"
+     ],
+     "brut": "{\"reponse\": \"Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.\", \"articles_cites\": [\"182\"], \"extrait\": \"Article 182 (Modifié par la loi n°94-29 du 21 février 1994).- Le statut particulier des agents de l'Inspection du Travail est fixé par décret. LIVRE V LES CONFLITS INDIVIDUELS DU TRAVAIL? TITRE UNIQUE LES JURIDICTIONS PROFESSIONNELLES Chapitre Premier Institution et attributions des conseils de prud'hommes!\", \"abstention\": false}",
+     "reponse": "Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.",
+     "articles_cites": [
+      "182"
+     ],
+     "extrait": "Article 182 (Modifié par la loi n°94-29 du 21 février 1994).- Le statut particulier des agents de l'Inspection du Travail est fixé par décret. LIVRE V LES CONFLITS INDIVIDUELS DU TRAVAIL? TITRE UNIQUE LES JURIDICTIONS PROFESSIONNELLES Chapitre Premier Institution et attributions des conseils de prud'hommes!",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D07",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "193",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "193",
+      "214",
+      "186"
+     ],
+     "brut": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"و توقيف العمل المنصوص عليه بهذا الفصل لا يكون سببا في فسخ عقد الشغل من طرف المؤجر وإلا فإنه يجب غرم الضرر لفائدة العامل.\", \"abstention\": false}",
+     "reponse": "false",
+     "articles_cites": [
+      "193"
+     ],
+     "extrait": "و توقيف العمل المنصوص عليه بهذا الفصل لا يكون سببا في فسخ عقد الشغل من طرف المؤجر وإلا فإنه يجب غرم الضرر لفائدة العامل.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "193",
+      "214",
+      "186"
+     ],
+     "brut": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"و توقيف العمل المنصوص عليه بهذا الفصل لا يكون سببا في فسخ عقد الشغل من طرف المؤجر وإلا فإنه يجب غرم الضرر لفائدة العامل.\", \"abstention\": false}",
+     "reponse": "false",
+     "articles_cites": [
+      "193"
+     ],
+     "extrait": "و توقيف العمل المنصوص عليه بهذا الفصل لا يكون سببا في فسخ عقد الشغل من طرف المؤجر وإلا فإنه يجب غرم الضرر لفائدة العامل.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D08",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "268",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "268",
+      "316",
+      "94"
+     ],
+     "brut": "{\"reponse\": \"article 268\", \"articles_cites\": [\"268\"], \"extrait\": \"article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.\", \"abstention\": false}",
+     "reponse": "article 268",
+     "articles_cites": [
+      "268"
+     ],
+     "extrait": "article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "268",
+      "316",
+      "94"
+     ],
+     "brut": "{\"reponse\": \"article 268\", \"articles_cites\": [\"268\"], \"extrait\": \"article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.\", \"abstention\": false}",
+     "reponse": "article 268",
+     "articles_cites": [
+      "268"
+     ],
+     "extrait": "article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D09",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "366",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "366",
+      "320",
+      "324"
+     ],
+     "brut": "{\"reponse\": \"Article 366\", \"articles_cites\": [\"366\"], \"extrait\": \"fr : Article 366.- Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.\", \"abstention\": false}",
+     "reponse": "Article 366",
+     "articles_cites": [
+      "366"
+     ],
+     "extrait": "fr : Article 366.- Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "366",
+      "320",
+      "324"
+     ],
+     "brut": "{\"reponse\": \"Article 366\", \"articles_cites\": [\"366\"], \"extrait\": \"fr : Article 366.- Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.\", \"abstention\": false}",
+     "reponse": "Article 366",
+     "articles_cites": [
+      "366"
+     ],
+     "extrait": "fr : Article 366.- Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D10",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "402",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "402",
+      "118",
+      "181"
+     ],
+     "brut": "{\"reponse\": \"Oui\", \"articles_cites\": [\"402\"], \"extrait\": \"الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.\", \"abstention\": false}",
+     "reponse": "Oui",
+     "articles_cites": [
+      "402"
+     ],
+     "extrait": "الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "402",
+      "118",
+      "181"
+     ],
+     "brut": "{\"reponse\": \"Oui\", \"articles_cites\": [\"402\"], \"extrait\": \"الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.\", \"abstention\": false}",
+     "reponse": "Oui",
+     "articles_cites": [
+      "402"
+     ],
+     "extrait": "الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D11",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "252",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "252",
+      "248",
+      "246"
+     ],
+     "brut": "{\"reponse\": \"oui\", \"articles_cites\": [\"252\"], \"extrait\": \"الفصل 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.\", \"abstention\": false}",
+     "reponse": "oui",
+     "articles_cites": [
+      "252"
+     ],
+     "extrait": "الفصل 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "252",
+      "248",
+      "246"
+     ],
+     "brut": "{\"reponse\": \"oui\", \"articles_cites\": [\"252\"], \"extrait\": \"الفصل 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.\", \"abstention\": false}",
+     "reponse": "oui",
+     "articles_cites": [
+      "252"
+     ],
+     "extrait": "الفصل 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D12",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "68",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "71",
+      "69"
+     ],
+     "brut": "{\"reponse\": \"L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.\", \"articles_cites\": [\"68\"], \"extrait\": \"Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.\", \"abstention\": false}",
+     "reponse": "L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.",
+     "articles_cites": [
+      "68"
+     ],
+     "extrait": "Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "71",
+      "69"
+     ],
+     "brut": "{\"reponse\": \"L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.\", \"articles_cites\": [\"68\"], \"extrait\": \"Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.\", \"abstention\": false}",
+     "reponse": "L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.",
+     "articles_cites": [
+      "68"
+     ],
+     "extrait": "Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D13",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "118",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "123",
+      "113"
+     ],
+     "brut": "{\"reponse\": \"Article 118\", \"articles_cites\": [\"118\"], \"extrait\": \"Article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"abstention\": false}",
+     "reponse": "Article 118",
+     "articles_cites": [
+      "118"
+     ],
+     "extrait": "Article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "123",
+      "113"
+     ],
+     "brut": "{\"reponse\": \"Article 118\", \"articles_cites\": [\"118\"], \"extrait\": \"Article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"abstention\": false}",
+     "reponse": "Article 118",
+     "articles_cites": [
+      "118"
+     ],
+     "extrait": "Article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D15",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "313",
+      "433",
+      "22"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "313",
+      "433",
+      "22"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D16",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "315",
+      "230",
+      "334"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "315",
+      "230",
+      "334"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D17",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "304",
+      "4",
+      "386"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "304",
+      "4",
+      "386"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D18",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "130",
+      "216",
+      "127"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "130",
+      "216",
+      "127"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D19",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "99",
+      "237",
+      "193"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "99",
+      "237",
+      "193"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D20",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "236",
+      "287"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "236",
+      "287"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D21",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "409",
+      "138",
+      "242"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "409",
+      "138",
+      "242"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D22",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "153",
+      "258",
+      "15"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "153",
+      "258",
+      "15"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D23",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "148",
+      "319",
+      "415"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "148",
+      "319",
+      "415"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D24",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "371",
+      "21",
+      "22"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "371",
+      "21",
+      "22"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D25",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "139",
+      "7",
+      "133"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "139",
+      "7",
+      "133"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D26",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "313"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "313"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D27",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "281",
+      "300",
+      "308"
+     ],
+     "brut": "{\"reponse\": \"لا توجد شروط محددة في الأرقام المقدمين للحصول على رخصة السياقة.\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "لا توجد شروط محددة في الأرقام المقدمين للحصول على رخصة السياقة.",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "281",
+      "300",
+      "308"
+     ],
+     "brut": "{\"reponse\": \"لا توجد شروط محددة في الأرقام المقدمين للحصول على رخصة السياقة.\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "لا توجد شروط محددة في الأرقام المقدمين للحصول على رخصة السياقة.",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D28",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "233"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "233"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D29",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "22",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "22",
+      "371",
+      "370"
+     ],
+     "brut": "{\"reponse\": \"article 22\", \"articles_cites\": [\"22\"], \"extrait\": \"Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise\", \"abstention\": false}",
+     "reponse": "article 22",
+     "articles_cites": [
+      "22"
+     ],
+     "extrait": "Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "22",
+      "371",
+      "370"
+     ],
+     "brut": "{\"reponse\": \"article 22\", \"articles_cites\": [\"22\"], \"extrait\": \"Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise\", \"abstention\": false}",
+     "reponse": "article 22",
+     "articles_cites": [
+      "22"
+     ],
+     "extrait": "Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D30",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "22",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "6",
+      "370"
+     ],
+     "brut": "{\"reponse\": \"Article 370\", \"articles_cites\": [\"370\"], \"extrait\": \"فقرات 3, 4 و5 من هذا الفصل لا تنطبق على العملة الموسميين والطارئين الواقع انتدابهم لإنجاز شغل مدته متغيرة لكنها محدودة واستوجبته حاجيات موسمية أو طارئة بالضيعة والذين تنتهي عقدتهم عندما يتم إنجاز الشغل.\", \"abstention\": false}",
+     "reponse": "Article 370",
+     "articles_cites": [
+      "370"
+     ],
+     "extrait": "فقرات 3, 4 و5 من هذا الفصل لا تنطبق على العملة الموسميين والطارئين الواقع انتدابهم لإنجاز شغل مدته متغيرة لكنها محدودة واستوجبته حاجيات موسمية أو طارئة بالضيعة والذين تنتهي عقدتهم عندما يتم إنجاز الشغل.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "6",
+      "370"
+     ],
+     "brut": "{\"reponse\": \"Article 370\", \"articles_cites\": [\"370\"], \"extrait\": \"فقرات 3, 4 و5 من هذا الفصل لا تنطبق على العملة الموسميين والطارئين الواقع انتدابهم لإنجاز شغل مدته متغيرة لكنها محدودة واستوجبته حاجيات موسمية أو طارئة بالضيعة والذين تنتهي عقدتهم عندما يتم إنجاز الشغل.\", \"abstention\": false}",
+     "reponse": "Article 370",
+     "articles_cites": [
+      "370"
+     ],
+     "extrait": "فقرات 3, 4 و5 من هذا الفصل لا تنطبق على العملة الموسميين والطارئين الواقع انتدابهم لإنجاز شغل مدته متغيرة لكنها محدودة واستوجبته حاجيات موسمية أو طارئة بالضيعة والذين تنتهي عقدتهم عندما يتم إنجاز الشغل.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D31",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "79",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "79",
+      "22",
+      "90"
+     ],
+     "brut": "{\"reponse\": \"48 heures\", \"articles_cites\": [\"79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine\", \"abstention\": false}",
+     "reponse": "48 heures",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "79",
+      "22",
+      "90"
+     ],
+     "brut": "{\"reponse\": \"48 heures\", \"articles_cites\": [\"79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine\", \"abstention\": false}",
+     "reponse": "48 heures",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D32",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "79",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "79",
+      "140"
+     ],
+     "brut": "{\"reponse\": \"Article 79\", \"articles_cites\": [\"79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine ou une limitation équivalente établie sur une période de temps autre que la semaine sans que la durée de cette période ne puisse être supérieure à une année.\", \"abstention\": false}",
+     "reponse": "Article 79",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine ou une limitation équivalente établie sur une période de temps autre que la semaine sans que la durée de cette période ne puisse être supérieure à une année.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "79",
+      "140"
+     ],
+     "brut": "{\"reponse\": \"Article 79\", \"articles_cites\": [\"79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine ou une limitation équivalente établie sur une période de temps autre que la semaine sans que la durée de cette période ne puisse être supérieure à une année.\", \"abstention\": false}",
+     "reponse": "Article 79",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine ou une limitation équivalente établie sur une période de temps autre que la semaine sans que la durée de cette période ne puisse être supérieure à une année.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D33",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "85",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "85",
+      "108",
+      "18"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "85",
+      "108",
+      "18"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D34",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "122",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "122",
+      "120",
+      "64"
+     ],
+     "brut": "{\"reponse\": \"Article 122\", \"articles_cites\": [\"122\"], \"extrait\": \"Article 122.- L’époux salarié a droit à un congé supplémentaire d’un jour à l’occasion de chaque naissance.\", \"abstention\": false}",
+     "reponse": "Article 122",
+     "articles_cites": [
+      "122"
+     ],
+     "extrait": "Article 122.- L’époux salarié a droit à un congé supplémentaire d’un jour à l’occasion de chaque naissance.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "122",
+      "120",
+      "64"
+     ],
+     "brut": "{\"reponse\": \"Article 122\", \"articles_cites\": [\"122\"], \"extrait\": \"Article 122.- L’époux salarié a droit à un congé supplémentaire d’un jour à l’occasion de chaque naissance.\", \"abstention\": false}",
+     "reponse": "Article 122",
+     "articles_cites": [
+      "122"
+     ],
+     "extrait": "Article 122.- L’époux salarié a droit à un congé supplémentaire d’un jour à l’occasion de chaque naissance.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D35",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "122",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "124",
+      "119"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [119]\", \"extrait\": \"الفصل 119 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996). يتقاضى العامل أثناء مدّة إجازته منحة تحتسب على أساس مدة الإجازة المستحقة من ناحية والأجر والمنح التي يتقاضاها عادة عند المباشرة الفعلية للعمل من ناحية أخرى.\", \"abstention\": false}",
+     "reponse": "articles_cites: [119]",
+     "articles_cites": [],
+     "extrait": "الفصل 119 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996). يتقاضى العامل أثناء مدّة إجازته منحة تحتسب على أساس مدة الإجازة المستحقة من ناحية والأجر والمنح التي يتقاضاها عادة عند المباشرة الفعلية للعمل من ناحية أخرى.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "124",
+      "119"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [119]\", \"extrait\": \"الفصل 119 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996). يتقاضى العامل أثناء مدّة إجازته منحة تحتسب على أساس مدة الإجازة المستحقة من ناحية والأجر والمنح التي يتقاضاها عادة عند المباشرة الفعلية للعمل من ناحية أخرى.\", \"abstention\": false}",
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "articles_cites": [],
+     "extrait": "الفصل 119 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996). يتقاضى العامل أثناء مدّة إجازته منحة تحتسب على أساس مدة الإجازة المستحقة من ناحية والأجر والمنح التي يتقاضاها عادة عند المباشرة الفعلية للعمل من ناحية أخرى.",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": "aucune_citation"
+    }
+   }
+  },
+  {
+   "id": "D36",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "149",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "149",
+      "3",
+      "118"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [149]\", \"extrait\": \"لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.\", \"abstention\": false}",
+     "reponse": "articles_cites: [149]",
+     "articles_cites": [],
+     "extrait": "لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "149",
+      "3",
+      "118"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [149]\", \"extrait\": \"لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.\", \"abstention\": false}",
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "articles_cites": [],
+     "extrait": "لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": "aucune_citation"
+    }
+   }
+  },
+  {
+   "id": "D37",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "160",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "160",
+      "164",
+      "162"
+     ],
+     "brut": "{\"reponse\": \"article 160\", \"articles_cites\": [\"160\"], \"extrait\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"abstention\": false}",
+     "reponse": "article 160",
+     "articles_cites": [
+      "160"
+     ],
+     "extrait": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "160",
+      "164",
+      "162"
+     ],
+     "brut": "{\"reponse\": \"article 160\", \"articles_cites\": [\"160\"], \"extrait\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"abstention\": false}",
+     "reponse": "article 160",
+     "articles_cites": [
+      "160"
+     ],
+     "extrait": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D38",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "170",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "brut": "{\"reponse\": \"article 445\", \"articles_cites\": [\"445\"], \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).\", \"abstention\": false}",
+     "reponse": "article 445",
+     "articles_cites": [
+      "445"
+     ],
+     "extrait": "الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "brut": "{\"reponse\": \"article 445\", \"articles_cites\": [\"445\"], \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).\", \"abstention\": false}",
+     "reponse": "article 445",
+     "articles_cites": [
+      "445"
+     ],
+     "extrait": "الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D39",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "191",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "194",
+      "195"
+     ],
+     "brut": "{\"reponse\": \"Article 191\", \"articles_cites\": [\"191\"], \"extrait\": \"Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.\", \"abstention\": false}",
+     "reponse": "Article 191",
+     "articles_cites": [
+      "191"
+     ],
+     "extrait": "Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "194",
+      "195"
+     ],
+     "brut": "{\"reponse\": \"Article 191\", \"articles_cites\": [\"191\"], \"extrait\": \"Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.\", \"abstention\": false}",
+     "reponse": "Article 191",
+     "articles_cites": [
+      "191"
+     ],
+     "extrait": "Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D40",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "216",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "216",
+      "221",
+      "185"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"Article 216 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes statuent en premier ressort dans toutes les actions relevant de leur compétence quel que soit le montant de la demande.\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "Article 216 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes statuent en premier ressort dans toutes les actions relevant de leur compétence quel que soit le montant de la demande.",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "216",
+      "221",
+      "185"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"Article 216 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes statuent en premier ressort dans toutes les actions relevant de leur compétence quel que soit le montant de la demande.\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "Article 216 (Modifié par la loi n°94-29 du 21 février 1994).- Les conseils de prud'hommes statuent en premier ressort dans toutes les actions relevant de leur compétence quel que soit le montant de la demande.",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D41",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "232",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "232",
+      "218",
+      "228"
+     ],
+     "brut": "{\"reponse\": \"Article 232\", \"articles_cites\": [\"232\"], \"extrait\": \"Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.\", \"abstention\": false}",
+     "reponse": "Article 232",
+     "articles_cites": [
+      "232"
+     ],
+     "extrait": "Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "232",
+      "218",
+      "228"
+     ],
+     "brut": "{\"reponse\": \"Article 232\", \"articles_cites\": [\"232\"], \"extrait\": \"Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.\", \"abstention\": false}",
+     "reponse": "Article 232",
+     "articles_cites": [
+      "232"
+     ],
+     "extrait": "Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D42",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "198",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "194",
+      "195"
+     ],
+     "brut": "{\n  \"reponse\": \"Article 194\",\n  \"articles_cites\": [\"194\"],\n  \"extrait\": \"Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.\",\n  \"abstention\": false\n}",
+     "reponse": "Article 194",
+     "articles_cites": [
+      "194"
+     ],
+     "extrait": "Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "194",
+      "195"
+     ],
+     "brut": "{\n  \"reponse\": \"Article 194\",\n  \"articles_cites\": [\"194\"],\n  \"extrait\": \"Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.\",\n  \"abstention\": false\n}",
+     "reponse": "Article 194",
+     "articles_cites": [
+      "194"
+     ],
+     "extrait": "Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D43",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "318",
+      "316",
+      "7"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "318",
+      "316",
+      "7"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D44",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "23",
+      "21",
+      "154"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "23",
+      "21",
+      "154"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D45",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "178",
+      "91",
+      "177"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "178",
+      "91",
+      "177"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D46",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "407",
+      "27",
+      "258"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "407",
+      "27",
+      "258"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D47",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "207",
+      "68",
+      "421"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "207",
+      "68",
+      "421"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D48",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "134",
+      "77",
+      "2"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "134",
+      "77",
+      "2"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D49",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "30",
+      "94",
+      "134"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "30",
+      "94",
+      "134"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D50",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "385",
+      "255",
+      "146"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "385",
+      "255",
+      "146"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D51",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "187",
+      "258"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "187",
+      "258"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D52",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D53",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "196",
+      "445",
+      "323"
+     ],
+     "brut": "{\"reponse\": \"articles 153 du code pénal\", \"articles_cites\": [\"323\"], \"extrait\": \"Article 323.- Le bris des scellés apposés en application de l'article 322 est puni des peines prévus à l'article 153 du code pénal.\", \"abstention\": false}",
+     "reponse": "articles 153 du code pénal",
+     "articles_cites": [
+      "323"
+     ],
+     "extrait": "Article 323.- Le bris des scellés apposés en application de l'article 322 est puni des peines prévus à l'article 153 du code pénal.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "196",
+      "445",
+      "323"
+     ],
+     "brut": "{\"reponse\": \"articles 153 du code pénal\", \"articles_cites\": [\"323\"], \"extrait\": \"Article 323.- Le bris des scellés apposés en application de l'article 322 est puni des peines prévus à l'article 153 du code pénal.\", \"abstention\": false}",
+     "reponse": "articles 153 du code pénal",
+     "articles_cites": [
+      "323"
+     ],
+     "extrait": "Article 323.- Le bris des scellés apposés en application de l'article 322 est puni des peines prévus à l'article 153 du code pénal.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D54",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "17",
+      "47",
+      "269"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "17",
+      "47",
+      "269"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D55",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "15",
+      "238",
+      "154"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "15",
+      "238",
+      "154"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D56",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "134",
+      "77"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "134",
+      "77"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  }
+ ]
+}

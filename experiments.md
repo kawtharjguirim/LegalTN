@@ -829,3 +829,12 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Résultats (54 questions, 26 dans le périmètre) : réponses non fondées P0 54, P1 34, P2 8, P3 12, P2V 7 ; refus injustifiés 0, 0, 2, 1, 3.
 - Bootstrap apparié (10 000, graine 2026) : P2V vs P1, Δ non fondées −27 (IC 95 % du taux [−63 %, −37 %]) ; Δ refus +3 (IC [0 %, +23 %]).
 - Limites : dev non indépendant, 0 question arabe dans le périmètre, mesure automatique (pas de juge humain).
+
+## 2026-11-22 — Gold : correction des citations arabes du RAG (P2V) et nouvelle mesure dev
+- Problème : normaliser_article rejetait « الفصل 14 » et la ponctuation finale ; en P2V, une réponse arabe correcte devenait une abstention (motif aucune_citation), avec un message en français.
+- Correction (commit 5da2849) : préfixes article / art. / الفصل / فصل et ponctuation finale acceptés ; message d'abstention en arabe si la question est en écriture arabe ; option --variantes dans evaluer_rag.py. Tests : 100 réussis, 1 xfail.
+- Mesure (dev v2, P2 et P2V seulement, 321 s) : reports/gold/rag_p2v_apres_correction/.
+  - P2 : citation exacte 18/26, fausses abstentions 2/26, hors périmètre refusé 27/28.
+  - P2V : citation exacte 18/26, fausses abstentions 4/26, hors périmètre refusé 27/28.
+- Comparaison avec la mesure Silver (P2 26/28 hors refusé ; P2V 3 fausses abstentions) : écart d'une question, alors que le dev ne contient aucune question arabe dans le périmètre (la correction ne peut pas l'expliquer). C'est donc une variabilité d'exécution d'Ollama malgré température 0 et graine fixe : à signaler dans les limites, et répéter les mesures RAG.
+- Effet de la correction sur l'arabe : non mesurable sur le dev (0 question arabe dans le périmètre). Vérification manuelle d'une question arabe : article 79 cité, réponse en arabe, pas d'abstention. Ce n'est pas une mesure.
