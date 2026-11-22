@@ -1,0 +1,101 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  30%|██▉       | 59/199 [00:00<00:00, 558.59it/s]Loading weights:  58%|█████▊    | 115/199 [00:00<00:00, 433.04it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 686.74it/s]
+G01 | أي时辰 نحن نخدم في الجمعة على الأقصى؟ | ['210', '106', '95'] [] True
+G02 | لماذا أنتم تطردوني دون事先 تبلغ؟ | ['14 ter', '21', '14 bis'] [] True
+G03 | من هو الشخص الذي يملك خالصاً منذ العام؟ | ['318', '124', '159'] ['256'] False
+G04 | هل لدي الحق في الحصول على أجازة بعد ولادة زوجتي؟ | ['122', '94', '64'] ['122'] False
+G05 | ما هي المدة التي يجب أن تتخلصها الشهرية؟ | ['9', '114', '94'] [] True
+G06 | متى تنتهي فترة التجربة في الخدمة؟ | ['371', '22', '6'] ['370'] False
+G07 | إذا خدمت في الليل سنتوصل更快؟ | ['67', '124', '68'] ['67'] False
+G08 | الباترون ي扣 من راتبي شهريًا، فلوس يقول له أنا مدين بهم؟ | ['108', '403', '85'] ['403'] False
+G09 | لماذا طردوك بدون سبب، نجم ناخذ؟ | ['14 ter', '166', '400'] ['14 ter'] False
+G10 | من هم الذين ينجمون ويقدمون الخدمة؟ | ['28', '21', '22'] [] True
+G11 | ازnable الأحد يكون راحة؟ | ['97', '95', '99'] ['106', '95'] False
+G12 | المرأة الحامل لديها قناعات؟ | ['68', '64', '20'] [] True
+G13 | من يحلمني في الخدمة عندما أحتاج إلى رعاية؟ | ['94', '28', '8'] [] True
+G14 | ما هي دور مجلس الصلح في نزاعات الشغل؟ | ['183', '153', '207'] ['375'] False
+G15 | ما هي إجراءاتي لإنشاء نقابة في شركتي؟ | ['254', '242', '250'] ['242'] False
+G16 | Qui est le leader du parti ? | ['154', '341', '226'] [] True
+G17 | Quand un patron licencie un employé sans préavis ? | ['14 ter', '14 bis', '400'] ['14 ter'] False
+G18 | Quand dois-je prendre mon congé pour la semaine prochaine ? | ['132', '126', '124'] ['132'] False
+G19 | Quand commence-t-elle officiellement chaque année ? | ['116', '430', '181'] ['116'] False
+G20 | période d'essai est-elle de 9 mois? | ['410', '349', '6'] [] True
+G21 | Qui sont les témoins de l'accusation ? | ['209', '195', '144'] [] True
+G22 | Quelle est la capitale de la Tunisie ? | ['258', '433', '7'] [] True
+G23 | Quel est le nom du professeur qui enseigne le néogrec? | ['345', '144', '284'] [] True
+G24 | Qui sont les principaux acteurs de ce jeu ? | ['3', '5', '67'] [] True
+G25 | Qui a gagné la Coupe du Monde de football ? | ['4', '3', '9'] [] True
+G41 | ما هي نسبة الأداء على الدخل في تونس؟ | ['315', '365', '444'] [] True
+G42 | هل بطاقة الهوية تبقى صالحة؟ | ['424', '421', '278'] ['424'] False
+G43 | أين يقع المقر الرئيسي للشركة؟ | ['280', '301', '257'] [] True
+G44 | Quel est le taux de TVA dans les restaurants ? | ['313', '96', '278'] [] True
+G45 | Comment puis-je obtenir un permis de construction? | ['59', '63', '58'] [] True
+G50 | هل البنك رفض قرض سكن مني؟ | ['21', '256', '28'] [] True
+{
+ "tunisien": {
+  "direct": {
+   "n_avec": 13,
+   "n_sans": 6,
+   "bm25_r5": 5,
+   "dense_r5": 2,
+   "hybride_r5": 6,
+   "rag_bon_article": 2,
+   "rag_fausse_abstention": 10,
+   "rag_abstention_correcte": 5
+  },
+  "traduit": {
+   "n_avec": 13,
+   "n_sans": 6,
+   "bm25_r5": 6,
+   "dense_r5": 6,
+   "hybride_r5": 8,
+   "rag_bon_article": 4,
+   "rag_fausse_abstention": 5,
+   "rag_abstention_correcte": 4
+  }
+ },
+ "arabizi": {
+  "direct": {
+   "n_avec": 9,
+   "n_sans": 3,
+   "bm25_r5": 3,
+   "dense_r5": 0,
+   "hybride_r5": 1,
+   "rag_bon_article": 0,
+   "rag_fausse_abstention": 6,
+   "rag_abstention_correcte": 3
+  },
+  "traduit": {
+   "n_avec": 9,
+   "n_sans": 3,
+   "bm25_r5": 2,
+   "dense_r5": 1,
+   "hybride_r5": 2,
+   "rag_bon_article": 1,
+   "rag_fausse_abstention": 6,
+   "rag_abstention_correcte": 3
+  }
+ },
+ "les_deux": {
+  "direct": {
+   "n_avec": 22,
+   "n_sans": 9,
+   "bm25_r5": 8,
+   "dense_r5": 2,
+   "hybride_r5": 7,
+   "rag_bon_article": 2,
+   "rag_fausse_abstention": 16,
+   "rag_abstention_correcte": 8
+  },
+  "traduit": {
+   "n_avec": 22,
+   "n_sans": 9,
+   "bm25_r5": 8,
+   "dense_r5": 7,
+   "hybride_r5": 10,
+   "rag_bon_article": 5,
+   "rag_fausse_abstention": 11,
+   "rag_abstention_correcte": 7
+  }
+ }
+}

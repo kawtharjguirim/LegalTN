@@ -1,0 +1,2367 @@
+{
+ "meta": {
+  "source": "reports\\gold\\transfert\\resultats.json",
+  "modele_traduction": "qwen2.5:3b",
+  "temperature": 0,
+  "graine": 2026,
+  "consigne": "Réécris la question suivante, écrite en dialecte tunisien (lettres arabes ou latines/arabizi), en arabe standard moderne clair, sans répondre et sans ajouter d'information. Donne uniquement la question réécrite.",
+  "secondes": 211
+ },
+ "resume": {
+  "tunisien": {
+   "direct": {
+    "n_avec": 13,
+    "n_sans": 6,
+    "bm25_r5": 5,
+    "dense_r5": 2,
+    "hybride_r5": 6,
+    "rag_bon_article": 2,
+    "rag_fausse_abstention": 10,
+    "rag_abstention_correcte": 5
+   },
+   "traduit": {
+    "n_avec": 13,
+    "n_sans": 6,
+    "bm25_r5": 6,
+    "dense_r5": 6,
+    "hybride_r5": 8,
+    "rag_bon_article": 4,
+    "rag_fausse_abstention": 5,
+    "rag_abstention_correcte": 4
+   }
+  },
+  "arabizi": {
+   "direct": {
+    "n_avec": 9,
+    "n_sans": 3,
+    "bm25_r5": 3,
+    "dense_r5": 0,
+    "hybride_r5": 1,
+    "rag_bon_article": 0,
+    "rag_fausse_abstention": 6,
+    "rag_abstention_correcte": 3
+   },
+   "traduit": {
+    "n_avec": 9,
+    "n_sans": 3,
+    "bm25_r5": 2,
+    "dense_r5": 1,
+    "hybride_r5": 2,
+    "rag_bon_article": 1,
+    "rag_fausse_abstention": 6,
+    "rag_abstention_correcte": 3
+   }
+  },
+  "les_deux": {
+   "direct": {
+    "n_avec": 22,
+    "n_sans": 9,
+    "bm25_r5": 8,
+    "dense_r5": 2,
+    "hybride_r5": 7,
+    "rag_bon_article": 2,
+    "rag_fausse_abstention": 16,
+    "rag_abstention_correcte": 8
+   },
+   "traduit": {
+    "n_avec": 22,
+    "n_sans": 9,
+    "bm25_r5": 8,
+    "dense_r5": 7,
+    "hybride_r5": 10,
+    "rag_bon_article": 5,
+    "rag_fausse_abstention": 11,
+    "rag_abstention_correcte": 7
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "G01",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "79"
+   ],
+   "question": "قداش من ساعة نجم نخدم في الجمعة على الأقصى؟",
+   "question_msa": "أي时辰 نحن نخدم في الجمعة على الأقصى؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "210",
+     "106",
+     "95",
+     "79",
+     "90"
+    ],
+    "dense": [
+     "92",
+     "65",
+     "82",
+     "446",
+     "110"
+    ],
+    "hybride": [
+     "65",
+     "90",
+     "106",
+     "82",
+     "89"
+    ],
+    "rag": {
+     "passages": [
+      "210",
+      "106",
+      "95"
+     ],
+     "articles_cites": [
+      "95",
+      "106"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "يوم الجمعة",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "210",
+     "106",
+     "97",
+     "95",
+     "444"
+    ],
+    "dense": [
+     "210",
+     "106",
+     "95",
+     "82",
+     "89"
+    ],
+    "hybride": [
+     "210",
+     "106",
+     "95",
+     "97",
+     "94"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G02",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "14 bis",
+    "14 quater",
+    "14 ter"
+   ],
+   "question": "الباترون ينجم يطردني من غير ما يعلمني قبل؟",
+   "question_msa": "لماذا أنتم تطردوني دون事先 تبلغ؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "151",
+     "33",
+     "413",
+     "43",
+     "14"
+    ],
+    "dense": [
+     "349",
+     "21",
+     "20",
+     "292",
+     "8"
+    ],
+    "hybride": [
+     "409",
+     "68",
+     "398",
+     "14 bis",
+     "33"
+    ],
+    "rag": {
+     "passages": [
+      "151",
+      "33",
+      "413"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "385 bis",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "dense": [
+     "14 ter",
+     "21",
+     "351",
+     "166",
+     "398"
+    ],
+    "hybride": [
+     "14 ter",
+     "21",
+     "14 bis",
+     "8",
+     "23 bis"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G03",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "113",
+    "114",
+    "115"
+   ],
+   "question": "قداش من نهار كونجي خالص عندي في العام؟",
+   "question_msa": "من هو الشخص الذي يملك خالصاً منذ العام؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "185",
+     "408",
+     "200",
+     "211",
+     "79"
+    ],
+    "dense": [
+     "112",
+     "94",
+     "445",
+     "143",
+     "127"
+    ],
+    "hybride": [
+     "97",
+     "79",
+     "124",
+     "9",
+     "73"
+    ],
+    "rag": {
+     "passages": [
+      "185",
+      "408",
+      "200"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "30",
+     "256",
+     "345",
+     "406",
+     "185"
+    ],
+    "dense": [
+     "127",
+     "112",
+     "318",
+     "159",
+     "129"
+    ],
+    "hybride": [
+     "318",
+     "124",
+     "159",
+     "87",
+     "86"
+    ],
+    "rag": {
+     "articles_cites": [
+      "256"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G04",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "122"
+   ],
+   "question": "مرتي ولدت، عندي الحق في نهارات راحة؟",
+   "question_msa": "هل لدي الحق في الحصول على أجازة بعد ولادة زوجتي؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "99",
+     "100",
+     "185",
+     "70",
+     "123"
+    ],
+    "dense": [
+     "64",
+     "113",
+     "419",
+     "97",
+     "99"
+    ],
+    "hybride": [
+     "99",
+     "70",
+     "100",
+     "123",
+     "124"
+    ],
+    "rag": {
+     "passages": [
+      "99",
+      "100",
+      "185"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "122",
+     "244",
+     "230",
+     "368",
+     "281"
+    ],
+    "dense": [
+     "122",
+     "64",
+     "94",
+     "119",
+     "114"
+    ],
+    "hybride": [
+     "122",
+     "94",
+     "64",
+     "368",
+     "59"
+    ],
+    "rag": {
+     "articles_cites": [
+      "122"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G05",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "140"
+   ],
+   "question": "الشهرية لازم تتخلص كل قداش؟",
+   "question_msa": "ما هي المدة التي يجب أن تتخلصها الشهرية؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "9",
+     "299",
+     "112",
+     "313",
+     "424"
+    ],
+    "dense": [
+     "9",
+     "370",
+     "114",
+     "68",
+     "333"
+    ],
+    "hybride": [
+     "9",
+     "18",
+     "64",
+     "333",
+     "59"
+    ],
+    "rag": {
+     "passages": [
+      "9",
+      "299",
+      "112"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "9",
+     "52",
+     "116",
+     "133",
+     "113"
+    ],
+    "dense": [
+     "114",
+     "68",
+     "123",
+     "9",
+     "82"
+    ],
+    "hybride": [
+     "9",
+     "114",
+     "94",
+     "113",
+     "79"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G06",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "6"
+   ],
+   "question": "فترة التجربة في الخدمة قداش تدوم؟",
+   "question_msa": "متى تنتهي فترة التجربة في الخدمة؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "22",
+     "371",
+     "6",
+     "21",
+     "18"
+    ],
+    "dense": [
+     "371",
+     "349",
+     "22",
+     "370",
+     "18"
+    ],
+    "hybride": [
+     "371",
+     "22",
+     "370",
+     "18",
+     "6"
+    ],
+    "rag": {
+     "passages": [
+      "22",
+      "371",
+      "6"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "erreur": "HTTPError"
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "22",
+     "370",
+     "371",
+     "132",
+     "6"
+    ],
+    "dense": [
+     "371",
+     "124",
+     "349",
+     "22",
+     "319"
+    ],
+    "hybride": [
+     "371",
+     "22",
+     "6",
+     "132",
+     "21"
+    ],
+    "rag": {
+     "articles_cites": [
+      "370"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G07",
+   "langue": "tunisien",
+   "categorie": "sans_article",
+   "acceptes": [],
+   "question": "إذا خدمت في الليل نخلص أكثر؟",
+   "question_msa": "إذا خدمت في الليل سنتوصل更快؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "129",
+     "351",
+     "67",
+     "348",
+     "31"
+    ],
+    "dense": [
+     "68",
+     "89",
+     "94",
+     "70",
+     "115"
+    ],
+    "hybride": [
+     "115",
+     "67",
+     "93",
+     "97",
+     "66"
+    ],
+    "rag": {
+     "passages": [
+      "129",
+      "351",
+      "67"
+     ],
+     "articles_cites": [
+      "67"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "{\"reponse\": \"نعم\", \"articles_cites\": [\"67\"], \"extrait\": \"الفصل 67 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996).- بقطع النظر عن الأحكام السابقة فإن الأطفال البالغين من العمر ستة عشر عاما كاملة ودون الثمانية عشر يمكن تشغيلهم ليلا في الصور الآتية : ب بالنسبة للأطفال المشتغلين بالمخابز فإن الحصة الممتدّة من التاسعة مساء إلى الرابعة صباحا تحل محل الحصة ما بين العاشرة مساء والسسادسة صباحا عندما يتطلب ذلك تدريبهم أو تكوينهم المهني ج . عندما تتطلب ذلك حاجيات تدريبهم أو تكوينهم المهني في الصناعات أو الأعمال المعينة التي تستوجب شغلا متواصلا يمكن لرئيس تفقدية الشغل المختصة ترابيا أن يعطى بعد استشارة المنظمات النقابية التى يهمها الأمر رخصا فردية محددة زمنيًا في تشغيل الأطفال بشرط أن يتمتعوا خلال حصتين للعمل براحة تدوم ثلاث عشرة ساعة متوالية على الأقل.\", \"67 (نقح بالقانون عدد 62 لسنة 1996 المؤرخ في 15 جويلية 1996).- بقطع النظر عن الأحكام السابقة فإن الأطفال البالغين من العمر ستة عشر عاما كاملة ودون الثمانية عشر يمكن تشغيلهم ليلا في الصور الآتية : ب بالنسبة للأطفال المشتغلين بالمخابز فإن الحصة الممتدّة من التاسعة مساء إلى الرابعة صباحا تحل محل الحصة ما بين العاشرة مساء والسس",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "374",
+     "301",
+     "67",
+     "10",
+     "124"
+    ],
+    "dense": [
+     "68",
+     "85",
+     "115",
+     "69",
+     "94"
+    ],
+    "hybride": [
+     "67",
+     "124",
+     "68",
+     "17",
+     "301"
+    ],
+    "rag": {
+     "articles_cites": [
+      "67"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G08",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "149",
+    "150"
+   ],
+   "question": "الباترون ينجم يقصّ من شهريتي فلوس يقول إلي أنا مدين بيهم؟",
+   "question_msa": "الباترون ي扣 من راتبي شهريًا، فلوس يقول له أنا مدين بهم؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "234",
+     "352",
+     "8",
+     "226",
+     "256"
+    ],
+    "dense": [
+     "94",
+     "424",
+     "16",
+     "194",
+     "398"
+    ],
+    "hybride": [
+     "8",
+     "94",
+     "408",
+     "315",
+     "113"
+    ],
+    "rag": {
+     "passages": [
+      "234",
+      "352",
+      "8"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "403",
+     "108",
+     "413",
+     "206",
+     "296"
+    ],
+    "dense": [
+     "113",
+     "94",
+     "108",
+     "130",
+     "353"
+    ],
+    "hybride": [
+     "108",
+     "403",
+     "85",
+     "9",
+     "4"
+    ],
+    "rag": {
+     "articles_cites": [
+      "403"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G09",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "14 ter",
+    "22",
+    "23",
+    "23 bis"
+   ],
+   "question": "طردوني بلا سبب، شنوة نجم ناخذ؟",
+   "question_msa": "لماذا طردوك بدون سبب، نجم ناخذ؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "437",
+     "14 ter",
+     "400",
+     "18",
+     "376 ter"
+    ],
+    "dense": [
+     "14 ter",
+     "21",
+     "14",
+     "23 bis",
+     "41"
+    ],
+    "hybride": [
+     "14 ter",
+     "23 bis",
+     "166",
+     "18",
+     "437"
+    ],
+    "rag": {
+     "passages": [
+      "437",
+      "14 ter",
+      "400"
+     ],
+     "articles_cites": [
+      "14 ter"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "الشركة يجب أن تقدم سبباً حقيقياً وجدياً للطرد، وفقاً للArticle 14 ter.",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "18",
+     "437",
+     "14 ter",
+     "89",
+     "400"
+    ],
+    "dense": [
+     "14 ter",
+     "166",
+     "21",
+     "351",
+     "41"
+    ],
+    "hybride": [
+     "14 ter",
+     "166",
+     "400",
+     "437",
+     "23 bis"
+    ],
+    "rag": {
+     "articles_cites": [
+      "14 ter"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G10",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "53",
+    "56"
+   ],
+   "question": "الصغار من قداش عام ينجمو يخدمو؟",
+   "question_msa": "من هم الذين ينجمون ويقدمون الخدمة؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "112",
+     "147",
+     "430",
+     "241",
+     "181"
+    ],
+    "dense": [
+     "58",
+     "54",
+     "55",
+     "61",
+     "78"
+    ],
+    "hybride": [
+     "242",
+     "21",
+     "3",
+     "8",
+     "112"
+    ],
+    "rag": {
+     "passages": [
+      "112",
+      "147",
+      "430"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "149",
+     "28",
+     "21",
+     "180",
+     "18"
+    ],
+    "dense": [
+     "152",
+     "170",
+     "444",
+     "194",
+     "291"
+    ],
+    "hybride": [
+     "28",
+     "21",
+     "22",
+     "73",
+     "30"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": "HTTPError"
+    }
+   }
+  },
+  {
+   "id": "G11",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "95",
+    "96",
+    "97"
+   ],
+   "question": "نهار الأحد لازم يكون راحة؟",
+   "question_msa": "ازnable الأحد يكون راحة؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "97",
+     "106",
+     "95",
+     "70",
+     "118"
+    ],
+    "dense": [
+     "97",
+     "70",
+     "89",
+     "113",
+     "64"
+    ],
+    "hybride": [
+     "97",
+     "70",
+     "95",
+     "106",
+     "99"
+    ],
+    "rag": {
+     "passages": [
+      "97",
+      "106",
+      "95"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "106",
+     "95",
+     "97",
+     "70",
+     "118"
+    ],
+    "dense": [
+     "97",
+     "89",
+     "98",
+     "99",
+     "100"
+    ],
+    "hybride": [
+     "97",
+     "95",
+     "99",
+     "100",
+     "106"
+    ],
+    "rag": {
+     "articles_cites": [
+      "106",
+      "95"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G12",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "64"
+   ],
+   "question": "المرا الحاملة عندها كونجي قداش؟",
+   "question_msa": "المرأة الحامل لديها قناعات؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "305",
+     "286",
+     "417",
+     "143",
+     "129"
+    ],
+    "hybride": [
+     "305",
+     "286",
+     "417",
+     "143",
+     "129"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "20",
+     "68",
+     "64",
+     "2",
+     "3"
+    ],
+    "dense": [
+     "68",
+     "64",
+     "174",
+     "18",
+     "75"
+    ],
+    "hybride": [
+     "68",
+     "64",
+     "20",
+     "5 bis",
+     "18"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G13",
+   "langue": "tunisien",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "كي نطيح مريض في الخدمة شكون يخلصني؟",
+   "question_msa": "من يحلمني في الخدمة عندما أحتاج إلى رعاية؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "94",
+     "21",
+     "18",
+     "23",
+     "22"
+    ],
+    "dense": [
+     "19",
+     "22",
+     "8",
+     "145",
+     "291"
+    ],
+    "hybride": [
+     "22",
+     "8",
+     "371",
+     "21",
+     "19"
+    ],
+    "rag": {
+     "passages": [
+      "94",
+      "21",
+      "18"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "71",
+     "94",
+     "400",
+     "371",
+     "8"
+    ],
+    "dense": [
+     "152",
+     "19",
+     "357",
+     "356",
+     "346"
+    ],
+    "hybride": [
+     "94",
+     "28",
+     "8",
+     "21",
+     "71"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G14",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "207",
+    "376"
+   ],
+   "question": "شنوة دور مجلس الصلح في نزاعات الشغل؟",
+   "question_msa": "ما هي دور مجلس الصلح في نزاعات الشغل؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "375",
+     "340",
+     "342",
+     "381 bis",
+     "21"
+    ],
+    "dense": [
+     "153",
+     "378",
+     "183",
+     "355",
+     "335"
+    ],
+    "hybride": [
+     "153",
+     "183",
+     "207",
+     "385 bis",
+     "340"
+    ],
+    "rag": {
+     "passages": [
+      "375",
+      "340",
+      "342"
+     ],
+     "articles_cites": [
+      "136"
+     ],
+     "abstention": true,
+     "rejet": "citation_non_fournie:136",
+     "reponse": "لا أملك مصدرا كافيا في مجلة الشغل للإجابة عن هذا السؤال بشكل موثوق.",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "375",
+     "340",
+     "342",
+     "381 bis",
+     "21"
+    ],
+    "dense": [
+     "378",
+     "183",
+     "153",
+     "355",
+     "215"
+    ],
+    "hybride": [
+     "183",
+     "153",
+     "207",
+     "385 bis",
+     "340"
+    ],
+    "rag": {
+     "articles_cites": [
+      "375"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G15",
+   "langue": "tunisien",
+   "categorie": "avec_article",
+   "acceptes": [
+    "242",
+    "250"
+   ],
+   "question": "نجم نعمل نقابة في الشركة متاعي؟",
+   "question_msa": "ما هي إجراءاتي لإنشاء نقابة في شركتي؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "254",
+     "253",
+     "242",
+     "250",
+     "251"
+    ],
+    "dense": [
+     "254",
+     "28",
+     "341",
+     "256",
+     "251"
+    ],
+    "hybride": [
+     "254",
+     "251",
+     "253",
+     "242",
+     "8"
+    ],
+    "rag": {
+     "passages": [
+      "254",
+      "253",
+      "242"
+     ],
+     "articles_cites": [
+      "242"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "نعم يمكن تأسيس نقابة في الشركة الخاصة بك إذا كانت تضم أشخاص يتعاطون نفس المهنة أو حرفا مشابهة أو مهنا مرتبطة بعضها ببعض تساعد على تكوين منتوجات معينة أو نفس المهنة الحرة.",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "254",
+     "253",
+     "242",
+     "250",
+     "251"
+    ],
+    "dense": [
+     "242",
+     "46",
+     "254",
+     "250",
+     "256"
+    ],
+    "hybride": [
+     "254",
+     "242",
+     "250",
+     "251",
+     "253"
+    ],
+    "rag": {
+     "articles_cites": [
+      "242"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G16",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "79"
+   ],
+   "question": "chhal men se3a nekhdem fel jem3a?",
+   "question_msa": "Qui est le leader du parti ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "403",
+     "323",
+     "311",
+     "203",
+     "354"
+    ],
+    "hybride": [
+     "403",
+     "323",
+     "311",
+     "203",
+     "354"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [],
+    "dense": [
+     "154",
+     "341",
+     "226",
+     "28",
+     "163"
+    ],
+    "hybride": [
+     "154",
+     "341",
+     "226",
+     "28",
+     "163"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G17",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "14 bis",
+    "14 quater",
+    "14 ter"
+   ],
+   "question": "el patron ynajem ytaredni bla preavis?",
+   "question_msa": "Quand un patron licencie un employé sans préavis ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "445",
+     "186",
+     "376",
+     "376 bis",
+     "14 bis"
+    ],
+    "dense": [
+     "194",
+     "206",
+     "249",
+     "17",
+     "131"
+    ],
+    "hybride": [
+     "398",
+     "17",
+     "13",
+     "4",
+     "10"
+    ],
+    "rag": {
+     "passages": [
+      "445",
+      "186",
+      "376"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "400",
+     "14 ter",
+     "186",
+     "411",
+     "14 bis"
+    ],
+    "dense": [
+     "14 ter",
+     "14 bis",
+     "166",
+     "21",
+     "167"
+    ],
+    "hybride": [
+     "14 ter",
+     "14 bis",
+     "400",
+     "353",
+     "411"
+    ],
+    "rag": {
+     "articles_cites": [
+      "14 ter"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G18",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "113",
+    "114",
+    "115"
+   ],
+   "question": "chhal men nhar congé 3andi fel 3am?",
+   "question_msa": "Quand dois-je prendre mon congé pour la semaine prochaine ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "124",
+     "119",
+     "130",
+     "118",
+     "113"
+    ],
+    "dense": [
+     "311",
+     "354",
+     "403",
+     "323",
+     "110"
+    ],
+    "hybride": [
+     "132",
+     "110",
+     "94",
+     "131",
+     "116"
+    ],
+    "rag": {
+     "passages": [
+      "124",
+      "119",
+      "130"
+     ],
+     "articles_cites": [
+      "124"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "Article 124",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "132",
+     "119",
+     "126",
+     "411",
+     "79"
+    ],
+    "dense": [
+     "124",
+     "117",
+     "126",
+     "132",
+     "116"
+    ],
+    "hybride": [
+     "132",
+     "126",
+     "124",
+     "119",
+     "118"
+    ],
+    "rag": {
+     "articles_cites": [
+      "132"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G19",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "140"
+   ],
+   "question": "el chehriya lezem tetkhallas kol 9addech?",
+   "question_msa": "Quand commence-t-elle officiellement chaque année ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "445",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "dense": [
+     "9",
+     "84",
+     "209",
+     "403",
+     "110"
+    ],
+    "hybride": [
+     "9",
+     "7",
+     "4",
+     "5 bis",
+     "49"
+    ],
+    "rag": {
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "articles_cites": [
+      "445"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "{\"reponse\": \"Article 445\", \"articles_cites\": [\"445\"], \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).- تكون أيام 14 جانفي و20 مارس وأول ماي و25 جويلية وعيد الفطر وعيد الأضحى أيام عطلة خالصة الأجر.\", \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).- تكون أيام 14 جانفي و20 مارس وأول ماي و25 جويلية وعيد الفطر وعيد الأضحى أيام عطلة خالصة الأجر.\", \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "112",
+     "430",
+     "116",
+     "442",
+     "85"
+    ],
+    "dense": [
+     "116",
+     "117",
+     "181",
+     "424",
+     "430"
+    ],
+    "hybride": [
+     "116",
+     "430",
+     "181",
+     "442",
+     "117"
+    ],
+    "rag": {
+     "articles_cites": [
+      "116"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G20",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "6"
+   ],
+   "question": "periode d'essai 9addech tdoum?",
+   "question_msa": "période d'essai est-elle de 9 mois?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "6",
+     "370",
+     "18",
+     "22",
+     "410"
+    ],
+    "dense": [
+     "410",
+     "68",
+     "89",
+     "99",
+     "209"
+    ],
+    "hybride": [
+     "410",
+     "6",
+     "68",
+     "349",
+     "18"
+    ],
+    "rag": {
+     "passages": [
+      "6",
+      "370",
+      "18"
+     ],
+     "articles_cites": [
+      "370"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "reponse": "Article 370",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "410",
+     "22",
+     "6",
+     "371",
+     "370"
+    ],
+    "dense": [
+     "349",
+     "63",
+     "410",
+     "68",
+     "77"
+    ],
+    "hybride": [
+     "410",
+     "349",
+     "6",
+     "370",
+     "22"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G21",
+   "langue": "arabizi",
+   "categorie": "sans_article",
+   "acceptes": [],
+   "question": "ken nekhdem bel lil nkhalles akther?",
+   "question_msa": "Qui sont les témoins de l'accusation ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "84",
+     "403",
+     "347",
+     "311",
+     "81"
+    ],
+    "hybride": [
+     "84",
+     "403",
+     "347",
+     "311",
+     "81"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "195",
+     "209",
+     "144",
+     "174",
+     "2"
+    ],
+    "dense": [
+     "320",
+     "209",
+     "230",
+     "251",
+     "321"
+    ],
+    "hybride": [
+     "209",
+     "195",
+     "144",
+     "174",
+     "4"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G22",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "122"
+   ],
+   "question": "mrati weldet 3andi 7a9 fi ra7a?",
+   "question_msa": "Quelle est la capitale de la Tunisie ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "311",
+     "372",
+     "323",
+     "110",
+     "356"
+    ],
+    "hybride": [
+     "311",
+     "372",
+     "323",
+     "110",
+     "356"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "7",
+     "258",
+     "433",
+     "233 bis",
+     "300"
+    ],
+    "dense": [
+     "258",
+     "433",
+     "251",
+     "40",
+     "432"
+    ],
+    "hybride": [
+     "258",
+     "433",
+     "7",
+     "432",
+     "251"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G23",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "14 ter",
+    "22",
+    "23",
+    "23 bis"
+   ],
+   "question": "tardouni bla sbab chnowa nejem nekhou?",
+   "question_msa": "Quel est le nom du professeur qui enseigne le néogrec?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "347",
+     "84",
+     "285",
+     "131",
+     "358"
+    ],
+    "hybride": [
+     "347",
+     "84",
+     "285",
+     "131",
+     "358"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "30",
+     "278",
+     "134",
+     "77",
+     "21"
+    ],
+    "dense": [
+     "358",
+     "357",
+     "356",
+     "339",
+     "352"
+    ],
+    "hybride": [
+     "345",
+     "144",
+     "284",
+     "278",
+     "30"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G24",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "53",
+    "56"
+   ],
+   "question": "s8ar men 9addech 3am ynajmou yekhdmou?",
+   "question_msa": "Qui sont les principaux acteurs de ce jeu ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "403",
+     "311",
+     "358",
+     "103",
+     "391"
+    ],
+    "hybride": [
+     "403",
+     "311",
+     "358",
+     "103",
+     "391"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "57",
+     "67",
+     "2",
+     "3",
+     "4"
+    ],
+    "dense": [
+     "72",
+     "180",
+     "154",
+     "36",
+     "28"
+    ],
+    "hybride": [
+     "3",
+     "5",
+     "67",
+     "4",
+     "28"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G25",
+   "langue": "arabizi",
+   "categorie": "avec_article",
+   "acceptes": [
+    "242",
+    "250"
+   ],
+   "question": "nejem na3mel nekaba fi charikti?",
+   "question_msa": "Qui a gagné la Coupe du Monde de football ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "347",
+     "311",
+     "323",
+     "354",
+     "206"
+    ],
+    "hybride": [
+     "347",
+     "311",
+     "323",
+     "354",
+     "206"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": "aucune_citation",
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "3",
+     "2",
+     "4",
+     "5",
+     "5 bis"
+    ],
+    "dense": [
+     "49",
+     "430",
+     "50",
+     "37",
+     "39"
+    ],
+    "hybride": [
+     "4",
+     "3",
+     "9",
+     "37",
+     "49"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G41",
+   "langue": "tunisien",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "قداش الأداء على الدخل في تونس؟",
+   "question_msa": "ما هي نسبة الأداء على الدخل في تونس؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "314",
+     "365",
+     "315",
+     "318",
+     "316"
+    ],
+    "dense": [
+     "315",
+     "21",
+     "251",
+     "139",
+     "258"
+    ],
+    "hybride": [
+     "315",
+     "314",
+     "365",
+     "444",
+     "251"
+    ],
+    "rag": {
+     "passages": [
+      "314",
+      "365",
+      "315"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "365",
+     "314",
+     "315",
+     "318",
+     "316"
+    ],
+    "dense": [
+     "341",
+     "432",
+     "315",
+     "444",
+     "425"
+    ],
+    "hybride": [
+     "315",
+     "365",
+     "444",
+     "314",
+     "251"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G42",
+   "langue": "tunisien",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "الباسبور قداش يدوم صالح؟",
+   "question_msa": "هل بطاقة الهوية تبقى صالحة؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "294",
+     "140",
+     "2",
+     "3",
+     "4"
+    ],
+    "dense": [
+     "370",
+     "348",
+     "27",
+     "18",
+     "388"
+    ],
+    "hybride": [
+     "18",
+     "27",
+     "28",
+     "14 quater",
+     "20"
+    ],
+    "rag": {
+     "passages": [
+      "294",
+      "140",
+      "2"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "379",
+     "424",
+     "24",
+     "230",
+     "52"
+    ],
+    "dense": [
+     "421",
+     "423",
+     "21",
+     "124",
+     "73"
+    ],
+    "hybride": [
+     "424",
+     "421",
+     "278",
+     "129",
+     "419"
+    ],
+    "rag": {
+     "articles_cites": [
+      "424"
+     ],
+     "abstention": false,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G43",
+   "langue": "tunisien",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "مول الدار ينجم يزيدلي في الكراء؟",
+   "question_msa": "أين يقع المقر الرئيسي للشركة؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [],
+    "dense": [
+     "159",
+     "75",
+     "388",
+     "121",
+     "440"
+    ],
+    "hybride": [
+     "159",
+     "75",
+     "388",
+     "121",
+     "440"
+    ],
+    "rag": {
+     "passages": [],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "154",
+     "182",
+     "290",
+     "363",
+     "443"
+    ],
+    "dense": [
+     "422",
+     "279",
+     "284",
+     "250",
+     "280"
+    ],
+    "hybride": [
+     "280",
+     "301",
+     "257",
+     "94",
+     "278"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G44",
+   "langue": "arabizi",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "chhal el TVA 3al restaurant?",
+   "question_msa": "Quel est le taux de TVA dans les restaurants ?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "445",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "dense": [
+     "322",
+     "311",
+     "433",
+     "354",
+     "316"
+    ],
+    "hybride": [
+     "2",
+     "4",
+     "7",
+     "5",
+     "3"
+    ],
+    "rag": {
+     "passages": [
+      "445",
+      "2",
+      "3"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "134",
+     "77",
+     "21",
+     "151",
+     "313"
+    ],
+    "dense": [
+     "313",
+     "312",
+     "318",
+     "314",
+     "316"
+    ],
+    "hybride": [
+     "313",
+     "96",
+     "278",
+     "365",
+     "3"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G45",
+   "langue": "arabizi",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "kifech nekhou permis de construire?",
+   "question_msa": "Comment puis-je obtenir un permis de construction?",
+   "langue_detectee_msa": "fr",
+   "direct": {
+    "bm25": [
+     "23",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "dense": [
+     "298",
+     "68",
+     "67",
+     "78",
+     "375"
+    ],
+    "hybride": [
+     "4",
+     "68",
+     "67",
+     "57",
+     "78"
+    ],
+    "rag": {
+     "passages": [
+      "23",
+      "2",
+      "3"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "23",
+     "433",
+     "2",
+     "381",
+     "286"
+    ],
+    "dense": [
+     "298",
+     "59",
+     "421",
+     "423",
+     "362"
+    ],
+    "hybride": [
+     "59",
+     "63",
+     "58",
+     "286",
+     "49"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  },
+  {
+   "id": "G50",
+   "langue": "tunisien",
+   "categorie": "hors",
+   "acceptes": [],
+   "question": "البنك ينجم يرفضلي قرض سكنى؟",
+   "question_msa": "هل البنك رفض قرض سكن مني؟",
+   "langue_detectee_msa": "ar",
+   "direct": {
+    "bm25": [
+     "345",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "dense": [
+     "409",
+     "283",
+     "411",
+     "398",
+     "348"
+    ],
+    "hybride": [
+     "16",
+     "6",
+     "21",
+     "28",
+     "8"
+    ],
+    "rag": {
+     "passages": [
+      "345",
+      "2",
+      "3"
+     ],
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "reponse": "abstention",
+     "erreur": null
+    }
+   },
+   "traduit": {
+    "bm25": [
+     "230",
+     "40",
+     "38",
+     "256",
+     "360"
+    ],
+    "dense": [
+     "159",
+     "411",
+     "283",
+     "409",
+     "167"
+    ],
+    "hybride": [
+     "21",
+     "256",
+     "28",
+     "16",
+     "5"
+    ],
+    "rag": {
+     "articles_cites": [],
+     "abstention": true,
+     "rejet": null,
+     "erreur": null
+    }
+   }
+  }
+ ]
+}

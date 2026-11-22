@@ -868,3 +868,11 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Sujets = même ensemble d'articles acceptés. 3 sujets présents en FR, arabe, tunisien et arabizi (articles 79, 122, 140) : hybride R@5 et RAG correct FR 3/3, arabe 3/3, tunisien 0/3, arabizi 0/3. INV (même 1er article ou même décision RAG dans les 4 langues) : 0/3.
 - 7 sujets en arabe, tunisien et arabizi : hybride R@5 6 / 2 / 1 ; RAG correct 3 / 0 / 0.
 - Lecture : biais net en défaveur du dialecte, à corriger (consigne « réponses différentes selon la langue = biais »). Effectifs très petits : indication, pas preuve.
+
+## 2026-11-22 — Gold : question de recherche n°1 « traduire en arabe standard puis chercher » (évaluation seule)
+- Question (PDF) : le retrieval après traduction de la question bat-il le retrieval direct pour des questions tunisiennes ?
+- Jeu : 31 questions tunisien + arabizi du jeu Gold (22 avec article, 9 sans article ou hors). Traduction par qwen2.5:3b (température 0, graine 2026), puis paramètres Silver inchangés. Script : src/gold/traduction_puis_recherche.py ; sorties reports/gold/traduction_puis_recherche/. Application non modifiée.
+- Hybride R@5 direct → traduit : tunisien 6 → 8/13 ; arabizi 1 → 2/9 ; total 7 → 10/22 (3 gagnées, 0 perdue). e5 R@5 total 2 → 7/22.
+- RAG P2V bon article : tunisien 2 → 4/13 ; arabizi 0 → 1/9. Fausses abstentions 16 → 11/22. Abstentions correctes 8 → 7/9.
+- Qualité de la traduction : 4/31 sorties contiennent des caractères chinois ; 12/31 sorties sont en français ou en lettres latines (arabizi souvent mal compris, parfois question inventée, ex. G22 → « Quelle est la capitale de la Tunisie ? »).
+- Lecture : la traduction aide nettement le tunisien en lettres arabes et l'encodeur e5 ; elle n'aide presque pas l'arabizi car le petit LLM ne le comprend pas. Réponse provisoire : oui pour le tunisien, non démontré pour l'arabizi. Effectifs petits ; un traducteur plus fort (ex. Gemini) est la suite logique.
