@@ -1,0 +1,61 @@
+﻿article,divergence_predite,signaux,detail
+52,oui,nombres,"nombres: FR seulement ['1', '1973', '21', '247', '25', '26', '29', '73', '852'] ; AR seulement []"
+250,oui,"nombres,modal_obligation","nombres: FR seulement ['1', '2'] ; AR seulement [] | modal_obligation: FR"
+319,oui,nombres,nombres: FR seulement ['11'] ; AR seulement []
+169,non,,
+262,non,,
+388,oui,nombres,"nombres: FR seulement ['111'] ; AR seulement ['1', '100', '2', '3', '4', '5', '500']"
+284,oui,modal_interdiction,modal_interdiction: FR
+236,oui,"references,modal_interdiction,modal_permission",references: FR ['234'] ; AR [] | modal_interdiction: AR | modal_permission: AR
+338,non,,
+407,oui,"modal_permission,negation",modal_permission: FR | negation: FR 0 ; AR 2
+47,oui,"nombres,references",nombres: FR seulement [] ; AR seulement ['33'] | references: FR [] ; AR ['33']
+2,oui,"nombres,longueur","nombres: FR seulement ['1', '2'] ; AR seulement ['10001'] | longueur: z = 2.0"
+390,oui,nombres,"nombres: FR seulement [] ; AR seulement ['100', '500']"
+202,non,,
+184,oui,"nombres,references","nombres: FR seulement ['1', '1994', '21', '29', '3', '94'] ; AR seulement [] | references: FR ['3'] ; AR []"
+377,non,,
+190,non,,
+434,non,,
+37,non,,
+41,non,,
+339,oui,"nombres,references,modal_permission","nombres: FR seulement ['1', '15', '1996', '2', '2017', '24', '335', '54', '62', '96'] ; AR seulement [] | references: FR ['335'] ; AR [] | modal_permission: FR"
+374,oui,nombres,"nombres: FR seulement ['13', '16'] ; AR seulement []"
+288,oui,longueur,longueur: z = 4.9
+292,non,,
+116,oui,nombres,nombres: FR seulement ['1'] ; AR seulement []
+257,oui,nombres,nombres: FR seulement [] ; AR seulement ['6']
+301,oui,negation,negation: FR 2 ; AR 4
+144,oui,negation,negation: FR 4 ; AR 2
+205,oui,"nombres,negation",nombres: FR seulement ['8'] ; AR seulement [] | negation: FR 4 ; AR 0
+350,oui,"references,modal_obligation",references: FR ['348'] ; AR [] | modal_obligation: AR
+398,non,,
+305,oui,nombres,nombres: FR seulement ['5'] ; AR seulement []
+280,oui,nombres,nombres: FR seulement ['15'] ; AR seulement []
+381,non,,
+195,non,,
+254,non,,
+214,oui,references,references: FR ['185'] ; AR []
+81,oui,"nombres,longueur","nombres: FR seulement [] ; AR seulement ['15', '1996', '62'] | longueur: z = -7.6"
+32,oui,negation,negation: FR 1 ; AR 4
+402,oui,nombres,nombres: FR seulement ['1'] ; AR seulement []
+419,oui,nombres,"nombres: FR seulement ['11', '1957', '1994', '21', '28', '57', '73', '94'] ; AR seulement []"
+281,non,,
+383,non,,
+99,oui,"modal_obligation,negation",modal_obligation: FR | negation: FR 1 ; AR 3
+353,oui,references,references: FR ['350'] ; AR []
+169 ter,non,,
+89,oui,"nombres,negation",nombres: FR seulement ['1'] ; AR seulement [] | negation: FR 7 ; AR 5
+5,oui,negation,negation: FR 3 ; AR 1
+125,oui,"nombres,references,modal_obligation",nombres: FR seulement ['107'] ; AR seulement ['7'] | references: FR ['107'] ; AR [] | modal_obligation: FR
+173,oui,"nombres,modal_permission,negation","nombres: FR seulement ['58', '6'] ; AR seulement ['16'] | modal_permission: AR | negation: FR 1 ; AR 3"
+316,oui,"modal_obligation,negation",modal_obligation: FR | negation: FR 1 ; AR 3
+439,oui,nombres,nombres: FR seulement ['5'] ; AR seulement []
+49,oui,"nombres,references,longueur","nombres: FR seulement [] ; AR seulement ['1996', '5', '62'] | references: FR [] ; AR ['5'] | longueur: z = -7.9"
+46,oui,references,references: FR ['45'] ; AR []
+97,non,,
+95,oui,modal_obligation,modal_obligation: AR
+323,non,,
+234 bis,non,,
+128,oui,negation,negation: FR 2 ; AR 0
+382,oui,nombres,nombres: FR seulement [] ; AR seulement ['1']

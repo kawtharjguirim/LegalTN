@@ -1,0 +1,346 @@
+{
+ "modele_juge": "qwen2.5:3b",
+ "source": "reports/gold/rag_p2v_apres_correction/resultats.json",
+ "items": [
+  {
+   "id": "D02",
+   "langue": "fr",
+   "question": "Un congé payé de cinq jours ouvrables peut-il être fractionné ?",
+   "reponse": "articles 118, 125",
+   "articles_cites": [
+    "118",
+    "125"
+   ],
+   "reference": "118",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D03",
+   "langue": "fr",
+   "question": "Dans quel délai un salarié doit-il prendre un congé de quinze jours ?",
+   "reponse": "Article 124",
+   "articles_cites": [
+    "124"
+   ],
+   "reference": "124",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse ne répond pas à la question posée. La question demande le délai dans lequel un salarié doit prendre un congé de quinze jours, tandis que la réponse fait référence à la date d'ouverture du droit à congé et aux délais dans lesquels le congé doit être pris. De plus, l'article cité ne précise pas combien de temps doit être pris pour un congé de quinze jours."
+   }
+  },
+  {
+   "id": "D04",
+   "langue": "fr",
+   "question": "À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?",
+   "reponse": "Article 140",
+   "articles_cites": [
+    "140"
+   ],
+   "reference": "140",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse 'Article 140' ne répond pas à la question posée. La question demande à quelle fréquence les salaires doivent être payés, tandis que l'article 140 concerne les règles spécifiques concernant les salaires des travailleurs payés à l'heure ou à la journée. Il ne fournit pas de fréquence générale pour tous les travailleurs payés à l'heure ou à la journée."
+   }
+  },
+  {
+   "id": "D05",
+   "langue": "fr",
+   "question": "Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?",
+   "reponse": "Article 147",
+   "articles_cites": [
+    "147"
+   ],
+   "reference": "147",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "La réponse 'Article 147' est exacte et correspond à l'article cité dans les textes fournis. De plus, la réponse répond clairement et précisément à la question posée, indiquant le délai de prescription pour les actions entre employeurs et salariés nées des relations de travail."
+   }
+  },
+  {
+   "id": "D06",
+   "langue": "fr",
+   "question": "Quelles sont les attributions des conseils de prud'hommes ?",
+   "reponse": "Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.",
+   "articles_cites": [
+    "182"
+   ],
+   "reference": "183",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse fournie ne répond pas à la question posée. Elle indique seulement que les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien, mais ne fournit aucune information sur les attributions précises des conseils de prud'hommes. Les articles cités ne fournissent pas de détails sur les attributions spécifiques des conseils de prud'hommes."
+   }
+  },
+  {
+   "id": "D07",
+   "langue": "fr",
+   "question": "Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?",
+   "reponse": "false",
+   "articles_cites": [
+    "193"
+   ],
+   "reference": "193",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse 'false' est incorrecte. Selon l'article 193 du Code du travail tunisien, la suspension du travail prévue pour permettre aux salariés membres d'un conseil de prud'hommes de participer aux séances, aux enquêtes et aux réunions, ne peut pas être une cause de rupture du contrat de travail par l'employeur. Cependant, cela ne signifie pas que l'employeur ne peut pas rompre le contrat, mais plutôt qu'il ne peut le faire à cause de cette suspension. La réponse ne prend pas en compte cette possibilité. Par conséquent, la réponse 'false' est inexacte."
+   }
+  },
+  {
+   "id": "D08",
+   "langue": "fr",
+   "question": "Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?",
+   "reponse": "article 268",
+   "articles_cites": [
+    "268"
+   ],
+   "reference": "268",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse 'article 268' ne répond pas à la question posée car elle ne mentionne pas d'amende. Les articles cités ne fournissent aucune information sur l'amende pour défaut de présentation d'un registre exigé par la loi."
+   }
+  },
+  {
+   "id": "D09",
+   "langue": "fr",
+   "question": "Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",
+   "reponse": "Article 366",
+   "articles_cites": [
+    "366"
+   ],
+   "reference": "366",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "La réponse 'Article 366' est exacte et correspond à la question posée. De plus, elle est soutenue par les articles cités, qui indiquent que les agents chargés de l'Inspection du Travail, les inspecteurs de l'enseignement technique et les officiers de police judiciaire sont tous chargés de veiller à l'exécution des prescriptions du chapitre concerné. La réponse répond donc bien à la question posée."
+   }
+  },
+  {
+   "id": "D10",
+   "langue": "fr",
+   "question": "Un travail commandé et non publié doit-il être payé ?",
+   "reponse": "Oui",
+   "articles_cites": [
+    "402"
+   ],
+   "reference": "402",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse fournie est partielle et ne répond pas complètement à la question posée. L'article 402 stipule que le travail doit être payé, mais ne mentionne pas s'il doit être payé ou non lorsqu'il n'est pas publié. Il est donc impossible de juger la fidelité de la réponse à partir des informations fournies."
+   }
+  },
+  {
+   "id": "D11",
+   "langue": "fr",
+   "question": "Des unions de syndicats peuvent-elles être constituées ?",
+   "reponse": "oui",
+   "articles_cites": [
+    "252"
+   ],
+   "reference": "252",
+   "juge": {
+    "fidele": false,
+    "repond": true,
+    "justification": "La réponse 'oui' est incorrecte car l'article 252 ne permet pas de constituer des unions de syndicats, mais plutôt de les réglementer. L'article stipule que ces unions peuvent être formées, mais ne donne pas de détails sur leur constitution. De plus, il ne mentionne pas leur possibilité de constitution, mais plutôt leur réglementation. Le texte ne dit pas clairement que des unions de syndicats peuvent être constituées."
+   }
+  },
+  {
+   "id": "D12",
+   "langue": "fr",
+   "question": "Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?",
+   "reponse": "L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.",
+   "articles_cites": [
+    "68"
+   ],
+   "reference": "68",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse fournie ne répond pas à la question posée. La question demande dans quelles conditions l'interdiction du travail de nuit des femmes n'est pas appliquée, tandis que la réponse fournie énumère des cas où l'interdiction est appliquée. De plus, elle ne fait référence qu'aux articles 68 et 68-4 du Code du travail tunisien, alors que la question fait référence au Code du travail en général."
+   }
+  },
+  {
+   "id": "D13",
+   "langue": "tun",
+   "question": "Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",
+   "reponse": "Article 118",
+   "articles_cites": [
+    "118"
+   ],
+   "reference": "118",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse 'Article 118' ne répond pas à la question posée. La question porte sur le congé partial et la répartition des jours de congé, tandis que l'article 118 concerne le congé total et la répartition des jours de congé. De plus, l'article 118 ne mentionne pas spécifiquement le congé partial ou la répartition des jours de congé."
+   }
+  },
+  {
+   "id": "D29",
+   "langue": "fr",
+   "question": "Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",
+   "reponse": "article 22",
+   "articles_cites": [
+    "22"
+   ],
+   "reference": "22",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse "
+   }
+  },
+  {
+   "id": "D30",
+   "langue": "tun",
+   "question": "Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",
+   "reponse": "Article 370",
+   "articles_cites": [
+    "370"
+   ],
+   "reference": "22",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D31",
+   "langue": "fr",
+   "question": "Quelle est la durée maximale du travail effectif par semaine ?",
+   "reponse": "48 heures",
+   "articles_cites": [
+    "79"
+   ],
+   "reference": "79",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D32",
+   "langue": "tun",
+   "question": "Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?",
+   "reponse": "Article 79",
+   "articles_cites": [
+    "79"
+   ],
+   "reference": "79",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse 'Article 79' ne répond pas à la question posée. La question fait référence à 'f7al el 7ad el aksa mta3 el 5edma fil semaine', ce qui pourrait être traduit par 'la durée maximale de travail hebdomadaire'. Cependant, l'article 79 ne concerne pas cette question. Il parle plutôt de la durée maximale de travail hebdomadaire et de la possibilité de réduire cette durée avec l'accord des parties et des organisations syndicales. Le texte fourni ne fournit pas d'information sur la durée maximale de travail hebdomadaire."
+   }
+  },
+  {
+   "id": "D34",
+   "langue": "fr",
+   "question": "Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?",
+   "reponse": "Article 122",
+   "articles_cites": [
+    "122"
+   ],
+   "reference": "122",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D37",
+   "langue": "fr",
+   "question": "Sur quelles questions la commission consultative d'entreprise est-elle consultée ?",
+   "reponse": "article 160",
+   "articles_cites": [
+    "160"
+   ],
+   "reference": "160",
+   "juge": {
+    "fidele": false,
+    "repond": true,
+    "justification": "La réponse ne répond pas à la question posée. La question demande sur quelles questions la commission consultative d'entreprise est-elle consultée, tandis que la réponse fournit simplement l'article 160 du Code du travail tunisien sans expliquer sur quelles questions la commission est consultée."
+   }
+  },
+  {
+   "id": "D38",
+   "langue": "tun",
+   "question": "Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?",
+   "reponse": "article 445",
+   "articles_cites": [
+    "445"
+   ],
+   "reference": "170",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D39",
+   "langue": "fr",
+   "question": "Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?",
+   "reponse": "Article 191",
+   "articles_cites": [
+    "191"
+   ],
+   "reference": "191",
+   "juge": {
+    "fidele": false,
+    "repond": true,
+    "justification": "La réponse 'Article 191' est correcte en tant que référence, mais elle ne répond pas à la question posée. La question demande qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes, tandis que l'article 191 concerne uniquement la fixation des conditions et modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes. Il est donc nécessaire de rechercher dans les articles cités pour trouver la source de cette disposition."
+   }
+  },
+  {
+   "id": "D41",
+   "langue": "fr",
+   "question": "Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?",
+   "reponse": "Article 232",
+   "articles_cites": [
+    "232"
+   ],
+   "reference": "232",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse fournie ne répond pas à la question posée. La question demande si le code de procédure civile et commerciale s'applique aux conseils de prud'hommes, tandis que l'article cité parle plutôt de dispositions du code de procédure civile et commerciale qui sont applicables aux conseils de prud'hommes, si elles ne sont pas contraires aux dispositions du présent titre (qui est probablement le titre des conseils de prud'hommes). Il manque une explication sur la portée exacte de cette disposition."
+   }
+  },
+  {
+   "id": "D42",
+   "langue": "tun",
+   "question": "Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",
+   "reponse": "Article 194",
+   "articles_cites": [
+    "194"
+   ],
+   "reference": "198",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 500: Internal Server Error"
+   }
+  },
+  {
+   "id": "D53",
+   "langue": "tun",
+   "question": "Chnowa el 3a9ouba 3la el sar9a fel code pénal ?",
+   "reponse": "articles 153 du code pénal",
+   "articles_cites": [
+    "323"
+   ],
+   "reference": "n/a",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse fournie ne correspond pas à la question posée. La question porte sur l'article 153 du Code pénal, tandis que la réponse cite l'article 323 du Code pénal. De plus, le texte fourni ne répond pas à la question posée, il ne mentionne pas l'article 153 du Code pénal."
+   }
+  }
+ ]
+}
