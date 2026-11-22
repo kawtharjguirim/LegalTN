@@ -905,3 +905,9 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Dev v2, P2V (reports/gold/rag_dev_hybride) : bon article FR 16 → 17/20 ; hors périmètre refusé 27 → 24/28 ; fausses abstentions 4 → 4/26 ; tunisien (sans traduction) 2 → 0/6 ; 1 citation comptée hors passages ; 3 JSON invalides.
 - Gold 50, avec traduction (reports/gold/transfert_traduction_raghybride) : bon article 14 → 16/37 ; fausses abstentions 11 → 9/37 ; abstentions correctes 12 → 7/13.
 - Décision : non retenu par défaut. Le gain de citations (+2) se paie par une forte baisse de l'abstention (12 → 7/13 sur Gold ; 27 → 24/28 sur le dev) : avec 5 passages, le petit LLM répond plus souvent à des questions sans réponse dans le Code. L'option reste disponible pour l'expérience.
+
+## 2026-11-22 — Gold : biais entre langues recalculé AVEC la traduction intégrée (sans nouvel appel de modèle)
+- Source : reports/gold/transfert_traduction/resultats.json (mêmes définitions que src/gold/biais_langues.py, calcul direct).
+- 3 sujets dans les 4 langues (79, 122, 140), RAG correct : FR 3/3, arabe 3/3, tunisien 2/3 (140 en échec), arabizi 1/3 (seul 122). INV : 1/3 (sans traduction : 0/3).
+- 7 sujets en arabe, tunisien, arabizi : hybride R@5 6 / 5 / 4 ; RAG correct 3 / 3 / 2 (sans traduction : 3 / 0 / 0).
+- Abstention correcte avec traduction : tunisien 6/6, arabizi 3/3, arabe 3/4 ; seuil BM25 refus à tort : tunisien 7/13, arabizi 6/9, arabe 3/15.
