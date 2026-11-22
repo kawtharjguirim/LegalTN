@@ -1,0 +1,51 @@
+﻿id,langue,type_propose,question,question_naturelle (oui/non),question_corrigee (si besoin),article_attendu,hors_perimetre (oui/non),commentaire
+G01,tunisien,dans le périmètre,قداش من ساعة نجم نخدم في الجمعة على الأقصى؟,,,,, OUI
+G02,tunisien,dans le périmètre,الباترون ينجم يطردني من غير ما يعلمني قبل؟,,,,, OUI
+G03,tunisien,dans le périmètre,قداش من نهار كونجي خالص عندي في العام؟,,,,,OUI
+G04,tunisien,dans le périmètre,مرتي ولدت، عندي الحق في نهارات راحة؟,,,,,OUI
+G05,tunisien,dans le périmètre,الشهرية لازم تتخلص كل قداش؟,,,,, OUI
+G06,tunisien,dans le périmètre,فترة التجربة في الخدمة قداش تدوم؟,,,,,OUI
+G07,tunisien,dans le périmètre,إذا خدمت في الليل نخلص أكثر؟,,,,, OUI
+G08,tunisien,dans le périmètre,الباترون ينجم ينقص من شهريتي فلوس يسالهملي؟,,,,, OUI
+G09,tunisien,dans le périmètre,طردوني بلا سبب، شنوة نجم ناخذ؟,,,,, OUI
+G10,tunisien,dans le périmètre,الصغار من قداش عام ينجمو يخدمو؟,,,,, OUI
+G11,tunisien,dans le périmètre,نهار الأحد لازم يكون راحة؟,,,,,OUI
+G12,tunisien,dans le périmètre,المرا الحاملة عندها كونجي قداش؟,,,,, OUI
+G13,tunisien,dans le périmètre,كي نطيح مريض في الخدمة شكون يخلصني؟,,,,, OUI
+G14,tunisien,dans le périmètre,شنوة دور مجلس الصلح؟,,,,, OUI
+G15,tunisien,dans le périmètre,نجم نعمل نقابة في الشركة متاعي؟,,,,, OUI
+G16,arabizi,dans le périmètre,chhal men se3a nekhdem fel jem3a?,,,,, OUI
+G17,arabizi,dans le périmètre,el patron ynajem ytaredni bla preavis?,,,,, OUI
+G18,arabizi,dans le périmètre,chhal men nhar congé 3andi fel 3am?,,,,, OUI
+G19,arabizi,dans le périmètre,el chehriya lezem tetkhallas kol 9addech?,,,,, OUI
+G20,arabizi,dans le périmètre,periode d'essai 9addech tdoum?,,,,, OUI 
+G21,arabizi,dans le périmètre,ken nekhdem bel lil nkhalles akther?,,,,, OUI
+G22,arabizi,dans le périmètre,mrati weldet 3andi 7a9 fi ra7a?,,,,, OUI 
+G23,arabizi,dans le périmètre,tardouni bla sbab chnowa nejem nekhou?,,,,, OUI
+G24,arabizi,dans le périmètre,s8ar men 9addech 3am ynajmou yekhdmou?,,,,, OUI
+G25,arabizi,dans le périmètre,nejem na3mel nekaba fi charikti?,,,,, OUI
+G26,arabe,dans le périmètre,ما هي المدة القصوى للعمل الفعلي في الأسبوع؟,,,,, OUI
+G27,arabe,dans le périmètre,هل يجوز للمؤجر إنهاء عقد الشغل دون إعلام مسبق؟,,,,, OUI
+G28,arabe,dans le périmètre,كم تبلغ مدة العطلة السنوية خالصة الأجر؟,,,,, OUI
+G29,arabe,dans le périmètre,هل يحق للعامل عطلة بمناسبة ولادة طفله؟,,,,, OUI 
+G30,arabe,dans le périmètre,متى يجب دفع أجور العمال المأجورين بالساعة أو باليوم؟,,,,, OUI 
+G31,arabe,dans le périmètre,ما هي مدة فترة التجربة؟,,,,,OUI 
+G32,arabe,dans le périmètre,ما هو التعويض المستحق عند الطرد التعسفي؟,,,,, OUI 
+G33,arabe,dans le périmètre,ما هي السن الدنيا لتشغيل الأطفال؟,,,,,OUI 
+G34,arabe,dans le périmètre,هل يجوز تشغيل النساء ليلا؟,,,,,OUI 
+G35,arabe,dans le périmètre,ما هي مدة تقادم الدعاوى الناشئة عن علاقات الشغل؟,,,,, OUI 
+G36,arabe,dans le périmètre,ما هي اختصاصات مجالس الصلح؟,,,,, OUI 
+G37,arabe,dans le périmètre,هل يمكن تكوين اتحادات نقابات؟,,,,, OUI 
+G38,arabe,dans le périmètre,هل يمكن تجزئة العطلة السنوية؟,,,,,OUI 
+G39,arabe,dans le périmètre,ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟,,,,, OUI 
+G40,arabe,dans le périmètre,هل يجوز للمؤجر أن يقتطع من الأجر مبالغ مستحقة له؟,,,,, OUI 
+G41,tunisien,hors périmètre,قداش الأداء على الدخل في تونس؟,,,,, OUI 
+G42,tunisien,hors périmètre,الباسبور قداش يدوم صالح؟,,,,,OUI 
+G43,tunisien,hors périmètre,مول الدار ينجم يزيدلي في الكراء؟,,,,,OUI 
+G44,arabizi,hors périmètre,chhal el TVA 3al restaurant?,,,,, OUI 
+G45,arabizi,hors périmètre,kifech nekhou permis de construire?,,,,, OUI 
+G46,arabe,hors périmètre,ما هي مدة صلاحية بطاقة التعريف الوطنية؟,,,,, OUI 
+G47,arabe,hors périmètre,ما هي شروط تأسيس شركة خفية الاسم؟,,,,, OUI
+G48,arabe,hors périmètre,ما هي العقوبة المقررة للسياقة في حالة سكر؟,,,,, OUI
+G49,arabe,hors périmètre,كم يبلغ جراية التقاعد التي يصرفها الصندوق الوطني للضمان الاجتماعي؟,,,,, OUI 
+G50,tunisien,hors périmètre,البنك ينجم يرفضلي قرض سكنى؟,,,,, OUI 

@@ -1,0 +1,163 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   7%|▋         | 14/199 [00:00<00:01, 131.34it/s]Loading weights:  14%|█▍        | 28/199 [00:00<00:02, 83.35it/s] Loading weights:  27%|██▋       | 53/199 [00:00<00:01, 132.48it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 374.01it/s]
+G01 avec_article ['210'] ['95', '106'] False
+G02 avec_article ['151'] [] True
+G03 avec_article ['185'] [] True
+G04 avec_article ['99'] [] True
+G05 avec_article ['9'] [] True
+G06 avec_article ['22'] [] True
+G07 sans_article ['129'] ['67'] False
+G08 avec_article ['234'] [] True
+G09 avec_article ['437'] ['14 ter'] False
+G10 avec_article ['112'] [] True
+G11 avec_article ['97'] [] True
+G12 avec_article [] [] True
+G13 hors ['94'] [] True
+G14 avec_article ['375'] ['136'] True
+G15 avec_article ['254'] ['242'] False
+G16 avec_article [] [] True
+G17 avec_article ['445'] [] True
+G18 avec_article ['124'] ['124'] False
+G19 avec_article ['445'] ['445'] False
+G20 avec_article ['6'] ['370'] False
+G21 sans_article [] [] True
+G22 avec_article [] [] True
+G23 avec_article [] [] True
+G24 avec_article [] [] True
+G25 avec_article [] [] True
+G26 avec_article ['79'] ['79'] False
+G27 avec_article ['20'] [] True
+G28 avec_article ['94'] ['125'] False
+G29 avec_article ['122'] ['122'] False
+G30 avec_article ['140'] ['140'] False
+G31 avec_article ['22'] ['370'] False
+G32 avec_article ['23 bis'] ['23 bis'] False
+G33 avec_article ['57'] ['58'] False
+G34 avec_article ['77'] ['68'] False
+G35 avec_article ['147'] ['147'] False
+G36 avec_article ['381 bis'] ['381 bis'] False
+G37 avec_article ['242'] ['242'] False
+G38 avec_article ['125'] ['125'] False
+G39 avec_article ['268'] ['268'] False
+G40 avec_article ['20'] [] True
+G41 hors ['314'] [] True
+G42 hors ['294'] [] True
+G43 hors [] [] True
+G44 hors ['445'] [] True
+G45 hors ['23'] [] True
+G46 hors ['424'] ['424'] False
+G47 hors ['15'] [] True
+G48 hors ['317'] [] True
+G49 hors ['121'] [] True
+G50 hors ['345'] [] True
+{"jeu": "data\\raw\\arabic\\questions_gold_premiere_revue.csv", "sha256_jeu": "2d33bc3a37333b95f932034d043654f2d685d723f7e8bd7a85abe20191439f63", "origine": "questions proposees par IA, validees et etiquetees par l'utilisateur", "modele_dense": "intfloat/multilingual-e5-base", "modele_rag": "qwen2.5:3b", "seuil_bm25": 9.085, "convention_et_suivants": "+14 articles", "secondes": 340}
+{
+ "toutes": {
+  "n_avec_article": 37,
+  "n_sans_article": 2,
+  "n_hors": 11,
+  "bm25": {
+   "r1": 9,
+   "r5": 19
+  },
+  "dense": {
+   "r1": 8,
+   "r5": 13
+  },
+  "hybride": {
+   "r1": 11,
+   "r5": 20
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 11,
+   "fausse_abstention": 23
+  },
+  "rag_p2v": {
+   "bon_article_cite": 9,
+   "fausse_abstention": 18,
+   "abstention_correcte": 11,
+   "erreurs_llm": 1
+  }
+ },
+ "tunisien": {
+  "n_avec_article": 13,
+  "n_sans_article": 1,
+  "n_hors": 5,
+  "bm25": {
+   "r1": 1,
+   "r5": 5
+  },
+  "dense": {
+   "r1": 2,
+   "r5": 2
+  },
+  "hybride": {
+   "r1": 2,
+   "r5": 6
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 6,
+   "fausse_abstention": 11
+  },
+  "rag_p2v": {
+   "bon_article_cite": 2,
+   "fausse_abstention": 10,
+   "abstention_correcte": 5,
+   "erreurs_llm": 1
+  }
+ },
+ "arabizi": {
+  "n_avec_article": 9,
+  "n_sans_article": 1,
+  "n_hors": 2,
+  "bm25": {
+   "r1": 1,
+   "r5": 3
+  },
+  "dense": {
+   "r1": 0,
+   "r5": 0
+  },
+  "hybride": {
+   "r1": 0,
+   "r5": 1
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 3,
+   "fausse_abstention": 9
+  },
+  "rag_p2v": {
+   "bon_article_cite": 0,
+   "fausse_abstention": 6,
+   "abstention_correcte": 3,
+   "erreurs_llm": 0
+  }
+ },
+ "arabe": {
+  "n_avec_article": 15,
+  "n_sans_article": 0,
+  "n_hors": 4,
+  "bm25": {
+   "r1": 7,
+   "r5": 11
+  },
+  "dense": {
+   "r1": 6,
+   "r5": 11
+  },
+  "hybride": {
+   "r1": 9,
+   "r5": 13
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 2,
+   "fausse_abstention": 3
+  },
+  "rag_p2v": {
+   "bon_article_cite": 7,
+   "fausse_abstention": 2,
+   "abstention_correcte": 3,
+   "erreurs_llm": 0
+  }
+ }
+}

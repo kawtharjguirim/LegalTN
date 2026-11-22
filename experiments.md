@@ -846,3 +846,19 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Accord entre les deux juges (15 réponses jugées par les deux) : fidélité 5/15, « répond » 9/15.
 - Lecture : Gemini juge les réponses fidèles mais incomplètes (« se contente de citer le numéro de l'article ») ; le juge 3B confond les deux critères. Aucun juge n'est validé : comparaison au jugement humain (kappa) à faire sur reports/gold/llm_juge/annotation_humaine.csv.
 - Sorties : reports/gold/llm_juge/juge_sorties_ollama.json, juge_sorties_gemini.json, log_gemini.txt.
+
+## 2026-11-22 — Gold : transfert vers le tunisien, l'arabizi et l'arabe (50 questions Gold)
+- Jeu : data/raw/arabic/questions_gold_premiere_revue.csv (sha256 2d33bc3a…). 50 questions proposées par IA (Claude), validées et étiquetées par l'utilisateur ; G04, G22, G29 corrigées en article 122 après lecture du texte (original conservé : *_avant_correction.csv). « 376 et suivants » = 376 à 390 (convention).
+- Catégories : 37 avec article, 2 sans article (G07, G21 : pas de majoration de nuit dans le Code), 11 hors périmètre.
+- Aucun réglage : paramètres Silver (BM25 k1 1,5 b 0,75 ; seuil 9,085 ; e5-base ; RRF k = 60 ; qwen2.5:3b P2V). Script : src/gold/evaluer_questions_gold.py ; sorties reports/gold/transfert/.
+- Recherche, R@1 / R@5 (succès si un article accepté) :
+  - arabe (15) : BM25 7 / 11 ; e5 6 / 11 ; hybride 9 / 13 ;
+  - tunisien (13) : BM25 1 / 5 ; e5 2 / 2 ; hybride 2 / 6 ;
+  - arabizi (9) : BM25 1 / 3 ; e5 0 / 0 ; hybride 0 / 1.
+- RAG P2V, bon article cité / fausses abstentions / abstentions correctes (sans article + hors) :
+  - arabe : 7/15 ; 2/15 ; 3/4 ;
+  - tunisien : 2/13 ; 10/13 ; 5/6 (1 erreur LLM) ;
+  - arabizi : 0/9 ; 6/9 ; 3/3.
+- Seuil BM25 classique : fausses abstentions arabe 3/15, tunisien 11/13, arabizi 9/9.
+- Lecture : le transfert vers le dialecte échoue surtout à la recherche (tunisien R@5 6/13 au mieux, arabizi 3/9) ; à comparer au FR du dev (P2V 16/20). L'arabe standard est correct en recherche (hybride R@5 13/15) mais le RAG ne cite le bon article que 7 fois sur 15.
+- Limites : questions générées par IA (plus propres que de vraies questions) ; un seul annotateur ; petits effectifs ; une exécution avait échoué faute d'Ollama démarré (relancée).
