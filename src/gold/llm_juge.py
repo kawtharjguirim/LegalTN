@@ -37,7 +37,7 @@ def charger_env(chemin=".env"):
                 os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
-def appeler_gemini(messages, modele, delai=120):
+def appeler_gemini(messages, modele, delai=120, json_mime=True):
     cle = os.environ.get("GEMINI_API_KEY")
     if not cle:
         raise OSError("GEMINI_API_KEY absente")
@@ -45,7 +45,7 @@ def appeler_gemini(messages, modele, delai=120):
     user = "\n".join(m["content"] for m in messages if m["role"] == "user")
     corps = {"systemInstruction": {"parts": [{"text": systeme}]},
              "contents": [{"role": "user", "parts": [{"text": user}]}],
-             "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
+             "generationConfig": {"temperature": 0, **({"responseMimeType": "application/json"} if json_mime else {})}}
     req = urllib.request.Request(
         f"https://generativelanguage.googleapis.com/v1beta/models/{modele}:generateContent",
         data=json.dumps(corps).encode("utf-8"),

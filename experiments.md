@@ -876,3 +876,11 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - RAG P2V bon article : tunisien 2 → 4/13 ; arabizi 0 → 1/9. Fausses abstentions 16 → 11/22. Abstentions correctes 8 → 7/9.
 - Qualité de la traduction : 4/31 sorties contiennent des caractères chinois ; 12/31 sorties sont en français ou en lettres latines (arabizi souvent mal compris, parfois question inventée, ex. G22 → « Quelle est la capitale de la Tunisie ? »).
 - Lecture : la traduction aide nettement le tunisien en lettres arabes et l'encodeur e5 ; elle n'aide presque pas l'arabizi car le petit LLM ne le comprend pas. Réponse provisoire : oui pour le tunisien, non démontré pour l'arabizi. Effectifs petits ; un traducteur plus fort (ex. Gemini) est la suite logique.
+
+## 2026-11-22 — Gold : « traduire puis chercher » avec Gemini comme traducteur
+- Même protocole que l'entrée précédente ; seul le traducteur change : gemini-3.1-flash-lite (API gratuite, température 0, 22/11/2026). gemini-3.5-flash a été essayé d'abord mais a atteint son quota (429) après 2 questions : exécution abandonnée. Sorties : reports/gold/traduction_puis_recherche_gemini/. Seules les questions ont été envoyées à l'API.
+- Toutes les traductions sont en arabe (0/31 en lettres latines ; contre 12/31 avec qwen 3B).
+- Hybride R@5 direct → qwen → Gemini : tunisien 6 → 8 → 10/13 ; arabizi 1 → 2 → 6/9 ; total 7 → 10 → 16/22 (Gemini : 10 gagnées, 1 perdue).
+- e5 R@5 total : 2 → 7 → 15/22.
+- RAG P2V bon article : tunisien 2 → 4 → 4/13 ; arabizi 0 → 1 → 5/9 ; total 2 → 5 → 9/22. Fausses abstentions 16 → 11 → 9/22. Abstentions correctes 8 → 7 → 7/9.
+- Lecture : la réponse à la question de recherche est oui, à condition que le traducteur comprenne le dialecte. Le gain vient surtout de l'arabizi et de l'encodeur e5. Coût : dépendance à une API externe et une abstention correcte en moins. Petits effectifs, un seul annotateur.
