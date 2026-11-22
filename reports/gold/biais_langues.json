@@ -1,0 +1,162 @@
+{
+ "sujets_total": 19,
+ "sujets_4_langues": 3,
+ "biais_par_langue_memes_sujets": {
+  "fr": {
+   "n": 3,
+   "hyb_r5": 3,
+   "rag_ok": 3
+  },
+  "arabe": {
+   "n": 3,
+   "hyb_r5": 3,
+   "rag_ok": 3
+  },
+  "tunisien": {
+   "n": 3,
+   "hyb_r5": 0,
+   "rag_ok": 0
+  },
+  "arabizi": {
+   "n": 3,
+   "hyb_r5": 0,
+   "rag_ok": 0
+  }
+ },
+ "inv_meme_top1_hybride_4_langues": 0,
+ "inv_meme_decision_rag_4_langues": 0,
+ "sujets_3_langues_ar": 7,
+ "biais_3_langues_ar": {
+  "arabe": {
+   "n": 7,
+   "hyb_r5": 6,
+   "rag_ok": 3
+  },
+  "tunisien": {
+   "n": 7,
+   "hyb_r5": 2,
+   "rag_ok": 0
+  },
+  "arabizi": {
+   "n": 7,
+   "hyb_r5": 1,
+   "rag_ok": 0
+  }
+ },
+ "detail": {
+  "79": {
+   "tunisien": {
+    "id": "G01",
+    "hyb_top1": [
+     "65"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": false
+   },
+   "arabizi": {
+    "id": "G16",
+    "hyb_top1": [
+     "403"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": true
+   },
+   "arabe": {
+    "id": "G26",
+    "hyb_top1": [
+     "79"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   },
+   "fr": {
+    "id": "D31",
+    "hyb_top1": [
+     "79"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   }
+  },
+  "122": {
+   "tunisien": {
+    "id": "G04",
+    "hyb_top1": [
+     "99"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": true
+   },
+   "arabizi": {
+    "id": "G22",
+    "hyb_top1": [
+     "311"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": true
+   },
+   "arabe": {
+    "id": "G29",
+    "hyb_top1": [
+     "122"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   },
+   "fr": {
+    "id": "D34",
+    "hyb_top1": [
+     "122"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   }
+  },
+  "140": {
+   "tunisien": {
+    "id": "G05",
+    "hyb_top1": [
+     "9"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": true
+   },
+   "arabizi": {
+    "id": "G19",
+    "hyb_top1": [
+     "9"
+    ],
+    "hyb_r5": false,
+    "rag_ok": false,
+    "rag_abst": false
+   },
+   "arabe": {
+    "id": "G30",
+    "hyb_top1": [
+     "140"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   },
+   "fr": {
+    "id": "D04",
+    "hyb_top1": [
+     "140"
+    ],
+    "hyb_r5": true,
+    "rag_ok": true,
+    "rag_abst": false
+   }
+  }
+ }
+}

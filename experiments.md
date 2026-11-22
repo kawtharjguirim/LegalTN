@@ -862,3 +862,9 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Seuil BM25 classique : fausses abstentions arabe 3/15, tunisien 11/13, arabizi 9/9.
 - Lecture : le transfert vers le dialecte échoue surtout à la recherche (tunisien R@5 6/13 au mieux, arabizi 3/9) ; à comparer au FR du dev (P2V 16/20). L'arabe standard est correct en recherche (hybride R@5 13/15) mais le RAG ne cite le bon article que 7 fois sur 15.
 - Limites : questions générées par IA (plus propres que de vraies questions) ; un seul annotateur ; petits effectifs ; une exécution avait échoué faute d'Ollama démarré (relancée).
+
+## 2026-11-22 — Gold : biais entre langues et invariance (INV), sans nouvel appel de modèle
+- Source : reports/gold/transfert/resultats.json + dev Silver (retrieval_dev, rag_dev). Script : src/gold/biais_langues.py ; sortie : reports/gold/biais_langues.json.
+- Sujets = même ensemble d'articles acceptés. 3 sujets présents en FR, arabe, tunisien et arabizi (articles 79, 122, 140) : hybride R@5 et RAG correct FR 3/3, arabe 3/3, tunisien 0/3, arabizi 0/3. INV (même 1er article ou même décision RAG dans les 4 langues) : 0/3.
+- 7 sujets en arabe, tunisien et arabizi : hybride R@5 6 / 2 / 1 ; RAG correct 3 / 0 / 0.
+- Lecture : biais net en défaveur du dialecte, à corriger (consigne « réponses différentes selon la langue = biais »). Effectifs très petits : indication, pas preuve.
