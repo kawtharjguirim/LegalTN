@@ -1,0 +1,353 @@
+{
+ "fournisseur": "gemini",
+ "modele_juge": "gemini-3.5-flash",
+ "date": "2026-11-22",
+ "temperature": 0,
+ "source": "reports/gold/rag_p2v_apres_correction/resultats.json",
+ "items": [
+  {
+   "id": "D02",
+   "langue": "fr",
+   "question": "Un congé payé de cinq jours ouvrables peut-il être fractionné ?",
+   "reponse": "articles 118, 125",
+   "articles_cites": [
+    "118",
+    "125"
+   ],
+   "reference": "118",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner les numéros des articles 118 et 125 sans répondre explicitement à la question posée (à savoir si un congé de 5 jours ouvrables peut être fractionné)."
+   }
+  },
+  {
+   "id": "D03",
+   "langue": "fr",
+   "question": "Dans quel délai un salarié doit-il prendre un congé de quinze jours ?",
+   "reponse": "Article 124",
+   "articles_cites": [
+    "124"
+   ],
+   "reference": "124",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de citer le numéro de l'article 124 sans donner l'information demandée, à savoir que le congé de quinze jours doit être pris dans l'année qui suit la date d'ouverture du droit à congé."
+   }
+  },
+  {
+   "id": "D04",
+   "langue": "fr",
+   "question": "À quelle fréquence doivent être payés les salaires des travailleurs payés à l'heure ou à la journée ?",
+   "reponse": "Article 140",
+   "articles_cites": [
+    "140"
+   ],
+   "reference": "140",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner le numéro de l'article (« Article 140 ») sans indiquer la fréquence de paiement demandée (qui est d'au moins une fois par semaine). Elle ne répond donc pas précisément à la question."
+   }
+  },
+  {
+   "id": "D05",
+   "langue": "fr",
+   "question": "Dans quel délai se prescrivent les actions entre employeurs et salariés nées des relations de travail ?",
+   "reponse": "Article 147",
+   "articles_cites": [
+    "147"
+   ],
+   "reference": "147",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de citer le numéro de l'article (Article 147) sans indiquer explicitement le délai de prescription (un an) demandé par la question."
+   }
+  },
+  {
+   "id": "D06",
+   "langue": "fr",
+   "question": "Quelles sont les attributions des conseils de prud'hommes ?",
+   "reponse": "Les attributions des conseils de prud'hommes sont fixées par décret selon l'article 182 du Code du travail tunisien.",
+   "articles_cites": [
+    "182"
+   ],
+   "reference": "183",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "L'article 182 précise que c'est le statut particulier des agents de l'Inspection du Travail qui est fixé par décret, et non les attributions des conseils de prud'hommes. La réponse contient une information inexacte par rapport au texte fourni et ne répond pas à la question."
+   }
+  },
+  {
+   "id": "D07",
+   "langue": "fr",
+   "question": "Un employeur peut-il rompre le contrat d'un salarié parce qu'il siège au conseil de prud'hommes ?",
+   "reponse": "false",
+   "articles_cites": [
+    "193"
+   ],
+   "reference": "193",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "L'article 193 énonce explicitement que la suspension du travail liée à la participation d'un salarié au conseil de prud'hommes ne peut être une cause de rupture du contrat de travail par l'employeur. La réponse 'false' est donc exacte et répond bien à la question."
+   }
+  },
+  {
+   "id": "D08",
+   "langue": "fr",
+   "question": "Quelle est l'amende pour défaut de présentation d'un registre exigé par la loi ?",
+   "reponse": "article 268",
+   "articles_cites": [
+    "268"
+   ],
+   "reference": "268",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse se contente de citer l'article 268 sans indiquer le montant ni la nature de l'amende demandée par la question. De plus, l'article 268-2 fourni renvoie aux articles 234 et 236 sans préciser directement les peines ou amandes encourues."
+   }
+  },
+  {
+   "id": "D09",
+   "langue": "fr",
+   "question": "Qui veille à l'exécution des dispositions du chapitre concerné, concurremment avec les officiers de police judiciaire ?",
+   "reponse": "Article 366",
+   "articles_cites": [
+    "366"
+   ],
+   "reference": "366",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente d'indiquer le numéro de l'article au lieu d'identifier les personnes concernées (les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique)."
+   }
+  },
+  {
+   "id": "D10",
+   "langue": "fr",
+   "question": "Un travail commandé et non publié doit-il être payé ?",
+   "reponse": "Oui",
+   "articles_cites": [
+    "402"
+   ],
+   "reference": "402",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "La réponse « Oui » est directement confirmée par l'article 402 qui dispose explicitement que « Tout travail commandé ou accepté et non publié doit être payé »."
+   }
+  },
+  {
+   "id": "D11",
+   "langue": "fr",
+   "question": "Des unions de syndicats peuvent-elles être constituées ?",
+   "reponse": "oui",
+   "articles_cites": [
+    "252"
+   ],
+   "reference": "252",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "L'article 252 confirme explicitement que des unions de syndicats peuvent être formées. La réponse « oui » est donc fidèle à l'article et répond directement à la question posée."
+   }
+  },
+  {
+   "id": "D12",
+   "langue": "fr",
+   "question": "Dans quels cas l'interdiction du travail de nuit des femmes n'est-elle pas appliquée ?",
+   "reponse": "L'interdiction du travail de nuit des femmes n'est pas appliquée dans les cas suivants : a) en cas de force majeure; b) dans le cas où le travail s'applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d'altération très rapide, lorsque cela est nécessaire pour sauver ces matières d'une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n'effectuent par normalement un travail manuel.",
+   "articles_cites": [
+    "68"
+   ],
+   "reference": "68",
+   "juge": {
+    "fidele": false,
+    "repond": true,
+    "justification": "La réponse répond bien à la question posée en énumérant les exceptions à l'interdiction du travail de nuit des femmes. Cependant, elle n'est pas fidèle aux textes fournis, car l'unique article cité (Article 68-4) traite de la rupture du contrat de travail et ne contient aucune des exceptions mentionnées dans la réponse."
+   }
+  },
+  {
+   "id": "D13",
+   "langue": "tun",
+   "question": "Ken el congé mta3i 5 ayem ouvrables, lezem ykoun mtawel wela yemken yet9assem ?",
+   "reponse": "Article 118",
+   "articles_cites": [
+    "118"
+   ],
+   "reference": "118",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner « Article 118 » sans fournir d'explication ni répondre directement à la question de savoir si le congé de 5 jours doit être continu ou s'il peut être fractionné (l'article précise pourtant que le congé ne dépassant pas 6 jours ouvrables doit être continu)."
+   }
+  },
+  {
+   "id": "D29",
+   "langue": "fr",
+   "question": "Quelle indemnité reçoit un salarié licencié après sa période d'essai, hors faute grave ?",
+   "reponse": "article 22",
+   "articles_cites": [
+    "22"
+   ],
+   "reference": "22",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner \"article 22\" sans indiquer la nature de l'indemnité (gratification de fin de service) demandée par la question."
+   }
+  },
+  {
+   "id": "D30",
+   "langue": "tun",
+   "question": "Ken tet7arrar men el khedma b3ed el période d'essai, chnowa ye5ssni ?",
+   "reponse": "Article 370",
+   "articles_cites": [
+    "370"
+   ],
+   "reference": "22",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de citer le numéro de l'article (\"Article 370\") sans expliquer son contenu ni répondre à la question posée concernant le préavis ou les conditions applicables après la période d'essai."
+   }
+  },
+  {
+   "id": "D31",
+   "langue": "fr",
+   "question": "Quelle est la durée maximale du travail effectif par semaine ?",
+   "reponse": "48 heures",
+   "articles_cites": [
+    "79"
+   ],
+   "reference": "79",
+   "juge": {
+    "fidele": true,
+    "repond": true,
+    "justification": "La réponse est exacte et directement étayée par l'article 79, qui précise que la durée du travail effectif ne peut pas excéder 48 heures par semaine."
+   }
+  },
+  {
+   "id": "D32",
+   "langue": "tun",
+   "question": "Ch7al el 7ad el aksa mta3 el 5edma fil semaine ?",
+   "reponse": "Article 79",
+   "articles_cites": [
+    "79"
+   ],
+   "reference": "79",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de citer le numéro de l'article (Article 79) sans indiquer explicitement la durée maximale de travail autorisée par semaine (48 heures), ce qui ne répond pas directement à la question."
+   }
+  },
+  {
+   "id": "D34",
+   "langue": "fr",
+   "question": "Un salarié a-t-il droit à un congé à l'occasion de la naissance de son enfant ?",
+   "reponse": "Article 122",
+   "articles_cites": [
+    "122"
+   ],
+   "reference": "122",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner le numéro de l'article ('Article 122') sans répondre explicitement à la question posée (par 'oui' ou en expliquant les conditions du congé)."
+   }
+  },
+  {
+   "id": "D37",
+   "langue": "fr",
+   "question": "Sur quelles questions la commission consultative d'entreprise est-elle consultée ?",
+   "reponse": "article 160",
+   "articles_cites": [
+    "160"
+   ],
+   "reference": "160",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de mentionner 'article 160' sans expliciter ni énumérer les questions sur lesquelles la commission consultative d'entreprise est consultée."
+   }
+  },
+  {
+   "id": "D38",
+   "langue": "tun",
+   "question": "Chkoun el mas2oul 3an tanfiz el 9anoun el 5edma fel mou2assasa ?",
+   "reponse": "article 445",
+   "articles_cites": [
+    "445"
+   ],
+   "reference": "170",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "L'article 445 cité traite uniquement des jours de congé payés et ne mentionne pas qui est responsable de l'application de la loi du travail dans l'entreprise. La réponse ne répond pas à la question posée."
+   }
+  },
+  {
+   "id": "D39",
+   "langue": "fr",
+   "question": "Qui fixe les conditions de désignation et le régime disciplinaire des conseillers prud'hommes ?",
+   "reponse": "Article 191",
+   "articles_cites": [
+    "191"
+   ],
+   "reference": "191",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 429: Too Many Requests"
+   }
+  },
+  {
+   "id": "D41",
+   "langue": "fr",
+   "question": "Le code de procédure civile et commerciale s'applique-t-il aux conseils de prud'hommes ?",
+   "reponse": "Article 232",
+   "articles_cites": [
+    "232"
+   ],
+   "reference": "232",
+   "juge": {
+    "fidele": true,
+    "repond": false,
+    "justification": "La réponse se contente de citer 'Article 232' sans apporter de réponse explicite (oui/non ou explication) à la question posée, bien que la citation soit exacte par rapport au texte fourni."
+   }
+  },
+  {
+   "id": "D42",
+   "langue": "tun",
+   "question": "Ken wa7ed mel conseillers prud'hommes ma7ta5ch, chkoun y7ker el 9adhiya ?",
+   "reponse": "Article 194",
+   "articles_cites": [
+    "194"
+   ],
+   "reference": "198",
+   "juge": {
+    "fidele": false,
+    "repond": false,
+    "justification": "La réponse se contente d'indiquer \"Article 194\" sans répondre à la question posée (qui juge l'affaire en cas d'absence d'un conseiller prud'homme). De plus, le texte de l'article 194 fourni concerne uniquement la gratuité de la fonction des conseillers et ne contient pas cette information."
+   }
+  },
+  {
+   "id": "D53",
+   "langue": "tun",
+   "question": "Chnowa el 3a9ouba 3la el sar9a fel code pénal ?",
+   "reponse": "articles 153 du code pénal",
+   "articles_cites": [
+    "323"
+   ],
+   "reference": "n/a",
+   "juge": {
+    "erreur": "HTTPError",
+    "detail": "HTTP Error 429: Too Many Requests"
+   }
+  }
+ ]
+}

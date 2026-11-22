@@ -838,3 +838,11 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
   - P2V : citation exacte 18/26, fausses abstentions 4/26, hors périmètre refusé 27/28.
 - Comparaison avec la mesure Silver (P2 26/28 hors refusé ; P2V 3 fausses abstentions) : écart d'une question, alors que le dev ne contient aucune question arabe dans le périmètre (la correction ne peut pas l'expliquer). C'est donc une variabilité d'exécution d'Ollama malgré température 0 et graine fixe : à signaler dans les limites, et répéter les mesures RAG.
 - Effet de la correction sur l'arabe : non mesurable sur le dev (0 question arabe dans le périmètre). Vérification manuelle d'une question arabe : article 79 cité, réponse en arabe, pas d'abstention. Ce n'est pas une mesure.
+
+## 2026-11-22 — Gold : LLM-juge local (qwen2.5:3b) contre juge en ligne (Gemini), NON validés
+- Objet : juger les 23 réponses RAG P2V non abstenues du dev (reports/gold/rag_p2v_apres_correction) : fidèle aux articles cités ? répond à la question ? Script : src/gold/llm_juge.py (--fournisseur ollama|gemini), température 0.
+- Juge local qwen2.5:3b : 6 erreurs serveur ; fidèle 2/17, répond 5/17.
+- Juge Gemini gemini-3.5-flash (API gratuite, 22/11/2026 ; gemini-2.5-flash retiré, gemini-3.8-flash en 503 puis 429 quota) : 2 erreurs ; fidèle 16/21, répond 5/21.
+- Accord entre les deux juges (15 réponses jugées par les deux) : fidélité 5/15, « répond » 9/15.
+- Lecture : Gemini juge les réponses fidèles mais incomplètes (« se contente de citer le numéro de l'article ») ; le juge 3B confond les deux critères. Aucun juge n'est validé : comparaison au jugement humain (kappa) à faire sur reports/gold/llm_juge/annotation_humaine.csv.
+- Sorties : reports/gold/llm_juge/juge_sorties_ollama.json, juge_sorties_gemini.json, log_gemini.txt.
