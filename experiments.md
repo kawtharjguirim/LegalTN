@@ -822,3 +822,10 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Décision : l'encodeur fine-tuné n'est **pas** utilisé ; l'encodeur pré-entraîné reste la référence. Aucun réglage supplémentaire fait sur le dev pour « sauver » le fine-tuning (ce serait du surajustement).
 - Limites : une seule configuration d'entraînement ; mesure B non indépendante (articles visés par les questions du dev possiblement dans l'entraînement) ; 27 questions. Piste pour plus tard, à régler sans le dev : données question → article, ou mélange avec la tâche d'origine.
 - Sorties : `reports/silver/fine_tuning/resultats.json` (pertes et mesures par graine), `complet_log.txt`.
+
+## 2026-11-22 — Gold : question de recherche « citation obligatoire » (dev v2, sans nouvel appel LLM)
+- Objectif : la citation obligatoire réduit-elle les hallucinations sans augmenter les refus injustifiés ?
+- Source : reports/silver/rag_dev/resultats.json (sha256 du jeu 9c616a6c…). Script : src/evaluation/question_recherche.py. Sortie : reports/gold/question_recherche.json et .md.
+- Résultats (54 questions, 26 dans le périmètre) : réponses non fondées P0 54, P1 34, P2 8, P3 12, P2V 7 ; refus injustifiés 0, 0, 2, 1, 3.
+- Bootstrap apparié (10 000, graine 2026) : P2V vs P1, Δ non fondées −27 (IC 95 % du taux [−63 %, −37 %]) ; Δ refus +3 (IC [0 %, +23 %]).
+- Limites : dev non indépendant, 0 question arabe dans le périmètre, mesure automatique (pas de juge humain).

@@ -1,0 +1,89 @@
+{
+ "source": "reports/silver/rag_dev/resultats.json",
+ "bootstrap": {
+  "tirages": 10000,
+  "graine": 2026
+ },
+ "par_variante": {
+  "P0": {
+   "n": 54,
+   "reponses_non_fondees": 54,
+   "n_dans": 26,
+   "refus_injustifies": 0
+  },
+  "P1": {
+   "n": 54,
+   "reponses_non_fondees": 34,
+   "n_dans": 26,
+   "refus_injustifies": 0
+  },
+  "P2": {
+   "n": 54,
+   "reponses_non_fondees": 8,
+   "n_dans": 26,
+   "refus_injustifies": 2
+  },
+  "P3": {
+   "n": 54,
+   "reponses_non_fondees": 12,
+   "n_dans": 26,
+   "refus_injustifies": 1
+  },
+  "P2V": {
+   "n": 54,
+   "reponses_non_fondees": 7,
+   "n_dans": 26,
+   "refus_injustifies": 3
+  }
+ },
+ "comparaisons": {
+  "P2_vs_P0": {
+   "delta_non_fondees": -46,
+   "ic95_taux_non_fondees": [
+    -0.9444444444444444,
+    -0.7592592592592593
+   ],
+   "delta_refus_injustifies": 2,
+   "ic95_taux_refus": [
+    0.0,
+    0.19230769230769232
+   ]
+  },
+  "P2V_vs_P0": {
+   "delta_non_fondees": -47,
+   "ic95_taux_non_fondees": [
+    -0.9444444444444444,
+    -0.7777777777777778
+   ],
+   "delta_refus_injustifies": 3,
+   "ic95_taux_refus": [
+    0.0,
+    0.23076923076923078
+   ]
+  },
+  "P2_vs_P1": {
+   "delta_non_fondees": -26,
+   "ic95_taux_non_fondees": [
+    -0.6296296296296297,
+    -0.35185185185185186
+   ],
+   "delta_refus_injustifies": 2,
+   "ic95_taux_refus": [
+    0.0,
+    0.19230769230769232
+   ]
+  },
+  "P2V_vs_P1": {
+   "delta_non_fondees": -27,
+   "ic95_taux_non_fondees": [
+    -0.6296296296296297,
+    -0.37037037037037035
+   ],
+   "delta_refus_injustifies": 3,
+   "ic95_taux_refus": [
+    0.0,
+    0.23076923076923078
+   ]
+  }
+ }
+}
