@@ -892,3 +892,10 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
   - juge local qwen2.5:3b : fidèle κ = 0,04 (24 %, n = 17) ; répond κ = −0,05 (59 %) ;
   - juge Gemini 3.5 Flash : fidèle κ = 0,58 (86 %, n = 21) ; répond κ = 1,00 (100 %).
 - Lecture : le juge 3B n'est pas exploitable ; Gemini est cohérent avec une seconde IA. Ce n'est pas l'exigence « LLM-juge validé » de Gold, qui demande une référence humaine : à compléter par une annotation humaine, même partielle.
+
+## 2026-11-22 — Gold : traduction du dialecte intégrée à l'application (Gemini), mesure sur les 50 questions Gold
+- Décision de l'utilisateur : traduire le dialecte avec Gemini avant la recherche. Module src/traduction/dialecte.py (gemini-3.1-flash-lite, température 0), branché dans api.py pour les deux modes ; option `traduire_dialecte` (défaut : vrai). Questions françaises jamais envoyées (0/44 du dev détectées comme dialecte) ; arabizi détecté 12/12 (avant : pris pour du français). Repli sur la question d'origine si pas de clé, erreur ou sortie non arabe. Cache : reports/gold/traduction_cache.json. Tests : 105 réussis (API testée hors ligne).
+- Mesure : src/gold/evaluer_questions_gold.py --traduire ; sorties reports/gold/transfert_traduction/. 47/50 traduites ; 3 replis persistants (G13, G19, G23 : réponse Gemini sans texte, KeyError) ; 2 erreurs HTTP au premier passage, réussies au second.
+- Hybride R@5, sans → avec traduction : tunisien 6 → 9/13 ; arabizi 1 → 5/9 ; arabe 13 → 13/15.
+- RAG P2V bon article : tunisien 2 → 5/13 ; arabizi 0 → 2/9 ; arabe 7 → 7/15 ; total 9 → 14/37. Fausses abstentions 18 → 11/37. Abstentions correctes 13 → 12/13.
+- Écart avec l'expérience précédente (tunisien 10/13, arabizi 6/9) : consigne différente (l'application renvoie aussi l'arabe standard tel quel) et 3 replis. Le français est inchangé par construction (aucune question envoyée).

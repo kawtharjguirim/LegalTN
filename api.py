@@ -20,6 +20,7 @@ from src.pipeline import traitement
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 from rag import rag  # noqa: E402  (bibliothèque standard seulement : l'API reste sans dépendance)
+from traduction import dialecte  # noqa: E402  (traduction du dialecte par Gemini, repli local)
 
 
 MAX_OCTETS = 16384
@@ -175,12 +176,20 @@ def creer_serveur(port=8000):
             if mode not in MODES:
                 self.envoyer(400, {"erreur": f"mode doit être l'un de : {', '.join(MODES)}."})
                 return
+            traduire = contenu.get("traduire_dialecte", True)
+            if not isinstance(traduire, bool):
+                self.envoyer(400, {"erreur": "traduire_dialecte doit être un booléen."})
+                return
             debut = time.perf_counter()
+            trad = dialecte.traduire(question) if traduire else None
+            q = trad["question"] if trad else question.strip()
             if mode == "rag":
-                resultat = repondre_rag(question.strip(), chaine, k)
+                resultat = repondre_rag(q, chaine, k)
             else:
-                resultat = chaine.repondre(question.strip(), k=k)
+                resultat = chaine.repondre(q, k=k)
                 resultat["mode"] = "bm25"
+            if trad and trad["source"] != "aucune":
+                resultat["traduction"] = {k2: trad[k2] for k2 in ("origine", "question", "traduite", "source", "erreur")}
             resultat["latence_ms"] = round((time.perf_counter() - debut) * 1000, 3)
             if resultat["abstention"]:
                 resultat["message"] = repondre.MESSAGE_ABSTENTION

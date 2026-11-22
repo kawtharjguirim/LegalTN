@@ -14,6 +14,7 @@ import api
 class TestAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        api.dialecte._cle_api = lambda: None  # tests hors ligne : jamais d'appel à Gemini
         cls.serveur = api.creer_serveur(port=0)
         cls.thread = threading.Thread(target=cls.serveur.serve_forever, daemon=True)
         cls.thread.start()
@@ -104,6 +105,7 @@ class TestModesSilver(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        api.dialecte._cle_api = lambda: None  # tests hors ligne : jamais d'appel à Gemini
         cls.serveur = api.creer_serveur(port=0)
         cls.thread = threading.Thread(target=cls.serveur.serve_forever, daemon=True)
         cls.thread.start()

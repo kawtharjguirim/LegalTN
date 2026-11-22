@@ -58,13 +58,24 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--rapports", default="reports/gold/transfert")
     p.add_argument("--sans-rag", action="store_true")
+    p.add_argument("--traduire", action="store_true", help="couche de traduction du dialecte (src/traduction/dialecte.py)")
     a = p.parse_args()
     from retrieval.dense import IndexDense, MODELE_DEFAUT
     corpus = repondre.charger()
     index = IndexDense(corpus, MODELE_DEFAUT)
     jeu = lire_jeu(JEU)
     t0 = time.time()
+    if a.traduire:
+        import time as _t
+        from traduction import dialecte
+        a.rapports = a.rapports.rstrip("/") + "_traduction"
     for q in jeu:
+        if a.traduire:
+            tr = dialecte.traduire(q["question"])
+            q["traduction"] = {k: tr[k] for k in ("question", "traduite", "source", "erreur")}
+            if tr["source"] not in ("aucune", "cache"):
+                _t.sleep(6)  # quota gratuit
+            q["question_origine"], q["question"] = q["question"], tr["question"]
         lg = repondre.detecter_langue(q["question"])
         bm = classement_bm25(corpus[lg], q["question"])
         dense = [lab for lab, _ in index.classer(q["question"])]

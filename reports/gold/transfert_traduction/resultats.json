@@ -1,0 +1,2729 @@
+{
+ "meta": {
+  "jeu": "data\\raw\\arabic\\questions_gold_premiere_revue.csv",
+  "sha256_jeu": "2d33bc3a37333b95f932034d043654f2d685d723f7e8bd7a85abe20191439f63",
+  "origine": "questions proposees par IA, validees et etiquetees par l'utilisateur",
+  "modele_dense": "intfloat/multilingual-e5-base",
+  "modele_rag": "qwen2.5:3b",
+  "seuil_bm25": 9.085,
+  "convention_et_suivants": "+14 articles",
+  "secondes": 198
+ },
+ "resume": {
+  "toutes": {
+   "n_avec_article": 37,
+   "n_sans_article": 2,
+   "n_hors": 11,
+   "bm25": {
+    "r1": 13,
+    "r5": 19
+   },
+   "dense": {
+    "r1": 14,
+    "r5": 26
+   },
+   "hybride": {
+    "r1": 18,
+    "r5": 27
+   },
+   "seuil_bm25": {
+    "abstention_correcte": 10,
+    "fausse_abstention": 16
+   },
+   "rag_p2v": {
+    "bon_article_cite": 14,
+    "fausse_abstention": 11,
+    "abstention_correcte": 12,
+    "erreurs_llm": 0
+   }
+  },
+  "tunisien": {
+   "n_avec_article": 13,
+   "n_sans_article": 1,
+   "n_hors": 5,
+   "bm25": {
+    "r1": 4,
+    "r5": 5
+   },
+   "dense": {
+    "r1": 6,
+    "r5": 9
+   },
+   "hybride": {
+    "r1": 5,
+    "r5": 9
+   },
+   "seuil_bm25": {
+    "abstention_correcte": 6,
+    "fausse_abstention": 7
+   },
+   "rag_p2v": {
+    "bon_article_cite": 5,
+    "fausse_abstention": 6,
+    "abstention_correcte": 6,
+    "erreurs_llm": 0
+   }
+  },
+  "arabizi": {
+   "n_avec_article": 9,
+   "n_sans_article": 1,
+   "n_hors": 2,
+   "bm25": {
+    "r1": 2,
+    "r5": 3
+   },
+   "dense": {
+    "r1": 2,
+    "r5": 6
+   },
+   "hybride": {
+    "r1": 4,
+    "r5": 5
+   },
+   "seuil_bm25": {
+    "abstention_correcte": 2,
+    "fausse_abstention": 6
+   },
+   "rag_p2v": {
+    "bon_article_cite": 2,
+    "fausse_abstention": 3,
+    "abstention_correcte": 3,
+    "erreurs_llm": 0
+   }
+  },
+  "arabe": {
+   "n_avec_article": 15,
+   "n_sans_article": 0,
+   "n_hors": 4,
+   "bm25": {
+    "r1": 7,
+    "r5": 11
+   },
+   "dense": {
+    "r1": 6,
+    "r5": 11
+   },
+   "hybride": {
+    "r1": 9,
+    "r5": 13
+   },
+   "seuil_bm25": {
+    "abstention_correcte": 2,
+    "fausse_abstention": 3
+   },
+   "rag_p2v": {
+    "bon_article_cite": 7,
+    "fausse_abstention": 2,
+    "abstention_correcte": 3,
+    "erreurs_llm": 0
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "G01",
+   "langue": "tunisien",
+   "question": "ما هو الحد الأقصى لساعات العمل في الأسبوع؟",
+   "acceptes": [
+    "79"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هو الحد الأقصى لساعات العمل في الأسبوع؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "قداش من ساعة نجم نخدم في الجمعة على الأقصى؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "79",
+    "94",
+    "83",
+    "210",
+    "90"
+   ],
+   "dense": [
+    "79",
+    "90",
+    "93",
+    "89",
+    "85"
+   ],
+   "hybride": [
+    "79",
+    "90",
+    "94",
+    "97",
+    "106"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "79",
+     "94",
+     "83"
+    ],
+    "articles_cites": [
+     "79"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "48",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G02",
+   "langue": "tunisien",
+   "question": "هل يمكن للمشغل طردي من العمل دون إعلامي مسبقاً؟",
+   "acceptes": [
+    "14 bis",
+    "14 quater",
+    "14 ter"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكن للمشغل طردي من العمل دون إعلامي مسبقاً؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "الباترون ينجم يطردني من غير ما يعلمني قبل؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "21",
+    "60",
+    "230",
+    "118",
+    "346"
+   ],
+   "dense": [
+    "14 bis",
+    "21",
+    "14 ter",
+    "370",
+    "23"
+   ],
+   "hybride": [
+    "21",
+    "14 ter",
+    "23",
+    "230",
+    "61"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "21",
+     "60",
+     "230"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G03",
+   "langue": "tunisien",
+   "question": "كم يوماً من الإجازة السنوية خالصة الأجر أستحق في السنة؟",
+   "acceptes": [
+    "113",
+    "114",
+    "115"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "كم يوماً من الإجازة السنوية خالصة الأجر أستحق في السنة؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "قداش من نهار كونجي خالص عندي في العام؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "114",
+    "94",
+    "119",
+    "117",
+    "125"
+   ],
+   "dense": [
+    "119",
+    "94",
+    "113",
+    "127",
+    "125"
+   ],
+   "hybride": [
+    "119",
+    "94",
+    "114",
+    "127",
+    "125"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "114",
+     "94",
+     "119"
+    ],
+    "articles_cites": [
+     "114"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "article 114",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G04",
+   "langue": "tunisien",
+   "question": "هل يحق لي الحصول على أيام راحة بمناسبة ولادة زوجتي؟",
+   "acceptes": [
+    "122"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يحق لي الحصول على أيام راحة بمناسبة ولادة زوجتي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "مرتي ولدت، عندي الحق في نهارات راحة؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "122",
+    "118",
+    "230",
+    "368",
+    "281"
+   ],
+   "dense": [
+    "64",
+    "122",
+    "113",
+    "114",
+    "94"
+   ],
+   "hybride": [
+    "122",
+    "118",
+    "94",
+    "123",
+    "97"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "122",
+     "118",
+     "230"
+    ],
+    "articles_cites": [
+     "122"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "نعم",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G05",
+   "langue": "tunisien",
+   "question": "ما هي الدورية القانونية لصرف الأجر؟",
+   "acceptes": [
+    "140"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي الدورية القانونية لصرف الأجر؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "الشهرية لازم تتخلص كل قداش؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "133",
+    "143",
+    "145",
+    "109",
+    "94"
+   ],
+   "dense": [
+    "151",
+    "134",
+    "412",
+    "150",
+    "21"
+   ],
+   "hybride": [
+    "143",
+    "134",
+    "133",
+    "146",
+    "94"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "133",
+     "143",
+     "145"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G06",
+   "langue": "tunisien",
+   "question": "ما هي مدة فترة التجربة في العمل؟",
+   "acceptes": [
+    "6"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مدة فترة التجربة في العمل؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "فترة التجربة في الخدمة قداش تدوم؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "22",
+    "376 ter",
+    "89",
+    "370",
+    "117"
+   ],
+   "dense": [
+    "88",
+    "18",
+    "349",
+    "358",
+    "67"
+   ],
+   "hybride": [
+    "6",
+    "22",
+    "18",
+    "79",
+    "370"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "22",
+     "376 ter",
+     "89"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G07",
+   "langue": "tunisien",
+   "question": "هل أتقاضى أجراً إضافياً إذا عملت ليلاً؟",
+   "acceptes": [],
+   "categorie": "sans_article",
+   "traduction": {
+    "question": "هل أتقاضى أجراً إضافياً إذا عملت ليلاً؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "إذا خدمت في الليل نخلص أكثر؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "230",
+    "66",
+    "68",
+    "69",
+    "67"
+   ],
+   "dense": [
+    "94",
+    "113",
+    "68",
+    "90",
+    "109"
+   ],
+   "hybride": [
+    "68",
+    "69",
+    "119",
+    "66",
+    "67"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "230",
+     "66",
+     "68"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G08",
+   "langue": "tunisien",
+   "question": "هل يمكن للمشغل أن يقتطع من أجري مبالغ يدعي أنني مدين بها له؟",
+   "acceptes": [
+    "149",
+    "150"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكن للمشغل أن يقتطع من أجري مبالغ يدعي أنني مدين بها له؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "الباترون ينجم يقصّ من شهريتي فلوس يقول إلي أنا مدين بيهم؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "195",
+    "157",
+    "173",
+    "230",
+    "154"
+   ],
+   "dense": [
+    "371",
+    "120",
+    "193",
+    "6",
+    "36"
+   ],
+   "hybride": [
+    "120",
+    "170",
+    "411",
+    "258",
+    "173"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "195",
+     "157",
+     "173"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G09",
+   "langue": "tunisien",
+   "question": "لقد تم طردي دون سبب، ما هي مستحقاتي؟",
+   "acceptes": [
+    "14 ter",
+    "22",
+    "23",
+    "23 bis"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "لقد تم طردي دون سبب، ما هي مستحقاتي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "طردوني بلا سبب، شنوة نجم ناخذ؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "14 ter",
+    "166",
+    "155",
+    "437",
+    "346"
+   ],
+   "dense": [
+    "23 bis",
+    "14 ter",
+    "14",
+    "8",
+    "21"
+   ],
+   "hybride": [
+    "14 ter",
+    "23 bis",
+    "166",
+    "155",
+    "21"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "14 ter",
+     "166",
+     "155"
+    ],
+    "articles_cites": [
+     "14 ter",
+     "155"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "articles 14 ter et 155",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G10",
+   "langue": "tunisien",
+   "question": "من أي سن يُسمح للأطفال بالعمل؟",
+   "acceptes": [
+    "53",
+    "56"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "من أي سن يُسمح للأطفال بالعمل؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "الصغار من قداش عام ينجمو يخدمو؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "54",
+    "55",
+    "60",
+    "58",
+    "94"
+   ],
+   "dense": [
+    "58",
+    "56",
+    "61",
+    "54",
+    "111"
+   ],
+   "hybride": [
+    "54",
+    "58",
+    "55",
+    "60",
+    "94"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "54",
+     "55",
+     "60"
+    ],
+    "articles_cites": [
+     "55"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "13",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G11",
+   "langue": "tunisien",
+   "question": "هل يجب أن يكون يوم الأحد يوم راحة؟",
+   "acceptes": [
+    "95",
+    "96",
+    "97"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يجب أن يكون يوم الأحد يوم راحة؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "نهار الأحد لازم يكون راحة؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "106",
+    "95",
+    "97",
+    "100",
+    "118"
+   ],
+   "dense": [
+    "97",
+    "89",
+    "95",
+    "142",
+    "113"
+   ],
+   "hybride": [
+    "97",
+    "95",
+    "89",
+    "106",
+    "99"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "106",
+     "95",
+     "97"
+    ],
+    "articles_cites": [
+     "106",
+     "95"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "true",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G12",
+   "langue": "tunisien",
+   "question": "ما هي مدة إجازة الأمومة للمرأة الحامل؟",
+   "acceptes": [
+    "64"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مدة إجازة الأمومة للمرأة الحامل؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "المرا الحاملة عندها كونجي قداش؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "63",
+    "20",
+    "94",
+    "83",
+    "79"
+   ],
+   "dense": [
+    "64",
+    "114",
+    "63",
+    "68",
+    "122"
+   ],
+   "hybride": [
+    "63",
+    "94",
+    "20",
+    "123",
+    "83"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "63",
+     "20",
+     "94"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G13",
+   "langue": "tunisien",
+   "question": "كي نطيح مريض في الخدمة شكون يخلصني؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "كي نطيح مريض في الخدمة شكون يخلصني؟",
+    "traduite": false,
+    "source": "repli",
+    "erreur": "KeyError"
+   },
+   "question_origine": "كي نطيح مريض في الخدمة شكون يخلصني؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "94",
+    "21",
+    "18",
+    "23",
+    "22"
+   ],
+   "dense": [
+    "19",
+    "22",
+    "8",
+    "145",
+    "291"
+   ],
+   "hybride": [
+    "22",
+    "8",
+    "371",
+    "21",
+    "19"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "94",
+     "21",
+     "18"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G14",
+   "langue": "tunisien",
+   "question": "ما هو دور مجلس الصلح في نزاعات الشغل؟",
+   "acceptes": [
+    "207",
+    "376"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هو دور مجلس الصلح في نزاعات الشغل؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "شنوة دور مجلس الصلح في نزاعات الشغل؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "375",
+    "340",
+    "342",
+    "381 bis",
+    "21"
+   ],
+   "dense": [
+    "378",
+    "183",
+    "153",
+    "355",
+    "215"
+   ],
+   "hybride": [
+    "183",
+    "153",
+    "207",
+    "385 bis",
+    "340"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "375",
+     "340",
+     "342"
+    ],
+    "articles_cites": [
+     "375"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "مجلس الصلح يختص بتسوية نزاعات الشغل الجماعية كما ورد في الفصل 375 من القانون.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G15",
+   "langue": "tunisien",
+   "question": "هل يمكنني تأسيس نقابة في شركتي؟",
+   "acceptes": [
+    "242",
+    "250"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكنني تأسيس نقابة في شركتي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "نجم نعمل نقابة في الشركة متاعي؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "254",
+    "230",
+    "298",
+    "253",
+    "184"
+   ],
+   "dense": [
+    "242",
+    "254",
+    "46",
+    "252",
+    "256"
+   ],
+   "hybride": [
+    "254",
+    "242",
+    "252",
+    "253",
+    "256"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "254",
+     "230",
+     "298"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G16",
+   "langue": "arabizi",
+   "question": "كم عدد ساعات العمل الأسبوعية في القانون التونسي؟",
+   "acceptes": [
+    "79"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "كم عدد ساعات العمل الأسبوعية في القانون التونسي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "chhal men se3a nekhdem fel jem3a?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "90",
+    "85",
+    "263",
+    "89",
+    "93"
+   ],
+   "dense": [
+    "95",
+    "85",
+    "79",
+    "83",
+    "90"
+   ],
+   "hybride": [
+    "85",
+    "90",
+    "89",
+    "83",
+    "94"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "90",
+     "85",
+     "263"
+    ],
+    "articles_cites": [
+     "90"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "48",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G17",
+   "langue": "arabizi",
+   "question": "هل يمكن للمشغل طردي دون إشعار مسبق؟",
+   "acceptes": [
+    "14 bis",
+    "14 quater",
+    "14 ter"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكن للمشغل طردي دون إشعار مسبق؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "el patron ynajem ytaredni bla preavis?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "230",
+    "346",
+    "322",
+    "256",
+    "375"
+   ],
+   "dense": [
+    "21",
+    "175",
+    "14 ter",
+    "262",
+    "376 ter"
+   ],
+   "hybride": [
+    "14 ter",
+    "376 bis",
+    "21",
+    "262",
+    "370"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "230",
+     "346",
+     "322"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G18",
+   "langue": "arabizi",
+   "question": "كم يوماً من الإجازة السنوية يحق لي في السنة؟",
+   "acceptes": [
+    "113",
+    "114",
+    "115"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "كم يوماً من الإجازة السنوية يحق لي في السنة؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "chhal men nhar congé 3andi fel 3am?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "114",
+    "117",
+    "94",
+    "119",
+    "113"
+   ],
+   "dense": [
+    "117",
+    "114",
+    "94",
+    "113",
+    "123"
+   ],
+   "hybride": [
+    "114",
+    "117",
+    "94",
+    "113",
+    "119"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "114",
+     "117",
+     "94"
+    ],
+    "articles_cites": [
+     "114"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "15",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G19",
+   "langue": "arabizi",
+   "question": "el chehriya lezem tetkhallas kol 9addech?",
+   "acceptes": [
+    "140"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "el chehriya lezem tetkhallas kol 9addech?",
+    "traduite": false,
+    "source": "repli",
+    "erreur": "KeyError"
+   },
+   "question_origine": "el chehriya lezem tetkhallas kol 9addech?",
+   "langue_detectee": "fr",
+   "bm25": [
+    "445",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "dense": [
+    "9",
+    "84",
+    "209",
+    "403",
+    "110"
+   ],
+   "hybride": [
+    "9",
+    "7",
+    "4",
+    "5 bis",
+    "49"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "445",
+     "2",
+     "3"
+    ],
+    "articles_cites": [
+     "445"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "{\"reponse\": \"Article 445\", \"articles_cites\": [\"445\"], \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).- تكون أيام 14 جانفي و20 مارس وأول ماي و25 جويلية وعيد الفطر وعيد الأضحى أيام عطلة خالصة الأجر.\", \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان 2011).- تكون أيام 14 جانفي و20 مارس وأول ماي و25 جويلية وعيد الفطر وعيد الأضحى أيام عطلة خالصة الأجر.\", \"extrait\": \"الفصل 445 (نقح بالقانون عدد 55 لسنة 1988 المؤرّخ في 2 جوان 1988 و بالقانون عدد 15 لسنة 1991 المؤرخ في 25 فيفري 1991 وبالمرسوم عدد 51 لسنة 2011 المؤرخ في 6 جوان",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G20",
+   "langue": "arabizi",
+   "question": "ما هي مدة فترة التجربة؟",
+   "acceptes": [
+    "6"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مدة فترة التجربة؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "periode d'essai 9addech tdoum?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "22",
+    "376 ter",
+    "370",
+    "6",
+    "89"
+   ],
+   "dense": [
+    "124",
+    "32",
+    "358",
+    "349",
+    "88"
+   ],
+   "hybride": [
+    "6",
+    "371",
+    "22",
+    "88",
+    "124"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "22",
+     "376 ter",
+     "370"
+    ],
+    "articles_cites": [
+     "370"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "العمر المحدد لمدة التجربة هو ثلاثين يوماً ما لم تتجاوز هذه المدة في أي حال من الأحوال.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G21",
+   "langue": "arabizi",
+   "question": "هل أتقاضى أجراً إضافياً إذا عملت ليلاً؟",
+   "acceptes": [],
+   "categorie": "sans_article",
+   "traduction": {
+    "question": "هل أتقاضى أجراً إضافياً إذا عملت ليلاً؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ken nekhdem bel lil nkhalles akther?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "230",
+    "66",
+    "68",
+    "69",
+    "67"
+   ],
+   "dense": [
+    "94",
+    "113",
+    "68",
+    "90",
+    "109"
+   ],
+   "hybride": [
+    "68",
+    "69",
+    "119",
+    "66",
+    "67"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "230",
+     "66",
+     "68"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G22",
+   "langue": "arabizi",
+   "question": "هل يحق لي الحصول على إجازة بعد ولادة زوجتي؟",
+   "acceptes": [
+    "122"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يحق لي الحصول على إجازة بعد ولادة زوجتي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "mrati weldet 3andi 7a9 fi ra7a?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "122",
+    "230",
+    "368",
+    "281",
+    "237"
+   ],
+   "dense": [
+    "122",
+    "64",
+    "94",
+    "114",
+    "119"
+   ],
+   "hybride": [
+    "122",
+    "94",
+    "368",
+    "68",
+    "59"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "122",
+     "230",
+     "368"
+    ],
+    "articles_cites": [
+     "122"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "نعم",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G23",
+   "langue": "arabizi",
+   "question": "tardouni bla sbab chnowa nejem nekhou?",
+   "acceptes": [
+    "14 ter",
+    "22",
+    "23",
+    "23 bis"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "tardouni bla sbab chnowa nejem nekhou?",
+    "traduite": false,
+    "source": "repli",
+    "erreur": "KeyError"
+   },
+   "question_origine": "tardouni bla sbab chnowa nejem nekhou?",
+   "langue_detectee": "fr",
+   "bm25": [],
+   "dense": [
+    "347",
+    "84",
+    "285",
+    "131",
+    "358"
+   ],
+   "hybride": [
+    "347",
+    "84",
+    "285",
+    "131",
+    "358"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G24",
+   "langue": "arabizi",
+   "question": "ما هو السن القانوني الذي يسمح فيه للأطفال بالعمل؟",
+   "acceptes": [
+    "53",
+    "56"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هو السن القانوني الذي يسمح فيه للأطفال بالعمل؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "s8ar men 9addech 3am ynajmou yekhdmou?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "415",
+    "60",
+    "344",
+    "94",
+    "149"
+   ],
+   "dense": [
+    "58",
+    "54",
+    "61",
+    "55",
+    "56"
+   ],
+   "hybride": [
+    "54",
+    "58",
+    "60",
+    "94",
+    "61"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "415",
+     "60",
+     "344"
+    ],
+    "articles_cites": [
+     "60"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "السن القانوني الذي يسمح فيه للأطفال بالعمل هو 18 عاماً وفقاً للArticle 60 من القانون.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G25",
+   "langue": "arabizi",
+   "question": "هل يمكنني تأسيس نقابة في شركتي؟",
+   "acceptes": [
+    "242",
+    "250"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكنني تأسيس نقابة في شركتي؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "nejem na3mel nekaba fi charikti?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "254",
+    "230",
+    "298",
+    "253",
+    "184"
+   ],
+   "dense": [
+    "242",
+    "254",
+    "46",
+    "252",
+    "256"
+   ],
+   "hybride": [
+    "254",
+    "242",
+    "252",
+    "253",
+    "256"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "254",
+     "230",
+     "298"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G26",
+   "langue": "arabe",
+   "question": "ما هي المدة القصوى للعمل الفعلي في الأسبوع؟",
+   "acceptes": [
+    "79"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي المدة القصوى للعمل الفعلي في الأسبوع؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي المدة القصوى للعمل الفعلي في الأسبوع؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "79",
+    "61",
+    "90",
+    "63",
+    "94"
+   ],
+   "dense": [
+    "79",
+    "114",
+    "123",
+    "89",
+    "103"
+   ],
+   "hybride": [
+    "79",
+    "90",
+    "88",
+    "114",
+    "94"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "79",
+     "61",
+     "90"
+    ],
+    "articles_cites": [
+     "79"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "48 ساعات",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G27",
+   "langue": "arabe",
+   "question": "هل يجوز للمؤجر إنهاء عقد الشغل دون إعلام مسبق؟",
+   "acceptes": [
+    "14 bis",
+    "14 quater",
+    "14 ter"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يجوز للمؤجر إنهاء عقد الشغل دون إعلام مسبق؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يجوز للمؤجر إنهاء عقد الشغل دون إعلام مسبق؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "20",
+    "120",
+    "14 bis",
+    "230",
+    "77"
+   ],
+   "dense": [
+    "262",
+    "14",
+    "6",
+    "14 bis",
+    "27"
+   ],
+   "hybride": [
+    "14 bis",
+    "20",
+    "6",
+    "27",
+    "120"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "20",
+     "120",
+     "14 bis"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G28",
+   "langue": "arabe",
+   "question": "كم تبلغ مدة العطلة السنوية خالصة الأجر؟",
+   "acceptes": [
+    "113",
+    "114",
+    "115"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "كم تبلغ مدة العطلة السنوية خالصة الأجر؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "كم تبلغ مدة العطلة السنوية خالصة الأجر؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "94",
+    "125",
+    "119",
+    "127",
+    "112"
+   ],
+   "dense": [
+    "125",
+    "94",
+    "119",
+    "118",
+    "127"
+   ],
+   "hybride": [
+    "94",
+    "125",
+    "119",
+    "127",
+    "118"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "94",
+     "125",
+     "119"
+    ],
+    "articles_cites": [
+     "125"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "125",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G29",
+   "langue": "arabe",
+   "question": "هل يحق للعامل عطلة بمناسبة ولادة طفله؟",
+   "acceptes": [
+    "122"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يحق للعامل عطلة بمناسبة ولادة طفله؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يحق للعامل عطلة بمناسبة ولادة طفله؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "122",
+    "141",
+    "230",
+    "368",
+    "110"
+   ],
+   "dense": [
+    "64",
+    "122",
+    "114",
+    "94",
+    "142"
+   ],
+   "hybride": [
+    "122",
+    "64",
+    "141",
+    "94",
+    "114"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "122",
+     "141",
+     "230"
+    ],
+    "articles_cites": [
+     "122"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "نعم",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G30",
+   "langue": "arabe",
+   "question": "متى يجب دفع أجور العمال المأجورين بالساعة أو باليوم؟",
+   "acceptes": [
+    "140"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "متى يجب دفع أجور العمال المأجورين بالساعة أو باليوم؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "متى يجب دفع أجور العمال المأجورين بالساعة أو باليوم؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "140",
+    "134",
+    "42",
+    "284",
+    "139"
+   ],
+   "dense": [
+    "140",
+    "143",
+    "119",
+    "94",
+    "113"
+   ],
+   "hybride": [
+    "140",
+    "143",
+    "94",
+    "151",
+    "134"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "140",
+     "134",
+     "42"
+    ],
+    "articles_cites": [
+     "140"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "الجواب يمكن أن يختلف بناءً على الأحكام المحددة في الفصل 140 من القانون. وفقًا للفرع 140، يجب دفع أجور العمال المأجورين بالساعة أو باليوم مرّة في الأسبوع على الأقل، ومرّة في الشهر بالنسبة للعمال المأجورين بالشهر. ومع ذلك، يمكن أن يتم تأخير دفع الأجور في بعض الحالات، مثل الحصول على ترخيص كتابي من تفقدية الشغل، حيث يمكن دفع الأجور مرة واحدة في الشهر.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G31",
+   "langue": "arabe",
+   "question": "ما هي مدة فترة التجربة؟",
+   "acceptes": [
+    "6"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مدة فترة التجربة؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي مدة فترة التجربة؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "22",
+    "376 ter",
+    "370",
+    "6",
+    "89"
+   ],
+   "dense": [
+    "124",
+    "32",
+    "358",
+    "349",
+    "88"
+   ],
+   "hybride": [
+    "6",
+    "371",
+    "22",
+    "88",
+    "124"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "22",
+     "376 ter",
+     "370"
+    ],
+    "articles_cites": [
+     "370"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "العمر المحدد لمدة التجربة هو ثلاثين يوماً ما لم تتجاوز هذه المدة في أي حال من الأحوال.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G32",
+   "langue": "arabe",
+   "question": "ما هو التعويض المستحق عند الطرد التعسفي؟",
+   "acceptes": [
+    "14 ter",
+    "23",
+    "23 bis"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هو التعويض المستحق عند الطرد التعسفي؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هو التعويض المستحق عند الطرد التعسفي؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "23 bis",
+    "23",
+    "21",
+    "24",
+    "14 ter"
+   ],
+   "dense": [
+    "23 bis",
+    "21",
+    "23",
+    "14 ter",
+    "166"
+   ],
+   "hybride": [
+    "23 bis",
+    "23",
+    "21",
+    "14 ter",
+    "166"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "23 bis",
+     "23",
+     "21"
+    ],
+    "articles_cites": [
+     "23 bis"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "التعويض المستحق عند الطرد التعسفي يحدد بموجب الفصل 23bis من القانون. وفقاً للقانون، التعويض يقع بين أجر شهر وأجر شهرين عن كل سنة أقدمية بالمؤسسة، على أن لا تتجاوز هذه الغرامة في جميع الحالات أجر ثلاث سنوات. ومع ذلك، في حالة الطرد التعسفي بسبب سبب حقيقي وجدي دون احترام الإجراءات القانونية أو التعاقدية، يقع التعويض بين أجر شهر وأجر أربعة أشهر.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G33",
+   "langue": "arabe",
+   "question": "ما هي السن الدنيا لتشغيل الأطفال؟",
+   "acceptes": [
+    "53",
+    "56"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي السن الدنيا لتشغيل الأطفال؟",
+    "traduite": false,
+    "source": "gemini-3.1-flash-lite",
+    "erreur": null
+   },
+   "question_origine": "ما هي السن الدنيا لتشغيل الأطفال؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "57",
+    "58",
+    "139",
+    "63",
+    "374"
+   ],
+   "dense": [
+    "54",
+    "58",
+    "61",
+    "78",
+    "66"
+   ],
+   "hybride": [
+    "58",
+    "54",
+    "56",
+    "78",
+    "111"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "57",
+     "58",
+     "139"
+    ],
+    "articles_cites": [
+     "58"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "16 ans",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G34",
+   "langue": "arabe",
+   "question": "هل يجوز تشغيل النساء ليلا؟",
+   "acceptes": [
+    "65",
+    "66",
+    "67"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يجوز تشغيل النساء ليلا؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يجوز تشغيل النساء ليلا؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "77",
+    "66",
+    "68",
+    "71",
+    "69"
+   ],
+   "dense": [
+    "68",
+    "66",
+    "69",
+    "65",
+    "89"
+   ],
+   "hybride": [
+    "68",
+    "66",
+    "69",
+    "65",
+    "77"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "77",
+     "66",
+     "68"
+    ],
+    "articles_cites": [
+     "68"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "لا",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G35",
+   "langue": "arabe",
+   "question": "ما هي مدة تقادم الدعاوى الناشئة عن علاقات الشغل؟",
+   "acceptes": [
+    "147",
+    "148"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مدة تقادم الدعاوى الناشئة عن علاقات الشغل؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي مدة تقادم الدعاوى الناشئة عن علاقات الشغل؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "147",
+    "183",
+    "216",
+    "220",
+    "148"
+   ],
+   "dense": [
+    "148",
+    "147",
+    "202",
+    "205",
+    "216"
+   ],
+   "hybride": [
+    "147",
+    "148",
+    "216",
+    "183",
+    "180"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "147",
+     "183",
+     "216"
+    ],
+    "articles_cites": [
+     "147"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "article 147",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G36",
+   "langue": "arabe",
+   "question": "ما هي مهام مجالس الصلح في نزاعات الشغل؟",
+   "acceptes": [
+    "207",
+    "376"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي مهام مجالس الصلح في نزاعات الشغل؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي مهام مجالس الصلح في نزاعات الشغل؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "381 bis",
+    "375",
+    "189",
+    "280",
+    "21"
+   ],
+   "dense": [
+    "378",
+    "183",
+    "153",
+    "355",
+    "216"
+   ],
+   "hybride": [
+    "183",
+    "153",
+    "207",
+    "214",
+    "172"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "381 bis",
+     "375",
+     "189"
+    ],
+    "articles_cites": [
+     "381 bis"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "وفقًا للArticle 381 bis، مهام مجالس الصلح في نزاعات الشغل هي أن تعرض الخلاف من قبل الطرف الأكثر حرصا مباشرة على مجالس التحكيم وفقا لإجراءات التحكيع المنصوص عليها بهذه المجلة.",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G37",
+   "langue": "arabe",
+   "question": "هل يمكن تكوين اتحادات نقابات؟",
+   "acceptes": [
+    "252"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكن تكوين اتحادات نقابات؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يمكن تكوين اتحادات نقابات؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "242",
+    "252",
+    "230",
+    "15",
+    "377"
+   ],
+   "dense": [
+    "242",
+    "252",
+    "46",
+    "253",
+    "247"
+   ],
+   "hybride": [
+    "242",
+    "252",
+    "256",
+    "377",
+    "248"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "242",
+     "252",
+     "230"
+    ],
+    "articles_cites": [
+     "242"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "نعم",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G38",
+   "langue": "arabe",
+   "question": "هل يمكن تجزئة العطلة السنوية؟",
+   "acceptes": [
+    "118",
+    "125"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يمكن تجزئة العطلة السنوية؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يمكن تجزئة العطلة السنوية؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "125",
+    "122",
+    "230",
+    "116",
+    "133"
+   ],
+   "dense": [
+    "118",
+    "125",
+    "94",
+    "117",
+    "141"
+   ],
+   "hybride": [
+    "125",
+    "118",
+    "94",
+    "117",
+    "114"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "125",
+     "122",
+     "230"
+    ],
+    "articles_cites": [
+     "125"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "نعم",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G39",
+   "langue": "arabe",
+   "question": "ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟",
+   "acceptes": [
+    "268"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي الخطية المستوجبة عند عدم تقديم دفتر يفرضه القانون؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "268",
+    "368",
+    "17",
+    "220",
+    "257"
+   ],
+   "dense": [
+    "268",
+    "316",
+    "205",
+    "206",
+    "190"
+   ],
+   "hybride": [
+    "268",
+    "316",
+    "368",
+    "205",
+    "17"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "268",
+     "368",
+     "17"
+    ],
+    "articles_cites": [
+     "268"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "article 268",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G40",
+   "langue": "arabe",
+   "question": "هل يجوز للمؤجر أن يقتطع من الأجر مبالغ مستحقة له؟",
+   "acceptes": [
+    "149",
+    "150"
+   ],
+   "categorie": "avec_article",
+   "traduction": {
+    "question": "هل يجوز للمؤجر أن يقتطع من الأجر مبالغ مستحقة له؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "هل يجوز للمؤجر أن يقتطع من الأجر مبالغ مستحقة له؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "20",
+    "296",
+    "195",
+    "230",
+    "436"
+   ],
+   "dense": [
+    "134",
+    "149",
+    "412",
+    "419",
+    "150"
+   ],
+   "hybride": [
+    "193",
+    "167",
+    "145",
+    "134",
+    "419"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "20",
+     "296",
+     "195"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G41",
+   "langue": "tunisien",
+   "question": "ما هي نسبة الضريبة على الدخل في تونس؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي نسبة الضريبة على الدخل في تونس؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "قداش الأداء على الدخل في تونس؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "417",
+    "365",
+    "359",
+    "121",
+    "444"
+   ],
+   "dense": [
+    "341",
+    "7",
+    "139",
+    "267",
+    "425"
+   ],
+   "hybride": [
+    "444",
+    "251",
+    "365",
+    "359",
+    "121"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "417",
+     "365",
+     "359"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G42",
+   "langue": "tunisien",
+   "question": "ما هي مدة صلاحية جواز السفر؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي مدة صلاحية جواز السفر؟",
+    "traduite": true,
+    "source": "gemini-3.1-flash-lite",
+    "erreur": null
+   },
+   "question_origine": "الباسبور قداش يدوم صالح؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "94",
+    "83",
+    "79",
+    "398",
+    "119"
+   ],
+   "dense": [
+    "124",
+    "21",
+    "132",
+    "32",
+    "113"
+   ],
+   "hybride": [
+    "94",
+    "124",
+    "115",
+    "32",
+    "83"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "94",
+     "83",
+     "79"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G43",
+   "langue": "tunisien",
+   "question": "هل يمكن لصاحب المنزل زيادة قيمة الإيجار؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "هل يمكن لصاحب المنزل زيادة قيمة الإيجار؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "مول الدار ينجم يزيدلي في الكراء؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "401",
+    "230",
+    "109",
+    "414",
+    "256"
+   ],
+   "dense": [
+    "411",
+    "159",
+    "94",
+    "115",
+    "143"
+   ],
+   "hybride": [
+    "94",
+    "109",
+    "401",
+    "411",
+    "115"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "401",
+     "230",
+     "109"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G44",
+   "langue": "arabizi",
+   "question": "ما هي نسبة الأداء على القيمة المضافة (TVA) المطبقة على المطاعم؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي نسبة الأداء على القيمة المضافة (TVA) المطبقة على المطاعم؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "chhal el TVA 3al restaurant?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "365",
+    "314",
+    "315",
+    "318",
+    "316"
+   ],
+   "dense": [
+    "94",
+    "371",
+    "96",
+    "313",
+    "82"
+   ],
+   "hybride": [
+    "316",
+    "94",
+    "317",
+    "152",
+    "315"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "365",
+     "314",
+     "315"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G45",
+   "langue": "arabizi",
+   "question": "كيف يمكن الحصول على رخصة بناء؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "كيف يمكن الحصول على رخصة بناء؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "kifech nekhou permis de construire?",
+   "langue_detectee": "ar",
+   "bm25": [
+    "281",
+    "203",
+    "307",
+    "115",
+    "300"
+   ],
+   "dense": [
+    "124",
+    "298",
+    "6",
+    "128",
+    "440"
+   ],
+   "hybride": [
+    "281",
+    "307",
+    "308",
+    "115",
+    "67"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "281",
+     "203",
+     "307"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G46",
+   "langue": "arabe",
+   "question": "ما هي مدة صلاحية بطاقة التعريف الوطنية؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي مدة صلاحية بطاقة التعريف الوطنية؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي مدة صلاحية بطاقة التعريف الوطنية؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "424",
+    "421",
+    "423",
+    "419",
+    "86"
+   ],
+   "dense": [
+    "124",
+    "421",
+    "424",
+    "423",
+    "278"
+   ],
+   "hybride": [
+    "424",
+    "421",
+    "423",
+    "278",
+    "425"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "424",
+     "421",
+     "423"
+    ],
+    "articles_cites": [
+     "424"
+    ],
+    "abstention": false,
+    "rejet": null,
+    "reponse": "كل سنة",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G47",
+   "langue": "arabe",
+   "question": "ما هي شروط تأسيس شركة خفية الاسم؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي شروط تأسيس شركة خفية الاسم؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي شروط تأسيس شركة خفية الاسم؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "15",
+    "298",
+    "314",
+    "191",
+    "184"
+   ],
+   "dense": [
+    "279",
+    "86",
+    "30",
+    "242",
+    "5"
+   ],
+   "hybride": [
+    "279",
+    "298",
+    "5",
+    "129",
+    "411"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "15",
+     "298",
+     "314"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G48",
+   "langue": "arabe",
+   "question": "ما هي العقوبة المقررة للسياقة في حالة سكر؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "ما هي العقوبة المقررة للسياقة في حالة سكر؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "ما هي العقوبة المقررة للسياقة في حالة سكر؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "317",
+    "14 quater",
+    "255",
+    "240",
+    "15"
+   ],
+   "dense": [
+    "14 quater",
+    "388",
+    "167",
+    "371",
+    "321"
+   ],
+   "hybride": [
+    "14 quater",
+    "167",
+    "240",
+    "87",
+    "25"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "317",
+     "14 quater",
+     "255"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G49",
+   "langue": "arabe",
+   "question": "كم يبلغ جراية التقاعد التي يصرفها الصندوق الوطني للضمان الاجتماعي؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "كم يبلغ جراية التقاعد التي يصرفها الصندوق الوطني للضمان الاجتماعي؟",
+    "traduite": false,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "كم يبلغ جراية التقاعد التي يصرفها الصندوق الوطني للضمان الاجتماعي؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "121",
+    "122",
+    "120",
+    "401",
+    "213"
+   ],
+   "dense": [
+    "121",
+    "23 bis",
+    "143",
+    "181",
+    "21"
+   ],
+   "hybride": [
+    "121",
+    "143",
+    "94",
+    "122",
+    "23 bis"
+   ],
+   "seuil_abstient": false,
+   "rag": {
+    "passages": [
+     "121",
+     "122",
+     "120"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  },
+  {
+   "id": "G50",
+   "langue": "tunisien",
+   "question": "هل يمكن للبنك رفض منحي قرضاً سكنياً؟",
+   "acceptes": [],
+   "categorie": "hors",
+   "traduction": {
+    "question": "هل يمكن للبنك رفض منحي قرضاً سكنياً؟",
+    "traduite": true,
+    "source": "cache",
+    "erreur": null
+   },
+   "question_origine": "البنك ينجم يرفضلي قرض سكنى؟",
+   "langue_detectee": "ar",
+   "bm25": [
+    "38",
+    "230",
+    "40",
+    "256",
+    "360"
+   ],
+   "dense": [
+    "167",
+    "411",
+    "166",
+    "245",
+    "16"
+   ],
+   "hybride": [
+    "256",
+    "21",
+    "38",
+    "259",
+    "44"
+   ],
+   "seuil_abstient": true,
+   "rag": {
+    "passages": [
+     "38",
+     "230",
+     "40"
+    ],
+    "articles_cites": [],
+    "abstention": true,
+    "rejet": null,
+    "reponse": "abstention",
+    "erreur": null
+   }
+  }
+ ]
+}
