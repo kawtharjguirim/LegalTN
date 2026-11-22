@@ -64,6 +64,28 @@ CONSIGNES_JSON = (
 
 
 # ---------------------------------------------------------------- récupération des passages
+K_HYBRIDE = 5  # Gold : passages de la recherche hybride (BM25 + e5, RRF), voir experiments.md 22/11/2026
+
+
+def _textes(labels, corpus):
+    textes = {l: {} for l in labels}
+    for lg in ("fr", "ar"):
+        for a in corpus[lg].articles:
+            if a["article"] in textes and lg not in textes[a["article"]]:
+                textes[a["article"]][lg] = a["texte"]
+    return [{"article": l, **textes[l]} for l in labels]
+
+
+def passages_hybrides(question, corpus, index, k=K_HYBRIDE):
+    """Top-k de la fusion RRF (BM25 langue détectée + encodeur e5 croisé), textes FR et AR."""
+    import repondre
+    from retrieval.hybride import classement_bm25, fusion_rrf
+    langue = repondre.detecter_langue(question)
+    bm = classement_bm25(corpus[langue], question)
+    dense = [lab for lab, _ in index.classer(question)]
+    return _textes([lab for lab, _ in fusion_rrf([bm, dense])][:k], corpus)
+
+
 def passages_bm25(question, corpus, k=K_PASSAGES):
     """Top-k articles BM25 (langue détectée, sans seuil), avec textes FR et AR quand ils existent."""
     import repondre
@@ -176,8 +198,14 @@ def verifier_citations(sortie, passages):
     return {**sortie, "rejet": None}
 
 
-def repondre_rag(question, corpus, variante="P2V", modele=MODELE_DEFAUT, exemples=()):
-    passages = [] if variante == "P0" else passages_bm25(question, corpus)
+def repondre_rag(question, corpus, variante="P2V", modele=MODELE_DEFAUT, exemples=(), index=None):
+    """index (IndexDense) fourni : passages de la recherche hybride ; sinon BM25 top 3 (mode Silver)."""
+    if variante == "P0":
+        passages = []
+    elif index is not None:
+        passages = passages_hybrides(question, corpus, index)
+    else:
+        passages = passages_bm25(question, corpus)
     try:
         brut = appeler_llm(construire_messages(variante, question, passages, exemples), modele,
                            json_impose=variante in ("P2", "P2V", "P3"))

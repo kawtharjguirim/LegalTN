@@ -72,6 +72,7 @@ def main():
     p.add_argument("--jeu", default=str(DEV_V2))
     p.add_argument("--modele", default=rag.MODELE_DEFAUT)
     p.add_argument("--rapports", required=True)
+    p.add_argument("--rag-hybride", action="store_true", help="passages = hybride top 5 (encodeur e5)")
     p.add_argument("--variantes", default="P0,P1,P2,P3", help="sous-ensemble a evaluer (P2V est derive de P2)")
     a = p.parse_args()
     jeu = verifier_jeu(a.jeu)
@@ -79,6 +80,10 @@ def main():
     labels = {x["article"] for lg in corpus.values() for x in lg.articles}
     questions = list(lire(jeu))
     exemples = exemples_few_shot(questions, corpus)
+    index = None
+    if a.rag_hybride:
+        from retrieval.dense import IndexDense, MODELE_DEFAUT as MODELE_DENSE
+        index = IndexDense(corpus, MODELE_DENSE)
 
     lignes, t0 = [], time.time()
     for q in questions:
@@ -86,7 +91,7 @@ def main():
             continue
         sorties = {}
         for v in a.variantes.split(","):
-            sorties[v] = rag.repondre_rag(q["question"], corpus, v, a.modele, exemples)
+            sorties[v] = rag.repondre_rag(q["question"], corpus, v, a.modele, exemples, index=index)
         p2 = sorties.get("P2")
         if p2 is None:
             lignes.append({"id": q["id"], "langue": q["langue"], "dans_perimetre": q["type"] == "dans_perimetre",

@@ -1,0 +1,163 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   3%|▎         | 6/199 [00:00<00:06, 31.53it/s]Loading weights:   5%|▌         | 10/199 [00:00<00:09, 19.31it/s]Loading weights:   7%|▋         | 13/199 [00:00<00:10, 18.03it/s]Loading weights:  10%|▉         | 19/199 [00:00<00:06, 26.32it/s]Loading weights:  14%|█▍        | 28/199 [00:00<00:04, 38.52it/s]Loading weights:  22%|██▏       | 44/199 [00:01<00:02, 54.48it/s]Loading weights:  25%|██▌       | 50/199 [00:01<00:03, 42.10it/s]Loading weights:  28%|██▊       | 55/199 [00:01<00:03, 40.23it/s]Loading weights:  30%|███       | 60/199 [00:01<00:03, 35.68it/s]Loading weights:  35%|███▍      | 69/199 [00:01<00:02, 44.91it/s]Loading weights:  38%|███▊      | 76/199 [00:01<00:02, 47.31it/s]Loading weights:  49%|████▊     | 97/199 [00:02<00:01, 78.64it/s]Loading weights: 100%|██████████| 199/199 [00:02<00:00, 91.67it/s]
+G01 avec_article ['79'] ['79'] False
+G02 avec_article ['21'] [] True
+G03 avec_article ['114'] ['114'] False
+G04 avec_article ['122'] ['122'] False
+G05 avec_article ['133'] [] True
+G06 avec_article ['22'] ['18'] False
+G07 sans_article ['230'] ['66', '119'] False
+G08 avec_article ['195'] [] True
+G09 avec_article ['14 ter'] ['14 ter'] False
+G10 avec_article ['54'] ['55'] False
+G11 avec_article ['106'] ['95', '106'] False
+G12 avec_article ['63'] ['64'] True
+G13 hors ['94'] ['19'] False
+G14 avec_article ['375'] ['183'] False
+G15 avec_article ['254'] ['242'] False
+G16 avec_article ['90'] ['85'] False
+G17 avec_article ['230'] ['21', '370'] False
+G18 avec_article ['114'] ['114'] True
+G19 avec_article ['445'] ['4'] False
+G20 avec_article ['22'] [] True
+G21 sans_article ['230'] ['66', '119'] False
+G22 avec_article ['122'] ['122'] False
+G23 avec_article [] ['131'] False
+G24 avec_article ['415'] ['54', '58'] False
+G25 avec_article ['254'] ['242'] False
+G26 avec_article ['79'] ['79'] False
+G27 avec_article ['20'] [] True
+G28 avec_article ['94'] ['118'] False
+G29 avec_article ['122'] ['122'] False
+G30 avec_article ['140'] ['140'] False
+G31 avec_article ['22'] [] True
+G32 avec_article ['23 bis'] ['23 bis'] False
+G33 avec_article ['57'] ['58'] False
+G34 avec_article ['77'] ['68'] False
+G35 avec_article ['147'] ['147'] False
+G36 avec_article ['381 bis'] ['183'] False
+G37 avec_article ['242'] ['252'] False
+G38 avec_article ['125'] ['125'] False
+G39 avec_article ['268'] ['268'] False
+G40 avec_article ['20'] [] True
+G41 hors ['417'] [] True
+G42 hors ['94'] [] True
+G43 hors ['401'] ['411'] False
+G44 hors ['365'] [] True
+G45 hors ['281'] [] True
+G46 hors ['424'] ['424'] False
+G47 hors ['15'] [] True
+G48 hors ['317'] [] True
+G49 hors ['121'] ['23 bis'] False
+G50 hors ['38'] [] True
+{"jeu": "data\\raw\\arabic\\questions_gold_premiere_revue.csv", "sha256_jeu": "2d33bc3a37333b95f932034d043654f2d685d723f7e8bd7a85abe20191439f63", "origine": "questions proposees par IA, validees et etiquetees par l'utilisateur", "modele_dense": "intfloat/multilingual-e5-base", "modele_rag": "qwen2.5:3b", "seuil_bm25": 9.085, "convention_et_suivants": "+14 articles", "secondes": 542}
+{
+ "toutes": {
+  "n_avec_article": 37,
+  "n_sans_article": 2,
+  "n_hors": 11,
+  "bm25": {
+   "r1": 13,
+   "r5": 19
+  },
+  "dense": {
+   "r1": 14,
+   "r5": 26
+  },
+  "hybride": {
+   "r1": 18,
+   "r5": 27
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 10,
+   "fausse_abstention": 16
+  },
+  "rag_p2v": {
+   "bon_article_cite": 16,
+   "fausse_abstention": 9,
+   "abstention_correcte": 7,
+   "erreurs_llm": 0
+  }
+ },
+ "tunisien": {
+  "n_avec_article": 13,
+  "n_sans_article": 1,
+  "n_hors": 5,
+  "bm25": {
+   "r1": 4,
+   "r5": 5
+  },
+  "dense": {
+   "r1": 6,
+   "r5": 9
+  },
+  "hybride": {
+   "r1": 5,
+   "r5": 9
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 6,
+   "fausse_abstention": 7
+  },
+  "rag_p2v": {
+   "bon_article_cite": 6,
+   "fausse_abstention": 4,
+   "abstention_correcte": 3,
+   "erreurs_llm": 0
+  }
+ },
+ "arabizi": {
+  "n_avec_article": 9,
+  "n_sans_article": 1,
+  "n_hors": 2,
+  "bm25": {
+   "r1": 2,
+   "r5": 3
+  },
+  "dense": {
+   "r1": 2,
+   "r5": 6
+  },
+  "hybride": {
+   "r1": 4,
+   "r5": 5
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 2,
+   "fausse_abstention": 6
+  },
+  "rag_p2v": {
+   "bon_article_cite": 2,
+   "fausse_abstention": 2,
+   "abstention_correcte": 2,
+   "erreurs_llm": 0
+  }
+ },
+ "arabe": {
+  "n_avec_article": 15,
+  "n_sans_article": 0,
+  "n_hors": 4,
+  "bm25": {
+   "r1": 7,
+   "r5": 11
+  },
+  "dense": {
+   "r1": 6,
+   "r5": 11
+  },
+  "hybride": {
+   "r1": 9,
+   "r5": 13
+  },
+  "seuil_bm25": {
+   "abstention_correcte": 2,
+   "fausse_abstention": 3
+  },
+  "rag_p2v": {
+   "bon_article_cite": 8,
+   "fausse_abstention": 3,
+   "abstention_correcte": 2,
+   "erreurs_llm": 0
+  }
+ }
+}

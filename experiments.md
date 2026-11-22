@@ -899,3 +899,9 @@ Ne jamais modifier une entrée passée : ajouter une nouvelle entrée pour corri
 - Hybride R@5, sans → avec traduction : tunisien 6 → 9/13 ; arabizi 1 → 5/9 ; arabe 13 → 13/15.
 - RAG P2V bon article : tunisien 2 → 5/13 ; arabizi 0 → 2/9 ; arabe 7 → 7/15 ; total 9 → 14/37. Fausses abstentions 18 → 11/37. Abstentions correctes 13 → 12/13.
 - Écart avec l'expérience précédente (tunisien 10/13, arabizi 6/9) : consigne différente (l'application renvoie aussi l'arabe standard tel quel) et 3 replis. Le français est inchangé par construction (aucune question envoyée).
+
+## 2026-11-22 — Gold : passages du RAG issus de la recherche hybride (top 5) au lieu de BM25 (top 3) — NON retenu
+- Hypothèse : le RAG perd des articles que la recherche hybride retrouve, car il ne reçoit que BM25 top 3. Option `index=` dans rag.repondre_rag (K_HYBRIDE = 5) ; défaut inchangé (BM25 top 3).
+- Dev v2, P2V (reports/gold/rag_dev_hybride) : bon article FR 16 → 17/20 ; hors périmètre refusé 27 → 24/28 ; fausses abstentions 4 → 4/26 ; tunisien (sans traduction) 2 → 0/6 ; 1 citation comptée hors passages ; 3 JSON invalides.
+- Gold 50, avec traduction (reports/gold/transfert_traduction_raghybride) : bon article 14 → 16/37 ; fausses abstentions 11 → 9/37 ; abstentions correctes 12 → 7/13.
+- Décision : non retenu par défaut. Le gain de citations (+2) se paie par une forte baisse de l'abstention (12 → 7/13 sur Gold ; 27 → 24/28 sur le dev) : avec 5 passages, le petit LLM répond plus souvent à des questions sans réponse dans le Code. L'option reste disponible pour l'expérience.

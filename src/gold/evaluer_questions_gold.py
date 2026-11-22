@@ -58,6 +58,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--rapports", default="reports/gold/transfert")
     p.add_argument("--sans-rag", action="store_true")
+    p.add_argument("--rag-hybride", action="store_true", help="passages du RAG = hybride top 5")
     p.add_argument("--traduire", action="store_true", help="couche de traduction du dialecte (src/traduction/dialecte.py)")
     a = p.parse_args()
     from retrieval.dense import IndexDense, MODELE_DEFAUT
@@ -69,6 +70,8 @@ def main():
         import time as _t
         from traduction import dialecte
         a.rapports = a.rapports.rstrip("/") + "_traduction"
+    if a.rag_hybride:
+        a.rapports = a.rapports.rstrip("/") + "_raghybride"
     for q in jeu:
         if a.traduire:
             tr = dialecte.traduire(q["question"])
@@ -84,7 +87,7 @@ def main():
         q.update({"langue_detectee": lg, "bm25": bm[:5], "dense": dense[:5], "hybride": hyb[:5],
                   "seuil_abstient": (max(scores, default=0.0) < repondre.SEUIL_SCORE_MIN)})
         if not a.sans_rag:
-            r = rag.repondre_rag(q["question"], corpus, "P2V")
+            r = rag.repondre_rag(q["question"], corpus, "P2V", index=index if a.rag_hybride else None)
             q["rag"] = {k: r.get(k) for k in ("passages", "articles_cites", "abstention", "rejet", "reponse", "erreur")}
         print(q["id"], q["categorie"], q["bm25"][:1], q.get("rag", {}).get("articles_cites"),
               q.get("rag", {}).get("abstention"), flush=True)

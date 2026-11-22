@@ -1,0 +1,65 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 25/199 [00:00<00:00, 235.52it/s]Loading weights:  25%|██▍       | 49/199 [00:00<00:00, 206.36it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 720.30it/s]
+D02 {'P2': (['118', '125'], False), 'P2V': (['118', '125'], False)}
+D03 {'P2': (['124'], False), 'P2V': (['124'], False)}
+D04 {'P2': (['140'], False), 'P2V': (['140'], False)}
+D05 {'P2': (['147'], False), 'P2V': (['147'], False)}
+D06 {'P2': (['183'], False), 'P2V': (['183'], False)}
+D07 {'P2': (['193'], False), 'P2V': (['193'], False)}
+D08 {'P2': (['268'], False), 'P2V': (['268'], False)}
+D09 {'P2': (['366'], False), 'P2V': (['366'], False)}
+D10 {'P2': (['402'], False), 'P2V': (['402'], False)}
+D11 {'P2': (['252'], False), 'P2V': (['252'], False)}
+D12 {'P2': (['68'], False), 'P2V': (['68'], False)}
+D13 {'P2': (['110'], False), 'P2V': (['110'], False)}
+D15 {'P2': ([], True), 'P2V': ([], True)}
+D16 {'P2': ([], True), 'P2V': ([], True)}
+D17 {'P2': ([], True), 'P2V': ([], True)}
+D18 {'P2': ([], True), 'P2V': ([], True)}
+D19 {'P2': ([], True), 'P2V': ([], True)}
+D20 {'P2': ([], True), 'P2V': ([], True)}
+D21 {'P2': ([], True), 'P2V': ([], True)}
+D22 {'P2': ([], True), 'P2V': ([], True)}
+D23 {'P2': ([], True), 'P2V': ([], True)}
+D24 {'P2': (['371'], True), 'P2V': (['371'], True)}
+D25 {'P2': ([], True), 'P2V': ([], True)}
+D26 {'P2': (['359', '367'], False), 'P2V': (['359', '367'], True)}
+D27 {'P2': ([], True), 'P2V': ([], True)}
+D28 {'P2': ([], True), 'P2V': ([], True)}
+D29 {'P2': (['22'], False), 'P2V': (['22'], False)}
+D30 {'P2': (['349'], False), 'P2V': (['349'], False)}
+D31 {'P2': (['79'], False), 'P2V': (['79'], False)}
+D32 {'P2': (['132'], False), 'P2V': (['132'], False)}
+D33 {'P2': ([], True), 'P2V': ([], True)}
+D34 {'P2': (['122'], False), 'P2V': (['122'], False)}
+D35 {'P2': (['110', '132'], False), 'P2V': (['110', '132'], False)}
+D36 {'P2': ([], False), 'P2V': ([], True)}
+D37 {'P2': (['160'], False), 'P2V': (['160'], False)}
+D38 {'P2': ([], True), 'P2V': ([], True)}
+D39 {'P2': (['191'], False), 'P2V': (['191'], False)}
+D40 {'P2': ([], True), 'P2V': ([], True)}
+D41 {'P2': (['232'], False), 'P2V': (['232'], False)}
+D42 {'P2': (['194', '196'], False), 'P2V': (['194', '196'], False)}
+D43 {'P2': ([], True), 'P2V': ([], True)}
+D44 {'P2': ([], True), 'P2V': ([], True)}
+D45 {'P2': ([], True), 'P2V': ([], True)}
+D46 {'P2': ([], True), 'P2V': ([], True)}
+D47 {'P2': (['14 quater', '418', '421'], False), 'P2V': (['14 quater', '418', '421'], False)}
+D48 {'P2': ([], True), 'P2V': ([], True)}
+D49 {'P2': ([], True), 'P2V': ([], True)}
+D50 {'P2': ([], True), 'P2V': ([], True)}
+D51 {'P2': (['187'], False), 'P2V': (['187'], False)}
+D52 {'P2': ([], True), 'P2V': ([], True)}
+D53 {'P2': (['323', '324'], False), 'P2V': (['323', '324'], False)}
+D54 {'P2': (['231'], False), 'P2V': (['231'], False)}
+D55 {'P2': ([], True), 'P2V': ([], True)}
+D56 {'P2': ([], True), 'P2V': ([], True)}
+{"jeu": "questions_dev_v2.csv", "sha256_jeu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8", "modele": "qwen2.5:3b", "temperature": 0, "graine": 2026, "k_passages": 3, "recuperation": "BM25 langue detectee, sans seuil", "exemples_exclus": ["D01", "D14"], "statut": "developpement_non_independant", "secondes": 546}
+toutes P2 {"n_dans": 26, "n_hors": 28, "citation_exacte": 17, "fausse_abstention": 3, "reponse_sans_citation": 1, "abstention_correcte_hors": 23, "citations_non_fournies": 1, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 3}
+toutes P2V {"n_dans": 26, "n_hors": 28, "citation_exacte": 17, "fausse_abstention": 4, "reponse_sans_citation": 0, "abstention_correcte_hors": 24, "citations_non_fournies": 1, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 3}
+fr P2 {"n_dans": 20, "n_hors": 22, "citation_exacte": 17, "fausse_abstention": 2, "reponse_sans_citation": 1, "abstention_correcte_hors": 19, "citations_non_fournies": 1, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 3}
+fr P2V {"n_dans": 20, "n_hors": 22, "citation_exacte": 17, "fausse_abstention": 3, "reponse_sans_citation": 0, "abstention_correcte_hors": 20, "citations_non_fournies": 1, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 3}
+tun P2 {"n_dans": 6, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 1, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+tun P2V {"n_dans": 6, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 1, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P2 {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}
+ar P2V {"n_dans": 0, "n_hors": 3, "citation_exacte": 0, "fausse_abstention": 0, "reponse_sans_citation": 0, "abstention_correcte_hors": 2, "citations_non_fournies": 0, "citations_hors_corpus": 0, "erreurs_llm": 0, "json_invalide": 0}

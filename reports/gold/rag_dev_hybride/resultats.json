@@ -1,0 +1,2573 @@
+{
+ "meta": {
+  "jeu": "questions_dev_v2.csv",
+  "sha256_jeu": "9c616a6c73e36b5cfe8c36429f9568bbfa194f8e5f4fa5c84f7994273d59deb8",
+  "modele": "qwen2.5:3b",
+  "temperature": 0,
+  "graine": 2026,
+  "k_passages": 3,
+  "recuperation": "BM25 langue detectee, sans seuil",
+  "exemples_exclus": [
+   "D01",
+   "D14"
+  ],
+  "statut": "developpement_non_independant",
+  "secondes": 546
+ },
+ "resume": {
+  "toutes": {
+   "P2": {
+    "n_dans": 26,
+    "n_hors": 28,
+    "citation_exacte": 17,
+    "fausse_abstention": 3,
+    "reponse_sans_citation": 1,
+    "abstention_correcte_hors": 23,
+    "citations_non_fournies": 1,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 3
+   },
+   "P2V": {
+    "n_dans": 26,
+    "n_hors": 28,
+    "citation_exacte": 17,
+    "fausse_abstention": 4,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 24,
+    "citations_non_fournies": 1,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 3
+   }
+  },
+  "fr": {
+   "P2": {
+    "n_dans": 20,
+    "n_hors": 22,
+    "citation_exacte": 17,
+    "fausse_abstention": 2,
+    "reponse_sans_citation": 1,
+    "abstention_correcte_hors": 19,
+    "citations_non_fournies": 1,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 3
+   },
+   "P2V": {
+    "n_dans": 20,
+    "n_hors": 22,
+    "citation_exacte": 17,
+    "fausse_abstention": 3,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 20,
+    "citations_non_fournies": 1,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 3
+   }
+  },
+  "tun": {
+   "P2": {
+    "n_dans": 6,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 1,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 6,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 1,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  },
+  "ar": {
+   "P2": {
+    "n_dans": 0,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 0,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   },
+   "P2V": {
+    "n_dans": 0,
+    "n_hors": 3,
+    "citation_exacte": 0,
+    "fausse_abstention": 0,
+    "reponse_sans_citation": 0,
+    "abstention_correcte_hors": 2,
+    "citations_non_fournies": 0,
+    "citations_hors_corpus": 0,
+    "erreurs_llm": 0,
+    "json_invalide": 0
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "D02",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "118",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "125",
+      "113",
+      "123",
+      "94"
+     ],
+     "brut": "{\"reponse\": \"articles 118, 125\", \"articles_cites\": [\"118\", \"125\"], \"extrait\": \"article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"extrait\": \"article 125.- Le congé annuel payé peut être fractionné en périodes d’un ou plusieurs jours jusqu’à concurrence de la moitié de sa durée totale.\", \"abstention\": false}",
+     "reponse": "articles 118, 125",
+     "articles_cites": [
+      "118",
+      "125"
+     ],
+     "extrait": "article 125.- Le congé annuel payé peut être fractionné en périodes d’un ou plusieurs jours jusqu’à concurrence de la moitié de sa durée totale.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "118",
+      "125",
+      "113",
+      "123",
+      "94"
+     ],
+     "brut": "{\"reponse\": \"articles 118, 125\", \"articles_cites\": [\"118\", \"125\"], \"extrait\": \"article 118.- Le congé payé ne dépassant pas six jours ouvrables doit être continu. Le congé d'une durée supérieure à six jours ouvrables peut être fractionné par l'employeur, avec l'agrément du salarié.\", \"extrait\": \"article 125.- Le congé annuel payé peut être fractionné en périodes d’un ou plusieurs jours jusqu’à concurrence de la moitié de sa durée totale.\", \"abstention\": false}",
+     "reponse": "articles 118, 125",
+     "articles_cites": [
+      "118",
+      "125"
+     ],
+     "extrait": "article 125.- Le congé annuel payé peut être fractionné en périodes d’un ou plusieurs jours jusqu’à concurrence de la moitié de sa durée totale.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D03",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "124",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "124",
+      "123",
+      "118",
+      "113",
+      "132"
+     ],
+     "brut": "{\"reponse\": \"article 124\", \"articles_cites\": [\"124\"], \"extrait\": \"الفصل 124.- يجب أن يتمتع أصحاب الرخص بهذه الرخصة في العام الموالي لتاريخ بداية الحق في الرخصة إذا كانت مدة الرخصة دون الخمسة عشر يوما\", \"abstention\": false}",
+     "reponse": "article 124",
+     "articles_cites": [
+      "124"
+     ],
+     "extrait": "الفصل 124.- يجب أن يتمتع أصحاب الرخص بهذه الرخصة في العام الموالي لتاريخ بداية الحق في الرخصة إذا كانت مدة الرخصة دون الخمسة عشر يوما",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "124",
+      "123",
+      "118",
+      "113",
+      "132"
+     ],
+     "brut": "{\"reponse\": \"article 124\", \"articles_cites\": [\"124\"], \"extrait\": \"الفصل 124.- يجب أن يتمتع أصحاب الرخص بهذه الرخصة في العام الموالي لتاريخ بداية الحق في الرخصة إذا كانت مدة الرخصة دون الخمسة عشر يوما\", \"abstention\": false}",
+     "reponse": "article 124",
+     "articles_cites": [
+      "124"
+     ],
+     "extrait": "الفصل 124.- يجب أن يتمتع أصحاب الرخص بهذه الرخصة في العام الموالي لتاريخ بداية الحق في الرخصة إذا كانت مدة الرخصة دون الخمسة عشر يوما",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D04",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "140",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "140",
+      "108",
+      "89",
+      "94",
+      "139"
+     ],
+     "brut": "{\"reponse\": \"Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, selon l'article 140.\", \"articles_cites\": [\"140\"], \"extrait\": \"Article 140 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.\", \"abstention\": false}",
+     "reponse": "Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, selon l'article 140.",
+     "articles_cites": [
+      "140"
+     ],
+     "extrait": "Article 140 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "140",
+      "108",
+      "89",
+      "94",
+      "139"
+     ],
+     "brut": "{\"reponse\": \"Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, selon l'article 140.\", \"articles_cites\": [\"140\"], \"extrait\": \"Article 140 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.\", \"abstention\": false}",
+     "reponse": "Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, selon l'article 140.",
+     "articles_cites": [
+      "140"
+     ],
+     "extrait": "Article 140 (Modifié par la loi n° 96-62 du 15 juillet 1996).- Les salaires des travailleurs payés à l'heure ou à la journée sont payés une fois par semaine au moins, ceux des travailleurs mensuels sont payés une fois par mois.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D05",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "147",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "147",
+      "148",
+      "18",
+      "376 bis",
+      "47"
+     ],
+     "brut": "{\"reponse\": \"article 147\", \"articles_cites\": [\"147\"], \"extrait\": \"ان الدعاوى مهما كان نوعها بين المؤجرين والعبال...\", \"abstention\": false}",
+     "reponse": "article 147",
+     "articles_cites": [
+      "147"
+     ],
+     "extrait": "ان الدعاوى مهما كان نوعها بين المؤجرين والعبال...",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "147",
+      "148",
+      "18",
+      "376 bis",
+      "47"
+     ],
+     "brut": "{\"reponse\": \"article 147\", \"articles_cites\": [\"147\"], \"extrait\": \"ان الدعاوى مهما كان نوعها بين المؤجرين والعبال...\", \"abstention\": false}",
+     "reponse": "article 147",
+     "articles_cites": [
+      "147"
+     ],
+     "extrait": "ان الدعاوى مهما كان نوعها بين المؤجرين والعبال...",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D06",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "183",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "183",
+      "191",
+      "184",
+      "195",
+      "185"
+     ],
+     "brut": "{\"reponse\": \"Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code. Leur compétence s'étend également aux différends nés entre salariés à l'occasion du travail. Cependant, ils ne peuvent connaître des actions fondées sur des accidents du travail et des maladies professionnelles ainsi que des litiges relatifs aux régimes de sécurité sociale.\", \"articles_cites\": [\"183\"], \"extrait\": \"Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code.\", \"abstention\": false}",
+     "reponse": "Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code. Leur compétence s'étend également aux différends nés entre salariés à l'occasion du travail. Cependant, ils ne peuvent connaître des actions fondées sur des accidents du travail et des maladies professionnelles ainsi que des litiges relatifs aux régimes de sécurité sociale.",
+     "articles_cites": [
+      "183"
+     ],
+     "extrait": "Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "183",
+      "191",
+      "184",
+      "195",
+      "185"
+     ],
+     "brut": "{\"reponse\": \"Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code. Leur compétence s'étend également aux différends nés entre salariés à l'occasion du travail. Cependant, ils ne peuvent connaître des actions fondées sur des accidents du travail et des maladies professionnelles ainsi que des litiges relatifs aux régimes de sécurité sociale.\", \"articles_cites\": [\"183\"], \"extrait\": \"Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code.\", \"abstention\": false}",
+     "reponse": "Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code. Leur compétence s'étend également aux différends nés entre salariés à l'occasion du travail. Cependant, ils ne peuvent connaître des actions fondées sur des accidents du travail et des maladies professionnelles ainsi que des litiges relatifs aux régimes de sécurité sociale.",
+     "articles_cites": [
+      "183"
+     ],
+     "extrait": "Les conseils de prud'hommes ont pour attributions de résoudre les conflits individuels qui peuvent surgir entre les parties contractantes à l'occasion de l'exécution des contrats de travail ou d'apprentissage dans les activités régies par les dispositions du présent code.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D07",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "193",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "193",
+      "214",
+      "204",
+      "186",
+      "355"
+     ],
+     "brut": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"Article 193.- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié.\", \"Article 193-193 (Modifié par la loi n°94-29 du 21 février 1994).- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié. Les employeurs ne peuvent pas rompre le contrat de travail d'un salarié qui siège au conseil de prud'hommes sans raison légitime. Si le salarié siège au conseil de prud'hommes, l'employ",
+     "reponse": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"Article 193.- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié.\", \"Article 193-193 (Modifié par la loi n°94-29 du 21 février 1994).- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié. Les employeurs ne peuvent pas rompre le contrat de travail d'un salarié qui siège au conseil de prud'hommes sans raison légitime. Si le salarié siège au conseil de prud'hommes, l'employ",
+     "articles_cites": [
+      "193"
+     ],
+     "extrait": "",
+     "abstention": false,
+     "json_valide": false
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "193",
+      "214",
+      "204",
+      "186",
+      "355"
+     ],
+     "brut": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"Article 193.- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié.\", \"Article 193-193 (Modifié par la loi n°94-29 du 21 février 1994).- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié. Les employeurs ne peuvent pas rompre le contrat de travail d'un salarié qui siège au conseil de prud'hommes sans raison légitime. Si le salarié siège au conseil de prud'hommes, l'employ",
+     "reponse": "{\"reponse\": \"false\", \"articles_cites\": [\"Article 193\"], \"extrait\": \"Article 193.- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié.\", \"Article 193-193 (Modifié par la loi n°94-29 du 21 février 1994).- Les employeurs sont tenus de laisser aux salariés de leur entreprise, membres d'un conseil de prud'hommes, le temps nécessaire pour participer aux séances, aux enquêtes et aux réunions dudit conseil. Le temps passé par les salariés aux différentes séances du conseil de prud'hommes et des commissions en dépendant, ne leur est pas payé comme temps de travail. Ce temps peut être récupéré. La suspension du travail prévue au présent article ne peut être une cause de rupture par l'employeur du contrat de travail, et ce, à peine de dommages-intérêts au profit du salarié. Les employeurs ne peuvent pas rompre le contrat de travail d'un salarié qui siège au conseil de prud'hommes sans raison légitime. Si le salarié siège au conseil de prud'hommes, l'employ",
+     "articles_cites": [
+      "193"
+     ],
+     "extrait": "",
+     "abstention": false,
+     "json_valide": false,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D08",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "268",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "268",
+      "316",
+      "321",
+      "257",
+      "287"
+     ],
+     "brut": "{\"reponse\": \"article 268\", \"articles_cites\": [\"268\"], \"extrait\": \"article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.\", \"abstention\": false}",
+     "reponse": "article 268",
+     "articles_cites": [
+      "268"
+     ],
+     "extrait": "article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "268",
+      "316",
+      "321",
+      "257",
+      "287"
+     ],
+     "brut": "{\"reponse\": \"article 268\", \"articles_cites\": [\"268\"], \"extrait\": \"article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.\", \"abstention\": false}",
+     "reponse": "article 268",
+     "articles_cites": [
+      "268"
+     ],
+     "extrait": "article 268 (Modifié par la loi n°94-29 du 21 février 1994).- Tout défaut de présentation de registre ou de tout autre document dont la tenue, la détention ou la fourniture sont prévues par la législation en vigueur, est puni d'une amende de 60 à 300 dinars.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D09",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "366",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "366",
+      "320",
+      "324",
+      "417",
+      "72"
+     ],
+     "brut": "{\"reponse\": \"Article 366\", \"articles_cites\": [\"366\"], \"extrait\": \"Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.\", \"abstention\": false}",
+     "reponse": "Article 366",
+     "articles_cites": [
+      "366"
+     ],
+     "extrait": "Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "366",
+      "320",
+      "324",
+      "417",
+      "72"
+     ],
+     "brut": "{\"reponse\": \"Article 366\", \"articles_cites\": [\"366\"], \"extrait\": \"Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.\", \"abstention\": false}",
+     "reponse": "Article 366",
+     "articles_cites": [
+      "366"
+     ],
+     "extrait": "Les agents chargés de l'Inspection du Travail ainsi que les inspecteurs de l'enseignement technique sont chargés, concurremment avec les officiers de police judiciaire, de veiller à l'exécution des prescriptions du présent chapitre et des textes pris pour son application.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D10",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "402",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "402",
+      "94",
+      "140",
+      "133",
+      "193"
+     ],
+     "brut": "{\"reponse\": \"Article 402.\", \"articles_cites\": [\"402\"], \"extrait\": \"الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.\", \"abstention\": false}",
+     "reponse": "Article 402.",
+     "articles_cites": [
+      "402"
+     ],
+     "extrait": "الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "402",
+      "94",
+      "140",
+      "133",
+      "193"
+     ],
+     "brut": "{\"reponse\": \"Article 402.\", \"articles_cites\": [\"402\"], \"extrait\": \"الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.\", \"abstention\": false}",
+     "reponse": "Article 402.",
+     "articles_cites": [
+      "402"
+     ],
+     "extrait": "الفصل 402.- كل شغل وقعت التوصية به أو وقع وقبل ولم ينشر بالصحيفة الحق في نشر الفصول أو غيرها من الإنتاج الأدبي أو الفني التي يكون منتجوها من بين الأشخاص المذكورين بالفصل 397 يتوقف وجوبا على اتفاق صريح تبيّن به شروط الترخيص في نقل الفصول بصحائف أخرى.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D11",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "252",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "252",
+      "247",
+      "242",
+      "248",
+      "245"
+     ],
+     "brut": "{\"reponse\": \"Des unions de syndicats peuvent être constituées selon l'article 252 du Code du travail tunisien.\", \"articles_cites\": [\"252\"], \"extrait\": \"article 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.\", \"abstention\": false}",
+     "reponse": "Des unions de syndicats peuvent être constituées selon l'article 252 du Code du travail tunisien.",
+     "articles_cites": [
+      "252"
+     ],
+     "extrait": "article 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "252",
+      "247",
+      "242",
+      "248",
+      "245"
+     ],
+     "brut": "{\"reponse\": \"Des unions de syndicats peuvent être constituées selon l'article 252 du Code du travail tunisien.\", \"articles_cites\": [\"252\"], \"extrait\": \"article 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.\", \"abstention\": false}",
+     "reponse": "Des unions de syndicats peuvent être constituées selon l'article 252 du Code du travail tunisien.",
+     "articles_cites": [
+      "252"
+     ],
+     "extrait": "article 252.- يمكن للنقابات المؤسسة حسب مقتضيات هذا القانون أن تشكّل اتحادات على غرار أساليب تأسيس النقابات نفسها ولنفس الغايات المشار إليها.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D12",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "68",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "71",
+      "69",
+      "70",
+      "66"
+     ],
+     "brut": "{\"reponse\": \"Article 68\", \"articles_cites\": [\"68\"], \"extrait\": \"Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.\", \"abstention\": false}",
+     "reponse": "Article 68",
+     "articles_cites": [
+      "68"
+     ],
+     "extrait": "Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "68",
+      "71",
+      "69",
+      "70",
+      "66"
+     ],
+     "brut": "{\"reponse\": \"Article 68\", \"articles_cites\": [\"68\"], \"extrait\": \"Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.\", \"abstention\": false}",
+     "reponse": "Article 68",
+     "articles_cites": [
+      "68"
+     ],
+     "extrait": "Article 68.- L’interdiction du travail de nuit des femmes n’est pas appliquée : a) en cas de force majeure; b) dans le cas où le travail s’applique, soit à des matières premières soit à des matières en élaboration, qui seraient susceptibles d’altération très rapide, lorsque cela est nécessaire pour sauver ces matières d’une perte inévitable; c) aux femmes qui occupent des postes de direction, ou de caractère technique impliquant une responsabilité; d) aux femmes occupés dans les services sociaux et qui n’effectuent par normalement un travail manuel.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D13",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "118",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "110",
+      "94",
+      "112",
+      "132",
+      "131"
+     ],
+     "brut": "{\"reponse\": \"Article 110\", \"articles_cites\": [\"110\"], \"extrait\": \"الفصل 110.- ساعات الشغل الفائتة بسبب عطلة أيام الأعياد والعطل الخالصة يمكن تداركها حسب الشروط المنصوص عليها بالفصلين 92 و93.\", \"abstention\": false}",
+     "reponse": "Article 110",
+     "articles_cites": [
+      "110"
+     ],
+     "extrait": "الفصل 110.- ساعات الشغل الفائتة بسبب عطلة أيام الأعياد والعطل الخالصة يمكن تداركها حسب الشروط المنصوص عليها بالفصلين 92 و93.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "110",
+      "94",
+      "112",
+      "132",
+      "131"
+     ],
+     "brut": "{\"reponse\": \"Article 110\", \"articles_cites\": [\"110\"], \"extrait\": \"الفصل 110.- ساعات الشغل الفائتة بسبب عطلة أيام الأعياد والعطل الخالصة يمكن تداركها حسب الشروط المنصوص عليها بالفصلين 92 و93.\", \"abstention\": false}",
+     "reponse": "Article 110",
+     "articles_cites": [
+      "110"
+     ],
+     "extrait": "الفصل 110.- ساعات الشغل الفائتة بسبب عطلة أيام الأعياد والعطل الخالصة يمكن تداركها حسب الشروط المنصوص عليها بالفصلين 92 و93.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D15",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "267",
+      "263",
+      "425",
+      "278",
+      "420"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "267",
+      "263",
+      "425",
+      "278",
+      "420"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D16",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "230",
+      "315",
+      "202",
+      "231",
+      "386"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "230",
+      "315",
+      "202",
+      "231",
+      "386"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D17",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "345",
+      "386",
+      "245",
+      "134",
+      "304"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "345",
+      "386",
+      "245",
+      "134",
+      "304"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D18",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "143",
+      "411",
+      "127",
+      "21",
+      "121"
+     ],
+     "brut": "{\"reponse\": \"Les articles cités ne fournissent pas de détails spécifiques sur le montant exact de la pension de retraite versée par la CNSS. Les articles 143 et 411 concernent plutôt les bulletins de paie et les conséquences de la rupture du contrat de travail, respectivement. Les informations sur le montant de la pension de retraite sont généralement trouvées dans d'autres articles du Code du travail tunisien, spécifiquement dans les articles relatifs à la retraite et aux pensions de retraite.\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "Les articles cités ne fournissent pas de détails spécifiques sur le montant exact de la pension de retraite versée par la CNSS. Les articles 143 et 411 concernent plutôt les bulletins de paie et les conséquences de la rupture du contrat de travail, respectivement. Les informations sur le montant de la pension de retraite sont généralement trouvées dans d'autres articles du Code du travail tunisien, spécifiquement dans les articles relatifs à la retraite et aux pensions de retraite.",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "143",
+      "411",
+      "127",
+      "21",
+      "121"
+     ],
+     "brut": "{\"reponse\": \"Les articles cités ne fournissent pas de détails spécifiques sur le montant exact de la pension de retraite versée par la CNSS. Les articles 143 et 411 concernent plutôt les bulletins de paie et les conséquences de la rupture du contrat de travail, respectivement. Les informations sur le montant de la pension de retraite sont généralement trouvées dans d'autres articles du Code du travail tunisien, spécifiquement dans les articles relatifs à la retraite et aux pensions de retraite.\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "Les articles cités ne fournissent pas de détails spécifiques sur le montant exact de la pension de retraite versée par la CNSS. Les articles 143 et 411 concernent plutôt les bulletins de paie et les conséquences de la rupture du contrat de travail, respectivement. Les informations sur le montant de la pension de retraite sont généralement trouvées dans d'autres articles du Code du travail tunisien, spécifiquement dans les articles relatifs à la retraite et aux pensions de retraite.",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D19",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "237",
+      "356",
+      "197",
+      "348",
+      "99"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "237",
+      "356",
+      "197",
+      "348",
+      "99"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D20",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "313",
+      "407",
+      "409",
+      "3",
+      "418"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "313",
+      "407",
+      "409",
+      "3",
+      "418"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D21",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "409",
+      "138",
+      "3",
+      "142",
+      "96"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "409",
+      "138",
+      "3",
+      "142",
+      "96"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D22",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "258",
+      "251",
+      "153",
+      "139",
+      "410"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "258",
+      "251",
+      "153",
+      "139",
+      "410"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D23",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "415",
+      "416",
+      "148",
+      "418",
+      "380"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "415",
+      "416",
+      "148",
+      "418",
+      "380"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D24",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "371",
+      "240",
+      "22",
+      "413",
+      "108"
+     ],
+     "brut": "{\"reponse\": \"L'article 371 du Code du travail tunisien prévoit des règles pour l'indemnité de licenciement d'un ouvrier permanent. Cependant, il n'y a pas de spécificité directe pour un fonctionnaire de l'État dans ces articles fournis. Les fonctionnaires de l'État pourraient avoir des dispositions spécifiques dans d'autres articles ou règles spécifiques à leur statut. Il serait donc préférable de consulter directement le Code du travail ou d'autres textes spécifiques à leur statut pour obtenir des informations précises.\", \"articles_cites\": [\"371\"], \"extrait\": \"Article 371 .- Au cas de licenciement d'un ouvrier permanent, intervenu une fois la période d'essai expirée, pour quelque motif que ce soit, sauf celui de faute grave, insuffisance professionnelle ou insuffisance de rendement due à une mauvaise volonté évidente, il est dû à celui-ci une indemnité de licenciement calculée comme suit : - de un à trois mois d'ancienneté : trois jours de salaire; - de trois à six mois d'ancienneté : sept jours de salaire; - de six mois à un an d'ancienneté : quinze jours de salaire; - au delà d'un an d'ancienneté : quinze jours de salaire par année.\", \"abstention\": true}",
+     "reponse": "L'article 371 du Code du travail tunisien prévoit des règles pour l'indemnité de licenciement d'un ouvrier permanent. Cependant, il n'y a pas de spécificité directe pour un fonctionnaire de l'État dans ces articles fournis. Les fonctionnaires de l'État pourraient avoir des dispositions spécifiques dans d'autres articles ou règles spécifiques à leur statut. Il serait donc préférable de consulter directement le Code du travail ou d'autres textes spécifiques à leur statut pour obtenir des informations précises.",
+     "articles_cites": [
+      "371"
+     ],
+     "extrait": "Article 371 .- Au cas de licenciement d'un ouvrier permanent, intervenu une fois la période d'essai expirée, pour quelque motif que ce soit, sauf celui de faute grave, insuffisance professionnelle ou insuffisance de rendement due à une mauvaise volonté évidente, il est dû à celui-ci une indemnité de licenciement calculée comme suit : - de un à trois mois d'ancienneté : trois jours de salaire; - de trois à six mois d'ancienneté : sept jours de salaire; - de six mois à un an d'ancienneté : quinze jours de salaire; - au delà d'un an d'ancienneté : quinze jours de salaire par année.",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "371",
+      "240",
+      "22",
+      "413",
+      "108"
+     ],
+     "brut": "{\"reponse\": \"L'article 371 du Code du travail tunisien prévoit des règles pour l'indemnité de licenciement d'un ouvrier permanent. Cependant, il n'y a pas de spécificité directe pour un fonctionnaire de l'État dans ces articles fournis. Les fonctionnaires de l'État pourraient avoir des dispositions spécifiques dans d'autres articles ou règles spécifiques à leur statut. Il serait donc préférable de consulter directement le Code du travail ou d'autres textes spécifiques à leur statut pour obtenir des informations précises.\", \"articles_cites\": [\"371\"], \"extrait\": \"Article 371 .- Au cas de licenciement d'un ouvrier permanent, intervenu une fois la période d'essai expirée, pour quelque motif que ce soit, sauf celui de faute grave, insuffisance professionnelle ou insuffisance de rendement due à une mauvaise volonté évidente, il est dû à celui-ci une indemnité de licenciement calculée comme suit : - de un à trois mois d'ancienneté : trois jours de salaire; - de trois à six mois d'ancienneté : sept jours de salaire; - de six mois à un an d'ancienneté : quinze jours de salaire; - au delà d'un an d'ancienneté : quinze jours de salaire par année.\", \"abstention\": true}",
+     "reponse": "L'article 371 du Code du travail tunisien prévoit des règles pour l'indemnité de licenciement d'un ouvrier permanent. Cependant, il n'y a pas de spécificité directe pour un fonctionnaire de l'État dans ces articles fournis. Les fonctionnaires de l'État pourraient avoir des dispositions spécifiques dans d'autres articles ou règles spécifiques à leur statut. Il serait donc préférable de consulter directement le Code du travail ou d'autres textes spécifiques à leur statut pour obtenir des informations précises.",
+     "articles_cites": [
+      "371"
+     ],
+     "extrait": "Article 371 .- Au cas de licenciement d'un ouvrier permanent, intervenu une fois la période d'essai expirée, pour quelque motif que ce soit, sauf celui de faute grave, insuffisance professionnelle ou insuffisance de rendement due à une mauvaise volonté évidente, il est dû à celui-ci une indemnité de licenciement calculée comme suit : - de un à trois mois d'ancienneté : trois jours de salaire; - de trois à six mois d'ancienneté : sept jours de salaire; - de six mois à un an d'ancienneté : quinze jours de salaire; - au delà d'un an d'ancienneté : quinze jours de salaire par année.",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D25",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "139",
+      "258",
+      "410",
+      "433",
+      "251"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "139",
+      "258",
+      "410",
+      "433",
+      "251"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D26",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "139",
+      "251",
+      "359"
+     ],
+     "brut": "{\"reponse\": \"article 359\", \"articles_cites\": [\"359\"], \"extrait\": \"الفصل 359.- بمقتضى أوامر ستتخذ بعد أخذ رأي كتاب الدولة الذين يهمهم الأمر واستشارة اللجنة المحلية للأجور صاحبة النظر ومجلس التكوين المهنى : 1) ستضبط بالنسبة لكل من ميادين النشاط المشار إليها بترتيب الأجور أو الاتفاقية المشتركة : أ) قائمة ميادين النشاط الشخصية المشتملة على تدريب منتظم وشامل وأقصى مدة التدريب بالنسبة لكل ميدان. ب) أقصى النسبات بين عدد المتدربين المستخدمين بمشروع واحد وبين عدد العملة والمستخدمين الأكفاء (يعيّن عدد المتدربين بكل مؤسسة حسب أقصى نسبة مطبقة على نشاط هذه المؤسسة). والأوامر المتخذة طبقا للفقرة أولا من هذا الفصل يمكن أن تضبط أدنى النسبات الواجبة بين عدد المتدربين وبين عدد العملة أو المستخدمين الأكفاء العاملين بالمؤسسة. تنطبق العقوبات التى اقتضاها الفصل 367 في بحر الثلاثة أشهر الموالية لصدور الأوامر المشار إليها بهذا الفصل. 2) تحدث دروس مهنية وللتثقيف العام تصبح مزاولتها وجوبية بالنسبة للمتدربين وللشبان الشغالين الذين سنهم دون 15 عاما والتابعين لأصناف معينة من الصناعات باستثناء من يصرح بعدم قابليتهم لأي تثقيف مهني من طرف مدير الدروس المهنية. وتضبط أوقات هذه الدروس وحصصها بقرار.\",",
+     "reponse": "{\"reponse\": \"article 359\", \"articles_cites\": [\"359\"], \"extrait\": \"الفصل 359.- بمقتضى أوامر ستتخذ بعد أخذ رأي كتاب الدولة الذين يهمهم الأمر واستشارة اللجنة المحلية للأجور صاحبة النظر ومجلس التكوين المهنى : 1) ستضبط بالنسبة لكل من ميادين النشاط المشار إليها بترتيب الأجور أو الاتفاقية المشتركة : أ) قائمة ميادين النشاط الشخصية المشتملة على تدريب منتظم وشامل وأقصى مدة التدريب بالنسبة لكل ميدان. ب) أقصى النسبات بين عدد المتدربين المستخدمين بمشروع واحد وبين عدد العملة والمستخدمين الأكفاء (يعيّن عدد المتدربين بكل مؤسسة حسب أقصى نسبة مطبقة على نشاط هذه المؤسسة). والأوامر المتخذة طبقا للفقرة أولا من هذا الفصل يمكن أن تضبط أدنى النسبات الواجبة بين عدد المتدربين وبين عدد العملة أو المستخدمين الأكفاء العاملين بالمؤسسة. تنطبق العقوبات التى اقتضاها الفصل 367 في بحر الثلاثة أشهر الموالية لصدور الأوامر المشار إليها بهذا الفصل. 2) تحدث دروس مهنية وللتثقيف العام تصبح مزاولتها وجوبية بالنسبة للمتدربين وللشبان الشغالين الذين سنهم دون 15 عاما والتابعين لأصناف معينة من الصناعات باستثناء من يصرح بعدم قابليتهم لأي تثقيف مهني من طرف مدير الدروس المهنية. وتضبط أوقات هذه الدروس وحصصها بقرار.\",",
+     "articles_cites": [
+      "359",
+      "367"
+     ],
+     "extrait": "",
+     "abstention": false,
+     "json_valide": false
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "139",
+      "251",
+      "359"
+     ],
+     "brut": "{\"reponse\": \"article 359\", \"articles_cites\": [\"359\"], \"extrait\": \"الفصل 359.- بمقتضى أوامر ستتخذ بعد أخذ رأي كتاب الدولة الذين يهمهم الأمر واستشارة اللجنة المحلية للأجور صاحبة النظر ومجلس التكوين المهنى : 1) ستضبط بالنسبة لكل من ميادين النشاط المشار إليها بترتيب الأجور أو الاتفاقية المشتركة : أ) قائمة ميادين النشاط الشخصية المشتملة على تدريب منتظم وشامل وأقصى مدة التدريب بالنسبة لكل ميدان. ب) أقصى النسبات بين عدد المتدربين المستخدمين بمشروع واحد وبين عدد العملة والمستخدمين الأكفاء (يعيّن عدد المتدربين بكل مؤسسة حسب أقصى نسبة مطبقة على نشاط هذه المؤسسة). والأوامر المتخذة طبقا للفقرة أولا من هذا الفصل يمكن أن تضبط أدنى النسبات الواجبة بين عدد المتدربين وبين عدد العملة أو المستخدمين الأكفاء العاملين بالمؤسسة. تنطبق العقوبات التى اقتضاها الفصل 367 في بحر الثلاثة أشهر الموالية لصدور الأوامر المشار إليها بهذا الفصل. 2) تحدث دروس مهنية وللتثقيف العام تصبح مزاولتها وجوبية بالنسبة للمتدربين وللشبان الشغالين الذين سنهم دون 15 عاما والتابعين لأصناف معينة من الصناعات باستثناء من يصرح بعدم قابليتهم لأي تثقيف مهني من طرف مدير الدروس المهنية. وتضبط أوقات هذه الدروس وحصصها بقرار.\",",
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "articles_cites": [
+      "359",
+      "367"
+     ],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": false,
+     "rejet": "citation_non_fournie:367"
+    }
+   }
+  },
+  {
+   "id": "D27",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "115",
+      "112",
+      "307",
+      "67",
+      "345"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"لا توجد معلومات في الأرقام المقدمة حول شروط الحصول على رخصة السياقة\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "لا توجد معلومات في الأرقام المقدمة حول شروط الحصول على رخصة السياقة",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "115",
+      "112",
+      "307",
+      "67",
+      "345"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"لا توجد معلومات في الأرقام المقدمة حول شروط الحصول على رخصة السياقة\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "لا توجد معلومات في الأرقام المقدمة حول شروط الحصول على رخصة السياقة",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D28",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "324",
+      "323",
+      "233",
+      "2",
+      "445"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "324",
+      "323",
+      "233",
+      "2",
+      "445"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D29",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "22",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "22",
+      "371",
+      "120",
+      "370",
+      "128"
+     ],
+     "brut": "{\"reponse\": \"Un salarié licencié après sa période d'essai, hors faute grave, reçoit une indemnité de fin de service calculée à raison d'un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n'ayant pas le caractère de remboursement de frais.\", \"articles_cites\": [\"22\"], \"extrait\": \"article 22 (Modifié par la loi n° 94-29 du 21 février 1994).- Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n’ayant pas le caractère de remboursement de frais.\", \"abstention\": false}",
+     "reponse": "Un salarié licencié après sa période d'essai, hors faute grave, reçoit une indemnité de fin de service calculée à raison d'un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n'ayant pas le caractère de remboursement de frais.",
+     "articles_cites": [
+      "22"
+     ],
+     "extrait": "article 22 (Modifié par la loi n° 94-29 du 21 février 1994).- Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n’ayant pas le caractère de remboursement de frais.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "22",
+      "371",
+      "120",
+      "370",
+      "128"
+     ],
+     "brut": "{\"reponse\": \"Un salarié licencié après sa période d'essai, hors faute grave, reçoit une indemnité de fin de service calculée à raison d'un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n'ayant pas le caractère de remboursement de frais.\", \"articles_cites\": [\"22\"], \"extrait\": \"article 22 (Modifié par la loi n° 94-29 du 21 février 1994).- Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n’ayant pas le caractère de remboursement de frais.\", \"abstention\": false}",
+     "reponse": "Un salarié licencié après sa période d'essai, hors faute grave, reçoit une indemnité de fin de service calculée à raison d'un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n'ayant pas le caractère de remboursement de frais.",
+     "articles_cites": [
+      "22"
+     ],
+     "extrait": "article 22 (Modifié par la loi n° 94-29 du 21 février 1994).- Tout travailleur lié par un contrat à durée indéterminée, licencié après l’expiration de la période d’essai, bénéficie, sauf le cas de faute grave, d’une gratification de fin de service calculée à raison d’un jour de salaire par mois de service effectif dans la même entreprise, sur la base du salaire perçu par le travailleur au moment du licenciement, compte tenu de tous les avantages n’ayant pas le caractère de remboursement de frais.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D30",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "22",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "349",
+      "7",
+      "70",
+      "17",
+      "6"
+     ],
+     "brut": "{\"reponse\": \"Article 349\", \"articles_cites\": [\"349\"], \"extrait\": \"الفصل 349.- أثناء شهري التدريب الأولين المعتبرين كمدة تجربة يمكن لأحد الطرفين إبطال عقدة التدريب. وفى هذه الصورة لا يستحق هذا وزاك أية غرامة ما لم يقع الاتفاق على خلاف ذلك كتابيا وبصفة قطعية.\", \"abstention\": false}",
+     "reponse": "Article 349",
+     "articles_cites": [
+      "349"
+     ],
+     "extrait": "الفصل 349.- أثناء شهري التدريب الأولين المعتبرين كمدة تجربة يمكن لأحد الطرفين إبطال عقدة التدريب. وفى هذه الصورة لا يستحق هذا وزاك أية غرامة ما لم يقع الاتفاق على خلاف ذلك كتابيا وبصفة قطعية.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "349",
+      "7",
+      "70",
+      "17",
+      "6"
+     ],
+     "brut": "{\"reponse\": \"Article 349\", \"articles_cites\": [\"349\"], \"extrait\": \"الفصل 349.- أثناء شهري التدريب الأولين المعتبرين كمدة تجربة يمكن لأحد الطرفين إبطال عقدة التدريب. وفى هذه الصورة لا يستحق هذا وزاك أية غرامة ما لم يقع الاتفاق على خلاف ذلك كتابيا وبصفة قطعية.\", \"abstention\": false}",
+     "reponse": "Article 349",
+     "articles_cites": [
+      "349"
+     ],
+     "extrait": "الفصل 349.- أثناء شهري التدريب الأولين المعتبرين كمدة تجربة يمكن لأحد الطرفين إبطال عقدة التدريب. وفى هذه الصورة لا يستحق هذا وزاك أية غرامة ما لم يقع الاتفاق على خلاف ذلك كتابيا وبصفة قطعية.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D31",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "79",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "79",
+      "88",
+      "90",
+      "94",
+      "114"
+     ],
+     "brut": "{\"reponse\": \"48 heures par semaine\", \"articles_cites\": [\"Article 79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine\", \"abstention\": false}",
+     "reponse": "48 heures par semaine",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "79",
+      "88",
+      "90",
+      "94",
+      "114"
+     ],
+     "brut": "{\"reponse\": \"48 heures par semaine\", \"articles_cites\": [\"Article 79\"], \"extrait\": \"La durée du travail effectif ne peut excéder 48 heures par semaine\", \"abstention\": false}",
+     "reponse": "48 heures par semaine",
+     "articles_cites": [
+      "79"
+     ],
+     "extrait": "La durée du travail effectif ne peut excéder 48 heures par semaine",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D32",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "79",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "7",
+      "9",
+      "132",
+      "94",
+      "17"
+     ],
+     "brut": "{\"reponse\": \"Article 132\", \"articles_cites\": [\"132\"], \"extrait\": \"إذا أبرم عقد الشغل لمدة معينة فإنه يجب على المؤجر أن يمكن العامل من التمتع برخصته بكيفية تجعل تلكم الرخصة تنتهي قبل انقراض ذلك العقد بأسبوع على الأقل وإلا استوجب الغرم.\", \"abstention\": false}",
+     "reponse": "Article 132",
+     "articles_cites": [
+      "132"
+     ],
+     "extrait": "إذا أبرم عقد الشغل لمدة معينة فإنه يجب على المؤجر أن يمكن العامل من التمتع برخصته بكيفية تجعل تلكم الرخصة تنتهي قبل انقراض ذلك العقد بأسبوع على الأقل وإلا استوجب الغرم.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "7",
+      "9",
+      "132",
+      "94",
+      "17"
+     ],
+     "brut": "{\"reponse\": \"Article 132\", \"articles_cites\": [\"132\"], \"extrait\": \"إذا أبرم عقد الشغل لمدة معينة فإنه يجب على المؤجر أن يمكن العامل من التمتع برخصته بكيفية تجعل تلكم الرخصة تنتهي قبل انقراض ذلك العقد بأسبوع على الأقل وإلا استوجب الغرم.\", \"abstention\": false}",
+     "reponse": "Article 132",
+     "articles_cites": [
+      "132"
+     ],
+     "extrait": "إذا أبرم عقد الشغل لمدة معينة فإنه يجب على المؤجر أن يمكن العامل من التمتع برخصته بكيفية تجعل تلكم الرخصة تنتهي قبل انقراض ذلك العقد بأسبوع على الأقل وإلا استوجب الغرم.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D33",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "85",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "85",
+      "89",
+      "108",
+      "133",
+      "18"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "85",
+      "89",
+      "108",
+      "133",
+      "18"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D34",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "122",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "122",
+      "64",
+      "133",
+      "132",
+      "124"
+     ],
+     "brut": "{\"reponse\": \"Oui\", \"articles_cites\": [\"Article 122\"], \"extrait\": \"الفصل 122.- الزوج الذي يعمل بأجرة له الحق في عطلة إضافية قدرها يوم واحد بمناسبة كل ولادة\", \"abstention\": false}",
+     "reponse": "Oui",
+     "articles_cites": [
+      "122"
+     ],
+     "extrait": "الفصل 122.- الزوج الذي يعمل بأجرة له الحق في عطلة إضافية قدرها يوم واحد بمناسبة كل ولادة",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "122",
+      "64",
+      "133",
+      "132",
+      "124"
+     ],
+     "brut": "{\"reponse\": \"Oui\", \"articles_cites\": [\"Article 122\"], \"extrait\": \"الفصل 122.- الزوج الذي يعمل بأجرة له الحق في عطلة إضافية قدرها يوم واحد بمناسبة كل ولادة\", \"abstention\": false}",
+     "reponse": "Oui",
+     "articles_cites": [
+      "122"
+     ],
+     "extrait": "الفصل 122.- الزوج الذي يعمل بأجرة له الحق في عطلة إضافية قدرها يوم واحد بمناسبة كل ولادة",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D35",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "122",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "110",
+      "131",
+      "132",
+      "13",
+      "7"
+     ],
+     "brut": "{\"reponse\": \"articles 110 et 132\", \"articles_cites\": [\"110\", \"132\"], \"extrait\": \"sou peine de dommages-intérêts, faire bénéficier le salarié de son congé dans des conditions telles que ce congé soit achevé une semaine au moins avant l'expiration dudit contrat\", \"abstention\": false}",
+     "reponse": "articles 110 et 132",
+     "articles_cites": [
+      "110",
+      "132"
+     ],
+     "extrait": "sou peine de dommages-intérêts, faire bénéficier le salarié de son congé dans des conditions telles que ce congé soit achevé une semaine au moins avant l'expiration dudit contrat",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "110",
+      "131",
+      "132",
+      "13",
+      "7"
+     ],
+     "brut": "{\"reponse\": \"articles 110 et 132\", \"articles_cites\": [\"110\", \"132\"], \"extrait\": \"sou peine de dommages-intérêts, faire bénéficier le salarié de son congé dans des conditions telles que ce congé soit achevé une semaine au moins avant l'expiration dudit contrat\", \"abstention\": false}",
+     "reponse": "articles 110 et 132",
+     "articles_cites": [
+      "110",
+      "132"
+     ],
+     "extrait": "sou peine de dommages-intérêts, faire bénéficier le salarié de son congé dans des conditions telles que ce congé soit achevé une semaine au moins avant l'expiration dudit contrat",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D36",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "149",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "149",
+      "3",
+      "134",
+      "333",
+      "145"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [149]\", \"extrait\": \"article 149.- لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.\", \"abstention\": false}",
+     "reponse": "articles_cites: [149]",
+     "articles_cites": [],
+     "extrait": "article 149.- لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "149",
+      "3",
+      "134",
+      "333",
+      "145"
+     ],
+     "brut": "{\"reponse\": \"articles_cites: [149]\", \"extrait\": \"article 149.- لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.\", \"abstention\": false}",
+     "reponse": "Je ne dispose pas d'une source suffisante dans le Code du travail pour répondre de manière fiable à cette question.",
+     "articles_cites": [],
+     "extrait": "article 149.- لا تمكن المقاصصة لفائدة المؤجرين بين مبلغ الأجور التي هم مطالبون بدفعها لعملتهم أو مستخدميهم والمبالغ التي استحقوها في مقابل أشياء مختلفة مهما كان نوعها باستثناء : 1 - الأدوات والآلات اللازمة للقيام بالعمل. 2 - المواد أو المعدات التي توضع تحت زمة وتصرف العامل. 3 - المبالغ المسبقة لشراء نفس هذه الأشياء.",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": "aucune_citation"
+    }
+   }
+  },
+  {
+   "id": "D37",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "160",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "160",
+      "161",
+      "161 bis",
+      "168",
+      "164"
+     ],
+     "brut": "{\"reponse\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"articles_cites\": [\"160\"], \"extrait\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"abstention\": false}",
+     "reponse": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "articles_cites": [
+      "160"
+     ],
+     "extrait": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "160",
+      "161",
+      "161 bis",
+      "168",
+      "164"
+     ],
+     "brut": "{\"reponse\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"articles_cites\": [\"160\"], \"extrait\": \"La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.\", \"abstention\": false}",
+     "reponse": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "articles_cites": [
+      "160"
+     ],
+     "extrait": "La commission consultative d'entreprise est consultée sur les questions suivantes : a) l'organisation du travail dans l'entreprise en vue d'améliorer la production et la productivité; b) les questions se rapportant aux œuvres sociales existantes dans l'entreprise au profit des travailleurs et de leurs familles, c) la promotion et le reclassement professionnel, d) l'apprentissage et la formation professionnelle; e) la discipline, et dans ce cas la commission s'érige en conseil de discipline et applique la procédure fixée par les textes législatifs, réglementaires ou conventionnels, régissant l'entreprise.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D38",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "170",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "9",
+      "7",
+      "5 bis",
+      "4",
+      "17"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "9",
+      "7",
+      "5 bis",
+      "4",
+      "17"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D39",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "191",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "196",
+      "195",
+      "187",
+      "186"
+     ],
+     "brut": "{\"reponse\": \"Article 191\", \"articles_cites\": [\"191\"], \"extrait\": \"Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.\", \"abstention\": false}",
+     "reponse": "Article 191",
+     "articles_cites": [
+      "191"
+     ],
+     "extrait": "Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "191",
+      "196",
+      "195",
+      "187",
+      "186"
+     ],
+     "brut": "{\"reponse\": \"Article 191\", \"articles_cites\": [\"191\"], \"extrait\": \"Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.\", \"abstention\": false}",
+     "reponse": "Article 191",
+     "articles_cites": [
+      "191"
+     ],
+     "extrait": "Article 191 (Modifié par la loi n° 77-55 du 3 août 1977).- Les conditions et les modalités de désignation ainsi que le régime disciplinaire des conseillers prud'hommes sont fixées par décret.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D40",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "216",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "216",
+      "221",
+      "185",
+      "184",
+      "215"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "216",
+      "221",
+      "185",
+      "184",
+      "215"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D41",
+   "langue": "fr",
+   "dans_perimetre": true,
+   "reference": "232",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "232",
+      "218",
+      "228",
+      "185",
+      "215"
+     ],
+     "brut": "{\"reponse\": \"Article 232\", \"articles_cites\": [\"232\"], \"extrait\": \"Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.\", \"abstention\": false}",
+     "reponse": "Article 232",
+     "articles_cites": [
+      "232"
+     ],
+     "extrait": "Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "232",
+      "218",
+      "228",
+      "185",
+      "215"
+     ],
+     "brut": "{\"reponse\": \"Article 232\", \"articles_cites\": [\"232\"], \"extrait\": \"Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.\", \"abstention\": false}",
+     "reponse": "Article 232",
+     "articles_cites": [
+      "232"
+     ],
+     "extrait": "Article 232 (Modifié par la loi n°94-29 du 21 février 1994).- Les dispositions du code de procédure civile et commerciale qui ne sont pas contraires à celles du présent titre sont applicables aux conseils de prud'hommes.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D42",
+   "langue": "tun",
+   "dans_perimetre": true,
+   "reference": "198",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "194",
+      "195",
+      "220",
+      "191",
+      "196"
+     ],
+     "brut": "{\n  \"reponse\": \"Articles 194 et 196\",\n  \"articles_cites\": [\"194\", \"196\"],\n  \"extrait\": \"Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.\",\n  \"extrait_supplementaire\": \"Article 196.- Pour l'application des dispositions du code pénal, les conseillers prud'hommes sont assimilés aux fonctionnaires publics. Ils sont, notamment, passibles des peines prévues aux articles 83 à 115 du Code Pénal en cas d'infractions commises par eux dans l'exercice de leurs fonctions.\",\n  \"abstention\": false\n}",
+     "reponse": "Articles 194 et 196",
+     "articles_cites": [
+      "194",
+      "196"
+     ],
+     "extrait": "Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "194",
+      "195",
+      "220",
+      "191",
+      "196"
+     ],
+     "brut": "{\n  \"reponse\": \"Articles 194 et 196\",\n  \"articles_cites\": [\"194\", \"196\"],\n  \"extrait\": \"Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.\",\n  \"extrait_supplementaire\": \"Article 196.- Pour l'application des dispositions du code pénal, les conseillers prud'hommes sont assimilés aux fonctionnaires publics. Ils sont, notamment, passibles des peines prévues aux articles 83 à 115 du Code Pénal en cas d'infractions commises par eux dans l'exercice de leurs fonctions.\",\n  \"abstention\": false\n}",
+     "reponse": "Articles 194 et 196",
+     "articles_cites": [
+      "194",
+      "196"
+     ],
+     "extrait": "Article 194.- Les conseillers prud'hommes exercent gratuitement leurs fonctions vis-à-vis des parties, ils ne peuvent leur réclamer aucun frais pour les formalités remplies par eux.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D43",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "318",
+      "313",
+      "319",
+      "314"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "318",
+      "313",
+      "319",
+      "314"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D44",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "351",
+      "21",
+      "174",
+      "154",
+      "27"
+     ],
+     "brut": "{\"reponse\": \"Abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "Abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "351",
+      "21",
+      "174",
+      "154",
+      "27"
+     ],
+     "brut": "{\"reponse\": \"Abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "Abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D45",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "210",
+      "177",
+      "14 bis",
+      "370",
+      "130"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "210",
+      "177",
+      "14 bis",
+      "370",
+      "130"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D46",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "27",
+      "133",
+      "193",
+      "144",
+      "9"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "27",
+      "133",
+      "193",
+      "144",
+      "9"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D47",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "13",
+      "421",
+      "422",
+      "14 quater",
+      "418"
+     ],
+     "brut": "{\"reponse\": \"Article 14 quater de l'article 418 et de l'article 421 du Code du travail tunisien établissent des règles concernant la responsabilité des employés en cas de vol. Cependant, ces articles ne spécifient pas directement la responsabilité d'un hôtelier en cas de vol dans une chambre. Pour obtenir une réponse précise, il serait nécessaire de consulter d'autres articles du Code du travail ou d'autres textes juridiques spécifiques à l'hôtellerie.\", \"articles_cites\": [\"14 quater\", \"418\", \"421\"], \"extrait\": \"Article 14 quater. (Ajouté par la loi n° 94-29 du 21 février 1994).- La faute grave est considérée comme l’une des causes réelles et sérieuses justifiant le licenciement. Peuvent être considérés comme fautes graves selon les circonstances dans lesquelles ont été commises notamment les cas suivants : 1) l’acte ou la carence volontaire de nature à entraver le fonctionnement de l’activité normale de l’entreprise ou à lui causer un dommage au patrimoine; 2) la réduction du volume de production ou de sa qualité due à une mauvaise volonté évidente; 3) l’inobservation des prescriptions d’hygiène et de sécurité, durant le travail ou la négligence de prendre les mesures nécessaires pour assurer la sécurité du personnel dont il est responsable ou pour sauvegarder les objets qui lui sont confiés; 4) le refus mjustifié d’exécuter les ordres relatifs au travail émanant formellement des organes compétents dans l",
+     "reponse": "{\"reponse\": \"Article 14 quater de l'article 418 et de l'article 421 du Code du travail tunisien établissent des règles concernant la responsabilité des employés en cas de vol. Cependant, ces articles ne spécifient pas directement la responsabilité d'un hôtelier en cas de vol dans une chambre. Pour obtenir une réponse précise, il serait nécessaire de consulter d'autres articles du Code du travail ou d'autres textes juridiques spécifiques à l'hôtellerie.\", \"articles_cites\": [\"14 quater\", \"418\", \"421\"], \"extrait\": \"Article 14 quater. (Ajouté par la loi n° 94-29 du 21 février 1994).- La faute grave est considérée comme l’une des causes réelles et sérieuses justifiant le licenciement. Peuvent être considérés comme fautes graves selon les circonstances dans lesquelles ont été commises notamment les cas suivants : 1) l’acte ou la carence volontaire de nature à entraver le fonctionnement de l’activité normale de l’entreprise ou à lui causer un dommage au patrimoine; 2) la réduction du volume de production ou de sa qualité due à une mauvaise volonté évidente; 3) l’inobservation des prescriptions d’hygiène et de sécurité, durant le travail ou la négligence de prendre les mesures nécessaires pour assurer la sécurité du personnel dont il est responsable ou pour sauvegarder les objets qui lui sont confiés; 4) le refus mjustifié d’exécuter les ordres relatifs au travail émanant formellement des organes compétents dans l",
+     "articles_cites": [
+      "14 quater",
+      "418",
+      "421"
+     ],
+     "extrait": "",
+     "abstention": false,
+     "json_valide": false
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "13",
+      "421",
+      "422",
+      "14 quater",
+      "418"
+     ],
+     "brut": "{\"reponse\": \"Article 14 quater de l'article 418 et de l'article 421 du Code du travail tunisien établissent des règles concernant la responsabilité des employés en cas de vol. Cependant, ces articles ne spécifient pas directement la responsabilité d'un hôtelier en cas de vol dans une chambre. Pour obtenir une réponse précise, il serait nécessaire de consulter d'autres articles du Code du travail ou d'autres textes juridiques spécifiques à l'hôtellerie.\", \"articles_cites\": [\"14 quater\", \"418\", \"421\"], \"extrait\": \"Article 14 quater. (Ajouté par la loi n° 94-29 du 21 février 1994).- La faute grave est considérée comme l’une des causes réelles et sérieuses justifiant le licenciement. Peuvent être considérés comme fautes graves selon les circonstances dans lesquelles ont été commises notamment les cas suivants : 1) l’acte ou la carence volontaire de nature à entraver le fonctionnement de l’activité normale de l’entreprise ou à lui causer un dommage au patrimoine; 2) la réduction du volume de production ou de sa qualité due à une mauvaise volonté évidente; 3) l’inobservation des prescriptions d’hygiène et de sécurité, durant le travail ou la négligence de prendre les mesures nécessaires pour assurer la sécurité du personnel dont il est responsable ou pour sauvegarder les objets qui lui sont confiés; 4) le refus mjustifié d’exécuter les ordres relatifs au travail émanant formellement des organes compétents dans l",
+     "reponse": "{\"reponse\": \"Article 14 quater de l'article 418 et de l'article 421 du Code du travail tunisien établissent des règles concernant la responsabilité des employés en cas de vol. Cependant, ces articles ne spécifient pas directement la responsabilité d'un hôtelier en cas de vol dans une chambre. Pour obtenir une réponse précise, il serait nécessaire de consulter d'autres articles du Code du travail ou d'autres textes juridiques spécifiques à l'hôtellerie.\", \"articles_cites\": [\"14 quater\", \"418\", \"421\"], \"extrait\": \"Article 14 quater. (Ajouté par la loi n° 94-29 du 21 février 1994).- La faute grave est considérée comme l’une des causes réelles et sérieuses justifiant le licenciement. Peuvent être considérés comme fautes graves selon les circonstances dans lesquelles ont été commises notamment les cas suivants : 1) l’acte ou la carence volontaire de nature à entraver le fonctionnement de l’activité normale de l’entreprise ou à lui causer un dommage au patrimoine; 2) la réduction du volume de production ou de sa qualité due à une mauvaise volonté évidente; 3) l’inobservation des prescriptions d’hygiène et de sécurité, durant le travail ou la négligence de prendre les mesures nécessaires pour assurer la sécurité du personnel dont il est responsable ou pour sauvegarder les objets qui lui sont confiés; 4) le refus mjustifié d’exécuter les ordres relatifs au travail émanant formellement des organes compétents dans l",
+     "articles_cites": [
+      "14 quater",
+      "418",
+      "421"
+     ],
+     "extrait": "",
+     "abstention": false,
+     "json_valide": false,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D48",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "142",
+      "146",
+      "385",
+      "3",
+      "380"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "142",
+      "146",
+      "385",
+      "3",
+      "380"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D49",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "30",
+      "3",
+      "94",
+      "4",
+      "278"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "30",
+      "3",
+      "94",
+      "4",
+      "278"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D50",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "4",
+      "5",
+      "3",
+      "255",
+      "146"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"Question : Quelles sont les règles de stationnement sur le trottoir à Sousse ?\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "Question : Quelles sont les règles de stationnement sur le trottoir à Sousse ?",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "4",
+      "5",
+      "3",
+      "255",
+      "146"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"Question : Quelles sont les règles de stationnement sur le trottoir à Sousse ?\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "Question : Quelles sont les règles de stationnement sur le trottoir à Sousse ?",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D51",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "187",
+      "251",
+      "433"
+     ],
+     "brut": "{\"reponse\": \"2 ans\", \"articles_cites\": [\"Article 187\"], \"extrait\": \"يقع تعيين مستشاري الأعراف والعمال لمدة سنتين على أنه إذا ما انتهت نيابة الأعضاء الخارجين قبل الوقت المعين لقبول أخلافهم فإنهم يبقون مباشرين إلى أن يتم هذا القبول.\", \"abstention\": false}",
+     "reponse": "2 ans",
+     "articles_cites": [
+      "187"
+     ],
+     "extrait": "يقع تعيين مستشاري الأعراف والعمال لمدة سنتين على أنه إذا ما انتهت نيابة الأعضاء الخارجين قبل الوقت المعين لقبول أخلافهم فإنهم يبقون مباشرين إلى أن يتم هذا القبول.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "410",
+      "258",
+      "187",
+      "251",
+      "433"
+     ],
+     "brut": "{\"reponse\": \"2 ans\", \"articles_cites\": [\"Article 187\"], \"extrait\": \"يقع تعيين مستشاري الأعراف والعمال لمدة سنتين على أنه إذا ما انتهت نيابة الأعضاء الخارجين قبل الوقت المعين لقبول أخلافهم فإنهم يبقون مباشرين إلى أن يتم هذا القبول.\", \"abstention\": false}",
+     "reponse": "2 ans",
+     "articles_cites": [
+      "187"
+     ],
+     "extrait": "يقع تعيين مستشاري الأعراف والعمال لمدة سنتين على أنه إذا ما انتهت نيابة الأعضاء الخارجين قبل الوقت المعين لقبول أخلافهم فإنهم يبقون مباشرين إلى أن يتم هذا القبول.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D52",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "7",
+      "13",
+      "9",
+      "2",
+      "4"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "7",
+      "13",
+      "9",
+      "2",
+      "4"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D53",
+   "langue": "tun",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "323",
+      "324",
+      "233",
+      "235",
+      "269"
+     ],
+     "brut": "{\"reponse\": \"Article 323 et Article 324\", \"articles_cites\": [\"323\", \"324\"], \"extrait\": \"الفصل 323.- من ارتكب فك الأختام الموضوعة عملا بأحكام الفصل 322 تسلط عليه العقوبات التي اقتضاها الفصل 153 من القانون الجنائي.\", \"abstention\": false}",
+     "reponse": "Article 323 et Article 324",
+     "articles_cites": [
+      "323",
+      "324"
+     ],
+     "extrait": "الفصل 323.- من ارتكب فك الأختام الموضوعة عملا بأحكام الفصل 322 تسلط عليه العقوبات التي اقتضاها الفصل 153 من القانون الجنائي.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "323",
+      "324",
+      "233",
+      "235",
+      "269"
+     ],
+     "brut": "{\"reponse\": \"Article 323 et Article 324\", \"articles_cites\": [\"323\", \"324\"], \"extrait\": \"الفصل 323.- من ارتكب فك الأختام الموضوعة عملا بأحكام الفصل 322 تسلط عليه العقوبات التي اقتضاها الفصل 153 من القانون الجنائي.\", \"abstention\": false}",
+     "reponse": "Article 323 et Article 324",
+     "articles_cites": [
+      "323",
+      "324"
+     ],
+     "extrait": "الفصل 323.- من ارتكب فك الأختام الموضوعة عملا بأحكام الفصل 322 تسلط عليه العقوبات التي اقتضاها الفصل 153 من القانون الجنائي.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D54",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "269",
+      "231",
+      "386",
+      "224",
+      "227"
+     ],
+     "brut": "{\"reponse\": \"51\", \"articles_cites\": [\"231\"], \"extrait\": \"الفصل 231.- مع مراعاة أحكام الفصلين السابقين فإن مطالب القدح تقدّم للمجلس الابتدائي الذي يحكم فيها طبقا للقانون العام. ويجب أن يصدر الحكم في الخمسة عشر يوما الموالية لتاريخ الطلب.\", \"abstention\": false}",
+     "reponse": "51",
+     "articles_cites": [
+      "231"
+     ],
+     "extrait": "الفصل 231.- مع مراعاة أحكام الفصلين السابقين فإن مطالب القدح تقدّم للمجلس الابتدائي الذي يحكم فيها طبقا للقانون العام. ويجب أن يصدر الحكم في الخمسة عشر يوما الموالية لتاريخ الطلب.",
+     "abstention": false,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "269",
+      "231",
+      "386",
+      "224",
+      "227"
+     ],
+     "brut": "{\"reponse\": \"51\", \"articles_cites\": [\"231\"], \"extrait\": \"الفصل 231.- مع مراعاة أحكام الفصلين السابقين فإن مطالب القدح تقدّم للمجلس الابتدائي الذي يحكم فيها طبقا للقانون العام. ويجب أن يصدر الحكم في الخمسة عشر يوما الموالية لتاريخ الطلب.\", \"abstention\": false}",
+     "reponse": "51",
+     "articles_cites": [
+      "231"
+     ],
+     "extrait": "الفصل 231.- مع مراعاة أحكام الفصلين السابقين فإن مطالب القدح تقدّم للمجلس الابتدائي الذي يحكم فيها طبقا للقانون العام. ويجب أن يصدر الحكم في الخمسة عشر يوما الموالية لتاريخ الطلب.",
+     "abstention": false,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D55",
+   "langue": "ar",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "238",
+      "15",
+      "5",
+      "27",
+      "118"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "238",
+      "15",
+      "5",
+      "27",
+      "118"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  },
+  {
+   "id": "D56",
+   "langue": "fr",
+   "dans_perimetre": false,
+   "reference": "n/a",
+   "sorties": {
+    "P2": {
+     "variante": "P2",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "321",
+      "257",
+      "268",
+      "390"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true
+    },
+    "P2V": {
+     "variante": "P2V",
+     "modele": "qwen2.5:3b",
+     "passages": [
+      "316",
+      "321",
+      "257",
+      "268",
+      "390"
+     ],
+     "brut": "{\"reponse\": \"abstention\", \"articles_cites\": [], \"extrait\": \"\", \"abstention\": true}",
+     "reponse": "abstention",
+     "articles_cites": [],
+     "extrait": "",
+     "abstention": true,
+     "json_valide": true,
+     "rejet": null
+    }
+   }
+  }
+ ]
+}
