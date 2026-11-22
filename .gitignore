@@ -10,3 +10,6 @@ __pycache__/
 
 # Vecteurs de la recherche dense (recalculables)
 data/processed/cache_dense/
+
+# Cles API locales (jamais sur GitHub)
+.env
